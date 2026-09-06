@@ -92,7 +92,7 @@ def _fmt_ass(seconds: float) -> str:
 def transcribe_to_ass_word(
     audio_path: str,
     ass_path: str,
-    model_name: str = 'small',
+    model_name: str = 'base',
     language: str | None = None,
     max_words: int = 2,
     correct_text: str | None = None,

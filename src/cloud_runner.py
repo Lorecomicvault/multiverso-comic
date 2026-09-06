@@ -1,4 +1,4 @@
-﻿"""
+"""
 Comic Lore Vault - Autonomous Cloud Video Runner & Publisher
 Anti-Duplication Engine: Guarantees zero repeated stories, characters arcs, or themes.
 Brand: Comic Lore Vault (@comicloreevault)
@@ -304,11 +304,20 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
         if idx - 1 < len(art_urls):
             try:
                 r = requests.get(art_urls[idx - 1], timeout=10)
-                if r.status_code == 200:
-                    with open(img_file, "wb") as f:
-                        f.write(r.content)
+                if r.status_code == 200 and len(r.content) > 10000:
+                    import io
+                    im = Image.open(io.BytesIO(r.content)).convert('RGB')
+                    target_w, target_h = 1080, 1920
+                    scale = max(target_w / im.width, target_h / im.height)
+                    nw, nh = max(target_w, int(im.width * scale)), max(target_h, int(im.height * scale))
+                    im_resized = im.resize((nw, nh), Image.Resampling.LANCZOS)
+                    left = (nw - target_w) // 2
+                    top = (nh - target_h) // 2
+                    im_cropped = im_resized.crop((left, top, left + target_w, top + target_h))
+                    im_cropped.save(img_file, quality=92)
                     saved = True
-            except Exception:
+            except Exception as e:
+                log(f"Warning processing image {idx}: {e}")
                 saved = False
 
         if not saved or not img_file.exists():
