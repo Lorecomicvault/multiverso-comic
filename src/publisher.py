@@ -1,4 +1,4 @@
-﻿"""
+"""
 Comic Lore Vault - Multi-Platform Social Publisher
 Brand: Comic Lore Vault (@comicloreevault)
 Supported Platforms:
@@ -27,8 +27,9 @@ def publish_to_facebook_page(
     description: str,
     page_token: str | None = None,
     page_id: str | None = None,
+    published: bool = True,
 ) -> dict:
-    """Uploads and publishes a video directly to Comic Lore Vault Facebook Page."""
+    """Uploads and publishes a video directly to Comic Lore Vault Facebook Page (or saves as draft if published=False)."""
     token = page_token or os.environ.get('FB_PAGE_TOKEN')
     pid = page_id or os.environ.get('FB_PAGE_ID', DEFAULT_PAGE_ID)
 
@@ -41,13 +42,15 @@ def publish_to_facebook_page(
         log(f"ERROR: Video file not found: {video_path}")
         return {'success': False, 'error': f'File not found: {video_path}'}
 
-    log(f"Publishing video to Facebook Page '{pid}' ({vpath.name}, {vpath.stat().st_size / (1024*1024):.1f} MB)...")
+    status_str = "PUBLISHED" if published else "DRAFT (Unpublished)"
+    log(f"Publishing video to Facebook Page '{pid}' ({vpath.name}, {vpath.stat().st_size / (1024*1024):.1f} MB, mode: {status_str})...")
     url = f"https://graph-video.facebook.com/{GRAPH_API_VERSION}/{pid}/videos"
 
     payload = {
         'title': title,
         'description': description,
         'access_token': token,
+        'published': 'true' if published else 'false',
     }
 
     try:
@@ -156,6 +159,7 @@ def publish_comic_video(
     description: str,
     hashtags: str = '#Comics #Marvel #DC #ComicLoreVault #ComicTok #Reels',
     video_url: str | None = None,
+    draft_only: bool = False,
 ) -> dict:
     """Orchestrates publishing across Comic Lore Vault Facebook and Instagram destinations."""
     results = {}
@@ -165,10 +169,14 @@ def publish_comic_video(
         video_path=video_path,
         title=title,
         description=full_caption,
+        published=not draft_only,
     )
     results['facebook'] = fb_res
 
-    if video_url:
+    if draft_only:
+        log("Notice: draft_only=True. Skipping public Instagram publication.")
+        results['instagram'] = {'skipped': True, 'reason': 'draft_only mode enabled'}
+    elif video_url:
         ig_res = publish_to_instagram_reels(
             video_url=video_url,
             caption=full_caption,

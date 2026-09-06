@@ -13,19 +13,19 @@ on:
           - under_the_red_hood
           - death_of_superman
           - infinity_gauntlet
-      publish:
-        description: 'Publish video directly to Comic Lore Vault FB & IG'
+      mode:
+        description: 'Execution Mode (Safe verification vs Official Live)'
         required: true
-        default: true
-        type: boolean
-      dry_run:
-        description: 'Dry run verification (test without rendering)'
-        required: false
-        default: false
-        type: boolean
+        default: 'render_only'
+        type: choice
+        options:
+          - render_only
+          - draft_only
+          - live_release
+          - dry_run
 
   schedule:
-    # Daily automated release at 15:00 UTC (10:00 AM EST)
+    # Daily automated live release at 15:00 UTC (10:00 AM EST)
     - cron: '0 15 * * *'
 
 jobs:
@@ -60,26 +60,42 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
-          AUTO_PUBLISH: ${{ github.event.inputs.publish || 'true' }}
+          EVENT_MODE: ${{ github.event.inputs.mode || 'live_release' }}
         run: |
           ARGS=""
-          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+          MODE="${EVENT_MODE}"
+
+          echo "Selected Execution Mode: $MODE"
+
+          if [ "$MODE" = "dry_run" ]; then
             ARGS="$ARGS --dry-run"
+          elif [ "$MODE" = "draft_only" ]; then
+            ARGS="$ARGS --publish --draft"
+          elif [ "$MODE" = "live_release" ]; then
+            ARGS="$ARGS --publish"
+          elif [ "$MODE" = "render_only" ]; then
+            echo "Render Only mode: Video will be rendered and saved as artifact without posting to any platform."
           fi
+
           if [ -n "${{ github.event.inputs.story_id }}" ] && [ "${{ github.event.inputs.story_id }}" != "any" ]; then
             ARGS="$ARGS --story-id ${{ github.event.inputs.story_id }}"
           fi
-          if [ "${{ github.event.inputs.publish }}" = "true" ] || [ "${{ github.event_name }}" = "schedule" ]; then
-            ARGS="$ARGS --publish"
-          fi
-          
+
           python -m src.cloud_runner $ARGS
+
+      - name: Upload Final Video Artifact (For Safe Download & Review)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: comic-lore-video-${{ github.run_number }}
+          path: output/**/*.mp4
+          if-no-files-found: ignore
 
       - name: Archive Production Logs & Manifest
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: comic-lore-production-logs
+          name: comic-lore-production-logs-${{ github.run_number }}
           path: |
             output/videos_log.csv
             output/**/*.ass

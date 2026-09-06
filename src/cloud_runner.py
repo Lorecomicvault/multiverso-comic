@@ -1,4 +1,4 @@
-﻿"""
+"""
 Comic Lore Vault - Autonomous Cloud Video Runner & Publisher
 Designed for GitHub Actions CI/CD workflows and local CLI execution.
 Brand: Comic Lore Vault (@comicloreevault)
@@ -153,6 +153,7 @@ def main():
     parser = argparse.ArgumentParser(description="Comic Lore Vault Autonomous Cloud Generation & Publisher")
     parser.add_argument("--story-id", type=str, help="Specific story ID to generate")
     parser.add_argument("--publish", action="store_true", help="Auto-publish to FB Page and IG after generation")
+    parser.add_argument("--draft", action="store_true", help="Save as unpublished draft on FB and skip public IG (safe pre-launch verification)")
     parser.add_argument("--dry-run", action="store_true", help="Test workflow without video generation or publishing")
     args = parser.parse_args()
 
@@ -196,12 +197,14 @@ def main():
 
     # Publish if requested
     if args.publish or os.environ.get("AUTO_PUBLISH", "").lower() in ("true", "1", "yes"):
-        log("Initiating multi-platform publication to Comic Lore Vault...")
+        is_draft = args.draft or os.environ.get("DRAFT_ONLY", "").lower() in ("true", "1", "yes")
+        log(f"Initiating publication to Comic Lore Vault (mode: {'DRAFT ONLY' if is_draft else 'LIVE PUBLIC'})...")
         publish_comic_video(
             video_path=final_video_path,
             title=selected["title"],
             description=selected["description"],
-            hashtags=selected["hashtags"]
+            hashtags=selected["hashtags"],
+            draft_only=is_draft,
         )
     else:
         log("Publication skipped (set --publish or AUTO_PUBLISH=true to publish).")
