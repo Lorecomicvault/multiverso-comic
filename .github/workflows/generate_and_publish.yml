@@ -4,15 +4,24 @@ on:
   workflow_dispatch:
     inputs:
       story_id:
-        description: 'Comic Arc ID (or "any" for automatic queue)'
+        description: 'Comic Arc ID (or "any" for automatic non-repeating queue)'
         required: false
         default: 'any'
         type: choice
         options:
           - any
-          - under_the_red_hood
-          - death_of_superman
-          - infinity_gauntlet
+          - batman_under_the_red_hood
+          - batman_court_of_owls
+          - flashpoint_thomas_wayne
+          - joker_killing_joke
+          - injustice_superman_fall
+          - green_lantern_blackest_night
+          - thor_god_butcher
+          - daredevil_born_again
+          - civil_war_death_of_cap
+          - secret_wars_god_emperor_doom
+          - wolverine_old_man_logan
+          - venom_maximum_carnage
       mode:
         description: 'Execution Mode (Safe verification vs Official Live)'
         required: true
@@ -28,6 +37,9 @@ on:
     # Daily automated live release at 15:00 UTC (10:00 AM EST)
     - cron: '0 15 * * *'
 
+permissions:
+  contents: write
+
 jobs:
   produce-and-publish:
     name: Generate & Publish Comic Reel
@@ -37,6 +49,9 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
@@ -83,6 +98,19 @@ jobs:
 
           python -m src.cloud_runner $ARGS
 
+      - name: Commit & Push Production Ledger (Zero-Duplicate Persistence)
+        if: success()
+        run: |
+          git config user.name "ComicLoreVault Engine"
+          git config user.email "Lorecomicvault@users.noreply.github.com"
+          git add published_ledger.json output/videos_log.csv 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(ledger): record produced comic video to prevent duplicate [skip ci]"
+            git push origin main
+          else
+            echo "Ledger up to date. No new entries to commit."
+          fi
+
       - name: Upload Final Video Artifact (For Safe Download & Review)
         if: always()
         uses: actions/upload-artifact@v4
@@ -100,4 +128,5 @@ jobs:
             output/videos_log.csv
             output/**/*.ass
             output/**/script.json
+            published_ledger.json
           if-no-files-found: ignore
