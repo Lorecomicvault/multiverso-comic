@@ -1,0 +1,6 @@
+typer>=0.9.0
+rich>=13.0.0
+requests>=2.28.0
+Pillow>=9.0.0
+openai-whisper>=20231117
+edge-tts>=6.1.9

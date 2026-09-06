@@ -1,0 +1,17 @@
+[project]
+name = "flow-video-composer"
+version = "0.1.0"
+description = "Componer video final a partir de generaciones de Flow Image Generator"
+requires-python = ">=3.10"
+dependencies = [
+    "edge-tts",
+    "openai-whisper",
+    "typer",
+    "rich",
+]
+
+[project.scripts]
+flow-compose = "src.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
