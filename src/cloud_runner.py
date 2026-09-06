@@ -183,17 +183,25 @@ EDITORIAL_STORIES = [
     {
         "id": "wolverine_old_man_logan",
         "character": "Wolverine",
-        "title": "Wolverine: Old Man Logan - The Night the Heroes Died",
-        "theme_signature": "wolverine:old_man_logan:mysterio_illusion",
-        "description": "Fifty years after the supervillains conquered America, an aged Logan reveals the haunting secret why he never unsheathed his claws.",
-        "hashtags": "#Wolverine #OldManLogan #MarvelComics #ComicLoreVault #Logan #XMen #Reels",
+        "title": "Wolverine: Old Man Logan - The Massacre of the X-Men",
+        "theme_signature": "wolverine:old_man_logan:xmen_massacre",
+        "description": "The tragic flashback where Mysterio's twisted illusion tricks Wolverine into slaughtering his own beloved X-Men.",
+        "hashtags": "#Wolverine #OldManLogan #XMen #Mysterio #MarvelComics #ComicLoreVault #ComicTok #Reels",
         "scenes": [
-            "Fifty years ago, the supervillains finally united under Red Skull, wiping out Earth's heroes and partitioning America into desolate wasteland territories.",
-            "Living as a pacifist farmer with his wife and children, an aged Logan steadfastly refused to ever extend his adamantium claws again.",
-            "Pressed for the truth, Logan recalled that fateful night when dozens of villains invaded the X-Mansion, threatening the young students.",
-            "Logan fought with berserker savagery, slicing through forty lethal invaders until the illusion spell shattered: Mysterio had clouded his senses.",
-            "Horrified, Logan looked around to find the corpses of his own family: Cyclops, Storm, and Beast; he had slaughtered his beloved X-Men.",
-            "Driven to suicide, Logan laid his head on train tracks, but his healing factor refused to let him die, sentencing him to half a century of penance."
+            "Fifty years after supervillains conquered the world, an aged Logan lives as a quiet farmer in the wasteland, refusing to ever pop his adamantium claws.",
+            "That dark reluctance traces back to one tragic night at the Xavier Mansion, when alarms blared as forty villains suddenly stormed the gates.",
+            "Believing the students were in mortal danger, Wolverine entered a blind berserker rage, slashing through the intruders room by room.",
+            "Slicing down the final attacker, the smoke cleared as green mist faded: Mysterio appeared cackling, revealing he had clouded Logan's senses.",
+            "Horrified, Logan looked around to discover the devastating truth: there were no villains. In the rain lay the slaughtered corpses of his beloved X-Men.",
+            "Broken beyond repair, Logan wandered into the wilderness and placed his head on train tracks, but his healing factor refused to let him die."
+        ],
+        "scene_art_urls": [
+            "https://static.wikia.nocookie.net/marveldatabase/images/a/a6/Wolverine_Vol_3_66_Wraparound_Textless.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/7/7f/Peter_Petruski_%28Earth-807128%29%2C_Norman_Osborn_%28Earth-807128%29%2C_James_Howlett_%28Earth-807128%29%2C_and_Kenuichio_Harada_%28Earth-807128%29_from_Wolverine_Vol_3_70_001.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/3/3a/Wolverine_Vol_3_70.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/c/cd/Jubilation_Lee_%28Earth-807128%29_and_James_Howlett_%28Earth-807128%29_from_Wolverine_Vol_3_70_001.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/b/b5/X-Men_%28Earth-807128%29_from_Wolverine_Vol_3_70_001.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/5/57/James_Howlett_%28Earth-807128%29_from_Wolverine_Vol_3_72_002.jpg"
         ]
     },
     {
@@ -281,12 +289,17 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
     gen_dir = work_dir / story["id"]
     gen_dir.mkdir(parents=True, exist_ok=True)
 
-    log(f"Fetching comic art for character: {story['character']}...")
-    try:
-        art_urls = get_fandom_comic_art(story["character"], count=len(story["scenes"]) + 4)
-    except Exception as e:
-        log(f"Warning fetching art via Fandom: {e}")
-        art_urls = []
+    curated_urls = story.get("scene_art_urls", [])
+    if curated_urls:
+        log(f"Using {len(curated_urls)} curated 1:1 comic panels for: {story['title']}")
+        art_urls = curated_urls
+    else:
+        log(f"Fetching comic art for character: {story['character']}...")
+        try:
+            art_urls = get_fandom_comic_art(story["character"], count=len(story["scenes"]) + 4)
+        except Exception as e:
+            log(f"Warning fetching art via Fandom: {e}")
+            art_urls = []
 
     scenes_data = []
     scene_videos = []
@@ -303,7 +316,8 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
         saved = False
         if idx - 1 < len(art_urls):
             try:
-                r = requests.get(art_urls[idx - 1], timeout=10)
+                headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+                r = requests.get(art_urls[idx - 1], headers=headers, timeout=15)
                 if r.status_code == 200 and len(r.content) > 10000:
                     import io
                     im = Image.open(io.BytesIO(r.content)).convert('RGB')

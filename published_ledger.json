@@ -78,5 +78,13 @@
     "theme_signature": "spiderman:gwen_stacy:bridge_fall",
     "date": "2026-09-06 13:22",
     "status": "produced"
+  },
+  {
+    "id": "batman_court_of_owls",
+    "title": "Batman: The Court of Owls - Gotham's Dark Secret",
+    "character": "Batman",
+    "theme_signature": "batman:court_of_owls:talon_labyrinth",
+    "date": "2026-09-06 18:49",
+    "status": "produced"
   }
 ]
