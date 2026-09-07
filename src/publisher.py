@@ -25,6 +25,7 @@ def publish_to_facebook_page(
     video_path: str | Path,
     title: str,
     description: str,
+    thumbnail_path: str | Path | None = None,
     page_token: str | None = None,
     page_id: str | None = None,
     published: bool = True,
@@ -42,6 +43,11 @@ def publish_to_facebook_page(
         log(f"ERROR: Video file not found: {video_path}")
         return {'success': False, 'error': f'File not found: {video_path}'}
 
+    if not thumbnail_path:
+        candidate = vpath.parent / f"{vpath.stem}_thumb.jpg"
+        if candidate.exists():
+            thumbnail_path = candidate
+
     status_str = "PUBLISHED" if published else "DRAFT (Unpublished)"
     log(f"Publishing video to Facebook Page '{pid}' ({vpath.name}, {vpath.stat().st_size / (1024*1024):.1f} MB, mode: {status_str})...")
     url = f"https://graph-video.facebook.com/{GRAPH_API_VERSION}/{pid}/videos"
@@ -54,9 +60,20 @@ def publish_to_facebook_page(
     }
 
     try:
-        with open(vpath, 'rb') as f:
-            files = {'source': (vpath.name, f, 'video/mp4')}
-            response = requests.post(url, data=payload, files=files, timeout=600)
+        with open(vpath, 'rb') as f_video:
+            files = {'source': (vpath.name, f_video, 'video/mp4')}
+            thumb_handle = None
+            if thumbnail_path and Path(thumbnail_path).exists():
+                tpath = Path(thumbnail_path)
+                log(f"Attaching custom video thumbnail: {tpath.name} ({tpath.stat().st_size / 1024:.1f} KB)")
+                thumb_handle = open(tpath, 'rb')
+                files['thumb'] = (tpath.name, thumb_handle, 'image/jpeg')
+
+            try:
+                response = requests.post(url, data=payload, files=files, timeout=600)
+            finally:
+                if thumb_handle:
+                    thumb_handle.close()
 
         res_data = response.json()
         if response.status_code == 200 and 'id' in res_data:
@@ -76,6 +93,7 @@ def publish_to_instagram_reels(
     video_path: str | Path | None = None,
     caption: str = "",
     video_url: str | None = None,
+    thumb_offset_ms: int = 2500,
     access_token: str | None = None,
     ig_user_id: str | None = None,
     max_wait_seconds: int = 300,
@@ -85,6 +103,7 @@ def publish_to_instagram_reels(
     Supports:
     1. Direct native binary upload (upload_type=resumable via rupload.facebook.com) - Preferred & 100% reliable.
     2. Public URL ingestion (video_url) - Fallback.
+    3. thumb_offset_ms parameter ensuring the cover is never dark/black and captures the action artwork.
     """
     token = access_token or os.environ.get('FB_PAGE_TOKEN')
     ig_id = ig_user_id or os.environ.get('IG_USER_ID', DEFAULT_IG_USER_ID)
@@ -100,14 +119,16 @@ def publish_to_instagram_reels(
         if video_path and Path(video_path).exists():
             vpath = Path(video_path)
             file_size = vpath.stat().st_size
-            log(f"Step 1: Initializing Reels resumable container for @comicloreevault (ID: {ig_id}, {file_size / (1024*1024):.1f} MB)...")
+            log(f"Step 1: Initializing Reels resumable container for @comicloreevault (ID: {ig_id}, {file_size / (1024*1024):.1f} MB, thumb_offset: {thumb_offset_ms}ms)...")
 
-            init_res = requests.post(create_url, data={
+            init_payload = {
                 'upload_type': 'resumable',
                 'media_type': 'REELS',
                 'caption': caption,
+                'thumb_offset': str(thumb_offset_ms),
                 'access_token': token
-            }, timeout=60).json()
+            }
+            init_res = requests.post(create_url, data=init_payload, timeout=60).json()
 
             if 'id' not in init_res or 'uri' not in init_res:
                 log(f"ERROR initializing resumable container: {init_res}")
@@ -135,11 +156,12 @@ def publish_to_instagram_reels(
 
         # Path B: Public video URL ingestion
         elif video_url and video_url.startswith('http'):
-            log(f"Step 1: Creating Instagram Reels container via public URL for @comicloreevault (ID: {ig_id})...")
+            log(f"Step 1: Creating Instagram Reels container via public URL for @comicloreevault (ID: {ig_id}, thumb_offset: {thumb_offset_ms}ms)...")
             create_payload = {
                 'media_type': 'REELS',
                 'video_url': video_url,
                 'caption': caption,
+                'thumb_offset': str(thumb_offset_ms),
                 'access_token': token,
             }
             r = requests.post(create_url, data=create_payload, timeout=60)
@@ -216,22 +238,31 @@ def publish_comic_video(
     description: str,
     hashtags: str = '#Comics #Marvel #DC #ComicLoreVault #ComicTok #Reels',
     video_url: str | None = None,
+    thumbnail_path: str | Path | None = None,
+    thumb_offset_ms: int = 2500,
     draft_only: bool = False,
 ) -> dict:
-    """Orchestrates publishing across Comic Lore Vault Facebook and Instagram destinations."""
+    """Orchestrates publishing across Comic Lore Vault Facebook and Instagram destinations with custom thumbnails."""
     results = {}
     full_caption = f"{title}\n\n{description}\n\n{hashtags}".strip()
 
-    # 1. Publish to Facebook Page (direct multipart upload)
+    vpath = Path(video_path)
+    if thumbnail_path is None:
+        candidate = vpath.parent / f"{vpath.stem}_thumb.jpg"
+        if candidate.exists():
+            thumbnail_path = candidate
+
+    # 1. Publish to Facebook Page (direct multipart upload with custom thumbnail)
     fb_res = publish_to_facebook_page(
         video_path=video_path,
         title=title,
         description=full_caption,
+        thumbnail_path=thumbnail_path,
         published=not draft_only,
     )
     results['facebook'] = fb_res
 
-    # 2. Publish to Instagram Reels (direct resumable binary upload)
+    # 2. Publish to Instagram Reels (direct resumable binary upload with action thumb_offset)
     if draft_only:
         log("Notice: draft_only=True. Skipping public Instagram publication.")
         results['instagram'] = {'skipped': True, 'reason': 'draft_only mode enabled'}
@@ -240,6 +271,7 @@ def publish_comic_video(
             video_path=video_path,
             caption=full_caption,
             video_url=video_url,
+            thumb_offset_ms=thumb_offset_ms,
         )
         results['instagram'] = ig_res
 

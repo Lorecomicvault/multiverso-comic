@@ -273,11 +273,10 @@ def compose_final(
 
     has_music = MUSIC_BED_PATH.exists()
 
-    # --- Video chain: consistent look + fades + subtitles/CTA ---
+    # --- Video chain: consistent look + end fade + subtitles/CTA (no initial black fade for instant hook & crisp thumbnail) ---
     video_chain = (
         f'[0:v]eq=contrast=1.04:saturation=1.06:brightness=-0.01,'
         f'unsharp=luma_msize_x=5:luma_msize_y=5:luma_amount=0.5,'
-        f'fade=t=in:st=0:d={fade_in},'
         f'fade=t=out:st={fade_out_start}:d={fade_out},'
         f'ass=\'{escaped}\'[v]'
     )
@@ -446,14 +445,13 @@ def compose_final_pure(
     video_chain = (
         f'[0:v]eq=contrast=1.03:saturation=1.05:brightness=-0.01,'
         f'unsharp=luma_msize_x=5:luma_msize_y=5:luma_amount=0.4,'
-        f'fade=t=in:st=0:d={fade_in},'
         f'fade=t=out:st={fade_out_start}:d={fade_out}[v]'
     )
 
     if has_music:
         audio_chain = (
             f'[0:a]dynaudnorm=p=0.95:m=100[ambient];'
-            f'[1:a]aloop=loop=-1:size=2e9,atrim=0:{total:.3f},volume=0.15[music];'
+            f'[1:a]aloop=loop=-1:size=2e9,atrim=0:{total:.3f},volume=0.2[music];'
             f'[ambient][music]amix=inputs=2:duration=first,'
             f'loudnorm=I=-14:TP=-1.5:LRA=11,'
             f'afade=t=in:st=0:d={fade_in},'
@@ -489,3 +487,27 @@ def compose_final_pure(
     subprocess.run(cmd, check=True, capture_output=True, text=True)
     return output
 
+
+def extract_thumbnail(
+    video_path: str | Path,
+    output: str | Path,
+    timestamp: float = 2.5,
+) -> str:
+    """Extracts a crisp, full-resolution JPEG thumbnail from the video at a given timestamp."""
+    vpath = Path(video_path)
+    out_path = Path(output)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    dur = get_duration(str(vpath))
+    actual_ts = min(timestamp, max(0.5, dur - 1.0)) if dur > 1.0 else 0.5
+
+    cmd = [
+        'ffmpeg', '-y',
+        '-ss', f'{actual_ts:.3f}',
+        '-i', str(vpath),
+        '-vframes', '1',
+        '-q:v', '2',
+        str(out_path)
+    ]
+    subprocess.run(cmd, check=True, capture_output=True)
+    return str(out_path)

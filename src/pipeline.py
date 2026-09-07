@@ -13,6 +13,7 @@ from .composer import (
     compose_scene_from_image_pure,
     compose_scene_pure,
     concat_videos_audio,
+    extract_thumbnail,
     get_duration,
 )
 from .transcribe import transcribe_to_ass_word
@@ -200,6 +201,14 @@ def run_pipeline(
         compose_final_pure(concat_path, final_video)
 
     log(f"  OK -> Video final generado: {final_video}")
+
+    # Generate high-impact thumbnail (at 2.5s into video)
+    thumb_path = str(final_dir / f'{safe_name}_thumb.jpg')
+    try:
+        extract_thumbnail(final_video, thumb_path, timestamp=2.5)
+        log(f"  OK -> Miniatura oficial generada: {thumb_path}")
+    except Exception as e:
+        log(f"  Warning: No se pudo generar archivo de miniatura: {e}")
 
     scene_guides = {s['scene_number']: s.get('visual_guide', '') for s in scenes_sorted}
     description = _generate_description(script, scene_guides)
