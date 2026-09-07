@@ -1,4 +1,4 @@
-﻿name: Comic Lore Vault - Autonomous Cloud Video Engine
+name: Comic Lore Vault - Autonomous Cloud Video Engine
 
 on:
   workflow_dispatch:
@@ -33,9 +33,10 @@ on:
           - live_release
           - dry_run
 
-  schedule:
-    # Daily automated live release at 15:00 UTC (10:00 AM EST)
-    - cron: '0 15 * * *'
+  # schedule:
+  #   # Deactivated - initial 10 videos will be triggered manually.
+  #   # External cronjob or scheduled API dispatch will be activated later.
+  #   # - cron: '0 15 * * *'
 
 permissions:
   contents: write
