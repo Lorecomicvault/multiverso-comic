@@ -153,6 +153,27 @@ def publish_to_instagram_reels(
         return {'success': False, 'error': str(e)}
 
 
+def upload_temp_video_url(video_path: str | Path) -> str | None:
+    """Uploads video to a temporary direct hosting URL (1h expiry) for Instagram Reel container ingestion."""
+    vpath = Path(video_path)
+    log(f"Uploading temporary video copy for Instagram Reels ingestion ({vpath.name}, {vpath.stat().st_size / (1024*1024):.1f} MB)...")
+    try:
+        data = {'reqtype': 'fileupload', 'time': '1h'}
+        with open(vpath, 'rb') as f:
+            files = {'fileToUpload': (vpath.name, f, 'video/mp4')}
+            r = requests.post('https://litterbox.catbox.moe/resources/internals/api.php', data=data, files=files, timeout=180)
+        if r.status_code == 200 and r.text.strip().startswith('http'):
+            direct_url = r.text.strip()
+            log(f"Temporary direct video URL ready: {direct_url}")
+            return direct_url
+        else:
+            log(f"Warning: Temp video upload returned: {r.status_code} {r.text}")
+            return None
+    except Exception as e:
+        log(f"Exception uploading temp video: {e}")
+        return None
+
+
 def publish_comic_video(
     video_path: str | Path,
     title: str,
@@ -165,6 +186,7 @@ def publish_comic_video(
     results = {}
     full_caption = f"{title}\n\n{description}\n\n{hashtags}".strip()
 
+    # 1. Publish to Facebook Page (direct multipart upload)
     fb_res = publish_to_facebook_page(
         video_path=video_path,
         title=title,
@@ -173,18 +195,23 @@ def publish_comic_video(
     )
     results['facebook'] = fb_res
 
+    # 2. Publish to Instagram Reels
     if draft_only:
         log("Notice: draft_only=True. Skipping public Instagram publication.")
         results['instagram'] = {'skipped': True, 'reason': 'draft_only mode enabled'}
-    elif video_url:
-        ig_res = publish_to_instagram_reels(
-            video_url=video_url,
-            caption=full_caption,
-        )
-        results['instagram'] = ig_res
     else:
-        log("Notice: Direct public video URL not provided. Instagram Reel publishing requires hosted URL.")
-        results['instagram'] = {'skipped': True, 'reason': 'No public video URL provided'}
+        if not video_url:
+            video_url = upload_temp_video_url(video_path)
+
+        if video_url:
+            ig_res = publish_to_instagram_reels(
+                video_url=video_url,
+                caption=full_caption,
+            )
+            results['instagram'] = ig_res
+        else:
+            log("ERROR: Could not obtain public video URL for Instagram Reel.")
+            results['instagram'] = {'success': False, 'error': 'Could not obtain public video URL'}
 
     return results
 
