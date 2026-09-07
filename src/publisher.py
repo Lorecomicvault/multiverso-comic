@@ -73,13 +73,19 @@ def publish_to_facebook_page(
 
 
 def publish_to_instagram_reels(
-    video_url: str,
-    caption: str,
+    video_path: str | Path | None = None,
+    caption: str = "",
+    video_url: str | None = None,
     access_token: str | None = None,
     ig_user_id: str | None = None,
     max_wait_seconds: int = 300,
 ) -> dict:
-    """Publishes a video as an Instagram Reel to @comicloreevault via Instagram Graph API container workflow."""
+    """Publishes a video as an Instagram Reel to @comicloreevault via Instagram Graph API.
+
+    Supports:
+    1. Direct native binary upload (upload_type=resumable via rupload.facebook.com) - Preferred & 100% reliable.
+    2. Public URL ingestion (video_url) - Fallback.
+    """
     token = access_token or os.environ.get('FB_PAGE_TOKEN')
     ig_id = ig_user_id or os.environ.get('IG_USER_ID', DEFAULT_IG_USER_ID)
 
@@ -87,35 +93,74 @@ def publish_to_instagram_reels(
         log("ERROR: FB_PAGE_TOKEN not provided for Instagram publishing.")
         return {'success': False, 'error': 'Missing access token'}
 
-    if not video_url or not video_url.startswith('http'):
-        log("ERROR: Instagram Reels requires a valid publicly accessible HTTP/HTTPS video URL.")
-        return {'success': False, 'error': 'Invalid video_url'}
-
-    log(f"Step 1: Creating Instagram Reels container for @comicloreevault (ID: {ig_id})...")
     create_url = f"https://graph.facebook.com/{GRAPH_API_VERSION}/{ig_id}/media"
-    create_payload = {
-        'media_type': 'REELS',
-        'video_url': video_url,
-        'caption': caption,
-        'access_token': token,
-    }
 
     try:
-        r = requests.post(create_url, data=create_payload, timeout=60)
-        res = r.json()
-        if 'id' not in res:
-            log(f"ERROR creating container ({r.status_code}): {res}")
-            return {'success': False, 'error': res}
+        # Path A: Direct local video binary upload (Meta Resumable API)
+        if video_path and Path(video_path).exists():
+            vpath = Path(video_path)
+            file_size = vpath.stat().st_size
+            log(f"Step 1: Initializing Reels resumable container for @comicloreevault (ID: {ig_id}, {file_size / (1024*1024):.1f} MB)...")
 
-        creation_id = res['id']
-        log(f"Container created successfully. Creation ID: {creation_id}")
+            init_res = requests.post(create_url, data={
+                'upload_type': 'resumable',
+                'media_type': 'REELS',
+                'caption': caption,
+                'access_token': token
+            }, timeout=60).json()
 
+            if 'id' not in init_res or 'uri' not in init_res:
+                log(f"ERROR initializing resumable container: {init_res}")
+                return {'success': False, 'error': init_res}
+
+            creation_id = init_res['id']
+            upload_uri = init_res['uri']
+            log(f"Container created. Creation ID: {creation_id}. Uploading binary to Meta ({upload_uri})...")
+
+            upload_headers = {
+                'Authorization': f'OAuth {token}',
+                'offset': '0',
+                'file_size': str(file_size),
+                'Content-Type': 'application/octet-stream'
+            }
+
+            with open(vpath, 'rb') as f:
+                r_upload = requests.post(upload_uri, headers=upload_headers, data=f, timeout=600)
+
+            if r_upload.status_code != 200:
+                log(f"ERROR uploading video binary to rupload: {r_upload.status_code} {r_upload.text}")
+                return {'success': False, 'error': r_upload.text}
+
+            log("Binary uploaded successfully to Meta Reel server.")
+
+        # Path B: Public video URL ingestion
+        elif video_url and video_url.startswith('http'):
+            log(f"Step 1: Creating Instagram Reels container via public URL for @comicloreevault (ID: {ig_id})...")
+            create_payload = {
+                'media_type': 'REELS',
+                'video_url': video_url,
+                'caption': caption,
+                'access_token': token,
+            }
+            r = requests.post(create_url, data=create_payload, timeout=60)
+            res = r.json()
+            if 'id' not in res:
+                log(f"ERROR creating container ({r.status_code}): {res}")
+                return {'success': False, 'error': res}
+            creation_id = res['id']
+            log(f"Container created successfully. Creation ID: {creation_id}")
+        else:
+            log("ERROR: Neither valid video_path nor video_url provided for Instagram Reels.")
+            return {'success': False, 'error': 'No video source provided'}
+
+        # Step 2: Polling container processing status
         log("Step 2: Polling container processing status...")
         status_url = f"https://graph.facebook.com/{GRAPH_API_VERSION}/{creation_id}"
         start_time = time.time()
+        status_code = None
 
         while time.time() - start_time < max_wait_seconds:
-            time.sleep(10)
+            time.sleep(5)
             status_res = requests.get(status_url, params={
                 'fields': 'status_code,status',
                 'access_token': token
@@ -133,6 +178,7 @@ def publish_to_instagram_reels(
         if status_code != 'FINISHED':
             return {'success': False, 'error': 'Timeout waiting for video processing'}
 
+        # Step 3: Publishing Reel
         log("Step 3: Publishing Reel to @comicloreevault...")
         pub_url = f"https://graph.facebook.com/{GRAPH_API_VERSION}/{ig_id}/media_publish"
         pub_res = requests.post(pub_url, data={
@@ -142,8 +188,19 @@ def publish_to_instagram_reels(
 
         if 'id' in pub_res:
             media_id = pub_res['id']
-            log(f"SUCCESS: Reel published to @comicloreevault! Reel Media ID: {media_id}")
-            return {'success': True, 'media_id': media_id}
+            # Fetch permanent Instagram link
+            try:
+                link_info = requests.get(
+                    f"https://graph.facebook.com/{GRAPH_API_VERSION}/{media_id}",
+                    params={'fields': 'permalink', 'access_token': token},
+                    timeout=30
+                ).json()
+                permalink = link_info.get('permalink', f'https://www.instagram.com/reel/{media_id}')
+            except Exception:
+                permalink = f'https://www.instagram.com/reel/{media_id}'
+
+            log(f"SUCCESS: Reel published to @comicloreevault! Media ID: {media_id} | URL: {permalink}")
+            return {'success': True, 'media_id': media_id, 'permalink': permalink}
         else:
             log(f"ERROR publishing container: {pub_res}")
             return {'success': False, 'error': pub_res}
@@ -151,27 +208,6 @@ def publish_to_instagram_reels(
     except Exception as e:
         log(f"EXCEPTION publishing to Instagram: {e}")
         return {'success': False, 'error': str(e)}
-
-
-def upload_temp_video_url(video_path: str | Path) -> str | None:
-    """Uploads video to a temporary direct hosting URL (1h expiry) for Instagram Reel container ingestion."""
-    vpath = Path(video_path)
-    log(f"Uploading temporary video copy for Instagram Reels ingestion ({vpath.name}, {vpath.stat().st_size / (1024*1024):.1f} MB)...")
-    try:
-        data = {'reqtype': 'fileupload', 'time': '1h'}
-        with open(vpath, 'rb') as f:
-            files = {'fileToUpload': (vpath.name, f, 'video/mp4')}
-            r = requests.post('https://litterbox.catbox.moe/resources/internals/api.php', data=data, files=files, timeout=180)
-        if r.status_code == 200 and r.text.strip().startswith('http'):
-            direct_url = r.text.strip()
-            log(f"Temporary direct video URL ready: {direct_url}")
-            return direct_url
-        else:
-            log(f"Warning: Temp video upload returned: {r.status_code} {r.text}")
-            return None
-    except Exception as e:
-        log(f"Exception uploading temp video: {e}")
-        return None
 
 
 def publish_comic_video(
@@ -195,23 +231,17 @@ def publish_comic_video(
     )
     results['facebook'] = fb_res
 
-    # 2. Publish to Instagram Reels
+    # 2. Publish to Instagram Reels (direct resumable binary upload)
     if draft_only:
         log("Notice: draft_only=True. Skipping public Instagram publication.")
         results['instagram'] = {'skipped': True, 'reason': 'draft_only mode enabled'}
     else:
-        if not video_url:
-            video_url = upload_temp_video_url(video_path)
-
-        if video_url:
-            ig_res = publish_to_instagram_reels(
-                video_url=video_url,
-                caption=full_caption,
-            )
-            results['instagram'] = ig_res
-        else:
-            log("ERROR: Could not obtain public video URL for Instagram Reel.")
-            results['instagram'] = {'success': False, 'error': 'Could not obtain public video URL'}
+        ig_res = publish_to_instagram_reels(
+            video_path=video_path,
+            caption=full_caption,
+            video_url=video_url,
+        )
+        results['instagram'] = ig_res
 
     return results
 

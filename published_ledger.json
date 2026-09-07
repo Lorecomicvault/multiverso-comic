@@ -86,5 +86,18 @@
     "theme_signature": "batman:court_of_owls:talon_labyrinth",
     "date": "2026-09-06 18:49",
     "status": "produced"
+  },
+  {
+    "id": "wolverine_old_man_logan",
+    "title": "Wolverine: Old Man Logan - The Massacre of the X-Men",
+    "character": "Wolverine",
+    "theme_signature": "wolverine:old_man_logan:xmen_massacre",
+    "date": "2026-09-07 00:19",
+    "mode": "live_release",
+    "video_file": "Wolverine_Old_Man_Logan_-_The_Massacre_of_the_X-Men.mp4",
+    "status": "published",
+    "facebook_video_id": "1445762900730182",
+    "instagram_reel_id": "18622057759028501",
+    "instagram_url": "https://www.instagram.com/reel/Dc90l6cDDfm/"
   }
 ]
