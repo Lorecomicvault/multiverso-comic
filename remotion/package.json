@@ -4,7 +4,9 @@
   "description": "Remotion Animated Comic Subtitles and Composition",
   "main": "index.js",
   "scripts": {
-    "render": "remotion render src/Root.tsx VideoComposition"
+    "render": "remotion render src/Root.tsx VideoComposition",
+    "compositions": "remotion compositions src/Root.tsx",
+    "browser:ensure": "remotion browser ensure"
   },
   "type": "commonjs",
   "dependencies": {

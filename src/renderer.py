@@ -8,18 +8,35 @@ from pathlib import Path
 REMOTION_DIR = Path(__file__).resolve().parent.parent / 'remotion'
 
 
+def get_remotion_cmd() -> list[str]:
+    """Resolves the most reliable command to execute Remotion."""
+    bin_name = 'remotion.cmd' if sys.platform == 'win32' else 'remotion'
+    bin_path = REMOTION_DIR / 'node_modules' / '.bin' / bin_name
+    if bin_path.exists():
+        return [str(bin_path)]
+    
+    # Check npm run
+    npm_bin = 'npm.cmd' if sys.platform == 'win32' else 'npm'
+    return [npm_bin, 'run', 'render', '--']
+
+
 def check_remotion_available() -> bool:
     """Checks if Node, npm and Remotion are available in the current environment."""
-    npx_bin = 'npx.cmd' if sys.platform == 'win32' else 'npx'
+    bin_name = 'remotion.cmd' if sys.platform == 'win32' else 'remotion'
+    bin_path = REMOTION_DIR / 'node_modules' / '.bin' / bin_name
+    if bin_path.exists():
+        return True
+    
+    npm_bin = 'npm.cmd' if sys.platform == 'win32' else 'npm'
     try:
         r = subprocess.run(
-            [npx_bin, 'remotion', '--version'],
+            [npm_bin, 'run', 'compositions'],
             cwd=str(REMOTION_DIR),
             capture_output=True,
             text=True,
-            timeout=15
+            timeout=25
         )
-        return r.returncode == 0 or '@remotion/cli' in (r.stdout + r.stderr)
+        return r.returncode == 0
     except Exception:
         return False
 
@@ -71,18 +88,27 @@ def render_with_remotion(
     target_out = Path(output_video).resolve()
     target_out.parent.mkdir(parents=True, exist_ok=True)
 
-    npx_bin = 'npx.cmd' if sys.platform == 'win32' else 'npx'
-    cmd = [
-        npx_bin, 'remotion', 'render',
-        'src/Root.tsx',
-        'VideoComposition',
-        str(target_out),
-        '--props', str(props_path),
-        '--log', 'error',
-        '--concurrency=2',
-    ]
+    base_cmd = get_remotion_cmd()
+    if 'npm' in base_cmd[0]:
+        cmd = [
+            *base_cmd,
+            str(target_out),
+            '--props', str(props_path),
+            '--log', 'error',
+            '--concurrency=2',
+        ]
+    else:
+        cmd = [
+            *base_cmd, 'render',
+            'src/Root.tsx',
+            'VideoComposition',
+            str(target_out),
+            '--props', str(props_path),
+            '--log', 'error',
+            '--concurrency=2',
+        ]
 
-    print(f"[Remotion] Invocando renderizado de subtítulos animados ({width}x{height})...", flush=True)
+    print(f"[Remotion] Invocando renderizado con {' '.join(cmd[:3])} ({width}x{height})...", flush=True)
     result = subprocess.run(
         cmd,
         cwd=str(REMOTION_DIR),
