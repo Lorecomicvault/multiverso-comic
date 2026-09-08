@@ -72,10 +72,10 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
 
-      - name: Instalar Dependencias del Sistema (FFmpeg, Fuentes y Chrome Headless)
+      - name: Instalar Dependencias del Sistema (FFmpeg y Fuentes)
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq ffmpeg fonts-liberation fonts-dejavu fonts-noto-color-emoji libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libgbm1 libasound2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libpango-1.0-0 libcairo2 xvfb
+          sudo apt-get install -y -qq ffmpeg fonts-liberation fonts-dejavu fonts-noto-color-emoji
 
       - name: Instalar Dependencias de Python
         run: |
@@ -85,7 +85,7 @@ jobs:
       - name: Configurar Node.js para Remotion
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '22'
 
       - name: Instalar y Verificar Motor Remotion
         run: |
