@@ -16,8 +16,7 @@ from .composer import (
     extract_thumbnail,
     get_duration,
 )
-from .renderer import check_remotion_available, render_with_remotion
-from .transcribe import extract_scene_word_timings, transcribe_to_ass_word
+from .transcribe import transcribe_to_ass_word
 from .voiceover import DEFAULT_VOICE, generate_voiceover_scenes
 
 VIDEO_LOG_FILE = 'videos_log.csv'
@@ -167,10 +166,11 @@ def run_pipeline(
     log(f"  OK -> {concat_path}")
 
     # --- 3. Generar tiempos de palabra escena por escena (Cero desincronización) ---
-    word_timings_json = None
-    concat_audio_path = str(output_dir / 'full_audio.wav')
+    # --- 3. Generar subtítulos estilo cómic idénticos a local (Impact cursiva amarillo/blanco en centro) ---
+    ass_path = None
     if has_voiceover:
-        log("Extrayendo tiempos de palabras sincronizados por escena...")
+        log("Generando subtítulos dinámicos estilo cómic con Whisper (idénticos a local)...")
+        concat_audio_path = str(output_dir / 'full_audio.wav')
         subprocess.run([
             'ffmpeg', '-y',
             '-i', concat_path,
@@ -178,16 +178,13 @@ def run_pipeline(
             concat_audio_path,
         ], check=True, capture_output=True, text=True)
 
-        word_timings_json = str(output_dir / 'word_timings.json')
-        try:
-            extract_scene_word_timings(voice_results, word_timings_json, language='es')
-            log(f"  OK -> Tiempos de palabras exportados: {word_timings_json}")
-        except Exception as e:
-            log(f"  Warning: No se pudo extraer tiempos de Whisper ({e}). Se usará subtitulado alternativo.")
-            word_timings_json = None
+        ass_path = str(output_dir / 'subtitles.ass')
+        full_text = ' '.join(voice_results[sn]['text'] for sn in sorted(voice_results))
+        transcribe_to_ass_word(concat_audio_path, ass_path, language='es', correct_text=full_text)
+        log(f"  OK -> Subtítulos generados: {ass_path}")
 
-    # --- 4. Masterización final con Remotion o motor de respaldo FFmpeg ---
-    log("Masterizando video final...")
+    # --- 4. Masterización final idéntica a local (FFmpeg + Impact + H.264) ---
+    log("Masterizando video final idéntico al motor local...")
     if final_video_dir is not None:
         final_dir = Path(final_video_dir)
     else:
@@ -200,58 +197,12 @@ def run_pipeline(
     safe_name = re.sub(r'[^\w\s-]', '', title).strip().replace(' ', '_')[:80]
     final_video = str(final_dir / f'{safe_name}.mp4')
 
-    remotion_success = False
-    remotion_error = None
-    in_github_actions = os.environ.get('GITHUB_ACTIONS') == 'true'
+    if ass_path and Path(ass_path).exists():
+        compose_final(concat_path, ass_path, final_video, width=width, height=height)
+    else:
+        compose_final_pure(concat_path, final_video)
 
-    if has_voiceover and word_timings_json:
-        if check_remotion_available():
-            try:
-                log("Iniciando renderizado de subtítulos cinemáticos con Remotion (React/TypeScript)...")
-                audio_mp3 = str(output_dir / 'voiceover_full.mp3')
-                subprocess.run([
-                    'ffmpeg', '-y',
-                    '-i', concat_audio_path,
-                    '-c:a', 'libmp3lame', '-q:a', '2',
-                    audio_mp3,
-                ], check=True, capture_output=True, text=True)
-
-                render_with_remotion(
-                    concat_video=concat_path,
-                    full_audio=audio_mp3,
-                    word_timings_json=word_timings_json,
-                    output_video=final_video,
-                    width=width,
-                    height=height,
-                    title=title,
-                )
-                remotion_success = True
-                log(f"  OK -> Video con subtítulos Remotion generado: {final_video}")
-            except Exception as e:
-                remotion_error = str(e)
-                log(f"  Warning: Falló renderizado con Remotion ({e}).")
-        else:
-            remotion_error = "Remotion CLI o Node.js no están disponibles en este entorno."
-            log(f"  Warning: {remotion_error}")
-
-    # Si estamos en GitHub Actions, Remotion es estrictamente obligatorio para todos los videos generados
-    if in_github_actions and not remotion_success:
-        raise RuntimeError(
-            f"ERROR CRÍTICO EN GITHUB ACTIONS: Los videos en GitHub deben renderizarse con subtítulos Remotion obligatoriamente. "
-            f"Detalle del error: {remotion_error}"
-        )
-
-    if not remotion_success:
-        log("Masterizando video con motor de respaldo local FFmpeg...")
-        if has_voiceover:
-            ass_path = str(output_dir / 'subtitles.ass')
-            full_text = ' '.join(voice_results[sn]['text'] for sn in sorted(voice_results))
-            transcribe_to_ass_word(concat_audio_path, ass_path, language='es', correct_text=full_text)
-            compose_final(concat_path, ass_path, final_video, width=width, height=height)
-        else:
-            compose_final_pure(concat_path, final_video)
-
-        log(f"  OK -> Video final generado con FFmpeg: {final_video}")
+    log(f"  OK -> Video final generado: {final_video}")
 
     # Generate high-impact thumbnail (at 2.5s into video)
     thumb_path = str(final_dir / f'{safe_name}_thumb.jpg')

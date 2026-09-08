@@ -266,7 +266,13 @@ def compose_final(
     fade_out = 0.6
     fade_out_start = max(0.0, total - fade_out)
 
+    fonts_dir = Path(__file__).resolve().parent.parent / 'fonts'
     escaped = subs_path.replace('\\', '/').replace(':', '\\:')
+    if fonts_dir.exists():
+        escaped_fonts = str(fonts_dir).replace('\\', '/').replace(':', '\\:')
+        ass_filter = f"ass='{escaped}':fontsdir='{escaped_fonts}'"
+    else:
+        ass_filter = f"ass='{escaped}'"
 
     has_music = MUSIC_BED_PATH.exists()
 
@@ -275,7 +281,7 @@ def compose_final(
         f'[0:v]eq=contrast=1.04:saturation=1.06:brightness=-0.01,'
         f'unsharp=luma_msize_x=5:luma_msize_y=5:luma_amount=0.5,'
         f'fade=t=out:st={fade_out_start}:d={fade_out},'
-        f'ass=\'{escaped}\'[v]'
+        f'{ass_filter}[v]'
     )
 
     if has_music:
