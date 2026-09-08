@@ -14,7 +14,7 @@ import sys
 import time
 import unicodedata
 from pathlib import Path
-from PIL import Image
+from PIL import Image, ImageFilter
 import requests
 
 from .comic_fetcher import get_fandom_comic_art
@@ -540,6 +540,41 @@ def record_production(story: dict, mode: str, video_path: str):
     save_ledger(ledger)
 
 
+def create_full_panel_frame(im: Image.Image, target_w: int = 1080, target_h: int = 1920) -> Image.Image:
+    """
+    Guarantees 100% COMPLETE comic panel visibility (Zero Cropping):
+    1. Background Layer: Scaled to cover 1080x1920 with smooth Gaussian blur (radius=28) and dark tint.
+    2. Foreground Panel: Scaled to contain within 94% width and 65% height, leaving bottom area for Remotion subtitles.
+    3. Border: Clean black comic outline so the vignette pops.
+    """
+    bg_scale = max(target_w / im.width, target_h / im.height)
+    bg_w, bg_h = int(im.width * bg_scale), int(im.height * bg_scale)
+    bg = im.resize((bg_w, bg_h), Image.Resampling.BILINEAR)
+    left = (bg_w - target_w) // 2
+    top = (bg_h - target_h) // 2
+    bg = bg.crop((left, top, left + target_w, top + target_h))
+    bg = bg.filter(ImageFilter.GaussianBlur(radius=28))
+
+    dark_overlay = Image.new('RGB', (target_w, target_h), (12, 14, 20))
+    bg = Image.blend(bg, dark_overlay, alpha=0.55)
+
+    max_fg_w = int(target_w * 0.94)
+    max_fg_h = int(target_h * 0.65)
+    fg_scale = min(max_fg_w / im.width, max_fg_h / im.height)
+    fg_w, fg_h = int(im.width * fg_scale), int(im.height * fg_scale)
+    fg = im.resize((fg_w, fg_h), Image.Resampling.LANCZOS)
+
+    fg_x = (target_w - fg_w) // 2
+    fg_y = max(130, int((target_h * 0.68 - fg_h) / 2) + 40)
+
+    border_w = 4
+    border_img = Image.new('RGB', (fg_w + border_w * 2, fg_h + border_w * 2), (0, 0, 0))
+    border_img.paste(fg, (border_w, border_w))
+
+    bg.paste(border_img, (fg_x - border_w, fg_y - border_w))
+    return bg
+
+
 def build_cloud_generation(story: dict, work_dir: Path) -> dict:
     gen_dir = work_dir / story["id"]
     gen_dir.mkdir(parents=True, exist_ok=True)
@@ -566,14 +601,8 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
                 r = requests.get(art_urls[idx - 1], headers=headers, timeout=15)
                 if r.status_code == 200 and len(r.content) > 10000:
                     im = Image.open(io.BytesIO(r.content)).convert('RGB')
-                    target_w, target_h = 1080, 1920
-                    scale = max(target_w / im.width, target_h / im.height)
-                    nw, nh = max(target_w, int(im.width * scale)), max(target_h, int(im.height * scale))
-                    im_resized = im.resize((nw, nh), Image.Resampling.LANCZOS)
-                    left = (nw - target_w) // 2
-                    top = (nh - target_h) // 2
-                    im_cropped = im_resized.crop((left, top, left + target_w, top + target_h))
-                    im_cropped.save(img_file, quality=92)
+                    frame_img = create_full_panel_frame(im, target_w=1080, target_h=1920)
+                    frame_img.save(img_file, quality=94)
                     saved = True
             except Exception as e:
                 log(f"Warning processing image {idx}: {e}")

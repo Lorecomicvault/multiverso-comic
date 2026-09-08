@@ -25,6 +25,12 @@ final_videos/
 *.log
 scratch/
 temp/
+scratch_cloud_gen/
+remotion/node_modules/
+remotion/public/*.mp4
+remotion/public/*.mp3
+remotion/public/*.json
+node_modules/
 
 # Environment variables & secrets
 .env

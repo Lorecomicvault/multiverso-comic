@@ -16,7 +16,8 @@ from .composer import (
     extract_thumbnail,
     get_duration,
 )
-from .transcribe import transcribe_to_ass_word
+from .renderer import check_remotion_available, render_with_remotion
+from .transcribe import extract_scene_word_timings, transcribe_to_ass_word
 from .voiceover import DEFAULT_VOICE, generate_voiceover_scenes
 
 VIDEO_LOG_FILE = 'videos_log.csv'
@@ -158,17 +159,18 @@ def run_pipeline(
 
     log(f"  OK -> {len(composed_scenes)} escenas compuestas")
 
-    # --- 2. Concatenar escenas con transiciones cinemáticas ---
-    log("Concatenando escenas con transiciones cinemáticas...")
+    # --- 2. Concatenar escenas con sincronización exacta (Corte limpio sin desfase) ---
+    log("Concatenando escenas con sincronización milimétrica...")
     concat_path = str(output_dir / 'concatenated.mp4')
-    concat_videos_audio(composed_scenes, concat_path, transition_duration=0.4)
+    # transition_duration=0 garantiza que el audio y el video no sufran desplazamiento temporal
+    concat_videos_audio(composed_scenes, concat_path, transition_duration=0)
     log(f"  OK -> {concat_path}")
 
-    # --- 3. Generar subtítulos estilo cómic (Impact cursiva amarillo/blanco) ---
-    ass_path = None
+    # --- 3. Generar tiempos de palabra escena por escena (Cero desincronización) ---
+    word_timings_json = None
+    concat_audio_path = str(output_dir / 'full_audio.wav')
     if has_voiceover:
-        log("Generando subtítulos dinámicos estilo cómic con Whisper...")
-        concat_audio_path = str(output_dir / 'full_audio.wav')
+        log("Extrayendo tiempos de palabras sincronizados por escena...")
         subprocess.run([
             'ffmpeg', '-y',
             '-i', concat_path,
@@ -176,18 +178,21 @@ def run_pipeline(
             concat_audio_path,
         ], check=True, capture_output=True, text=True)
 
-        ass_path = str(output_dir / 'subtitles.ass')
-        full_text = ' '.join(voice_results[sn]['text'] for sn in sorted(voice_results))
-        transcribe_to_ass_word(concat_audio_path, ass_path, language='en', correct_text=full_text)
-        log(f"  OK -> Subtítulos generados: {ass_path}")
+        word_timings_json = str(output_dir / 'word_timings.json')
+        try:
+            extract_scene_word_timings(voice_results, word_timings_json, language='es')
+            log(f"  OK -> Tiempos de palabras exportados: {word_timings_json}")
+        except Exception as e:
+            log(f"  Warning: No se pudo extraer tiempos de Whisper ({e}). Se usará subtitulado alternativo.")
+            word_timings_json = None
 
-    # --- 4. Masterización final con música de fondo y subtítulos ---
+    # --- 4. Masterización final con Remotion o motor de respaldo FFmpeg ---
     log("Masterizando video final...")
     if final_video_dir is not None:
         final_dir = Path(final_video_dir)
     else:
         env_dir = os.environ.get('FINAL_VIDEO_DIR')
-        final_dir = Path(env_dir) if env_dir else (Path.home() / 'Downloads' / 'comics en ingles')
+        final_dir = Path(env_dir) if env_dir else (Path.home() / 'Downloads' / 'comics en espanol')
     final_dir.mkdir(parents=True, exist_ok=True)
 
     meta = script.get('metadata') or {}
@@ -195,12 +200,44 @@ def run_pipeline(
     safe_name = re.sub(r'[^\w\s-]', '', title).strip().replace(' ', '_')[:80]
     final_video = str(final_dir / f'{safe_name}.mp4')
 
-    if ass_path and Path(ass_path).exists():
-        compose_final(concat_path, ass_path, final_video, width=width, height=height)
-    else:
-        compose_final_pure(concat_path, final_video)
+    remotion_success = False
+    if has_voiceover and word_timings_json and check_remotion_available():
+        try:
+            log("Iniciando renderizado de subtítulos cinemáticos con Remotion (React/TypeScript)...")
+            audio_mp3 = str(output_dir / 'voiceover_full.mp3')
+            subprocess.run([
+                'ffmpeg', '-y',
+                '-i', concat_audio_path,
+                '-c:a', 'libmp3lame', '-q:a', '2',
+                audio_mp3,
+            ], check=True, capture_output=True, text=True)
 
-    log(f"  OK -> Video final generado: {final_video}")
+            render_with_remotion(
+                concat_video=concat_path,
+                full_audio=audio_mp3,
+                word_timings_json=word_timings_json,
+                output_video=final_video,
+                width=width,
+                height=height,
+                title=title,
+            )
+            remotion_success = True
+            log(f"  OK -> Video con subtítulos Remotion generado: {final_video}")
+        except Exception as e:
+            log(f"  Warning: Falló renderizado con Remotion ({e}). Continuando con motor FFmpeg...")
+            remotion_success = False
+
+    if not remotion_success:
+        log("Masterizando video con motor de respaldo FFmpeg...")
+        if has_voiceover:
+            ass_path = str(output_dir / 'subtitles.ass')
+            full_text = ' '.join(voice_results[sn]['text'] for sn in sorted(voice_results))
+            transcribe_to_ass_word(concat_audio_path, ass_path, language='es', correct_text=full_text)
+            compose_final(concat_path, ass_path, final_video, width=width, height=height)
+        else:
+            compose_final_pure(concat_path, final_video)
+
+        log(f"  OK -> Video final generado con FFmpeg: {final_video}")
 
     # Generate high-impact thumbnail (at 2.5s into video)
     thumb_path = str(final_dir / f'{safe_name}_thumb.jpg')

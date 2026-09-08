@@ -49,41 +49,36 @@ def compose_scene(video_path: str, audio_path: str, duration: float, output: str
 
 def _build_zoompan_exprs(pattern: str, total_frames: int, nf: int, duration: float, width: int, height: int) -> tuple[str, str, str, float, float]:
     """
-    Movimiento de cámara dinámico y cinematográfico para viñetas y cómics.
-    Mayor profundidad de zoom (20%-30%) y paneos para crear energía y retención visual.
+    Movimiento cinematográfico suave que mantiene el 100% de la viñeta de cómic visible.
+    Micro-movimiento elegante (2.5% a 3%) para dar vida a la ilustración sin cortar bordes ni texto.
     """
     t_norm = f'on/{nf}' if nf > 0 else '0'
-    zoom_depth = 0.25
+    zoom_depth = 0.03
     rotation = 0.0
 
     if pattern == 'zoom-out':
-        # Acercamiento inicial que se abre para revelar el plano completo
-        z = f'1.25 - {zoom_depth} * {t_norm}'
+        z = f'1.03 - {zoom_depth} * {t_norm}'
         x = '(iw - iw/zoom)/2'
         y = '(ih - ih/zoom)/2'
     elif pattern == 'pan-up':
-        # Paneo ascendente hacia el rostro del personaje con zoom activo
-        z = '1.20'
+        z = '1.025'
         x = '(iw - iw/zoom)/2'
-        y = f'(ih - ih/zoom) * (1 - {t_norm} * 0.8)'
+        y = f'(ih - ih/zoom) * (1 - {t_norm} * 0.6)'
     elif pattern == 'pan-down':
-        # Paneo descendente
-        z = '1.20'
+        z = '1.025'
         x = '(iw - iw/zoom)/2'
-        y = f'(ih - ih/zoom) * ({t_norm} * 0.8)'
+        y = f'(ih - ih/zoom) * ({t_norm} * 0.6)'
     elif pattern == 'pan-left-to-right':
-        # Barrido horizontal suave
-        z = '1.22'
-        x = f'(iw - iw/zoom) * ({t_norm} * 0.8)'
+        z = '1.025'
+        x = f'(iw - iw/zoom) * ({t_norm} * 0.6)'
         y = '(ih - ih/zoom)/2'
     elif pattern == 'pan-right-to-left':
-        # Barrido horizontal inverso
-        z = '1.22'
-        x = f'(iw - iw/zoom) * (1 - {t_norm} * 0.8)'
+        z = '1.025'
+        x = f'(iw - iw/zoom) * (1 - {t_norm} * 0.6)'
         y = '(ih - ih/zoom)/2'
     else:
         # zoom-in dinámico
-        z = f'1.0 + {zoom_depth} * {t_norm}'
+        z = f'1.00 + {zoom_depth} * {t_norm}'
         x = '(iw - iw/zoom)/2'
         y = '(ih - ih/zoom)/2'
 
