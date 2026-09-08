@@ -1,4 +1,4 @@
-name: Comic Lore Vault - Motor Autonomo de Videos en Espanol
+name: Multiverso Comic - Motor Autonomo de Videos
 
 on:
   workflow_dispatch:
@@ -128,7 +128,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: comic-lore-spanish-video-${{ github.run_number }}
+          name: multiverso-comic-video-${{ github.run_number }}
           path: output/**/*.mp4
           if-no-files-found: ignore
 
@@ -136,7 +136,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: comic-lore-spanish-production-logs-${{ github.run_number }}
+          name: multiverso-comic-production-logs-${{ github.run_number }}
           path: |
             output/videos_log.csv
             output/**/*.ass

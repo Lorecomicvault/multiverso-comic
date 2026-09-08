@@ -1,7 +1,7 @@
 """
 Comic Lore Vault - Autonomous Cloud Video Runner & Publisher (Spanish Engine)
 Anti-Duplication Engine: Guarantees zero repeated stories, characters arcs, or themes.
-Repository: comic-lore-espanol (main)
+Repository: multiverso-comic (main)
 """
 
 import argparse
@@ -548,15 +548,15 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Comic Lore Vault Autonomous Cloud Generation & Publisher (Spanish)")
+    parser = argparse.ArgumentParser(description="Multiverso Comic Autonomous Cloud Generation & Publisher")
     parser.add_argument("--story-id", type=str, help="Specific story ID to generate")
     parser.add_argument("--publish", action="store_true", help="Auto-publish to FB Page and IG after generation")
     parser.add_argument("--draft", action="store_true", help="Save as unpublished draft on FB and skip public IG")
     parser.add_argument("--dry-run", action="store_true", help="Test workflow without video generation or publishing")
     args = parser.parse_args()
 
-    log("Initializing Spanish Comic Video Engine with Anti-Duplication Protection...")
-    log(f"Branch: spanish-videos")
+    log("Initializing Multiverso Comic Engine with Anti-Duplication Protection...")
+    log(f"Repository: multiverso-comic (branch: main)")
     log(f"FB Page ID: {os.environ.get('FB_PAGE_ID', DEFAULT_PAGE_ID)}")
     log(f"IG Account ID: {os.environ.get('IG_USER_ID', DEFAULT_IG_USER_ID)}")
 
