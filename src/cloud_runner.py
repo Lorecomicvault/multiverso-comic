@@ -129,23 +129,35 @@ EDITORIAL_STORIES = [
         "character": "Hulk",
         "title": "Hulk Maestro: El Tirano del Futuro Imperfecto",
         "theme_signature": "hulk:future_imperfect:maestro_distopia",
-        "description": "En un futuro postapocalíptico donde una guerra nuclear aniquiló a los héroes, Hulk absorbió la radiación, conservó la mente de Banner y se coronó como el cruel emperador Maestro.",
+        "description": "La historia épica de Hulk Maestro en Futuro Imperfecto: la caída de los héroes, la tétrica sala de trofeos de Rick Jones, la sangrienta guerra contra su versión del pasado y su condena final en la detonación de la Bomba Gamma.",
         "hashtags": "#Hulk #Maestro #MarvelComics #FuturoImperfecto #ComicsNarrados #Reels",
         "scenes": [
-            "En un futuro desolado donde una guerra nuclear arrasó a la civilización y mató a casi todos los héroes, solo un ser prosperó en las cenizas radiactivas: Hulk.",
-            "Habiendo absorbido décadas de radiación residual, su fuerza física se multiplicó monstruosamente, pero esta vez conservó la brillante e implacable mente de Bruce Banner.",
-            "Adoptando el nombre de 'Maestro', erradicó a los últimos señores de la guerra y construyó Dystopia, proclamándose gobernante supremo y tirano absoluto del planeta.",
-            "En su sala de trofeos personal coleccionó los restos de sus antiguos amigos: el escudo roto del Capitán América, el martillo de Thor y el cráneo de Wolverine.",
-            "Desesperados, los rebeldes viajaron en el tiempo para traer al Hulk del pasado, esperando que el gigante esmeralda pudiera derrocar a su propia versión anciana.",
-            "Tras una sangrienta colisión titánica, Hulk utilizó la máquina del tiempo para enviar a Maestro al epicentro exacto de la explosión de la Bomba Gamma original."
+            "En un futuro postapocalíptico desolado, una devastadora guerra nuclear aniquiló al noventa y cinco por ciento de la humanidad y barrió con casi todos los superhéroes de la Tierra.",
+            "Sobre las ruinas humeantes de la civilización se erigió la temible ciudadela de Distopía, patrullada por los letales Perros de Guerra y sometida a una tiranía militar absoluta.",
+            "Mientras los demás héroes sucumbían ante el veneno atómico, Bruce Banner absorbió la radiación durante décadas, multiplicando su fuerza monstruosamente y conservando su genial intelecto.",
+            "Despojándose de su moral y adoptando el nombre de Maestro, exterminó a sangre fría a todos los señores de la guerra rivales para autoproclamarse emperador supremo del planeta.",
+            "En las profundidades de un búnker secreto, un anciano Rick Jones en silla de ruedas custodiaba la tétrica sala de trofeos donde yacían los restos de los Vengadores caídos.",
+            "Allí reposaban el escudo destrozado del Capitán América, el martillo de Thor, el cráneo de Wolverine y las pertenencias de aquellos que alguna vez defendieron al mundo.",
+            "Desesperada por frenar esta pesadilla, la resistencia rebelde liderada por Janis Jones utilizó la máquina del tiempo del Doctor Doom para viajar al pasado en busca de auxilio.",
+            "Trajeron al joven profesor Hulk desde el siglo veinte, enfrentándolo cara a cara contra la corrupta y despiadada abominación en la que el destino lo terminaría convirtiendo.",
+            "El choque entre ambos titanes fue brutal e implacable; Maestro contaba con un siglo entero de experiencia en batalla y no dudó en quebrarle el cuello a su versión más joven.",
+            "Cegado por su colosal arrogancia y creyéndose invulnerable, Maestro bajó la guardia, sin sospechar que el joven gigante esmeralda había fingido su agonía como parte de una trampa.",
+            "Aprovechando la cercanía de su enemigo, Hulk activó la plataforma temporal a espaldas del tirano, programando como destino final las coordenadas exactas de su propio nacimiento.",
+            "Maestro fue enviado en el tiempo al epicentro mismo donde detonó la Bomba Gamma original, siendo consumido y desintegrado por la explosión nuclear que dio vida al monstruo."
         ],
         "scene_art_urls": [
             "https://static.wikia.nocookie.net/marveldatabase/images/b/b1/Hulk_Future_Imperfect_Vol_1_1.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/a/a0/Dogs_of_War_%28Earth-9200%29_from_Hulk_Future_Imperfect_Vol_1_1_001.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/a/ab/Bruce_Banner_%28Earth-9200%29_from_Hulk_Future_Imperfect_Vol_1_1_001.jpg",
             "https://static.wikia.nocookie.net/marveldatabase/images/8/87/Maestro_Vol_1_1_McGuinness_Variant_Textless.jpg",
-            "https://static.wikia.nocookie.net/marveldatabase/images/4/4a/Maestro_Vol_1_4_Ottley_Variant_Textless.jpg",
-            "https://static.wikia.nocookie.net/marveldatabase/images/a/aa/Maestro_Future_Imperfect_-_Marvel_Tales_Vol_1_1_Virgin_Variant.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/7/70/Richard_Jones_%28Earth-9200%29_from_Hulk_Future_Imperfect_Vol_1_2_001.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/c/c7/Steven_Rogers_%28Earth-9200%29_from_Hulk_Future_Imperfect_Vol_1_1_001.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/f/ff/Bruce_Banner_%28Earth-616%29_from_Hulk_Future_Imperfect_Vol_1_1_001.jpg",
             "https://static.wikia.nocookie.net/marveldatabase/images/d/db/Hulk_Future_Imperfect_Vol_1_2.jpg",
-            "https://static.wikia.nocookie.net/marveldatabase/images/d/dd/Maestro_War_and_Pax_Vol_1_1_Stegman_Variant_Textless.jpg"
+            "https://static.wikia.nocookie.net/marveldatabase/images/5/5f/Bruce_Banner_%28Earth-9200%29_from_Hulk_Future_Imperfect_Vol_1_2_001.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/4/4a/Maestro_Vol_1_4_Ottley_Variant_Textless.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/d/dd/Maestro_War_and_Pax_Vol_1_1_Stegman_Variant_Textless.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/a/aa/Maestro_Future_Imperfect_-_Marvel_Tales_Vol_1_1_Virgin_Variant.jpg"
         ]
     },
     {

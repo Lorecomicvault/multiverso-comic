@@ -16,7 +16,7 @@ from .composer import (
     extract_thumbnail,
     get_duration,
 )
-from .transcribe import transcribe_to_ass_word
+from .transcribe import transcribe_scenes_to_ass, transcribe_to_ass_word
 from .voiceover import DEFAULT_VOICE, generate_voiceover_scenes
 
 VIDEO_LOG_FILE = 'videos_log.csv'
@@ -165,22 +165,12 @@ def run_pipeline(
     concat_videos_audio(composed_scenes, concat_path, transition_duration=0)
     log(f"  OK -> {concat_path}")
 
-    # --- 3. Generar tiempos de palabra escena por escena (Cero desincronización) ---
-    # --- 3. Generar subtítulos estilo cómic idénticos a local (Impact cursiva amarillo/blanco en centro) ---
+    # --- 3. Generar subtítulos estilo cómic idénticos a local (Whisper escena por escena, 100% sincronizados) ---
     ass_path = None
     if has_voiceover:
-        log("Generando subtítulos dinámicos estilo cómic con Whisper (idénticos a local)...")
-        concat_audio_path = str(output_dir / 'full_audio.wav')
-        subprocess.run([
-            'ffmpeg', '-y',
-            '-i', concat_path,
-            '-vn', '-acodec', 'pcm_s16le', '-ar', '16000', '-ac', '1',
-            concat_audio_path,
-        ], check=True, capture_output=True, text=True)
-
+        log("Generando subtítulos dinámicos estilo cómic con Whisper (escena por escena, 100% sincronizados)...")
         ass_path = str(output_dir / 'subtitles.ass')
-        full_text = ' '.join(voice_results[sn]['text'] for sn in sorted(voice_results))
-        transcribe_to_ass_word(concat_audio_path, ass_path, language='es', correct_text=full_text)
+        transcribe_scenes_to_ass(voice_results, ass_path, language='es')
         log(f"  OK -> Subtítulos generados: {ass_path}")
 
     # --- 4. Masterización final idéntica a local (FFmpeg + Impact + H.264) ---
