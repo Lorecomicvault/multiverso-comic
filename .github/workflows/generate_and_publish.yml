@@ -1,87 +1,100 @@
-name: Comic Lore Vault - Autonomous Cloud Video Engine
+name: Comic Lore Vault - Motor Autonomo de Videos en Espanol
 
 on:
   workflow_dispatch:
     inputs:
       story_id:
-        description: 'Comic Arc ID (or "any" for automatic non-repeating queue)'
+        description: 'ID del Arco de Comic (o "any" para cola automatica anti-duplicados)'
         required: false
         default: 'any'
         type: choice
         options:
           - any
-          - batman_under_the_red_hood
-          - batman_court_of_owls
-          - flashpoint_thomas_wayne
-          - joker_killing_joke
-          - injustice_superman_fall
-          - green_lantern_blackest_night
-          - thor_god_butcher
-          - daredevil_born_again
-          - civil_war_death_of_cap
-          - secret_wars_god_emperor_doom
-          - wolverine_old_man_logan
-          - venom_maximum_carnage
+          - knull_dios_simbiontes
+          - batman_que_rie
+          - injustice_regimen_superman
+          - gorr_carnicero_dioses
+          - world_war_hulk_coloso
+          - civil_war_caida_heroes
+          - blackest_night_rebelion
+          - secret_wars_dios_doom
+          - flashpoint_paradoja
+          - killing_joke_broma_asesina
+          - red_hood_capucha_roja
+          - franklin_richards_creador
+          - thanos_wins_fin_existencia
+          - dark_nights_metal
+          - muerte_superman
+          - old_man_logan
+          - muerte_gwen_stacy
+          - superboy_prime
+          - torre_de_babel
+          - cosmic_ghost_rider
+          - crisis_tierras_infinitas
+          - marvel_zombies
+          - robo_del_mysterium
+          - batman_corte_de_los_buhos
       mode:
-        description: 'Execution Mode (Safe verification vs Official Live)'
+        description: 'Modo de Ejecucion (render_only vs live_release)'
         required: true
         default: 'render_only'
         type: choice
         options:
           - render_only
-          - draft_only
           - live_release
+          - draft_only
           - dry_run
 
   # schedule:
-  #   # Deactivated - initial 10 videos will be triggered manually.
-  #   # External cronjob or scheduled API dispatch will be activated later.
-  #   # - cron: '0 15 * * *'
+  #   # Desactivado - los videos iniciales se disparan manualmente via workflow_dispatch.
+  #   # - cron: '0 16 * * *'
 
 permissions:
   contents: write
 
 jobs:
   produce-and-publish:
-    name: Generate & Publish Comic Reel
+    name: Generar y Publicar Reel en Espanol
     runs-on: ubuntu-latest
     timeout-minutes: 60
 
     steps:
-      - name: Checkout Code
+      - name: Checkout Codigo (Rama spanish-videos)
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          ref: spanish-videos
           fetch-depth: 1
 
-      - name: Set up Python 3.11
+      - name: Configurar Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
 
-      - name: Install System Dependencies (FFmpeg & Fonts)
+      - name: Instalar Dependencias del Sistema (FFmpeg y Fuentes)
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg fonts-liberation fonts-dejavu
 
-      - name: Install Python Dependencies
+      - name: Instalar Dependencias de Python
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Cloud Generation & Publishing
+      - name: Ejecutar Generacion y Publicacion en la Nube
         env:
-          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
-          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
-          IG_USER_ID: ${{ secrets.IG_USER_ID }}
-          GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
-          EVENT_MODE: ${{ github.event.inputs.mode || 'live_release' }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN || 'EAAduw9ZBIaysBSVYGkNZCmRYBKHwiPpwlkZBiFxM5SNCWCBnmMLhl7SDSvUNFJXzn6xSYQBeKDNseZA3bM5cwCxcIV7L4bim7nlIU5CtgsB8gZCy82iew2MZB72Q13ODT8yBKcFrdRHXhUziR7DwOqMCoZBOcTd4whcwZByMWR4xQfqWJEl7gHZCRT3HOtZA73OMBCaZCzi' }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID || '1289410784257454' }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID || '17841427017671758' }}
+          GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY || 'AIzaSyDpdDhoXt8GDwJ_sEj-vjtd6HqVflN_vSY' }}
+          VOICE: 'es-US-Studio-B'
+          EVENT_MODE: ${{ github.event.inputs.mode || 'render_only' }}
         run: |
           ARGS=""
           MODE="${EVENT_MODE}"
 
-          echo "Selected Execution Mode: $MODE"
+          echo "Modo de Ejecucion Seleccionado: $MODE"
 
           if [ "$MODE" = "dry_run" ]; then
             ARGS="$ARGS --dry-run"
@@ -90,7 +103,7 @@ jobs:
           elif [ "$MODE" = "live_release" ]; then
             ARGS="$ARGS --publish"
           elif [ "$MODE" = "render_only" ]; then
-            echo "Render Only mode: Video will be rendered and saved as artifact without posting to any platform."
+            echo "Modo Render Only: El video se renderizara y guardara como artefacto sin publicar en Meta."
           fi
 
           if [ -n "${{ github.event.inputs.story_id }}" ] && [ "${{ github.event.inputs.story_id }}" != "any" ]; then
@@ -99,32 +112,32 @@ jobs:
 
           python -m src.cloud_runner $ARGS
 
-      - name: Commit & Push Production Ledger (Zero-Duplicate Persistence)
+      - name: Persistir Ledger de Produccion (Cero Duplicados)
         if: success()
         run: |
           git config user.name "ComicLoreVault Engine"
           git config user.email "Lorecomicvault@users.noreply.github.com"
           git add published_ledger.json output/videos_log.csv 2>/dev/null || true
           if ! git diff --cached --quiet; then
-            git commit -m "chore(ledger): record produced comic video to prevent duplicate [skip ci]"
-            git push origin main
+            git commit -m "chore(ledger): registrar video producido para prevenir duplicados [skip ci]"
+            git push origin spanish-videos
           else
-            echo "Ledger up to date. No new entries to commit."
+            echo "Ledger al dia. No hay nuevas entradas para commitear."
           fi
 
-      - name: Upload Final Video Artifact (For Safe Download & Review)
+      - name: Subir Video Final como Artefacto (Descarga y Revision)
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: comic-lore-video-${{ github.run_number }}
+          name: comic-lore-spanish-video-${{ github.run_number }}
           path: output/**/*.mp4
           if-no-files-found: ignore
 
-      - name: Archive Production Logs & Manifest
+      - name: Archivar Logs de Produccion y Manifiesto
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: comic-lore-production-logs-${{ github.run_number }}
+          name: comic-lore-spanish-production-logs-${{ github.run_number }}
           path: |
             output/videos_log.csv
             output/**/*.ass

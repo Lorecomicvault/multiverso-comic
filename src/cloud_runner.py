@@ -1,7 +1,7 @@
 """
-Comic Lore Vault - Autonomous Cloud Video Runner & Publisher
+Comic Lore Vault - Autonomous Cloud Video Runner & Publisher (Spanish Engine)
 Anti-Duplication Engine: Guarantees zero repeated stories, characters arcs, or themes.
-Brand: Comic Lore Vault (@comicloreevault)
+Branch: spanish-videos
 """
 
 import argparse
@@ -12,6 +12,8 @@ import re
 import sys
 import time
 from pathlib import Path
+from PIL import Image
+import requests
 
 from .comic_fetcher import get_fandom_comic_art
 from .pipeline import run_pipeline
@@ -21,302 +23,471 @@ LEDGER_PATH = Path("published_ledger.json")
 
 EDITORIAL_STORIES = [
     {
-        "id": "batman_under_the_red_hood",
-        "character": "Batman",
-        "title": "Batman: Under the Red Hood - The Resurrection of Jason Todd",
-        "theme_signature": "batman:red_hood:jason_todd_resurrection",
-        "description": "The explosive tragedy of Batman confronting his greatest failure: the resurrection of Jason Todd as the brutal vigilante Red Hood.",
-        "hashtags": "#Batman #RedHood #JasonTodd #Joker #DCComics #ComicLoreVault #ComicTok #Reels",
+        "id": "knull_dios_simbiontes",
+        "character": "Knull",
+        "title": "Knull: El Dios de los Simbiontes y la Necroespada",
+        "theme_signature": "knull:simbiontes:king_in_black",
+        "description": "Antes de la luz y las estrellas, Knull reinaba en el abismo. De su sombra forjó la Necroespada y decapitó a un Celestial, creando la mente colmena simbionte.",
+        "hashtags": "#Knull #Venom #KingInBlack #MarvelComics #ComicsNarrados #Reels",
         "scenes": [
-            "In Gotham City, a ruthless new crime lord emerged from the shadows, seizing total control of the underworld under the identity of the Red Hood.",
-            "Batman tracked the elusive vigilante across the Gotham skyline, stunned by his opponent's intimate knowledge of Wayne Enterprises gear and combat tactics.",
-            "During an intense rooftop confrontation, the Red Hood severed his mask, revealing the impossible: Jason Todd, the second Robin, beaten to death by Joker years ago.",
-            "Jason dragged Batman into a rundown apartment where a bloody Joker sat tied to a chair with a crowbar lying on the table.",
-            "Tears in his eyes, Jason forced Batman to choose: kill the Joker to avenge him, or watch Jason pull the trigger himself.",
-            "Refusing to cross his moral line, Batman disarmed Jason with a batarang, triggering a hidden bomb that leveled the building as Jason vanished into the smoke."
+            "Antes de que existiera la luz, las estrellas o el propio Big Bang, solo existía la oscuridad absoluta, y en el centro de ese abismo reinaba un ser: Knull, el Dios de los Simbiontes.",
+            "Cuando los Celestiales trajeron la luz al cosmos, Knull se sintió ultrajado: de su propia sombra forjó la legendaria Necroespada All-Black y decapitó a un dios Celestial de un solo tajo.",
+            "Utilizando la cabeza del dios muerto como forja, Knull creó a la raza simbionte entera como una mente colmena viviente diseñada exclusivamente para devorar civilizaciones enteras.",
+            "Millones de años después, Knull despertó de su prisión planetaria y marchó hacia la Tierra liderando un ejército incontable de dragones simbiontes que bloquearon el Sol por completo.",
+            "Los Vengadores enviaron a su héroe más poderoso, Sentry, pero Knull lo agarró en el aire y lo partió por la mitad con sus manos desnudas, demostrando que ningún mortal podía dañarlo.",
+            "Solo cuando Eddie Brock se fusionó con la Fuerza Enigma para convertirse en el Dios de la Luz, el reinado de sombras de Knull llegó a su sangriento y definitivo final."
         ]
     },
     {
-        "id": "batman_court_of_owls",
-        "character": "Batman",
-        "title": "Batman: The Court of Owls - Gotham's Dark Secret",
-        "theme_signature": "batman:court_of_owls:talon_labyrinth",
-        "description": "Batman discovers an ancient society that has controlled Gotham City from the shadows for centuries.",
-        "hashtags": "#Batman #CourtOfOwls #Gotham #DCComics #ComicLoreVault #ComicBooks #Reels",
+        "id": "batman_que_rie",
+        "character": "The Batman Who Laughs",
+        "title": "El Batman Que Ríe: La Pesadilla del Multiverso Oscuro",
+        "theme_signature": "batman:batman_who_laughs:dark_multiverse",
+        "description": "¿Qué pasaría si Batman cruzara la línea y se transformara en el Joker? La inteligencia táctica de Bruce Wayne fusionada con la demencia absoluta del Guasón.",
+        "hashtags": "#BatmanQueRie #TheBatmanWhoLaughs #DCComics #DarkMultiverse #ComicsNarrados #Reels",
         "scenes": [
-            "For generations, Gotham children whispered a nursery rhyme about the Court of Owls, an elite shadowy cabal rumored to govern the city in secret.",
-            "Bruce Wayne always dismissed the legend as gothic folklore, until an immortal assassin called a Talon targeted him for public execution.",
-            "Investigating their subterranean lairs, Batman plunged into an enormous subterranean labyrinth hidden deep beneath the bedrock of Gotham City.",
-            "Trapped without food or water for eight torturous days, Bruce's psyche shattered as the Court watched his descent into madness from mirrored balconies.",
-            "Just as the Talons moved in for the kill, Batman summoned the raw fury of his willpower, battling through dozens of undead assassins to break free.",
-            "Escaping back to Wayne Manor, Bruce prepared for total war, unleashing heavy mechanised armor to reclaim the city from its ancient masters."
+            "¿Qué pasaría si Batman cruzara la línea y se transformara en el Joker? Esta es la pesadilla viva del Multiverso Oscuro.",
+            "Al quebrar el cuello del Joker en su última batalla, una neurotoxina purificada infectó el corazón de Bruce Wayne, fusionando su mente maestra con una demencia sin límites.",
+            "En solo veinticuatro horas, el Batman Que Ríe ejecutó fríamente a toda la Liga de la Justicia utilizando los planes de contingencia que él mismo había diseñado.",
+            "Masacró a los Jóvenes Titanes y aniquiló a la mismísima Batifamilia en la Baticueva sin titubear ni mostrar un ápice de remordimiento.",
+            "Con su visor de metal oscuro que le permite ver a través de las dimensiones y los miedos del alma humana, conquistó el cosmos entero.",
+            "Convirtiéndose en el Rey de las Sombras y sirviente de Perpetua, demostró que un Batman sin código moral es el monstruo más letal de la creación."
         ]
     },
     {
-        "id": "flashpoint_thomas_wayne",
-        "character": "Batman",
-        "title": "Flashpoint: The Darker Knight - Thomas Wayne's Vengeance",
-        "theme_signature": "flashpoint:thomas_wayne:letter_to_bruce",
-        "description": "In an alternate timeline where Bruce died in Crime Alley, Thomas Wayne became a ruthless, lethal Batman.",
-        "hashtags": "#Flashpoint #Batman #ThomasWayne #TheFlash #DCComics #ComicLoreVault #Shorts #Reels",
-        "scenes": [
-            "When Barry Allen shattered time to save his mother, he woke in a nightmare world where Bruce Wayne died in that dark alley instead.",
-            "Consummed by sorrow, Thomas Wayne forged himself into a brutal Batman who dual-wielded twin firearms and executed Gotham's worst monsters without hesitation.",
-            "Even more horrifying, Martha Wayne collapsed into madness over Bruce's death, slicing her own face into a grotesque grin to become this world's Joker.",
-            "When Flash revealed the original timeline where Bruce lived to become Batman, Thomas dedicated everything to helping Barry restore reality.",
-            "As the world burned in the apocalyptic war between Atlantis and Themyscira, Thomas sacrificed his life to buy Barry the precious seconds needed to run.",
-            "Before dying, Thomas handed Barry a handwritten letter for Bruce, carrying a father's eternal love across the fractured multiverse."
-        ]
-    },
-    {
-        "id": "joker_killing_joke",
-        "character": "Joker",
-        "title": "The Joker: The Killing Joke - One Bad Day",
-        "theme_signature": "joker:killing_joke:one_bad_day",
-        "description": "The Joker's psychotic crusade to prove that all it takes is one bad day to drive the sanest man alive completely insane.",
-        "hashtags": "#Joker #Batman #TheKillingJoke #DCComics #ComicLoreVault #DarkKnight #Reels",
-        "scenes": [
-            "Escaping Arkham Asylum once again, the Joker set out to prove his most twisted philosophical theory: sanity is just a fragile illusion waiting to shatter.",
-            "Arriving unexpectedly at Barbara Gordon's apartment, Joker shot her point-blank through the spine, permanently paralyzing the young hero.",
-            "He abducted Commissioner Gordon to an abandoned carnival, subjecting Jim to psychological torture designed to break his rational mind.",
-            "Yet despite the horrors, Gordon refused to break, commanding Batman to bring the Joker in by the book to prove the law still stood.",
-            "Tracking the clown through the hall of mirrors, Batman cornered the Joker, offering him one final chance at genuine rehabilitation.",
-            "Joker solemnly declined with a tragic joke about two lunatics, and in the pouring rain, Batman and Joker shared a haunting, chilling laugh."
-        ]
-    },
-    {
-        "id": "injustice_superman_fall",
+        "id": "injustice_regimen_superman",
         "character": "Superman",
-        "title": "Injustice: The Day Superman Lost Everything",
-        "theme_signature": "superman:injustice:metropolis_nuke",
-        "description": "The catastrophic tragedy that turned the world's greatest protector into Earth's most ruthless dictator.",
-        "hashtags": "#Injustice #Superman #Batman #Joker #DCComics #ComicLoreVault #ComicTok #Reels",
+        "title": "Injustice: El Régimen del Hombre de Acero",
+        "theme_signature": "superman:injustice:regimen_tirania",
+        "description": "El día en que el héroe más puro de la Tierra perdió la cordura y se convirtió en el dictador más temido del multiverso.",
+        "hashtags": "#Injustice #Superman #Batman #DCComics #ComicsNarrados #Reels",
         "scenes": [
-            "Tired of losing to Batman, the Joker migrated to Metropolis with a horrific master plan aimed directly at the Man of Steel.",
-            "Using Scarecrow's fear toxin laced with Kryptonite, Joker tricked Superman into believing he was battling the cosmic monster Doomsday.",
-            "Flying the beast into the vacuum of space, the hallucination dissipated, and Clark looked down in sheer horror to find he had killed his pregnant wife, Lois Lane.",
-            "Tied to Lois's heartbeat, a hidden nuclear warhead detonated instantly, vaporizing Metropolis into a smoking radioactive crater.",
-            "Broken beyond repair, Superman flew into the police interrogation room and impaled the laughing Joker through his chest before Batman's eyes.",
-            "From that ashes of grief rose the High Councillor, establishing a global tyrannical regime that pitted superhero against superhero forever."
+            "¿Qué pasaría si el héroe más puro de la Tierra perdiera la cordura por completo? Este fue el trágico nacimiento del tirano más temido del multiverso.",
+            "El Joker drogó a Superman con toxina del miedo y kriptonita: creyendo enfrentar a Doomsday en el espacio, Clark asesinó con sus manos a Lois Lane y a su hijo por nacer.",
+            "La bomba nuclear vinculada al corazón de Lois estalló, pulverizando Metrópolis; roto por el dolor, Superman atravesó el pecho del Joker ante los ojos de Batman.",
+            "Convencido de que la piedad era debilidad, Clark fundó el Régimen Global de la Tierra, ejecutando criminales y gobernando con puño de hierro absoluto.",
+            "Héroes como Wonder Woman lo respaldaron mientras Batman forjaba una resistencia clandestina, desarrollando píldoras nanotecnológicas para igualar la fuerza de los dioses.",
+            "El símbolo de la esperanza eterna se transformó en la mayor dictadura de la historia, demostrando que un solo día trágico puede corromper al dios más noble."
         ]
     },
     {
-        "id": "green_lantern_blackest_night",
-        "character": "Green Lantern",
-        "title": "Green Lantern: Blackest Night - The Dead Shall Rise",
-        "theme_signature": "green_lantern:blackest_night:nekron",
-        "description": "The cosmic prophecy fulfilled as black power rings raise fallen DC heroes from the dead to extinguish all life in the universe.",
-        "hashtags": "#GreenLantern #BlackestNight #HalJordan #DCComics #ComicLoreVault #Zombies #Reels",
+        "id": "gorr_carnicero_dioses",
+        "character": "Gorr the God Butcher",
+        "title": "Gorr el Carnicero de Dioses: La Venganza de la Necroespada",
+        "theme_signature": "thor:gorr:god_butcher_necrosword",
+        "description": "Tras ver morir a su familia en un mundo desértico mientras los dioses ignoraban sus rezos, Gorr juró purgar el cosmos de cada deidad viviente.",
+        "hashtags": "#Thor #Gorr #GodButcher #MarvelComics #ComicsNarrados #Reels",
         "scenes": [
-            "Across the cosmic sectors, an ancient prophecy echoed: the dead would rise, and the blackest night would swallow every spark of life.",
-            "Raining down like obsidian hail, millions of Black Lantern rings desecrated graves across Earth and the cosmos, reanimating fallen heroes and villains.",
-            "Hal Jordan and the surviving heroes faced the ghastly, rotting corpses of their loved ones, weaponizing pure emotional trauma to harvest their hearts.",
-            "From the shadow realm emerged Nekron, the cosmic lord of the unliving, executing the Guardian of the Universe to snuff out the emotional spectrum.",
-            "Uniting all seven lantern colors from will and fear to hope and rage, Hal channeled the celestial White Entity of creation.",
-            "A burst of immaculate white light washed over existence, destroying the black lanterns and restoring life to the fallen champions."
+            "En un mundo árido y desolado, Gorr vio morir de hambre a su madre, su esposa y sus hijos mientras los dioses del cielo ignoraban cada una de sus plegarias.",
+            "Cuando dos deidades cayeron heridas del firmamento pidiendo auxilio, la furia de Gorr explotó: tomó la Necroespada All-Black y juró extinguir a cada dios del cosmos.",
+            "Durante tres mil años cazó y descuartizó panteones enteros a lo largo del universo, dejando templos en ruinas y ríos de sangre divina a su paso.",
+            "Ni siquiera el poderoso Thor de joven pudo detener su avance despiadado, siendo capturado y torturado durante semanas en las cavernas del terror.",
+            "Gorr esclavizó a cientos de dioses para construir la Bomba Divina, un artefacto capaz de aniquilar a todas las deidades en el pasado, presente y futuro de golpe.",
+            "Solo la alianza temporal de tres versiones de Thor de distintas épocas pudo desafiar al carnicero en la batalla más épica de la mitología nórdica."
         ]
     },
     {
-        "id": "thor_god_butcher",
-        "character": "Thor",
-        "title": "Thor: The God Butcher - Gorr's Vow of Annihilation",
-        "theme_signature": "thor:gorr:god_butcher_all_black",
-        "description": "Gorr the God Butcher bonds with the All-Black Necrosword and embarks on a three-thousand-year crusade to massacre all deities.",
-        "hashtags": "#Thor #Gorr #GodButcher #MarvelComics #ComicLoreVault #Avengers #Reels",
+        "id": "world_war_hulk_coloso",
+        "character": "Hulk",
+        "title": "World War Hulk: La Venganza del Rompemundos",
+        "theme_signature": "hulk:world_war_hulk:venganza_coloso",
+        "description": "Exiliado por los Illuminati y devastado por la muerte de su reina en Sakaar, Hulk regresa a la Tierra con una furia incontrolable.",
+        "hashtags": "#WorldWarHulk #Hulk #MarvelComics #Illuminati #ComicsNarrados #Reels",
         "scenes": [
-            "On a barren, dying planet, a mortal named Gorr watched his entire family starve while the gods he prayed to never answered.",
-            "When two wounded gods crashed before him, Gorr bonded with the All-Black Necrosword, making a blood vow to butcher every deity in the cosmos.",
-            "Millennia later, Thor discovered entire pantheons floating dead through space, their golden palaces soaked in silent darkness.",
-            "Gorr forged the Godbomb, an apocalyptic engine capable of detonating across past, present, and future to eradicate all gods simultaneously.",
-            "Uniting across time, young Viking Thor, modern Avenger Thor, and King Thor of the end times stood shoulder-to-shoulder against the butcher.",
-            "Wielding two Mjolnirs imbued with the prayers of the universe, Thor shattered the Necrosword, ending Gorr's reign of vengeance."
+            "Traicionado y exiliado al espacio por los Illuminati, Hulk conquistó el planeta Sakaar, convirtiéndose en rey y encontrando al fin la paz junto a su reina.",
+            "Pero la nave en que lo enviaron explotó, aniquilando a millones de inocentes y matando a su esposa embarazada; en ese instante nació el Hulk Rompemundos.",
+            "Acompañado por su armada alienígena de Warbound, Hulk aterrizó en la Luna y destrozó a Black Bolt con una furia salvaje que estremeció el espacio.",
+            "Al llegar a Manhattan, pulverizó la armadura Hulkbuster de Iron Man, derribó la Torre Stark y humilló a Reed Richards en el corazón de su laboratorio.",
+            "Convirtió el Madison Square Garden en un coliseo de gladiadores, obligando a los héroes que lo traicionaron a combatir a muerte por sus vidas.",
+            "Solo el poder supremo de Sentry, equivalente a un millón de soles explotando, pudo contener la radiación gamma antes de que Hulk partiera el continente en dos."
         ]
     },
     {
-        "id": "daredevil_born_again",
-        "character": "Daredevil",
-        "title": "Daredevil: Born Again - Kingpin Breaks Matt Murdock",
-        "theme_signature": "daredevil:kingpin:born_again_rebirth",
-        "description": "Frank Miller's masterpiece where Wilson Fisk systematically destroys Matt Murdock's entire life.",
-        "hashtags": "#Daredevil #BornAgain #Kingpin #Marvel #ComicLoreVault #HellKitchen #Reels",
-        "scenes": [
-            "Desperate for a fix, Karen Page sold Daredevil's secret identity for thirty pieces of heroin, and the information quickly reached Wilson Fisk.",
-            "The Kingpin didn't kill Matt Murdock right away; instead, he methodically dismantled his life piece by piece with chilling precision.",
-            "Matt lost his law license, had his bank accounts frozen, his apartment building firebombed, and found himself homeless in the snow.",
-            "Starving and teetering on madness, Murdock wandered the streets of Hell's Kitchen, nursing injuries until his long-lost mother nursed him back to life.",
-            "Recognizing that a man with nothing left to lose is the most dangerous force on Earth, Matt donned his black mask once more.",
-            "Daredevil dismantled the Kingpin's syndicate and defeated the super-soldier Nuke, standing tall as the unbreakable guardian of Hell's Kitchen."
-        ]
-    },
-    {
-        "id": "civil_war_death_of_cap",
+        "id": "civil_war_caida_heroes",
         "character": "Captain America",
-        "title": "Civil War: The Tragic Death of Captain America",
-        "theme_signature": "captain_america:death:civil_war_courthouse",
-        "description": "The heartbreaking aftermath of the superhero Civil War that led to Steve Rogers' assassination on the courthouse steps.",
-        "hashtags": "#CaptainAmerica #CivilWar #IronMan #Marvel #ComicLoreVault #Avengers #Reels",
+        "title": "Civil War: La Trágica Caída de los Héroes",
+        "theme_signature": "marvel:civil_war:ironman_vs_cap",
+        "description": "La tragedia de Stamford divide a la comunidad superheroica: Iron Man y el Capitán América enfrentados a muerte por el Acta de Registro.",
+        "hashtags": "#CivilWar #CaptainAmerica #IronMan #MarvelComics #ComicsNarrados #Reels",
         "scenes": [
-            "The superhuman Civil War fractured the superhero community into bitter factions, culminating in a brutal clash across Manhattan streets.",
-            "Standing over an incapacitated Tony Stark, Captain America looked around and realized the battle was terrifying the very citizens he swore to protect.",
-            "Unmasking himself, Steve Rogers surrendered unconditionally, willing to stand trial in federal court to bring peace to the divided nation.",
-            "Ascending the courthouse steps in handcuffs, a high-caliber sniper round from Crossbones struck Steve in the shoulder.",
-            "In the ensuing chaos, a brainwashed Sharon Carter fired three close-range shots into Steve's abdomen, ending the life of America's greatest sentinel.",
-            "Kneeling beside Steve's casket, a devastated Tony Stark wept in solitary remorse, whispering the tragic truth: 'It wasn't worth it.'"
+            "Cuando una explosión provocada por villanos en Stamford arrebató la vida a seiscientos civiles inocentes, el gobierno exigió el Acta de Registro de Superhumanos.",
+            "Iron Man apoyó la ley por el bien de la seguridad nacional, pero el Capitán América se negó a comprometer la libertad individual, convirtiéndose en fugitivo.",
+            "La comunidad superheroica se fracturó en dos bandos irreconciliables, transformando a antiguos hermanos de armas en feroces enemigos en combate.",
+            "Peter Parker reveló su identidad secreta al mundo en televisión para apoyar a Stark, desatando una cacería implacable contra sus seres más queridos.",
+            "En las calles de Nueva York, Iron Man y el Capitán América libraron un duelo a muerte brutal donde sus armaduras y escudos terminaron destrozados.",
+            "Al ver el terror en los ojos de los ciudadanos que juró proteger, Steve Rogers bajó la guardia y se rindió, pagando el precio definitivo de la guerra."
         ]
     },
     {
-        "id": "secret_wars_god_emperor_doom",
+        "id": "blackest_night_rebelion",
+        "character": "Green Lantern",
+        "title": "Blackest Night: La Rebelión de los Muertos",
+        "theme_signature": "green_lantern:blackest_night:nekron",
+        "description": "La profecía más oscura de los Guardianes se cumple: anillos negros resucitan a héroes y villanos caídos como zombis cósmicos insaciables.",
+        "hashtags": "#BlackestNight #GreenLantern #DCComics #Nekron #ComicsNarrados #Reels",
+        "scenes": [
+            "La profecía milenaria de la Noche más Oscura se cumplió cuando millones de anillos negros descendieron sobre el universo desde el abismo de Nekron.",
+            "Héroes y villanos caídos regresaron de la tumba convertidos en Black Lanterns, consumiendo las emociones de sus antiguos seres queridos con horror indescriptible.",
+            "Hal Jordan y los Green Lanterns vieron cómo amigos legendarios como Martian Manhunter y Superman resurgían como monstruos sin piedad.",
+            "La Tierra se convirtió en el epicentro de la muerte cuando la batería de poder negra brotó en Coast City, amenazando con extinguir la vida cósmica.",
+            "Para detener la marea fúnebre, los líderes de los siete cuerpos emocionales tuvieron que unir sus luces y canalizar la Entidad Blanca de la Creación.",
+            "La luz blanca de la vida triunfó sobre el vacío eterno de Nekron, resucitando a doce héroes y restaurando la esperanza en el multiverso."
+        ]
+    },
+    {
+        "id": "secret_wars_dios_doom",
         "character": "Doctor Doom",
-        "title": "Secret Wars: God Emperor Doom Rules Battleworld",
-        "theme_signature": "doctor_doom:secret_wars:battleworld_god",
-        "description": "When the multiverse collapsed, Doctor Doom stole the power of the Beyonders and rebuilt existence in his own omnipotent image.",
-        "hashtags": "#DoctorDoom #SecretWars #Marvel #MCU #ComicLoreVault #Multiverse #Reels",
+        "title": "Secret Wars: Dios Emperor Doom y el Fin del Multiverso",
+        "theme_signature": "doctor_doom:secret_wars:god_emperor",
+        "description": "Las incursiones colapsan el multiverso Marvel. De los restos del cosmos, Victor Von Doom forja Battleworld y reina como dios supremo omnipotente.",
+        "hashtags": "#DoctorDoom #SecretWars #MarvelComics #GodEmperorDoom #ComicsNarrados #Reels",
         "scenes": [
-            "As final Incursions eradicated every universe across the Marvel multiverse, existence ceased to exist, collapsing into infinite nothingness.",
-            "Refusing total annihilation, Victor Von Doom confronted the omnipotent Beyonders, stealing their godlike power to stitch together Battleworld.",
-            "Ruling as God Emperor Doom, Victor sat upon Yggdrasil with Doctor Strange as his high sheriff and an army of Thors as his cosmic enforcers.",
-            "Yet even with absolute reality-warping power, Doom could never cure his deepest insecurity: his inferiority to Reed Richards.",
-            "When Mister Fantastic led the survivors to challenge Doom's throne, Victor finally admitted aloud that Reed would have governed reality better.",
-            "The cosmic power transferred to Richards, who gently dismantled Battleworld and resurrected the vibrant Marvel multiverse once more."
+            "Las incursiones dimensionales colapsaron cada realidad del multiverso hasta que solo quedaron cenizas flotando en el vacío infinito.",
+            "En el último instante de la existencia, Victor Von Doom robó el poder omnipotente de los Beyonders y salvó los fragmentos restantes del cosmos.",
+            "De esas ruinas forjó Battleworld, un planeta mosaico donde Doom fue venerado como emperador supremo y dios creador absoluto.",
+            "Con Stephen Strange como su sheriff místico y un ejército de Thors patrullando los cielos, nadie se atrevía a cuestionar la voluntad de hierro de Doom.",
+            "Pero un puñado de supervivientes de la Tierra original emergió de una balsa salvavidas, liderados por Reed Richards, para derrocar al falso creador.",
+            "En su duelo final, Doom admitió que Reed habría sido un mejor dios, entregando la chispa que restauró el multiverso infinito para siempre."
         ]
     },
     {
-        "id": "wolverine_old_man_logan",
+        "id": "flashpoint_paradoja",
+        "character": "The Flash",
+        "title": "Flashpoint: La Paradoja que Destruyó el Mundo",
+        "theme_signature": "flash:flashpoint:thomas_wayne_batman",
+        "description": "Barry Allen viaja al pasado para salvar a su madre y despierta en una pesadilla donde Atlantis y Temiscira destruyen el planeta.",
+        "hashtags": "#Flashpoint #TheFlash #Batman #DCComics #ComicsNarrados #Reels",
+        "scenes": [
+            "Desesperado por cambiar su destino, Barry Allen corrió hacia el pasado para evitar el asesinato de su madre, fracturando la corriente temporal.",
+            "Despertó sin poderes en un mundo de pesadilla donde Bruce Wayne murió en el callejón, convirtiendo a su padre Thomas Wayne en un Batman letal.",
+            "Devastada por la pérdida de su hijo, Martha Wayne cayó en la locura absoluta, cortándose el rostro para convertirse en el Joker de esa realidad.",
+            "Atlantis y Temiscira libraban una guerra global apocalíptica, sumergiendo a Europa bajo el océano con millones de bajas inocentes.",
+            "Thomas Wayne ayudó a Barry a recuperar su velocidad mediante un rayo directo, sacrificando su vida para permitirle corregir la línea temporal.",
+            "Antes de desvanecerse en la Speed Force, Thomas le entregó a Barry una carta de despedida para Bruce, uniendo a padre e hijo a través del multiverso."
+        ]
+    },
+    {
+        "id": "killing_joke_broma_asesina",
+        "character": "Joker",
+        "title": "Batman: La Broma Asesina (The Killing Joke)",
+        "theme_signature": "joker:killing_joke:un_mal_dia",
+        "description": "El Joker intenta demostrar que solo se necesita un mal día para que el hombre más cuerdo caiga en la locura.",
+        "hashtags": "#TheKillingJoke #Batman #Joker #DCComics #ComicsNarrados #Reels",
+        "scenes": [
+            "Escapando de Arkham una vez más, el Joker se propuso demostrar su más retorcida teoría: la cordura humana es un frágil castillo de naipes.",
+            "Llegó al departamento de Barbara Gordon y le disparó a quemarropa en la columna vertebral, dejándola paralizada para siempre.",
+            "Secuestró al Comisionado Gordon llevándolo a un parque de diversiones abandonado, sometiéndolo a horrores psicológicos para quebrar su razón.",
+            "A pesar de la tortura demencial, Gordon se mantuvo íntegro, exigiendo a Batman que capturara al payaso respetando la ley.",
+            "Batman acorraló al Joker en la sala de espejos, ofreciéndole una última oportunidad genuina de rehabilitación y redención.",
+            "El payaso rechazó la oferta con un trágico chiste sobre dos lunáticos, y bajo la lluvia torrencial, ambos compartieron una risa estremecedora."
+        ]
+    },
+    {
+        "id": "red_hood_capucha_roja",
+        "character": "Red Hood",
+        "title": "Batman: Bajo la Capucha Roja - El Regreso de Jason Todd",
+        "theme_signature": "batman:red_hood:regreso_jason_todd",
+        "description": "El segundo Robin, asesinado a golpes por el Joker, regresa como el implacable vigilante Red Hood para cobrar venganza de Batman.",
+        "hashtags": "#RedHood #Batman #JasonTodd #DCComics #ComicsNarrados #Reels",
+        "scenes": [
+            "Un nuevo señor del crimen apareció en Gotham City, tomando el control del bajo mundo con tácticas militares despiadadas bajo el nombre de Red Hood.",
+            "Batman persiguió al misterioso vigilante por los tejados, sorprendido por su dominio íntimo del arsenal y los estilos de combate de Wayne Enterprises.",
+            "Durante una persecución brutal, Red Hood se quitó el casco revelando lo impensable: Jason Todd, el segundo Robin que murió a manos del Joker.",
+            "Jason arrastró a Bruce hasta un apartamento donde tenía al Joker atado a una silla ensangrentada junto a una palanca de hierro.",
+            "Con lágrimas de rabia en los ojos, Jason obligó a Batman a elegir: ejecutar al Joker para vengar su muerte o ver cómo Jason apretaba el gatillo.",
+            "Negándose a cruzar su código moral, Batman desarmó a Jason con un batarang mientras una bomba detonaba, desvaneciendo a Red Hood entre el humo."
+        ]
+    },
+    {
+        "id": "franklin_richards_creador",
+        "character": "Franklin Richards",
+        "title": "Franklin Richards: El Niño que Crea Universos",
+        "theme_signature": "franklin_richards:celestials:creador_multiverso",
+        "description": "El hijo mutante de Reed Richards y Sue Storm, poseedor de un poder de alteración de la realidad que asombra a los Celestiales.",
+        "hashtags": "#FranklinRichards #FantasticFour #Galactus #MarvelComics #ComicsNarrados #Reels",
+        "scenes": [
+            "Nacido de la unión entre Reed Richards y Sue Storm, Franklin Richards demostró desde su infancia un poder que sobrepasaba a los dioses cósmicos.",
+            "Clasificado como un mutante de nivel Omega más allá de cualquier escala, su mente infantil era capaz de crear universos enteros en su bolsillo.",
+            "Cuando los Celestiales Oscuros invadieron la Tierra para erradicar la realidad, Franklin adulto viajó en el tiempo para apoyar a su familia.",
+            "Canalizando la energía cósmica de su versión infantil, resucitó a Galactus y lo convirtió en su propio heraldo leal para la batalla final.",
+            "El devorador de mundos luchó codo a codo junto al niño mutante, derrotando a los titanes cósmicos en un espectáculo de poder divino.",
+            "Franklin Richards consolidó su legado como el mortal más poderoso del universo Marvel, el arquitecto supremo de la nueva creación."
+        ]
+    },
+    {
+        "id": "thanos_wins_fin_existencia",
+        "character": "Thanos",
+        "title": "Thanos Wins: El Fin de Toda la Existencia",
+        "theme_signature": "thanos:thanos_wins:rey_thanos_fin",
+        "description": "En el final de los tiempos, un anciano Rey Thanos ha masacrado a cada héroe y dios cósmico, esperando su última petición a la Muerte.",
+        "hashtags": "#Thanos #ThanosWins #MarvelComics #ComicsNarrados #Reels",
+        "scenes": [
+            "Millones de años en el futuro, el Titán Loco finalmente triunfó: cada estrella se apagó y cada héroe y dios cósmico fue aniquilado.",
+            "Coronado como el Rey Thanos en un trono forjado con los huesos de los Celestiales, gobernaba sobre un páramo desértico y silencioso.",
+            "Mantenía a Hulk encadenado en las mazmorras como su mascota salvaje, alimentándolo con los restos de sus antiguos aliados.",
+            "Utilizando el poder místico de Cosmic Ghost Rider y el fragmento del Tiempo, trajo a su versión joven al final de los tiempos.",
+            "El anciano Thanos no deseaba pelear, sino una última petición: necesitaba que su yo joven lo asesinara para reunirse al fin con su amada Muerte.",
+            "Horrorizado por ver en qué patético monstruo se convertiría, el joven Thanos rechazó ese futuro y regresó a su época para alterar su destino."
+        ]
+    },
+    {
+        "id": "dark_nights_metal",
+        "character": "Batman",
+        "title": "Dark Nights Metal: La Invasión del Multiverso Oscuro",
+        "theme_signature": "dc:dark_nights_metal:barbatos_caballeros",
+        "description": "El dios demonio Barbatos desata a los Caballeros Oscuros: versiones corrompidas de Batman con los poderes de la Liga de la Justicia.",
+        "hashtags": "#DarkNightsMetal #Batman #DCComics #Barbatos #ComicsNarrados #Reels",
+        "scenes": [
+            "Cinco metales místicos abrieron el portal hacia el abismo del Multiverso Oscuro, permitiendo la llegada del dios murciélago Barbatos a la Tierra.",
+            "Siete versiones corrompidas de Batman invadieron Gotham City, cada una portando las habilidades robadas de los miembros de la Liga de la Justicia.",
+            "El Red Death fusionó a Batman con la velocidad de Flash, mientras The Drowned ahogaba continentes enteros con aguas abisales mutadas.",
+            "Los héroes de DC cayeron derrotados uno a uno ante la brutalidad estratégica de pesadilla de sus propios dobles oscuros.",
+            "Para revertir el colapso del multiverso, Batman y Superman viajaron al núcleo de la creación para obtener el legendario Décimo Metal.",
+            "Armados con la armadura pura de la chispa vital, la Liga de la Justicia disipó la oscuridad de Barbatos y restauró la luz cósmica."
+        ]
+    },
+    {
+        "id": "muerte_superman",
+        "character": "Superman",
+        "title": "La Muerte de Superman: El Sacrificio Final ante Doomsday",
+        "theme_signature": "superman:doomsday:muerte_sacrificio",
+        "description": "Doomsday arrasa con la Liga de la Justicia. En las calles de Metrópolis, Superman entrega su vida en el combate más desgarrador de los cómics.",
+        "hashtags": "#LaMuerteDeSuperman #Doomsday #Superman #DCComics #ComicsNarrados #Reels",
+        "scenes": [
+            "De las entrañas de la Tierra emergió una fuerza de destrucción imparable: Doomsday, una bestia prehistórica con un odio ciego hacia toda forma de vida.",
+            "La Liga de la Justicia intentó contener su paso arrollador, pero cayeron mutilados y derrotados en cuestión de minutos ante sus puños de hueso.",
+            "Solo Superman pudo interponerse entre el monstruo y la aniquilación de Metrópolis, librando una batalla titánica que destrozó cuadras enteras.",
+            "Cada golpe intercambiado entre ambos colosos generaba ondas de choque sísmicas que retumbaban por toda la costa este.",
+            "Con su capa desgarrada y su sangre tiñendo el asfalto, Clark concentró toda su energía solar en un último y devastador puñetazo.",
+            "Ambos colosos cayeron sin vida simultáneamente; en los brazos de Lois Lane, el héroe más grande del mundo exhaló su último aliento."
+        ]
+    },
+    {
+        "id": "old_man_logan",
         "character": "Wolverine",
-        "title": "Wolverine: Old Man Logan - The Massacre of the X-Men",
-        "theme_signature": "wolverine:old_man_logan:xmen_massacre",
-        "description": "The tragic flashback where Mysterio's twisted illusion tricks Wolverine into slaughtering his own beloved X-Men.",
-        "hashtags": "#Wolverine #OldManLogan #XMen #Mysterio #MarvelComics #ComicLoreVault #ComicTok #Reels",
+        "title": "Wolverine: Old Man Logan - La Masacre de los X-Men",
+        "theme_signature": "wolverine:old_man_logan:engano_mysterio",
+        "description": "El truco mental de Mysterio que obligó a Wolverine a matar a todos sus compañeros mutantes en la Mansión X.",
+        "hashtags": "#OldManLogan #Wolverine #MarvelComics #XMen #ComicsNarrados #Reels",
         "scenes": [
-            "Fifty years after supervillains conquered the world, an aged Logan lives as a quiet farmer in the wasteland, refusing to ever pop his adamantium claws.",
-            "That dark reluctance traces back to one tragic night at the Xavier Mansion, when alarms blared as forty villains suddenly stormed the gates.",
-            "Believing the students were in mortal danger, Wolverine entered a blind berserker rage, slashing through the intruders room by room.",
-            "Slicing down the final attacker, the smoke cleared as green mist faded: Mysterio appeared cackling, revealing he had clouded Logan's senses.",
-            "Horrified, Logan looked around to discover the devastating truth: there were no villains. In the rain lay the slaughtered corpses of his beloved X-Men.",
-            "Broken beyond repair, Logan wandered into the wilderness and placed his head on train tracks, but his healing factor refused to let him die."
-        ],
-        "scene_art_urls": [
-            "https://static.wikia.nocookie.net/marveldatabase/images/a/a6/Wolverine_Vol_3_66_Wraparound_Textless.jpg",
-            "https://static.wikia.nocookie.net/marveldatabase/images/7/7f/Peter_Petruski_%28Earth-807128%29%2C_Norman_Osborn_%28Earth-807128%29%2C_James_Howlett_%28Earth-807128%29%2C_and_Kenuichio_Harada_%28Earth-807128%29_from_Wolverine_Vol_3_70_001.jpg",
-            "https://static.wikia.nocookie.net/marveldatabase/images/3/3a/Wolverine_Vol_3_70.jpg",
-            "https://static.wikia.nocookie.net/marveldatabase/images/c/cd/Jubilation_Lee_%28Earth-807128%29_and_James_Howlett_%28Earth-807128%29_from_Wolverine_Vol_3_70_001.jpg",
-            "https://static.wikia.nocookie.net/marveldatabase/images/b/b5/X-Men_%28Earth-807128%29_from_Wolverine_Vol_3_70_001.jpg",
-            "https://static.wikia.nocookie.net/marveldatabase/images/5/57/James_Howlett_%28Earth-807128%29_from_Wolverine_Vol_3_72_002.jpg"
+            "Cincuenta años después de la caída de los héroes, los Estados Unidos se convirtieron en un páramo desolado gobernado por villanos despiadados.",
+            "Wolverine se convirtió en un anciano pacifista que se negaba a sacar sus garras de adamantium, atormentado por un secreto inconfesable.",
+            "La noche en que todo cambió, una horda de supervillanos asaltó la Mansión X; Logan peleó a muerte para proteger a los jóvenes estudiantes.",
+            "Al degollar al último atacante, el humo verde de las ilusiones se disipó: Mysterio había engañado sus sentidos y olfato por completo.",
+            "A sus pies yacían los cadáveres destrozados de Cíclope, Jean Grey y todos los X-Men, asesinados por sus propias garras de adamantium.",
+            "Roto por la culpa, Logan apoyó la cabeza en las vías del tren esperando la muerte, jurando no volver a derramar una sola gota de sangre."
         ]
     },
     {
-        "id": "venom_maximum_carnage",
-        "character": "Carnage",
-        "title": "Venom & Spider-Man: Maximum Carnage - Pure Psychotic Chaos",
-        "theme_signature": "carnage:maximum_carnage:venom_spiderman_truce",
-        "description": "When Cletus Kasady leads a psychotic family of serial killers through New York, mortal enemies Spider-Man and Venom forge an uneasy alliance.",
-        "hashtags": "#Carnage #Venom #SpiderMan #MaximumCarnage #MarvelComics #ComicLoreVault #Reels",
+        "id": "muerte_gwen_stacy",
+        "character": "Spider-Man",
+        "title": "Spider-Man: La Trágica Noche en que Murió Gwen Stacy",
+        "theme_signature": "spiderman:gwen_stacy:duende_verde_puente",
+        "description": "El Duende Verde descubre la identidad de Peter Parker y lanza a Gwen Stacy desde lo alto del puente George Washington.",
+        "hashtags": "#SpiderMan #GwenStacy #GreenGoblin #MarvelComics #ComicsNarrados #Reels",
         "scenes": [
-            "Escaping the Ravencroft Institute, serial killer Cletus Kasady discovered his red alien symbiote had bonded directly to his bloodstream as Carnage.",
-            "Gathering a twisted family of maniacs including Shriek and Doppelganger, Carnage launched a wave of pure uninhibited slaughter through Manhattan.",
-            "Overwhelmed by the psychotic brutality, Spider-Man realized his moral code was ill-equipped to face monsters who slaughtered purely for entertainment.",
-            "Arriving with monstrous rage, Venom confronted Peter, offering an unthinkable deal: an uneasy truce to tear Carnage limb from limb.",
-            "Fighting back-to-back across the burning skyline, the web-slinger and the lethal protector clashed over whether justice required lethal vengeance.",
-            "Using sonic beam weaponry, they neutralized Carnage's horde, saving New York while preserving the fine line between hero and executioner."
+            "Al descubrir que Peter Parker era Spider-Man, Norman Osborn perdió los últimos vestigios de cordura bajo la máscara del Duende Verde.",
+            "Secuestró a Gwen Stacy, el gran amor de Peter, y la llevó a la cima del puente George Washington para tenderle una emboscada mortal.",
+            "En medio del feroz combate aéreo en las alturas, el Duende arrojó a Gwen al vacío hacia las gélidas aguas del río Hudson.",
+            "Desesperado, Peter disparó su telaraña atrapándola justo a tiempo antes de estrellarse contra la superficie.",
+            "Pero al levantarla entre sus brazos, el chasquido del látigo cervical había quebrado su cuello al detener la caída de golpe.",
+            "Esa noche marcó el fin de la inocencia de los cómics y forjó el alma de Spider-Man con el dolor más amargo de su existencia."
+        ]
+    },
+    {
+        "id": "superboy_prime",
+        "character": "Superboy Prime",
+        "title": "Superboy Prime: El Destructor de la Realidad",
+        "theme_signature": "superboy_prime:infinite_crisis:golpe_realidad",
+        "description": "El héroe de la Tierra Primordial cuya frustración y locura quebraron las barreras mismas del espacio y el tiempo.",
+        "hashtags": "#SuperboyPrime #DCComics #InfiniteCrisis #ComicsNarrados #Reels",
+        "scenes": [
+            "Originario de la Tierra Primordial donde los cómics eran solo ficción, Clark Kent descubrió que él era el único ser con poderes reales.",
+            "Tras ayudar a salvar el multiverso en la primera Crisis, fue confinado a una dimensión paraíso donde observaba la corrupción de los nuevos héroes.",
+            "Consumido por la envidia y la rabia, comenzó a golpear la barrera de cristal de la realidad con sus puños kriptonianos indestructibles.",
+            "Cada golpe sísmico alteró la historia del universo DC: revivió a Jason Todd, cambió orígenes y reescribió la continuidad cósmica.",
+            "Al liberarse en Infinite Crisis, masacró a decenas de Jóvenes Titanes y héroes legendarios con una furia infantil desquiciada.",
+            "Superboy Prime demostró ser la pesadilla definitiva: un dios con el poder ilimitado de la Edad de Plata y la inmadurez de un niño furioso."
+        ]
+    },
+    {
+        "id": "torre_de_babel",
+        "character": "Batman",
+        "title": "Batman: Torre de Babel y los Planes de Contingencia",
+        "theme_signature": "batman:torre_de_babel:planes_contingencia",
+        "description": "Ra's al Ghul roba los archivos secretos de Batman diseñados para neutralizar a cada miembro de la Liga de la Justicia.",
+        "hashtags": "#TorreDeBabel #Batman #JusticeLeague #DCComics #ComicsNarrados #Reels",
+        "scenes": [
+            "Por años, la paranoia táctica de Batman lo llevó a diseñar protocolos secretos para incapacitar a cada miembro de la Liga de la Justicia.",
+            "El villano inmortal Ra's al Ghul hackeó la computadora de la Baticueva y robó cada uno de los planes para ejecutar su plan maestro.",
+            "Superman fue expuesto a kriptonita roja sintetizada por Bruce que volvía su piel transparente y sobrecargaba sus células solares de agonía.",
+            "Flash fue impactado por una bala vibratoria que provocaba convulsiones a la velocidad de la luz, mientras Wonder Woman peleaba con una ilusión eterna.",
+            "Los héroes cayeron uno tras otro neutralizados por la mente de su propio líder táctico sin comprender quién los atacaba.",
+            "Aunque Batman logró salvar el día, la Liga de la Justicia votó su expulsión inmediata, destruyendo la confianza en el Caballero de la Noche."
+        ]
+    },
+    {
+        "id": "cosmic_ghost_rider",
+        "character": "Cosmic Ghost Rider",
+        "title": "Cosmic Ghost Rider: El Castigador del Infinito",
+        "theme_signature": "cosmic_ghost_rider:frank_castle:galactus_thanos",
+        "description": "Frank Castle muere, hace un pacto con Mephisto, se convierte en heraldo de Galactus y finalmente en sirviente del Rey Thanos.",
+        "hashtags": "#CosmicGhostRider #Punisher #MarvelComics #Galactus #ComicsNarrados #Reels",
+        "scenes": [
+            "Durante la última invasión de Thanos a la Tierra, Frank Castle murió aplastado por los escombros de un rascacielos.",
+            "En el infierno, desesperado por cobrar venganza, hizo un pacto con Mephisto para convertirse en el nuevo Ghost Rider del planeta desierto.",
+            "Al quedar solo en un mundo muerto durante siglos, Galactus llegó herido buscando un heraldo; Frank aceptó el Poder Cósmico.",
+            "Transformado en el Cosmic Ghost Rider, combinó el Fuego del Infierno con la energía cósmica de las estrellas en una mezcla demencial.",
+            "Junto a Galactus batalló contra Thanos, pero el titán decapitó al devorador y le ofreció a Frank unirse a su corte imperial.",
+            "Con una locura desbordante y una mirada de penitencia cósmica, Frank Castle se convirtió en el sirviente más letal del fin del universo."
+        ]
+    },
+    {
+        "id": "crisis_tierras_infinitas",
+        "character": "The Flash",
+        "title": "Crisis en Tierras Infinitas: El Sacrificio de los Héroes",
+        "theme_signature": "dc:crisis_tierras_infinitas:sacrificio_barry_allen",
+        "description": "El Antimonitor devora universos con antimateria. Barry Allen corre más rápido que la luz y da su vida para salvar la creación.",
+        "hashtags": "#CrisisEnTierrasInfinitas #TheFlash #Supergirl #DCComics #ComicsNarrados #Reels",
+        "scenes": [
+            "Una ola gigantesca de antimateria se propagó por el multiverso, devorando miles de tierras paralelas y millones de vidas inocentes.",
+            "El dios de la destrucción cósmica, el Antimonitor, preparó un cañón de antimateria en el corazón del universo de Qward para erradicar la realidad.",
+            "Supergirl fue la primera en sacrificar su vida arremetiendo contra el coloso para darle tiempo a Superman de escapar.",
+            "Barry Allen escapó de su prisión y corrió a velocidades jamás alcanzadas alrededor del núcleo del cañón de energía.",
+            "Corrió tan rápido que su cuerpo físico comenzó a desintegrarse átomo por átomo, disolviendo el cañón en la corriente temporal.",
+            "Barry se desvaneció con una sonrisa en el rostro, salvando a todo el multiverso y convirtiéndose en la leyenda máxima del heroísmo."
+        ]
+    },
+    {
+        "id": "marvel_zombies",
+        "character": "Spider-Man",
+        "title": "Marvel Zombies: El Hambre del Multiverso",
+        "theme_signature": "marvel_zombies:hambre_infinita:galactus_devorado",
+        "description": "Un virus alienígena infecta a los Vengadores, convirtiendo a los protectores del mundo en monstruos caníbales insaciables.",
+        "hashtags": "#MarvelZombies #SpiderMan #MarvelComics #ComicsNarrados #Reels",
+        "scenes": [
+            "Un destello en el cielo de Nueva York trajo un virus alienígena imparable que infectó a los héroes más poderosos del planeta.",
+            "Los Vengadores mantuvieron su inteligencia y habilidades sobrehumanas, pero consumidos por un hambre caníbal insaciable de carne viva.",
+            "Spider-Man devoró a la Tía May y a Mary Jane en un ataque de desesperación, quedando sumido en un tormento de culpa eterna.",
+            "En cuestión de días, la población entera de la Tierra fue devorada hasta que no quedó ningún ser vivo en el continente.",
+            "Cuando Silver Surfer y Galactus llegaron para consumir el mundo, los héroes zombis los atacaron en jorda y devoraron al dios cósmico.",
+            "Al absorber el Poder Cósmico de Galactus, los Vengadores zombis surcaron las estrellas para devorar civilizaciones enteras en el cosmos."
+        ]
+    },
+    {
+        "id": "robo_del_mysterium",
+        "character": "Iron Man",
+        "title": "El Robo del Mysterium: Tony Stark y Emma Frost",
+        "theme_signature": "ironman:mysterium:emma_frost_fall_of_x",
+        "description": "Durante Fall of X, Tony Stark y Emma Frost unen fuerzas para infiltrarse en las bóvedas de Orchis y forjar la armadura definitiva.",
+        "hashtags": "#IronMan #EmmaFrost #FallOfX #MarvelComics #ComicsNarrados #Reels",
+        "scenes": [
+            "Con la nación mutante de Krakoa destruida por la organización Orchis, los supervivientes se dispersaron perseguidos por Centinelas Stark.",
+            "Despojado de su compañía y de su dinero, Tony Stark juró destruir a Feilong y detener el genocidio mutante a toda costa.",
+            "Bajo la identidad clandestina de Hazel Kendal, Emma Frost se alió en matrimonio estratégico con Tony para coordinar la resistencia.",
+            "Juntos planearon una infiltración de alto riesgo en las bóvedas más protegidas para robar un cargamento de Mysterium puro.",
+            "El Mysterium, un metal milagroso inmune a la magia y más resistente que el adamantium, fue la clave para la salvación.",
+            "En las forjas secretas de Stark nació la Mark 72, la armadura de Mysterium diseñada para destrozar al ejército de Centinelas."
+        ]
+    },
+    {
+        "id": "batman_corte_de_los_buhos",
+        "character": "Batman",
+        "title": "Batman: La Corte de los Búhos - El Laberinto de Gotham",
+        "theme_signature": "batman:court_of_owls:talon_laberinto",
+        "description": "Batman descubre una sociedad milenaria que ha gobernado Gotham en secreto y es arrojado a un laberinto subterráneo mortal.",
+        "hashtags": "#LaCorteDeLosBuhos #Batman #DCComics #ComicsNarrados #Reels",
+        "scenes": [
+            "Durante generaciones, una canción de cuna advertía sobre la Corte de los Búhos, una élite secreta que gobernaba Gotham desde las sombras.",
+            "Bruce Wayne siempre lo consideró un mito urbano, hasta que un asesino inmortal llamado Talon intentó ejecutarlo públicamente.",
+            "Al investigar sus guaridas subterráneas, Batman cayó en un gigantesco laberinto de piedra oculto bajo los cimientos de la ciudad.",
+            "Encerrado durante ocho días tortuosos sin comida ni agua, la mente de Bruce comenzó a fragmentarse bajo la mirada burlona de las máscaras.",
+            "A punto de ser ejecutado por los garras, Batman desató la furia salvaje de su determinación, derrotando a decenas de asesinos inmortales.",
+            "De regreso a la Mansión Wayne, se enfundó en una armadura mecanizada pesada para librar la batalla total por el alma de Gotham."
         ]
     }
 ]
 
 
 def log(msg: str):
-    print(f"[{time.strftime('%H:%M:%S')}] [CloudRunner] {msg}", flush=True)
+    print(f"[{time.strftime('%H:%M:%S')}] [CloudRunner-ES] {msg}", flush=True)
 
 
 def load_ledger() -> list[dict]:
-    """Loads history of produced videos from published_ledger.json."""
     if not LEDGER_PATH.exists():
         return []
     try:
         with open(LEDGER_PATH, "r", encoding="utf-8") as f:
             return json.load(f)
     except Exception as e:
-        log(f"Warning loading ledger: {e}")
+        log(f"Warning reading ledger: {e}")
         return []
 
 
 def save_ledger(ledger: list[dict]):
-    """Saves updated history to published_ledger.json."""
     with open(LEDGER_PATH, "w", encoding="utf-8") as f:
         json.dump(ledger, f, indent=2, ensure_ascii=False)
-    log(f"Ledger updated: {len(ledger)} total entries.")
 
 
 def is_duplicate(story: dict, ledger: list[dict]) -> tuple[bool, str]:
-    """Checks if a story or theme has already been produced."""
-    s_id = story.get("id", "").strip().lower()
-    s_sig = story.get("theme_signature", "").strip().lower()
-    s_title = re.sub(r"[^\w\s]", "", story.get("title", "").lower()).strip()
+    story_id = story.get("id", "").lower()
+    story_theme = story.get("theme_signature", "").lower()
+    story_title = story.get("title", "").lower()
 
     for item in ledger:
-        item_id = item.get("id", "").strip().lower()
-        item_sig = item.get("theme_signature", "").strip().lower()
-        item_title = re.sub(r"[^\w\s]", "", item.get("title", "").lower()).strip()
+        item_id = item.get("id", "").lower()
+        item_theme = item.get("theme_signature", "").lower()
+        item_title = item.get("title", "").lower()
 
-        if s_id and s_id == item_id:
-            return True, f"ID match: '{s_id}' (produced {item.get('date', 'previously')})"
-        if s_sig and s_sig == item_sig:
-            return True, f"Theme match: '{s_sig}' (produced {item.get('date', 'previously')})"
-        if s_title and (s_title in item_title or item_title in s_title):
-            return True, f"Title match: '{item.get('title')}' (produced {item.get('date', 'previously')})"
+        if story_id and item_id and story_id == item_id:
+            return True, f"Duplicate ID: Story '{story_id}' was already produced on {item.get('date', 'past')}"
+        if story_theme and item_theme and story_theme == item_theme:
+            return True, f"Duplicate Theme: Theme '{story_theme}' was already covered by '{item.get('title')}'"
+        if story_title and item_title and story_title == item_title:
+            return True, f"Duplicate Title: Exact title '{story_title}' already exists in ledger"
 
     return False, ""
 
 
 def record_production(story: dict, mode: str, video_path: str):
-    """Records newly produced video in the ledger."""
     ledger = load_ledger()
-    entry = {
+    record = {
         "id": story["id"],
         "title": story["title"],
-        "character": story["character"],
-        "theme_signature": story.get("theme_signature", f"{story['character'].lower()}:{story['id']}"),
+        "character": story.get("character", "Unknown"),
+        "theme_signature": story.get("theme_signature", ""),
         "date": time.strftime("%Y-%m-%d %H:%M"),
         "mode": mode,
         "video_file": Path(video_path).name,
-        "status": "published" if mode == "live_release" else "produced"
+        "status": "published" if mode == "live_release" else ("draft" if mode == "draft_only" else "produced"),
     }
-    ledger.append(entry)
+    ledger.append(record)
     save_ledger(ledger)
 
 
 def build_cloud_generation(story: dict, work_dir: Path) -> dict:
-    """Creates a local generation folder with downloaded comic panels and script.json."""
     gen_dir = work_dir / story["id"]
     gen_dir.mkdir(parents=True, exist_ok=True)
 
-    curated_urls = story.get("scene_art_urls", [])
-    if curated_urls:
-        log(f"Using {len(curated_urls)} curated 1:1 comic panels for: {story['title']}")
-        art_urls = curated_urls
-    else:
-        log(f"Fetching comic art for character: {story['character']}...")
-        try:
-            art_urls = get_fandom_comic_art(story["character"], count=len(story["scenes"]) + 4)
-        except Exception as e:
-            log(f"Warning fetching art via Fandom: {e}")
-            art_urls = []
+    log(f"Obtaining official comic art for '{story['character']}'...")
+    art_urls = story.get("image_urls") or get_fandom_comic_art(story.get("character", "Batman"), count=len(story["scenes"]) + 5)
+    log(f"Discovered {len(art_urls)} high-resolution comic assets.")
 
     scenes_data = []
     scene_videos = []
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'
+    }
 
-    import requests
-    from PIL import Image
-
-    for idx, narration in enumerate(story["scenes"], start=1):
-        sc_name = f"Escena_{idx:02d}"
+    for idx, narration in enumerate(story["scenes"], 1):
+        sc_name = f"scene_{idx:02d}"
         sc_dir = gen_dir / sc_name
         sc_dir.mkdir(parents=True, exist_ok=True)
-        img_file = sc_dir / "imagen_01.jpg"
+        img_file = sc_dir / f"{sc_name}.png"
 
         saved = False
-        if idx - 1 < len(art_urls):
+        if art_urls and idx <= len(art_urls):
             try:
-                headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
                 r = requests.get(art_urls[idx - 1], headers=headers, timeout=15)
                 if r.status_code == 200 and len(r.content) > 10000:
                     import io
@@ -358,7 +529,7 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
             "title": story["title"],
             "description": story["description"],
             "hashtags": story["hashtags"],
-            "voice": "en-US-Studio-Q"
+            "voice": os.environ.get("VOICE", "es-US-Studio-B")
         },
         "scenes": scenes_data
     }
@@ -377,15 +548,15 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Comic Lore Vault Autonomous Cloud Generation & Publisher")
+    parser = argparse.ArgumentParser(description="Comic Lore Vault Autonomous Cloud Generation & Publisher (Spanish)")
     parser.add_argument("--story-id", type=str, help="Specific story ID to generate")
     parser.add_argument("--publish", action="store_true", help="Auto-publish to FB Page and IG after generation")
     parser.add_argument("--draft", action="store_true", help="Save as unpublished draft on FB and skip public IG")
     parser.add_argument("--dry-run", action="store_true", help="Test workflow without video generation or publishing")
     args = parser.parse_args()
 
-    log("Initializing Comic Lore Vault Cloud Engine with Anti-Duplication Protection...")
-    log(f"Brand: Comic Lore Vault (@comicloreevault)")
+    log("Initializing Spanish Comic Video Engine with Anti-Duplication Protection...")
+    log(f"Branch: spanish-videos")
     log(f"FB Page ID: {os.environ.get('FB_PAGE_ID', DEFAULT_PAGE_ID)}")
     log(f"IG Account ID: {os.environ.get('IG_USER_ID', DEFAULT_IG_USER_ID)}")
 
@@ -406,7 +577,6 @@ def main():
             log("No duplicate videos will ever be produced. Aborting safely.")
             sys.exit(0)
     else:
-        # Filter available unproduced stories
         available = [s for s in EDITORIAL_STORIES if not is_duplicate(s, ledger)[0]]
         log(f"Available unproduced stories in catalog: {len(available)} / {len(EDITORIAL_STORIES)}")
 
@@ -430,11 +600,12 @@ def main():
     output_root = Path("output")
     output_root.mkdir(parents=True, exist_ok=True)
 
-    log("Starting video compilation pipeline...")
+    voice_choice = os.environ.get("VOICE", "es-US-Studio-B")
+    log(f"Starting video compilation pipeline with voice: {voice_choice}...")
     final_video_path = run_pipeline(
         generation=generation,
         output_name=selected["id"],
-        voice="en-US-Studio-Q",
+        voice=voice_choice,
         output_root=str(output_root),
         final_video_dir=str(output_root / "finals")
     )
@@ -445,7 +616,7 @@ def main():
     if args.publish or os.environ.get("AUTO_PUBLISH", "").lower() in ("true", "1", "yes"):
         is_draft = args.draft or os.environ.get("DRAFT_ONLY", "").lower() in ("true", "1", "yes")
         mode_str = "draft_only" if is_draft else "live_release"
-        log(f"Initiating publication to Comic Lore Vault (mode: {'DRAFT ONLY' if is_draft else 'LIVE PUBLIC'})...")
+        log(f"Initiating publication to Meta (mode: {'DRAFT ONLY' if is_draft else 'LIVE PUBLIC'})...")
         publish_comic_video(
             video_path=final_video_path,
             title=selected["title"],
@@ -456,7 +627,6 @@ def main():
     else:
         log("Publication skipped (render_only mode).")
 
-    # Record in persistent ledger to ensure it can NEVER be repeated
     record_production(selected, mode_str, final_video_path)
     log(f"Anti-duplication registry updated: '{selected['id']}' locked permanently.")
 

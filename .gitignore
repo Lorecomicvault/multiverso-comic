@@ -16,6 +16,7 @@ ENV/
 
 # Output and Media (Never commit heavy video/audio files)
 output/
+final_videos/
 *.mp4
 *.wav
 *.mp3
@@ -29,6 +30,8 @@ temp/
 .env
 .env.*
 
-# IDE
+# IDE & OS
 .vscode/
 .idea/
+.DS_Store
+Thumbs.db

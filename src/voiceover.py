@@ -189,7 +189,7 @@ VOICE_PROFILES = {
     },
 }
 
-DEFAULT_VOICE = 'en-US-Studio-Q'
+DEFAULT_VOICE = 'es-US-Studio-B'
 SCENE_TRAILING_PAUSE = 0.4
 
 

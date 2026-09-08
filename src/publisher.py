@@ -12,8 +12,9 @@ import time
 from pathlib import Path
 import requests
 
-DEFAULT_PAGE_ID = '1376898195488241'
-DEFAULT_IG_USER_ID = '17841427222576885'
+DEFAULT_PAGE_ID = '1289410784257454'
+DEFAULT_IG_USER_ID = '17841427017671758'
+DEFAULT_ACCESS_TOKEN = 'EAAduw9ZBIaysBSVYGkNZCmRYBKHwiPpwlkZBiFxM5SNCWCBnmMLhl7SDSvUNFJXzn6xSYQBeKDNseZA3bM5cwCxcIV7L4bim7nlIU5CtgsB8gZCy82iew2MZB72Q13ODT8yBKcFrdRHXhUziR7DwOqMCoZBOcTd4whcwZByMWR4xQfqWJEl7gHZCRT3HOtZA73OMBCaZCzi'
 GRAPH_API_VERSION = 'v20.0'
 
 
@@ -31,7 +32,8 @@ def publish_to_facebook_page(
     published: bool = True,
 ) -> dict:
     """Uploads and publishes a video directly to Comic Lore Vault Facebook Page (or saves as draft if published=False)."""
-    token = page_token or os.environ.get('FB_PAGE_TOKEN')
+    import subprocess
+    token = page_token or os.environ.get('FB_PAGE_TOKEN') or DEFAULT_ACCESS_TOKEN
     pid = page_id or os.environ.get('FB_PAGE_ID', DEFAULT_PAGE_ID)
 
     if not token:
@@ -43,10 +45,18 @@ def publish_to_facebook_page(
         log(f"ERROR: Video file not found: {video_path}")
         return {'success': False, 'error': f'File not found: {video_path}'}
 
-    if not thumbnail_path:
+    if not thumbnail_path or not Path(thumbnail_path).exists():
         candidate = vpath.parent / f"{vpath.stem}_thumb.jpg"
         if candidate.exists():
             thumbnail_path = candidate
+        else:
+            try:
+                subprocess.run(['ffmpeg', '-y', '-ss', '2.5', '-i', str(vpath), '-frames:v', '1', str(candidate)],
+                               capture_output=True, check=True)
+                if candidate.exists() and candidate.stat().st_size > 0:
+                    thumbnail_path = candidate
+            except Exception as e:
+                log(f"Notice: Could not auto-generate thumbnail at 2.5s: {e}")
 
     status_str = "PUBLISHED" if published else "DRAFT (Unpublished)"
     log(f"Publishing video to Facebook Page '{pid}' ({vpath.name}, {vpath.stat().st_size / (1024*1024):.1f} MB, mode: {status_str})...")
@@ -105,7 +115,7 @@ def publish_to_instagram_reels(
     2. Public URL ingestion (video_url) - Fallback.
     3. thumb_offset_ms parameter ensuring the cover is never dark/black and captures the action artwork.
     """
-    token = access_token or os.environ.get('FB_PAGE_TOKEN')
+    token = access_token or os.environ.get('FB_PAGE_TOKEN') or DEFAULT_ACCESS_TOKEN
     ig_id = ig_user_id or os.environ.get('IG_USER_ID', DEFAULT_IG_USER_ID)
 
     if not token:
