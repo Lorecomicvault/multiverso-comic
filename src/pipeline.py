@@ -201,34 +201,48 @@ def run_pipeline(
     final_video = str(final_dir / f'{safe_name}.mp4')
 
     remotion_success = False
-    if has_voiceover and word_timings_json and check_remotion_available():
-        try:
-            log("Iniciando renderizado de subtítulos cinemáticos con Remotion (React/TypeScript)...")
-            audio_mp3 = str(output_dir / 'voiceover_full.mp3')
-            subprocess.run([
-                'ffmpeg', '-y',
-                '-i', concat_audio_path,
-                '-c:a', 'libmp3lame', '-q:a', '2',
-                audio_mp3,
-            ], check=True, capture_output=True, text=True)
+    remotion_error = None
+    in_github_actions = os.environ.get('GITHUB_ACTIONS') == 'true'
 
-            render_with_remotion(
-                concat_video=concat_path,
-                full_audio=audio_mp3,
-                word_timings_json=word_timings_json,
-                output_video=final_video,
-                width=width,
-                height=height,
-                title=title,
-            )
-            remotion_success = True
-            log(f"  OK -> Video con subtítulos Remotion generado: {final_video}")
-        except Exception as e:
-            log(f"  Warning: Falló renderizado con Remotion ({e}). Continuando con motor FFmpeg...")
-            remotion_success = False
+    if has_voiceover and word_timings_json:
+        if check_remotion_available():
+            try:
+                log("Iniciando renderizado de subtítulos cinemáticos con Remotion (React/TypeScript)...")
+                audio_mp3 = str(output_dir / 'voiceover_full.mp3')
+                subprocess.run([
+                    'ffmpeg', '-y',
+                    '-i', concat_audio_path,
+                    '-c:a', 'libmp3lame', '-q:a', '2',
+                    audio_mp3,
+                ], check=True, capture_output=True, text=True)
+
+                render_with_remotion(
+                    concat_video=concat_path,
+                    full_audio=audio_mp3,
+                    word_timings_json=word_timings_json,
+                    output_video=final_video,
+                    width=width,
+                    height=height,
+                    title=title,
+                )
+                remotion_success = True
+                log(f"  OK -> Video con subtítulos Remotion generado: {final_video}")
+            except Exception as e:
+                remotion_error = str(e)
+                log(f"  Warning: Falló renderizado con Remotion ({e}).")
+        else:
+            remotion_error = "Remotion CLI o Node.js no están disponibles en este entorno."
+            log(f"  Warning: {remotion_error}")
+
+    # Si estamos en GitHub Actions, Remotion es estrictamente obligatorio para todos los videos generados
+    if in_github_actions and not remotion_success:
+        raise RuntimeError(
+            f"ERROR CRÍTICO EN GITHUB ACTIONS: Los videos en GitHub deben renderizarse con subtítulos Remotion obligatoriamente. "
+            f"Detalle del error: {remotion_error}"
+        )
 
     if not remotion_success:
-        log("Masterizando video con motor de respaldo FFmpeg...")
+        log("Masterizando video con motor de respaldo local FFmpeg...")
         if has_voiceover:
             ass_path = str(output_dir / 'subtitles.ass')
             full_text = ' '.join(voice_results[sn]['text'] for sn in sorted(voice_results))
