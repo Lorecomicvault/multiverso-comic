@@ -10,30 +10,31 @@ on:
         type: choice
         options:
           - any
-          - knull_dios_simbiontes
-          - batman_que_rie
-          - injustice_regimen_superman
-          - gorr_carnicero_dioses
-          - world_war_hulk_coloso
-          - civil_war_caida_heroes
-          - blackest_night_rebelion
-          - secret_wars_dios_doom
-          - flashpoint_paradoja
-          - killing_joke_broma_asesina
-          - red_hood_capucha_roja
-          - franklin_richards_creador
-          - thanos_wins_fin_existencia
-          - dark_nights_metal
-          - muerte_superman
-          - old_man_logan
-          - muerte_gwen_stacy
-          - superboy_prime
-          - torre_de_babel
-          - cosmic_ghost_rider
-          - crisis_tierras_infinitas
-          - marvel_zombies
-          - robo_del_mysterium
-          - batman_corte_de_los_buhos
+          - hulk_maestro_futuro_imperfecto
+          - superior_spider_man_otto
+          - batman_hush_silencio
+          - sinestro_corps_war
+          - deadpool_kills_marvel_universe
+          - kingdom_come_justicia_divina
+          - all_star_superman_morrison
+          - magneto_testamento_origen
+          - daredevil_born_again
+          - wolverine_arma_x
+          - punisher_born_vietnam
+          - thor_ragnarok_crepusculo
+          - knightfall_la_caida_del_murcielago
+          - moon_knight_khonshu_locura
+          - silver_surfer_requiem
+          - maximum_carnage_matanza
+          - doctor_strange_el_juramento
+          - green_lantern_crepusculo_esmeralda
+          - kravens_last_hunt_spider_man
+          - invincible_omni_man_conquista
+          - soldado_del_invierno_resurreccion
+          - batman_endgame_joker_final
+          - spawn_malebolgia_guerra
+          - guerra_de_bromas_y_acertijos
+          - infinity_gauntlet_original_thanos
       mode:
         description: 'Modo de Ejecucion (render_only vs live_release)'
         required: true

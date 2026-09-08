@@ -1,1 +1,242 @@
-[]
+[
+  {
+    "id": "franklin_richards_creador",
+    "title": "Franklin Richards: El Niño que Crea Universos",
+    "character": "Franklin Richards",
+    "theme_signature": "franklin_richards:celestials:creador_multiverso",
+    "date": "2026-09-02 02:02",
+    "mode": "live_release",
+    "video_file": "Franklin_Richards_Lore_Real_Comic.mp4",
+    "status": "published"
+  },
+  {
+    "id": "red_hood_capucha_roja",
+    "title": "Batman: Bajo la Capucha Roja - El Regreso de Jason Todd",
+    "character": "Red Hood",
+    "theme_signature": "batman:red_hood:regreso_jason_todd",
+    "date": "2026-09-02 17:34",
+    "mode": "live_release",
+    "video_file": "Batman_Bajo_la_Capucha_Roja_El_Regreso_de_Jason_Todd.mp4",
+    "status": "published"
+  },
+  {
+    "id": "secret_wars_dios_doom",
+    "title": "Secret Wars: Dios Emperor Doom y el Fin del Multiverso",
+    "character": "Doctor Doom",
+    "theme_signature": "doctor_doom:secret_wars:god_emperor",
+    "date": "2026-09-03 00:50",
+    "mode": "live_release",
+    "video_file": "God_Emperor_Doom_El_Amo_del_Multiverso.mp4",
+    "status": "published"
+  },
+  {
+    "id": "muerte_superman",
+    "title": "La Muerte de Superman: El Sacrificio Final ante Doomsday",
+    "character": "Superman",
+    "theme_signature": "superman:doomsday:muerte_sacrificio",
+    "date": "2026-09-03 18:22",
+    "mode": "live_release",
+    "video_file": "La_Muerte_de_Superman_El_Sacrificio_Final.mp4",
+    "status": "published"
+  },
+  {
+    "id": "killing_joke_broma_asesina",
+    "title": "Batman: La Broma Asesina (The Killing Joke)",
+    "character": "Joker",
+    "theme_signature": "joker:killing_joke:un_mal_dia",
+    "date": "2026-09-04 01:23",
+    "mode": "live_release",
+    "video_file": "Batman_La_Broma_Asesina_The_Killing_Joke.mp4",
+    "status": "published"
+  },
+  {
+    "id": "civil_war_caida_heroes",
+    "title": "Civil War: La Trágica Caída de los Héroes",
+    "character": "Captain America",
+    "theme_signature": "marvel:civil_war:ironman_vs_cap",
+    "date": "2026-09-04 19:15",
+    "mode": "live_release",
+    "video_file": "Civil_War_La_Caida_de_los_Heroes.mp4",
+    "status": "published"
+  },
+  {
+    "id": "robo_del_mysterium",
+    "title": "El Robo del Mysterium: Tony Stark y Emma Frost",
+    "character": "Iron Man",
+    "theme_signature": "ironman:mysterium:emma_frost_fall_of_x",
+    "date": "2026-09-05 01:13",
+    "mode": "live_release",
+    "video_file": "El_Robo_del_Mysterium_Tony_Stark_y_Emma_Frost.mp4",
+    "status": "published"
+  },
+  {
+    "id": "world_war_hulk_coloso",
+    "title": "World War Hulk: La Venganza del Rompemundos",
+    "character": "Hulk",
+    "theme_signature": "hulk:world_war_hulk:venganza_coloso",
+    "date": "2026-09-05 17:25",
+    "mode": "live_release",
+    "video_file": "World_War_Hulk_La_Venganza_del_Coloso.mp4",
+    "status": "published"
+  },
+  {
+    "id": "torre_de_babel",
+    "title": "Batman: Torre de Babel y los Planes de Contingencia",
+    "character": "Batman",
+    "theme_signature": "batman:torre_de_babel:planes_contingencia",
+    "date": "2026-09-06 01:19",
+    "mode": "live_release",
+    "video_file": "Batman_Torre_de_Babel_Los_Planes_Secretos.mp4",
+    "status": "published"
+  },
+  {
+    "id": "blackest_night_rebelion",
+    "title": "Blackest Night: La Rebelión de los Muertos",
+    "character": "Green Lantern",
+    "theme_signature": "green_lantern:blackest_night:nekron",
+    "date": "2026-09-06 17:44",
+    "mode": "live_release",
+    "video_file": "Blackest_Night_La_Rebelion_de_los_Muertos.mp4",
+    "status": "published"
+  },
+  {
+    "id": "thanos_wins_fin_existencia",
+    "title": "Thanos Wins: El Fin de Toda la Existencia",
+    "character": "Thanos",
+    "theme_signature": "thanos:thanos_wins:rey_thanos_fin",
+    "date": "2026-09-07 01:10",
+    "mode": "live_release",
+    "video_file": "Thanos_Wins_El_Fin_de_la_Existencia.mp4",
+    "status": "published"
+  },
+  {
+    "id": "crisis_tierras_infinitas",
+    "title": "Crisis en Tierras Infinitas: El Sacrificio de los Héroes",
+    "character": "The Flash",
+    "theme_signature": "dc:crisis_tierras_infinitas:sacrificio_barry_allen",
+    "date": "2026-09-07 17:17",
+    "mode": "live_release",
+    "video_file": "Crisis_en_Tierras_Infinitas_El_Sacrificio_de_los_Heroes.mp4",
+    "status": "published"
+  },
+  {
+    "id": "marvel_zombies",
+    "title": "Marvel Zombies: El Hambre del Multiverso",
+    "character": "Spider-Man",
+    "theme_signature": "marvel_zombies:hambre_infinita:galactus_devorado",
+    "date": "2026-09-08 01:10",
+    "mode": "live_release",
+    "video_file": "Marvel_Zombies_El_Hambre_del_Multiverso.mp4",
+    "status": "published"
+  },
+  {
+    "id": "injustice_regimen_superman",
+    "title": "Injustice: El Régimen del Hombre de Acero",
+    "character": "Superman",
+    "theme_signature": "superman:injustice:regimen_tirania",
+    "date": "2026-09-08 18:05",
+    "mode": "live_release",
+    "video_file": "Injustice_El_Regimen_del_Hombre_de_Acero.mp4",
+    "status": "published"
+  },
+  {
+    "id": "knull_dios_simbiontes",
+    "title": "Knull: El Dios de los Simbiontes y la Necroespada",
+    "character": "Knull",
+    "theme_signature": "knull:simbiontes:king_in_black",
+    "date": "2026-09-01 12:00",
+    "mode": "live_release",
+    "video_file": "Knull_El_Dios_de_los_Simbiontes.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "batman_que_rie",
+    "title": "El Batman Que Ríe: La Pesadilla del Multiverso Oscuro",
+    "character": "The Batman Who Laughs",
+    "theme_signature": "batman:batman_who_laughs:dark_multiverse",
+    "date": "2026-09-01 13:00",
+    "mode": "live_release",
+    "video_file": "El_Batman_Que_Rie_Pesadilla_del_Multiverso.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "gorr_carnicero_dioses",
+    "title": "Gorr el Carnicero de Dioses: La Venganza de la Necroespada",
+    "character": "Gorr the God Butcher",
+    "theme_signature": "thor:gorr:god_butcher_necrosword",
+    "date": "2026-09-01 14:00",
+    "mode": "live_release",
+    "video_file": "Gorr_el_Carnicero_de_Dioses.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "flashpoint_paradoja",
+    "title": "Flashpoint: La Paradoja que Destruyó el Mundo",
+    "character": "The Flash",
+    "theme_signature": "flash:flashpoint:thomas_wayne_batman",
+    "date": "2026-09-01 15:00",
+    "mode": "live_release",
+    "video_file": "Flashpoint_La_Paradoja_del_Tiempo.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "dark_nights_metal",
+    "title": "Dark Nights Metal: La Invasión del Multiverso Oscuro",
+    "character": "Batman",
+    "theme_signature": "dc:dark_nights_metal:barbatos_caballeros",
+    "date": "2026-09-01 16:00",
+    "mode": "live_release",
+    "video_file": "Dark_Nights_Metal_La_Invasion_del_Multiverso_Oscuro.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "old_man_logan",
+    "title": "Wolverine: Old Man Logan - La Masacre de los X-Men",
+    "character": "Wolverine",
+    "theme_signature": "wolverine:old_man_logan:engano_mysterio",
+    "date": "2026-09-01 17:00",
+    "mode": "live_release",
+    "video_file": "Wolverine_Old_Man_Logan_La_Masacre_de_los_X-Men.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "muerte_gwen_stacy",
+    "title": "Spider-Man: La Trágica Noche en que Murió Gwen Stacy",
+    "character": "Spider-Man",
+    "theme_signature": "spiderman:gwen_stacy:duende_verde_puente",
+    "date": "2026-09-01 18:00",
+    "mode": "live_release",
+    "video_file": "Spider-Man_La_Muerte_de_Gwen_Stacy_Historia_Real.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "superboy_prime",
+    "title": "Superboy Prime: El Destructor de la Realidad",
+    "character": "Superboy Prime",
+    "theme_signature": "superboy_prime:infinite_crisis:golpe_realidad",
+    "date": "2026-09-01 19:00",
+    "mode": "live_release",
+    "video_file": "Superboy_Prime_El_Destructor_de_la_Realidad.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "cosmic_ghost_rider",
+    "title": "Cosmic Ghost Rider: El Castigador del Infinito",
+    "character": "Cosmic Ghost Rider",
+    "theme_signature": "cosmic_ghost_rider:frank_castle:galactus_thanos",
+    "date": "2026-09-01 20:00",
+    "mode": "live_release",
+    "video_file": "Cosmic_Ghost_Rider_El_Vengador_del_Infinito.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "batman_corte_de_los_buhos",
+    "title": "Batman: La Corte de los Búhos - El Laberinto de Gotham",
+    "character": "Batman",
+    "theme_signature": "batman:court_of_owls:talon_laberinto",
+    "date": "2026-09-01 21:00",
+    "mode": "live_release",
+    "video_file": "Batman_La_Corte_de_los_Buhos.mp4",
+    "status": "produced"
+  }
+]
