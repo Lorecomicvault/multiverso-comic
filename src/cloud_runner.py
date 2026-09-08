@@ -1,7 +1,7 @@
 """
 Comic Lore Vault - Autonomous Cloud Video Runner & Publisher (Spanish Engine)
 Anti-Duplication Engine: Guarantees zero repeated stories, characters arcs, or themes.
-Branch: spanish-videos
+Repository: comic-lore-espanol (main)
 """
 
 import argparse

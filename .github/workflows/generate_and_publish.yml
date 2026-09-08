@@ -59,11 +59,10 @@ jobs:
     timeout-minutes: 60
 
     steps:
-      - name: Checkout Codigo (Rama spanish-videos)
+      - name: Checkout Codigo
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          ref: spanish-videos
           fetch-depth: 1
 
       - name: Configurar Python 3.11
@@ -120,7 +119,7 @@ jobs:
           git add published_ledger.json output/videos_log.csv 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "chore(ledger): registrar video producido para prevenir duplicados [skip ci]"
-            git push origin spanish-videos
+            git push origin main
           else
             echo "Ledger al dia. No hay nuevas entradas para commitear."
           fi
