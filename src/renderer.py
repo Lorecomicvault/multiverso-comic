@@ -15,6 +15,10 @@ def get_remotion_cmd() -> list[str]:
     if bin_path.exists():
         return [str(bin_path)]
     
+    npx_bin = shutil.which('npx.cmd' if sys.platform == 'win32' else 'npx')
+    if npx_bin:
+        return [npx_bin, 'remotion']
+
     # Check npm run
     npm_bin = 'npm.cmd' if sys.platform == 'win32' else 'npm'
     return [npm_bin, 'run', 'render', '--']
@@ -27,6 +31,21 @@ def check_remotion_available() -> bool:
     if bin_path.exists():
         return True
     
+    npx_bin = shutil.which('npx.cmd' if sys.platform == 'win32' else 'npx')
+    if npx_bin:
+        try:
+            r = subprocess.run(
+                [npx_bin, 'remotion', 'compositions', 'src/Root.tsx'],
+                cwd=str(REMOTION_DIR),
+                capture_output=True,
+                text=True,
+                timeout=45
+            )
+            if r.returncode == 0:
+                return True
+        except Exception:
+            pass
+
     npm_bin = 'npm.cmd' if sys.platform == 'win32' else 'npm'
     try:
         r = subprocess.run(
@@ -34,7 +53,7 @@ def check_remotion_available() -> bool:
             cwd=str(REMOTION_DIR),
             capture_output=True,
             text=True,
-            timeout=25
+            timeout=45
         )
         return r.returncode == 0
     except Exception:
