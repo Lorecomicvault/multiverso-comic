@@ -49,40 +49,44 @@ def compose_scene(video_path: str, audio_path: str, duration: float, output: str
 
 def _build_zoompan_exprs(pattern: str, total_frames: int, nf: int, duration: float, width: int, height: int) -> tuple[str, str, str, float, float]:
     """
-    Movimiento cinematográfico suave que mantiene el 100% de la viñeta de cómic visible.
-    Micro-movimiento elegante (2.5% a 3%) para dar vida a la ilustración sin cortar bordes ni texto.
+    Movimiento Ken Burns cinematográfico dinámico, vivo y fluido.
+    Recorre e interactúa con la viñeta con movimientos de cámara visibles (18% a 22%)
+    creando zooms y paneos espectaculares que dan vida a cada panel de cómic.
     """
     t_norm = f'on/{nf}' if nf > 0 else '0'
-    zoom_depth = 0.03
-    rotation = 0.0
 
     if pattern == 'zoom-out':
-        z = f'1.03 - {zoom_depth} * {t_norm}'
+        # Zoom out cinematográfico: inicia en primer plano (1.22) y retrocede suavemente (1.04)
+        z = f'1.22 - 0.18 * {t_norm}'
         x = '(iw - iw/zoom)/2'
         y = '(ih - ih/zoom)/2'
     elif pattern == 'pan-up':
-        z = '1.025'
+        # Paneo ascendente: recorre la viñeta desde abajo hacia arriba
+        z = '1.22'
         x = '(iw - iw/zoom)/2'
-        y = f'(ih - ih/zoom) * (1 - {t_norm} * 0.6)'
+        y = f'(ih - ih/zoom) * (1 - {t_norm})'
     elif pattern == 'pan-down':
-        z = '1.025'
+        # Paneo descendente: escaneo vertical clásico de cómic desde arriba hacia abajo
+        z = '1.22'
         x = '(iw - iw/zoom)/2'
-        y = f'(ih - ih/zoom) * ({t_norm} * 0.6)'
+        y = f'(ih - ih/zoom) * {t_norm}'
     elif pattern == 'pan-left-to-right':
-        z = '1.025'
-        x = f'(iw - iw/zoom) * ({t_norm} * 0.6)'
+        # Paneo horizontal de izquierda a derecha
+        z = '1.22'
+        x = f'(iw - iw/zoom) * {t_norm}'
         y = '(ih - ih/zoom)/2'
     elif pattern == 'pan-right-to-left':
-        z = '1.025'
-        x = f'(iw - iw/zoom) * (1 - {t_norm} * 0.6)'
+        # Paneo horizontal de derecha a izquierda
+        z = '1.22'
+        x = f'(iw - iw/zoom) * (1 - {t_norm})'
         y = '(ih - ih/zoom)/2'
     else:
-        # zoom-in dinámico
-        z = f'1.00 + {zoom_depth} * {t_norm}'
+        # zoom-in dinámico: empuje dramático hacia el centro de la acción (1.04 a 1.22)
+        z = f'1.04 + 0.18 * {t_norm}'
         x = '(iw - iw/zoom)/2'
         y = '(ih - ih/zoom)/2'
 
-    return z, x, y, zoom_depth, rotation
+    return z, x, y, 0.18, 0.0
 
 
 def compose_scene_from_image(image_path: str, audio_path: str, duration: float, output: str, pattern_idx: int = 0, width: int = 1080, height: int = 1920, audio_codec: str = 'aac') -> str:
@@ -99,9 +103,10 @@ def compose_scene_from_image(image_path: str, audio_path: str, duration: float, 
         pattern, total_frames, nf, duration, width, height
     )
 
-    # Native 1080x1920 fast rendering without 4K CPU bottleneck
+    # Native 1080x1920 dynamic Ken Burns rendering with exact aspect ratio
     video_chain = (
-        f'[0:v]scale=\'max({width},iw)\':\'max({height},ih)\':force_original_aspect_ratio=increase,'
+        f'[0:v]scale={width}:{height}:force_original_aspect_ratio=increase,'
+        f'crop={width}:{height},'
         f'zoompan=z=\'{z_expr}\':x=\'{x_expr}\':y=\'{y_expr}\':d={total_frames}:s={width}x{height}:fps={fps},'
         f'setsar=1[v]'
     )
