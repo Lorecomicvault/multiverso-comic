@@ -137,6 +137,7 @@ jobs:
         run: |
           git config user.name "ComicLoreVault Engine"
           git config user.email "Lorecomicvault@users.noreply.github.com"
+          git pull --rebase origin main 2>/dev/null || true
           git add published_ledger.json output/videos_log.csv 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "chore(ledger): registrar video producido para prevenir duplicados [skip ci]"
@@ -152,6 +153,7 @@ jobs:
           name: multiverso-comic-video-${{ github.run_number }}
           path: output/**/*.mp4
           if-no-files-found: ignore
+          retention-days: 1
 
       - name: Archivar Logs de Produccion y Manifiesto
         if: always()
@@ -164,3 +166,4 @@ jobs:
             output/**/script.json
             published_ledger.json
           if-no-files-found: ignore
+          retention-days: 1
