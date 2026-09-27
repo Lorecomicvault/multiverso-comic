@@ -137,10 +137,13 @@ jobs:
         run: |
           git config user.name "ComicLoreVault Engine"
           git config user.email "Lorecomicvault@users.noreply.github.com"
-          git pull --rebase origin main 2>/dev/null || true
-          git add published_ledger.json output/videos_log.csv 2>/dev/null || true
+          git add published_ledger.json
+          if [ -f output/videos_log.csv ]; then
+            git add -f output/videos_log.csv 2>/dev/null || true
+          fi
           if ! git diff --cached --quiet; then
             git commit -m "chore(ledger): registrar video producido para prevenir duplicados [skip ci]"
+            git pull --rebase origin main 2>/dev/null || true
             git push origin main
           else
             echo "Ledger al dia. No hay nuevas entradas para commitear."

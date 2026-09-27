@@ -33,9 +33,11 @@ remotion/public/*.mp3
 remotion/public/*.json
 node_modules/
 
-# Allow essential assets (fonts, foley, social overlay)
+# Allow essential assets (fonts, foley, social overlay, logs)
 !assets/
 !assets/**
+!published_ledger.json
+!output/videos_log.csv
 
 # Environment variables & secrets
 .env
