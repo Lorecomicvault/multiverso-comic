@@ -10,6 +10,7 @@ on:
         type: choice
         options:
           - any
+          - autonomous_ai
           - hulk_maestro_futuro_imperfecto
           - superior_spider_man_otto
           - batman_hush_silencio
@@ -108,6 +109,7 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID || '1289410784257454' }}
           IG_USER_ID: ${{ secrets.IG_USER_ID || '17841427017671758' }}
           GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY || 'AIzaSyDpdDhoXt8GDwJ_sEj-vjtd6HqVflN_vSY' }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           VOICE: 'es-US-Studio-B'
           EVENT_MODE: ${{ github.event.inputs.mode || 'render_only' }}
         run: |
@@ -126,7 +128,9 @@ jobs:
             echo "Modo Render Only: El video se renderizara y guardara como artefacto sin publicar en Meta."
           fi
 
-          if [ -n "${{ github.event.inputs.story_id }}" ] && [ "${{ github.event.inputs.story_id }}" != "any" ]; then
+          if [ "${{ github.event.inputs.story_id }}" = "autonomous_ai" ]; then
+            ARGS="$ARGS --ai-story"
+          elif [ -n "${{ github.event.inputs.story_id }}" ] && [ "${{ github.event.inputs.story_id }}" != "any" ]; then
             ARGS="$ARGS --story-id ${{ github.event.inputs.story_id }}"
           fi
 

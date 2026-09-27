@@ -353,6 +353,7 @@ def main():
     parser.add_argument("--publish", action="store_true", help="Auto-publish to FB Page and IG after generation")
     parser.add_argument("--draft", action="store_true", help="Save as unpublished draft on FB and skip public IG")
     parser.add_argument("--dry-run", action="store_true", help="Test workflow without video generation or publishing")
+    parser.add_argument("--ai-story", action="store_true", help="Force autonomous AI story generation with Gemini")
     args = parser.parse_args()
 
     log("Initializing Multiverso Comic Engine with Ironclad Anti-Duplication Shield...")
@@ -388,14 +389,14 @@ def main():
         available = [s for s in EDITORIAL_STORIES if not is_duplicate(s, ledger)[0]]
         log(f"Available unproduced stories in catalog: {len(available)} / {len(EDITORIAL_STORIES)}")
 
-        if not available:
-            log("ALL cataloged stories have already been produced! Zero duplicates permitted.")
-            log("Add new storylines to EDITORIAL_STORIES before running next production.")
-            sys.exit(0)
-
-        selected = random.choice(available)
-
-    log(f"Selected Unique Story: {selected['title']} (ID: {selected['id']})")
+        if not available or getattr(args, 'ai_story', False) or args.story_id == "autonomous_ai":
+            log("CATALOG EXHAUSTION / AI MODE: Activating Autonomous AI Story Engine (Google Gemini)...")
+            from .autonomous_ai_generator import generate_autonomous_story
+            selected = generate_autonomous_story(ledger)
+            log(f"Autonomous AI Generated Story: {selected['title']} (ID: {selected['id']})")
+        else:
+            selected = random.choice(available)
+            log(f"Selected Unique Story: {selected['title']} (ID: {selected['id']})")
 
     if args.dry_run:
         log("DRY RUN mode verified. Story is 100% unique and passed all 5 anti-duplication layers.")
