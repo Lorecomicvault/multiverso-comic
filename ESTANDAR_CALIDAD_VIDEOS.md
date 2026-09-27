@@ -4,8 +4,15 @@ Este documento fija el **Estándar de Oro Canónico** validado y perfeccionado t
 
 ---
 
-## 1. PRECISIÓN VISUAL 1:1 CANÓNICA (CERO RELLENO O PORTADAS DESALINEADAS)
-- **Correspondencia visual absoluta**: Cada frase de la locución debe mostrar exactamente la acción o el personaje descrito en ese instante preciso.
+## 1. PRECISIÓN VISUAL 1:1 CANÓNICA (CERO RELLENO, CERO TEXTO O PORTADAS DESALINEADAS)
+- **Correspondencia visual absoluta (Ver lo que se escucha)**: Cada segundo de locución debe mostrar en pantalla **EXACTAMENTE** la acción, transformación, personaje o combate descrito en ese instante preciso. No se tolera disonancia entre voz e imagen.
+  - Si se narra una mutación (ej. tumores de Bruce Banner), la imagen debe ser la mutación explícita.
+  - Si se narra una muerte o desmembramiento (ej. Magneto y las sierras mecánicas, Bullseye atravesado), la imagen debe mostrar ese momento exacto.
+  - Si la viñeta disponible muestra otra acción de la historia, la locución se DEBE adaptar a describir lo que se ve en la viñeta, jamás lo contrario.
+- **PROHIBICIÓN ABSOLUTA DE DOCUMENTOS Y HOJAS DE TEXTO**:
+  - Queda terminantemente prohibido incluir páginas de texto mecanografiado, cartas, notas manuscritas o diarios (ej. el diario de Phil Sheldon).
+  - Cada fotograma debe contener arte o viñetas ilustradas de cómic con riqueza cromática y dinamismo.
+  - El sistema de generación (local y cloud) debe someter toda imagen al filtro matemático `Quality Shield` (`mean_sat < 15.0 and mean_val > 175.0` rechazadas inmediatamente).
 - **Composición Vertical 1080x1920 (Canvas Apilado / Split)**:
   - Cuando una escena narre dos acciones consecutivas en el mismo evento (ej. la trampa de explosivos/espada a Flash + el golpe al hígado a Zatanna), se compone un canvas vertical apilado de dos paneles (`create_stacked_canvas`), asegurando que ambas viñetas sean nítidas y claramente legibles.
   - El encuadre debe calibrarse con micro-ajustes de centrado vertical (`top_centering`, `bot_centering`) para no recortar cabezas, máscaras, armas o globos de diálogo icónicos.
