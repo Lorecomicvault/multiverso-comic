@@ -4,7 +4,7 @@ import os
 import re
 import urllib.parse
 from pathlib import Path
-from PIL import Image
+from PIL import Image, ImageStat
 import requests
 
 HEADERS = {
@@ -112,6 +112,12 @@ def download_comic_art_image(url: str, output_path: str) -> bool:
         if r.status_code == 200 and len(r.content) > 20000:
             img = Image.open(io.BytesIO(r.content))
             img = img.convert('RGB')
+            # Quality Shield: Reject text documents / handwritten notes
+            stat = ImageStat.Stat(img.convert('HSV'))
+            mean_sat, mean_val = stat.mean[1], stat.mean[2]
+            if mean_sat < 15.0 and mean_val > 175.0:
+                print(f"  [QUALITY SHIELD] Rechazada imagen con texto/nota manuscrita: {Path(output_path).name} (sat={mean_sat:.1f})")
+                return False
             img.save(output_path, "JPEG", quality=95)
             print(f"  [OK] Guardado arte oficial de cómic: {Path(output_path).name} ({img.width}x{img.height})")
             return True

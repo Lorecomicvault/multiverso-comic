@@ -76,16 +76,16 @@ EDITORIAL_STORIES = [
         "description": "En este aterrador universo alternativo creado por Warren Ellis, ningún héroe obtuvo superpoderes: cada accidente provocó mutaciones atroces, cánceres deformes y pesadillas biológicas.",
         "hashtags": "#MarvelRuins #MarvelComics #WarrenEllis #ComicsDeTerror #Shorts #Reels",
         "scenes": [
-            "¿Sabías que en Marvel Ruins ningún héroe obtuvo poderes y cada accidente se transformó en una pesadilla biológica?",
-            "La araña radiactiva le provocó a Peter Parker una atroz necrosis infecciosa descomunal en la piel.",
-            "Thor se volvió completamente loco, mutilándose a sí mismo al no poder soportar los susurros del cosmos.",
-            "El fotógrafo Phil Sheldon documentó las ruinas de América, muriendo víctima del mismo virus de los héroes."
+            "¿Sabías que en Marvel Ruins ningún héroe obtuvo poderes y cada accidente se convirtió en una atroz pesadilla?",
+            "Al recibir la radiación gamma, Bruce Banner no se convirtió en Hulk, sino en una aterradora masa viva de tumores deformes.",
+            "Magneto perdió el control magnético, atrapado en un arnés defectuoso mientras decenas de sierras voladoras lo descuartizaban vivo.",
+            "Y en el espacio, Silver Surfer perdió la cordura, desgarrándose el pecho con sus manos en una dolorosa agonía cósmica."
         ],
         "scene_art_urls": [
             "Ruins_Vol_1_1.jpg",
-            "Peter Parker (Earth-9591) from Ruins Vol 1 2 001.jpg",
-            "Thor Odinson (Earth-9591) from Ruins Vol 1 2 001.png",
-            "Ruins_Vol_1_2.jpg"
+            "Bruce Banner (Earth-9591) from Ruins Vol 1 1 001.jpg",
+            "Ruins_Vol_1_2.jpg",
+            "Norrin Radd (Earth-9591) from Ruins Vol 1 1 0001.jpg"
         ]
     },
     {
@@ -143,7 +143,7 @@ EDITORIAL_STORIES = [
         ],
         "scene_art_urls": [
             "Superior_Spider-Man_Vol_1_1.jpg",
-            "Superior_Spider-Man_Vol_1_9.jpg",
+            "Superior_Spider-Man_Vol_1_2.jpg",
             "Superior_Spider-Man_Midtown_Comics_Variant.jpg",
             "Superior_Spider-Man_Vol_1_1_Textless.png"
         ]
@@ -285,7 +285,7 @@ EDITORIAL_STORIES = [
             "Flashpoint_Vol_2_1.jpg",
             "Flashpoint_Vol_2_2.jpg",
             "Flashpoint_Vol_2_3.jpg",
-            "Flashpoint_Vol_2_5.jpg"
+            "Flashpoint_Vol_2_5.png"
         ]
     },
     {
@@ -302,10 +302,10 @@ EDITORIAL_STORIES = [
             "Conquistó el Multiverso Oscuro liderando a los Caballeros Oscuros y sembrando pesadillas en cada realidad."
         ],
         "scene_art_urls": [
-            "The_Batman_Who_Laughs_Vol_1_1.jpg",
-            "The_Batman_Who_Laughs_Vol_1_2.jpg",
-            "The_Batman_Who_Laughs_Vol_1_3.jpg",
-            "The_Batman_Who_Laughs_Vol_1_4.jpg"
+            "The_Batman_Who_Laughs_Vol_2_1.jpg",
+            "The_Batman_Who_Laughs_Vol_2_2.jpg",
+            "The_Batman_Who_Laughs_Vol_2_3.jpg",
+            "The_Batman_Who_Laughs_Vol_2_4.jpg"
         ]
     },
     {
@@ -482,10 +482,10 @@ EDITORIAL_STORIES = [
             "Recordando su promesa a Gotham, Batman se levantó furioso, demolió a Talon a golpes y juró destruirlos."
         ],
         "scene_art_urls": [
-            "Batman_Vol_2_5_Variant.jpg",
+            "Batman_Vol_2_5.jpg",
             "Batman_Vol_2_6_Textless.jpg",
             "Batman_Vol_2_7_Textless.jpg",
-            "Batman_Vol_2_8_Textless.jpg"
+            "Batman_Vol_2_8.jpg"
         ]
     }
 ]

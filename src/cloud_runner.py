@@ -14,7 +14,7 @@ import sys
 import time
 import unicodedata
 from pathlib import Path
-from PIL import Image, ImageFilter
+from PIL import Image, ImageFilter, ImageStat
 import requests
 
 from .comic_fetcher import get_fandom_comic_art
@@ -236,6 +236,16 @@ def download_comic_panel(url_or_file: str, character: str, dest_path: Path, min_
             r = requests.get(c_url, headers=headers, timeout=15)
             if r.status_code == 200 and len(r.content) > 10000:
                 im = Image.open(io.BytesIO(r.content)).convert("RGB")
+                
+                # CRITICAL QUALITY SHIELD: Reject text-only pages, letters or handwritten notes
+                im_hsv = im.convert("HSV")
+                stat = ImageStat.Stat(im_hsv)
+                mean_sat = stat.mean[1] # Low saturation = near monochrome
+                mean_val = stat.mean[2] # High value = bright white paper
+                if mean_sat < 15.0 and mean_val > 175.0:
+                    log(f"Quality Shield: Rejected '{c_url.split('/')[-1]}' because it is a text document / handwritten note (sat={mean_sat:.1f}).")
+                    continue
+
                 if im.width >= min_dim or im.height >= min_dim:
                     dest_path.parent.mkdir(parents=True, exist_ok=True)
                     im.save(dest_path, "JPEG", quality=95)
