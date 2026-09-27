@@ -698,5 +698,15 @@
     "mode": "live_release",
     "video_file": "La_Guerra_de_los_Sinestro_Corps_El_Terror_Amarillo_Conquista_el_Cosmos.mp4",
     "status": "published"
+  },
+  {
+    "id": "marvel_ruins_el_universo_maldito",
+    "title": "Marvel Ruins: El Universo Donde Todo lo que Podía Salir Mal, Salió Mal",
+    "character": "Marvel Ruins",
+    "theme_signature": "marvel:ruins:distopia_enfermedad_pesadilla",
+    "date": "2026-09-27 22:05",
+    "mode": "live_release",
+    "video_file": "Marvel_Ruins_El_Universo_Donde_Todo_lo_que_Podía_Salir_Mal_Salió_Mal.mp4",
+    "status": "published"
   }
 ]
