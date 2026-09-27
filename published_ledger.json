@@ -688,5 +688,15 @@
     "mode": "render_only",
     "video_file": "The_Flash_Godspeed_el_Despiadado_Asesino_de_Velocistas.mp4",
     "status": "produced"
+  },
+  {
+    "id": "sinestro_corps_war",
+    "title": "La Guerra de los Sinestro Corps: El Terror Amarillo Conquista el Cosmos",
+    "character": "Sinestro",
+    "theme_signature": "green_lantern:sinestro_corps:guerra_miedo",
+    "date": "2026-09-27 17:05",
+    "mode": "live_release",
+    "video_file": "La_Guerra_de_los_Sinestro_Corps_El_Terror_Amarillo_Conquista_el_Cosmos.mp4",
+    "status": "published"
   }
 ]
