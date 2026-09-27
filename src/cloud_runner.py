@@ -22,6 +22,17 @@ from .publisher import publish_comic_video, DEFAULT_PAGE_ID, DEFAULT_IG_USER_ID
 
 LEDGER_PATH = Path("published_ledger.json")
 
+def load_env_file():
+    env_file = Path(".env")
+    if env_file.exists():
+        for line in env_file.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                k, v = line.split("=", 1)
+                os.environ.setdefault(k.strip(), v.strip())
+
+load_env_file()
+
 
 def log(msg: str):
     print(f"[{time.strftime('%H:%M:%S')}] {msg}", flush=True)
