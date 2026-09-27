@@ -284,9 +284,29 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
         if target:
             saved = download_comic_panel(target, story.get("character", ""), img_file)
 
-        # Fallback A: Try dynamic comic fetcher
+        # Fallback A: Multi-Source Precision Scraper with Gemini Vision Referee
         if not saved or not img_file.exists():
-            log(f"Scene {idx}: Target comic panel unavailable, querying Fandom comic art...")
+            log(f"Scene {idx}: Target panel unavailable, invoking Multi-Source Precision Scraper with AI Referee...")
+            try:
+                from .comic_precision_scraper import fetch_scene_image
+                dc_chars = ['Batman', 'Superman', 'The Flash', 'Green Lantern', 'Sinestro', 'Superboy Prime', 'Joker', 'Aquaman']
+                wiki = 'dc.fandom.com' if any(c.lower() in story.get("character", "").lower() for c in dc_chars) else 'marvel.fandom.com'
+                panel_path = fetch_scene_image(
+                    wiki_domain=wiki,
+                    target_file=target,
+                    fallback_query=f"{story.get('character', '')} {narration[:35]}",
+                    dest_path=str(img_file),
+                    existing_scene_images=[str(p) for p in downloaded_images],
+                    scene_text=narration
+                )
+                if os.path.exists(panel_path) and os.path.getsize(panel_path) > 10000:
+                    saved = True
+            except Exception as e:
+                log(f"Scene {idx}: Precision scraper fallback notice: {e}")
+
+        # Fallback B: Dynamic comic fetcher
+        if not saved or not img_file.exists():
+            log(f"Scene {idx}: Querying general Fandom comic art...")
             fallback_urls = get_fandom_comic_art(story.get("character", "Batman"), count=5)
             for fb_u in fallback_urls:
                 if download_comic_panel(fb_u, story.get("character", ""), img_file):
