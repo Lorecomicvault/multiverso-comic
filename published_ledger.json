@@ -678,5 +678,15 @@
     "mode": "local_production",
     "video_file": "World_War_Hulk_Cuando_Ghost_Rider_se_Negó_a_Pelear_contra_Hulk.mp4",
     "status": "produced"
+  },
+  {
+    "id": "flash_godspeed_el_ladron_de_velocidad",
+    "title": "The Flash: Godspeed, el Despiadado Asesino de Velocistas",
+    "character": "The Flash",
+    "theme_signature": "flash:godspeed:august_heart_speed_force",
+    "date": "2026-09-27 15:07",
+    "mode": "render_only",
+    "video_file": "The_Flash_Godspeed_el_Despiadado_Asesino_de_Velocistas.mp4",
+    "status": "produced"
   }
 ]
