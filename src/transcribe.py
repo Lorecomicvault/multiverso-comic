@@ -167,6 +167,8 @@ def transcribe_to_ass_word(
     max_words: int = 2,
     correct_text: str | None = None,
     scene_word_boundaries: list[int] | None = None,
+    width: int = 1080,
+    height: int = 1920,
 ) -> str:
     """Genera subtítulos animados palabra por palabra estilo cómic viral idéntico a la referencia."""
     model = whisper.load_model(model_name)
@@ -188,16 +190,36 @@ def transcribe_to_ass_word(
         if correct_words:
             all_words = _align_words(all_words, correct_words)
 
+    is_horizontal = width > height
+    play_res_x = width
+    play_res_y = height
+    if is_horizontal:
+        # Estilo para video horizontal 16:9 (YouTube Largo) -> Tercio inferior centrado
+        font_size = 64
+        outline = 7
+        alignment = 2  # Bottom-Center
+        margin_v = 65
+        margin_lr = 60
+        if max_words == 2:
+            max_words = 3
+    else:
+        # Estilo para video vertical 9:16 (Shorts/Reels) -> Centrado dinámico
+        font_size = 105
+        outline = 10
+        alignment = 5  # Center
+        margin_v = 0
+        margin_lr = 30
+
     lines = [
         '[Script Info]',
         'ScriptType: v4.00+',
-        'PlayResX: 1080',
-        'PlayResY: 1920',
+        f'PlayResX: {play_res_x}',
+        f'PlayResY: {play_res_y}',
         'ScaledBorderAndShadow: yes',
         '',
         '[V4+ Styles]',
         'Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding',
-        'Style: ComicLore,Impact,105,&H00FFFFFF,&H0000FFFF,&H00000000,&H00000000,-1,-1,0,0,100,100,2,0,1,10,0,5,30,30,0,1',
+        f'Style: ComicLore,Impact,{font_size},&H00FFFFFF,&H0000FFFF,&H00000000,&H00000000,-1,-1,0,0,100,100,2,0,1,{outline},0,{alignment},{margin_lr},{margin_lr},{margin_v},1',
         '',
         '[Events]',
         'Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text',
@@ -264,11 +286,14 @@ def transcribe_scenes_to_ass(
     language: str = 'es',
     model_name: str = 'base',
     max_words: int = 2,
+    width: int = 1080,
+    height: int = 1920,
 ) -> str:
     """
     Transcribe el audio escena por escena con Whisper, alineándolo con el guion exacto de cada escena.
     Garantiza sincronización milimétrica 1:1, elimina cualquier riesgo de desfase acumulativo
     y asegura subtítulos 100% libres de errores tipográficos u omisiones.
+    Soporta formato vertical (Shorts/Reels) y formato horizontal 16:9 (YouTube Largo).
     """
     from .composer import get_duration
 
@@ -314,16 +339,36 @@ def transcribe_scenes_to_ass(
 
         accumulated_offset += dur
 
+    is_horizontal = width > height
+    play_res_x = width
+    play_res_y = height
+    if is_horizontal:
+        # Estilo para video horizontal 16:9 (YouTube Largo) -> Tercio inferior centrado
+        font_size = 64
+        outline = 7
+        alignment = 2  # Bottom-Center
+        margin_v = 65
+        margin_lr = 60
+        if max_words == 2:
+            max_words = 3
+    else:
+        # Estilo para video vertical 9:16 (Shorts/Reels) -> Centrado dinámico
+        font_size = 105
+        outline = 10
+        alignment = 5  # Center
+        margin_v = 0
+        margin_lr = 30
+
     lines = [
         '[Script Info]',
         'ScriptType: v4.00+',
-        'PlayResX: 1080',
-        'PlayResY: 1920',
+        f'PlayResX: {play_res_x}',
+        f'PlayResY: {play_res_y}',
         'ScaledBorderAndShadow: yes',
         '',
         '[V4+ Styles]',
         'Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding',
-        'Style: ComicLore,Impact,105,&H00FFFFFF,&H0000FFFF,&H00000000,&H00000000,-1,-1,0,0,100,100,2,0,1,10,0,5,30,30,0,1',
+        f'Style: ComicLore,Impact,{font_size},&H00FFFFFF,&H0000FFFF,&H00000000,&H00000000,-1,-1,0,0,100,100,2,0,1,{outline},0,{alignment},{margin_lr},{margin_lr},{margin_v},1',
         '',
         '[Events]',
         'Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text',

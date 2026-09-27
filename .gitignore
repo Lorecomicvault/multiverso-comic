@@ -32,6 +32,10 @@ remotion/public/*.mp3
 remotion/public/*.json
 node_modules/
 
+# Allow essential assets (fonts, foley, social overlay)
+!assets/
+!assets/**
+
 # Environment variables & secrets
 .env
 .env.*

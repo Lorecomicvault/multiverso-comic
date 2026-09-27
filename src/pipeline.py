@@ -16,8 +16,10 @@ from .composer import (
     extract_thumbnail,
     get_duration,
 )
-from .transcribe import transcribe_scenes_to_ass, transcribe_to_ass_word
+from .transcribe import transcribe_scenes_to_ass, transcribe_to_ass_word, extract_scene_word_timings
 from .voiceover import DEFAULT_VOICE, generate_voiceover_scenes
+from .social_overlay import get_or_create_vertical_cta_mov
+from .comic_pipeline import assemble_reel
 
 VIDEO_LOG_FILE = 'videos_log.csv'
 
@@ -92,6 +94,7 @@ def run_pipeline(
     width: int = 1080,
     height: int = 1920,
     final_video_dir: str | None = None,
+    generate_thumbnail: bool = True,
 ):
     gen_path = Path(generation['path'])
     scenes = generation['scene_videos']
@@ -158,23 +161,20 @@ def run_pipeline(
 
     log(f"  OK -> {len(composed_scenes)} escenas compuestas")
 
-    # --- 2. Concatenar escenas con sincronización exacta (Corte limpio sin desfase) ---
-    log("Concatenando escenas con sincronización milimétrica...")
-    concat_path = str(output_dir / 'concatenated.mp4')
-    # transition_duration=0 garantiza que el audio y el video no sufran desplazamiento temporal
-    concat_videos_audio(composed_scenes, concat_path, transition_duration=0)
-    log(f"  OK -> {concat_path}")
+    # Concatenar todos los audios individuales en uno general
+    full_audio_path = output_dir / 'voiceover' / 'narration_full.wav'
+    if has_voiceover and voice_results:
+        audio_inputs = []
+        filter_inputs = []
+        for idx, sn in enumerate(sorted(voice_results.keys())):
+            audio_inputs.extend(['-i', voice_results[sn]['audio']])
+            filter_inputs.append(f'[{idx}:a]')
+        n_a = len(filter_inputs)
+        a_filter = f"{''.join(filter_inputs)}concat=n={n_a}:v=0:a=1[aout]"
+        cmd_cat = ['ffmpeg', '-y', *audio_inputs, '-filter_complex', a_filter, '-map', '[aout]', str(full_audio_path)]
+        subprocess.run(cmd_cat, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=True)
 
-    # --- 3. Generar subtítulos estilo cómic idénticos a local (Whisper escena por escena, 100% sincronizados) ---
-    ass_path = None
-    if has_voiceover:
-        log("Generando subtítulos dinámicos estilo cómic con Whisper (escena por escena, 100% sincronizados)...")
-        ass_path = str(output_dir / 'subtitles.ass')
-        transcribe_scenes_to_ass(voice_results, ass_path, language='es')
-        log(f"  OK -> Subtítulos generados: {ass_path}")
-
-    # --- 4. Masterización final idéntica a local (FFmpeg + Impact + H.264) ---
-    log("Masterizando video final idéntico al motor local...")
+    # Preparar ruta del video final
     if final_video_dir is not None:
         final_dir = Path(final_video_dir)
     else:
@@ -187,20 +187,72 @@ def run_pipeline(
     safe_name = re.sub(r'[^\w\s-]', '', title).strip().replace(' ', '_')[:80]
     final_video = str(final_dir / f'{safe_name}.mp4')
 
-    if ass_path and Path(ass_path).exists():
-        compose_final(concat_path, ass_path, final_video, width=width, height=height)
+    # Si es video vertical y tenemos locución, ejecutamos el Motor Cinematográfico Maestro
+    if height == 1920 and has_voiceover and len(composed_scenes) > 1:
+        log("Ejecutando Motor Maestro: Papel Rasgado 3D (0.65s), Foley sincronizado y Caja de Narrador Bangers...")
+        word_json = str(output_dir / 'word_timings.json')
+        words_data = extract_scene_word_timings(voice_results, word_json, language='es', model_name='base')
+        words_timing = [{"word": w['text'], "start": w['start'], "end": w['end']} for w in words_data.get('words', [])]
+
+        # Extraer palabras clave de alto impacto
+        keywords = []
+        title_words = re.findall(r'\b[A-Za-zÁÉÍÓÚáéíóúÑñ]{4,}\b', title)
+        keywords.extend([w.upper() for w in title_words])
+        for s in script.get('scenes', []):
+            nar = s.get('voiceover_text') or s.get('narration') or ''
+            caps = re.findall(r'\b[A-ZÁÉÍÓÚÑ][a-záéíóúñ]{3,}\b', nar)
+            keywords.extend([c.upper() for c in caps])
+        keywords = list(set(keywords))
+
+        social_mov = None
+        if os.environ.get('NO_SOCIAL_CTA', '0') != '1':
+            cta_style = os.environ.get('SOCIAL_CTA_STYLE', 'dual_line')
+            try:
+                social_mov = get_or_create_vertical_cta_mov(cta_style)
+                log(f"  OK -> Social CTA Overlay activado ({cta_style})")
+            except Exception as e:
+                log(f"  Warning: No se pudo preparar el overlay social: {e}")
+
+        total_dur = words_data.get('total_duration', 30.0)
+        cta_start = max(8.0, min(total_dur - 6.0, total_dur * 0.58))
+
+        assemble_reel(
+            panel_clips=composed_scenes,
+            words_timing=words_timing,
+            narration_audio=str(full_audio_path),
+            output_mp4=final_video,
+            work_dir=str(output_dir / 'master_reel'),
+            keywords=keywords,
+            social_cta_mov=social_mov,
+            cta_start_time=cta_start,
+            alignment=5,
+            margin_v=20,
+            font_size=58,
+        )
     else:
-        compose_final_pure(concat_path, final_video)
+        # Fallback estándar para videos 16:9 o sin locución
+        log("Concatenando escenas con sincronización estándar...")
+        concat_path = str(output_dir / 'concatenated.mp4')
+        concat_videos_audio(composed_scenes, concat_path, transition_duration=0)
+        ass_path = None
+        if has_voiceover:
+            ass_path = str(output_dir / 'subtitles.ass')
+            transcribe_scenes_to_ass(voice_results, ass_path, language='es', width=width, height=height)
+        if ass_path and Path(ass_path).exists():
+            compose_final(concat_path, ass_path, final_video, width=width, height=height)
+        else:
+            compose_final_pure(concat_path, final_video)
 
     log(f"  OK -> Video final generado: {final_video}")
 
-    # Generate high-impact thumbnail (at 2.5s into video)
-    thumb_path = str(final_dir / f'{safe_name}_thumb.jpg')
-    try:
-        extract_thumbnail(final_video, thumb_path, timestamp=2.5)
-        log(f"  OK -> Miniatura oficial generada: {thumb_path}")
-    except Exception as e:
-        log(f"  Warning: No se pudo generar archivo de miniatura: {e}")
+    # Generate high-impact thumbnail (if enabled)
+    if generate_thumbnail and os.environ.get('NO_THUMB', '0') != '1':
+        thumb_path = str(final_dir / f'{safe_name}_thumb.jpg')
+        try:
+            extract_thumbnail(final_video, thumb_path, timestamp=2.5)
+            log(f"  OK -> Miniatura oficial generada: {thumb_path}")
+        except Exception as e:
+            log(f"  Warning: No se pudo generar archivo de miniatura: {e}")
 
     scene_guides = {s['scene_number']: s.get('visual_guide', '') for s in scenes_sorted}
     description = _generate_description(script, scene_guides)

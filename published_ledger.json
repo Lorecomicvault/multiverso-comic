@@ -238,5 +238,445 @@
     "mode": "live_release",
     "video_file": "Batman_La_Corte_de_los_Buhos.mp4",
     "status": "produced"
+  },
+  {
+    "id": "batman_knightfall_quiebre",
+    "title": "Batman: Knightfall - El Día en que Bane Quebró al Murciélago",
+    "character": "Batman",
+    "theme_signature": "batman:knightfall:bane_quiebra_espalda_arkham",
+    "date": "2026-09-12 16:07",
+    "mode": "local_production",
+    "video_file": "Batman_Knightfall_-_El_Día_en_que_Bane_Quebró_al_Murciélago.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "magneto_arranca_adamantium_wolverine",
+    "title": "Magneto vs Wolverine: La Extracción Brutal del Adamantium",
+    "character": "Wolverine",
+    "theme_signature": "wolverine:magneto:extraccion_adamantium_fatal_attractions",
+    "date": "2026-09-12 16:10",
+    "mode": "local_production",
+    "video_file": "Magneto_vs_Wolverine_La_Extracción_Brutal_del_Adamantium.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "batman_muerte_en_la_familia",
+    "title": "Batman: Una Muerte en la Familia - El Asesinato de Jason Todd",
+    "character": "Batman",
+    "theme_signature": "batman:joker:muerte_jason_todd_crowbar",
+    "date": "2026-09-12 19:57",
+    "mode": "local_production",
+    "video_file": "Batman_Una_Muerte_en_la_Familia_-_El_Asesinato_de_Jason_Todd.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "green_lantern_crepusculo_esmeralda",
+    "title": "Green Lantern: Crepúsculo Esmeralda - La Caída de Hal Jordan",
+    "character": "Green Lantern",
+    "theme_signature": "green_lantern:hal_jordan:crepusculo_esmeralda_parallax",
+    "date": "2026-09-12 20:00",
+    "mode": "local_production",
+    "video_file": "Green_Lantern_Crepúsculo_Esmeralda_-_La_Caída_de_Hal_Jordan.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "all_star_superman_sacrificio",
+    "title": "All-Star Superman: El Sacrificio Final del Hombre del Mañana",
+    "character": "Superman",
+    "theme_signature": "superman:all_star:sacrificio_solar_dios_dorado",
+    "date": "2026-09-12 20:02",
+    "mode": "local_production",
+    "video_file": "All-Star_Superman_El_Sacrificio_Final_del_Hombre_del_Mañana.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "batman_hush_silencio",
+    "title": "Batman: Silencio (Hush) - La Conspiración Definitiva",
+    "character": "Batman",
+    "theme_signature": "batman:hush:thomas_elliot_jim_lee",
+    "date": "2026-09-12 20:05",
+    "mode": "local_production",
+    "video_file": "Batman_Silencio_Hush_-_La_Conspiración_Definitiva.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "spiderman_kravens_last_hunt",
+    "title": "Spider-Man: La Última Cacería de Kraven - Enterrado Vivo",
+    "character": "Spider-Man",
+    "theme_signature": "spiderman:kraven:ultima_caceria_enterrado_vivo",
+    "date": "2026-09-12 20:07",
+    "mode": "local_production",
+    "video_file": "Spider-Man_La_Última_Cacería_de_Kraven_-_Enterrado_Vivo.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "sentry_vs_ares_siege",
+    "title": "Siege: Sentry vs Ares - La Muerte Más Brutal de Marvel",
+    "character": "The Sentry",
+    "theme_signature": "marvel:siege:sentry_destroza_ares",
+    "date": "2026-09-13 17:11",
+    "mode": "local_production",
+    "video_file": "Siege_Sentry_vs_Ares_-_La_Muerte_Más_Brutal_de_Marvel.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "reverse_flash_odio_thawne",
+    "title": "Flash: El Reverso - La Noche en que Mató a Nora Allen",
+    "character": "Reverse-Flash",
+    "theme_signature": "flash:reverse_flash:asesinato_nora_allen",
+    "date": "2026-09-13 17:12",
+    "mode": "local_production",
+    "video_file": "Flash_El_Reverso_-_La_Noche_en_que_Mató_a_Nora_Allen.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "wolverine_arma_x_origen",
+    "title": "Wolverine: Arma X - El Experimento Más Sangriento",
+    "character": "Wolverine",
+    "theme_signature": "wolverine:arma_x:experimento_tanque_barry_windsor_smith",
+    "date": "2026-09-13 17:13",
+    "mode": "local_production",
+    "video_file": "Wolverine_Arma_X_-_El_Experimento_Más_Sangriento.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "emperor_joker_poder_divino",
+    "title": "Superman: Emperador Joker - Cuando el Joker se Volvió Dios",
+    "character": "The Joker",
+    "theme_signature": "joker:emperor_joker:quinta_dimension_mxyzptlk",
+    "date": "2026-09-13 17:13",
+    "mode": "local_production",
+    "video_file": "Superman_Emperador_Joker_-_Cuando_el_Joker_se_Volvió_Dios.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "spiderman_back_in_black_kingpin",
+    "title": "Spider-Man: Back in Black - La Venganza Contra Kingpin",
+    "character": "Spider-Man",
+    "theme_signature": "spiderman:back_in_black:paliza_kingpin_prision",
+    "date": "2026-09-13 17:14",
+    "mode": "local_production",
+    "video_file": "Spider-Man_Back_in_Black_-_La_Venganza_Contra_Kingpin.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "superior_spiderman_mandibula_scorpion",
+    "title": "Superior Spider-Man: El Golpe que Destrozó a Escorpión",
+    "character": "Superior Spider-Man",
+    "theme_signature": "spiderman:superior:golpe_mandibula_escorpion",
+    "date": "2026-09-13 17:23",
+    "mode": "local_production",
+    "video_file": "Superior_Spider-Man_El_Golpe_que_Destrozó_a_Escorpión.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "deathstroke_identity_crisis",
+    "title": "Deathstroke: La Humillación a la Liga de la Justicia",
+    "character": "Deathstroke",
+    "theme_signature": "deathstroke:identity_crisis:slade_derrota_liga",
+    "date": "2026-09-17 17:36",
+    "mode": "local_production",
+    "video_file": "Deathstroke_La_Humillación_a_la_Liga_de_la_Justicia.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "thor_mata_galactus_heraldo",
+    "title": "Thor vs Galactus: La Muerte del Devorador de Mundos",
+    "character": "Thor",
+    "theme_signature": "thor:galactus:muerte_devorador_donny_cates",
+    "date": "2026-09-13 17:24",
+    "mode": "local_production",
+    "video_file": "Thor_vs_Galactus_La_Muerte_del_Devorador_de_Mundos.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "batman_the_devastator_doomsday",
+    "title": "Batman Devastator: El Monstruo que Destruyó a Superman",
+    "character": "The Devastator",
+    "theme_signature": "batman:devastator:virus_doomsday_muerte_superman",
+    "date": "2026-09-13 17:25",
+    "mode": "local_production",
+    "video_file": "Batman_Devastator_El_Monstruo_que_Destruyó_a_Superman.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "absolute_carnage_cletus_kasady",
+    "title": "Absolute Carnage: La Cacería Sangrienta de Cletus Kasady",
+    "character": "Carnage",
+    "theme_signature": "carnage:absolute_carnage:extraccion_codices_knull",
+    "date": "2026-09-13 17:26",
+    "mode": "local_production",
+    "video_file": "Absolute_Carnage_La_Cacería_Sangrienta_de_Cletus_Kasady.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "batman_devastator_parte_2_invasion",
+    "title": "Batman Devastator Parte 2: La Invasión del Virus Doomsday",
+    "character": "The Devastator",
+    "theme_signature": "batman:devastator:parte_2_invasion_metropolis_superman",
+    "date": "2026-09-15 17:32",
+    "mode": "local_production",
+    "video_file": "Batman_Devastator_Parte_2_La_Invasión_del_Virus_Doomsday.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "batman_flashpoint_martha_wayne_joker",
+    "title": "Batman Flashpoint: Cuando Martha Wayne se Convirtió en el Joker",
+    "character": "Thomas Wayne & Martha Wayne",
+    "theme_signature": "batman:flashpoint:thomas_wayne_martha_wayne_joker",
+    "date": "2026-09-16 20:41",
+    "mode": "local_production",
+    "video_file": "Batman_Flashpoint_Cuando_Martha_Wayne_se_Convirtió_en_el_Joker.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "batman_vs_superman_dark_knight_returns",
+    "title": "The Dark Knight Returns: El Día en que Batman Humilló a Superman",
+    "character": "Batman",
+    "theme_signature": "batman:superman:dark_knight_returns:derrota_clark",
+    "date": "2026-09-18 19:34",
+    "mode": "local_production",
+    "video_file": "The_Dark_Knight_Returns_El_Día_en_que_Batman_Humilló_a_Superman.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "deadpool_kills_thor",
+    "title": "Deadpool Mata a Thor: La Muerte Más Brutal e Ingeniosa de Marvel",
+    "character": "Deadpool",
+    "theme_signature": "deadpool:thor:kills_marvel_universe:mjolnir_pym",
+    "date": "2026-09-21 10:46",
+    "mode": "local_production",
+    "video_file": "Deadpool_Mata_a_Thor_La_Muerte_Más_Brutal_e_Ingeniosa_de_Marvel.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "wonder_woman_kills_maxwell_lord",
+    "title": "Wonder Woman: La Ejecución Fría de Maxwell Lord",
+    "character": "Wonder Woman",
+    "theme_signature": "wonder_woman:maxwell_lord:cuello_roto:infinite_crisis",
+    "date": "2026-09-18 19:37",
+    "mode": "local_production",
+    "video_file": "Wonder_Woman_La_Ejecución_Fría_de_Maxwell_Lord.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "batman_the_merciless_ares",
+    "title": "Batman The Merciless: El Batman que se Convirtió en el Dios de la Guerra",
+    "character": "The Merciless",
+    "theme_signature": "batman:the_merciless:casco_ares:multiverso_oscuro",
+    "date": "2026-09-18 19:38",
+    "mode": "local_production",
+    "video_file": "Batman_The_Merciless_El_Batman_que_se_Convirtió_en_el_Dios_de_la_Guerra.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "captain_america_secret_empire_hail_hydra",
+    "title": "Capitán América: La Traición de Hail Hydra",
+    "character": "Captain America",
+    "theme_signature": "captain_america:steve_rogers:hail_hydra:secret_empire",
+    "date": "2026-09-18 19:39",
+    "mode": "local_production",
+    "video_file": "Capitán_América_La_Traición_de_Hail_Hydra.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "injustice_alfred_golpea_superman",
+    "title": "Injustice: El Día en que Alfred Destrozó a Superman",
+    "character": "Alfred Pennyworth",
+    "theme_signature": "alfred:superman:injustice:pill_headbutt",
+    "date": "2026-09-21 15:12",
+    "mode": "local_production",
+    "video_file": "Injustice_El_Día_en_que_Alfred_Destrozó_a_Superman.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "superior_spiderman_arranca_mandibula_scorpion",
+    "title": "Superior Spider-Man: El Golpe que Arrancó la Mandíbula de Scorpion",
+    "character": "Superior Spider-Man",
+    "theme_signature": "spiderman:otto_octavius:scorpion:jaw_punch",
+    "date": "2026-09-21 15:12",
+    "mode": "local_production",
+    "video_file": "Superior_Spider-Man_El_Golpe_que_Arrancó_la_Mandíbula_de_Scorpion.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "secret_wars_god_doom_arranca_columna_thanos",
+    "title": "Secret Wars: God Emperor Doom Destruye a Thanos Arrancándole la Columna",
+    "character": "Doctor Doom",
+    "theme_signature": "god_emperor_doom:thanos:spine_rip:secret_wars_8",
+    "date": "2026-09-21 15:12",
+    "mode": "local_production",
+    "video_file": "Secret_Wars_God_Emperor_Doom_Destruye_a_Thanos_Arrancándole_la_Columna.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "batman_dios_del_conocimiento_mobius",
+    "title": "Batman Dios del Conocimiento: La Silla de Mobius y los Tres Jokers",
+    "character": "Batman",
+    "theme_signature": "batman:mobius_chair:god_of_knowledge:three_jokers",
+    "date": "2026-09-21 15:12",
+    "mode": "local_production",
+    "video_file": "Batman_Dios_del_Conocimiento_La_Silla_de_Mobius_y_los_Tres_Jokers.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "batman_death_of_the_family_joker_rostro",
+    "title": "Batman Muerte de la Familia: Cuando el Joker se Arrancó el Rostro",
+    "character": "Joker",
+    "theme_signature": "joker:flayed_face:dollmaker:gcpd_slaughter",
+    "date": "2026-09-21 15:12",
+    "mode": "local_production",
+    "video_file": "Batman_Muerte_de_la_Familia_Cuando_el_Joker_se_Arrancó_el_Rostro.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "house_of_m_las_tres_palabras_de_bruja_escarlata_qu",
+    "title": "House of M Las Tres Palabras de Bruja Escarlata que Extinguieron a los Mutantes",
+    "character": "Scarlet Witch",
+    "theme_signature": "scarlet_witch:house_of_m_las_tres_palabras_d",
+    "date": "2026-09-26 18:00",
+    "mode": "local_production",
+    "video_file": "House_of_M_Las_Tres_Palabras_de_Bruja_Escarlata_que_Extinguieron_a_los_Mutantes.mp4",
+    "status": "published"
+  },
+  {
+    "id": "hulk_maestro_el_tirano_del_futuro_imperfecto",
+    "title": "Hulk Maestro El Tirano del Futuro Imperfecto",
+    "character": "Hulk",
+    "theme_signature": "hulk:hulk_maestro_el_tirano_del_fut",
+    "date": "2026-09-26 18:00",
+    "mode": "local_production",
+    "video_file": "Hulk_Maestro_El_Tirano_del_Futuro_Imperfecto.mp4",
+    "status": "published"
+  },
+  {
+    "id": "moon_knight_la_venganza_de_khonshu_y_la_mutilacin_",
+    "title": "Moon Knight La Venganza de Khonshu y la Mutilación de Bushman",
+    "character": "Comic Lore",
+    "theme_signature": "comic_lore:moon_knight_la_venganza_de_kho",
+    "date": "2026-09-26 18:00",
+    "mode": "local_production",
+    "video_file": "Moon_Knight_La_Venganza_de_Khonshu_y_la_Mutilación_de_Bushman.mp4",
+    "status": "published"
+  },
+  {
+    "id": "secret_wars_el_fin_del_multiverso_y_dios_doom",
+    "title": "Secret Wars El Fin del Multiverso y Dios Doom",
+    "character": "Doctor Doom",
+    "theme_signature": "doctor_doom:secret_wars_el_fin_del_multive",
+    "date": "2026-09-26 18:00",
+    "mode": "local_production",
+    "video_file": "Secret_Wars_El_Fin_del_Multiverso_y_Dios_Doom.mp4",
+    "status": "published"
+  },
+  {
+    "id": "superior_iron_man_el_tony_stark_socipata_que_humil",
+    "title": "Superior Iron Man El Tony Stark Sociópata que Humilló a Daredevil",
+    "character": "Daredevil",
+    "theme_signature": "daredevil:superior_iron_man_el_tony_star",
+    "date": "2026-09-26 18:00",
+    "mode": "local_production",
+    "video_file": "Superior_Iron_Man_El_Tony_Stark_Sociópata_que_Humilló_a_Daredevil.mp4",
+    "status": "published"
+  },
+  {
+    "id": "the_immortal_hulk_el_experimento_donde_descuartiza",
+    "title": "The Immortal Hulk El Experimento donde Descuartizaron a Hulk en Frascos",
+    "character": "Hulk",
+    "theme_signature": "hulk:the_immortal_hulk_el_experimen",
+    "date": "2026-09-26 18:00",
+    "mode": "local_production",
+    "video_file": "The_Immortal_Hulk_El_Experimento_donde_Descuartizaron_a_Hulk_en_Frascos.mp4",
+    "status": "published"
+  },
+  {
+    "id": "ultimate_wolverine_vs_hulk_el_da_en_que_hulk_parti",
+    "title": "Ultimate Wolverine vs Hulk El Día en que Hulk Partió en Dos a Wolverine",
+    "character": "Hulk",
+    "theme_signature": "hulk:ultimate_wolverine_vs_hulk_el_",
+    "date": "2026-09-26 18:00",
+    "mode": "local_production",
+    "video_file": "Ultimate_Wolverine_vs_Hulk_El_Día_en_que_Hulk_Partió_en_Dos_a_Wolverine.mp4",
+    "status": "published"
+  },
+  {
+    "id": "world_war_hulk_la_furia_del_destructor_de_mundos",
+    "title": "World War Hulk La Furia del Destructor de Mundos",
+    "character": "Hulk",
+    "theme_signature": "hulk:world_war_hulk_la_furia_del_de",
+    "date": "2026-09-26 18:00",
+    "mode": "local_production",
+    "video_file": "World_War_Hulk_La_Furia_del_Destructor_de_Mundos.mp4",
+    "status": "published"
+  },
+  {
+    "id": "batman_red_death_el_da_en_que_bruce_rob_la_speed_f",
+    "title": "Batman Red Death El Día en que Bruce Robó la Speed Force",
+    "character": "Batman",
+    "theme_signature": "batman:batman_red_death_el_da_en_que_",
+    "date": "2026-09-26 18:00",
+    "mode": "local_production",
+    "video_file": "Batman_Red_Death_El_Día_en_que_Bruce_Robó_la_Speed_Force.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "black_manta_el_asesinato_del_hijo_de_aquaman",
+    "title": "Black Manta El Asesinato del Hijo de Aquaman",
+    "character": "Comic Lore",
+    "theme_signature": "comic_lore:black_manta_el_asesinato_del_h",
+    "date": "2026-09-26 18:00",
+    "mode": "local_production",
+    "video_file": "Black_Manta_El_Asesinato_del_Hijo_de_Aquaman.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "daredevil_shadowland_la_muerte_de_bullseye",
+    "title": "Daredevil Shadowland La Muerte de Bullseye",
+    "character": "Daredevil",
+    "theme_signature": "daredevil:daredevil_shadowland_la_muerte",
+    "date": "2026-09-26 18:00",
+    "mode": "local_production",
+    "video_file": "Daredevil_Shadowland_La_Muerte_de_Bullseye.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "dceased_el_da_en_que_john_constantine_asesin_al_de",
+    "title": "DCeased El Día en que John Constantine Asesinó al Demonio Trigon",
+    "character": "John Constantine",
+    "theme_signature": "john_constantine:dceased_el_da_en_que_john_cons",
+    "date": "2026-09-26 18:00",
+    "mode": "local_production",
+    "video_file": "DCeased_El_Día_en_que_John_Constantine_Asesinó_al_Demonio_Trigon.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "flashpoint_batman_el_da_en_que_thomas_wayne_ejecut",
+    "title": "Flashpoint Batman El Día en que Thomas Wayne Ejecutó a Joe Chill",
+    "character": "Batman",
+    "theme_signature": "batman:flashpoint_batman_el_da_en_que",
+    "date": "2026-09-26 18:00",
+    "mode": "local_production",
+    "video_file": "Flashpoint_Batman_El_Día_en_que_Thomas_Wayne_Ejecutó_a_Joe_Chill.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "injustice_ano_1_la_caida_de_superman_historia_comp",
+    "title": "Injustice Ano 1 La Caida de Superman Historia Completa 16x9",
+    "character": "Superman",
+    "theme_signature": "superman:injustice_ano_1_la_caida_de_su",
+    "date": "2026-09-26 18:00",
+    "mode": "local_production",
+    "video_file": "Injustice_Ano_1_La_Caida_de_Superman_Historia_Completa_16x9.mp4",
+    "status": "produced"
+  },
+  {
+    "id": "world_war_hulk_cuando_ghost_rider_se_neg_a_pelear_",
+    "title": "World War Hulk Cuando Ghost Rider se Negó a Pelear contra Hulk",
+    "character": "Hulk",
+    "theme_signature": "hulk:world_war_hulk_cuando_ghost_ri",
+    "date": "2026-09-26 18:00",
+    "mode": "local_production",
+    "video_file": "World_War_Hulk_Cuando_Ghost_Rider_se_Negó_a_Pelear_contra_Hulk.mp4",
+    "status": "produced"
   }
 ]

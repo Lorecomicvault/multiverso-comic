@@ -1,3 +1,4 @@
+import os
 import subprocess
 import json
 import random
@@ -261,9 +262,11 @@ def compose_final(
     output: str,
     width: int = 1080,
     height: int = 1920,
+    social_overlay_mov: str | None = None,
+    social_overlay_start: float | None = None,
 ) -> str:
     """Final pass: fade in/out, loudness -14 LUFS, music bed w/ sidechain,
-    color consistency, sharpening, subtitles + CTA, fast-start H.264."""
+    color consistency, sharpening, subtitles + social CTA overlay, fast-start H.264."""
     Path(output).parent.mkdir(parents=True, exist_ok=True)
 
     total = get_duration(video_path)
@@ -279,20 +282,50 @@ def compose_final(
     else:
         ass_filter = f"ass='{escaped}'"
 
-    has_music = MUSIC_BED_PATH.exists()
+    has_music = MUSIC_BED_PATH.exists() and os.environ.get('NO_MUSIC', '0') != '1'
 
-    # --- Video chain: consistent look + end fade + subtitles/CTA (no initial black fade for instant hook & crisp thumbnail) ---
-    video_chain = (
-        f'[0:v]eq=contrast=1.04:saturation=1.06:brightness=-0.01,'
-        f'unsharp=luma_msize_x=5:luma_msize_y=5:luma_amount=0.5,'
-        f'fade=t=out:st={fade_out_start}:d={fade_out},'
-        f'{ass_filter}[v]'
-    )
+    inputs = ['-i', video_path]
+    input_count = 1
+
+    if has_music:
+        music_idx = input_count
+        inputs.extend(['-i', str(MUSIC_BED_PATH)])
+        input_count += 1
+    else:
+        music_idx = None
+
+    overlay_idx = None
+    if social_overlay_mov and Path(social_overlay_mov).exists():
+        overlay_idx = input_count
+        if social_overlay_start is None:
+            # Calibrated window: around 18.5s for ~30s Shorts, or mid-to-late section
+            social_start = max(5.0, min(18.5, total - 6.0))
+        else:
+            social_start = social_overlay_start
+        inputs.extend(['-itsoffset', f'{social_start:.3f}', '-i', str(social_overlay_mov)])
+        input_count += 1
+
+    # --- Video chain: color enhancement + optional social CTA overlay + fade out + subtitles ---
+    if overlay_idx is not None:
+        video_chain = (
+            f'[0:v]eq=contrast=1.04:saturation=1.06:brightness=-0.01,'
+            f'unsharp=luma_msize_x=5:luma_msize_y=5:luma_amount=0.5[vbase];'
+            f'[vbase][{overlay_idx}:v]overlay=0:0:eof_action=pass[vcta];'
+            f'[vcta]fade=t=out:st={fade_out_start}:d={fade_out},'
+            f'{ass_filter}[v]'
+        )
+    else:
+        video_chain = (
+            f'[0:v]eq=contrast=1.04:saturation=1.06:brightness=-0.01,'
+            f'unsharp=luma_msize_x=5:luma_msize_y=5:luma_amount=0.5,'
+            f'fade=t=out:st={fade_out_start}:d={fade_out},'
+            f'{ass_filter}[v]'
+        )
 
     if has_music:
         audio_chain = (
             f'[0:a]dynaudnorm=p=0.95:m=100[voice];'
-            f'[1:a]aloop=loop=-1:size=2e9,atrim=0:{total:.3f},volume=0.18[music];'
+            f'[{music_idx}:a]aloop=loop=-1:size=2e9,atrim=0:{total:.3f},volume=0.18[music];'
             f'[voice]asplit[vo1][vo2];'
             f'[music][vo2]sidechaincompress=threshold=0.02:ratio=8:attack=20:release=300:makeup=1[ducked];'
             f'[vo1][ducked]amix=inputs=2:duration=first,'
@@ -300,7 +333,6 @@ def compose_final(
             f'afade=t=in:st=0:d={fade_in},'
             f'afade=t=out:st={fade_out_start}:d={fade_out}[a]'
         )
-        inputs = ['-i', video_path, '-i', str(MUSIC_BED_PATH)]
     else:
         audio_chain = (
             f'[0:a]dynaudnorm=p=0.95:m=100,'
@@ -308,7 +340,6 @@ def compose_final(
             f'afade=t=in:st=0:d={fade_in},'
             f'afade=t=out:st={fade_out_start}:d={fade_out}[a]'
         )
-        inputs = ['-i', video_path]
 
     filter_complex = f'{video_chain};{audio_chain}'
 
@@ -450,7 +481,7 @@ def compose_final_pure(
     fade_out = 0.6
     fade_out_start = max(0.0, total - fade_out)
 
-    has_music = MUSIC_BED_PATH.exists()
+    has_music = MUSIC_BED_PATH.exists() and os.environ.get('NO_MUSIC', '0') != '1'
 
     video_chain = (
         f'[0:v]eq=contrast=1.03:saturation=1.05:brightness=-0.01,'

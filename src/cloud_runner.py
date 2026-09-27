@@ -543,6 +543,102 @@ EDITORIAL_STORIES = [
             "https://static.wikia.nocookie.net/marveldatabase/images/2/2b/Thor_God_of_Thunder_Vol_1_1.jpg",
             "https://static.wikia.nocookie.net/marveldatabase/images/4/4b/Gorr_%28Earth-616%29_and_All-Black_%28Symbiote%29_%28Earth-616%29_from_Phoenix_Vol_1_5_001.jpg"
         ]
+    },
+    {
+        "id": "batman_tribunal_de_los_buhos_laberinto",
+        "character": "Batman",
+        "title": "Batman: El Tribunal de los Búhos y el Laberinto Subterráneo",
+        "theme_signature": "batman:court_of_owls:laberinto_tortura",
+        "description": "Durante ocho días de agonía, Batman es atrapado en un laberinto subterráneo sin agua ni luz por el Tribunal de los Búhos, perdiendo la cordura antes de su feroz contraataque.",
+        "hashtags": "#Batman #CourtOfOwls #DCComics #ComicsNarrados #Shorts #Reels",
+        "scenes": [
+            "Durante más de un siglo, una sociedad secreta multimillonaria conocida como el Tribunal de los Búhos gobernó Gotham desde las más profundas sombras.",
+            "Negándose a creer en su existencia, Batman cayó directamente en su trampa mortal: un colosal laberinto de mármol blanco sepultado bajo los cimientos de la ciudad.",
+            "Sin comida, bebiendo agua envenenada y bajo una luz fluorescente incesante, Bruce Wayne resistió ocho días de tortura psicológica absoluta.",
+            "El Tribunal lo despojó de su cordura con alucinaciones de sus ancestros, mientras los miembros con máscaras de búho observaban su degradación desde balcones oscuros.",
+            "El temible Talon atravesó el estómago de Batman con su espada, arrojándolo al suelo frente a la corte para ser rematado como un trofeo de caza.",
+            "Al recordar el espíritu inquebrantable de Gotham, Batman se puso de pie rugiendo de furia, demolió a Talon a puño limpio y juró destruir al Tribunal entero."
+        ],
+        "scene_art_urls": [
+            "https://static.wikia.nocookie.net/marvel_dc/images/7/77/Batman_Vol_2_5_Variant.jpg",
+            "https://static.wikia.nocookie.net/marvel_dc/images/4/4f/Batman_Vol_2_6_Textless.jpg",
+            "https://static.wikia.nocookie.net/marvel_dc/images/1/1a/Batman_Vol_2_7_Textless.jpg",
+            "https://static.wikia.nocookie.net/marvel_dc/images/9/91/Batman_Vol_2_8_Textless.jpg",
+            "https://static.wikia.nocookie.net/marvel_dc/images/d/df/Batman_Vol_2_9_Textless.jpg",
+            "https://static.wikia.nocookie.net/marvel_dc/images/7/73/Batman_Vol_2_10_Textless.jpg"
+        ]
+    },
+    {
+        "id": "thanos_rising_el_origen_del_titan_loco",
+        "character": "Thanos",
+        "title": "Thanos: El Perturbador Origen y la Obsesión con la Muerte",
+        "theme_signature": "thanos:rising:origen_titan_loco_asesinato",
+        "description": "Nacido como una anomalía en la luna Titán, Thanos comenzó diseccionando criaturas en cuevas secretas hasta convertirse en el genocida cósmico obsesionado con cortejar a la Señora Muerte.",
+        "hashtags": "#Thanos #MarvelComics #ThanosRising #ComicsNarrados #Shorts #Reels",
+        "scenes": [
+            "En la utópica y pacífica luna de Titán, nació un niño con el Síndrome del Desviado: piel púrpura rugosa y ojos encendidos en odio que horrorizaron a su propia madre.",
+            "Guiado por una misteriosa niña que solo él podía ver, el joven Thanos comenzó a descender a las cuevas subterráneas para realizar brutales disecciones biológicas.",
+            "Su sed insaciable de respuestas científicas pronto se transformó en pura psicopatía sanguinaria, secuestrando y masacrando a sus propios compañeros de clase.",
+            "La misteriosa niña finalmente le reveló su verdadera y tétrica identidad: era la personificación cósmica de la Muerte, exigiéndole sacrificios para amarlo.",
+            "Para ganar el afecto de su amada esquelética, Thanos masacró a sangre fría a su propia madre sobre una mesa de operaciones, extirpándole el corazón.",
+            "Años después, regresó al frente de una colosal flota alienígena y bombardeó Titán con ojivas nucleares, extinguiendo a toda su especie en nombre de la Muerte."
+        ],
+        "scene_art_urls": [
+            "https://static.wikia.nocookie.net/marveldatabase/images/5/53/Thanos_Rising_Vol_1_1.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/1/1a/Thanos_Rising_Vol_1_2.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/4/4b/Thanos_Rising_Vol_1_3.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/2/23/Thanos_Rising_Vol_1_4.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/1/15/Thanos_Rising_Vol_1_5.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/a/ab/Thanos_Rising_Vol_1_5_Textless.jpg"
+        ]
+    },
+    {
+        "id": "flash_godspeed_el_ladron_de_velocidad",
+        "character": "The Flash",
+        "title": "The Flash: Godspeed, el Despiadado Asesino de Velocistas",
+        "theme_signature": "flash:godspeed:august_heart_speed_force",
+        "description": "August Heart, compañero de Barry Allen, es alcanzado por la tormenta de la Speed Force y se convierte en Godspeed, un juez implacable que roba la velocidad asesinando a otros velocistas.",
+        "hashtags": "#TheFlash #Godspeed #DCComics #SpeedForce #ComicsNarrados #Shorts",
+        "scenes": [
+            "Una tormenta eléctrica desatada por la Speed Force bañó los cielos de Central City, otorgándole supervelocidad a decenas de ciudadanos ordinarios.",
+            "Entre los afectados estaba August Heart, detective de policía y el mejor amigo de Barry Allen, atormentado por el asesinato impune de su hermano.",
+            "Adoptando una armadura blanca y dorada con el nombre de Godspeed, August decidió que el código moral de no matar de Flash era una debilidad imperdonable.",
+            "Godspeed comenzó a cazar sistemáticamente a los nuevos velocistas de la ciudad, descubriendo que podía absorber su energía vital arrancándoles el corazón.",
+            "Cada velocista que asesinaba aumentaba su velocidad exponencialmente, permitiéndole romper las leyes del tiempo y estar en dos lugares a la vez.",
+            "En una feroz confrontación a hipervelocidad, Flash y Kid Flash arriesgaron sus vidas para drenar la energía robada de Godspeed y encerrarlo en Iron Heights."
+        ],
+        "scene_art_urls": [
+            "https://static.wikia.nocookie.net/marvel_dc/images/d/df/The_Flash_Vol_5_3.jpg",
+            "https://static.wikia.nocookie.net/marvel_dc/images/3/36/The_Flash_Vol_5_4.jpg",
+            "https://static.wikia.nocookie.net/marvel_dc/images/8/87/The_Flash_Vol_5_5.jpg",
+            "https://static.wikia.nocookie.net/marvel_dc/images/9/91/The_Flash_Vol_5_6.jpg",
+            "https://static.wikia.nocookie.net/marvel_dc/images/a/af/The_Flash_Vol_5_7.jpg",
+            "https://static.wikia.nocookie.net/marvel_dc/images/b/b2/The_Flash_Vol_5_8.jpg"
+        ]
+    },
+    {
+        "id": "marvel_ruins_el_universo_maldito",
+        "character": "Marvel Ruins",
+        "title": "Marvel Ruins: El Universo Donde Todo lo que Podía Salir Mal, Salió Mal",
+        "theme_signature": "marvel:ruins:distopia_enfermedad_pesadilla",
+        "description": "En este aterrador universo alternativo creado por Warren Ellis, ningún héroe obtuvo superpoderes: cada accidente provocó mutaciones atroces, cánceres deformes y pesadillas biológicas.",
+        "hashtags": "#MarvelRuins #MarvelComics #WarrenEllis #ComicsDeTerror #Shorts #Reels",
+        "scenes": [
+            "En el universo de Marvel Ruins, las leyes de la física y la biología no perdonaron a nadie: cada milagro que creó a los superhéroes se transformó en una maldición mortal.",
+            "Peter Parker fue picado por una araña radiactiva mutada genéticamente, pero en lugar de poderes arácnidos, desarrolló una atroz necrosis infecciosa en la piel.",
+            "Bruce Banner no se convirtió en un coloso invulnerable: la detonación de la bomba gamma le provocó una masa masiva de tumores verdes palpitantes que lo descuartizaron vivo.",
+            "El Capitán América fue víctima de un suero del súper soldado fallido que pudrió sus músculos, dejándolo como un cadáver desfigurado en una prisión secreta.",
+            "Los Cuatro Fantásticos murieron horriblemente en su viaje espacial: la radiación cósmica calcinó a Johnny Storm vivo y convirtió a Ben Grimm en un bloque de piedra sin órganos.",
+            "El fotógrafo Phil Sheldon recorrió las ruinas de América documentando esta pesadilla, sucumbiendo finalmente ante el mismo virus que acabó con los héroes."
+        ],
+        "scene_art_urls": [
+            "https://static.wikia.nocookie.net/marveldatabase/images/7/7e/Ruins_Vol_1_1.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/a/a2/Ruins_Vol_1_2.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/8/87/Ruins_Vol_1_1_Textless.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/5/52/Ruins_Vol_1_2_Textless.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/4/4b/Ruins_Vol_1_1_Variant.jpg",
+            "https://static.wikia.nocookie.net/marveldatabase/images/3/36/Ruins_Vol_1_2_Variant.jpg"
+        ]
     }
 ]
 
