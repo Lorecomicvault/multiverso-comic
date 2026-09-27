@@ -44,8 +44,8 @@ EDITORIAL_STORIES = [
         "scene_art_urls": [
             "Sinestro_Corps_War.jpg",
             "Green_Lanterns_vs_Sinestro_Corps_01.jpg",
-            "Anti-Monitor_0011.jpg",
-            "War_of_Light.JPG"
+            "Sinestro corps special 1.jpg",
+            "GL 4 25 Sinestro defeated.jpg"
         ]
     },
     {
@@ -78,14 +78,14 @@ EDITORIAL_STORIES = [
         "scenes": [
             "¿Sabías que en Marvel Ruins ningún héroe obtuvo poderes y cada accidente se transformó en una pesadilla biológica?",
             "La araña radiactiva le provocó a Peter Parker una atroz necrosis infecciosa descomunal en la piel.",
-            "Bruce Banner no se convirtió en Hulk, sino en una masa deforme de tumores verdes que lo descuartizó.",
+            "Thor se volvió completamente loco, mutilándose a sí mismo al no poder soportar los susurros del cosmos.",
             "El fotógrafo Phil Sheldon documentó las ruinas de América, muriendo víctima del mismo virus de los héroes."
         ],
         "scene_art_urls": [
             "Ruins_Vol_1_1.jpg",
-            "Ruins_Vol_1_2.jpg",
-            "Ruins_Vol_1_2_Textless.jpg",
-            "Earth-9591_from_Ruins_Vol_1_1_Cover.jpg"
+            "Peter Parker (Earth-9591) from Ruins Vol 1 2 001.jpg",
+            "Thor Odinson (Earth-9591) from Ruins Vol 1 2 001.png",
+            "Ruins_Vol_1_2.jpg"
         ]
     },
     {
