@@ -150,6 +150,7 @@ def assemble_reel(
             "-af", "loudnorm=I=-14:LRA=7:TP=-2",
             "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast",
             "-c:a", "aac", "-b:a", "192k",
+            "-movflags", "+faststart",
             "-shortest", output_mp4
         ]
     else:
@@ -162,6 +163,7 @@ def assemble_reel(
             "-af", "loudnorm=I=-14:LRA=7:TP=-2",
             "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast",
             "-c:a", "aac", "-b:a", "192k",
+            "-movflags", "+faststart",
             "-shortest", output_mp4
         ]
 

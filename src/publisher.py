@@ -148,17 +148,31 @@ def publish_to_instagram_reels(
             upload_uri = init_res['uri']
             log(f"Container created. Creation ID: {creation_id}. Uploading binary to Meta ({upload_uri})...")
 
+            with open(vpath, 'rb') as f:
+                video_bytes = f.read()
+
             upload_headers = {
                 'Authorization': f'OAuth {token}',
                 'offset': '0',
                 'file_size': str(file_size),
+                'Content-Length': str(len(video_bytes)),
                 'Content-Type': 'application/octet-stream'
             }
 
-            with open(vpath, 'rb') as f:
-                r_upload = requests.post(upload_uri, headers=upload_headers, data=f, timeout=600)
+            log(f"Container created. Creation ID: {creation_id}. Uploading {len(video_bytes)} bytes to Meta ({upload_uri})...")
+            r_upload = requests.post(upload_uri, headers=upload_headers, data=video_bytes, timeout=600)
 
-            if r_upload.status_code != 200:
+            # Retry once if Meta returns a transient error on rupload
+            if r_upload.status_code not in (200, 201):
+                log(f"WARNING: Initial rupload failed ({r_upload.status_code}: {r_upload.text}). Retrying with fresh container in 5s...")
+                time.sleep(5)
+                retry_init = requests.post(create_url, data=init_payload, timeout=60).json()
+                if 'id' in retry_init and 'uri' in retry_init:
+                    creation_id = retry_init['id']
+                    upload_uri = retry_init['uri']
+                    r_upload = requests.post(upload_uri, headers=upload_headers, data=video_bytes, timeout=600)
+
+            if r_upload.status_code not in (200, 201):
                 log(f"ERROR uploading video binary to rupload: {r_upload.status_code} {r_upload.text}")
                 return {'success': False, 'error': r_upload.text}
 

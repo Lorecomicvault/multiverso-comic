@@ -39,6 +39,8 @@ on:
           - thanos_rising_el_origen_del_titan_loco
           - flash_godspeed_el_ladron_de_velocidad
           - marvel_ruins_el_universo_maldito
+          - superior_iron_man_extremis
+          - daredevil_born_again_kingpin
       mode:
         description: 'Modo de Ejecucion (render_only vs live_release)'
         required: true

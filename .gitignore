@@ -24,6 +24,7 @@ final_videos/
 *.srt
 *.log
 scratch/
+scratch_*
 temp/
 scratch_cloud_gen/
 remotion/node_modules/
