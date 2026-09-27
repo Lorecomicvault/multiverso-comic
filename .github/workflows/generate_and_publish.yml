@@ -42,17 +42,15 @@ on:
       mode:
         description: 'Modo de Ejecucion (render_only vs live_release)'
         required: true
-        default: 'render_only'
+        default: 'live_release'
         type: choice
         options:
-          - render_only
           - live_release
+          - render_only
           - draft_only
           - dry_run
 
-  # schedule:
-  #   # Desactivado - los videos iniciales se disparan manualmente via workflow_dispatch.
-  #   # - cron: '0 16 * * *'
+  # Programacion externa: Controlado 100% via webhooks desde cron-job.org para precision de horario.
 
 permissions:
   contents: write
