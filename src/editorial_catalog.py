@@ -545,10 +545,10 @@ EDITORIAL_STORIES = [
             "Tras liquidar a Spider-Man, Wolverine y Daredevil, Frank se apuntó con su propia pistola cerrando su venganza final."
         ],
         "scene_art_urls": [
-            "Francis Castle (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 001.jpg",
+            "Thor Odinson (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 0001.jpg",
             "Scott Summers (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 0001.jpg",
-            "X-Men (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 0001.jpg",
-            "Matthew Murdock (Earth-95126) and Francis Castle (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 0001.jpg"
+            "Victor von Doom (Earth-95126) and Francis Castle (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 0001.jpg",
+            "Peter Parker (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 002.jpg"
         ],
         "art_queries": [
             "Punisher Kills Marvel Universe Central Park family dead",
