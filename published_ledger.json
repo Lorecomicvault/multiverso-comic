@@ -728,5 +728,15 @@
     "mode": "local_production",
     "video_file": "The_Grim_Knight_El_Batman_que_Disparó_a_Matar_en_Crime_Alley.mp4",
     "status": "produced"
+  },
+  {
+    "id": "flash_forward_wally_west_doctor_manhattan",
+    "title": "Flash Forward: Wally West y los Poderes de Doctor Manhattan",
+    "character": "The Flash",
+    "theme_signature": "wally_west:flash_forward:mobius_chair_manhattan",
+    "date": "2026-09-28 15:44",
+    "mode": "live_release",
+    "video_file": "Flash_Forward_Wally_West_y_los_Poderes_de_Doctor_Manhattan.mp4",
+    "status": "published"
   }
 ]
