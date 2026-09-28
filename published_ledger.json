@@ -708,5 +708,15 @@
     "mode": "live_release",
     "video_file": "Marvel_Ruins_El_Universo_Donde_Todo_lo_que_Podía_Salir_Mal_Salió_Mal.mp4",
     "status": "published"
+  },
+  {
+    "id": "daredevil_born_again_kingpin",
+    "title": "Daredevil: Born Again y la Caida de Matt Murdock",
+    "character": "Daredevil",
+    "theme_signature": "daredevil:born_again:venganza_kingpin",
+    "date": "2026-09-28 01:04",
+    "mode": "live_release",
+    "video_file": "Daredevil_Born_Again_y_la_Caida_de_Matt_Murdock.mp4",
+    "status": "published"
   }
 ]
