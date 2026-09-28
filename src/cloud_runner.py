@@ -218,7 +218,8 @@ DC_UNIVERSE_MARKERS = [
     'scarecrow', 'catwoman', 'ra\'s al ghul', 'damian wayne', 'dceased', 'flashpoint',
     'injustice', 'crisis on infinite earths', 'kingdom come', 'watchmen', 'rorschach',
     'doctor manhattan', 'sandman', 'lucifer', 'morpheus', 'bialya', 'justice league',
-    'justice society', 'teen titans', 'arkham', 'gotham', 'metropolis', 'themyscira'
+    'justice society', 'teen titans', 'arkham', 'gotham', 'metropolis', 'themyscira',
+    'grim knight', 'the grim knight'
 ]
 
 
@@ -332,10 +333,15 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
         try:
             from .comic_precision_scraper import fetch_scene_image
             wiki = get_story_comic_wiki(story)
+            art_queries = story.get("art_queries", [])
+            if art_queries and idx <= len(art_queries):
+                query_for_scene = art_queries[idx - 1]
+            else:
+                query_for_scene = f"{story.get('character', '')} {narration[:45]}"
             panel_path = fetch_scene_image(
                 wiki_domain=wiki,
                 target_file=target,
-                fallback_query=f"{story.get('character', '')} {narration[:45]}",
+                fallback_query=query_for_scene,
                 dest_path=str(img_file),
                 existing_scene_images=[str(p) for p in downloaded_images],
                 scene_text=narration
@@ -532,7 +538,10 @@ def main():
         output_name=selected["id"],
         voice=voice_choice,
         output_root=str(output_root),
-        final_video_dir=str(output_root / "finals")
+        width=1080,
+        height=1920,
+        final_video_dir=str(output_root / "finals"),
+        generate_thumbnail=True
     )
 
     log(f"Render completed: {final_video_path}")

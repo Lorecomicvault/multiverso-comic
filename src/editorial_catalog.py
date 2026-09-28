@@ -487,5 +487,110 @@ EDITORIAL_STORIES = [
             "Batman_Vol_2_7_Textless.jpg",
             "Batman_Vol_2_8.jpg"
         ]
+    },
+    {
+        "id": "batman_grim_knight_crime_alley",
+        "universe": "DC",
+        "character": "The Grim Knight",
+        "title": "The Grim Knight: El Batman que Disparó a Matar en Crime Alley",
+        "theme_signature": "batman:grim_knight:crime_alley_arsenal_militar",
+        "description": "En este oscuro universo alternativo, Bruce Wayne no lloró la muerte de sus padres: recogió el arma de Joe Chill y lo ejecutó en el acto convirtiéndose en el despiadado Grim Knight.",
+        "hashtags": "#TheGrimKnight #Batman #DCComics #DarkMultiverse #BatmanWhoLaughs #ComicsNarrados #Shorts #Reels",
+        "scenes": [
+            "¿Sabías que en el Multiverso Oscuro, la noche en que asesinaron a sus padres, Bruce Wayne no derramó lágrimas?",
+            "Viendo el revólver de Joe Chill sobre el asfalto, el niño lo recogió y le disparó en el pecho sin piedad.",
+            "Sin código moral, convirtió a Gotham en una zona de guerra ejecutando a cada villano con tácticas militares letales.",
+            "Armado hasta los dientes y aliado con el Batman que Ríe, se consagró como el implacable Grim Knight."
+        ],
+        "scene_art_urls": [
+            "Wayne_Murder_Grim_Knight_0001.jpg",
+            "Joe_Chill_Grim_Knight_0001.PNG",
+            "Batman_Villains_Grim_Knight_0001.PNG",
+            "The_Batman_Who_Laughs_The_Grim_Knight_Vol_1_1_Textless.jpg"
+        ]
+    },
+    {
+        "id": "superman_red_son_comunismo",
+        "universe": "DC",
+        "character": "Superman",
+        "title": "Superman Red Son: El Hijo Rojo de la Unión Soviética",
+        "theme_signature": "superman:red_son:ucrania_stalin_guerra_fria",
+        "description": "En este universo alternativo, la cápsula de Kal-El aterrizó en la Unión Soviética convirtiendo a Superman en el arma suprema del comunismo.",
+        "hashtags": "#Superman #RedSon #DCComics #SovietSuperman #ComicsNarrados #Shorts #Reels",
+        "scenes": [
+            "¿Sabías que la cápsula espacial de Kal-El no cayó en Kansas, sino en una granja colectiva de la Unión Soviética?",
+            "Criado bajo la doctrina comunista, Superman se convirtió en el arma suprema de Joseph Stalin para dominar el mundo.",
+            "Para derrocar su tiranía roja, un Batman soviético con gorro de invierno usó lámparas solares rojas y lo puso de rodillas.",
+            "Antes de ser capturado, Batman detonó una bomba en su propio estómago sacrificando su vida como símbolo eterno de libertad."
+        ],
+        "art_queries": [
+            "Superman Red Son Soviet ship landing collective farm",
+            "Superman Soviet Stalin hammer sickle",
+            "Batmankoff Soviet Batman ushanka red son",
+            "Soviet Batman bomb Red Son sacrifice"
+        ]
+    },
+    {
+        "id": "punisher_kills_marvel_universe",
+        "universe": "Marvel",
+        "character": "The Punisher",
+        "title": "The Punisher: El Día en que Frank Castle Masacró a Marvel",
+        "theme_signature": "punisher:kills_marvel:venganza_familia_mutantes",
+        "description": "Cuando los superhéroes mataron accidentalmente a su familia en Central Park, Frank Castle juró aniquilar a cada héroe y villano de Marvel.",
+        "hashtags": "#ThePunisher #FrankCastle #MarvelComics #PunisherKills #ComicsNarrados #Shorts",
+        "scenes": [
+            "¿Sabías que cuando la batalla de los Vengadores contra los alienígenas mató a su familia, Frank Castle enloqueció de odio?",
+            "Sin dudar un instante, levantó su rifle en Central Park y ejecutó a Cyclops y Hawkeye de un solo disparo en la cabeza.",
+            "Armado con ojivas nucleares de Doctor Doom, engañó a todos los mutantes en la Luna y detonó una explosión cósmica.",
+            "Tras liquidar a Spider-Man, Wolverine y Daredevil, Frank se apuntó con su propia pistola cerrando su venganza final."
+        ],
+        "art_queries": [
+            "Punisher Kills Marvel Universe Central Park family dead",
+            "Punisher rifle shoot Cyclops Hawkeye",
+            "Punisher nuclear missile Moon X-Men",
+            "Punisher gun final kill Punisher Kills"
+        ]
+    },
+    {
+        "id": "flash_forward_wally_west_doctor_manhattan",
+        "universe": "DC",
+        "character": "The Flash",
+        "title": "Flash Forward: Wally West y los Poderes de Doctor Manhattan",
+        "theme_signature": "wally_west:flash_forward:mobius_chair_manhattan",
+        "description": "Al sentarse en la Silla de Mobius imbuida con la energía de Doctor Manhattan, Wally West ascendió como el velocista cósmico supremo.",
+        "hashtags": "#TheFlash #WallyWest #DoctorManhattan #FlashForward #DCComics #ComicsNarrados #Shorts",
+        "scenes": [
+            "¿Sabías que Wally West se sentó en la legendaria Silla de Mobius y absorbió el poder supremo de Doctor Manhattan?",
+            "En el centro del Multiverso Oscuro, una grieta dimensional amenazaba con devorar todas las realidades existentes.",
+            "La energía cósmica azul envolvió su traje, grabando el símbolo del átomo en su frente y volviéndolo omnisciente.",
+            "Con un simple parpadeo mental, Wally reescribió las líneas temporales y salvó a sus hijos atrapados en el olvido."
+        ],
+        "art_queries": [
+            "Wally West Mobius chair Doctor Manhattan",
+            "Dark Multiverse rift Flash Forward",
+            "Wally West Manhattan suit atom symbol glowing blue",
+            "Wally West Flash Forward saving children multiverse"
+        ]
+    },
+    {
+        "id": "hulk_the_end_ultimo_humano",
+        "universe": "Marvel",
+        "character": "Hulk",
+        "title": "Hulk The End: El Último Ser Vivo en la Tierra",
+        "theme_signature": "hulk:the_end:cucarachas_soledad_muerte_banner",
+        "description": "Tras el holocausto nuclear, Hulk sobrevive solo en una Tierra muerta, regenerándose cada día de los enjambres de cucarachas carnívoras.",
+        "hashtags": "#Hulk #TheEnd #MarvelComics #PeterDavid #ComicsDeTerror #Shorts #Reels",
+        "scenes": [
+            "¿Sabías que en un futuro devastado por una guerra nuclear, Hulk es el único ser humano que sobrevive en la Tierra?",
+            "Cada día, enjambres de cucarachas gigantes carnívoras devoran su piel viva mientras su factor curativo lo regenera dolorosamente.",
+            "Dentro de su mente, un anciano y enfermo Bruce Banner le ruega a Hulk que lo deje morir en paz.",
+            "Cuando el corazón de Banner se detiene para siempre, Hulk queda solo en la oscuridad absoluta, anhelando un final que jamás llegará."
+        ],
+        "art_queries": [
+            "Hulk The End wasteland solitary",
+            "Hulk The End giant cockroaches eating flesh",
+            "Bruce Banner old dying Hulk The End",
+            "Hulk alone in the dark The End ending"
+        ]
     }
 ]

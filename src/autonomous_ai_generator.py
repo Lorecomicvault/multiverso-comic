@@ -18,10 +18,11 @@ from pathlib import Path
 from PIL import Image, ImageStat
 
 CANDIDATE_MODELS = [
-    "gemini-flash-latest",
-    "gemini-3.8-flash",
-    "gemini-2.5-flash",
-    "gemini-pro-latest"
+    "gemini-1.5-flash",
+    "gemini-2.0-flash",
+    "gemini-1.5-flash-8b",
+    "gemini-1.5-pro",
+    "gemini-flash-latest"
 ]
 
 HEADERS = {
@@ -122,45 +123,87 @@ EMERGENCY_VIRAL_POOL = [
         ]
     },
     {
-        "id": "god_emperor_doom_ejecuta_a_thanos",
-        "universe": "Marvel",
-        "character": "Doctor Doom",
-        "title": "Secret Wars: El Día en que Doctor Doom Destruyó a Thanos con una Mano",
-        "theme_signature": "doctor_doom:secret_wars:arranca_columna_thanos",
-        "description": "Durante Secret Wars, Doctor Doom ascendió como el Dios Emperador del Multiverso y ejecutó a Thanos de un solo movimiento.",
-        "hashtags": "#DoctorDoom #Thanos #SecretWars #MarvelComics #ComicsNarrados #Shorts #Marvel",
+        "id": "superman_red_son_comunismo",
+        "universe": "DC",
+        "character": "Superman",
+        "title": "Superman Red Son: El Hijo Rojo de la Unión Soviética",
+        "theme_signature": "superman:red_son:ucrania_stalin_guerra_fria",
+        "description": "En este universo alternativo, la cápsula de Kal-El aterrizó en la Unión Soviética convirtiendo a Superman en el arma suprema del comunismo.",
+        "hashtags": "#Superman #RedSon #DCComics #SovietSuperman #ComicsNarrados #Shorts #Reels",
         "scenes": [
-            "¿Sabías que Doctor Doom alcanzó el poder supremo y se autoproclamó el Dios Emperador del Multiverso?",
-            "Cuando el Titán Loco Thanos intentó desafiar su dominio cósmico creyéndose inmortal, Doom no parpadeó.",
-            "De un solo golpe desgarrador, introdujo su mano en el pecho de Thanos y le arrancó la columna vertebral completa.",
-            "Los ejércitos cósmicos cayeron de rodillas ante la deidad que gobernaba los restos de la realidad existente."
+            "¿Sabías que la cápsula espacial de Kal-El no cayó en Kansas, sino en una granja colectiva de la Unión Soviética?",
+            "Criado bajo la doctrina comunista, Superman se convirtió en el arma suprema de Joseph Stalin para dominar el mundo.",
+            "Para derrocar su tiranía roja, un Batman soviético con gorro de invierno usó lámparas solares rojas y lo puso de rodillas.",
+            "Antes de ser capturado, Batman detonó una bomba en su propio estómago sacrificando su vida como símbolo eterno de libertad."
         ],
         "art_queries": [
-            "God Emperor Doom Secret Wars throne",
-            "Thanos confronts God Emperor Doom",
-            "God Emperor Doom rips out Thanos spine",
-            "Battleworld Doom God reality"
+            "Superman Red Son Soviet Union flag",
+            "Superman Red Son Stalin military",
+            "Batman Red Son vs Superman fight",
+            "Batman Red Son bomb suicide freedom"
         ]
     },
     {
-        "id": "wolverine_old_man_logan_tragedia_mysterio",
+        "id": "punisher_kills_marvel_universe",
         "universe": "Marvel",
-        "character": "Wolverine",
-        "title": "Old Man Logan: La Tragedia en que Wolverine Asesinó a los X-Men",
-        "theme_signature": "wolverine:old_man_logan:engano_mysterio_xmen",
-        "description": "Engañado por las ilusiones sensoriales de Mysterio, Wolverine masacró a todos los X-Men creyendo defender la Mansión.",
-        "hashtags": "#Wolverine #OldManLogan #XMen #Mysterio #MarvelComics #ComicsNarrados #Shorts",
+        "character": "The Punisher",
+        "title": "The Punisher: El Día en que Frank Castle Masacró a Marvel",
+        "theme_signature": "punisher:kills_marvel:venganza_familia_mutantes",
+        "description": "Cuando los superhéroes mataron accidentalmente a su familia en Central Park, Frank Castle juró aniquilar a cada héroe y villano de Marvel.",
+        "hashtags": "#ThePunisher #FrankCastle #MarvelComics #PunisherKills #ComicsNarrados #Shorts",
         "scenes": [
-            "¿Sabías que Wolverine fue el responsable de aniquilar a todos los Hombres X en una sola noche sangrienta?",
-            "Una horda de supervillanos asaltó la Mansión Xavier, y Logan desenvainó sus garras de adamantium en un frenesí mortal.",
-            "Tras atravesar a cuarenta enemigos, la ilusión sensorial de Mysterio se disipó revelando la macabra verdad.",
-            "Entre charcos de sangre, descubrió horrorizado que sus víctimas eran sus propios compañeros y hermanos de batalla."
+            "¿Sabías que cuando la batalla de los Vengadores contra los alienígenas mató a su familia, Frank Castle enloqueció de odio?",
+            "Sin dudar un instante, levantó su rifle en Central Park y ejecutó a Cyclops y Hawkeye de un solo disparo en la cabeza.",
+            "Armado con ojivas nucleares de Doctor Doom, engañó a todos los mutantes en la Luna y detonó una explosión cósmica.",
+            "Tras liquidar a Spider-Man, Wolverine y Daredevil, Frank se apuntó con su propia pistola cerrando su venganza final."
         ],
         "art_queries": [
-            "Old Man Logan Wolverine claws bloody",
-            "Wolverine fighting illusion mansion",
-            "Mysterio illusion fades Old Man Logan",
-            "Wolverine mourning dead X-Men"
+            "Punisher kills Cyclops Hawkeye Central Park",
+            "Punisher Kills the Marvel Universe rifle",
+            "Punisher kills mutants nuclear bomb Moon",
+            "Punisher suicide last panel Marvel Universe"
+        ]
+    },
+    {
+        "id": "flash_forward_wally_west_doctor_manhattan",
+        "universe": "DC",
+        "character": "The Flash",
+        "title": "Flash Forward: Wally West y los Poderes de Doctor Manhattan",
+        "theme_signature": "wally_west:flash_forward:mobius_chair_manhattan",
+        "description": "Al sentarse en la Silla de Mobius imbuida con la energía de Doctor Manhattan, Wally West ascendió como el velocista cósmico supremo.",
+        "hashtags": "#TheFlash #WallyWest #DoctorManhattan #FlashForward #DCComics #ComicsNarrados #Shorts",
+        "scenes": [
+            "¿Sabías que Wally West se sentó en la legendaria Silla de Mobius y absorbió el poder supremo de Doctor Manhattan?",
+            "En el centro del Multiverso Oscuro, una grieta dimensional amenazaba con devorar todas las realidades existentes.",
+            "La energía cósmica azul envolvió su traje, grabando el símbolo del átomo en su frente y volviéndolo omnisciente.",
+            "Con un simple parpadeo mental, Wally reescribió las líneas temporales y salvó a sus hijos atrapados en el olvido."
+        ],
+        "art_queries": [
+            "Wally West Mobius Chair Doctor Manhattan",
+            "Flash Forward Dark Multiverse incursion",
+            "Wally West blue glowing Doctor Manhattan powers",
+            "Wally West saves children Flash Forward ending"
+        ]
+    },
+    {
+        "id": "hulk_the_end_ultimo_humano",
+        "universe": "Marvel",
+        "character": "Hulk",
+        "title": "Hulk The End: El Último Ser Vivo en la Tierra",
+        "theme_signature": "hulk:the_end:cucarachas_soledad_muerte_banner",
+        "description": "Tras el holocausto nuclear, Hulk sobrevive solo en una Tierra muerta, regenerándose cada día de los enjambres de cucarachas carnívoras.",
+        "hashtags": "#Hulk #TheEnd #MarvelComics #PeterDavid #ComicsDeTerror #Shorts #Reels",
+        "scenes": [
+            "¿Sabías que en un futuro devastado por una guerra nuclear, Hulk es el único ser humano que sobrevive en la Tierra?",
+            "Cada día, enjambres de cucarachas gigantes carnívoras devoran su piel viva mientras su factor curativo lo regenera dolorosamente.",
+            "Dentro de su mente, un anciano y enfermo Bruce Banner le ruega a Hulk que lo deje morir en paz.",
+            "Cuando el corazón de Banner se detiene para siempre, Hulk queda solo en la oscuridad absoluta, anhelando un final que jamás llegará."
+        ],
+        "art_queries": [
+            "Hulk The End wasteland solitary",
+            "Hulk The End giant cockroaches eating flesh",
+            "Bruce Banner old dying Hulk The End",
+            "Hulk alone in the dark The End ending"
         ]
     }
 ]
