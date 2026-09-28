@@ -293,6 +293,12 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
         saved = False
         target = art_urls[idx - 1] if art_urls and idx <= len(art_urls) else None
 
+        # Descartar target si es portada oficial
+        from .comic_precision_scraper import is_cover_or_promo_image
+        if target and is_cover_or_promo_image(target):
+            log(f"Scene {idx}: Explicit target '{target}' is a comic cover! Banned by Quality Shield to enforce interior action panels.")
+            target = None
+
         # Primary: Multi-Source Precision Scraper with Gemini Vision Referee
         try:
             from .comic_precision_scraper import fetch_scene_image
@@ -314,14 +320,15 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
 
         # Fallback A: Direct download if target specified and precision scraper failed
         if (not saved or not img_file.exists()) and target:
-            saved = download_comic_panel(target, story.get("character", ""), img_file)
+            if not is_cover_or_promo_image(target):
+                saved = download_comic_panel(target, story.get("character", ""), img_file)
 
         # Fallback B: Dynamic comic fetcher with deduplication check
         if not saved or not img_file.exists():
             log(f"Scene {idx}: Querying general Fandom comic art...")
             fallback_urls = get_fandom_comic_art(story.get("character", "Batman"), count=8)
             for fb_u in fallback_urls:
-                if download_comic_panel(fb_u, story.get("character", ""), img_file):
+                if not is_cover_or_promo_image(fb_u) and download_comic_panel(fb_u, story.get("character", ""), img_file):
                     from .comic_precision_scraper import is_duplicate_panel
                     if not is_duplicate_panel(str(img_file), [str(p) for p in downloaded_images]):
                         saved = True
@@ -352,6 +359,37 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
             "is_image": True,
             "image_count": 1
         })
+
+    # =========================================================================
+    # PRODUCTION QUALITY GATE (INVIOLABLE AUDIT SHIELD)
+    # =========================================================================
+    log("Running Production Quality Gate audit on all 4 generated scene panels...")
+    if len(downloaded_images) != len(story["scenes"]):
+        raise RuntimeError(f"Quality Gate Failed: Expected {len(story['scenes'])} scenes, got {len(downloaded_images)}")
+
+    # 1. Zero Duplication Check across all scene pairs
+    from .comic_precision_scraper import calculate_image_rms_difference
+    for i in range(len(downloaded_images)):
+        for j in range(i + 1, len(downloaded_images)):
+            rms_diff = calculate_image_rms_difference(str(downloaded_images[i]), str(downloaded_images[j]))
+            log(f"Quality Gate RMS check Scene {i+1} vs Scene {j+1}: {rms_diff:.2f}")
+            if rms_diff < 12.0:
+                raise RuntimeError(
+                    f"QUALITY GATE FATAL ERROR: Scene {i+1} and Scene {j+1} are DUPLICATES (RMS diff {rms_diff:.2f} < 12.0). "
+                    "Production halted to guarantee zero duplicate panels are ever published."
+                )
+
+    # 2. Corrupted / Blank / Black screen check
+    for idx_img, p in enumerate(downloaded_images, 1):
+        with Image.open(p) as test_im:
+            w, h = test_im.size
+            if w < 300 or h < 300:
+                raise RuntimeError(f"QUALITY GATE FATAL ERROR: Scene {idx_img} image resolution too small ({w}x{h}).")
+            stat = ImageStat.Stat(test_im)
+            if max(stat.stddev) < 8.0:
+                raise RuntimeError(f"QUALITY GATE FATAL ERROR: Scene {idx_img} image is blank or solid color.")
+
+    log("Production Quality Gate: ALL CHECKS PASSED (100% Unique Panels, 0 Duplicates, High Resolution).")
 
     script_data = {
         "metadata": {

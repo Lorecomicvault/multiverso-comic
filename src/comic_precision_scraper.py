@@ -74,25 +74,31 @@ def is_duplicate_panel(candidate_path: str, existing_paths: list, threshold: flo
 
 def is_cover_or_promo_image(file_title: str) -> bool:
     """Detecta y descarta portadas oficiales, variantes, pósters y logos."""
-    t_lower = file_title.lower()
+    if not file_title:
+        return False
+    # Normalizar reemplazando guiones bajos y guiones por espacios
+    t = file_title.lower().replace('_', ' ').replace('-', ' ').strip()
     cover_keywords = [
         'cover', 'variant', 'textless', 'solicit', 'promo', 'poster',
         'logo', 'tpb', 'omnibus', 'sketch', 'wraparound', 'facsimile',
         'reprint', 'chronicles', 'bullet', 'advertisement', 'card',
-        'action_figure', 'figure', 'toy', 'cosplay', 'wallpaper'
+        'action figure', 'figure', 'toy', 'cosplay', 'wallpaper',
+        'trade paperback', 'hardcover', 'annual'
     ]
-    if any(k in t_lower for k in cover_keywords):
+    if any(k in t for k in cover_keywords):
         return True
-        
-    # Detecta formato de portada clásica "Comic Vol X Y.jpg" sin sub-número de viñeta
-    if any(f"vol {v}" in t_lower or f"vol. {v}" in t_lower for v in range(1, 10)):
-        has_panel_number = any(p in t_lower for p in [
-            '001', '0001', '002', '0002', '003', '0003', '004', '0004', '005', '0005',
-            '006', '0006', '007', '0007', '008', '0008', '009', '0009', 'panel', 'scene'
-        ])
-        if not has_panel_number:
+
+    # Detecta formato de portada de Fandom: "Comic Vol X Y.jpg" o "Comic Vol. X Y.jpg" sin sub-número de página
+    m = re.search(r'vol\.?\s*(\d+)\s+(\d+)(\s+(\d+))?', t)
+    if m:
+        page_num = m.group(4)
+        if not page_num:
             return True
-            
+
+    # Detecta nombres con número de edición suelto sin número de panel (ej: "Daredevil 227.jpg")
+    if re.search(r'\b(issue|iss|no|num|#)\s*\d+\b', t) and not any(p in t for p in ['panel', 'scene', 'page', '001', '002', '003']):
+        return True
+
     return False
 
 # -------------------------------------------------------------------------
@@ -283,6 +289,11 @@ def verify_visual_alignment_with_gemini(image_path: str, scene_text: str) -> dic
 Evalúa con rigor si esta imagen ilustra con fidelidad la siguiente escena que narra la voz:
 Escena narrada: "{scene_text}"
 
+REGLA DE TOLERANCIA CERO PARA PORTADAS Y LOGOTIPOS:
+- Si la imagen contiene el título del cómic en letras gigantes ("DAREDEVIL", "BATMAN", "SPIDER-MAN", etc.), sello Comics Code Authority, número de edición gigante, logos de Marvel/DC o código de barras, ES UNA PORTADA COMERCIAL.
+- Para cualquier portada o póster comercial, responde OBLIGATORIAMENTE con score 1 e is_comic_panel false.
+- Solo acepta viñetas o secuencias interiores que ilustren los sucesos relatados.
+
 Responde ESTRICTAMENTE con un objeto JSON:
 {{
   "score": <número entero de 1 a 10, donde 10 es viñeta exacta de la acción/personajes y 1 es portada, live-action o contenido no relacionado>,
@@ -413,10 +424,21 @@ def fetch_scene_image(
                 "wiki": None
             })
 
-    # Priorización: Viñetas interiores primero, portadas solo al final
+    # Priorización: Viñetas interiores ÚNICAMENTE. Portadas comerciales 100% prohibidas.
     interior_pool = [c for c in candidates_pool if not c["is_cover"]]
-    cover_pool = [c for c in candidates_pool if c["is_cover"]]
-    ordered_candidates = interior_pool + cover_pool
+    ordered_candidates = interior_pool
+
+    # Si no se encontraron viñetas interiores en Fandom, forzar búsqueda web de scans interiores
+    if not ordered_candidates:
+        expanded_q = f"{fallback_query or target_file or ''} interior comic panel scan"
+        more_web = search_bing_comic_panels(expanded_q, limit=8)
+        for u in more_web:
+            ordered_candidates.append({
+                "source": "bing_web",
+                "url": u,
+                "is_cover": False,
+                "wiki": None
+            })
 
     best_fallback_file = None
     highest_score = -1
@@ -467,7 +489,7 @@ def fetch_scene_image(
             shutil.copy2(temp_candidate, best_fallback_file)
 
         # Si supera el umbral de aprobación visual (6+ de 10)
-        if score >= 6 and (is_panel or not cand["is_cover"]):
+        if score >= 6 and is_panel and not cand["is_cover"]:
             if os.path.exists(dest_path):
                 os.remove(dest_path)
             os.rename(temp_candidate, dest_path)
