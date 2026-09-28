@@ -718,5 +718,15 @@
     "mode": "live_release",
     "video_file": "Daredevil_Born_Again_y_la_Caida_de_Matt_Murdock.mp4",
     "status": "published"
+  },
+  {
+    "id": "black_adam_tercera_guerra_mundial",
+    "title": "Black Adam: La Masacre que Desató la Tercera Guerra Mundial",
+    "character": "Black Adam",
+    "theme_signature": "black_adam:tercera_guerra:bialya_masacre",
+    "date": "2026-09-28 14:05",
+    "mode": "live_release",
+    "video_file": "Black_Adam_La_Masacre_que_Desató_la_Tercera_Guerra_Mundial.mp4",
+    "status": "published"
   }
 ]
