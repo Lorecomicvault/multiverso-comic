@@ -108,10 +108,11 @@ def is_cover_or_promo_image(file_title: str) -> bool:
 
 def get_file_url(wiki_domain: str, file_title: str) -> str:
     """Extrae la URL de resolución completa de Fandom mediante la MediaWiki API."""
+    clean_title = file_title if file_title.startswith("File:") else f"File:{file_title}"
     url = f"https://{wiki_domain}/api.php"
     params = {
         "action": "query",
-        "titles": file_title,
+        "titles": clean_title,
         "prop": "imageinfo",
         "iiprop": "url|size|mime",
         "format": "json"

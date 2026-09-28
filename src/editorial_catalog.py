@@ -570,6 +570,12 @@ EDITORIAL_STORIES = [
             "Dark Multiverse rift Flash Forward",
             "Wally West Manhattan suit atom symbol glowing blue",
             "Wally West Flash Forward saving children multiverse"
+        ],
+        "scene_art_urls": [
+            "Mobius_Chair_Prime_Earth_001.jpg",
+            "Flash_Wally_West_Prime_Earth_0017.jpg",
+            "Flash_Wally_West_Prime_Earth_0018.jpg",
+            "Flash_Wally_West_Prime_Earth_0032.jpg"
         ]
     },
     {

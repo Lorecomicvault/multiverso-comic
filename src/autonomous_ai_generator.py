@@ -183,6 +183,12 @@ EMERGENCY_VIRAL_POOL = [
             "Flash Forward Dark Multiverse incursion",
             "Wally West blue glowing Doctor Manhattan powers",
             "Wally West saves children Flash Forward ending"
+        ],
+        "scene_art_urls": [
+            "Mobius_Chair_Prime_Earth_001.jpg",
+            "Flash_Wally_West_Prime_Earth_0017.jpg",
+            "Flash_Wally_West_Prime_Earth_0018.jpg",
+            "Flash_Wally_West_Prime_Earth_0032.jpg"
         ]
     },
     {
