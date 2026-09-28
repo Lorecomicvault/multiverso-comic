@@ -299,6 +299,25 @@ def publish_comic_video(
         )
         results['instagram'] = ig_res
 
+    # 3. Publish to TikTok via Buffer (if BUFFER_ACCESS_TOKEN is configured)
+    buffer_token = os.environ.get('BUFFER_ACCESS_TOKEN')
+    if buffer_token and not draft_only:
+        try:
+            from .buffer_publisher import publish_to_tiktok_via_buffer
+            tt_res = publish_to_tiktok_via_buffer(
+                video_path=video_path,
+                caption=full_caption,
+                thumb_offset_ms=thumb_offset_ms,
+                access_token=buffer_token,
+                channel_id=os.environ.get('BUFFER_TIKTOK_CHANNEL_ID'),
+            )
+            results['tiktok'] = tt_res
+        except Exception as e:
+            log(f"Warning publishing to TikTok via Buffer: {e}")
+            results['tiktok'] = {'success': False, 'error': str(e)}
+    elif not buffer_token:
+        results['tiktok'] = {'skipped': True, 'reason': 'BUFFER_ACCESS_TOKEN not set'}
+
     return results
 
 
