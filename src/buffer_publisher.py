@@ -18,7 +18,7 @@ def log(msg: str):
 def upload_to_temporary_public_url(video_path: str | Path) -> str:
     """
     Uploads the local MP4 video to a fast, temporary direct HTTPS host (tmpfiles.org)
-    so Buffer's media fetcher can pull the file directly for publishing.
+    and extracts the authenticated direct streaming link so Buffer's media fetcher can pull the binary video file.
     """
     vpath = Path(video_path)
     if not vpath.exists():
@@ -38,9 +38,21 @@ def upload_to_temporary_public_url(video_path: str | Path) -> str:
     if not raw_url:
         raise RuntimeError(f"Unexpected upload response: {data}")
 
-    # Convert preview page URL to direct download URL (insert /dl/ after domain)
-    # e.g., https://tmpfiles.org/12345/file.mp4 -> https://tmpfiles.org/dl/12345/file.mp4
-    direct_url = raw_url.replace("tmpfiles.org/", "tmpfiles.org/dl/")
+    # tmpfiles.org requires visiting the preview page or dl page to get the authenticated token direct link
+    # Pattern: https://tmpfiles.org/dl/<timestamp.token>/<id>/<filename>.mp4
+    direct_url = None
+    try:
+        page_resp = requests.get(raw_url, timeout=15)
+        import re
+        match = re.search(r'href=[\'"](https?://tmpfiles\.org/dl/[^\'"\s]+)[\'"]', page_resp.text)
+        if match:
+            direct_url = match.group(1)
+    except Exception as e:
+        log(f"Warning extracting direct token URL from preview page: {e}")
+
+    if not direct_url:
+        direct_url = raw_url.replace("tmpfiles.org/", "tmpfiles.org/dl/")
+
     log(f"Public direct video URL generated: {direct_url}")
     return direct_url
 
