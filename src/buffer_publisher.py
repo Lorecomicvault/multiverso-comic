@@ -57,31 +57,40 @@ def get_buffer_channels(access_token: str | None = None) -> list[dict]:
         "Content-Type": "application/json"
     }
 
-    query = """
-    query GetAccountDetails {
+    query_orgs = """
+    query GetOrg {
       account {
         organizations {
           id
           name
-          channels {
-            id
-            name
-            displayName
-            service
-          }
         }
       }
     }
     """
 
     try:
-        r = requests.post(BUFFER_GRAPHQL_URL, json={"query": query}, headers=headers, timeout=20)
+        r = requests.post(BUFFER_GRAPHQL_URL, json={"query": query_orgs}, headers=headers, timeout=20)
         res = r.json()
         orgs = res.get("data", {}).get("account", {}).get("organizations", [])
         all_channels = []
         for org in orgs:
-            for ch in org.get("channels", []):
-                all_channels.append(ch)
+            org_id = org.get("id")
+            if not org_id:
+                continue
+            query_ch = f"""
+            query GetChannels {{
+              channels(input: {{ organizationId: "{org_id}" }}) {{
+                id
+                name
+                displayName
+                service
+              }}
+            }}
+            """
+            r_ch = requests.post(BUFFER_GRAPHQL_URL, json={"query": query_ch}, headers=headers, timeout=20)
+            res_ch = r_ch.json()
+            channels = res_ch.get("data", {}).get("channels", [])
+            all_channels.extend(channels)
         return all_channels
     except Exception as e:
         log(f"Error fetching Buffer channels: {e}")
