@@ -371,6 +371,13 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
                 "Halting pipeline to guarantee zero black-screen videos are ever produced or uploaded."
             )
 
+        # Enmarcado vertical 1080x1920 con fondo desenfocado y Safe Zone (Fórmula Maestra)
+        with Image.open(img_file) as raw_im:
+            if raw_im.size != (1080, 1920):
+                framed_im = create_full_panel_frame(raw_im.convert("RGB"), 1080, 1920)
+                framed_im.save(img_file, "JPEG", quality=95)
+                log(f"Scene {idx}: Framed into 1080x1920 canvas with Gaussian blur background.")
+
         downloaded_images.append(img_file)
 
         scenes_data.append({
