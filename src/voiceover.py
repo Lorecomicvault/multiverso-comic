@@ -85,7 +85,17 @@ SOFT_PROFANITY_BUDGET = 3
 # ============================================================================
 
 VOICE_PROFILES = {
-    # --- Google Cloud TTS (Voces Principales de Alta Calidad) ---
+    # --- Google Gemini 3.8 TTS (Voz Principal Estándar Oro) ---
+    'Puck': {
+        'provider': 'gemini',
+        'voice_name': 'Puck',
+        'model': 'gemini-3.8-flash-tts',
+        'fallback_model': 'gemini-3.8-flash-lite-tts',
+        'rate': 1.05,
+        'label': 'Gemini 3.8 Puck (Voz masculina cómic, ritmo rápido, apasionado y enérgico)',
+    },
+
+    # --- Google Cloud TTS (Voces de Respaldo de Alta Calidad) ---
     'es-US-Studio-B': {
         'provider': 'google',
         'lang': 'es-US',
@@ -189,7 +199,7 @@ VOICE_PROFILES = {
     },
 }
 
-DEFAULT_VOICE = 'es-US-Studio-B'
+DEFAULT_VOICE = 'Puck'
 SCENE_TRAILING_PAUSE = 0.4
 
 
@@ -371,7 +381,41 @@ def _generate_one(
     provider = profile.get('provider', 'google')
     effective_rate = rate if rate is not None else profile.get('rate', 1.05)
 
-    if provider == 'google':
+    if provider == 'gemini':
+        try:
+            from .gemini_tts import synthesize_with_gemini
+            return synthesize_with_gemini(
+                text=text,
+                output_path=output,
+                voice_name=profile.get('voice_name', 'Puck'),
+                model=profile.get('model', 'gemini-3.8-flash-tts'),
+                rate=effective_rate,
+                trailing_pause=trailing_pause,
+            )
+        except Exception as err:
+            print(f"[VOICEOVER] Error con Gemini TTS ({err}), recurriendo a Google Cloud TTS de respaldo...")
+            try:
+                return _generate_google_tts(
+                    text=text,
+                    output=output,
+                    voice_name='es-US-Studio-B',
+                    lang_code='es-US',
+                    gender='MALE',
+                    rate=effective_rate,
+                    pitch=0.0,
+                    trailing_pause=trailing_pause,
+                )
+            except Exception as err2:
+                print(f"[VOICEOVER] Error con Google Cloud TTS ({err2}), recurriendo a Edge-TTS...")
+                return asyncio.run(_generate_edge_tts(
+                    text=text,
+                    output=output,
+                    voice='es-MX-JorgeNeural',
+                    rate=effective_rate,
+                    base_pitch='+2Hz',
+                    trailing_pause=trailing_pause,
+                ))
+    elif provider == 'google':
         try:
             lang = profile.get('lang', 'es-US')
             gender = profile.get('gender', 'MALE')

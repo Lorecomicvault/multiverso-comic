@@ -544,6 +544,12 @@ EDITORIAL_STORIES = [
             "Armado con ojivas nucleares de Doctor Doom, engañó a todos los mutantes en la Luna y detonó una explosión cósmica.",
             "Tras liquidar a Spider-Man, Wolverine y Daredevil, Frank se apuntó con su propia pistola cerrando su venganza final."
         ],
+        "scene_art_urls": [
+            "Francis Castle (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 001.jpg",
+            "Scott Summers (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 0001.jpg",
+            "X-Men (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 0001.jpg",
+            "Matthew Murdock (Earth-95126) and Francis Castle (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 0001.jpg"
+        ],
         "art_queries": [
             "Punisher Kills Marvel Universe Central Park family dead",
             "Punisher rifle shoot Cyclops Hawkeye",
@@ -600,3 +606,11 @@ EDITORIAL_STORIES = [
         ]
     }
 ]
+
+# Configuración automática de voz Puck (Gemini 3.8 TTS) para todas las historias editoriales
+for _s in EDITORIAL_STORIES:
+    _s.setdefault("voice", "Puck")
+    _s.setdefault("tts_model", "gemini-3.8-flash-tts")
+    _s.setdefault("fallback_tts_model", "gemini-3.8-flash-lite-tts")
+    _s.setdefault("style_direction", "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano")
+

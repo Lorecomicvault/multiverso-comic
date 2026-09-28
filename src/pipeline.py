@@ -106,7 +106,7 @@ def run_pipeline(
     output_dir.mkdir(parents=True, exist_ok=True)
 
     scenes_sorted = sorted(scenes, key=lambda s: s['scene_number'])
-    selected_voice = voice or 'en-US-Studio-Q'
+    selected_voice = voice or DEFAULT_VOICE
 
     # Extraer textos de locución de cada escena
     scene_texts = {}
@@ -120,7 +120,7 @@ def run_pipeline(
 
     voice_results = {}
     if has_voiceover:
-        log(f"Generando locuciones con {selected_voice} (Google Cloud TTS)...")
+        log(f"Generando locuciones con {selected_voice} (Motor Gemini TTS / Puck)...")
         vo_dir = str(output_dir / 'voiceover')
         voice_results = generate_voiceover_scenes(scene_texts, vo_dir, voice=selected_voice, rate=rate)
         log(f"  OK -> {len(voice_results)} locuciones generadas")

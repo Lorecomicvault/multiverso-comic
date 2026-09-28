@@ -447,7 +447,7 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
             "title": story["title"],
             "description": story["description"],
             "hashtags": story["hashtags"],
-            "voice": os.environ.get("VOICE", "es-US-Studio-B")
+            "voice": story.get("voice") or os.environ.get("VOICE", "Puck")
         },
         "scenes": scenes_data
     }
@@ -531,7 +531,7 @@ def main():
     # Lazy import pipeline to allow test environments to run without heavy whisper dependencies
     from .pipeline import run_pipeline
 
-    voice_choice = os.environ.get("VOICE", "es-US-Studio-B")
+    voice_choice = selected.get("voice") or os.environ.get("VOICE", "Puck")
     log(f"Starting video compilation pipeline with voice: {voice_choice}...")
     final_video_path = run_pipeline(
         generation=generation,
