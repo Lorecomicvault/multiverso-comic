@@ -204,6 +204,13 @@ def check_is_comic_art_inking(img: Image.Image) -> bool:
     """Verifica mediante visión por computador que la imagen tenga entintado y trazos de cómic, descartando fotos reales, comida o actores."""
     try:
         from PIL import ImageFilter
+        if img.size == (1080, 1920):
+            # Evaluar el panel interior central excluyendo los márgenes de fondo desenfocado
+            crop_box = (108, 384, 972, 1536)
+            eval_img = img.crop(crop_box)
+            edges = eval_img.convert('L').filter(ImageFilter.FIND_EDGES)
+            edge_stat = ImageStat.Stat(edges)
+            return edge_stat.mean[0] >= 3.5 or edge_stat.stddev[0] >= 12.0
         edges = img.convert('L').filter(ImageFilter.FIND_EDGES)
         edge_stat = ImageStat.Stat(edges)
         return edge_stat.mean[0] >= 8.5
@@ -530,8 +537,8 @@ def fetch_scene_image(
             best_fallback_file = dest_path + ".best.jpg"
             shutil.copy2(temp_candidate, best_fallback_file)
 
-        # Si supera el umbral de aprobación visual (6+ de 10)
-        if score >= 6 and is_panel and not cand["is_cover"]:
+        # Si supera el umbral de aprobación visual (6+ de 10, o 5+ para viñetas curadas oficiales)
+        if (score >= 6 or (cand_src == "fandom_target" and score >= 5)) and is_panel and not cand["is_cover"]:
             if os.path.exists(dest_path):
                 os.remove(dest_path)
             os.rename(temp_candidate, dest_path)
