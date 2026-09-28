@@ -296,7 +296,7 @@ Responde ESTRICTAMENTE con un objeto JSON:
         from google import genai
         client = genai.Client(api_key=api_key, http_options={"timeout": 12000})
         im = Image.open(image_path)
-        res = client.models.generate_content(model="gemini-3.8-flash", contents=[im, prompt])
+        res = client.models.generate_content(model="gemini-flash-latest", contents=[im, prompt])
         raw = res.text.strip()
         if "```json" in raw:
             raw = raw.split("```json")[1].split("```")[0].strip()

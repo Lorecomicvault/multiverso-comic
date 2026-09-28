@@ -4,13 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       story_id:
-        description: 'ID del Arco de Comic (o "any" para cola automatica anti-duplicados)'
+        description: 'ID del Arco de Comic (o "autonomous_ai" para generacion infinita)'
         required: false
-        default: 'any'
+        default: 'autonomous_ai'
         type: choice
         options:
-          - any
           - autonomous_ai
+          - any
           - hulk_maestro_futuro_imperfecto
           - superior_spider_man_otto
           - batman_hush_silencio
@@ -128,10 +128,12 @@ jobs:
             echo "Modo Render Only: El video se renderizara y guardara como artefacto sin publicar en Meta."
           fi
 
-          if [ "${{ github.event.inputs.story_id }}" = "autonomous_ai" ]; then
+          STORY_CHOICE="${{ github.event.inputs.story_id }}"
+          if [ -z "$STORY_CHOICE" ] || [ "$STORY_CHOICE" = "autonomous_ai" ] || [ "$STORY_CHOICE" = "any" ]; then
+            echo "Activando Motor de IA Autonomo para Guion e Imagenes Ultra-Virales..."
             ARGS="$ARGS --ai-story"
-          elif [ -n "${{ github.event.inputs.story_id }}" ] && [ "${{ github.event.inputs.story_id }}" != "any" ]; then
-            ARGS="$ARGS --story-id ${{ github.event.inputs.story_id }}"
+          else
+            ARGS="$ARGS --story-id $STORY_CHOICE"
           fi
 
           python -m src.cloud_runner $ARGS

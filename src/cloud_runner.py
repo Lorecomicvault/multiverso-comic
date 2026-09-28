@@ -292,44 +292,42 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
 
         saved = False
         target = art_urls[idx - 1] if art_urls and idx <= len(art_urls) else None
-        if target:
+
+        # Primary: Multi-Source Precision Scraper with Gemini Vision Referee
+        try:
+            from .comic_precision_scraper import fetch_scene_image
+            dc_chars = ['Batman', 'Superman', 'The Flash', 'Green Lantern', 'Sinestro', 'Superboy Prime', 'Joker', 'Aquaman']
+            wiki = 'dc.fandom.com' if any(c.lower() in story.get("character", "").lower() for c in dc_chars) else 'marvel.fandom.com'
+            panel_path = fetch_scene_image(
+                wiki_domain=wiki,
+                target_file=target,
+                fallback_query=f"{story.get('character', '')} {narration[:45]}",
+                dest_path=str(img_file),
+                existing_scene_images=[str(p) for p in downloaded_images],
+                scene_text=narration
+            )
+            if os.path.exists(panel_path) and os.path.getsize(panel_path) > 10000:
+                saved = True
+                log(f"Scene {idx}: Precision panel validated and saved.")
+        except Exception as e:
+            log(f"Scene {idx}: Precision scraper notice: {e}")
+
+        # Fallback A: Direct download if target specified and precision scraper failed
+        if (not saved or not img_file.exists()) and target:
             saved = download_comic_panel(target, story.get("character", ""), img_file)
 
-        # Fallback A: Multi-Source Precision Scraper with Gemini Vision Referee
-        if not saved or not img_file.exists():
-            log(f"Scene {idx}: Target panel unavailable, invoking Multi-Source Precision Scraper with AI Referee...")
-            try:
-                from .comic_precision_scraper import fetch_scene_image
-                dc_chars = ['Batman', 'Superman', 'The Flash', 'Green Lantern', 'Sinestro', 'Superboy Prime', 'Joker', 'Aquaman']
-                wiki = 'dc.fandom.com' if any(c.lower() in story.get("character", "").lower() for c in dc_chars) else 'marvel.fandom.com'
-                panel_path = fetch_scene_image(
-                    wiki_domain=wiki,
-                    target_file=target,
-                    fallback_query=f"{story.get('character', '')} {narration[:35]}",
-                    dest_path=str(img_file),
-                    existing_scene_images=[str(p) for p in downloaded_images],
-                    scene_text=narration
-                )
-                if os.path.exists(panel_path) and os.path.getsize(panel_path) > 10000:
-                    saved = True
-            except Exception as e:
-                log(f"Scene {idx}: Precision scraper fallback notice: {e}")
-
-        # Fallback B: Dynamic comic fetcher
+        # Fallback B: Dynamic comic fetcher with deduplication check
         if not saved or not img_file.exists():
             log(f"Scene {idx}: Querying general Fandom comic art...")
-            fallback_urls = get_fandom_comic_art(story.get("character", "Batman"), count=5)
+            fallback_urls = get_fandom_comic_art(story.get("character", "Batman"), count=8)
             for fb_u in fallback_urls:
                 if download_comic_panel(fb_u, story.get("character", ""), img_file):
-                    saved = True
-                    break
-
-        # Fallback B: Reuse previously downloaded valid comic panel from this story
-        if (not saved or not img_file.exists()) and downloaded_images:
-            log(f"Scene {idx}: Reusing previously validated comic panel from story...")
-            prev_im = Image.open(downloaded_images[-1])
-            prev_im.save(img_file, "JPEG", quality=95)
-            saved = True
+                    from .comic_precision_scraper import is_duplicate_panel
+                    if not is_duplicate_panel(str(img_file), [str(p) for p in downloaded_images]):
+                        saved = True
+                        break
+                    else:
+                        img_file.unlink(missing_ok=True)
 
         # CRITICAL FAIL-SAFE: NO BLACK SCREEN VIDEOS EVER!
         if not saved or not img_file.exists():
