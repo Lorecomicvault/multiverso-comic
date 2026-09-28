@@ -279,9 +279,20 @@ def _generate_google_tts(
     }
 
     url = f'{GOOGLE_TTS_URL}?key={GOOGLE_TTS_API_KEY}'
-    res = requests.post(url, json=payload, timeout=20)
-    if res.status_code != 200:
-        raise RuntimeError(f'Google TTS API error ({res.status_code}): {res.text}')
+    res = None
+    for attempt in range(1, 4):
+        try:
+            res = requests.post(url, json=payload, timeout=35)
+            if res.status_code == 200:
+                break
+        except Exception as e:
+            if attempt == 3:
+                raise e
+            time.sleep(1.5)
+
+    if not res or res.status_code != 200:
+        err_msg = res.text if res else "No response"
+        raise RuntimeError(f'Google TTS API error: {err_msg}')
 
     audio_base64 = res.json().get('audioContent', '')
     if not audio_base64:

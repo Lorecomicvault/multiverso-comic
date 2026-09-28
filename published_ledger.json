@@ -718,5 +718,15 @@
     "mode": "live_release",
     "video_file": "Daredevil_Born_Again_y_la_Caida_de_Matt_Murdock.mp4",
     "status": "published"
+  },
+  {
+    "id": "batman_grim_knight_crime_alley",
+    "title": "The Grim Knight: El Batman que Disparó a Matar en Crime Alley",
+    "character": "The Grim Knight",
+    "theme_signature": "batman:grim_knight:crime_alley_arsenal_militar",
+    "date": "2026-09-28 10:01",
+    "mode": "local_production",
+    "video_file": "The_Grim_Knight_El_Batman_que_Disparó_a_Matar_en_Crime_Alley.mp4",
+    "status": "produced"
   }
 ]
