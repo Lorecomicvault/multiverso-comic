@@ -17,7 +17,10 @@ DC_CHARACTERS = {
     'batman', 'bruce wayne', 'joker', 'superman', 'clark kent', 'wonder woman', 'flash', 'barry allen',
     'reverse flash', 'eobard thawne', 'darkseid', 'doomsday', 'batman who laughs', 'superboy prime',
     'spectre', 'lucifer morningstar', 'doctor manhattan', 'watchmen', 'deathstroke', 'blackest night',
-    'green lantern', 'hal jordan', 'red hood', 'jason todd', 'aquaman', 'dark multiverse', 'shazam'
+    'green lantern', 'hal jordan', 'red hood', 'jason todd', 'aquaman', 'dark multiverse', 'shazam',
+    'black adam', 'teth-adam', 'bialya', 'constantine', 'john constantine', 'swamp thing', 'bane',
+    'robin', 'nightwing', 'dick grayson', 'cyborg', 'martian manhunter', 'lex luthor', 'brainiac',
+    'zatanna', 'harley quinn', 'sinestro', 'riddler', 'penguin', 'two-face', 'scarecrow', 'catwoman'
 }
 
 MARVEL_CHARACTERS = {

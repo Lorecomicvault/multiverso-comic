@@ -207,6 +207,35 @@ def resolve_fandom_canonical_url(wiki: str, file_title: str) -> str | None:
     return None
 
 
+DC_UNIVERSE_MARKERS = [
+    'dc', 'batman', 'superman', 'bruce wayne', 'clark kent', 'the flash', 'flash', 'barry allen',
+    'wally west', 'green lantern', 'hal jordan', 'john stewart', 'sinestro', 'superboy',
+    'superboy prime', 'joker', 'aquaman', 'black adam', 'shazam', 'captain marvel (dc)',
+    'wonder woman', 'darkseid', 'deathstroke', 'harley quinn', 'constantine', 'john constantine',
+    'swamp thing', 'bane', 'robin', 'nightwing', 'dick grayson', 'red hood', 'jason todd',
+    'green arrow', 'oliver queen', 'cyborg', 'martian manhunter', 'lex luthor', 'doomsday',
+    'brainiac', 'zatanna', 'raven', 'starfire', 'beast boy', 'riddler', 'penguin', 'two-face',
+    'scarecrow', 'catwoman', 'ra\'s al ghul', 'damian wayne', 'dceased', 'flashpoint',
+    'injustice', 'crisis on infinite earths', 'kingdom come', 'watchmen', 'rorschach',
+    'doctor manhattan', 'sandman', 'lucifer', 'morpheus', 'bialya', 'justice league',
+    'justice society', 'teen titans', 'arkham', 'gotham', 'metropolis', 'themyscira'
+]
+
+
+def get_story_comic_wiki(story: dict) -> str:
+    """Determina de forma infalible si la historia o personaje pertenece a DC o Marvel Fandom."""
+    explicit_u = str(story.get("universe", "")).lower()
+    if "dc" in explicit_u:
+        return "dc.fandom.com"
+    if "marvel" in explicit_u:
+        return "marvel.fandom.com"
+
+    text_to_scan = f"{story.get('character', '')} {story.get('title', '')} {story.get('description', '')} {story.get('theme_signature', '')} {story.get('hashtags', '')}".lower()
+    if any(marker in text_to_scan for marker in DC_UNIVERSE_MARKERS):
+        return "dc.fandom.com"
+    return "marvel.fandom.com"
+
+
 def download_comic_panel(url_or_file: str, character: str, dest_path: Path, min_dim: int = 400) -> bool:
     """
     Downloads an official high-resolution comic panel.
@@ -214,9 +243,9 @@ def download_comic_panel(url_or_file: str, character: str, dest_path: Path, min_
     - Sets appropriate Referer (dc.fandom.com or marvel.fandom.com).
     - Validates minimum dimensions and image integrity.
     """
-    is_marvel = any(k in character.lower() for k in ["marvel", "spider", "hulk", "thor", "thanos", "doom", "deadpool", "wolverine", "x-men", "knull", "daredevil", "iron man"])
-    wiki = "marvel" if is_marvel else "dc"
-    ref = f"https://{wiki}.fandom.com/"
+    wiki_domain = get_story_comic_wiki({"character": character})
+    wiki = "dc" if "dc" in wiki_domain else "marvel"
+    ref = f"https://{wiki_domain}/"
 
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
@@ -302,8 +331,7 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
         # Primary: Multi-Source Precision Scraper with Gemini Vision Referee
         try:
             from .comic_precision_scraper import fetch_scene_image
-            dc_chars = ['Batman', 'Superman', 'The Flash', 'Green Lantern', 'Sinestro', 'Superboy Prime', 'Joker', 'Aquaman']
-            wiki = 'dc.fandom.com' if any(c.lower() in story.get("character", "").lower() for c in dc_chars) else 'marvel.fandom.com'
+            wiki = get_story_comic_wiki(story)
             panel_path = fetch_scene_image(
                 wiki_domain=wiki,
                 target_file=target,
@@ -314,7 +342,7 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
             )
             if os.path.exists(panel_path) and os.path.getsize(panel_path) > 10000:
                 saved = True
-                log(f"Scene {idx}: Precision panel validated and saved.")
+                log(f"Scene {idx}: Precision panel validated and saved ({wiki}).")
         except Exception as e:
             log(f"Scene {idx}: Precision scraper notice: {e}")
 
@@ -389,7 +417,17 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
             if max(stat.stddev) < 8.0:
                 raise RuntimeError(f"QUALITY GATE FATAL ERROR: Scene {idx_img} image is blank or solid color.")
 
-    log("Production Quality Gate: ALL CHECKS PASSED (100% Unique Panels, 0 Duplicates, High Resolution).")
+    # 3. Comic Inking Edge Art Check (Zero real-life photos, food, or live-action actors)
+    from .comic_precision_scraper import check_is_comic_art_inking
+    for idx_img, p in enumerate(downloaded_images, 1):
+        with Image.open(p) as test_im:
+            if not check_is_comic_art_inking(test_im):
+                raise RuntimeError(
+                    f"QUALITY GATE FATAL ERROR: Scene {idx_img} image ({p.name}) failed comic inking verification. "
+                    "Detected real-life photo, non-comic object, or live-action actor. Halting video compilation."
+                )
+
+    log("Production Quality Gate: ALL CHECKS PASSED (100% Unique Panels, 0 Duplicates, High Resolution, Verified Comic Art).")
 
     script_data = {
         "metadata": {

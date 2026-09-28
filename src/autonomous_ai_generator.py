@@ -81,6 +81,7 @@ def verify_image_quality(wiki: str, filename: str) -> bool:
 EMERGENCY_VIRAL_POOL = [
     {
         "id": "black_adam_tercera_guerra_mundial",
+        "universe": "DC",
         "character": "Black Adam",
         "title": "Black Adam: La Masacre que Desató la Tercera Guerra Mundial",
         "theme_signature": "black_adam:tercera_guerra:bialya_masacre",
@@ -101,6 +102,7 @@ EMERGENCY_VIRAL_POOL = [
     },
     {
         "id": "spiderman_spiders_shadow_simbionte",
+        "universe": "Marvel",
         "character": "Spider-Man",
         "title": "Spider's Shadow: Cuando Peter Parker Abrazó la Oscuridad del Simbionte",
         "theme_signature": "spiderman:spiders_shadow:simbionte_asesino",
@@ -121,6 +123,7 @@ EMERGENCY_VIRAL_POOL = [
     },
     {
         "id": "god_emperor_doom_ejecuta_a_thanos",
+        "universe": "Marvel",
         "character": "Doctor Doom",
         "title": "Secret Wars: El Día en que Doctor Doom Destruyó a Thanos con una Mano",
         "theme_signature": "doctor_doom:secret_wars:arranca_columna_thanos",
@@ -141,6 +144,7 @@ EMERGENCY_VIRAL_POOL = [
     },
     {
         "id": "wolverine_old_man_logan_tragedia_mysterio",
+        "universe": "Marvel",
         "character": "Wolverine",
         "title": "Old Man Logan: La Tragedia en que Wolverine Asesinó a los X-Men",
         "theme_signature": "wolverine:old_man_logan:engano_mysterio_xmen",
@@ -223,6 +227,7 @@ REGLAS INVIOLABLES DE FORMATO:
 Devuelve ÚNICAMENTE un objeto JSON válido con este esquema:
 {{
   "id": "identificador_en_snake_case_unico",
+  "universe": "Marvel o DC",
   "character": "Nombre del Personaje Principal",
   "title": "Título Cinematográfico Atractivo",
   "theme_signature": "personaje:arco:tema_clave",

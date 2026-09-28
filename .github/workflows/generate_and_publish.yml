@@ -45,11 +45,11 @@ on:
       mode:
         description: 'Modo de Ejecucion (render_only vs live_release)'
         required: true
-        default: 'live_release'
+        default: 'render_only'
         type: choice
         options:
-          - live_release
           - render_only
+          - live_release
           - draft_only
           - dry_run
 
