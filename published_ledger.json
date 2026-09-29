@@ -778,5 +778,15 @@
     "mode": "live_release",
     "video_file": "Spider-Man_Spiders_Shadow_La_Ejecución_Sádica_de_Kingpin.mp4",
     "status": "published"
+  },
+  {
+    "id": "hulk_the_end_ultimo_humano",
+    "title": "Hulk The End: El Último Ser Vivo en la Tierra",
+    "character": "Hulk",
+    "theme_signature": "hulk:the_end:cucarachas_soledad_muerte_banner",
+    "date": "2026-09-29 17:07",
+    "mode": "live_release",
+    "video_file": "Hulk_The_End_El_Último_Ser_Vivo_en_la_Tierra.mp4",
+    "status": "published"
   }
 ]
