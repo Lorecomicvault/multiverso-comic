@@ -313,6 +313,8 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
     scenes_data = []
     scene_videos = []
     downloaded_images = []
+    raw_downloaded_images = []
+    used_panel_sources = set()
 
     for idx, narration in enumerate(story["scenes"], 1):
         sc_name = f"scene_{idx:02d}"
@@ -343,8 +345,9 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
                 target_file=target,
                 fallback_query=query_for_scene,
                 dest_path=str(img_file),
-                existing_scene_images=[str(p) for p in downloaded_images],
-                scene_text=narration
+                existing_scene_images=raw_downloaded_images + [str(p) for p in downloaded_images],
+                scene_text=narration,
+                used_sources=used_panel_sources
             )
             if os.path.exists(panel_path) and os.path.getsize(panel_path) > 10000:
                 saved = True
@@ -364,7 +367,7 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
             for fb_u in fallback_urls:
                 if not is_cover_or_promo_image(fb_u) and download_comic_panel(fb_u, story.get("character", ""), img_file):
                     from .comic_precision_scraper import is_duplicate_panel
-                    if not is_duplicate_panel(str(img_file), [str(p) for p in downloaded_images]):
+                    if not is_duplicate_panel(str(img_file), raw_downloaded_images + [str(p) for p in downloaded_images]):
                         saved = True
                         break
                     else:
@@ -376,6 +379,12 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
                 f"FATAL ERROR: Could not obtain real comic panels for '{story['title']}' (Scene {idx}). "
                 "Halting pipeline to guarantee zero black-screen videos are ever produced or uploaded."
             )
+
+        # Guardar copia del panel original sin enmarcar para deduplicación estricta inter-escenas
+        raw_img_file = sc_dir / f"{sc_name}_raw.jpg"
+        import shutil
+        shutil.copy2(img_file, raw_img_file)
+        raw_downloaded_images.append(str(raw_img_file))
 
         # Enmarcado vertical 1080x1920 con fondo desenfocado y Safe Zone (Fórmula Maestra)
         with Image.open(img_file) as raw_im:

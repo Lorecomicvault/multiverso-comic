@@ -94,6 +94,12 @@ EMERGENCY_VIRAL_POOL = [
             "La Liga de la Justicia, los Jóvenes Titanes y la Sociedad de la Justicia se unieron para frenar su avance sangriento.",
             "Tras resistir los golpes combinados de todos los héroes del planeta, fue derrotado únicamente cuando alteraron mágicamente su rayo Shazam."
         ],
+        "scene_art_urls": [
+            "Black Adam 0003.jpg",
+            "World War III 0001.jpg",
+            "Black Adam Prime Earth 0018.jpeg",
+            "Black Adam Prime Earth 0020.jpeg"
+        ],
         "art_queries": [
             "Black Adam World War III massacre",
             "Black Adam destroying Bialya army",
@@ -157,6 +163,12 @@ EMERGENCY_VIRAL_POOL = [
             "Armado con ojivas nucleares de Doctor Doom, engañó a todos los mutantes en la Luna y detonó una explosión cósmica.",
             "Tras liquidar a Spider-Man, Wolverine y Daredevil, Frank se apuntó con su propia pistola cerrando su venganza final."
         ],
+        "scene_art_urls": [
+            "Thor Odinson (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 0001.jpg",
+            "Scott Summers (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 0001.jpg",
+            "Victor von Doom (Earth-95126) and Francis Castle (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 0001.jpg",
+            "Peter Parker (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 002.jpg"
+        ],
         "art_queries": [
             "Punisher kills Cyclops Hawkeye Central Park",
             "Punisher Kills the Marvel Universe rifle",
@@ -177,6 +189,12 @@ EMERGENCY_VIRAL_POOL = [
             "En el centro del Multiverso Oscuro, una grieta dimensional amenazaba con devorar todas las realidades existentes.",
             "La energía cósmica azul envolvió su traje, grabando el símbolo del átomo en su frente y volviéndolo omnisciente.",
             "Con un simple parpadeo mental, Wally reescribió las líneas temporales y salvó a sus hijos atrapados en el olvido."
+        ],
+        "scene_art_urls": [
+            "Flash Forward Vol 1 5.jpg",
+            "Flash Forward Vol 1 6.jpg",
+            "Wallace West (Prime Earth) from Flash Forward Vol 1 6 001.jpg",
+            "Wallace West (Prime Earth) from Flash Forward Vol 1 6 002.jpg"
         ],
         "art_queries": [
             "Wally West Mobius Chair Doctor Manhattan",
@@ -223,8 +241,21 @@ def generate_autonomous_story(ledger: list[dict], api_key: str | None = None) ->
     from .cloud_runner import is_duplicate
     import base64
 
-    _default_b64 = "QVEuQWI4Uk42SU8xRUtGVHNYSzQtYlBONDdfWV96N3JmMlNjZWNYWVEwTll4N2NsR2dpSFE="
-    key = api_key or os.environ.get("GEMINI_API_KEY") or base64.b64decode(_default_b64).decode("utf-8")
+    _default_b64 = "QVEuQWI4Uk42SVBTR0VkME0wT2t6Yy1XRWVrcGthTXNhZEhKY3hVaG1waGlCUlRTcUhESUE="
+    _backup_b64 = "QVEuQWI4Uk42SU8xRUtGVHNYSzQtYlBONDdfWV96N3JmMlNjZWNYWVEwTll4N2NsR2dpSFE="
+    
+    keys_to_try = []
+    if api_key:
+        keys_to_try.append(api_key)
+    env_k = os.environ.get("GEMINI_API_KEY")
+    if env_k and env_k not in keys_to_try:
+        keys_to_try.append(env_k)
+    k1 = base64.b64decode(_default_b64).decode("utf-8")
+    k2 = base64.b64decode(_backup_b64).decode("utf-8")
+    if k1 not in keys_to_try:
+        keys_to_try.append(k1)
+    if k2 not in keys_to_try:
+        keys_to_try.append(k2)
     
     # Extraer historial COMPLETO para prohibir duplicados
     past_characters = set(item.get("character", "").strip() for item in ledger if item.get("character"))
@@ -305,19 +336,22 @@ Devuelve ÚNICAMENTE un objeto JSON válido con este esquema:
         }
 
         story = None
-        for model in CANDIDATE_MODELS:
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
-            try:
-                r = requests.post(url, json=payload, headers={"Content-Type": "application/json"}, timeout=25)
-                if r.status_code == 200:
-                    raw_text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
-                    story = json.loads(raw_text)
-                    log(f"Propuesta generada por {model}: '{story.get('title')}'")
-                    break
-                else:
-                    log(f"Modelo {model} respondió {r.status_code}")
-            except Exception as err:
-                log(f"Excepción consultando {model}: {err}")
+        for cand_key in keys_to_try:
+            for model in CANDIDATE_MODELS:
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={cand_key}"
+                try:
+                    r = requests.post(url, json=payload, headers={"Content-Type": "application/json"}, timeout=25)
+                    if r.status_code == 200:
+                        raw_text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
+                        story = json.loads(raw_text)
+                        log(f"Propuesta generada por {model}: '{story.get('title')}'")
+                        break
+                    else:
+                        log(f"Modelo {model} respondió {r.status_code}")
+                except Exception as err:
+                    log(f"Excepción consultando {model}: {err}")
+            if story:
+                break
 
         if not story:
             continue

@@ -66,10 +66,23 @@ def calculate_image_rms_difference(img_path1: str, img_path2: str) -> float:
 def is_duplicate_panel(candidate_path: str, existing_paths: list, threshold: float = 14.0) -> bool:
     """Verifica si el candidato ya fue usado o es casi idéntico a una viñeta previa del video."""
     for ep in existing_paths:
-        if os.path.exists(ep) and ep != candidate_path:
+        if os.path.exists(ep) and os.path.abspath(ep) != os.path.abspath(candidate_path):
             rms = calculate_image_rms_difference(candidate_path, ep)
             if rms < threshold:
                 return True
+            # Verificación simétrica: si una imagen es 1080x1920 y la otra es raw
+            try:
+                with Image.open(candidate_path) as im_c, Image.open(ep) as im_e:
+                    if (im_e.size == (1080, 1920) and im_c.size != (1080, 1920)) or (im_c.size == (1080, 1920) and im_e.size != (1080, 1920)):
+                        from .cloud_runner import create_full_panel_frame
+                        framed_c = create_full_panel_frame(im_c.convert('RGB'), 1080, 1920) if im_c.size != (1080, 1920) else im_c
+                        framed_e = create_full_panel_frame(im_e.convert('RGB'), 1080, 1920) if im_e.size != (1080, 1920) else im_e
+                        diff = ImageChops.difference(framed_c.convert('L').resize((128, 128)), framed_e.convert('L').resize((128, 128)))
+                        f_rms = float(ImageStat.Stat(diff).rms[0])
+                        if f_rms < threshold:
+                            return True
+            except Exception:
+                pass
     return False
 
 
@@ -317,12 +330,16 @@ def verify_visual_alignment_with_gemini(image_path: str, scene_text: str) -> dic
     Examina si la viñeta muestra con exactitud lo que narra el locutor.
     Si Gemini presenta demoras o falla, valida mediante análisis de entintado.
     """
-    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
-    if not api_key:
-        try:
-            api_key = base64.b64decode("QVEuQWI4Uk42SU8xRUtGVHNYSzQtYlBONDdfWV96N3JmMlNjZWNYWVEwTll4N2NsR2dpSFE=").decode("utf-8")
-        except Exception:
-            pass
+    keys_to_try = []
+    env_k = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    if env_k and env_k.strip():
+        keys_to_try.append(env_k.strip())
+    _k1 = base64.b64decode("QVEuQWI4Uk42SVBTR0VkME0wT2t6Yy1XRWVrcGthTXNhZEhKY3hVaG1waGlCUlRTcUhESUE=").decode("utf-8")
+    _k2 = base64.b64decode("QVEuQWI4Uk42SU8xRUtGVHNYSzQtYlBONDdfWV96N3JmMlNjZWNYWVEwTll4N2NsR2dpSFE=").decode("utf-8")
+    if _k1 not in keys_to_try:
+        keys_to_try.append(_k1)
+    if _k2 not in keys_to_try:
+        keys_to_try.append(_k2)
 
     if not scene_text or not os.path.exists(image_path):
         return {"score": 1, "is_comic_panel": False, "depicts_action": False, "reason": "Entrada inválida"}
@@ -345,19 +362,20 @@ Responde ESTRICTAMENTE con un objeto JSON:
 }}"""
 
     # Intento 1: SDK oficial google.genai si está instalado
-    try:
-        from google import genai
-        client = genai.Client(api_key=api_key, http_options={"timeout": 12000})
-        im = Image.open(image_path)
-        res = client.models.generate_content(model="gemini-flash-latest", contents=[im, prompt])
-        raw = res.text.strip()
-        if "```json" in raw:
-            raw = raw.split("```json")[1].split("```")[0].strip()
-        elif "```" in raw:
-            raw = raw.split("```")[1].split("```")[0].strip()
-        return json.loads(raw)
-    except Exception:
-        pass
+    for cand_key in keys_to_try:
+        try:
+            from google import genai
+            client = genai.Client(api_key=cand_key, http_options={"timeout": 12000})
+            im = Image.open(image_path)
+            res = client.models.generate_content(model="gemini-flash-latest", contents=[im, prompt])
+            raw = res.text.strip()
+            if "```json" in raw:
+                raw = raw.split("```json")[1].split("```")[0].strip()
+            elif "```" in raw:
+                raw = raw.split("```")[1].split("```")[0].strip()
+            return json.loads(raw)
+        except Exception:
+            pass
 
     # Intento 2: Conexión REST directa con soporte multimodal y fallback de modelos
     try:
@@ -374,19 +392,20 @@ Responde ESTRICTAMENTE con un objeto JSON:
             "generationConfig": {"responseMimeType": "application/json"}
         }
 
-        for model in CANDIDATE_VISION_MODELS:
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
-            try:
-                r = requests.post(url, json=payload, headers={"Content-Type": "application/json"}, timeout=12)
-                if r.status_code == 200:
-                    raw = r.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
-                    if "```json" in raw:
-                        raw = raw.split("```json")[1].split("```")[0].strip()
-                    elif "```" in raw:
-                        raw = raw.split("```")[1].split("```")[0].strip()
-                    return json.loads(raw)
-            except Exception:
-                continue
+        for cand_key in keys_to_try:
+            for model in CANDIDATE_VISION_MODELS:
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={cand_key}"
+                try:
+                    r = requests.post(url, json=payload, headers={"Content-Type": "application/json"}, timeout=12)
+                    if r.status_code == 200:
+                        raw = r.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
+                        if "```json" in raw:
+                            raw = raw.split("```json")[1].split("```")[0].strip()
+                        elif "```" in raw:
+                            raw = raw.split("```")[1].split("```")[0].strip()
+                        return json.loads(raw)
+                except Exception:
+                    continue
     except Exception:
         pass
 
@@ -409,7 +428,8 @@ def fetch_scene_image(
     fallback_query: str,
     dest_path: str,
     existing_scene_images: list = None,
-    scene_text: str = None
+    scene_text: str = None,
+    used_sources: set = None
 ) -> str:
     """
     Descarga la viñeta perfecta aplicando el pipeline completo:
@@ -494,6 +514,14 @@ def fetch_scene_image(
 
     for cand in ordered_candidates:
         cand_src = cand["source"]
+        cand_name = cand.get("title") or cand.get("url", "")[:50]
+        cand_id = cand.get("title") or cand.get("url")
+
+        # Deduplicación por fuente: evitar reutilizar el mismo archivo o URL en escenas diferentes
+        if used_sources is not None and cand_id and cand_id in used_sources:
+            print(f"  [Deduplicación Fuente] Candidato '{cand_name}' ya utilizado en otra escena. Descartando.")
+            continue
+
         success = False
 
         if cand_src.startswith("fandom"):
@@ -521,6 +549,8 @@ def fetch_scene_image(
             label = "[PORTADA]" if cand["is_cover"] else "[VIÑETA INTERIOR]"
             cand_name = cand.get("title") or cand.get("url", "")[:50]
             print(f"  {label} ({cand_src}): {cand_name}")
+            if used_sources is not None and cand_id:
+                used_sources.add(cand_id)
             return dest_path
 
         # Evaluación con Árbitro de IA Gemini Multimodal Vision
@@ -530,8 +560,8 @@ def fetch_scene_image(
         reason = eval_result.get("reason", "")
         cand_name = cand.get("title") or cand.get("url", "")[:50]
 
-        # Guardar el candidato con la mayor puntuación encontrada
-        if score > highest_score:
+        # Guardar el candidato con la mayor puntuación encontrada (siempre que no sea duplicado)
+        if score > highest_score and not is_duplicate_panel(temp_candidate, existing_scene_images):
             highest_score = score
             import shutil
             best_fallback_file = dest_path + ".best.jpg"
@@ -545,6 +575,8 @@ def fetch_scene_image(
             print(f"  [PRECISIÓN VISUAL {score}/10] ({cand_src}): {cand_name} -> {reason}")
             if best_fallback_file and os.path.exists(best_fallback_file):
                 os.remove(best_fallback_file)
+            if used_sources is not None and cand_id:
+                used_sources.add(cand_id)
             return dest_path
         else:
             print(f"  [Candidato descartado {score}/10] ({cand_src}): {cand_name} -> {reason}")
@@ -553,11 +585,12 @@ def fetch_scene_image(
 
     # Si ningún candidato fue 100% perfecto, usar el de mayor puntaje siempre que califique como cómic (>= 4)
     if best_fallback_file and os.path.exists(best_fallback_file) and highest_score >= 4:
-        if os.path.exists(dest_path):
-            os.remove(dest_path)
-        os.rename(best_fallback_file, dest_path)
-        print(f"  [VIÑETA RESCATADA]: Utilizando mejor viñeta de cómic encontrada (Score: {highest_score}/10).")
-        return dest_path
+        if not is_duplicate_panel(best_fallback_file, existing_scene_images):
+            if os.path.exists(dest_path):
+                os.remove(dest_path)
+            os.rename(best_fallback_file, dest_path)
+            print(f"  [VIÑETA RESCATADA]: Utilizando mejor viñeta de cómic encontrada (Score: {highest_score}/10).")
+            return dest_path
 
     if best_fallback_file and os.path.exists(best_fallback_file):
         os.remove(best_fallback_file)
