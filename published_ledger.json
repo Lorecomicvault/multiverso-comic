@@ -758,5 +758,15 @@
     "mode": "live_release",
     "video_file": "Black_Adam_La_Masacre_que_Desató_la_Tercera_Guerra_Mundial.mp4",
     "status": "published"
+  },
+  {
+    "id": "superman_red_son_comunismo",
+    "title": "Superman Red Son: El Hijo Rojo de la Unión Soviética",
+    "character": "Superman",
+    "theme_signature": "superman:red_son:ucrania_stalin_guerra_fria",
+    "date": "2026-09-29 02:42",
+    "mode": "live_release",
+    "video_file": "Superman_Red_Son_El_Hijo_Rojo_de_la_Unión_Soviética.mp4",
+    "status": "published"
   }
 ]
