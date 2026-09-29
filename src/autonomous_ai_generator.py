@@ -18,11 +18,11 @@ from pathlib import Path
 from PIL import Image, ImageStat
 
 CANDIDATE_MODELS = [
-    "gemini-1.5-flash",
-    "gemini-2.0-flash",
-    "gemini-1.5-flash-8b",
-    "gemini-1.5-pro",
-    "gemini-flash-latest"
+    "gemini-3.8-flash",
+    "gemini-3.7-flash",
+    "gemini-3.5-flash",
+    "gemini-flash-latest",
+    "gemini-flash-lite-latest"
 ]
 
 HEADERS = {
@@ -37,23 +37,43 @@ def log(msg: str):
 
 def resolve_fandom_image(wiki: str, query: str) -> str | None:
     """Busca en la API de Fandom el archivo oficial más relevante con extensión de imagen."""
-    url = f"https://{wiki}.fandom.com/api.php?action=query&list=search&srsearch={query}&srnamespace=6&srlimit=8&format=json"
+    from .comic_precision_scraper import is_cover_or_promo_image
+    DISALLOWED_KEYWORDS = [
+        'mug', 'actor', 'film', 'movie', 'live-action', 'live action', 'cast', 'cosplay',
+        'photo', 'shot', 'portrait', 'interview', 'trailer', 'commercial', 'fox', 'warner',
+        'tv', 'series', 'clip', 'joaquin', 'variant', 'poster', 'logo', 'trading cards', 'video game',
+        'soundtrack', 'review', 'bts', 'behind the scenes', 'script', 'text'
+    ]
+    url = f"https://{wiki}.fandom.com/api.php?action=query&list=search&srsearch={urllib.parse.quote(query)}&srnamespace=6&srlimit=12&format=json"
     try:
         r = requests.get(url, headers=HEADERS, timeout=8).json()
+        candidates = []
         for item in r.get('query', {}).get('search', []):
             t = item['title'].replace('File:', '').strip()
-            if any(t.lower().endswith(ext) for ext in ['.jpg', '.jpeg', '.png']):
-                # Filtrar si el título de la imagen delata que es texto o review
-                if any(bad in t.lower() for bad in ['review', 'logo', 'script', 'text']):
+            t_lower = t.lower()
+            if any(t_lower.endswith(ext) for ext in ['.jpg', '.jpeg', '.png']):
+                if any(bad in t_lower for bad in DISALLOWED_KEYWORDS) or is_cover_or_promo_image(t):
                     continue
-                return t
+                # Priorizar si tiene indicios de viñeta interior (from, 001, page, panel)
+                score = 0
+                if 'from' in t_lower:
+                    score += 5
+                if any(p in t_lower for p in ['001', '002', '003', 'page', 'panel']):
+                    score += 5
+                candidates.append((score, t))
+        if candidates:
+            candidates.sort(key=lambda x: x[0], reverse=True)
+            return candidates[0][1]
     except Exception as e:
         log(f"Error resolviendo imagen en Fandom ({wiki}): {e}")
     return None
 
 
 def verify_image_quality(wiki: str, filename: str) -> bool:
-    """Verifica que la imagen exista y que cumpla el Quality Shield (no texto/manuscrito)."""
+    """Verifica que la imagen exista y que cumpla el Quality Shield (no texto/manuscrito ni foto real)."""
+    from .comic_precision_scraper import check_is_comic_art_inking, is_cover_or_promo_image
+    if is_cover_or_promo_image(filename):
+        return False
     api_url = f"https://{wiki}.fandom.com/api.php?action=query&titles=File:{filename}&prop=imageinfo&iiprop=url|size&format=json"
     try:
         r = requests.get(api_url, headers=HEADERS, timeout=10).json()
@@ -71,8 +91,13 @@ def verify_image_quality(wiki: str, filename: str) -> bool:
                     if mean_sat < 15.0 and mean_val > 175.0:
                         log(f"Quality Shield: Rechazada '{filename}' por ser documento de texto/nota (sat={mean_sat:.1f}).")
                         return False
+
+                    # Quality Shield (Inking check)
+                    if not check_is_comic_art_inking(im):
+                        log(f"Quality Shield: Rechazada '{filename}' por no presentar entintado de cómic (foto/actor/live-action).")
+                        return False
                     
-                    if im.width >= 500 or im.height >= 500:
+                    if im.width >= 400 or im.height >= 400:
                         return True
     except Exception as e:
         log(f"Error verificando calidad de '{filename}': {e}")
@@ -108,6 +133,33 @@ EMERGENCY_VIRAL_POOL = [
         ]
     },
     {
+        "id": "superman_red_son_comunismo",
+        "universe": "DC",
+        "character": "Superman",
+        "title": "Superman Red Son: El Hijo Rojo de la Unión Soviética",
+        "theme_signature": "superman:red_son:ucrania_stalin_guerra_fria",
+        "description": "En este universo alternativo, la cápsula de Kal-El aterrizó en la Unión Soviética convirtiendo a Superman en el arma suprema del comunismo.",
+        "hashtags": "#Superman #RedSon #DCComics #SovietSuperman #ComicsNarrados #Shorts #Reels",
+        "scenes": [
+            "¿Sabías que la cápsula espacial de Kal-El no cayó en Kansas, sino en una granja colectiva de la Unión Soviética?",
+            "Criado bajo la doctrina comunista, Superman se convirtió en el arma suprema de Joseph Stalin para dominar el mundo.",
+            "Para derrocar su tiranía roja, un Batman soviético con gorro de invierno usó lámparas solares rojas y lo puso de rodillas.",
+            "Antes de ser capturado, Batman detonó una bomba en su propio estómago sacrificando su vida como símbolo eterno de libertad."
+        ],
+        "scene_art_urls": [
+            "Superman Red Son 01.jpg",
+            "Joseph Stalin Earth-30 001.jpg",
+            "Batman Red Son 02.jpg",
+            "Comrade of Steel.jpg"
+        ],
+        "art_queries": [
+            "Superman Red Son Soviet Union flag",
+            "Superman Red Son Stalin military",
+            "Batman Red Son vs Superman fight",
+            "Batman Red Son bomb suicide freedom"
+        ]
+    },
+    {
         "id": "spiderman_spiders_shadow_simbionte",
         "universe": "Marvel",
         "character": "Spider-Man",
@@ -126,27 +178,6 @@ EMERGENCY_VIRAL_POOL = [
             "Spider's Shadow Peter Parker kills Hobgoblin",
             "Spider's Shadow symbiote monster",
             "Spider-Man symbiote execution sinister six"
-        ]
-    },
-    {
-        "id": "superman_red_son_comunismo",
-        "universe": "DC",
-        "character": "Superman",
-        "title": "Superman Red Son: El Hijo Rojo de la Unión Soviética",
-        "theme_signature": "superman:red_son:ucrania_stalin_guerra_fria",
-        "description": "En este universo alternativo, la cápsula de Kal-El aterrizó en la Unión Soviética convirtiendo a Superman en el arma suprema del comunismo.",
-        "hashtags": "#Superman #RedSon #DCComics #SovietSuperman #ComicsNarrados #Shorts #Reels",
-        "scenes": [
-            "¿Sabías que la cápsula espacial de Kal-El no cayó en Kansas, sino en una granja colectiva de la Unión Soviética?",
-            "Criado bajo la doctrina comunista, Superman se convirtió en el arma suprema de Joseph Stalin para dominar el mundo.",
-            "Para derrocar su tiranía roja, un Batman soviético con gorro de invierno usó lámparas solares rojas y lo puso de rodillas.",
-            "Antes de ser capturado, Batman detonó una bomba en su propio estómago sacrificando su vida como símbolo eterno de libertad."
-        ],
-        "art_queries": [
-            "Superman Red Son Soviet Union flag",
-            "Superman Red Son Stalin military",
-            "Batman Red Son vs Superman fight",
-            "Batman Red Son bomb suicide freedom"
         ]
     },
     {
@@ -189,12 +220,6 @@ EMERGENCY_VIRAL_POOL = [
             "En el centro del Multiverso Oscuro, una grieta dimensional amenazaba con devorar todas las realidades existentes.",
             "La energía cósmica azul envolvió su traje, grabando el símbolo del átomo en su frente y volviéndolo omnisciente.",
             "Con un simple parpadeo mental, Wally reescribió las líneas temporales y salvó a sus hijos atrapados en el olvido."
-        ],
-        "scene_art_urls": [
-            "Flash Forward Vol 1 5.jpg",
-            "Flash Forward Vol 1 6.jpg",
-            "Wallace West (Prime Earth) from Flash Forward Vol 1 6 001.jpg",
-            "Wallace West (Prime Earth) from Flash Forward Vol 1 6 002.jpg"
         ],
         "art_queries": [
             "Wally West Mobius Chair Doctor Manhattan",
@@ -302,7 +327,7 @@ REGLAS INVIOLABLES DE FORMATO:
    - Escena 2: Choque o revelación de horror (15 a 18 palabras).
    - Escena 3: Momento de máxima tensión, muerte o brutalidad (15 a 18 palabras).
    - Escena 4: Desenlace trágico, irónico o épico (15 a 18 palabras).
-5. ALINEACIÓN VISUAL 1:1: Cada escena debe describir EXACTAMENTE lo que se ve en la viñeta/portada. Proporciona palabras clave de búsqueda de cómic para cada escena en 'art_queries' (ej: 'Spider's Shadow 1 cover', 'Batman White Knight 2').
+5. ALINEACIÓN VISUAL 1:1: Cada escena debe describir EXACTAMENTE lo que se ve en la viñeta interior de cómic (PROHIBIDAS portadas comerciales, portadas variantes, logos, fotos reales y actores). En 'art_queries' proporciona términos de búsqueda enfocados en VIÑETAS INTERIORES del cómic (ej: 'Spider-Man Spiders Shadow interior panel 1', 'Batman White Knight panel Joker sanity').
 
 Devuelve ÚNICAMENTE un objeto JSON válido con este esquema:
 {{
@@ -363,33 +388,36 @@ Devuelve ÚNICAMENTE un objeto JSON válido con este esquema:
             continue
 
         # Resolver y validar viñetas oficiales en Fandom
+        from .cloud_runner import get_story_comic_wiki
+        wiki_domain = get_story_comic_wiki(story)
+        wiki = 'dc' if 'dc' in wiki_domain else 'marvel'
         char_name = story.get("character", "")
-        dc_chars = ['Batman', 'Superman', 'The Flash', 'Green Lantern', 'Sinestro', 'Superboy Prime', 'Joker', 'Constantine', 'Aquaman', 'Wally West', 'Grim Knight']
-        wiki = 'dc' if any(c.lower() in char_name.lower() for c in dc_chars) else 'marvel'
 
         resolved_art = []
         art_queries = story.get("art_queries", [])
 
         for idx, q in enumerate(art_queries, 1):
             log(f"Resolviendo viñeta oficial para escena {idx}: '{q}'...")
-            img_name = resolve_fandom_image(wiki, q)
-            if img_name and img_name not in resolved_art and verify_image_quality(wiki, img_name):
-                resolved_art.append(img_name)
-                continue
-            
-            fallback_query = f"{char_name} Vol 1 {idx}"
-            img_name = resolve_fandom_image(wiki, fallback_query)
-            if img_name and img_name not in resolved_art and verify_image_quality(wiki, img_name):
-                resolved_art.append(img_name)
-                continue
+            panel_queries = [
+                q,
+                f"{char_name} 00{idx}",
+                f"{char_name} panel",
+                f"{char_name} from"
+            ]
+            found_panel = None
+            for p_q in panel_queries:
+                cand = resolve_fandom_image(wiki, p_q)
+                if cand and cand not in resolved_art and verify_image_quality(wiki, cand):
+                    found_panel = cand
+                    break
 
-            img_name = resolve_fandom_image(wiki, char_name)
-            if img_name and img_name not in resolved_art and verify_image_quality(wiki, img_name):
-                resolved_art.append(img_name)
+            if found_panel:
+                resolved_art.append(found_panel)
             else:
-                resolved_art.append(f"{char_name.replace(' ', '_')}_Vol_1_{idx}.jpg")
+                log(f"Aviso escena {idx}: Viñeta Fandom no resuelta en precarga. El scraper multi-fuente y Bing la obtendrán durante el render.")
 
-        story["scene_art_urls"] = resolved_art
+        if resolved_art:
+            story["scene_art_urls"] = resolved_art
         story["voice"] = "Puck"
         story["tts_model"] = "gemini-3.8-flash-tts"
         story["fallback_tts_model"] = "gemini-3.8-flash-lite-tts"

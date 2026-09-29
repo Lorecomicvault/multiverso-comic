@@ -20,32 +20,32 @@ DC_CHARACTERS = {
     'green lantern', 'hal jordan', 'red hood', 'jason todd', 'aquaman', 'dark multiverse', 'shazam',
     'black adam', 'teth-adam', 'bialya', 'constantine', 'john constantine', 'swamp thing', 'bane',
     'robin', 'nightwing', 'dick grayson', 'cyborg', 'martian manhunter', 'lex luthor', 'brainiac',
-    'zatanna', 'harley quinn', 'sinestro', 'riddler', 'penguin', 'two-face', 'scarecrow', 'catwoman'
+    'zatanna', 'harley quinn', 'sinestro', 'riddler', 'penguin', 'two-face', 'scarecrow', 'catwoman',
+    'grim knight', 'the grim knight', 'justice league', 'justice society', 'teen titans', 'arkham', 'gotham'
 }
 
-MARVEL_CHARACTERS = {
-    'franklin richards', 'thor', 'gorr', 'god butcher', 'god emperor doom', 'doctor doom', 'knull',
-    'world war hulk', 'hulk', 'living tribunal', 'sentry', 'void', 'galactus', 'beyonder',
-    'one above all', 'thanos', 'spider-man', 'iron man', 'wolverine', 'deadpool', 'avengers',
-    'fantastic four', 'magneto', 'carnage', 'venom', 'silver surfer', 'daredevil', 'punisher'
-}
+DISALLOWED_KEYWORDS = [
+    'mug', 'actor', 'film', 'movie', 'live-action', 'live action', 'cast', 'cosplay',
+    'photo', 'shot', 'portrait', 'interview', 'trailer', 'commercial', 'fox', 'warner',
+    'tv', 'series', 'clip', 'joaquin', 'variant', 'poster', 'logo', 'cover', 'tpb',
+    'omnibus', 'action figure', 'toy', 'statue', 'cosplayer', 'trading cards', 'video game',
+    'soundtrack', 'review', 'bts', 'behind the scenes'
+]
 
 
 def _detect_primary_wiki(character_name: str) -> list[str]:
     """Determina si el personaje pertenece a DC o Marvel para buscar en la wiki correcta."""
     norm = character_name.lower().strip()
     is_dc = any(dc_name in norm for dc_name in DC_CHARACTERS)
-    is_marvel = any(mv_name in norm for mv_name in MARVEL_CHARACTERS)
-
-    if is_dc and not is_marvel:
+    if is_dc:
         return ['dc']
-    elif is_marvel and not is_dc:
-        return ['marvel']
-    return ['dc', 'marvel']
+    return ['marvel']
 
 
 def get_fandom_comic_art(character_name: str, count: int = 10) -> list[str]:
     """Obtiene arte e ilustraciones oficiales de cómics reales desde Marvel y DC Fandom con validación estricta."""
+    from .comic_precision_scraper import is_cover_or_promo_image, check_is_comic_art_inking
+
     wikis = _detect_primary_wiki(character_name)
     found_urls = []
     char_terms = set(re.findall(r'\w+', character_name.lower()))
@@ -60,18 +60,18 @@ def get_fandom_comic_art(character_name: str, count: int = 10) -> list[str]:
             search_data = res.json()
             raw_results = search_data.get('query', {}).get('search', [])
 
-            # Filtrar páginas que realmente tengan relevancia con el personaje
             valid_titles = []
             for item in raw_results:
                 title = item.get('title', '')
                 title_lower = title.lower()
+                # Descartar páginas de películas, actores o series
+                if any(bad in title_lower for bad in DISALLOWED_KEYWORDS):
+                    continue
                 title_words = set(re.findall(r'\w+', title_lower))
 
-                # Si al menos un término clave coincide con el título o es una página canónica
                 if char_terms.intersection(title_words) or any(k in title_lower for k in ['earth', 'prime', 'vol', 'metal', 'wars', 'secret']):
                     valid_titles.append(title)
 
-            # Priorizar galerías y páginas canónicas
             valid_titles = sorted(valid_titles, key=lambda t: 0 if any(k in t for k in ['Earth', 'Prime', '616', 'Gallery']) else 1)
 
             for title in valid_titles[:5]:
@@ -83,6 +83,10 @@ def get_fandom_comic_art(character_name: str, count: int = 10) -> list[str]:
                         for p in pages.values():
                             img_title = p.get('title', '').lower()
 
+                            # Descartar imágenes de películas, actores, fotos, portadas
+                            if any(bad in img_title for bad in DISALLOWED_KEYWORDS) or is_cover_or_promo_image(img_title):
+                                continue
+
                             # Descartar imágenes de personajes ajenos
                             if wiki == 'dc' and any(m in img_title for m in ['deadpool', 'spiderman', 'spider-man', 'avengers', 'marvel', 'x-men']):
                                 continue
@@ -93,8 +97,10 @@ def get_fandom_comic_art(character_name: str, count: int = 10) -> list[str]:
                                 u = info.get('url', '')
                                 w = info.get('width', 0)
                                 h = info.get('height', 0)
-                                # Solo arte de cómics vertical/portadas en alta resolución
-                                if w >= 500 and h >= 650:
+                                if any(bad in u.lower() for bad in DISALLOWED_KEYWORDS) or is_cover_or_promo_image(u):
+                                    continue
+                                # Solo arte de cómics en alta resolución
+                                if w >= 450 and h >= 450:
                                     clean_u = u.split('/revision/')[0]
                                     if clean_u not in found_urls and any(clean_u.lower().endswith(ext) for ext in ['.jpg', '.jpeg', '.png', '.webp']):
                                         found_urls.append(clean_u)
@@ -109,7 +115,10 @@ def get_fandom_comic_art(character_name: str, count: int = 10) -> list[str]:
 
 def download_comic_art_image(url: str, output_path: str) -> bool:
     """Descarga y guarda una imagen oficial de cómic en formato JPEG de alta calidad."""
+    from .comic_precision_scraper import check_is_comic_art_inking, is_cover_or_promo_image
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    if is_cover_or_promo_image(url):
+        return False
     try:
         r = requests.get(url, headers=HEADERS, timeout=12)
         if r.status_code == 200 and len(r.content) > 20000:
@@ -120,6 +129,10 @@ def download_comic_art_image(url: str, output_path: str) -> bool:
             mean_sat, mean_val = stat.mean[1], stat.mean[2]
             if mean_sat < 15.0 and mean_val > 175.0:
                 print(f"  [QUALITY SHIELD] Rechazada imagen con texto/nota manuscrita: {Path(output_path).name} (sat={mean_sat:.1f})")
+                return False
+            # Quality Shield: Reject live-action photos, actors, or objects
+            if not check_is_comic_art_inking(img):
+                print(f"  [QUALITY SHIELD] Rechazada imagen por entintado (posible foto real/actor): {Path(output_path).name}")
                 return False
             img.save(output_path, "JPEG", quality=95)
             print(f"  [OK] Guardado arte oficial de cómic: {Path(output_path).name} ({img.width}x{img.height})")

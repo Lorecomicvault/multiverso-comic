@@ -523,6 +523,12 @@ EDITORIAL_STORIES = [
             "Para derrocar su tiranía roja, un Batman soviético con gorro de invierno usó lámparas solares rojas y lo puso de rodillas.",
             "Antes de ser capturado, Batman detonó una bomba en su propio estómago sacrificando su vida como símbolo eterno de libertad."
         ],
+        "scene_art_urls": [
+            "Superman Red Son 01.jpg",
+            "Joseph Stalin Earth-30 001.jpg",
+            "Batman Red Son 02.jpg",
+            "Comrade of Steel.jpg"
+        ],
         "art_queries": [
             "Superman Red Son Soviet ship landing collective farm",
             "Superman Soviet Stalin hammer sickle",

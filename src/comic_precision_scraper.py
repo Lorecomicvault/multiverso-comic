@@ -151,6 +151,14 @@ def get_file_url_cross_wiki(primary_wiki: str, file_title: str):
     return None, None
 
 
+DISALLOWED_SCRAPER_KEYWORDS = [
+    'mug', 'actor', 'film', 'movie', 'live-action', 'live action', 'cast', 'cosplay',
+    'photo', 'shot', 'portrait', 'interview', 'trailer', 'commercial', 'fox', 'warner',
+    'tv', 'series', 'clip', 'joaquin', 'variant', 'poster', 'logo', 'trading cards', 'video game',
+    'soundtrack', 'review', 'bts', 'behind the scenes', 'script', 'text'
+]
+
+
 def get_issue_category_panels(wiki_domain: str, query_str: str) -> list:
     """
     Extrae la lista de viñetas interiores escaneadas desde la categoría oficial
@@ -176,13 +184,17 @@ def get_issue_category_panels(wiki_domain: str, query_str: str) -> list:
     try:
         r = requests.get(url, params=params, headers=HEADERS, timeout=10)
         items = r.json().get("query", {}).get("categorymembers", [])
-        return [it["title"] for it in items if not is_cover_or_promo_image(it["title"])]
+        return [
+            it["title"] for it in items
+            if not is_cover_or_promo_image(it["title"])
+            and not any(bad in it["title"].lower() for bad in DISALLOWED_SCRAPER_KEYWORDS)
+        ]
     except Exception:
         return []
 
 
 def search_fandom_files(wiki_domain: str, query: str, max_results: int = 8) -> list:
-    """Búsqueda semántica de archivos en Fandom filtrando por extensión de imagen."""
+    """Búsqueda semántica de archivos en Fandom filtrando por extensión de imagen y descartando películas/portadas."""
     url = f"https://{wiki_domain}/api.php"
     params = {
         "action": "query",
@@ -198,7 +210,10 @@ def search_fandom_files(wiki_domain: str, query: str, max_results: int = 8) -> l
         files = []
         for it in items:
             t = it["title"]
-            if any(t.lower().endswith(ext) for ext in [".jpg", ".jpeg", ".png", ".webp"]):
+            t_low = t.lower()
+            if any(t_low.endswith(ext) for ext in [".jpg", ".jpeg", ".png", ".webp"]):
+                if is_cover_or_promo_image(t) or any(bad in t_low for bad in DISALLOWED_SCRAPER_KEYWORDS):
+                    continue
                 files.append(t)
         return files
     except Exception:

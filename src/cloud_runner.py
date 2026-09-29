@@ -276,6 +276,11 @@ def download_comic_panel(url_or_file: str, character: str, dest_path: Path, min_
         try:
             r = requests.get(c_url, headers=headers, timeout=15)
             if r.status_code == 200 and len(r.content) > 10000:
+                from .comic_precision_scraper import is_cover_or_promo_image, check_is_comic_art_inking
+                if is_cover_or_promo_image(c_url):
+                    log(f"Quality Shield: Rejected '{c_url.split('/')[-1]}' because it is a cover/promo.")
+                    continue
+
                 im = Image.open(io.BytesIO(r.content)).convert("RGB")
                 
                 # CRITICAL QUALITY SHIELD: Reject text-only pages, letters or handwritten notes
@@ -285,6 +290,11 @@ def download_comic_panel(url_or_file: str, character: str, dest_path: Path, min_
                 mean_val = stat.mean[2] # High value = bright white paper
                 if mean_sat < 15.0 and mean_val > 175.0:
                     log(f"Quality Shield: Rejected '{c_url.split('/')[-1]}' because it is a text document / handwritten note (sat={mean_sat:.1f}).")
+                    continue
+
+                # CRITICAL QUALITY SHIELD: Reject real-life photos, actors or non-comic objects
+                if not check_is_comic_art_inking(im):
+                    log(f"Quality Shield: Rejected '{c_url.split('/')[-1]}' because it failed comic inking verification (photo/actor/live-action).")
                     continue
 
                 if im.width >= min_dim or im.height >= min_dim:
@@ -366,11 +376,32 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
             fallback_urls = get_fandom_comic_art(story.get("character", "Batman"), count=8)
             for fb_u in fallback_urls:
                 if not is_cover_or_promo_image(fb_u) and download_comic_panel(fb_u, story.get("character", ""), img_file):
-                    from .comic_precision_scraper import is_duplicate_panel
-                    if not is_duplicate_panel(str(img_file), raw_downloaded_images + [str(p) for p in downloaded_images]):
-                        saved = True
-                        break
-                    else:
+                    from .comic_precision_scraper import is_duplicate_panel, check_is_comic_art_inking
+                    try:
+                        with Image.open(img_file) as im_chk:
+                            if check_is_comic_art_inking(im_chk) and not is_duplicate_panel(str(img_file), raw_downloaded_images + [str(p) for p in downloaded_images]):
+                                saved = True
+                                break
+                    except Exception:
+                        pass
+                    img_file.unlink(missing_ok=True)
+
+        # Fallback C: Web interior comic scans via Bing with deduplication and inking checks
+        if not saved or not img_file.exists():
+            log(f"Scene {idx}: Querying web interior comic scans via Bing...")
+            from .comic_precision_scraper import search_bing_comic_panels, download_web_panel, check_is_comic_art_inking, is_duplicate_panel
+            char_q = story.get("character", "")
+            web_cand_urls = search_bing_comic_panels(f"{char_q} interior comic panel scan", limit=8)
+            for wb_u in web_cand_urls:
+                if download_web_panel(wb_u, str(img_file)):
+                    try:
+                        with Image.open(img_file) as wb_im:
+                            if check_is_comic_art_inking(wb_im) and not is_duplicate_panel(str(img_file), raw_downloaded_images + [str(p) for p in downloaded_images]):
+                                saved = True
+                                break
+                    except Exception:
+                        pass
+                    if img_file.exists():
                         img_file.unlink(missing_ok=True)
 
         # CRITICAL FAIL-SAFE: NO BLACK SCREEN VIDEOS EVER!
@@ -441,13 +472,26 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
 
     # 3. Comic Inking Edge Art Check (Zero real-life photos, food, or live-action actors)
     from .comic_precision_scraper import check_is_comic_art_inking
-    for idx_img, p in enumerate(downloaded_images, 1):
-        with Image.open(p) as test_im:
-            if not check_is_comic_art_inking(test_im):
-                raise RuntimeError(
-                    f"QUALITY GATE FATAL ERROR: Scene {idx_img} image ({p.name}) failed comic inking verification. "
-                    "Detected real-life photo, non-comic object, or live-action actor. Halting video compilation."
-                )
+    for idx_img, (p, raw_p) in enumerate(zip(downloaded_images, raw_downloaded_images), 1):
+        passed = False
+        try:
+            with Image.open(raw_p) as r_im:
+                if check_is_comic_art_inking(r_im):
+                    passed = True
+        except Exception:
+            pass
+        if not passed:
+            try:
+                with Image.open(p) as f_im:
+                    if check_is_comic_art_inking(f_im):
+                        passed = True
+            except Exception:
+                pass
+        if not passed:
+            raise RuntimeError(
+                f"QUALITY GATE FATAL ERROR: Scene {idx_img} image ({p.name}) failed comic inking verification. "
+                "Detected real-life photo, non-comic object, or live-action actor. Halting video compilation."
+            )
 
     log("Production Quality Gate: ALL CHECKS PASSED (100% Unique Panels, 0 Duplicates, High Resolution, Verified Comic Art).")
 
