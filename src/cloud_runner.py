@@ -341,6 +341,17 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
             log(f"Scene {idx}: Explicit target '{target}' is a comic cover! Banned by Quality Shield to enforce interior action panels.")
             target = None
 
+        # Si target es un archivo local verificado en el repositorio, usarlo directamente
+        if target and not saved:
+            local_cand = Path(target)
+            if not local_cand.is_absolute():
+                local_cand = Path.cwd() / target
+            if local_cand.is_file() and local_cand.stat().st_size > 10000:
+                import shutil
+                shutil.copy2(str(local_cand), str(img_file))
+                saved = True
+                log(f"Scene {idx}: Using local verified authentic comic panel from repository: '{target}'")
+
         # Primary: Multi-Source Precision Scraper with Gemini Vision Referee
         try:
             from .comic_precision_scraper import fetch_scene_image

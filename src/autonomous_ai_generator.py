@@ -249,11 +249,17 @@ EMERGENCY_VIRAL_POOL = [
             "Dentro de su mente, un anciano y enfermo Bruce Banner le ruega a Hulk que lo deje morir en paz.",
             "Cuando el corazón de Banner se detiene para siempre, Hulk queda solo en la oscuridad absoluta, anhelando un final que jamás llegará."
         ],
+        "scene_art_urls": [
+            "assets/curated_panels/hulk_the_end/scene_01.jpg",
+            "assets/curated_panels/hulk_the_end/scene_02.jpg",
+            "assets/curated_panels/hulk_the_end/scene_03.jpg",
+            "assets/curated_panels/hulk_the_end/scene_04.jpg"
+        ],
         "art_queries": [
-            "Hulk The End wasteland solitary",
-            "Hulk The End giant cockroaches eating flesh",
-            "Bruce Banner old dying Hulk The End",
-            "Hulk alone in the dark The End ending"
+            "Bruce Banner (Earth-2081) from Incredible Hulk The End Vol 1 1 0001.jpg",
+            "Bruce Banner (Earth-2081) from Incredible Hulk The End Vol 1 1 0002.jpg",
+            "Hulk The End regenerating Dale Keown comic panel",
+            "Hulk The End feels cold final panel"
         ]
     }
 ]
@@ -401,9 +407,8 @@ Devuelve ÚNICAMENTE un objeto JSON válido con este esquema:
             log(f"Resolviendo viñeta oficial para escena {idx}: '{q}'...")
             panel_queries = [
                 q,
-                f"{char_name} 00{idx}",
-                f"{char_name} panel",
-                f"{char_name} from"
+                f"{char_name} {story.get('title', '')} interior panel",
+                f"{char_name} {story.get('theme_signature', '').replace(':', ' ')}"
             ]
             found_panel = None
             for p_q in panel_queries:
