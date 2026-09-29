@@ -748,5 +748,15 @@
     "mode": "live_release",
     "video_file": "The_Punisher_El_Día_en_que_Frank_Castle_Masacró_a_Marvel.mp4",
     "status": "published"
+  },
+  {
+    "id": "black_adam_tercera_guerra_mundial",
+    "title": "Black Adam: La Masacre que Desató la Tercera Guerra Mundial",
+    "character": "Black Adam",
+    "theme_signature": "black_adam:tercera_guerra:bialya_masacre",
+    "date": "2026-09-29 00:16",
+    "mode": "live_release",
+    "video_file": "Black_Adam_La_Masacre_que_Desató_la_Tercera_Guerra_Mundial.mp4",
+    "status": "published"
   }
 ]
