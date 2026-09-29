@@ -798,5 +798,15 @@
     "mode": "live_release",
     "video_file": "Dark_Phoenix_El_Genocidio_Cósmico_de_Cinco_Mil_Millones_de_Vidas.mp4",
     "status": "published"
+  },
+  {
+    "id": "ultron_unlimited_masacre_slorenia",
+    "title": "Ultron Unlimited: La Purga de Slorenia",
+    "character": "Ultron",
+    "theme_signature": "ultron:ultron_unlimited:genocidio_slorenia",
+    "date": "2026-09-29 22:07",
+    "mode": "live_release",
+    "video_file": "Ultron_Unlimited_La_Purga_de_Slorenia.mp4",
+    "status": "published"
   }
 ]
