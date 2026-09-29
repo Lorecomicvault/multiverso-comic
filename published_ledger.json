@@ -788,5 +788,15 @@
     "mode": "live_release",
     "video_file": "Hulk_The_End_El_Último_Ser_Vivo_en_la_Tierra.mp4",
     "status": "published"
+  },
+  {
+    "id": "dark_phoenix_genocidio_dbari",
+    "title": "Dark Phoenix: El Genocidio Cósmico de Cinco Mil Millones de Vidas",
+    "character": "Jean Grey",
+    "theme_signature": "jean_grey:dark_phoenix_saga:dbari_genocide",
+    "date": "2026-09-29 19:06",
+    "mode": "live_release",
+    "video_file": "Dark_Phoenix_El_Genocidio_Cósmico_de_Cinco_Mil_Millones_de_Vidas.mp4",
+    "status": "published"
   }
 ]
