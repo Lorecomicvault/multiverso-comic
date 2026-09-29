@@ -768,5 +768,15 @@
     "mode": "live_release",
     "video_file": "Superman_Red_Son_El_Hijo_Rojo_de_la_Unión_Soviética.mp4",
     "status": "published"
+  },
+  {
+    "id": "spider_man_spiders_shadow_kingpin",
+    "title": "Spider-Man Spider's Shadow: La Ejecución Sádica de Kingpin",
+    "character": "Spider-Man",
+    "theme_signature": "spider_man:spiders_shadow:kingpin_death",
+    "date": "2026-09-29 16:00",
+    "mode": "live_release",
+    "video_file": "Spider-Man_Spiders_Shadow_La_Ejecución_Sádica_de_Kingpin.mp4",
+    "status": "published"
   }
 ]
