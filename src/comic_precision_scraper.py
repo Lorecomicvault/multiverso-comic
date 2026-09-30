@@ -32,11 +32,10 @@ WIKI_DOMAINS = [
 ]
 
 CANDIDATE_VISION_MODELS = [
-    "gemini-1.5-flash",
-    "gemini-2.0-flash",
-    "gemini-1.5-flash-8b",
-    "gemini-1.5-pro",
-    "gemini-flash-latest"
+    "gemini-flash-latest",
+    "gemini-2.5-flash",
+    "gemini-pro-latest",
+    "gemini-2.5-pro"
 ]
 
 # -------------------------------------------------------------------------
@@ -429,7 +428,7 @@ Responde ESTRICTAMENTE con un objeto JSON:
         im = Image.open(image_path)
         if not check_is_comic_art_inking(im):
             return {"score": 1, "is_comic_panel": False, "depicts_action": False, "reason": "Rechazado: La imagen no presenta entintado de cómic (posible foto real/actor/objeto)"}
-        return {"score": 5, "is_comic_panel": True, "depicts_action": True, "reason": "Aprobado por heurística de entintado (Gemini en alta demanda)"}
+        return {"score": 4, "is_comic_panel": True, "depicts_action": False, "reason": "Arte de cómic detectado por entintado, pero alineación con la narración no pudo ser verificada por Gemini"}
     except Exception:
         return {"score": 1, "is_comic_panel": False, "depicts_action": False, "reason": "Error procesando imagen para verificación"}
 
