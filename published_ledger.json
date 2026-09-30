@@ -808,5 +808,15 @@
     "mode": "live_release",
     "video_file": "Ultron_Unlimited_La_Purga_de_Slorenia.mp4",
     "status": "published"
+  },
+  {
+    "id": "wolverine_enemy_of_the_state",
+    "title": "Wolverine Enemy of the State: La Masacre Controlada por Hydra",
+    "character": "Wolverine",
+    "theme_signature": "wolverine:enemy_of_the_state:hydra_assassin",
+    "date": "2026-09-30 02:06",
+    "mode": "live_release",
+    "video_file": "Wolverine_Enemy_of_the_State_La_Masacre_Controlada_por_Hydra.mp4",
+    "status": "published"
   }
 ]
