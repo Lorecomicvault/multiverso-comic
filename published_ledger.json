@@ -828,5 +828,15 @@
     "mode": "live_release",
     "video_file": "Lobo_El_Genocidio_de_Czarnia.mp4",
     "status": "published"
+  },
+  {
+    "id": "spawn_guerra_malebolgia",
+    "title": "Spawn: La Guerra Sangrienta Contra Malebolgia en el Infierno",
+    "character": "Spawn",
+    "theme_signature": "spawn:malebolgia:guerra_infernales",
+    "date": "2026-09-30 19:10",
+    "mode": "live_release",
+    "video_file": "Spawn_La_Guerra_Sangrienta_Contra_Malebolgia_en_el_Infierno.mp4",
+    "status": "published"
   }
 ]
