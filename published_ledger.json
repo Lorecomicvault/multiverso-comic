@@ -838,5 +838,15 @@
     "mode": "live_release",
     "video_file": "Spawn_La_Guerra_Sangrienta_Contra_Malebolgia_en_el_Infierno.mp4",
     "status": "published"
+  },
+  {
+    "id": "magneto_ultimatum_genocidio",
+    "title": "Magneto: El Día que Ahogó al Mundo",
+    "character": "Magneto",
+    "theme_signature": "magneto:ultimatum:genocidio_global",
+    "date": "2026-09-30 22:09",
+    "mode": "live_release",
+    "video_file": "Magneto_El_Día_que_Ahogó_al_Mundo.mp4",
+    "status": "published"
   }
 ]
