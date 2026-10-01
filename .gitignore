@@ -29,6 +29,7 @@ temp/
 scratch_cloud_gen/
 gh_artifacts*/
 run_*_logs/
+run_*_artifacts/
 remotion/node_modules/
 remotion/public/*.mp4
 remotion/public/*.mp3
