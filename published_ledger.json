@@ -878,5 +878,15 @@
     "mode": "live_release",
     "video_file": "Blue_Beetle_El_Trágico_Destino_de_Ted_Kord.mp4",
     "status": "published"
+  },
+  {
+    "id": "watchmen_la_tragica_muerte_de_rorschach",
+    "title": "Watchmen: La Trágica Muerte de Rorschach",
+    "character": "Rorschach",
+    "theme_signature": "rorschach:watchmen:muerte_dr_manhattan",
+    "date": "2026-10-01 14:09",
+    "mode": "live_release",
+    "video_file": "Watchmen_La_Trágica_Muerte_de_Rorschach.mp4",
+    "status": "published"
   }
 ]
