@@ -58,11 +58,11 @@ on:
       mode:
         description: 'Modo de Ejecucion (render_only vs live_release)'
         required: true
-        default: 'render_only'
+        default: 'live_release'
         type: choice
         options:
-          - render_only
           - live_release
+          - render_only
           - draft_only
           - dry_run
 
@@ -126,7 +126,7 @@ jobs:
           BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_ACCESS_TOKEN || 'TgAoAyRxipfYzSzSROuWF5GQcGD9rXnGE2_lshtduM3' }}
           BUFFER_TIKTOK_CHANNEL_ID: ${{ secrets.BUFFER_TIKTOK_CHANNEL_ID || '6aba9f05ea19ca0bde156163' }}
           VOICE: 'Puck'
-          EVENT_MODE: ${{ github.event.inputs.mode || 'render_only' }}
+          EVENT_MODE: ${{ github.event.inputs.mode || 'live_release' }}
         run: |
           ARGS=""
           MODE="${EVENT_MODE}"
