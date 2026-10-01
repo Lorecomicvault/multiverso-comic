@@ -908,5 +908,15 @@
     "mode": "live_release",
     "video_file": "Darth_Vader_Solo_Veo_Miedo_y_Hombres_Muertos.mp4",
     "status": "published"
+  },
+  {
+    "id": "dceased_infeccion_anti_vida_batman",
+    "title": "DCeased: La Caída de Batman y la Trágica Despedida a Alfred",
+    "character": "Batman",
+    "theme_signature": "dceased:anti_vida:infeccion_batcueva_alfred",
+    "date": "2026-10-01 19:12",
+    "mode": "live_release",
+    "video_file": "DCeased_La_Caída_de_Batman_y_la_Trágica_Despedida_a_Alfred.mp4",
+    "status": "published"
   }
 ]
