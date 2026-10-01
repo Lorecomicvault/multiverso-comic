@@ -754,19 +754,25 @@ EDITORIAL_STORIES = [
         "character": "Darth Vader",
         "title": "Darth Vader: Solo Veo Miedo y Hombres Muertos",
         "theme_signature": "darth_vader:vader_down:emboscada_hombres_muertos",
-        "description": "Rodeado por un ejército rebelde entero con tanques y artillería pesada que le exigían rendición, Darth Vader encendió su sable rojo y pronunció la frase más legendaria del cómic.",
+        "description": "Rodeado por un ejército rebelde entero con tanques y artillería pesada que le exigían rendición, Darth Vader encendió su sable carmesí y pronunció la frase más legendaria del cómic.",
         "hashtags": "#DarthVader #StarWars #VaderDown #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "¿Sabías que en los cómics oficiales de Star Wars, Darth Vader pronunció la frase más aterradora de la franquicia?",
-            "Varado tras estrellar su nave, un ejército entero de soldados rebeldes y tanques lo rodearon exigiéndole su rendición inmediata.",
-            "Sin vacilar un segundo, Vader encendió su sable carmesí y respondió: 'Todo lo que veo a mi alrededor es miedo... y hombres muertos'.",
-            "Activando a distancia los detonadores térmicos del enemigo con la Fuerza, exterminó al batallón completo en segundos."
+            "¿Sabías que tras estrellar su caza en el planeta Vrogas Vas, Darth Vader quedó solo en un desierto hostil?",
+            "Un caza rebelde colisionó violentamente contra la nave de Vader en un choque aéreo devastador.",
+            "Rodeado por el ejército enemigo, Vader encendió su sable y sentenció: 'Todo lo que veo es miedo... y hombres muertos'.",
+            "Bajo una lluvia mortal de disparos láser, Vader desvió el fuego con la Fuerza y contraatacó implacable."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/darth_vader_down/scene_01.jpg",
+            "assets/curated_panels/darth_vader_down/scene_02.jpg",
+            "assets/curated_panels/darth_vader_down/scene_03.jpg",
+            "assets/curated_panels/darth_vader_down/scene_04.jpg"
         ],
         "art_queries": [
-            "Darth Vader surrounded Rebel army Vader Down comic panel",
-            "Vader Down Commander tells Vader surrender comic panel",
+            "Darth Vader alone desert Vrogas Vas surface comic panel",
+            "Luke Skywalker X-wing crashes into Darth Vader TIE fighter comic panel",
             "Darth Vader all I am surrounded by is fear and dead men comic panel",
-            "Darth Vader ignites thermal detonators slaughter Rebels Vader Down comic panel"
+            "Darth Vader deflecting blaster fire with the Force comic panel"
         ]
     }
 ]
