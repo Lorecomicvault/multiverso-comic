@@ -888,5 +888,15 @@
     "mode": "live_release",
     "video_file": "Watchmen_La_Trágica_Muerte_de_Rorschach.mp4",
     "status": "published"
+  },
+  {
+    "id": "venom_el_origen_del_simbionte_letal",
+    "title": "Venom: El Nacimiento del Protector Letal",
+    "character": "Venom",
+    "theme_signature": "venom:eddie_brock:origen_iglesia_simbionte",
+    "date": "2026-10-01 16:39",
+    "mode": "live_release",
+    "video_file": "Venom_El_Nacimiento_del_Protector_Letal.mp4",
+    "status": "published"
   }
 ]
