@@ -644,24 +644,24 @@ EDITORIAL_STORIES = [
         ]
     },
     {
-        "id": "conquest_invincible_la_masacre_viltrumita",
-        "universe": "Image",
-        "character": "Conquest",
-        "title": "Invincible: Conquest y la Brutal Masacre Viltrumita",
-        "theme_signature": "invincible:conquest:atom_eve_cabezazos_masacre",
-        "description": "La llegada de Conquest desató la batalla más sangrienta de Invincible: tras atravesar a Atom Eve con su puño, Mark Grayson destrozó sus propios huesos a cabezazos para detenerlo.",
-        "hashtags": "#Invincible #Conquest #MarkGrayson #AtomEve #ImageComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "id": "captain_america_el_soldado_del_invierno",
+        "universe": "Marvel",
+        "character": "Captain America",
+        "title": "Capitán América: El Regreso del Soldado del Invierno",
+        "theme_signature": "captain_america:winter_soldier:bucky_barnes_asesino_cosmic_cube",
+        "description": "Steve Rogers descubre la desgarradora verdad: su querido hermano de armas Bucky Barnes sobrevivió a la guerra convertido en el despiadado asesino de HYDRA, el Soldado del Invierno.",
+        "hashtags": "#CaptainAmerica #WinterSoldier #BuckyBarnes #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "¿Sabías que en Invincible, la llegada de Conquest desató la batalla más sangrienta y perturbadora de la saga?",
-            "El sádico viltrumita atravesó el abdomen de Atom Eve con su puño, dejándola agonizando en el suelo.",
-            "Enloquecido de dolor y furia, Mark se lanzó sobre Conquest destrozando sus propios huesos a golpes implacables.",
-            "Con cabezazos brutales y desesperados, Mark pulverizó el cráneo del invasor en una victoria cubierta de sangre."
+            "¿Sabías que tras décadas de creerlo muerto, el Capitán América descubrió que Bucky Barnes era el asesino más letal de HYDRA?",
+            "Con un brazo biónico de titanio y la memoria lavada, el Soldado del Invierno ejecutó a cientos de objetivos en las sombras.",
+            "En un feroz combate cuerpo a cuerpo, Steve Rogers logró quitarle la máscara reconociendo los ojos de su hermano de armas.",
+            "Usando el Cubo Cósmico para restaurar sus recuerdos, Bucky cayó de rodillas abrumado por el dolor de sus crímenes."
         ],
         "art_queries": [
-            "Conquest arrives Earth Invincible comic panel",
-            "Conquest punches through Atom Eve Invincible 64 comic panel",
-            "Mark Grayson punches Conquest broken bones Invincible comic panel",
-            "Invincible headbutt Conquest comic panel bloody skull"
+            "Captain America Winter Soldier highway sniper comic panel",
+            "Winter Soldier bionic arm cybernetic Hydra comic panel",
+            "Captain America unmasks Winter Soldier Bucky Ed Brubaker comic panel",
+            "Winter Soldier Cosmic Cube remembers Bucky Barnes crying comic panel"
         ]
     },
     {
@@ -694,16 +694,22 @@ EDITORIAL_STORIES = [
         "description": "Cuando la Ecuación Anti-Vida infectó la Tierra a través de las pantallas, Batman fue mordido en la Baticueva y tuvo que despedirse de Alfred antes de perder la mente.",
         "hashtags": "#DCeased #Batman #Alfred #DCComics #AntiLifeVirus #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "¿Sabías que cuando el virus Anti-Vida infectó la Tierra, Batman fue atacado en la Baticueva por sus propios hijos?",
-            "Nightwing y Robin zombificados se abalanzaron sobre él, mordiendo su brazo antes de que Bruce pudiera neutralizarlos.",
-            "Al analizar su sangre en la supercomputadora, Batman descubrió aterrado que la infección ya devoraba su sistema nervioso.",
-            "Poniéndose un traje criogénico para retrasar lo inevitable, Bruce grabó su último adiós a Alfred antes de sucumbir."
+            "¿Sabías que cuando la Ecuación Anti-Vida infectó la Tierra, Batman vio a la humanidad sucumbir ante la locura digital?",
+            "Nightwing y sus aliados infectados se transformaron en monstruos caníbales atacando brutalmente a sus seres queridos.",
+            "Al ser mordido en combate, Batman se puso el traje de Mr. Freeze para retrasar el virus mortal.",
+            "Roto de dolor en la oscuridad, Alfred activó el protocolo final para despedir a su amo."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/dceased_batman/scene_01.jpg",
+            "assets/curated_panels/dceased_batman/scene_02.jpg",
+            "assets/curated_panels/dceased_batman/scene_03.jpg",
+            "assets/curated_panels/dceased_batman/scene_04.jpg"
         ],
         "art_queries": [
-            "DCeased Batman Batcave computer infected Nightwing Robin comic panel",
-            "DCeased zombie Nightwing bites Batman arm comic panel",
-            "DCeased Batman analyzing blood infected computer Batcave comic panel",
-            "DCeased Batman final transmission Alfred Mr Freeze suit comic panel"
+            "DCeased Batman Batcave computer infected world comic panel",
+            "DCeased zombie Nightwing bloody monster comic panel",
+            "DCeased Batman in Mr Freeze cryogenic suit infected comic panel",
+            "DCeased Alfred Pennyworth weeping activating protocol final comic panel"
         ]
     },
     {
