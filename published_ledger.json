@@ -848,5 +848,15 @@
     "mode": "live_release",
     "video_file": "Magneto_El_Día_que_Ahogó_al_Mundo.mp4",
     "status": "published"
+  },
+  {
+    "id": "invincible_omni_man_massacre",
+    "title": "Omni-Man: La Brutal Masacre de los Guardianes del Globo",
+    "character": "Omni-Man",
+    "theme_signature": "omniman:guardians_massacre:betrayal",
+    "date": "2026-10-01 02:07",
+    "mode": "live_release",
+    "video_file": "Omni-Man_La_Brutal_Masacre_de_los_Guardianes_del_Globo.mp4",
+    "status": "published"
   }
 ]
