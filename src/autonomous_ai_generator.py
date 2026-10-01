@@ -424,11 +424,11 @@ Devuelve ÚNICAMENTE un objeto JSON válido con este esquema:
 
         if resolved_art:
             story["scene_art_urls"] = resolved_art
-        story["voice"] = "es-MX-JorgeNeural"
-        story["tts_model"] = "edge-tts"
-        story["fallback_tts_model"] = "edge-tts"
+        story["voice"] = "Puck"
+        story["tts_model"] = "gemini-3.8-flash-tts"
+        story["fallback_tts_model"] = "gemini-3.8-flash-lite-tts"
         story["style_direction"] = "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
-        log(f"Historia autónoma APROBADA y blindada con voz Jorge (Edge-TTS 100% Español): '{story['title']}'")
+        log(f"Historia autónoma APROBADA y blindada con voz Puck (Gemini 3.8): '{story['title']}'")
         return story
 
     # Respaldo automático ultra-viral en caso de limitación transitoria de API de Gemini
@@ -436,9 +436,9 @@ Devuelve ÚNICAMENTE un objeto JSON válido con este esquema:
     for candidate in EMERGENCY_VIRAL_POOL:
         is_dup, reason = is_duplicate(candidate, ledger)
         if not is_dup:
-            candidate["voice"] = "es-MX-JorgeNeural"
-            candidate["tts_model"] = "edge-tts"
-            candidate["fallback_tts_model"] = "edge-tts"
+            candidate["voice"] = "Puck"
+            candidate["tts_model"] = "gemini-3.8-flash-tts"
+            candidate["fallback_tts_model"] = "gemini-3.8-flash-lite-tts"
             candidate["style_direction"] = "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
             log(f"Historia Ultra-Viral de Respaldo Aprobada: '{candidate['title']}' (ID: {candidate['id']})")
             return candidate

@@ -6,10 +6,10 @@ Assigns Google Gemini 3.8 TTS voice 'Puck' and metadata to all comic stories.
 from typing import Optional
 from .editorial_catalog import EDITORIAL_STORIES
 
-# Default Voice Configuration (Edge-TTS Jorge Latin American Spanish Standard)
-DEFAULT_VOICE = "es-MX-JorgeNeural"
-DEFAULT_TTS_MODEL = "edge-tts"
-DEFAULT_FALLBACK_TTS_MODEL = "edge-tts"
+# Default Voice Configuration (Gemini 3.8 Puck Comic Standard)
+DEFAULT_VOICE = "Puck"
+DEFAULT_TTS_MODEL = "gemini-3.8-flash-tts"
+DEFAULT_FALLBACK_TTS_MODEL = "gemini-3.8-flash-lite-tts"
 VOICE_STYLE_DIRECTION = "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
 
 # Attach voice configuration to every story

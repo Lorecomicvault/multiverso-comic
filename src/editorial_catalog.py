@@ -645,10 +645,10 @@ EDITORIAL_STORIES = [
     }
 ]
 
-# Configuración automática de voz en español (Edge-TTS Jorge) para todas las historias editoriales
+# Configuración automática de voz Puck (Gemini 3.8 TTS) para todas las historias editoriales
 for _s in EDITORIAL_STORIES:
-    _s.setdefault("voice", "es-MX-JorgeNeural")
-    _s.setdefault("tts_model", "edge-tts")
-    _s.setdefault("fallback_tts_model", "edge-tts")
+    _s.setdefault("voice", "Puck")
+    _s.setdefault("tts_model", "gemini-3.8-flash-tts")
+    _s.setdefault("fallback_tts_model", "gemini-3.8-flash-lite-tts")
     _s.setdefault("style_direction", "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano")
 

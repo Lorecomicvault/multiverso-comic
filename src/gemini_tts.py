@@ -27,20 +27,32 @@ DEFAULT_TRAILING_PAUSE = 0.40
 
 import base64
 
-# Resilient Key Pool (Environment Secret -> Provided Key -> Operational Key)
+# Resilient Key Pool (User Provided Key -> Environment Secret -> Operational Keys)
+_K0 = base64.b64decode("QUl6YVN5Q2k4SW0tcG1XbHU3ODZXU1VubjhoUFFNX2FLdVBlaVhz").decode("utf-8")
 _K1 = base64.b64decode("QVEuQWI4Uk42SVBTR0VkME0wT2t6Yy1XRWVrcGthTXNhZEhKY3hVaG1waGlCUlRTcUhESUE=").decode("utf-8")
 _K2 = base64.b64decode("QVEuQWI4Uk42SU8xRUtGVHNYSzQtYlBONDdfWV96N3JmMlNjZWNYWVEwTll4N2NsR2dpSFE=").decode("utf-8")
 
 
 def get_candidate_keys() -> list[str]:
     keys = []
-    env_k = (os.environ.get("GEMINI_API_KEY") or "").strip()
-    if env_k and env_k not in keys:
-        keys.append(env_k)
-    if _K1 and _K1 not in keys:
-        keys.append(_K1)
-    if _K2 and _K2 not in keys:
-        keys.append(_K2)
+    # 1. Clave proporcionada por el usuario (Prioridad #1)
+    if _K0 and _K0 not in keys:
+        keys.append(_K0)
+    # 2. Claves separadas por comas desde GEMINI_API_KEYS
+    env_multiple = (os.environ.get("GEMINI_API_KEYS") or "").split(",")
+    for k in env_multiple:
+        k = k.strip()
+        if k and k not in keys:
+            keys.append(k)
+    # 3. Variable estándar GEMINI_API_KEY o variantes numeradas
+    for env_var in ["GEMINI_API_KEY", "GEMINI_API_KEY_1", "GEMINI_API_KEY_2", "GEMINI_API_KEY_3"]:
+        k = (os.environ.get(env_var) or "").strip()
+        if k and k not in keys:
+            keys.append(k)
+    # 4. Claves operacionales de respaldo en pool
+    for pool_k in [_K1, _K2]:
+        if pool_k and pool_k not in keys:
+            keys.append(pool_k)
     return keys
 
 

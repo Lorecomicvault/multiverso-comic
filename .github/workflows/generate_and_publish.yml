@@ -119,7 +119,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_ACCESS_TOKEN || 'TgAoAyRxipfYzSzSROuWF5GQcGD9rXnGE2_lshtduM3' }}
           BUFFER_TIKTOK_CHANNEL_ID: ${{ secrets.BUFFER_TIKTOK_CHANNEL_ID || '6aba9f05ea19ca0bde156163' }}
-          VOICE: 'es-MX-JorgeNeural'
+          VOICE: 'Puck'
           EVENT_MODE: ${{ github.event.inputs.mode || 'render_only' }}
         run: |
           ARGS=""

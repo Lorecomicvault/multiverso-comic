@@ -164,7 +164,7 @@ VOICE_PROFILES = {
     },
 }
 
-DEFAULT_VOICE = 'es-MX-JorgeNeural'
+DEFAULT_VOICE = 'Puck'
 SCENE_TRAILING_PAUSE = 0.4
 
 
@@ -359,13 +359,24 @@ def _generate_one(
             )
             # Verificación de idioma estricta: si Gemini alucinó en inglés u otro idioma, descartar
             try:
-                from faster_whisper import WhisperModel
-                _model = WhisperModel("tiny", device="cpu", compute_type="int8")
-                segments, info = _model.transcribe(synth_res, beam_size=1)
-                if info.language != 'es' and info.language_probability > 0.70:
-                    raise RuntimeError(f"Gemini TTS habló en '{info.language}' (probabilidad {info.language_probability:.2f}) en lugar de español.")
+                import whisper
+                _audio = whisper.load_audio(synth_res)
+                _audio = whisper.pad_or_trim(_audio)
+                _wmodel = whisper.load_model("tiny")
+                _mel = whisper.log_mel_spectrogram(_audio).to(_wmodel.device)
+                _, _probs = _wmodel.detect_language(_mel)
+                _det = max(_probs, key=_probs.get)
+                if _det != 'es' and _probs.get(_det, 0.0) > 0.70:
+                    raise RuntimeError(f"Gemini TTS habló en '{_det}' (probabilidad {_probs.get(_det, 0.0):.2f}) en lugar de español.")
             except ImportError:
-                pass
+                try:
+                    from faster_whisper import WhisperModel
+                    _model = WhisperModel("tiny", device="cpu", compute_type="int8")
+                    segments, info = _model.transcribe(synth_res, beam_size=1)
+                    if info.language != 'es' and info.language_probability > 0.70:
+                        raise RuntimeError(f"Gemini TTS habló en '{info.language}' (probabilidad {info.language_probability:.2f}) en lugar de español.")
+                except ImportError:
+                    pass
             return synth_res
         except Exception as err:
             print(f"[VOICEOVER] Error o idioma no español con Gemini TTS ({err}), recurriendo a Edge-TTS en español...")
