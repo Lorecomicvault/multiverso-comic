@@ -868,5 +868,15 @@
     "mode": "live_release",
     "video_file": "El_Día_que_Cíclope_Asesinó_a_Charles_Xavier.mp4",
     "status": "published"
+  },
+  {
+    "id": "blue_beetle_sacrificio_ted_kord",
+    "title": "Blue Beetle: El Trágico Destino de Ted Kord",
+    "character": "Blue Beetle",
+    "theme_signature": "blue_beetle:countdown_to_infinite_crisis:death_of_ted_kord",
+    "date": "2026-10-01 10:06",
+    "mode": "live_release",
+    "video_file": "Blue_Beetle_El_Trágico_Destino_de_Ted_Kord.mp4",
+    "status": "published"
   }
 ]
