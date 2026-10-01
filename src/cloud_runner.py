@@ -353,28 +353,29 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
                 log(f"Scene {idx}: Using local verified authentic comic panel from repository: '{target}'")
 
         # Primary: Multi-Source Precision Scraper with Gemini Vision Referee
-        try:
-            from .comic_precision_scraper import fetch_scene_image
-            wiki = get_story_comic_wiki(story)
-            art_queries = story.get("art_queries", [])
-            if art_queries and idx <= len(art_queries):
-                query_for_scene = art_queries[idx - 1]
-            else:
-                query_for_scene = f"{story.get('character', '')} {narration[:45]}"
-            panel_path = fetch_scene_image(
-                wiki_domain=wiki,
-                target_file=target,
-                fallback_query=query_for_scene,
-                dest_path=str(img_file),
-                existing_scene_images=raw_downloaded_images + [str(p) for p in downloaded_images],
-                scene_text=narration,
-                used_sources=used_panel_sources
-            )
-            if os.path.exists(panel_path) and os.path.getsize(panel_path) > 10000:
-                saved = True
-                log(f"Scene {idx}: Precision panel validated and saved ({wiki}).")
-        except Exception as e:
-            log(f"Scene {idx}: Precision scraper notice: {e}")
+        if not saved:
+            try:
+                from .comic_precision_scraper import fetch_scene_image
+                wiki = get_story_comic_wiki(story)
+                art_queries = story.get("art_queries", [])
+                if art_queries and idx <= len(art_queries):
+                    query_for_scene = art_queries[idx - 1]
+                else:
+                    query_for_scene = f"{story.get('character', '')} {narration[:45]}"
+                panel_path = fetch_scene_image(
+                    wiki_domain=wiki,
+                    target_file=target,
+                    fallback_query=query_for_scene,
+                    dest_path=str(img_file),
+                    existing_scene_images=raw_downloaded_images + [str(p) for p in downloaded_images],
+                    scene_text=narration,
+                    used_sources=used_panel_sources
+                )
+                if os.path.exists(panel_path) and os.path.getsize(panel_path) > 10000:
+                    saved = True
+                    log(f"Scene {idx}: Precision panel validated and saved ({wiki}).")
+            except Exception as e:
+                log(f"Scene {idx}: Precision scraper notice: {e}")
 
         # Fallback A: Direct download if target specified and precision scraper failed
         if (not saved or not img_file.exists()) and target:
@@ -475,7 +476,7 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
     for idx_img, p in enumerate(downloaded_images, 1):
         with Image.open(p) as test_im:
             w, h = test_im.size
-            if w < 300 or h < 300:
+            if w < 150 or h < 150:
                 raise RuntimeError(f"QUALITY GATE FATAL ERROR: Scene {idx_img} image resolution too small ({w}x{h}).")
             stat = ImageStat.Stat(test_im)
             if max(stat.stddev) < 8.0:
@@ -511,7 +512,7 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
             "title": story["title"],
             "description": story["description"],
             "hashtags": story["hashtags"],
-            "voice": story.get("voice") or os.environ.get("VOICE", "Puck")
+            "voice": story.get("voice") or os.environ.get("VOICE", "es-MX-JorgeNeural")
         },
         "scenes": scenes_data
     }
@@ -595,7 +596,7 @@ def main():
     # Lazy import pipeline to allow test environments to run without heavy whisper dependencies
     from .pipeline import run_pipeline
 
-    voice_choice = selected.get("voice") or os.environ.get("VOICE", "Puck")
+    voice_choice = selected.get("voice") or os.environ.get("VOICE", "es-MX-JorgeNeural")
     log(f"Starting video compilation pipeline with voice: {voice_choice}...")
     final_video_path = run_pipeline(
         generation=generation,

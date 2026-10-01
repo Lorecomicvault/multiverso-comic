@@ -9,6 +9,7 @@ on:
         default: 'autonomous_ai'
         type: choice
         options:
+          - venom_el_origen_del_simbionte_letal
           - autonomous_ai
           - any
           - superman_red_son_comunismo
@@ -118,7 +119,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_ACCESS_TOKEN || 'TgAoAyRxipfYzSzSROuWF5GQcGD9rXnGE2_lshtduM3' }}
           BUFFER_TIKTOK_CHANNEL_ID: ${{ secrets.BUFFER_TIKTOK_CHANNEL_ID || '6aba9f05ea19ca0bde156163' }}
-          VOICE: 'Puck'
+          VOICE: 'es-MX-JorgeNeural'
           EVENT_MODE: ${{ github.event.inputs.mode || 'render_only' }}
         run: |
           ARGS=""

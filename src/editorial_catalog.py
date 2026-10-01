@@ -9,6 +9,32 @@ Every story features:
 
 EDITORIAL_STORIES = [
     {
+        "id": "venom_el_origen_del_simbionte_letal",
+        "character": "Venom",
+        "title": "Venom: El Nacimiento del Protector Letal",
+        "theme_signature": "venom:eddie_brock:origen_iglesia_simbionte",
+        "description": "La oscura historia de como Eddie Brock se unio al simbionte alienigena en una iglesia para convertirse en Venom, el protector letal mas implacable de Marvel.",
+        "hashtags": "#Venom #SpiderMan #MarvelComics #ToddMcFarlane #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¿Sabías que Venom nació en una iglesia cuando Eddie Brock rezaba desesperado por su vida arruinada?",
+            "El simbionte alienígena rechazado por Spider-Man cayó sobre Eddie, fusionándose con su odio y dolor más profundo.",
+            "Al unirse, sus mentes crearon a Venom, un monstruo con colmillos letales y la emblemática araña blanca en el pecho.",
+            "Jurando proteger a los inocentes y aniquilar a Peter Parker, nació el protector letal más temido de Marvel."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/venom_origen/scene_01.jpg",
+            "assets/curated_panels/venom_origen/scene_02.jpg",
+            "assets/curated_panels/venom_origen/scene_03.jpg",
+            "assets/curated_panels/venom_origen/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Eddie Brock praying Our Lady of Saints Church Amazing Spider-Man 300 comic panel",
+            "Symbiote bonding with Eddie Brock I was joined comic panel",
+            "Venom first full appearance smiling white spider Todd McFarlane comic panel",
+            "Venom swinging webs night New York Amazing Spider-Man 300 comic panel"
+        ]
+    },
+    {
         "id": "flash_godspeed_el_ladron_de_velocidad",
         "character": "The Flash",
         "title": "The Flash: Godspeed, el Despiadado Asesino de Velocistas",
@@ -619,10 +645,10 @@ EDITORIAL_STORIES = [
     }
 ]
 
-# Configuración automática de voz Puck (Gemini 3.8 TTS) para todas las historias editoriales
+# Configuración automática de voz en español (Edge-TTS Jorge) para todas las historias editoriales
 for _s in EDITORIAL_STORIES:
-    _s.setdefault("voice", "Puck")
-    _s.setdefault("tts_model", "gemini-3.8-flash-tts")
-    _s.setdefault("fallback_tts_model", "gemini-3.8-flash-lite-tts")
+    _s.setdefault("voice", "es-MX-JorgeNeural")
+    _s.setdefault("tts_model", "edge-tts")
+    _s.setdefault("fallback_tts_model", "edge-tts")
     _s.setdefault("style_direction", "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano")
 

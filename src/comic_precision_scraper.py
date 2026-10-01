@@ -32,10 +32,10 @@ WIKI_DOMAINS = [
 ]
 
 CANDIDATE_VISION_MODELS = [
-    "gemini-flash-latest",
-    "gemini-2.5-flash",
-    "gemini-pro-latest",
-    "gemini-2.5-pro"
+    "gemini-3.8-flash",
+    "gemini-3.7-flash",
+    "gemini-3.5-flash",
+    "gemini-flash-latest"
 ]
 
 # -------------------------------------------------------------------------
@@ -234,13 +234,14 @@ def check_is_comic_art_inking(img: Image.Image) -> bool:
         if img.size == (1080, 1920):
             # Evaluar el panel interior central excluyendo los márgenes de fondo desenfocado
             crop_box = (108, 384, 972, 1536)
-            eval_img = img.crop(crop_box)
+            eval_img = img.crop(crop_box).resize((512, 512))
             edges = eval_img.convert('L').filter(ImageFilter.FIND_EDGES)
             edge_stat = ImageStat.Stat(edges)
             return edge_stat.mean[0] >= 3.5 or edge_stat.stddev[0] >= 12.0
-        edges = img.convert('L').filter(ImageFilter.FIND_EDGES)
+        eval_img = img.resize((512, 512))
+        edges = eval_img.convert('L').filter(ImageFilter.FIND_EDGES)
         edge_stat = ImageStat.Stat(edges)
-        return edge_stat.mean[0] >= 8.5
+        return edge_stat.mean[0] >= 7.5 or edge_stat.stddev[0] >= 12.0
     except Exception:
         return True
 

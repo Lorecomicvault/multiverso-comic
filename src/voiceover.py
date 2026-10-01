@@ -85,17 +85,43 @@ SOFT_PROFANITY_BUDGET = 3
 # ============================================================================
 
 VOICE_PROFILES = {
-    # --- Google Gemini 3.8 TTS (Voz Principal Estándar Oro) ---
+    # --- Edge-TTS (Estándar Oro: 100% Español Latinoamericano, Cero Traducciones Falsas, Cero Coste) ---
+    'es-MX-JorgeNeural': {
+        'provider': 'edge',
+        'rate': 1.05,
+        'pitch': '+2Hz',
+        'label': 'Jorge (Edge-TTS MX, masculina, narrador cómic)',
+    },
+    'es-CO-GonzaloNeural': {
+        'provider': 'edge',
+        'rate': 1.0,
+        'pitch': '+0Hz',
+        'label': 'Gonzalo (Edge-TTS CO, masculina)',
+    },
+    'es-US-AlonsoNeural': {
+        'provider': 'edge',
+        'rate': 1.02,
+        'pitch': '+0Hz',
+        'label': 'Alonso (Edge-TTS US, masculina)',
+    },
+    'es-MX-DaliaNeural': {
+        'provider': 'edge',
+        'rate': 1.05,
+        'pitch': '+0Hz',
+        'label': 'Dalia (Edge-TTS MX, femenina)',
+    },
+
+    # --- Google Gemini 3.8 TTS (Opcional) ---
     'Puck': {
         'provider': 'gemini',
         'voice_name': 'Puck',
         'model': 'gemini-3.8-flash-tts',
         'fallback_model': 'gemini-3.8-flash-lite-tts',
         'rate': 1.05,
-        'label': 'Gemini 3.8 Puck (Voz masculina cómic, ritmo rápido, apasionado y enérgico)',
+        'label': 'Gemini 3.8 Puck (Voz masculina cómic)',
     },
 
-    # --- Google Cloud TTS (Voces de Respaldo de Alta Calidad) ---
+    # --- Google Cloud TTS (Voces de Respaldo en Español) ---
     'es-US-Studio-B': {
         'provider': 'google',
         'lang': 'es-US',
@@ -136,70 +162,9 @@ VOICE_PROFILES = {
         'pitch': 0.0,
         'label': 'Google Studio F (ES, masculina)',
     },
-
-    
-    # --- English Voices (Google Cloud Journey & Studio) ---
-    'en-US-Studio-Q': {
-        'provider': 'google',
-        'lang': 'en-US',
-        'gender': 'MALE',
-        'rate': 1.02,
-        'pitch': 0.0,
-        'label': 'Google Studio Q (US, deep epic male narrator)',
-    },
-    'en-US-Journey-D': {
-        'provider': 'google',
-        'lang': 'en-US',
-        'gender': 'MALE',
-        'rate': 1.04,
-        'pitch': 0.0,
-        'label': 'Google Journey D (US, storytelling male narrator)',
-    },
-    'en-US-Journey-F': {
-        'provider': 'google',
-        'lang': 'en-US',
-        'gender': 'FEMALE',
-        'rate': 1.04,
-        'pitch': 0.0,
-        'label': 'Google Journey F (US, storytelling female)',
-    },
-    'en-US-Studio-O': {
-        'provider': 'google',
-        'lang': 'en-US',
-        'gender': 'FEMALE',
-        'rate': 1.02,
-        'pitch': 0.0,
-        'label': 'Google Studio O (US, female narrator)',
-    },
-    'en-US-ChristopherNeural': {
-        'provider': 'edge',
-        'rate': 1.02,
-        'pitch': '+0Hz',
-        'label': 'Christopher (Edge-TTS US, male narrator)',
-    },
-
-    # --- Edge-TTS (Respaldo) ---
-    'es-MX-JorgeNeural': {
-        'provider': 'edge',
-        'rate': 1.05,
-        'pitch': '+2Hz',
-        'label': 'Jorge (Edge-TTS MX, masculina)',
-    },
-    'es-CO-GonzaloNeural': {
-        'provider': 'edge',
-        'rate': 1.0,
-        'pitch': '+0Hz',
-        'label': 'Gonzalo (Edge-TTS CO, masculina)',
-    },
-    'es-US-AlonsoNeural': {
-        'provider': 'edge',
-        'rate': 1.02,
-        'pitch': '+0Hz',
-        'label': 'Alonso (Edge-TTS US, masculina)',
-    },
 }
 
-DEFAULT_VOICE = 'Puck'
+DEFAULT_VOICE = 'es-MX-JorgeNeural'
 SCENE_TRAILING_PAUSE = 0.4
 
 
@@ -384,7 +349,7 @@ def _generate_one(
     if provider == 'gemini':
         try:
             from .gemini_tts import synthesize_with_gemini
-            return synthesize_with_gemini(
+            synth_res = synthesize_with_gemini(
                 text=text,
                 output_path=output,
                 voice_name=profile.get('voice_name', 'Puck'),
@@ -392,29 +357,26 @@ def _generate_one(
                 rate=effective_rate,
                 trailing_pause=trailing_pause,
             )
-        except Exception as err:
-            print(f"[VOICEOVER] Error con Gemini TTS ({err}), recurriendo a Google Cloud TTS de respaldo...")
+            # Verificación de idioma estricta: si Gemini alucinó en inglés u otro idioma, descartar
             try:
-                return _generate_google_tts(
-                    text=text,
-                    output=output,
-                    voice_name='es-US-Studio-B',
-                    lang_code='es-US',
-                    gender='MALE',
-                    rate=effective_rate,
-                    pitch=0.0,
-                    trailing_pause=trailing_pause,
-                )
-            except Exception as err2:
-                print(f"[VOICEOVER] Error con Google Cloud TTS ({err2}), recurriendo a Edge-TTS...")
-                return asyncio.run(_generate_edge_tts(
-                    text=text,
-                    output=output,
-                    voice='es-MX-JorgeNeural',
-                    rate=effective_rate,
-                    base_pitch='+2Hz',
-                    trailing_pause=trailing_pause,
-                ))
+                from faster_whisper import WhisperModel
+                _model = WhisperModel("tiny", device="cpu", compute_type="int8")
+                segments, info = _model.transcribe(synth_res, beam_size=1)
+                if info.language != 'es' and info.language_probability > 0.70:
+                    raise RuntimeError(f"Gemini TTS habló en '{info.language}' (probabilidad {info.language_probability:.2f}) en lugar de español.")
+            except ImportError:
+                pass
+            return synth_res
+        except Exception as err:
+            print(f"[VOICEOVER] Error o idioma no español con Gemini TTS ({err}), recurriendo a Edge-TTS en español...")
+            return asyncio.run(_generate_edge_tts(
+                text=text,
+                output=output,
+                voice='es-MX-JorgeNeural',
+                rate=effective_rate,
+                base_pitch='+2Hz',
+                trailing_pause=trailing_pause,
+            ))
     elif provider == 'google':
         try:
             lang = profile.get('lang', 'es-US')

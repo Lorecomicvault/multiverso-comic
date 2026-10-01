@@ -120,7 +120,7 @@ def run_pipeline(
 
     voice_results = {}
     if has_voiceover:
-        log(f"Generando locuciones con {selected_voice} (Motor Gemini TTS / Puck)...")
+        log(f"Generando locuciones con {selected_voice} (100% Español)...")
         vo_dir = str(output_dir / 'voiceover')
         voice_results = generate_voiceover_scenes(scene_texts, vo_dir, voice=selected_voice, rate=rate)
         log(f"  OK -> {len(voice_results)} locuciones generadas")
