@@ -858,5 +858,15 @@
     "mode": "live_release",
     "video_file": "Omni-Man_La_Brutal_Masacre_de_los_Guardianes_del_Globo.mp4",
     "status": "published"
+  },
+  {
+    "id": "avx_cyclops_kills_xavier",
+    "title": "El Día que Cíclope Asesinó a Charles Xavier",
+    "character": "Cyclops",
+    "theme_signature": "cyclops:avengers_vs_xmen:phoenix_force_murder",
+    "date": "2026-10-01 07:12",
+    "mode": "live_release",
+    "video_file": "El_Día_que_Cíclope_Asesinó_a_Charles_Xavier.mp4",
+    "status": "published"
   }
 ]
