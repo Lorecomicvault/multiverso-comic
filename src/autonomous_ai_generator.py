@@ -273,21 +273,10 @@ def generate_autonomous_story(ledger: list[dict], api_key: str | None = None) ->
     from .cloud_runner import is_duplicate
     import base64
 
-    _default_b64 = "QVEuQWI4Uk42SVBTR0VkME0wT2t6Yy1XRWVrcGthTXNhZEhKY3hVaG1waGlCUlRTcUhESUE="
-    _backup_b64 = "QVEuQWI4Uk42SU8xRUtGVHNYSzQtYlBONDdfWV96N3JmMlNjZWNYWVEwTll4N2NsR2dpSFE="
-    
-    keys_to_try = []
-    if api_key:
-        keys_to_try.append(api_key)
-    env_k = os.environ.get("GEMINI_API_KEY")
-    if env_k and env_k not in keys_to_try:
-        keys_to_try.append(env_k)
-    k1 = base64.b64decode(_default_b64).decode("utf-8")
-    k2 = base64.b64decode(_backup_b64).decode("utf-8")
-    if k1 not in keys_to_try:
-        keys_to_try.append(k1)
-    if k2 not in keys_to_try:
-        keys_to_try.append(k2)
+    from .gemini_tts import get_candidate_keys
+    keys_to_try = get_candidate_keys()
+    if api_key and api_key not in keys_to_try:
+        keys_to_try.insert(0, api_key)
     
     # Extraer historial COMPLETO para prohibir duplicados
     past_characters = set(item.get("character", "").strip() for item in ledger if item.get("character"))
@@ -304,26 +293,23 @@ def generate_autonomous_story(ledger: list[dict], api_key: str | None = None) ->
         system_prompt = f"""
 Eres el Guionista Principal y Director Creativo de ComicLoreVault, el canal líder de videos cinematográficos de cómics en español para TikTok y Reels.
 
-Tu misión es crear una historia COMPLETAMENTE NUEVA, VIRAL, OSCURA Y MEMORABLE sobre un arco legendario de Marvel o DC Comics.
+Tu misión es crear una historia COMPLETAMENTE NUEVA, ULTRA-VIRAL, OSCURA Y MEMORABLE sobre un arco legendario de Marvel, DC o Image Comics.
 
 ESTRICTO HISTORIAL DE TEMAS YA PRODUCIDOS (TOTALMENTE PROHIBIDO REPETIR O REUTILIZAR ESTOS PERSONAJES O ARCOS):
 - Personajes ya cubiertos (PROHIBIDO REPETIR): {char_summary}
 - Títulos recientes ya publicados (PROHIBIDO REPETIR): {titles_summary}
 
-IDEAS DE TEMAS CANDIDATOS DE ALTO IMPACTO AÚN NO EXPLORADOS (Elige uno de estos o similar):
-- Spider-Man: Spider's Shadow (Peter Parker se queda con el simbionte asesino y caza a los villanos)
-- Batman: White Knight (El Joker se vuelve cuerdo y Batman es el villano)
-- DCeased: La muerte heroica de Batman infectado por el virus anti-vida
-- Injustice 2: La guerra de Batman y Superman contra Brainiac
-- Marvel Zombies: Resurrection (Galactus infectado cayendo a la Tierra)
-- Superman: Red Son (La nave de Kal-El aterriza en la Unión Soviética)
-- Hulk: The End (El último ser vivo en la Tierra)
-- Flash Forward: Wally West obteniendo los poderes de Doctor Manhattan
-- The Punisher Kills the Marvel Universe
-- Dark Multiverse: The Grim Knight o Batman The Drowned
-- Wolverine: Enemy of the State (Wolverine controlado por HYDRA como asesino)
-- Spawn: La Guerra contra Malebolgia
-- Invincible: Omni-Man y la masacre de los Guardianes del Globo
+IDEAS DE TEMAS CANDIDATOS ULTRA-VIRALES DE ALTO IMPACTO AÚN NO EXPLORADOS (Elige uno de estos o similar):
+- Invincible: Conquest y la masacre brutal de Mark Grayson y Atom Eve
+- DCeased: La infección del virus anti-vida y la última transmisión de Batman en la cueva
+- Ghost Rider: La Mirada de Penitencia aplicada al Devorador de Mundos Galactus
+- Martian Manhunter: Fernus la Llama Ardiente aniquilando a la Liga de la Justicia
+- Batman: White Knight (Jack Napier se vuelve cuerdo con medicación y demanda a Batman)
+- Darth Vader: Vader Down ('Todo lo que veo a mi alrededor es miedo... y hombres muertos')
+- The Boys: Black Noir en la Casa Blanca revelando su verdadera identidad
+- Marvel Zombies: Peter Parker infectado y el tormento eterno tras devorar a sus seres queridos
+- Moon Knight: El día que Marc Spector le arrancó el rostro a Bushman con su navaja
+- X-Men: Era de Apocalipsis (El despertar prematuro de En Sabah Nur y la caída de América)
 
 REGLAS INVIOLABLES DE FORMATO:
 1. Exactamente 4 escenas narrativas.

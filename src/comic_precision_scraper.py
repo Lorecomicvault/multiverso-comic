@@ -32,8 +32,10 @@ WIKI_DOMAINS = [
 ]
 
 CANDIDATE_VISION_MODELS = [
+    "gemini-3.1-flash-lite",
+    "gemini-2.5-flash-lite",
+    "gemini-3.5-flash-lite",
     "gemini-3.8-flash",
-    "gemini-3.7-flash",
     "gemini-3.5-flash",
     "gemini-flash-latest"
 ]
@@ -343,18 +345,10 @@ def verify_visual_alignment_with_gemini(image_path: str, scene_text: str) -> dic
     """
     Auditor de Calidad Gráfica con Gemini Vision:
     Examina si la viñeta muestra con exactitud lo que narra el locutor.
-    Si Gemini presenta demoras o falla, valida mediante análisis de entintado.
+    Utiliza el pool completo de claves de Gemini para máxima disponibilidad.
     """
-    keys_to_try = []
-    env_k = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
-    if env_k and env_k.strip():
-        keys_to_try.append(env_k.strip())
-    _k1 = base64.b64decode("QVEuQWI4Uk42SVBTR0VkME0wT2t6Yy1XRWVrcGthTXNhZEhKY3hVaG1waGlCUlRTcUhESUE=").decode("utf-8")
-    _k2 = base64.b64decode("QVEuQWI4Uk42SU8xRUtGVHNYSzQtYlBONDdfWV96N3JmMlNjZWNYWVEwTll4N2NsR2dpSFE=").decode("utf-8")
-    if _k1 not in keys_to_try:
-        keys_to_try.append(_k1)
-    if _k2 not in keys_to_try:
-        keys_to_try.append(_k2)
+    from .gemini_tts import get_candidate_keys
+    keys_to_try = get_candidate_keys()
 
     if not scene_text or not os.path.exists(image_path):
         return {"score": 1, "is_comic_panel": False, "depicts_action": False, "reason": "Entrada inválida"}
@@ -424,12 +418,12 @@ Responde ESTRICTAMENTE con un objeto JSON:
     except Exception:
         pass
 
-    # Respaldo heurístico: Verificar trazo de entintado. Jamás aprobar fotos reales a ciegas.
+    # Respaldo heurístico: Si Gemini no pudo verificar, dar score 2 (no verificado)
     try:
         im = Image.open(image_path)
         if not check_is_comic_art_inking(im):
             return {"score": 1, "is_comic_panel": False, "depicts_action": False, "reason": "Rechazado: La imagen no presenta entintado de cómic (posible foto real/actor/objeto)"}
-        return {"score": 4, "is_comic_panel": True, "depicts_action": False, "reason": "Arte de cómic detectado por entintado, pero alineación con la narración no pudo ser verificada por Gemini"}
+        return {"score": 2, "is_comic_panel": True, "depicts_action": False, "reason": "Arte de cómic detectado por entintado, pero alineación de acción NO verificada por Gemini"}
     except Exception:
         return {"score": 1, "is_comic_panel": False, "depicts_action": False, "reason": "Error procesando imagen para verificación"}
 
@@ -582,8 +576,9 @@ def fetch_scene_image(
             best_fallback_file = dest_path + ".best.jpg"
             shutil.copy2(temp_candidate, best_fallback_file)
 
-        # Si supera el umbral de aprobación visual (6+ de 10, o 5+ para viñetas curadas oficiales)
-        if (score >= 6 or (cand_src == "fandom_target" and score >= 5)) and is_panel and not cand["is_cover"]:
+        # Si supera el umbral de aprobación visual (6+ de 10, y representa la acción narrada)
+        depicts_action = eval_result.get("depicts_action", False)
+        if (score >= 6 or (cand_src == "fandom_target" and score >= 5)) and is_panel and not cand["is_cover"] and (depicts_action or score >= 7):
             if os.path.exists(dest_path):
                 os.remove(dest_path)
             os.rename(temp_candidate, dest_path)
@@ -598,13 +593,13 @@ def fetch_scene_image(
             if os.path.exists(temp_candidate):
                 os.remove(temp_candidate)
 
-    # Si ningún candidato fue 100% perfecto, usar el de mayor puntaje siempre que califique como cómic (>= 4)
-    if best_fallback_file and os.path.exists(best_fallback_file) and highest_score >= 4:
+    # Si ningún candidato fue 100% perfecto, usar el de mayor puntaje únicamente si supera el estándar de acción (>= 6)
+    if best_fallback_file and os.path.exists(best_fallback_file) and highest_score >= 6:
         if not is_duplicate_panel(best_fallback_file, existing_scene_images):
             if os.path.exists(dest_path):
                 os.remove(dest_path)
             os.rename(best_fallback_file, dest_path)
-            print(f"  [VIÑETA RESCATADA]: Utilizando mejor viñeta de cómic encontrada (Score: {highest_score}/10).")
+            print(f"  [VIÑETA RESCATADA]: Utilizando viñeta de cómic con alineación confirmada (Score: {highest_score}/10).")
             return dest_path
 
     if best_fallback_file and os.path.exists(best_fallback_file):

@@ -642,6 +642,132 @@ EDITORIAL_STORIES = [
             "Hulk The End regenerating Dale Keown comic panel",
             "Hulk The End feels cold final panel"
         ]
+    },
+    {
+        "id": "conquest_invincible_la_masacre_viltrumita",
+        "universe": "Image",
+        "character": "Conquest",
+        "title": "Invincible: Conquest y la Brutal Masacre Viltrumita",
+        "theme_signature": "invincible:conquest:atom_eve_cabezazos_masacre",
+        "description": "La llegada de Conquest desató la batalla más sangrienta de Invincible: tras atravesar a Atom Eve con su puño, Mark Grayson destrozó sus propios huesos a cabezazos para detenerlo.",
+        "hashtags": "#Invincible #Conquest #MarkGrayson #AtomEve #ImageComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¿Sabías que en Invincible, la llegada de Conquest desató la batalla más sangrienta y perturbadora de la saga?",
+            "El sádico viltrumita atravesó el abdomen de Atom Eve con su puño, dejándola agonizando en el suelo.",
+            "Enloquecido de dolor y furia, Mark se lanzó sobre Conquest destrozando sus propios huesos a golpes implacables.",
+            "Con cabezazos brutales y desesperados, Mark pulverizó el cráneo del invasor en una victoria cubierta de sangre."
+        ],
+        "art_queries": [
+            "Conquest arrives Earth Invincible comic panel",
+            "Conquest punches through Atom Eve Invincible 64 comic panel",
+            "Mark Grayson punches Conquest broken bones Invincible comic panel",
+            "Invincible headbutt Conquest comic panel bloody skull"
+        ]
+    },
+    {
+        "id": "ghost_rider_penance_stare_galactus",
+        "universe": "Marvel",
+        "character": "Ghost Rider",
+        "title": "Ghost Rider: La Mirada de Penitencia a Galactus",
+        "theme_signature": "ghost_rider:galactus:mirada_penitencia_trillones_almas",
+        "description": "El día que Ghost Rider miró a los ojos al Devorador de Mundos Galactus, haciéndole sentir la agonía y el tormento de trillones de almas extintas.",
+        "hashtags": "#GhostRider #Galactus #MarvelComics #PenanceStare #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¿Sabías que Ghost Rider utilizó su Mirada de Penitencia contra el mismísimo Devorador de Mundos Galactus?",
+            "Ante el colosal titán cósmico, Danny Ketch encendió sus llamas del infierno y clavó su mirada en la deidad.",
+            "Galactus experimentó instantáneamente el dolor y sufrimiento de trillones de seres que había devorado durante eones.",
+            "Incapaz de soportar el peso de sus pecados cósmicos, el gigante cayó de rodillas derrotado por el Juicio del Espíritu."
+        ],
+        "art_queries": [
+            "Ghost Rider staring down Galactus cosmic comic panel",
+            "Ghost Rider flaming skull eyes penance stare comic panel",
+            "Galactus screaming pain Penance Stare Ghost Rider comic panel",
+            "Galactus falls to knees defeated Ghost Rider comic panel"
+        ]
+    },
+    {
+        "id": "dceased_infeccion_anti_vida_batman",
+        "universe": "DC",
+        "character": "Batman",
+        "title": "DCeased: La Caída de Batman y la Trágica Despedida a Alfred",
+        "theme_signature": "dceased:anti_vida:infeccion_batcueva_alfred",
+        "description": "Cuando la Ecuación Anti-Vida infectó la Tierra a través de las pantallas, Batman fue mordido en la Baticueva y tuvo que despedirse de Alfred antes de perder la mente.",
+        "hashtags": "#DCeased #Batman #Alfred #DCComics #AntiLifeVirus #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¿Sabías que cuando el virus Anti-Vida infectó la Tierra, Batman fue atacado en la Baticueva por sus propios hijos?",
+            "Nightwing y Robin zombificados se abalanzaron sobre él, mordiendo su brazo antes de que Bruce pudiera neutralizarlos.",
+            "Al analizar su sangre en la supercomputadora, Batman descubrió aterrado que la infección ya devoraba su sistema nervioso.",
+            "Poniéndose un traje criogénico para retrasar lo inevitable, Bruce grabó su último adiós a Alfred antes de sucumbir."
+        ],
+        "art_queries": [
+            "DCeased Batman Batcave computer infected Nightwing Robin comic panel",
+            "DCeased zombie Nightwing bites Batman arm comic panel",
+            "DCeased Batman analyzing blood infected computer Batcave comic panel",
+            "DCeased Batman final transmission Alfred Mr Freeze suit comic panel"
+        ]
+    },
+    {
+        "id": "batman_white_knight_joker_cuerdo",
+        "universe": "DC",
+        "character": "The Joker",
+        "title": "Batman White Knight: El Día que el Joker se Volvió Cuerdo",
+        "theme_signature": "joker:white_knight:jack_napier_cuerdo_juicio",
+        "description": "En Batman White Knight, una sobredosis de medicamentos curó la psicopatía del Joker transformándolo en Jack Napier, el político que desenmascaró los crímenes de Batman.",
+        "hashtags": "#BatmanWhiteKnight #TheJoker #JackNapier #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¿Sabías que en Batman White Knight, una sobredosis forzada de medicamentos curó por completo la locura del Joker?",
+            "Convertido en el elocuente Jack Napier, denunció ante las cámaras de televisión la brutalidad ilegal y destructiva de Batman.",
+            "Vistiendo un impecable traje blanco, se convirtió en líder popular y usó las leyes de Gotham para encarcelar al héroe.",
+            "Por primera vez en la historia, Batman fue declarado el verdadero villano mientras el Joker era aclamado como salvador."
+        ],
+        "art_queries": [
+            "Batman White Knight Joker pills sane Jack Napier comic panel",
+            "Batman White Knight Jack Napier press conference television comic panel",
+            "Jack Napier white suit lawyer Batman White Knight comic panel",
+            "Batman arrested White Knight Sean Murphy comic panel"
+        ]
+    },
+    {
+        "id": "martian_manhunter_fernus_llama_ardiente",
+        "universe": "DC",
+        "character": "Martian Manhunter",
+        "title": "Martian Manhunter: Fernus la Llama Ardiente",
+        "theme_signature": "martian_manhunter:fernus:llama_ardiente_aniquilacion_liga",
+        "description": "Al intentar superar su fobia al fuego, J'onn J'onzz liberó a Fernus la Llama Ardiente, la entidad marciana ancestral que humilló y destrozó a toda la Liga de la Justicia.",
+        "hashtags": "#MartianManhunter #Fernus #JusticeLeague #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¿Sabías que cuando Martian Manhunter superó su miedo al fuego, desató a un monstruo ancestral llamado Fernus?",
+            "Esta encarnación ardiente poseía todo el arsenal de poderes marcianos sin ninguna de sus restricciones morales.",
+            "Con telepatía destructiva y ferocidad implacable, Fernus doblegó a Superman, Wonder Woman y a toda la Liga de la Justicia.",
+            "El mundo se salvó solo cuando el alma de J'onn J'onzz luchó desde el plano mental para destruir a la criatura para siempre."
+        ],
+        "art_queries": [
+            "Martian Manhunter Fernus Burning Martian fire comic panel",
+            "Fernus burning martian Justice League JLA Trial by Fire comic panel",
+            "Fernus defeats Superman Justice League comic panel",
+            "J'onn J'onzz defeats Fernus psychic battle comic panel"
+        ]
+    },
+    {
+        "id": "darth_vader_vader_down_hombres_muertos",
+        "universe": "Star Wars / Marvel",
+        "character": "Darth Vader",
+        "title": "Darth Vader: Solo Veo Miedo y Hombres Muertos",
+        "theme_signature": "darth_vader:vader_down:emboscada_hombres_muertos",
+        "description": "Rodeado por un ejército rebelde entero con tanques y artillería pesada que le exigían rendición, Darth Vader encendió su sable rojo y pronunció la frase más legendaria del cómic.",
+        "hashtags": "#DarthVader #StarWars #VaderDown #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¿Sabías que en los cómics oficiales de Star Wars, Darth Vader pronunció la frase más aterradora de la franquicia?",
+            "Varado tras estrellar su nave, un ejército entero de soldados rebeldes y tanques lo rodearon exigiéndole su rendición inmediata.",
+            "Sin vacilar un segundo, Vader encendió su sable carmesí y respondió: 'Todo lo que veo a mi alrededor es miedo... y hombres muertos'.",
+            "Activando a distancia los detonadores térmicos del enemigo con la Fuerza, exterminó al batallón completo en segundos."
+        ],
+        "art_queries": [
+            "Darth Vader surrounded Rebel army Vader Down comic panel",
+            "Vader Down Commander tells Vader surrender comic panel",
+            "Darth Vader all I am surrounded by is fear and dead men comic panel",
+            "Darth Vader ignites thermal detonators slaughter Rebels Vader Down comic panel"
+        ]
     }
 ]
 

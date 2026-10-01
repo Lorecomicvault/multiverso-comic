@@ -380,37 +380,51 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
         # Fallback A: Direct download if target specified and precision scraper failed
         if (not saved or not img_file.exists()) and target:
             if not is_cover_or_promo_image(target):
-                saved = download_comic_panel(target, story.get("character", ""), img_file)
+                if download_comic_panel(target, story.get("character", ""), img_file):
+                    from .comic_precision_scraper import verify_visual_alignment_with_gemini
+                    eval_a = verify_visual_alignment_with_gemini(str(img_file), narration)
+                    if eval_a.get("score", 0) >= 6 and eval_a.get("is_comic_panel", False) and eval_a.get("depicts_action", False):
+                        saved = True
+                        log(f"Scene {idx}: Fallback A target approved by Gemini Vision ({eval_a.get('reason')}).")
+                    else:
+                        img_file.unlink(missing_ok=True)
 
-        # Fallback B: Dynamic comic fetcher with deduplication check
+        # Fallback B: Dynamic comic fetcher with Gemini Vision Quality Gate
         if not saved or not img_file.exists():
-            log(f"Scene {idx}: Querying general Fandom comic art...")
+            log(f"Scene {idx}: Querying Fandom comic art with strict visual alignment...")
             fallback_urls = get_fandom_comic_art(story.get("character", "Batman"), count=8)
             for fb_u in fallback_urls:
                 if not is_cover_or_promo_image(fb_u) and download_comic_panel(fb_u, story.get("character", ""), img_file):
-                    from .comic_precision_scraper import is_duplicate_panel, check_is_comic_art_inking
+                    from .comic_precision_scraper import is_duplicate_panel, check_is_comic_art_inking, verify_visual_alignment_with_gemini
                     try:
                         with Image.open(img_file) as im_chk:
                             if check_is_comic_art_inking(im_chk) and not is_duplicate_panel(str(img_file), raw_downloaded_images + [str(p) for p in downloaded_images]):
-                                saved = True
-                                break
+                                eval_b = verify_visual_alignment_with_gemini(str(img_file), narration)
+                                if eval_b.get("score", 0) >= 6 and eval_b.get("is_comic_panel", False) and eval_b.get("depicts_action", False):
+                                    saved = True
+                                    log(f"Scene {idx}: Fallback B approved by Gemini Vision ({eval_b.get('reason')}).")
+                                    break
                     except Exception:
                         pass
                     img_file.unlink(missing_ok=True)
 
-        # Fallback C: Web interior comic scans via Bing with deduplication and inking checks
+        # Fallback C: Web interior comic scans via Bing with Gemini Vision Quality Gate
         if not saved or not img_file.exists():
-            log(f"Scene {idx}: Querying web interior comic scans via Bing...")
-            from .comic_precision_scraper import search_bing_comic_panels, download_web_panel, check_is_comic_art_inking, is_duplicate_panel
-            char_q = story.get("character", "")
-            web_cand_urls = search_bing_comic_panels(f"{char_q} interior comic panel scan", limit=8)
+            log(f"Scene {idx}: Querying web interior comic scans via Bing with strict action verification...")
+            from .comic_precision_scraper import search_bing_comic_panels, download_web_panel, check_is_comic_art_inking, is_duplicate_panel, verify_visual_alignment_with_gemini
+            art_queries = story.get("art_queries", [])
+            q_term = art_queries[idx - 1] if art_queries and idx <= len(art_queries) else f"{story.get('character', '')} {narration[:40]}"
+            web_cand_urls = search_bing_comic_panels(f"{q_term} comic panel", limit=8)
             for wb_u in web_cand_urls:
                 if download_web_panel(wb_u, str(img_file)):
                     try:
                         with Image.open(img_file) as wb_im:
                             if check_is_comic_art_inking(wb_im) and not is_duplicate_panel(str(img_file), raw_downloaded_images + [str(p) for p in downloaded_images]):
-                                saved = True
-                                break
+                                eval_c = verify_visual_alignment_with_gemini(str(img_file), narration)
+                                if eval_c.get("score", 0) >= 6 and eval_c.get("is_comic_panel", False) and eval_c.get("depicts_action", False):
+                                    saved = True
+                                    log(f"Scene {idx}: Fallback C approved by Gemini Vision ({eval_c.get('reason')}).")
+                                    break
                     except Exception:
                         pass
                     if img_file.exists():

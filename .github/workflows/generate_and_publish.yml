@@ -9,6 +9,12 @@ on:
         default: 'autonomous_ai'
         type: choice
         options:
+          - conquest_invincible_la_masacre_viltrumita
+          - ghost_rider_penance_stare_galactus
+          - dceased_infeccion_anti_vida_batman
+          - batman_white_knight_joker_cuerdo
+          - martian_manhunter_fernus_llama_ardiente
+          - darth_vader_vader_down_hombres_muertos
           - venom_el_origen_del_simbionte_letal
           - autonomous_ai
           - any

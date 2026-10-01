@@ -179,11 +179,12 @@ def synthesize_with_gemini(
 
     af_arg = ",".join(filters)
 
+    codec_args = ["-acodec", "libmp3lame", "-b:a", "192k"] if out_file.suffix.lower() == ".mp3" else ["-acodec", "pcm_s16le"]
     cmd = [
         "ffmpeg", "-y",
         "-i", temp_raw_wav,
         "-af", af_arg,
-        "-acodec", "pcm_s16le",
+        *codec_args,
         str(out_file)
     ]
 
