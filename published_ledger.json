@@ -898,5 +898,15 @@
     "mode": "live_release",
     "video_file": "Venom_El_Nacimiento_del_Protector_Letal.mp4",
     "status": "published"
+  },
+  {
+    "id": "darth_vader_vader_down_hombres_muertos",
+    "title": "Darth Vader: Solo Veo Miedo y Hombres Muertos",
+    "character": "Darth Vader",
+    "theme_signature": "darth_vader:vader_down:emboscada_hombres_muertos",
+    "date": "2026-10-01 18:39",
+    "mode": "live_release",
+    "video_file": "Darth_Vader_Solo_Veo_Miedo_y_Hombres_Muertos.mp4",
+    "status": "published"
   }
 ]
