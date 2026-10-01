@@ -918,5 +918,15 @@
     "mode": "live_release",
     "video_file": "DCeased_La_Caída_de_Batman_y_la_Trágica_Despedida_a_Alfred.mp4",
     "status": "published"
+  },
+  {
+    "id": "doctor_strange_doctor_doom_triumph_and_torment",
+    "title": "Doctor Strange y Doctor Doom: El Pacto Sangriento en el Infierno",
+    "character": "Doctor Strange",
+    "theme_signature": "doctor_strange:triumph_and_torment:mephisto_hell",
+    "date": "2026-10-01 22:09",
+    "mode": "live_release",
+    "video_file": "Doctor_Strange_y_Doctor_Doom_El_Pacto_Sangriento_en_el_Infierno.mp4",
+    "status": "published"
   }
 ]
