@@ -938,5 +938,15 @@
     "mode": "live_release",
     "video_file": "Capitán_América_El_Regreso_del_Soldado_del_Invierno.mp4",
     "status": "published"
+  },
+  {
+    "id": "thanos_rising_el_origen_del_titan_loco",
+    "title": "Thanos: El Perturbador Origen y la Obsesión con la Muerte",
+    "character": "Thanos",
+    "theme_signature": "thanos:rising:origen_titan_loco_asesinato",
+    "date": "2026-10-02 07:05",
+    "mode": "live_release",
+    "video_file": "Thanos_El_Perturbador_Origen_y_la_Obsesión_con_la_Muerte.mp4",
+    "status": "published"
   }
 ]
