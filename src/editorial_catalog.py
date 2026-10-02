@@ -807,6 +807,12 @@ EDITORIAL_STORIES = [
             "Wolverine lideró un asalto desesperado, pero una ráfaga de plasma del Centinela redujo su cuerpo a cenizas.",
             "Enviando la mente de Kitty Pryde al pasado, los mutantes jugaron su última carta para reescribir la historia."
         ],
+        "scene_art_urls": [
+            "assets/curated_panels/xmen_dias_del_futuro_pasado/scene_01.jpg",
+            "assets/curated_panels/xmen_dias_del_futuro_pasado/scene_02.jpg",
+            "assets/curated_panels/xmen_dias_del_futuro_pasado/scene_03.jpg",
+            "assets/curated_panels/xmen_dias_del_futuro_pasado/scene_04.jpg"
+        ],
         "art_queries": [
             "Days of Future Past Sentinel poster mutant gravestones comic panel",
             "X-Men concentration camp inhibitor collars John Byrne comic panel",

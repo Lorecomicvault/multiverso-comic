@@ -19,9 +19,12 @@ import requests
 from PIL import Image, ImageChops, ImageStat
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9",
+    "Sec-Fetch-Dest": "image",
+    "Sec-Fetch-Mode": "no-cors",
+    "Sec-Fetch-Site": "cross-site",
 }
 
 WIKI_DOMAINS = [
@@ -32,11 +35,8 @@ WIKI_DOMAINS = [
 ]
 
 CANDIDATE_VISION_MODELS = [
-    "gemini-3.1-flash-lite",
+    "gemini-2.5-flash",
     "gemini-2.5-flash-lite",
-    "gemini-3.5-flash-lite",
-    "gemini-3.8-flash",
-    "gemini-3.5-flash",
     "gemini-flash-latest"
 ]
 
@@ -98,7 +98,17 @@ def is_cover_or_promo_image(file_title: str) -> bool:
         'logo', 'tpb', 'omnibus', 'sketch', 'wraparound', 'facsimile',
         'reprint', 'chronicles', 'bullet', 'advertisement', 'card',
         'action figure', 'figure', 'toy', 'cosplay', 'wallpaper',
-        'trade paperback', 'hardcover', 'annual'
+        'trade paperback', 'hardcover', 'annual',
+        # Instant rejection of MCU live-action film stills, TV series, actors, video games
+        'earth 199999', 'earth-199999', 'earth 89', 'earth 96', 'earth 12',
+        'season', 'episode', 'live action', 'live-action', 'actor', 'actress',
+        'film', 'movie', 'cinematic', 'mcu', 'dceu', 'soundtrack', 'bts',
+        'behind the scenes', 'cast', 'interview', 'trailer', 'commercial',
+        'video game', 'videogame', 'game', 'heroclix', 'endgame', 'infinity war',
+        'homecoming', 'far from home', 'no way home', 'wandavision', 'she hulk',
+        'she-hulk', 'defenders', 'jessica jones', 'luke cage', 'iron fist',
+        'agents of shield', 'agents of s.h.i.e.l.d', 'daredevil born again season',
+        'multiverse of madness', 'quantumania', 'brave new world'
     ]
     if any(k in t for k in cover_keywords):
         return True
@@ -121,7 +131,7 @@ def is_cover_or_promo_image(file_title: str) -> bool:
 # -------------------------------------------------------------------------
 
 def get_file_url(wiki_domain: str, file_title: str) -> str:
-    """Extrae la URL de resolución completa de Fandom mediante la MediaWiki API."""
+    """Extrae la URL de resolución completa de Fandom mediante la MediaWiki API preservando el token de revisión."""
     clean_title = file_title if file_title.startswith("File:") else f"File:{file_title}"
     url = f"https://{wiki_domain}/api.php"
     params = {
@@ -135,8 +145,8 @@ def get_file_url(wiki_domain: str, file_title: str) -> str:
         r = requests.get(url, params=params, headers=HEADERS, timeout=10)
         pages = r.json().get("query", {}).get("pages", {})
         for pid, pinfo in pages.items():
-            if "imageinfo" in pinfo:
-                return pinfo["imageinfo"][0]["url"].split("/revision/")[0]
+            if "imageinfo" in pinfo and pinfo["imageinfo"]:
+                return pinfo["imageinfo"][0]["url"]
     except Exception:
         pass
     return None
@@ -164,15 +174,33 @@ def get_issue_category_panels(wiki_domain: str, query_str: str) -> list:
     """
     Extrae la lista de viñetas interiores escaneadas desde la categoría oficial
     de la grapa en Fandom (Category:<Comic Issue>/Images).
+    Descarta estrictamente números de universo como Earth-616 o categorías genéricas.
     """
-    match = re.search(r'([A-Za-z\s\-]+Vol\s*\d+\s*\d+)', query_str, re.IGNORECASE)
-    if not match:
-        match = re.search(r'([A-Za-z\s\-]+\d+)', query_str)
-        
-    if not match:
+    if not query_str:
         return []
-        
-    issue_name = match.group(1).strip()
+
+    # Decodificar URL y normalizar guiones bajos
+    cleaned = urllib.parse.unquote(query_str).replace("_", " ")
+
+    # Prioridad 1: Detectar 'from <Comic Title> Vol X Y' o 'from <Comic Title> Y'
+    m_from = re.search(r'from\s+([A-Za-z0-9\s\-]+?(?:Vol(?:\.|\s*)\s*\d+\s*)?\d+)', cleaned, re.IGNORECASE)
+    issue_name = None
+    if m_from:
+        cand = m_from.group(1).strip()
+        if not re.search(r'\b(earth|season|episode|universe|movie|film)\b', cand, re.IGNORECASE):
+            issue_name = cand
+
+    # Prioridad 2: Buscar patrón explícito '<Comic Title> Vol X Y'
+    if not issue_name:
+        m_vol = re.search(r'([A-Za-z0-9\s\-]+?Vol(?:\.|\s*)\s*\d+\s*\d+)', cleaned, re.IGNORECASE)
+        if m_vol:
+            cand = m_vol.group(1).strip()
+            if not re.search(r'\b(earth|season|episode|universe|movie|film)\b', cand, re.IGNORECASE):
+                issue_name = cand
+
+    if not issue_name or len(issue_name) < 4:
+        return []
+
     url = f"https://{wiki_domain}/api.php"
     params = {
         "action": "query",
@@ -405,7 +433,7 @@ Responde ESTRICTAMENTE con un objeto JSON:
             for model in CANDIDATE_VISION_MODELS:
                 url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={cand_key}"
                 try:
-                    r = requests.post(url, json=payload, headers={"Content-Type": "application/json"}, timeout=12)
+                    r = requests.post(url, json=payload, headers={"Content-Type": "application/json"}, timeout=7)
                     if r.status_code == 200:
                         raw = r.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
                         if "```json" in raw:
@@ -520,8 +548,14 @@ def fetch_scene_image(
 
     best_fallback_file = None
     highest_score = -1
+    MAX_EVALUATIONS = 4
+    eval_count = 0
 
     for cand in ordered_candidates:
+        if eval_count >= MAX_EVALUATIONS:
+            print(f"  [Límite de Evaluación] Máximo de {MAX_EVALUATIONS} candidatos evaluados para esta escena. Finalizando búsqueda rápida.")
+            break
+
         cand_src = cand["source"]
         cand_name = cand.get("title") or cand.get("url", "")[:50]
         cand_id = cand.get("title") or cand.get("url")
@@ -563,6 +597,7 @@ def fetch_scene_image(
             return dest_path
 
         # Evaluación con Árbitro de IA Gemini Multimodal Vision
+        eval_count += 1
         eval_result = verify_visual_alignment_with_gemini(temp_candidate, scene_text)
         score = eval_result.get("score", 7)
         is_panel = eval_result.get("is_comic_panel", True)
