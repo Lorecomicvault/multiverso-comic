@@ -622,9 +622,9 @@ def main():
             break
         except Exception as e:
             log(f"[WARNING] Story candidate '{selected.get('title')}' failed image building/quality gate: {e}")
-            if args.story_id and args.story_id not in ("any", "autonomous_ai"):
-                raise
             log(f"[RETRY] Automatically rotating to another story candidate (Attempt {attempt}/{MAX_CANDIDATE_ATTEMPTS})...")
+            # If an explicit story was requested but failed, clear it so subsequent attempts can rotate freely
+            args.story_id = None
             # Mark candidate in memory ledger to avoid picking it again during this run
             ledger.append({
                 "id": selected.get("id", f"candidate_{attempt}"),

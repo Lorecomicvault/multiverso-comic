@@ -143,21 +143,21 @@ EMERGENCY_VIRAL_POOL = [
         "hashtags": "#CaptainAmerica #WinterSoldier #BuckyBarnes #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
             "¿Sabías que tras décadas de creerlo muerto, el Capitán América descubrió que Bucky Barnes era el asesino más letal de HYDRA?",
-            "Con un brazo biónico de titanio y la memoria lavada, el Soldado del Invierno ejecutó a cientos de objetivos en las sombras.",
-            "En un feroz combate cuerpo a cuerpo, Steve Rogers logró quitarle la máscara reconociendo los ojos de su hermano de armas.",
-            "Usando el Cubo Cósmico para restaurar sus recuerdos, Bucky cayó de rodillas abrumado por el dolor de sus crímenes."
+            "Con un brazo biónico de titanio y la memoria borrada, el Soldado del Invierno ejecutó a cientos de objetivos en las sombras.",
+            "Sometido a crueles cirugías en laboratorios clandestinos, le injertaron el implante cibernético para transformarlo en un arma letal.",
+            "Al recuperar finalmente sus recuerdos perdidos, Bucky juró redimirse combatiendo las amenazas más oscuras del mundo."
         ],
         "scene_art_urls": [
-            "James Buchanan Barnes (Earth-616) from Captain America Vol 5 2 0004.png",
-            "Winter Soldier's Bionic Arm from Captain America Vol 5 33 001.jpg",
-            "James Buchanan Barnes (Earth-616) and Steven Rogers (Earth-616) from Captain America Vol 5 607 0001.jpg",
-            "James Buchanan Barnes (Earth-616) from Captain America & the Winter Soldier Special Vol 1 1 002.jpg"
+            "assets/curated_panels/winter_soldier/scene_01.jpg",
+            "assets/curated_panels/winter_soldier/scene_02.jpg",
+            "assets/curated_panels/winter_soldier/scene_03.jpg",
+            "assets/curated_panels/winter_soldier/scene_04.jpg"
         ],
         "art_queries": [
-            "Captain America Winter Soldier highway sniper comic panel",
-            "Winter Soldier bionic arm cybernetic Hydra comic panel",
-            "Captain America unmasks Winter Soldier Bucky Ed Brubaker comic panel",
-            "Winter Soldier Cosmic Cube remembers Bucky Barnes crying comic panel"
+            "Captain America Winter Soldier snowy forest sniper comic panel",
+            "Winter Soldier bionic arm cybernetic red star comic panel",
+            "Winter Soldier surgical lab clandestine operation bionic arm panel",
+            "Bucky Barnes redemption determination comic panel"
         ]
     },
     {
