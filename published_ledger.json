@@ -968,5 +968,15 @@
     "mode": "live_release",
     "video_file": "Días_del_Futuro_Pasado_El_Exterminio_Mutante_de_los_Centinelas.mp4",
     "status": "published"
+  },
+  {
+    "id": "doctor_strange_dormammu_bucle_dimension_oscura",
+    "title": "Doctor Strange: El Duelo Eterno contra Dormammu en la Dimensión Oscura",
+    "character": "Doctor Strange",
+    "theme_signature": "doctor_strange:dormammu:dark_dimension_eternity_clea",
+    "date": "2026-10-02 19:43",
+    "mode": "live_release",
+    "video_file": "Doctor_Strange_El_Duelo_Eterno_contra_Dormammu_en_la_Dimensión_Oscura.mp4",
+    "status": "published"
   }
 ]
