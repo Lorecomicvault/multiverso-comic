@@ -9,20 +9,16 @@ on:
         default: 'autonomous_ai'
         type: choice
         options:
-          - captain_america_el_soldado_del_invierno
           - thanos_rising_el_origen_del_titan_loco
+          - xmen_dias_del_futuro_pasado_centinelas
+          - vengadores_desunidos_la_locura_de_wanda
+          - daredevil_el_hombre_sin_miedo_origen_quimico
+          - aquaman_mano_arpon_charybdis
+          - green_lantern_kyle_rayner_major_force
+          - doctor_strange_dormammu_bucle_dimension_oscura
           - autonomous_ai
           - any
-          - dceased_infeccion_anti_vida_batman
-          - superman_red_son_comunismo
-          - punisher_kills_marvel_universe
-          - flash_forward_wally_west_doctor_manhattan
-          - hulk_the_end_ultimo_humano
-          - thanos_rising_el_origen_del_titan_loco
-          - batman_grim_knight_crime_alley
-          - hulk_maestro_futuro_imperfecto
-          - superior_spider_man_otto
-          - batman_hush_silencio
+          - captain_america_el_soldado_del_invierno
           - sinestro_corps_war
           - deadpool_kills_marvel_universe
           - kingdom_come_justicia_divina
@@ -160,8 +156,9 @@ jobs:
           fi
           if ! git diff --cached --quiet; then
             git commit -m "chore(ledger): registrar video producido para prevenir duplicados [skip ci]"
-            git pull --rebase origin main 2>/dev/null || true
-            git push origin main
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push origin main && break || sleep 3
+            done
           else
             echo "Ledger al dia. No hay nuevas entradas para commitear."
           fi

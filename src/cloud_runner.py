@@ -590,19 +590,18 @@ def main():
         else:
             available = [s for s in EDITORIAL_STORIES if not is_duplicate(s, ledger)[0]]
             log(f"Available unproduced stories in catalog: {len(available)} / {len(EDITORIAL_STORIES)}")
+            curated_avail = [s for s in available if any("assets/curated_panels" in str(u) for u in s.get("scene_art_urls", []))]
 
-            if getattr(args, 'ai_story', False) or args.story_id == "autonomous_ai" or not available:
+            if curated_avail:
+                selected = random.choice(curated_avail)
+                log(f"Selected Guaranteed Curated Story: {selected['title']} (ID: {selected['id']})")
+            elif getattr(args, 'ai_story', False) or args.story_id == "autonomous_ai" or not available:
                 log(f"CATALOG EXHAUSTION / AI MODE: Activating Autonomous AI Story Engine (Attempt {attempt}/{MAX_CANDIDATE_ATTEMPTS})...")
                 from .autonomous_ai_generator import generate_autonomous_story
                 selected = generate_autonomous_story(ledger)
                 log(f"Autonomous AI Generated Story: {selected['title']} (ID: {selected['id']})")
             else:
-                # Prioritize available stories with curated panels or verified URLs
-                curated_avail = [s for s in available if any("assets/curated_panels" in str(u) for u in s.get("scene_art_urls", []))]
-                if curated_avail:
-                    selected = random.choice(curated_avail)
-                else:
-                    selected = random.choice(available)
+                selected = random.choice(available)
                 log(f"Selected Unique Story: {selected['title']} (ID: {selected['id']})")
 
         if args.dry_run:
