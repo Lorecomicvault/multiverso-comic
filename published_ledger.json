@@ -928,5 +928,15 @@
     "mode": "live_release",
     "video_file": "Doctor_Strange_y_Doctor_Doom_El_Pacto_Sangriento_en_el_Infierno.mp4",
     "status": "published"
+  },
+  {
+    "id": "captain_america_el_soldado_del_invierno",
+    "title": "Capitán América: El Regreso del Soldado del Invierno",
+    "character": "Captain America",
+    "theme_signature": "captain_america:winter_soldier:bucky_barnes_asesino_cosmic_cube",
+    "date": "2026-10-02 03:43",
+    "mode": "live_release",
+    "video_file": "Capitán_América_El_Regreso_del_Soldado_del_Invierno.mp4",
+    "status": "published"
   }
 ]
