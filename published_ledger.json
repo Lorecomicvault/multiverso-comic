@@ -948,5 +948,15 @@
     "mode": "live_release",
     "video_file": "Thanos_El_Perturbador_Origen_y_la_Obsesión_con_la_Muerte.mp4",
     "status": "published"
+  },
+  {
+    "id": "archangel_dark_angel_saga",
+    "title": "La Caída de Archangel: El Heredero de Apocalipsis",
+    "character": "Archangel",
+    "theme_signature": "archangel:dark_angel_saga:corruption",
+    "date": "2026-10-02 10:25",
+    "mode": "live_release",
+    "video_file": "La_Caída_de_Archangel_El_Heredero_de_Apocalipsis.mp4",
+    "status": "published"
   }
 ]
