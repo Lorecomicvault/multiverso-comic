@@ -561,48 +561,92 @@ def main():
     ledger = load_ledger()
     log(f"Historical Ledger: {len(ledger)} previously produced videos registered.")
 
-    # Story Selection & Anti-Duplication Verification
-    if args.story_id and args.story_id != "any":
-        selected = next((s for s in EDITORIAL_STORIES if s["id"] == args.story_id), None)
-        if not selected:
-            # Check if this ID was an old historical story
-            old_item = next((item for item in ledger if item.get("id") == args.story_id), None)
-            if old_item:
-                log(f"CRITICAL ANTI-DUPLICATION SHIELD: Requested story '{args.story_id}' is in historical ledger (Produced: {old_item.get('date')}).")
-                log(f"Existing Title: {old_item.get('title')}")
-                log("ABORTING: Duplicates are strictly prohibited.")
-                sys.exit(0)
-            else:
-                log(f"Error: Story ID '{args.story_id}' not found in catalog or ledger.")
-                sys.exit(1)
-
-        is_dup, reason = is_duplicate(selected, ledger)
-        if is_dup:
-            log(f"CRITICAL ANTI-DUPLICATION SHIELD: Story '{selected['title']}' rejected.")
-            log(f"Reason: {reason}")
-            log("No duplicate videos will ever be produced. Aborting safely.")
-            sys.exit(0)
-    else:
-        available = [s for s in EDITORIAL_STORIES if not is_duplicate(s, ledger)[0]]
-        log(f"Available unproduced stories in catalog: {len(available)} / {len(EDITORIAL_STORIES)}")
-
-        if not available or getattr(args, 'ai_story', False) or args.story_id == "autonomous_ai":
-            log("CATALOG EXHAUSTION / AI MODE: Activating Autonomous AI Story Engine (Google Gemini)...")
-            from .autonomous_ai_generator import generate_autonomous_story
-            selected = generate_autonomous_story(ledger)
-            log(f"Autonomous AI Generated Story: {selected['title']} (ID: {selected['id']})")
-        else:
-            selected = random.choice(available)
-            log(f"Selected Unique Story: {selected['title']} (ID: {selected['id']})")
-
-    if args.dry_run:
-        log("DRY RUN mode verified. Story is 100% unique and passed all 5 anti-duplication layers.")
-        log("Exiting without video render or Meta publish as requested.")
-        sys.exit(0)
-
+    MAX_CANDIDATE_ATTEMPTS = 4
+    generation = None
+    selected = None
     work_dir = Path("scratch_cloud_gen")
-    work_dir.mkdir(parents=True, exist_ok=True)
-    generation = build_cloud_generation(selected, work_dir)
+
+    for attempt in range(1, MAX_CANDIDATE_ATTEMPTS + 1):
+        # Story Selection & Anti-Duplication Verification
+        if args.story_id and args.story_id not in ("any", "autonomous_ai"):
+            selected = next((s for s in EDITORIAL_STORIES if s["id"] == args.story_id), None)
+            if not selected:
+                old_item = next((item for item in ledger if item.get("id") == args.story_id), None)
+                if old_item:
+                    log(f"CRITICAL ANTI-DUPLICATION SHIELD: Requested story '{args.story_id}' is in historical ledger (Produced: {old_item.get('date')}).")
+                    log(f"Existing Title: {old_item.get('title')}")
+                    log("ABORTING: Duplicates are strictly prohibited.")
+                    sys.exit(0)
+                else:
+                    log(f"Error: Story ID '{args.story_id}' not found in catalog or ledger.")
+                    sys.exit(1)
+
+            is_dup, reason = is_duplicate(selected, ledger)
+            if is_dup:
+                log(f"CRITICAL ANTI-DUPLICATION SHIELD: Story '{selected['title']}' rejected.")
+                log(f"Reason: {reason}")
+                log("No duplicate videos will ever be produced. Aborting safely.")
+                sys.exit(0)
+        else:
+            available = [s for s in EDITORIAL_STORIES if not is_duplicate(s, ledger)[0]]
+            log(f"Available unproduced stories in catalog: {len(available)} / {len(EDITORIAL_STORIES)}")
+
+            if getattr(args, 'ai_story', False) or args.story_id == "autonomous_ai" or not available:
+                log(f"CATALOG EXHAUSTION / AI MODE: Activating Autonomous AI Story Engine (Attempt {attempt}/{MAX_CANDIDATE_ATTEMPTS})...")
+                from .autonomous_ai_generator import generate_autonomous_story
+                selected = generate_autonomous_story(ledger)
+                log(f"Autonomous AI Generated Story: {selected['title']} (ID: {selected['id']})")
+            else:
+                # Prioritize available stories with curated panels or verified URLs
+                curated_avail = [s for s in available if any("assets/curated_panels" in str(u) for u in s.get("scene_art_urls", []))]
+                if curated_avail:
+                    selected = random.choice(curated_avail)
+                else:
+                    selected = random.choice(available)
+                log(f"Selected Unique Story: {selected['title']} (ID: {selected['id']})")
+
+        if args.dry_run:
+            log("DRY RUN mode verified. Story is 100% unique and passed all 5 anti-duplication layers.")
+            log("Exiting without video render or Meta publish as requested.")
+            sys.exit(0)
+
+        # Attempt to build generation (download and verify all 4 scene panels)
+        try:
+            if work_dir.exists():
+                import shutil
+                shutil.rmtree(work_dir, ignore_errors=True)
+            work_dir.mkdir(parents=True, exist_ok=True)
+
+            generation = build_cloud_generation(selected, work_dir)
+            log(f"SUCCESS: Story candidate '{selected['title']}' passed all quality gates and visual alignment!")
+            break
+        except Exception as e:
+            log(f"[WARNING] Story candidate '{selected.get('title')}' failed image building/quality gate: {e}")
+            if args.story_id and args.story_id not in ("any", "autonomous_ai"):
+                raise
+            log(f"[RETRY] Automatically rotating to another story candidate (Attempt {attempt}/{MAX_CANDIDATE_ATTEMPTS})...")
+            # Mark candidate in memory ledger to avoid picking it again during this run
+            ledger.append({
+                "id": selected.get("id", f"candidate_{attempt}"),
+                "title": selected.get("title", ""),
+                "theme_signature": selected.get("theme_signature", "")
+            })
+    else:
+        # Ultimate Emergency Fallback: If AI attempts exhausted, use a guaranteed unproduced curated story from emergency pool
+        log("[CRITICAL FALLBACK] AI candidate attempts exhausted. Activating guaranteed Curated Emergency Pool...")
+        from .autonomous_ai_generator import EMERGENCY_VIRAL_POOL
+        for backup_story in EMERGENCY_VIRAL_POOL:
+            is_dup, _ = is_duplicate(backup_story, ledger)
+            if not is_dup:
+                import shutil
+                if work_dir.exists():
+                    shutil.rmtree(work_dir, ignore_errors=True)
+                work_dir.mkdir(parents=True, exist_ok=True)
+                selected = backup_story
+                generation = build_cloud_generation(selected, work_dir)
+                break
+        else:
+            raise RuntimeError("Fatal: All story candidates and emergency pool exhausted.")
 
     output_root = Path("output")
     output_root.mkdir(parents=True, exist_ok=True)

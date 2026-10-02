@@ -107,57 +107,57 @@ def verify_image_quality(wiki: str, filename: str) -> bool:
 
 EMERGENCY_VIRAL_POOL = [
     {
-        "id": "black_adam_tercera_guerra_mundial",
-        "universe": "DC",
-        "character": "Black Adam",
-        "title": "Black Adam: La Masacre que Desató la Tercera Guerra Mundial",
-        "theme_signature": "black_adam:tercera_guerra:bialya_masacre",
-        "description": "Cuando asesinaron a su familia, Black Adam enloqueció de furia y desató la Tercera Guerra Mundial enfrentando a toda la Tierra.",
-        "hashtags": "#BlackAdam #DCComics #WorldWarIII #Shazam #JusticeLeague #ComicsNarrados #Shorts",
+        "id": "thanos_rising_el_origen_del_titan_loco",
+        "universe": "Marvel",
+        "character": "Thanos",
+        "title": "Thanos: El Perturbador Origen y la Obsesión con la Muerte",
+        "theme_signature": "thanos:rising:origen_titan_loco_asesinato",
+        "description": "Nacido como una anomalía en la luna Titán, Thanos comenzó diseccionando criaturas en cuevas secretas hasta convertirse en el genocida cósmico obsesionado con cortejar a la Señora Muerte.",
+        "hashtags": "#Thanos #MarvelComics #ThanosRising #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "¿Sabías que cuando asesinaron a su familia, Black Adam exterminó a dos millones de personas en una sola noche?",
-            "Enloquecido de furia, arrasó la nación entera de Bialya degollando a cada soldado sin mostrar piedad.",
-            "La Liga de la Justicia, los Jóvenes Titanes y la Sociedad de la Justicia se unieron para frenar su avance sangriento.",
-            "Tras resistir los golpes combinados de todos los héroes del planeta, fue derrotado únicamente cuando alteraron mágicamente su rayo Shazam."
+            "¿Sabías que Thanos nació en la luna Titán como una anomalía monstruosa que horrorizó a su propia madre?",
+            "Guiado por una niña misteriosa, comenzó realizando sádicas disecciones biológicas a sus propios compañeros de clase.",
+            "Al descubrir que la niña era la personificación de la Muerte, Thanos asesinó a su madre para cortejarla.",
+            "Años después, bombardeó Titán con ojivas nucleares extinguiendo a su especie entera en nombre de su amada."
         ],
         "scene_art_urls": [
-            "Black Adam 0003.jpg",
-            "World War III 0001.jpg",
-            "Black Adam Prime Earth 0018.jpeg",
-            "Black Adam Prime Earth 0020.jpeg"
+            "Thanos (Earth-616) from Thanos Rising Vol 1 1 001.jpg",
+            "Thanos (Earth-616) from Thanos Rising Vol 1 1 005.jpg",
+            "Thanos (Earth-616) from Thanos Rising Vol 1 2 001.jpg",
+            "Thanos (Earth-616) from Thanos Rising Vol 1 3 001.jpg"
         ],
         "art_queries": [
-            "Black Adam World War III massacre",
-            "Black Adam destroying Bialya army",
-            "Black Adam vs Justice League World War III",
-            "Black Adam Shazam lightning defeat"
+            "Thanos newborn baby Titan alien mother horror",
+            "Thanos dissection cave mysterious girl Death",
+            "Thanos murders mother scalpel Lady Death",
+            "Thanos bombards Titan nuclear missiles genocide"
         ]
     },
     {
-        "id": "superman_red_son_comunismo",
-        "universe": "DC",
-        "character": "Superman",
-        "title": "Superman Red Son: El Hijo Rojo de la Unión Soviética",
-        "theme_signature": "superman:red_son:ucrania_stalin_guerra_fria",
-        "description": "En este universo alternativo, la cápsula de Kal-El aterrizó en la Unión Soviética convirtiendo a Superman en el arma suprema del comunismo.",
-        "hashtags": "#Superman #RedSon #DCComics #SovietSuperman #ComicsNarrados #Shorts #Reels",
+        "id": "captain_america_el_soldado_del_invierno",
+        "universe": "Marvel",
+        "character": "Captain America",
+        "title": "Capitán América: El Regreso del Soldado del Invierno",
+        "theme_signature": "captain_america:winter_soldier:bucky_barnes_asesino_cosmic_cube",
+        "description": "Steve Rogers descubre la desgarradora verdad: su querido hermano de armas Bucky Barnes sobrevivió a la guerra convertido en el despiadado asesino de HYDRA, el Soldado del Invierno.",
+        "hashtags": "#CaptainAmerica #WinterSoldier #BuckyBarnes #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "¿Sabías que la cápsula espacial de Kal-El no cayó en Kansas, sino en una granja colectiva de la Unión Soviética?",
-            "Criado bajo la doctrina comunista, Superman se convirtió en el arma suprema de Joseph Stalin para dominar el mundo.",
-            "Para derrocar su tiranía roja, un Batman soviético con gorro de invierno usó lámparas solares rojas y lo puso de rodillas.",
-            "Antes de ser capturado, Batman detonó una bomba en su propio estómago sacrificando su vida como símbolo eterno de libertad."
+            "¿Sabías que tras décadas de creerlo muerto, el Capitán América descubrió que Bucky Barnes era el asesino más letal de HYDRA?",
+            "Con un brazo biónico de titanio y la memoria lavada, el Soldado del Invierno ejecutó a cientos de objetivos en las sombras.",
+            "En un feroz combate cuerpo a cuerpo, Steve Rogers logró quitarle la máscara reconociendo los ojos de su hermano de armas.",
+            "Usando el Cubo Cósmico para restaurar sus recuerdos, Bucky cayó de rodillas abrumado por el dolor de sus crímenes."
         ],
         "scene_art_urls": [
-            "Superman Red Son 01.jpg",
-            "Joseph Stalin Earth-30 001.jpg",
-            "Batman Red Son 02.jpg",
-            "Comrade of Steel.jpg"
+            "James Buchanan Barnes (Earth-616) from Captain America Vol 5 2 0004.png",
+            "Winter Soldier's Bionic Arm from Captain America Vol 5 33 001.jpg",
+            "James Buchanan Barnes (Earth-616) and Steven Rogers (Earth-616) from Captain America Vol 5 607 0001.jpg",
+            "James Buchanan Barnes (Earth-616) from Captain America & the Winter Soldier Special Vol 1 1 002.jpg"
         ],
         "art_queries": [
-            "Superman Red Son Soviet Union flag",
-            "Superman Red Son Stalin military",
-            "Batman Red Son vs Superman fight",
-            "Batman Red Son bomb suicide freedom"
+            "Captain America Winter Soldier highway sniper comic panel",
+            "Winter Soldier bionic arm cybernetic Hydra comic panel",
+            "Captain America unmasks Winter Soldier Bucky Ed Brubaker comic panel",
+            "Winter Soldier Cosmic Cube remembers Bucky Barnes crying comic panel"
         ]
     },
     {
@@ -303,15 +303,14 @@ ESTRICTO HISTORIAL DE TEMAS YA PRODUCIDOS (TOTALMENTE PROHIBIDO REPETIR O REUTIL
 - Personajes ya cubiertos (PROHIBIDO REPETIR): {char_summary}
 - Títulos recientes ya publicados (PROHIBIDO REPETIR): {titles_summary}
 
-IDEAS DE TEMAS CANDIDATOS ULTRA-VIRALES DE SUPERHÉROES MARVEL/DC AÚN NO EXPLORADOS (Elige uno de estos o similar):
-- DCeased: La infección del virus anti-vida y la trágica despedida de Batman a Alfred en la Baticueva
-- Batman: White Knight (Jack Napier se cura de su locura con medicación y demanda a Batman ante Gotham)
-- Ghost Rider: La Mirada de Penitencia aplicada al Devorador de Mundos Galactus
-- Martian Manhunter: Fernus la Llama Ardiente aniquilando a la Liga de la Justicia
+IDEAS DE TEMAS CANDIDATOS ULTRA-VIRALES DE SUPERHÉROES MARVEL/DC CON VIÑETAS INTERIORES VERIFICADAS (Elige uno de estos o similar):
 - Captain America: El Soldado del Invierno (Steve Rogers descubre que Bucky Barnes es el asesino cibernético de HYDRA)
-- Doctor Strange y Doctor Doom: Triunfo y Tormento (El viaje místico al Infierno para liberar el alma de la madre de Doom)
-- Batman: La Espada de Azrael (Jean-Paul Valley enloquecido por la Orden de San Dumas bajo el manto de Batman)
-- X-Men: Era de Apocalipsis (El despertar de En Sabah Nur y la resistencia de Magneto)
+- Thanos: Rising (El perturbador origen de Thanos en la luna Titán, disecciones secretas y la adoración a la Dama Muerte)
+- The Flash: Godspeed (August Heart obteniendo la Speed Force y robando la velocidad a sangre fría de otros velocistas)
+- Wolverine: Old Man Logan (La ilusión óptica de Mysterio que manipuló a Logan para masacrar a todos los X-Men)
+- Knull: El Rey de Negro (El dios de la oscuridad decapitando al Celestial y forjando la All-Black Necroespada)
+- Batman: El Tribunal de los Búhos (El laberinto subterráneo secreto y la quiebra mental de Bruce Wayne ante los Talons)
+- Superior Spider-Man (Otto Octavius intercambiando su mente con Peter Parker y ejecutando criminales sin piedad)
 
 REGLAS INVIOLABLES DE FORMATO:
 1. Exactamente 4 escenas narrativas.

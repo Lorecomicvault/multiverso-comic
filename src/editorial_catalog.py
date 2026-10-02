@@ -88,10 +88,10 @@ EDITORIAL_STORIES = [
             "Años después, bombardeó Titán con ojivas nucleares extinguiendo a su especie entera en nombre de su amada."
         ],
         "scene_art_urls": [
-            "Thanos_Rising_Vol_1_1.jpg",
-            "Thanos_Rising_Vol_1_2.jpg",
-            "Thanos_Rising_Vol_1_3.jpg",
-            "Thanos_Rising_Vol_1_5.jpg"
+            "Thanos (Earth-616) from Thanos Rising Vol 1 1 001.jpg",
+            "Thanos (Earth-616) from Thanos Rising Vol 1 1 005.jpg",
+            "Thanos (Earth-616) from Thanos Rising Vol 1 2 001.jpg",
+            "Thanos (Earth-616) from Thanos Rising Vol 1 3 001.jpg"
         ]
     },
     {
@@ -662,6 +662,12 @@ EDITORIAL_STORIES = [
             "Winter Soldier bionic arm cybernetic Hydra comic panel",
             "Captain America unmasks Winter Soldier Bucky Ed Brubaker comic panel",
             "Winter Soldier Cosmic Cube remembers Bucky Barnes crying comic panel"
+        ],
+        "scene_art_urls": [
+            "James Buchanan Barnes (Earth-616) from Captain America Vol 5 2 0004.png",
+            "Winter Soldier's Bionic Arm from Captain America Vol 5 33 001.jpg",
+            "James Buchanan Barnes (Earth-616) and Steven Rogers (Earth-616) from Captain America Vol 5 607 0001.jpg",
+            "James Buchanan Barnes (Earth-616) from Captain America & the Winter Soldier Special Vol 1 1 002.jpg"
         ]
     },
     {

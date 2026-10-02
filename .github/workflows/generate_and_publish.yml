@@ -9,15 +9,11 @@ on:
         default: 'autonomous_ai'
         type: choice
         options:
-          - dceased_infeccion_anti_vida_batman
           - captain_america_el_soldado_del_invierno
-          - ghost_rider_penance_stare_galactus
-          - batman_white_knight_joker_cuerdo
-          - martian_manhunter_fernus_llama_ardiente
-          - darth_vader_vader_down_hombres_muertos
-          - venom_el_origen_del_simbionte_letal
+          - thanos_rising_el_origen_del_titan_loco
           - autonomous_ai
           - any
+          - dceased_infeccion_anti_vida_batman
           - superman_red_son_comunismo
           - punisher_kills_marvel_universe
           - flash_forward_wally_west_doctor_manhattan
