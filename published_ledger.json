@@ -978,5 +978,15 @@
     "mode": "live_release",
     "video_file": "Doctor_Strange_El_Duelo_Eterno_contra_Dormammu_en_la_Dimensión_Oscura.mp4",
     "status": "published"
+  },
+  {
+    "id": "green_lantern_alexandra_dewitt",
+    "title": "Green Lantern: El Asesinato que Conmocionó el Universo",
+    "character": "Kyle Rayner",
+    "theme_signature": "Kyle Rayner:Alex DeWitt:Major Force Refrigerador",
+    "date": "2026-10-02 22:22",
+    "mode": "live_release",
+    "video_file": "Green_Lantern_El_Asesinato_que_Conmocionó_el_Universo.mp4",
+    "status": "published"
   }
 ]
