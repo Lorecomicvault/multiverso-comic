@@ -19,11 +19,12 @@ from pathlib import Path
 from PIL import Image, ImageStat
 
 CANDIDATE_MODELS = [
-    "gemini-3.8-flash",
-    "gemini-3.7-flash",
+    "gemini-flash-lite-latest",
+    "gemini-3.1-flash-lite",
     "gemini-3.5-flash",
     "gemini-flash-latest",
-    "gemini-flash-lite-latest"
+    "gemini-3.8-flash",
+    "gemini-3.7-flash"
 ]
 
 HEADERS = {
@@ -80,7 +81,10 @@ def verify_image_quality(wiki: str, filename: str) -> bool:
         r = requests.get(api_url, headers=HEADERS, timeout=10).json()
         pages = r.get('query', {}).get('pages', {})
         for p in pages.values():
-            if 'imageinfo' in p:
+            if 'imageinfo' in p and p['imageinfo']:
+                img_url = p['imageinfo'][0].get('url')
+                if not img_url:
+                    continue
                 req_headers = {**HEADERS, "Referer": f"https://{wiki}.fandom.com/"}
                 resp = requests.get(img_url, headers=req_headers, timeout=12)
                 if resp.status_code == 200 and len(resp.content) > 15000:
@@ -279,6 +283,12 @@ EMERGENCY_VIRAL_POOL = [
             "Con el Ojo de Agamotto brillando en su pecho, Strange tejió un laberinto de hechizos antiguos contra las llamas oscuras.",
             "Incapaz de doblegar la voluntad del Hechicero Supremo, Dormammu tuvo que pactar y jurar jamás invadir la Tierra."
         ],
+        "scene_art_urls": [
+            "assets/curated_panels/doctor_strange_dormammu/scene_01.jpg",
+            "assets/curated_panels/doctor_strange_dormammu/scene_02.jpg",
+            "assets/curated_panels/doctor_strange_dormammu/scene_03.jpg",
+            "assets/curated_panels/doctor_strange_dormammu/scene_04.jpg"
+        ],
         "art_queries": [
             "Doctor Strange enters Dark Dimension Steve Ditko comic panel",
             "Dormammu giant flaming head cosmic demon Steve Ditko comic panel",
@@ -327,14 +337,15 @@ ESTRICTO HISTORIAL DE TEMAS YA PRODUCIDOS (TOTALMENTE PROHIBIDO REPETIR O REUTIL
 - Personajes ya cubiertos (PROHIBIDO REPETIR): {char_summary}
 - Títulos recientes ya publicados (PROHIBIDO REPETIR): {titles_summary}
 
-IDEAS DE TEMAS CANDIDATOS ULTRA-VIRALES DE SUPERHÉROES MARVEL/DC CON VIÑETAS INTERIORES VERIFICADAS (Elige uno de estos o similar):
-- Captain America: El Soldado del Invierno (Steve Rogers descubre que Bucky Barnes es el asesino cibernético de HYDRA)
-- Thanos: Rising (El perturbador origen de Thanos en la luna Titán, disecciones secretas y la adoración a la Dama Muerte)
-- The Flash: Godspeed (August Heart obteniendo la Speed Force y robando la velocidad a sangre fría de otros velocistas)
-- Wolverine: Old Man Logan (La ilusión óptica de Mysterio que manipuló a Logan para masacrar a todos los X-Men)
-- Knull: El Rey de Negro (El dios de la oscuridad decapitando al Celestial y forjando la All-Black Necroespada)
-- Batman: El Tribunal de los Búhos (El laberinto subterráneo secreto y la quiebra mental de Bruce Wayne ante los Talons)
-- Superior Spider-Man (Otto Octavius intercambiando su mente con Peter Parker y ejecutando criminales sin piedad)
+IDEAS DE TEMAS CANDIDATOS ULTRA-VIRALES DE SUPERHÉROES MARVEL/DC CON VIÑETAS INTERIORES VERIFICADAS (Elige uno de estos arcos no producidos o inventa otro arco similar de superhéroes Marvel/DC):
+- Vengadores Desunidos (Wanda Maximoff enloquecida destruye la Mansión de los Vengadores y sacrifica a Vision)
+- Daredevil: El Hombre Sin Miedo (El camión de desechos radiactivos y el trágico origen ciego de Matt Murdock)
+- Aquaman: La Mano de Arpón (Charybdis devora la mano de Arthur Curry arrojándolo a las pirañas)
+- Green Lantern: Kyle Rayner y Major Force (Major Force asesina a Alexandra DeWitt y la encierra en el refrigerador)
+- Martian Manhunter: Fernus (J'onn J'onzz dominado por la llama ardiente marciana atacando a la Liga de la Justicia)
+- Ghost Rider: La Mirada de Penitencia Cósmica contra Galactus
+- Batman: White Knight (El Joker consume medicación psiquiátrica y expone la brutalidad de Batman ante Gotham)
+- Silver Surfer: Réquiem (Norrin Radd ante sus últimos momentos cósmicos antes de que se apague su luz)
 
 REGLAS INVIOLABLES DE FORMATO:
 1. Exactamente 4 escenas narrativas.

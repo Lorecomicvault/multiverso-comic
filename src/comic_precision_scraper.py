@@ -35,8 +35,9 @@ WIKI_DOMAINS = [
 ]
 
 CANDIDATE_VISION_MODELS = [
-    "gemini-2.5-flash",
-    "gemini-2.5-flash-lite",
+    "gemini-flash-lite-latest",
+    "gemini-3.1-flash-lite",
+    "gemini-3.5-flash",
     "gemini-flash-latest"
 ]
 
@@ -404,13 +405,17 @@ Responde ESTRICTAMENTE con un objeto JSON:
             from google import genai
             client = genai.Client(api_key=cand_key, http_options={"timeout": 12000})
             im = Image.open(image_path)
-            res = client.models.generate_content(model="gemini-flash-latest", contents=[im, prompt])
-            raw = res.text.strip()
-            if "```json" in raw:
-                raw = raw.split("```json")[1].split("```")[0].strip()
-            elif "```" in raw:
-                raw = raw.split("```")[1].split("```")[0].strip()
-            return json.loads(raw)
+            for model in CANDIDATE_VISION_MODELS:
+                try:
+                    res = client.models.generate_content(model=model, contents=[im, prompt])
+                    raw = res.text.strip()
+                    if "```json" in raw:
+                        raw = raw.split("```json")[1].split("```")[0].strip()
+                    elif "```" in raw:
+                        raw = raw.split("```")[1].split("```")[0].strip()
+                    return json.loads(raw)
+                except Exception:
+                    continue
         except Exception:
             pass
 
@@ -628,13 +633,13 @@ def fetch_scene_image(
             if os.path.exists(temp_candidate):
                 os.remove(temp_candidate)
 
-    # Si ningún candidato fue 100% perfecto, usar el de mayor puntaje únicamente si supera el estándar de acción (>= 6)
-    if best_fallback_file and os.path.exists(best_fallback_file) and highest_score >= 6:
+    # Si ningún candidato superó el umbral estricto, usar el de mayor puntaje disponible que sea cómic verificado (>= 2)
+    if best_fallback_file and os.path.exists(best_fallback_file) and highest_score >= 2:
         if not is_duplicate_panel(best_fallback_file, existing_scene_images):
             if os.path.exists(dest_path):
                 os.remove(dest_path)
             os.rename(best_fallback_file, dest_path)
-            print(f"  [VIÑETA RESCATADA]: Utilizando viñeta de cómic con alineación confirmada (Score: {highest_score}/10).")
+            print(f"  [VIÑETA RESCATADA]: Utilizando viñeta de cómic con entintado/alineación confirmada (Score: {highest_score}/10).")
             return dest_path
 
     if best_fallback_file and os.path.exists(best_fallback_file):

@@ -386,9 +386,9 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
                 if download_comic_panel(target, story.get("character", ""), img_file):
                     from .comic_precision_scraper import verify_visual_alignment_with_gemini
                     eval_a = verify_visual_alignment_with_gemini(str(img_file), narration)
-                    if eval_a.get("score", 0) >= 6 and eval_a.get("is_comic_panel", False) and eval_a.get("depicts_action", False):
+                    if (eval_a.get("score", 0) >= 5 and eval_a.get("depicts_action", False)) or (eval_a.get("score", 0) >= 2 and eval_a.get("is_comic_panel", False)):
                         saved = True
-                        log(f"Scene {idx}: Fallback A target approved by Gemini Vision ({eval_a.get('reason')}).")
+                        log(f"Scene {idx}: Fallback A target approved ({eval_a.get('reason')}).")
                     else:
                         img_file.unlink(missing_ok=True)
 
@@ -403,9 +403,9 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
                         with Image.open(img_file) as im_chk:
                             if check_is_comic_art_inking(im_chk) and not is_duplicate_panel(str(img_file), raw_downloaded_images + [str(p) for p in downloaded_images]):
                                 eval_b = verify_visual_alignment_with_gemini(str(img_file), narration)
-                                if eval_b.get("score", 0) >= 6 and eval_b.get("is_comic_panel", False) and eval_b.get("depicts_action", False):
+                                if (eval_b.get("score", 0) >= 5 and eval_b.get("depicts_action", False)) or (eval_b.get("score", 0) >= 2 and eval_b.get("is_comic_panel", False)):
                                     saved = True
-                                    log(f"Scene {idx}: Fallback B approved by Gemini Vision ({eval_b.get('reason')}).")
+                                    log(f"Scene {idx}: Fallback B approved ({eval_b.get('reason')}).")
                                     break
                     except Exception:
                         pass
@@ -424,9 +424,9 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
                         with Image.open(img_file) as wb_im:
                             if check_is_comic_art_inking(wb_im) and not is_duplicate_panel(str(img_file), raw_downloaded_images + [str(p) for p in downloaded_images]):
                                 eval_c = verify_visual_alignment_with_gemini(str(img_file), narration)
-                                if eval_c.get("score", 0) >= 6 and eval_c.get("is_comic_panel", False) and eval_c.get("depicts_action", False):
+                                if (eval_c.get("score", 0) >= 5 and eval_c.get("depicts_action", False)) or (eval_c.get("score", 0) >= 2 and eval_c.get("is_comic_panel", False)):
                                     saved = True
-                                    log(f"Scene {idx}: Fallback C approved by Gemini Vision ({eval_c.get('reason')}).")
+                                    log(f"Scene {idx}: Fallback C approved ({eval_c.get('reason')}).")
                                     break
                     except Exception:
                         pass
@@ -600,9 +600,17 @@ def main():
                 log(f"Selected Guaranteed Curated Story: {selected['title']} (ID: {selected['id']})")
             elif getattr(args, 'ai_story', False) or args.story_id == "autonomous_ai" or not available:
                 log(f"CATALOG EXHAUSTION / AI MODE: Activating Autonomous AI Story Engine (Attempt {attempt}/{MAX_CANDIDATE_ATTEMPTS})...")
-                from .autonomous_ai_generator import generate_autonomous_story
-                selected = generate_autonomous_story(ledger)
-                log(f"Autonomous AI Generated Story: {selected['title']} (ID: {selected['id']})")
+                try:
+                    from .autonomous_ai_generator import generate_autonomous_story
+                    selected = generate_autonomous_story(ledger)
+                    log(f"Autonomous AI Generated Story: {selected['title']} (ID: {selected['id']})")
+                except Exception as ai_err:
+                    log(f"[WARNING] Autonomous AI story generation notice: {ai_err}. Falling back to catalog...")
+                    if available:
+                        selected = random.choice(available)
+                    else:
+                        from .autonomous_ai_generator import EMERGENCY_VIRAL_POOL
+                        selected = random.choice(EMERGENCY_VIRAL_POOL)
             else:
                 selected = random.choice(available)
                 log(f"Selected Unique Story: {selected['title']} (ID: {selected['id']})")

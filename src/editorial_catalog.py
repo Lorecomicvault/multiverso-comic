@@ -918,6 +918,12 @@ EDITORIAL_STORIES = [
             "Con el Ojo de Agamotto brillando en su pecho, Strange tejió un laberinto de hechizos antiguos contra las llamas oscuras.",
             "Incapaz de doblegar la voluntad del Hechicero Supremo, Dormammu tuvo que pactar y jurar jamás invadir la Tierra."
         ],
+        "scene_art_urls": [
+            "assets/curated_panels/doctor_strange_dormammu/scene_01.jpg",
+            "assets/curated_panels/doctor_strange_dormammu/scene_02.jpg",
+            "assets/curated_panels/doctor_strange_dormammu/scene_03.jpg",
+            "assets/curated_panels/doctor_strange_dormammu/scene_04.jpg"
+        ],
         "art_queries": [
             "Doctor Strange enters Dark Dimension Steve Ditko comic panel",
             "Dormammu giant flaming head cosmic demon Steve Ditko comic panel",
