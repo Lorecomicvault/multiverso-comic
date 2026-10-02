@@ -958,5 +958,15 @@
     "mode": "live_release",
     "video_file": "La_Caída_de_Archangel_El_Heredero_de_Apocalipsis.mp4",
     "status": "published"
+  },
+  {
+    "id": "xmen_dias_del_futuro_pasado_centinelas",
+    "title": "Días del Futuro Pasado: El Exterminio Mutante de los Centinelas",
+    "character": "X-Men",
+    "theme_signature": "x_men:days_of_future_past:sentinels_extermination_wolverine_logan",
+    "date": "2026-10-02 17:39",
+    "mode": "live_release",
+    "video_file": "Días_del_Futuro_Pasado_El_Exterminio_Mutante_de_los_Centinelas.mp4",
+    "status": "published"
   }
 ]
