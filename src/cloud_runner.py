@@ -643,8 +643,12 @@ def main():
                     shutil.rmtree(work_dir, ignore_errors=True)
                 work_dir.mkdir(parents=True, exist_ok=True)
                 selected = backup_story
-                generation = build_cloud_generation(selected, work_dir)
-                break
+                try:
+                    generation = build_cloud_generation(selected, work_dir)
+                    break
+                except Exception as backup_err:
+                    log(f"[CRITICAL FALLBACK] Backup candidate '{backup_story.get('title')}' failed: {backup_err}. Rotating to next...")
+                    continue
         else:
             raise RuntimeError("Fatal: All story candidates and emergency pool exhausted.")
 

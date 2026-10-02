@@ -81,8 +81,8 @@ def verify_image_quality(wiki: str, filename: str) -> bool:
         pages = r.get('query', {}).get('pages', {})
         for p in pages.values():
             if 'imageinfo' in p:
-                img_url = p['imageinfo'][0]['url']
-                resp = requests.get(img_url, headers=HEADERS, timeout=12)
+                req_headers = {**HEADERS, "Referer": f"https://{wiki}.fandom.com/"}
+                resp = requests.get(img_url, headers=req_headers, timeout=12)
                 if resp.status_code == 200 and len(resp.content) > 15000:
                     im = Image.open(io.BytesIO(resp.content)).convert('RGB')
                     
@@ -121,145 +121,163 @@ EMERGENCY_VIRAL_POOL = [
             "Años después, bombardeó Titán con ojivas nucleares extinguiendo a su especie entera en nombre de su amada."
         ],
         "scene_art_urls": [
-            "Thanos (Earth-616) from Thanos Rising Vol 1 1 001.jpg",
-            "Thanos (Earth-616) from Thanos Rising Vol 1 1 005.jpg",
-            "Thanos (Earth-616) from Thanos Rising Vol 1 2 001.jpg",
-            "Thanos (Earth-616) from Thanos Rising Vol 1 3 001.jpg"
+            "assets/curated_panels/thanos_rising/scene_01.jpg",
+            "assets/curated_panels/thanos_rising/scene_02.jpg",
+            "assets/curated_panels/thanos_rising/scene_03.jpg",
+            "assets/curated_panels/thanos_rising/scene_04.jpg"
         ],
         "art_queries": [
-            "Thanos newborn baby Titan alien mother horror",
-            "Thanos dissection cave mysterious girl Death",
-            "Thanos murders mother scalpel Lady Death",
-            "Thanos bombards Titan nuclear missiles genocide"
+            "Thanos newborn mother Sui-San horror comic panel",
+            "Young Thanos dissecting creatures cave Simone Bianchi comic panel",
+            "Thanos bloody massacre corpses Simone Bianchi comic panel",
+            "Thanos galactic destruction cosmic death Simone Bianchi comic panel"
         ]
     },
     {
-        "id": "captain_america_el_soldado_del_invierno",
+        "id": "xmen_dias_del_futuro_pasado_centinelas",
         "universe": "Marvel",
-        "character": "Captain America",
-        "title": "Capitán América: El Regreso del Soldado del Invierno",
-        "theme_signature": "captain_america:winter_soldier:bucky_barnes_asesino_cosmic_cube",
-        "description": "Steve Rogers descubre la desgarradora verdad: su querido hermano de armas Bucky Barnes sobrevivió a la guerra convertido en el despiadado asesino de HYDRA, el Soldado del Invierno.",
-        "hashtags": "#CaptainAmerica #WinterSoldier #BuckyBarnes #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "character": "X-Men",
+        "title": "Días del Futuro Pasado: El Exterminio Mutante de los Centinelas",
+        "theme_signature": "x_men:days_of_future_past:sentinels_extermination_wolverine_logan",
+        "description": "En un futuro postapocalíptico dominado por los Centinelas, los últimos mutantes son perseguidos y aniquilados en campos de concentración.",
+        "hashtags": "#XMen #DaysOfFuturePast #Wolverine #Sentinels #MarvelComics #ComicsNarrados #Shorts",
         "scenes": [
-            "¿Sabías que tras décadas de creerlo muerto, el Capitán América descubrió que Bucky Barnes era el asesino más letal de HYDRA?",
-            "Con un brazo biónico de titanio y la memoria borrada, el Soldado del Invierno ejecutó a cientos de objetivos en las sombras.",
-            "Sometido a crueles cirugías en laboratorios clandestinos, le injertaron el implante cibernético para transformarlo en un arma letal.",
-            "Al recuperar finalmente sus recuerdos perdidos, Bucky juró redimirse combatiendo las amenazas más oscuras del mundo."
-        ],
-        "scene_art_urls": [
-            "assets/curated_panels/winter_soldier/scene_01.jpg",
-            "assets/curated_panels/winter_soldier/scene_02.jpg",
-            "assets/curated_panels/winter_soldier/scene_03.jpg",
-            "assets/curated_panels/winter_soldier/scene_04.jpg"
+            "¿Sabías que en Días del Futuro Pasado los gigantescos Centinelas cazaron y asesinaron a casi todos los mutantes?",
+            "Los pocos X-Men supervivientes fueron encerrados en campos de concentración portando collares inhibidores de poder.",
+            "Wolverine lideró un asalto desesperado, pero una ráfaga de plasma del Centinela redujo su cuerpo a cenizas.",
+            "Enviando la mente de Kitty Pryde al pasado, los mutantes jugaron su última carta para reescribir la historia."
         ],
         "art_queries": [
-            "Captain America Winter Soldier snowy forest sniper comic panel",
-            "Winter Soldier bionic arm cybernetic red star comic panel",
-            "Winter Soldier surgical lab clandestine operation bionic arm panel",
-            "Bucky Barnes redemption determination comic panel"
+            "Days of Future Past Sentinel poster mutant gravestones comic panel",
+            "X-Men concentration camp inhibitor collars John Byrne comic panel",
+            "Wolverine disintegrated Sentinel blast Days of Future Past comic panel",
+            "Kitty Pryde time travel mind transfer Days of Future Past comic panel"
         ]
     },
     {
-        "id": "spiderman_spiders_shadow_simbionte",
+        "id": "vengadores_desunidos_la_locura_de_wanda",
         "universe": "Marvel",
-        "character": "Spider-Man",
-        "title": "Spider's Shadow: Cuando Peter Parker Abrazó la Oscuridad del Simbionte",
-        "theme_signature": "spiderman:spiders_shadow:simbionte_asesino",
-        "description": "En este universo alternativo, Peter Parker jamás se separó del simbionte de Venom y masacró a los Seis Siniestros.",
-        "hashtags": "#SpiderMan #Venom #SpidersShadow #MarvelComics #ComicsNarrados #Shorts #Marvel",
+        "character": "Scarlet Witch",
+        "title": "Vengadores Desunidos: El Día en que Wanda Destruyó a los Héroes",
+        "theme_signature": "scarlet_witch:avengers_disassembled:wanda_maximoff_chaos_magic_vision",
+        "description": "Al recordar a sus hijos borrados de la realidad, Wanda Maximoff pierde la cordura y desata su magia del caos contra la Mansión de los Vengadores.",
+        "hashtags": "#ScarletWitch #Avengers #AvengersDisassembled #MarvelComics #ComicsNarrados #Shorts",
         "scenes": [
-            "¿Qué habría pasado si Spider-Man jamás se hubiera separado del simbionte alienígena de Venom?",
-            "Tras el asesinato de su tía May, Peter quebró su única regla sagrada y desató una cacería implacable en Nueva York.",
-            "Persiguió a Hobgoblin por los tejados y lo quemó vivo en una explosión devastadora sin remordimiento alguno.",
-            "Consumido por el hambre del simbionte, se transformó en el depredador supremo liquidando a cada uno de sus villanos."
+            "¿Sabías que la tragedia más devastadora de los Vengadores no fue provocada por un villano, sino por Wanda Maximoff?",
+            "Al recordar a sus hijos perdidos, la mente de Wanda se quebró desatando una marea imparable de magia del caos.",
+            "Un Jack of Hearts reanimado explotó sobre la Mansión y Visión colapsó atacando a sus propios compañeros de equipo.",
+            "Entre los escombros y los cuerpos caídos, los Vengadores comprendieron que su era dorada había terminado."
         ],
         "art_queries": [
-            "Spider-Man Spider's Shadow black suit",
-            "Spider's Shadow Peter Parker kills Hobgoblin",
-            "Spider's Shadow symbiote monster",
-            "Spider-Man symbiote execution sinister six"
+            "Scarlet Witch chaos magic Avengers Mansion explosion comic panel",
+            "Jack of Hearts explodes Avengers Mansion David Finch comic panel",
+            "Vision melting attacking Avengers Disassembled comic panel",
+            "Avengers ruins fallen heroes Hawkeye Disassembled comic panel"
         ]
     },
     {
-        "id": "punisher_kills_marvel_universe",
-        "universe": "Marvel",
-        "character": "The Punisher",
-        "title": "The Punisher: El Día en que Frank Castle Masacró a Marvel",
-        "theme_signature": "punisher:kills_marvel:venganza_familia_mutantes",
-        "description": "Cuando los superhéroes mataron accidentalmente a su familia en Central Park, Frank Castle juró aniquilar a cada héroe y villano de Marvel.",
-        "hashtags": "#ThePunisher #FrankCastle #MarvelComics #PunisherKills #ComicsNarrados #Shorts",
-        "scenes": [
-            "¿Sabías que cuando la batalla de los Vengadores contra los alienígenas mató a su familia, Frank Castle enloqueció de odio?",
-            "Sin dudar un instante, levantó su rifle en Central Park y ejecutó a Cyclops y Hawkeye de un solo disparo en la cabeza.",
-            "Armado con ojivas nucleares de Doctor Doom, engañó a todos los mutantes en la Luna y detonó una explosión cósmica.",
-            "Tras liquidar a Spider-Man, Wolverine y Daredevil, Frank se apuntó con su propia pistola cerrando su venganza final."
-        ],
-        "scene_art_urls": [
-            "Thor Odinson (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 0001.jpg",
-            "Scott Summers (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 0001.jpg",
-            "Victor von Doom (Earth-95126) and Francis Castle (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 0001.jpg",
-            "Peter Parker (Earth-95126) from Punisher Kills the Marvel Universe Vol 1 1 002.jpg"
-        ],
-        "art_queries": [
-            "Punisher kills Cyclops Hawkeye Central Park",
-            "Punisher Kills the Marvel Universe rifle",
-            "Punisher kills mutants nuclear bomb Moon",
-            "Punisher suicide last panel Marvel Universe"
-        ]
-    },
-    {
-        "id": "flash_forward_wally_west_doctor_manhattan",
+        "id": "batman_arkham_asylum_locura_joker",
         "universe": "DC",
-        "character": "The Flash",
-        "title": "Flash Forward: Wally West y los Poderes de Doctor Manhattan",
-        "theme_signature": "wally_west:flash_forward:mobius_chair_manhattan",
-        "description": "Al sentarse en la Silla de Mobius imbuida con la energía de Doctor Manhattan, Wally West ascendió como el velocista cósmico supremo.",
-        "hashtags": "#TheFlash #WallyWest #DoctorManhattan #FlashForward #DCComics #ComicsNarrados #Shorts",
+        "character": "Batman",
+        "title": "Batman: Una Casa Seria en una Tierra Seria - La Pesadilla de Arkham",
+        "theme_signature": "batman:arkham_asylum_serious_house:joker_amadeus_arkham_madness",
+        "description": "Encerrado dentro del Asilo Arkham tomado por el Joker, Batman debe someterse a las pruebas psicológicas más siniestras de sus peores enemigos.",
+        "hashtags": "#Batman #Joker #ArkhamAsylum #DCComics #GrantMorrison #DaveMcKean #ComicsNarrados #Shorts",
         "scenes": [
-            "¿Sabías que Wally West se sentó en la legendaria Silla de Mobius y absorbió el poder supremo de Doctor Manhattan?",
-            "En el centro del Multiverso Oscuro, una grieta dimensional amenazaba con devorar todas las realidades existentes.",
-            "La energía cósmica azul envolvió su traje, grabando el símbolo del átomo en su frente y volviéndolo omnisciente.",
-            "Con un simple parpadeo mental, Wally reescribió las líneas temporales y salvó a sus hijos atrapados en el olvido."
+            "¿Sabías que cuando los reclusos tomaron el Asilo Arkham, el Joker solo exigió que Batman entrara completamente solo?",
+            "Al cruzar las puertas de hierro, Batman descubrió que el asilo era un perturbador santuario consagrado a la locura.",
+            "El Joker y Two-Face lo sometieron a sádicas torturas psicológicas, cuestionando la propia cordura del murciélago.",
+            "Tras enfrentar sus traumas más oscuros, Batman abandonó Arkham demostrando que él controla las sombras de Gotham."
         ],
         "art_queries": [
-            "Wally West Mobius Chair Doctor Manhattan",
-            "Flash Forward Dark Multiverse incursion",
-            "Wally West blue glowing Doctor Manhattan powers",
-            "Wally West saves children Flash Forward ending"
-        ],
-        "scene_art_urls": [
-            "Mobius_Chair_Prime_Earth_001.jpg",
-            "Flash_Wally_West_Prime_Earth_0017.jpg",
-            "Flash_Wally_West_Prime_Earth_0018.jpg",
-            "Flash_Wally_West_Prime_Earth_0032.jpg"
+            "Batman Arkham Asylum Dave McKean gates entrance comic panel",
+            "Joker Arkham Asylum Serious House Dave McKean smiling dark panel",
+            "Two-Face coin trial Arkham Asylum Dave McKean comic panel",
+            "Batman walking away Arkham Asylum shadow night comic panel"
         ]
     },
     {
-        "id": "hulk_the_end_ultimo_humano",
+        "id": "daredevil_el_hombre_sin_miedo_origen_quimico",
         "universe": "Marvel",
-        "character": "Hulk",
-        "title": "Hulk The End: El Último Ser Vivo en la Tierra",
-        "theme_signature": "hulk:the_end:cucarachas_soledad_muerte_banner",
-        "description": "Tras el holocausto nuclear, Hulk sobrevive solo en una Tierra muerta, regenerándose cada día de los enjambres de cucarachas carnívoras.",
-        "hashtags": "#Hulk #TheEnd #MarvelComics #PeterDavid #ComicsDeTerror #Shorts #Reels",
+        "character": "Daredevil",
+        "title": "Daredevil: El Accidente Químico que Creó al Hombre Sin Miedo",
+        "theme_signature": "daredevil:the_man_without_fear:blindness_toxic_waste_radar_sense",
+        "description": "Matt Murdock salva a un anciano de ser atropellado por un camión, pero los desechos radiactivos le quitan la vista y despiertan sus sentidos hipersensibles.",
+        "hashtags": "#Daredevil #MattMurdock #ManWithoutFear #MarvelComics #FrankMiller #ComicsNarrados #Shorts",
         "scenes": [
-            "¿Sabías que en un futuro devastado por una guerra nuclear, Hulk es el único ser humano que sobrevive en la Tierra?",
-            "Cada día, enjambres de cucarachas gigantes carnívoras devoran su piel viva mientras su factor curativo lo regenera dolorosamente.",
-            "Dentro de su mente, un anciano y enfermo Bruce Banner le ruega a Hulk que lo deje morir en paz.",
-            "Cuando el corazón de Banner se detiene para siempre, Hulk queda solo en la oscuridad absoluta, anhelando un final que jamás llegará."
-        ],
-        "scene_art_urls": [
-            "assets/curated_panels/hulk_the_end/scene_01.jpg",
-            "assets/curated_panels/hulk_the_end/scene_02.jpg",
-            "assets/curated_panels/hulk_the_end/scene_03.jpg",
-            "assets/curated_panels/hulk_the_end/scene_04.jpg"
+            "¿Sabías que Matt Murdock obtuvo sus increíbles poderes salvando la vida de un anciano en Hell's Kitchen?",
+            "Un camión perdió el control y un cilindro con desechos radiactivos impactó directamente en los ojos del joven Matt.",
+            "La sustancia química le arrebató la vista para siempre, pero agudizó sus restantes cuatro sentidos a niveles superhumanos.",
+            "Entrenado en secreto por el maestro ciego Stick, Matt juró proteger su barrio como el justiciero Daredevil."
         ],
         "art_queries": [
-            "Bruce Banner (Earth-2081) from Incredible Hulk The End Vol 1 1 0001.jpg",
-            "Bruce Banner (Earth-2081) from Incredible Hulk The End Vol 1 1 0002.jpg",
-            "Hulk The End regenerating Dale Keown comic panel",
-            "Hulk The End feels cold final panel"
+            "Young Matt Murdock saves blind man truck toxic waste comic panel",
+            "Radioactive canister hits Matt Murdock eyes blinding comic panel",
+            "Matt Murdock sensory overload radar sense hospital comic panel",
+            "Stick training young Matt Murdock martial arts Man Without Fear panel"
+        ]
+    },
+    {
+        "id": "aquaman_mano_arpon_charybdis",
+        "universe": "DC",
+        "character": "Aquaman",
+        "title": "Aquaman: El Día en que las Pirañas Devoraron su Mano",
+        "theme_signature": "aquaman:harpoon_hand:charybdis_piranhas_peter_david",
+        "description": "En una de las historias más oscuras de DC Comics, el villano Charybdis sumerge la mano de Arthur Curry en un pozo de pirañas carnívoras.",
+        "hashtags": "#Aquaman #ArthurCurry #PeterDavid #DCComics #HarpoonHand #ComicsNarrados #Shorts",
+        "scenes": [
+            "¿Sabías que Aquaman perdió su mano izquierda cuando un villano se la sumergió en un pozo de pirañas hambrientas?",
+            "El sádico terrorista Charybdis neutralizó sus poderes telepáticos marinos y sostuvo el brazo de Arthur bajo el agua.",
+            "En cuestión de segundos, los peces devoraron la carne viva de su mano hasta dejar los huesos completamente expuestos.",
+            "En lugar de rendirse, Arthur se colocó un arpón metálico retráctil convirtiéndose en el rey guerrero de Atlantis."
+        ],
+        "art_queries": [
+            "Aquaman fight Charybdis Time and Tide Peter David comic panel",
+            "Charybdis forces Aquaman hand piranha pool comic panel",
+            "Aquaman screaming skeletal hand piranha bite comic panel",
+            "Aquaman harpoon hand beard shirtless warrior king comic panel"
+        ]
+    },
+    {
+        "id": "green_lantern_kyle_rayner_major_force",
+        "universe": "DC",
+        "character": "Kyle Rayner",
+        "title": "Kyle Rayner: El Día en que Major Force Asesinó a su Novia",
+        "theme_signature": "kyle_rayner:green_lantern:major_force_refrigerator_alex",
+        "description": "El brutal momento en que el nuevo Green Lantern Kyle Rayner regresa a su departamento y descubre que Major Force asesinó a su novia Alex DeWitt.",
+        "hashtags": "#GreenLantern #KyleRayner #MajorForce #DCComics #RonMarz #ComicsNarrados #Shorts",
+        "scenes": [
+            "¿Sabías que Kyle Rayner vivió una de las tragedias más impactantes de DC apenas días después de recibir su anillo?",
+            "El despiadado villano Major Force fue enviado por el gobierno para arrebatarle el último anillo de Green Lantern.",
+            "Al entrar a su departamento en Nueva York, Kyle encontró una nota sobre el refrigerador y al abrirlo vio el cuerpo sin vida de su novia.",
+            "Enceguecido por la furia esmeralda, Kyle desató todo el poder del anillo derrotando a Major Force en una feroz batalla."
+        ],
+        "art_queries": [
+            "Kyle Rayner Green Lantern apartment Alex DeWitt comic panel",
+            "Major Force Green Lantern 54 Ron Marz comic panel",
+            "Kyle Rayner finds Alex refrigerator Green Lantern 54 comic panel",
+            "Green Lantern Kyle Rayner green energy blast Major Force comic panel"
+        ]
+    },
+    {
+        "id": "doctor_strange_dormammu_bucle_dimension_oscura",
+        "universe": "Marvel",
+        "character": "Doctor Strange",
+        "title": "Doctor Strange: El Duelo Eterno contra Dormammu en la Dimensión Oscura",
+        "theme_signature": "doctor_strange:dormammu:dark_dimension_eternity_clea",
+        "description": "Doctor Strange viaja a la aterradora Dimensión Oscura para desafiar a la entidad cósmica Dormammu y salvar la Tierra.",
+        "hashtags": "#DoctorStrange #Dormammu #DarkDimension #MarvelComics #SteveDitko #ComicsNarrados #Shorts",
+        "scenes": [
+            "¿Sabías que Doctor Strange desafió solo al dios de la Dimensión Oscura para evitar que devorara nuestra realidad?",
+            "Dormammu, un ser titánico de puro fuego místico, juró convertir la Tierra en parte de su reino de pesadilla.",
+            "Con el Ojo de Agamotto brillando en su pecho, Strange tejió un laberinto de hechizos antiguos contra las llamas oscuras.",
+            "Incapaz de doblegar la voluntad del Hechicero Supremo, Dormammu tuvo que pactar y jurar jamás invadir la Tierra."
+        ],
+        "art_queries": [
+            "Doctor Strange enters Dark Dimension Steve Ditko comic panel",
+            "Dormammu giant flaming head cosmic demon Steve Ditko comic panel",
+            "Doctor Strange Eye of Agamotto mystical shields battle comic panel",
+            "Doctor Strange defeats Dormammu mystical oath Ditko comic panel"
         ]
     }
 ]

@@ -88,10 +88,16 @@ EDITORIAL_STORIES = [
             "Años después, bombardeó Titán con ojivas nucleares extinguiendo a su especie entera en nombre de su amada."
         ],
         "scene_art_urls": [
-            "Thanos (Earth-616) from Thanos Rising Vol 1 1 001.jpg",
-            "Thanos (Earth-616) from Thanos Rising Vol 1 1 005.jpg",
-            "Thanos (Earth-616) from Thanos Rising Vol 1 2 001.jpg",
-            "Thanos (Earth-616) from Thanos Rising Vol 1 3 001.jpg"
+            "assets/curated_panels/thanos_rising/scene_01.jpg",
+            "assets/curated_panels/thanos_rising/scene_02.jpg",
+            "assets/curated_panels/thanos_rising/scene_03.jpg",
+            "assets/curated_panels/thanos_rising/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Thanos newborn mother Sui-San horror comic panel",
+            "Young Thanos dissecting creatures cave Simone Bianchi comic panel",
+            "Thanos bloody massacre corpses Simone Bianchi comic panel",
+            "Thanos galactic destruction cosmic death Simone Bianchi comic panel"
         ]
     },
     {
