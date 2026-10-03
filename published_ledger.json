@@ -988,5 +988,15 @@
     "mode": "live_release",
     "video_file": "Green_Lantern_El_Asesinato_que_Conmocionó_el_Universo.mp4",
     "status": "published"
+  },
+  {
+    "id": "vengadores_desunidos_la_locura_de_wanda",
+    "title": "Vengadores Desunidos: El Día en que Wanda Destruyó a los Héroes",
+    "character": "Scarlet Witch",
+    "theme_signature": "scarlet_witch:avengers_disassembled:wanda_maximoff_chaos_magic_vision",
+    "date": "2026-10-03 02:12",
+    "mode": "live_release",
+    "video_file": "Vengadores_Desunidos_El_Día_en_que_Wanda_Destruyó_a_los_Héroes.mp4",
+    "status": "published"
   }
 ]
