@@ -855,6 +855,12 @@ EDITORIAL_STORIES = [
             "La sustancia química le arrebató la vista para siempre, pero agudizó sus restantes cuatro sentidos a niveles superhumanos.",
             "Entrenado en secreto por el maestro ciego Stick, Matt juró proteger su barrio como el justiciero Daredevil."
         ],
+        "scene_art_urls": [
+            "assets/curated_panels/daredevil_hombre_sin_miedo/scene_01.jpg",
+            "assets/curated_panels/daredevil_hombre_sin_miedo/scene_02.jpg",
+            "assets/curated_panels/daredevil_hombre_sin_miedo/scene_03.jpg",
+            "assets/curated_panels/daredevil_hombre_sin_miedo/scene_04.jpg"
+        ],
         "art_queries": [
             "Young Matt Murdock saves blind man truck toxic waste comic panel",
             "Radioactive canister hits Matt Murdock eyes blinding comic panel",

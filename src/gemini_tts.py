@@ -35,10 +35,17 @@ _K1 = base64.b64decode("QVEuQWI4Uk42SVBTR0VkME0wT2t6Yy1XRWVrcGthTXNhZEhKY3hVaG1w
 _K2 = base64.b64decode("QVEuQWI4Uk42SU8xRUtGVHNYSzQtYlBONDdfWV96N3JmMlNjZWNYWVEwTll4N2NsR2dpSFE=").decode("utf-8")
 
 
+_ACTIVE_WORKING_KEY: Optional[str] = None
+
+
 def get_candidate_keys() -> list[str]:
     keys = []
-    # 1. Claves frescas proporcionadas por el usuario (Prioridad #1, #2 y #3)
-    for user_k in [_K0, _K0_B, _K0_C]:
+    # 0. Si ya hay una clave que funcionó exitosamente en la sesión actual, probarla primero
+    if _ACTIVE_WORKING_KEY:
+        keys.append(_ACTIVE_WORKING_KEY)
+
+    # 1. Claves frescas proporcionadas por el usuario (Priorizando _K0_B con cuota activa)
+    for user_k in [_K0_B, _K0_C, _K0]:
         if user_k and user_k not in keys:
             keys.append(user_k)
     # 2. Claves separadas por comas desde GEMINI_API_KEYS
@@ -127,6 +134,8 @@ def synthesize_with_gemini(
                             break
 
                 if audio_bytes and len(audio_bytes) > 1000:
+                    global _ACTIVE_WORKING_KEY
+                    _ACTIVE_WORKING_KEY = api_key
                     print(f"[GEMINI-TTS] ¡Síntesis exitosa! ({len(audio_bytes)} bytes) con {candidate_model}")
                     break
                 else:

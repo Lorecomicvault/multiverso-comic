@@ -220,6 +220,12 @@ EMERGENCY_VIRAL_POOL = [
             "La sustancia química le arrebató la vista para siempre, pero agudizó sus restantes cuatro sentidos a niveles superhumanos.",
             "Entrenado en secreto por el maestro ciego Stick, Matt juró proteger su barrio como el justiciero Daredevil."
         ],
+        "scene_art_urls": [
+            "assets/curated_panels/daredevil_hombre_sin_miedo/scene_01.jpg",
+            "assets/curated_panels/daredevil_hombre_sin_miedo/scene_02.jpg",
+            "assets/curated_panels/daredevil_hombre_sin_miedo/scene_03.jpg",
+            "assets/curated_panels/daredevil_hombre_sin_miedo/scene_04.jpg"
+        ],
         "art_queries": [
             "Young Matt Murdock saves blind man truck toxic waste comic panel",
             "Radioactive canister hits Matt Murdock eyes blinding comic panel",
@@ -338,14 +344,14 @@ ESTRICTO HISTORIAL DE TEMAS YA PRODUCIDOS (TOTALMENTE PROHIBIDO REPETIR O REUTIL
 - Títulos recientes ya publicados (PROHIBIDO REPETIR): {titles_summary}
 
 IDEAS DE TEMAS CANDIDATOS ULTRA-VIRALES DE SUPERHÉROES MARVEL/DC CON VIÑETAS INTERIORES VERIFICADAS (Elige uno de estos arcos no producidos o inventa otro arco similar de superhéroes Marvel/DC):
-- Vengadores Desunidos (Wanda Maximoff enloquecida destruye la Mansión de los Vengadores y sacrifica a Vision)
 - Daredevil: El Hombre Sin Miedo (El camión de desechos radiactivos y el trágico origen ciego de Matt Murdock)
 - Aquaman: La Mano de Arpón (Charybdis devora la mano de Arthur Curry arrojándolo a las pirañas)
-- Green Lantern: Kyle Rayner y Major Force (Major Force asesina a Alexandra DeWitt y la encierra en el refrigerador)
 - Martian Manhunter: Fernus (J'onn J'onzz dominado por la llama ardiente marciana atacando a la Liga de la Justicia)
 - Ghost Rider: La Mirada de Penitencia Cósmica contra Galactus
 - Batman: White Knight (El Joker consume medicación psiquiátrica y expone la brutalidad de Batman ante Gotham)
 - Silver Surfer: Réquiem (Norrin Radd ante sus últimos momentos cósmicos antes de que se apague su luz)
+- Wolverine vs Hulk: Primer Encuentro (El debut brutal de Logan en los bosques canadienses cazando al monstruo verde)
+- Superman vs Doomsday: La Muerte del Hombre de Acero (El épico intercambio a muerte de golpes frente al Daily Planet)
 
 REGLAS INVIOLABLES DE FORMATO:
 1. Exactamente 4 escenas narrativas.
