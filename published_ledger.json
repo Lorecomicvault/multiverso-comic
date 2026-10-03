@@ -1028,5 +1028,15 @@
     "mode": "live_release",
     "video_file": "Batman_Una_Casa_Seria_en_una_Tierra_Seria_-_La_Pesadilla_de_Arkham.mp4",
     "status": "published"
+  },
+  {
+    "id": "ghost_rider_penance_stare_galactus",
+    "title": "Ghost Rider: La Mirada de Penitencia a Galactus",
+    "character": "Ghost Rider",
+    "theme_signature": "ghost_rider:galactus:mirada_penitencia_trillones_almas",
+    "date": "2026-10-03 14:10",
+    "mode": "live_release",
+    "video_file": "Ghost_Rider_La_Mirada_de_Penitencia_a_Galactus.mp4",
+    "status": "published"
   }
 ]
