@@ -1048,5 +1048,15 @@
     "mode": "live_release",
     "video_file": "Aquaman_El_Día_que_Charybdis_Devoró_su_Mano_en_las_Pirañas.mp4",
     "status": "published"
+  },
+  {
+    "id": "doctor_strange_dormammu_bucle_dimension_oscura",
+    "title": "Doctor Strange: El Duelo Eterno contra Dormammu en la Dimensión Oscura",
+    "character": "Doctor Strange",
+    "theme_signature": "doctor_strange:dormammu:dark_dimension_eternity_clea",
+    "date": "2026-10-03 22:11",
+    "mode": "live_release",
+    "video_file": "Doctor_Strange_El_Duelo_Eterno_contra_Dormammu_en_la_Dimensión_Oscura.mp4",
+    "status": "published"
   }
 ]
