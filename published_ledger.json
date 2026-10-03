@@ -1018,5 +1018,15 @@
     "mode": "live_release",
     "video_file": "Martian_Manhunter_Fernus_La_Masacre_Marciana.mp4",
     "status": "published"
+  },
+  {
+    "id": "batman_arkham_asylum_locura_joker",
+    "title": "Batman: Una Casa Seria en una Tierra Seria - La Pesadilla de Arkham",
+    "character": "Batman",
+    "theme_signature": "batman:arkham_asylum_serious_house:joker_amadeus_arkham_madness",
+    "date": "2026-10-03 10:09",
+    "mode": "live_release",
+    "video_file": "Batman_Una_Casa_Seria_en_una_Tierra_Seria_-_La_Pesadilla_de_Arkham.mp4",
+    "status": "published"
   }
 ]
