@@ -1008,5 +1008,15 @@
     "mode": "live_release",
     "video_file": "Daredevil_El_Accidente_Químico_que_Creó_al_Hombre_Sin_Miedo.mp4",
     "status": "published"
+  },
+  {
+    "id": "martian_manhunter_fernus_el_incendio",
+    "title": "Martian Manhunter Fernus La Masacre Marciana",
+    "character": "Martian Manhunter",
+    "theme_signature": "martian_manhunter:fernus:la_llama_ardiente",
+    "date": "2026-10-03 07:06",
+    "mode": "live_release",
+    "video_file": "Martian_Manhunter_Fernus_La_Masacre_Marciana.mp4",
+    "status": "published"
   }
 ]
