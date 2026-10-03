@@ -1038,5 +1038,15 @@
     "mode": "live_release",
     "video_file": "Ghost_Rider_La_Mirada_de_Penitencia_a_Galactus.mp4",
     "status": "published"
+  },
+  {
+    "id": "aquaman_la_mano_de_arpon",
+    "title": "Aquaman: El Día que Charybdis Devoró su Mano en las Pirañas",
+    "character": "Aquaman",
+    "theme_signature": "aquaman:la_mano_de_arpon:mutilacion",
+    "date": "2026-10-03 19:06",
+    "mode": "live_release",
+    "video_file": "Aquaman_El_Día_que_Charybdis_Devoró_su_Mano_en_las_Pirañas.mp4",
+    "status": "published"
   }
 ]
