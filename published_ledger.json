@@ -998,5 +998,15 @@
     "mode": "live_release",
     "video_file": "Vengadores_Desunidos_El_Día_en_que_Wanda_Destruyó_a_los_Héroes.mp4",
     "status": "published"
+  },
+  {
+    "id": "daredevil_el_hombre_sin_miedo_origen_quimico",
+    "title": "Daredevil: El Accidente Químico que Creó al Hombre Sin Miedo",
+    "character": "Daredevil",
+    "theme_signature": "daredevil:the_man_without_fear:blindness_toxic_waste_radar_sense",
+    "date": "2026-10-03 02:24",
+    "mode": "live_release",
+    "video_file": "Daredevil_El_Accidente_Químico_que_Creó_al_Hombre_Sin_Miedo.mp4",
+    "status": "published"
   }
 ]
