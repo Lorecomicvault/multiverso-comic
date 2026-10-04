@@ -1098,5 +1098,15 @@
     "mode": "live_release",
     "video_file": "The_Flash_El_Asesinato_Silencioso_de_Iris_West_en_la_Fiesta.mp4",
     "status": "published"
+  },
+  {
+    "id": "batman_venom_addiction_cave",
+    "title": "Batman: La Cruel Adicción al Veneno que Casi Destruye al Murciélago",
+    "character": "Batman",
+    "theme_signature": "batman:venom:adiccion_cueva",
+    "date": "2026-10-04 22:08",
+    "mode": "live_release",
+    "video_file": "Batman_La_Cruel_Adicción_al_Veneno_que_Casi_Destruye_al_Murciélago.mp4",
+    "status": "published"
   }
 ]
