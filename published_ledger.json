@@ -1088,5 +1088,15 @@
     "mode": "live_release",
     "video_file": "Namor_La_Ira_del_Fénix_-_El_Día_que_Wakanda_Quedó_Bajo_el_Agua.mp4",
     "status": "published"
+  },
+  {
+    "id": "the_flash_iris_west_death",
+    "title": "The Flash: El Asesinato Silencioso de Iris West en la Fiesta",
+    "character": "The Flash",
+    "theme_signature": "The Flash:Iris West:Muerte por Vibración",
+    "date": "2026-10-04 19:10",
+    "mode": "live_release",
+    "video_file": "The_Flash_El_Asesinato_Silencioso_de_Iris_West_en_la_Fiesta.mp4",
+    "status": "published"
   }
 ]
