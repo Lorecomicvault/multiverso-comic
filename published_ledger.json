@@ -1048,5 +1048,15 @@
     "mode": "live_release",
     "video_file": "Aquaman_El_Día_que_Charybdis_Devoró_su_Mano_en_las_Pirañas.mp4",
     "status": "published"
+  },
+  {
+    "id": "black_panther_mephisto_deal",
+    "title": "Black Panther: El Día que T'Challa Engañó al Diablo en el Infierno",
+    "character": "Black Panther",
+    "theme_signature": "black_panther:mephisto:trato_diabolico",
+    "date": "2026-10-04 02:12",
+    "mode": "live_release",
+    "video_file": "Black_Panther_El_Día_que_TChalla_Engañó_al_Diablo_en_el_Infierno.mp4",
+    "status": "published"
   }
 ]
