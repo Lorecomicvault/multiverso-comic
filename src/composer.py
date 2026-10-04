@@ -275,9 +275,17 @@ def compose_final(
     fade_out_start = max(0.0, total - fade_out)
 
     fonts_dir = Path(__file__).resolve().parent.parent / 'fonts'
-    escaped = subs_path.replace('\\', '/').replace(':', '\\:')
+    try:
+        rel_subs = Path(subs_path).resolve().relative_to(Path.cwd()).as_posix()
+        escaped = rel_subs
+    except Exception:
+        escaped = subs_path.replace('\\', '/').replace(':', '\\:')
+
     if fonts_dir.exists():
-        escaped_fonts = str(fonts_dir).replace('\\', '/').replace(':', '\\:')
+        try:
+            escaped_fonts = fonts_dir.resolve().relative_to(Path.cwd()).as_posix()
+        except Exception:
+            escaped_fonts = str(fonts_dir).replace('\\', '/').replace(':', '\\:')
         ass_filter = f"ass='{escaped}':fontsdir='{escaped_fonts}'"
     else:
         ass_filter = f"ass='{escaped}'"

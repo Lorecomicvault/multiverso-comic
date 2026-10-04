@@ -936,6 +936,216 @@ EDITORIAL_STORIES = [
             "Doctor Strange Eye of Agamotto mystical shields battle comic panel",
             "Doctor Strange defeats Dormammu mystical oath Ditko comic panel"
         ]
+    },
+    {
+        "id": "sentry_nacimiento_del_vacio",
+        "universe": "Marvel",
+        "character": "The Sentry",
+        "title": "Sentry: La Maldición del Vacío y la Muerte del Millón de Soles",
+        "theme_signature": "sentry:the_void:oscuridad_robert_reynolds",
+        "description": "Robert Reynolds descubre la aterradora verdad de sus poderes divinos: cada milagro que realiza da vida al Vacío, una entidad cósmica capaz de consumir la Tierra.",
+        "hashtags": "#Sentry #TheVoid #MarvelComics #Avengers #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¿Sabías que el héroe más poderoso de Marvel esconde un monstruo capaz de devorar planetas?",
+            "Robert Reynolds descubrió que cada milagro que realizaba como Sentry daba vida a su contraparte: el Vacío.",
+            "El Vacío emergió como una tormenta de sombras vivientes, destruyendo Asgard y quebrando a los Vengadores.",
+            "Para salvar al universo, Robert suplicó a Thor que lo ejecutara con un rayo fulminante."
+        ],
+        "art_queries": [
+            "Sentry glowing golden power comic panel",
+            "The Void cosmic darkness monster shadowy entity comic panel",
+            "The Void destroys Asgard Siege Marvel comic panel",
+            "Thor kills Sentry lightning bolt funeral comic panel"
+        ]
+    },
+    {
+        "id": "magneto_venganza_red_skull",
+        "universe": "Marvel",
+        "character": "Magneto",
+        "title": "Magneto vs Red Skull: El Castigo del Holocausto en el Búnker",
+        "theme_signature": "magneto:red_skull:bunker_entierro_auschwitz",
+        "description": "Como superviviente del Holocausto, Magneto captura a Red Skull y rechaza darle una muerte rápida, encerrándolo vivo en un búnker subterráneo eterno.",
+        "hashtags": "#Magneto #RedSkull #XMen #CaptainAmerica #MarvelComics #ComicsNarrados #Reels",
+        "scenes": [
+            "¿Sabías que cuando Magneto capturó a Red Skull se negó a asesinarlo con sus poderes mutantes?",
+            "Como superviviente de Auschwitz, Magneto despreciaba la ideología nazi más que a cualquier enemigo en la Tierra.",
+            "Encerró al líder de Hydra en un búnker subterráneo blindado, sin luz, sin aire y sin salida.",
+            "Dejándole solo un poco de agua, lo abandonó a una agonía eterna en la oscuridad."
+        ],
+        "art_queries": [
+            "Magneto confronting Red Skull comic panel Acts of Vengeance",
+            "Magneto holocaust survivor tattoo memory comic panel",
+            "Magneto burying Red Skull underground bunker comic panel",
+            "Red Skull trapped in dark bunker tomb comic panel"
+        ]
+    },
+    {
+        "id": "flash_muerte_iris_west",
+        "universe": "DC",
+        "character": "The Flash",
+        "title": "The Flash: La Noche en que Eobard Thawne Asesinó a Iris West",
+        "theme_signature": "flash:iris_west:vibracion_craneal_fiesta_disfraces",
+        "description": "Eobard Thawne viaja en el tiempo para ejecutar el crimen más devastador en la vida de Barry Allen: asesinar a su esposa Iris West durante una fiesta.",
+        "hashtags": "#TheFlash #ReverseFlash #BarryAllen #DCComics #ComicsNarrados #Shorts #Reels",
+        "scenes": [
+            "¿Sabías que el mayor dolor de Barry Allen comenzó en una fiesta de disfraces en Central City?",
+            "El villano Reverse-Flash se infiltró en el evento obsesionado con destruir para siempre la felicidad de Flash.",
+            "Al negarse Iris a amarlo, Thawne vibró sus dedos a súper velocidad atravesando su cráneo.",
+            "Barry llegó solo para encontrar el cuerpo inerte de su amada esposa en el suelo frío."
+        ],
+        "art_queries": [
+            "Barry Allen Iris West costume party The Flash 275 comic panel",
+            "Reverse Flash Eobard Thawne smiling evil speedster comic panel",
+            "Reverse Flash kills Iris West vibrating hand head comic panel",
+            "Barry Allen crying holding dead Iris West comic panel"
+        ]
+    },
+    {
+        "id": "black_panther_derrota_mephisto",
+        "universe": "Marvel",
+        "character": "Black Panther",
+        "title": "Black Panther: El Rey de Wakanda que Engañó al Demonio Mephisto",
+        "theme_signature": "black_panther:t_challa:engano_infierno_dios_pantera",
+        "description": "T'Challa desciende al reino infernal y engaña al señor de las mentiras Mephisto, usando la fuerza espiritual de los reyes pasados de Wakanda.",
+        "hashtags": "#BlackPanther #Mephisto #MarvelComics #Wakanda #ComicsNarrados #Shorts #Reels",
+        "scenes": [
+            "¿Sabías que Black Panther viajó al infierno y logró derrotar al mismísimo demonio Mephisto?",
+            "El señor del infierno exigió el alma del rey de Wakanda a cambio de salvar a su nación.",
+            "T'Challa aceptó el pacto, pero liberó el espíritu de todos los ancestros de la Pantera Negra.",
+            "Los antiguos reyes despedazaron al demonio desde su propio interior, expulsándolo derrotado de su reino."
+        ],
+        "art_queries": [
+            "Black Panther confronting Mephisto hell Christopher Priest comic panel",
+            "Mephisto demon laughing flaming throne Marvel comic panel",
+            "Black Panther Panther God spirits attacking Mephisto comic panel",
+            "T'Challa standing victorious leaving hell comic panel"
+        ]
+    },
+    {
+        "id": "batman_adiccion_venom_origen",
+        "universe": "DC",
+        "character": "Batman",
+        "title": "Batman: La Oscura Adicción al Veneno en las Sombras",
+        "theme_signature": "batman:venom_addiction:pastillas_cueva_fuerza_extrema",
+        "description": "Tras fracasar en el rescate de una niña atrapada, Bruce Wayne recurre a una peligrosa droga experimental para superar sus límites humanos.",
+        "hashtags": "#Batman #Venom #DCComics #LegendsOfTheDarkKnight #ComicsNarrados #Shorts #Reels",
+        "scenes": [
+            "¿Sabías que tras no poder salvar a una niña atrapada, Batman cayó en una oscura adicción?",
+            "Frustrado por sus límites físicos, Bruce Wayne comenzó a consumir un esteroide experimental llamado Veneno.",
+            "La sustancia le dio fuerza monstruosa, pero nubló su mente volviéndolo violento, paranoico e incontrolable.",
+            "Para purgarse, Batman se encerró durante un mes en la cueva viviendo un infierno de abstinencia."
+        ],
+        "art_queries": [
+            "Batman failing to lift boulder drowning girl Legends of Dark Knight comic panel",
+            "Bruce Wayne taking venom pills dark room comic panel",
+            "Batman raging aggressive steroid venom comic panel",
+            "Batman locked in batcave detox withdrawal beard comic panel"
+        ]
+    },
+    {
+        "id": "green_lantern_hal_destruccion_oa",
+        "universe": "DC",
+        "character": "Green Lantern",
+        "title": "Green Lantern: La Masacre de Hal Jordan en la Batería de Oa",
+        "theme_signature": "hal_jordan:destruccion_oa:diez_anillos_muerte_kilowog",
+        "description": "Enloquecido por el dolor tras la destrucción de Coast City, el mejor Linterna Verde del universo aniquila a sus hermanos de armas en busca de poder absoluto.",
+        "hashtags": "#GreenLantern #HalJordan #Parallax #EmeraldTwilight #DCComics #ComicsNarrados #Reels",
+        "scenes": [
+            "¿Sabías que tras la destrucción de Coast City, Hal Jordan enloqueció y masacró a los Green Lanterns?",
+            "Desesperado por reconstruir su ciudad natal, voló hacia el planeta Oa asesinando a sus propios compañeros.",
+            "Arrancó diez anillos de poder de sus cadáveres y masacró al gigante Kilowog a sangre fría.",
+            "Sumergiéndose en la Batería Central, absorbió toda la energía cósmica renaciendo como el villano Parallax."
+        ],
+        "art_queries": [
+            "Hal Jordan grief Coast City destroyed Emerald Twilight comic panel",
+            "Hal Jordan fighting Green Lanterns space battle comic panel",
+            "Hal Jordan wearing multiple power rings hands comic panel",
+            "Hal Jordan entering Central Power Battery Parallax armor comic panel"
+        ]
+    },
+    {
+        "id": "wolverine_x23_olor_detonante",
+        "universe": "Marvel",
+        "character": "X-23",
+        "title": "X-23: El Olor Detonante y el Trágico Asesinato de su Madre",
+        "theme_signature": "x23:laura_kinney:olor_detonante_asesinato_sarah_kinney",
+        "description": "El brutal origen de Laura Kinney: convertida en una asesina desde niña, un compuesto químico la obliga a cometer su mayor pecado.",
+        "hashtags": "#X23 #Wolverine #LauraKinney #XMen #MarvelComics #ComicsNarrados #Shorts #Reels",
+        "scenes": [
+            "¿Sabías que la clon de Wolverine, Laura Kinney, fue diseñada como el arma más sanguinaria del mundo?",
+            "Científicos del proyecto crearon un aroma sintético capaz de nublar su mente y desatar furia asesina.",
+            "Sometida al olor detonante durante una fuga, Laura perdió el control y atacó a su creadora.",
+            "Al recobrar la conciencia, descubrió con horror que acababa de asesinar a su propia madre."
+        ],
+        "art_queries": [
+            "Young Laura Kinney X-23 claws surgical facility comic panel",
+            "X-23 berserker rage trigger scent red eyes comic panel",
+            "X-23 slashing facility soldiers claws comic panel",
+            "X-23 crying holding dying mother Sarah Kinney comic panel"
+        ]
+    },
+    {
+        "id": "namor_inundacion_wakanda_avx",
+        "universe": "Marvel",
+        "character": "Namor",
+        "title": "Namor: La Gran Inundación que Ahogó a Wakanda",
+        "theme_signature": "namor:phoenix_force:tsunami_wakanda_avx_guerra",
+        "description": "Namor desata el poder del Fénix sobre Wakanda provocando una inundación catastrófica que marca a fuego la rivalidad con Pantera Negra.",
+        "hashtags": "#Namor #BlackPanther #AvengersVsXMen #MarvelComics #ComicsNarrados #Shorts #Reels",
+        "scenes": [
+            "¿Sabías que durante la guerra entre Vengadores y X-Men, Namor cometió el mayor genocidio en Wakanda?",
+            "Empoderado por una quinta parte de la Fuerza Fénix, el rey atlante marchó con furia imparable.",
+            "Invocó un colosal tsunami cósmico que azotó la ciudad dorada ahogando a miles de inocentes.",
+            "El ataque quebró el orgullo de Pantera Negra e inició una guerra eterna entre ambas naciones."
+        ],
+        "art_queries": [
+            "Namor Phoenix Five glowing fire suit comic panel",
+            "Namor summoning giant tidal wave tsunami ocean comic panel",
+            "Tsunami crushing Wakanda golden city water flood comic panel",
+            "Black Panther standing in ruined flooded Wakanda comic panel"
+        ]
+    },
+    {
+        "id": "punisher_jigsaw_desfiguracion_billy_russo",
+        "universe": "Marvel",
+        "character": "The Punisher",
+        "title": "The Punisher: El Rostro Destrozado de Billy Russo",
+        "theme_signature": "the_punisher:billy_russo:jigsaw_trituradora_cristales",
+        "description": "Frank Castle ejecuta su venganza contra el sicario de la mafia Billy Russo, arrojándolo contra los cristales para crear a su enemigo más temido.",
+        "hashtags": "#ThePunisher #Jigsaw #BillyRusso #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¿Sabías cómo Frank Castle creó a su archienemigo más perturbador en el bajo mundo de Nueva York?",
+            "Tras eliminar a una banda de asesinos, The Punisher acorraló al sádico sicario Billy Russo.",
+            "En lugar de dispararle, Frank arrojó brutalmente a Russo de cabeza contra una enorme cristalera.",
+            "Los cirujanos reconstruyeron su rostro como un rompecabezas sangriento, naciendo el temido monstruo Jigsaw."
+        ],
+        "art_queries": [
+            "Frank Castle The Punisher skull vest aiming gun comic panel",
+            "Billy Russo handsome mob hitman suit comic panel",
+            "Punisher smashing Billy Russo face through glass window comic panel",
+            "Jigsaw stitched face monster bandages mirror comic panel"
+        ]
+    },
+    {
+        "id": "damian_wayne_muerte_hereje",
+        "universe": "DC",
+        "character": "Robin (Damian Wayne)",
+        "title": "Robin: El Trágico Sacrificio y Muerte de Damian Wayne",
+        "theme_signature": "damian_wayne:the_heretic:espada_empalamiento_torre_wayne",
+        "description": "El hijo de Batman lucha hasta el final contra un clon titánico para proteger la ciudad de Gotham, entregando su vida con apenas diez años.",
+        "hashtags": "#Robin #DamianWayne #Batman #BatmanIncorporated #DCComics #ComicsNarrados #Reels",
+        "scenes": [
+            "¿Sabías que el hijo de Batman, Damian Wayne, murió defendiendo Gotham con apenas diez años?",
+            "Durante el asedio a la Torre Wayne, un clon monstruoso llamado El Hereje acorraló al joven Robin.",
+            "Luchando con honor hasta el último aliento, Damian fue atravesado en el pecho por una espada gigantesca.",
+            "Batman llegó demasiado tarde, encontrando el cadáver de su único hijo bañado en lágrimas de dolor."
+        ],
+        "art_queries": [
+            "Damian Wayne Robin fighting sword Wayne Tower comic panel",
+            "The Heretic giant clone brute Batman Inc comic panel",
+            "The Heretic impales Damian Wayne sword splash page comic panel",
+            "Batman holding dead Damian Wayne crying rain comic panel"
+        ]
     }
 ]
 

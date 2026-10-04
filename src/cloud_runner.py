@@ -605,12 +605,18 @@ def main():
                     selected = generate_autonomous_story(ledger)
                     log(f"Autonomous AI Generated Story: {selected['title']} (ID: {selected['id']})")
                 except Exception as ai_err:
-                    log(f"[WARNING] Autonomous AI story generation notice: {ai_err}. Falling back to catalog...")
+                    log(f"[WARNING] Autonomous AI story generation notice: {ai_err}. Falling back to unproduced candidates...")
                     if available:
                         selected = random.choice(available)
                     else:
                         from .autonomous_ai_generator import EMERGENCY_VIRAL_POOL
-                        selected = random.choice(EMERGENCY_VIRAL_POOL)
+                        unproduced_pool = [s for s in EMERGENCY_VIRAL_POOL if not is_duplicate(s, ledger)[0]]
+                        if unproduced_pool:
+                            selected = random.choice(unproduced_pool)
+                        else:
+                            log("[CRITICAL SHIELD] No unproduced stories remain in catalog or emergency pool, and AI generation failed.")
+                            log("ABORTING SAFELY: Publishing duplicate stories is strictly forbidden under the 5-layer anti-duplication policy.")
+                            sys.exit(0)
             else:
                 selected = random.choice(available)
                 log(f"Selected Unique Story: {selected['title']} (ID: {selected['id']})")
@@ -643,24 +649,32 @@ def main():
             })
     else:
         # Ultimate Emergency Fallback: If AI attempts exhausted, use a guaranteed unproduced curated story from emergency pool
-        log("[CRITICAL FALLBACK] AI candidate attempts exhausted. Activating guaranteed Curated Emergency Pool...")
+        log("[CRITICAL FALLBACK] AI candidate attempts exhausted. Searching guaranteed unproduced Curated Emergency Pool...")
         from .autonomous_ai_generator import EMERGENCY_VIRAL_POOL
-        for backup_story in EMERGENCY_VIRAL_POOL:
-            is_dup, _ = is_duplicate(backup_story, ledger)
-            if not is_dup:
-                import shutil
-                if work_dir.exists():
-                    shutil.rmtree(work_dir, ignore_errors=True)
-                work_dir.mkdir(parents=True, exist_ok=True)
-                selected = backup_story
-                try:
-                    generation = build_cloud_generation(selected, work_dir)
-                    break
-                except Exception as backup_err:
-                    log(f"[CRITICAL FALLBACK] Backup candidate '{backup_story.get('title')}' failed: {backup_err}. Rotating to next...")
-                    continue
+        unproduced_pool = [s for s in EMERGENCY_VIRAL_POOL if not is_duplicate(s, ledger)[0]]
+        for backup_story in unproduced_pool:
+            import shutil
+            if work_dir.exists():
+                shutil.rmtree(work_dir, ignore_errors=True)
+            work_dir.mkdir(parents=True, exist_ok=True)
+            selected = backup_story
+            try:
+                generation = build_cloud_generation(selected, work_dir)
+                break
+            except Exception as backup_err:
+                log(f"[CRITICAL FALLBACK] Backup candidate '{backup_story.get('title')}' failed: {backup_err}. Rotating to next...")
+                continue
         else:
-            raise RuntimeError("Fatal: All story candidates and emergency pool exhausted.")
+            log("[CRITICAL SHIELD FATAL] Zero unproduced stories available in catalog or emergency pool. Aborting safely to guarantee zero duplicate videos.")
+            sys.exit(0)
+
+    # IRONCLAD FINAL GATE: Verification before ANY render or publication
+    final_is_dup, final_dup_reason = is_duplicate(selected, ledger)
+    if final_is_dup:
+        log(f"CRITICAL ANTI-DUPLICATION SHIELD FATAL: Story '{selected.get('title')}' is a DUPLICATE.")
+        log(f"Reason: {final_dup_reason}")
+        log("PIPELINE HALTED IMMEDIATELY: Under NO circumstances will duplicate videos ever be rendered or published.")
+        sys.exit(0)
 
     output_root = Path("output")
     output_root.mkdir(parents=True, exist_ok=True)
