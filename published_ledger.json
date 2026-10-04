@@ -1078,5 +1078,15 @@
     "mode": "live_release",
     "video_file": "Sentry_La_Maldición_del_Vacío_-_El_Monstruo_que_Devoró_Asgard.mp4",
     "status": "published"
+  },
+  {
+    "id": "namor_inundacion_wakanda",
+    "title": "Namor: La Ira del Fénix - El Día que Wakanda Quedó Bajo el Agua",
+    "character": "Namor",
+    "theme_signature": "namor:venganza_fenix:inundacion_wakanda",
+    "date": "2026-10-04 14:07",
+    "mode": "live_release",
+    "video_file": "Namor_La_Ira_del_Fénix_-_El_Día_que_Wakanda_Quedó_Bajo_el_Agua.mp4",
+    "status": "published"
   }
 ]
