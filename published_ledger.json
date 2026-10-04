@@ -1058,5 +1058,15 @@
     "mode": "live_release",
     "video_file": "Black_Panther_El_Día_que_TChalla_Engañó_al_Diablo_en_el_Infierno.mp4",
     "status": "published"
+  },
+  {
+    "id": "green_lantern_la_masacre_de_oas",
+    "title": "Green Lantern: La Masacre de Hal Jordan en Oa",
+    "character": "Green Lantern",
+    "theme_signature": "Green Lantern:Hal Jordan:La Masacre en Oa",
+    "date": "2026-10-04 07:08",
+    "mode": "live_release",
+    "video_file": "Green_Lantern_La_Masacre_de_Hal_Jordan_en_Oa.mp4",
+    "status": "published"
   }
 ]
