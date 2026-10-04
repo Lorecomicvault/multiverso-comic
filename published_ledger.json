@@ -1068,5 +1068,15 @@
     "mode": "live_release",
     "video_file": "Green_Lantern_La_Masacre_de_Hal_Jordan_en_Oa.mp4",
     "status": "published"
+  },
+  {
+    "id": "sentry_la_maldicion_del_vacio",
+    "title": "Sentry: La Maldición del Vacío - El Monstruo que Devoró Asgard",
+    "character": "Sentry",
+    "theme_signature": "sentry:la_maldicion_del_vacio:el_vacio_devorando_asgard",
+    "date": "2026-10-04 10:08",
+    "mode": "live_release",
+    "video_file": "Sentry_La_Maldición_del_Vacío_-_El_Monstruo_que_Devoró_Asgard.mp4",
+    "status": "published"
   }
 ]
