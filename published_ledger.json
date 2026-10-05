@@ -1108,5 +1108,15 @@
     "mode": "live_release",
     "video_file": "Batman_La_Cruel_Adicción_al_Veneno_que_Casi_Destruye_al_Murciélago.mp4",
     "status": "published"
+  },
+  {
+    "id": "silver_surfer_black_void",
+    "title": "Silver Surfer: El Día que Devoró su Propia Alma en el Vacío Cósmico",
+    "character": "Silver Surfer",
+    "theme_signature": "silver_surfer:black:alma_vacia",
+    "date": "2026-10-05 07:07",
+    "mode": "live_release",
+    "video_file": "Silver_Surfer_El_Día_que_Devoró_su_Propia_Alma_en_el_Vacío_Cósmico.mp4",
+    "status": "published"
   }
 ]
