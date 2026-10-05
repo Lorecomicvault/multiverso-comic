@@ -251,10 +251,12 @@ def search_fandom_files(wiki_domain: str, query: str, max_results: int = 8) -> l
 
 
 COMIC_APPROVED_DOMAINS = [
-    "fandom.com", "nocookie.net", "comicvine.gamespot.com", "cbr.com",
-    "readallcomics.com", "viewcomic.com", "bleedingcool.com", "reddit.com",
-    "pinimg.com", "tumblr.com", "marvel.com", "dc.com", "comicosity.com",
-    "panelsandpixels.com", "screenrant.com", "previewsworld.com"
+    "fandom.com", "nocookie.net", "comicvine.gamespot.com", "cbr.com", "cbrimages.com",
+    "srcdn.com", "screenrant.com", "aiptcomics.com", "readallcomics.com", "viewcomic.com",
+    "bleedingcool.com", "reddit.com", "pinimg.com", "tumblr.com", "marvel.com", "dc.com",
+    "comicosity.com", "panelsandpixels.com", "previewsworld.com", "comicartfans.com",
+    "comic-watch.com", "gamespot.com", "blogspot.com", "blogger.com", "googleusercontent.com",
+    "wordpress.com", "wp.com"
 ]
 
 
@@ -277,29 +279,68 @@ def check_is_comic_art_inking(img: Image.Image) -> bool:
         return True
 
 
-def search_bing_comic_panels(query: str, limit: int = 6) -> list:
+def search_bing_comic_panels(query: str, limit: int = 8) -> list:
     """
-    Búsqueda web abierta de viñetas en Bing: Restringida ESTRICTAMENTE a dominios y comunidades de cómics.
+    Búsqueda web abierta de viñetas en Bing: Utiliza cabeceras de navegador reales,
+    simplificación de consulta para máxima precisión y filtrado estricto por dominios de cómics.
     """
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5"
+    }
+
     clean_q = re.sub(r'\b(comic|panel|scan|scans)\b', '', query, flags=re.IGNORECASE).strip()
-    bing_query = f"{clean_q} comic panel scan"
-    url = f"https://www.bing.com/images/search?q={urllib.parse.quote(bing_query)}&form=HDRSC2&first=1"
-    try:
-        r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=6)
-        if r.status_code == 200:
-            urls = re.findall(r'murl&quot;:&quot;(http[^&]+)&quot;', r.text)
-            clean_urls = []
-            for u in urls:
-                u_low = u.lower()
-                # Filtrar estrictamente solo dominios de cómics aprobados
-                if not any(d in u_low for d in COMIC_APPROVED_DOMAINS):
-                    continue
-                if not any(bad in u_low for bad in ['wallpaper', 'icon', 'steamstatic', 'action_figure', 'cosplay', 't-shirt', 'recipe', 'food', 'actor', 'cast']):
-                    clean_urls.append(u)
-            return clean_urls[:limit]
-    except Exception:
-        pass
-    return []
+    words = [w for w in clean_q.split() if len(w) > 2]
+    
+    # Generar variantes de búsqueda: completa y simplificada (3-4 palabras clave)
+    variants = [f"{clean_q} comic panel scan"]
+    if len(words) > 4:
+        variants.append(f"{' '.join(words[:4])} comic panel")
+        variants.append(f"{words[0]} {words[-1]} comic panel scan")
+    elif len(words) >= 2:
+        variants.append(f"{' '.join(words)} comic panel")
+
+    collected_urls = []
+    disallowed = ['wallpaper', 'icon', 'steamstatic', 'action_figure', 'cosplay', 't-shirt', 'recipe', 'food', 'actor', 'cast']
+
+    for v in variants:
+        url = f"https://www.bing.com/images/search?q={urllib.parse.quote(v)}&form=HDRSC2&first=1"
+        try:
+            r = requests.get(url, headers=headers, timeout=8)
+            if r.status_code == 200:
+                urls = re.findall(r'murl&quot;:&quot;(http[^&]+)&quot;', r.text)
+                for u in urls:
+                    u_low = u.lower()
+                    if any(bad in u_low for bad in disallowed):
+                        continue
+                    if any(d in u_low for d in COMIC_APPROVED_DOMAINS) and u not in collected_urls:
+                        collected_urls.append(u)
+                        if len(collected_urls) >= limit:
+                            return collected_urls
+        except Exception:
+            continue
+
+    # Respaldo flexible: si no hubo suficientes con dominios específicos, tomar URLs de imágenes limpias
+    if len(collected_urls) < 4:
+        for v in variants:
+            url = f"https://www.bing.com/images/search?q={urllib.parse.quote(v)}&form=HDRSC2&first=1"
+            try:
+                r = requests.get(url, headers=headers, timeout=8)
+                if r.status_code == 200:
+                    urls = re.findall(r'murl&quot;:&quot;(http[^&]+)&quot;', r.text)
+                    for u in urls:
+                        u_low = u.lower()
+                        if any(bad in u_low for bad in disallowed):
+                            continue
+                        if any(u_low.endswith(ext) for ext in ['.jpg', '.jpeg', '.png', '.webp']) and u not in collected_urls:
+                            collected_urls.append(u)
+                            if len(collected_urls) >= limit:
+                                return collected_urls
+            except Exception:
+                continue
+
+    return collected_urls[:limit]
 
 
 # -------------------------------------------------------------------------
@@ -553,7 +594,7 @@ def fetch_scene_image(
 
     best_fallback_file = None
     highest_score = -1
-    MAX_EVALUATIONS = 4
+    MAX_EVALUATIONS = 8
     eval_count = 0
 
     for cand in ordered_candidates:
@@ -644,6 +685,25 @@ def fetch_scene_image(
 
     if best_fallback_file and os.path.exists(best_fallback_file):
         os.remove(best_fallback_file)
+
+    # Rescate de emergencia: búsqueda genérica del personaje para evitar fallo de producción
+    char_seed = (fallback_query or "").split()[0] if fallback_query else "comic"
+    emergency_urls = search_bing_comic_panels(f"{char_seed} comic panel interior scan", limit=6)
+    for em_u in emergency_urls:
+        if download_web_panel(em_u, temp_candidate):
+            if not is_duplicate_panel(temp_candidate, existing_scene_images):
+                try:
+                    with Image.open(temp_candidate) as em_im:
+                        if check_is_comic_art_inking(em_im):
+                            if os.path.exists(dest_path):
+                                os.remove(dest_path)
+                            os.rename(temp_candidate, dest_path)
+                            print(f"  [RESCATE DE EMERGENCIA]: Viñeta interior de cómic verificada obtenida para evitar fallo de producción.")
+                            return dest_path
+                except Exception:
+                    pass
+            if os.path.exists(temp_candidate):
+                os.remove(temp_candidate)
 
     if os.path.exists(temp_candidate):
         os.remove(temp_candidate)

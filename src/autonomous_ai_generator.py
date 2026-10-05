@@ -293,10 +293,52 @@ EMERGENCY_VIRAL_POOL = [
             "Los cirujanos reconstruyeron su rostro como un rompecabezas sangriento, naciendo el temido monstruo Jigsaw."
         ],
         "art_queries": [
-            "Frank Castle The Punisher skull vest aiming gun comic panel",
-            "Billy Russo handsome mob hitman suit comic panel",
-            "Punisher smashing Billy Russo face through glass window comic panel",
-            "Jigsaw stitched face monster bandages mirror comic panel"
+            "Frank Castle skull vest gun comic panel",
+            "Billy Russo mob suit comic panel",
+            "Punisher glass window comic panel",
+            "Jigsaw face bandages mirror comic panel"
+        ]
+    },
+    {
+        "id": "doctor_fate_nabu_posesion_divina",
+        "universe": "DC",
+        "character": "Doctor Fate",
+        "title": "Doctor Fate: La Posesión de Nabu y el Sacrificio Humano",
+        "theme_signature": "doctor_fate:nabu:yelmo_dorado_posesion_hechicero",
+        "description": "Kent Nelson descubre el aterrador precio de portar el Casco de Nabu: cada vez que invoca su magia, la entidad cósmica toma el control absoluto de su cuerpo borrando su humanidad.",
+        "hashtags": "#DoctorFate #DCComics #JusticeSociety #Nabu #ComicsNarrados #Shorts #Reels",
+        "scenes": [
+            "¿Sabías que el casco de Doctor Fate es en realidad un parásito cómico que borra tu alma?",
+            "Cuando Kent Nelson se coloca el yelmo dorado, su mente es subyugada por el señor del orden Nabu.",
+            "Nabu utiliza su cuerpo como una marioneta despiadada, ejecutando hechicería que desintegra a sus enemigos.",
+            "Al quitárselo, Kent despierta envejecido y torturado, dándose cuenta de que ya no es un hombre libre."
+        ],
+        "art_queries": [
+            "Doctor Fate helmet comic panel",
+            "Kent Nelson glowing eyes Nabu comic panel",
+            "Doctor Fate spell magic symbol comic panel",
+            "Doctor Fate removing helmet exhausted comic panel"
+        ]
+    },
+    {
+        "id": "ghost_rider_zarathos_posesion_oscura",
+        "universe": "Marvel",
+        "character": "Ghost Rider",
+        "title": "Ghost Rider: La Furia Desatada de Zarathos y el Fuego Infernal",
+        "theme_signature": "ghost_rider:zarathos:posesion_fuego_infernal_maldicion",
+        "description": "Cuando Johnny Blaze pierde el control emocional, el demonio ancestral Zarathos toma el mando total desatando una masacre de fuego que calcina el alma de sus enemigos.",
+        "hashtags": "#GhostRide #MarvelComics #Zarathos #MidnightSons #ComicsNarrados #Shorts #Reels",
+        "scenes": [
+            "¿Sabías que el Espíritu de la Venganza no es un superpoder, sino una maldición que devora almas?",
+            "Cuando Johnny Blaze pierde el control emocional, el antiguo demonio Zarathos toma el mando total de su cuerpo.",
+            "Envuelto en fuego infernal indestructible, Zarathos calcina a los criminales con una crueldad sin límites.",
+            "Blaze queda atrapado dentro de su propia mente, condenado a presenciar la masacre sin poder detenerla."
+        ],
+        "art_queries": [
+            "Ghost Rider flaming skull comic panel",
+            "Johnny Blaze turning Ghost Rider comic panel",
+            "Ghost Rider hellfire chain comic panel",
+            "Ghost Rider penance stare comic panel"
         ]
     },
     {
@@ -314,10 +356,10 @@ EMERGENCY_VIRAL_POOL = [
             "Batman llegó demasiado tarde, encontrando el cadáver de su único hijo bañado en lágrimas de dolor."
         ],
         "art_queries": [
-            "Damian Wayne Robin fighting sword Wayne Tower comic panel",
-            "The Heretic giant clone brute Batman Inc comic panel",
-            "The Heretic impales Damian Wayne sword splash page comic panel",
-            "Batman holding dead Damian Wayne crying rain comic panel"
+            "Damian Wayne sword Wayne Tower comic panel",
+            "The Heretic giant clone Batman Inc comic panel",
+            "The Heretic impales Damian Wayne sword comic panel",
+            "Batman holding dead Damian Wayne crying comic panel"
         ]
     }
 ]
@@ -344,9 +386,24 @@ def generate_autonomous_story(ledger: list[dict], api_key: str | None = None) ->
     char_summary = ", ".join(sorted(list(past_characters)))
     titles_summary = " | ".join(past_titles[-80:])
 
+    # Grupos rotativos de personajes inéditos para evitar que la IA repita siempre la misma propuesta
+    ROTATING_CHAR_PROMPTS = [
+        "Doctor Fate (Nabu), Silver Surfer, Ghost Rider (Zarathos), Magneto, Red Hood (Jason Todd)",
+        "John Constantine, Carnage (Cletus Kasady), Namor (Phoenix Five), Doctor Doom, Moon Knight (Marc Spector)",
+        "Atrocitus (Red Lanterns), Martian Manhunter (Fernus), Jean Grey (Dark Phoenix), Wolverine (Weapon X)",
+        "Hal Jordan (Parallax), Sinestro, The Punisher, Spider-Man (Spider's Shadow), Captain America (Secret Empire)"
+    ]
+
+    rejected_session_titles = []
     max_attempts = 4
+
     for attempt in range(1, max_attempts + 1):
         log(f"Generando propuesta de historia con IA (Intento {attempt}/{max_attempts})...")
+
+        target_roster = ROTATING_CHAR_PROMPTS[(attempt - 1) % len(ROTATING_CHAR_PROMPTS)]
+        rejected_clause = ""
+        if rejected_session_titles:
+            rejected_clause = f"\nATENCIÓN CRÍTICA: Las siguientes historias fueron RECHAZADAS en intentos previos de esta sesión por colisión o falta de viñetas. ESTÁ ESTRICTAMENTE PROHIBIDO REPETIRLAS:\n{', '.join(rejected_session_titles)}\n"
 
         system_prompt = f"""
 Eres el Guionista Principal y Director Creativo de ComicLoreVault, el canal líder de videos cinematográficos de cómics en español para TikTok y Reels.
@@ -356,22 +413,13 @@ Tu misión es crear una historia COMPLETAMENTE NUEVA, ULTRA-VIRAL, OSCURA Y MEMO
 REGLA SUPREMA DE FRANQUICIA (INVIOLABLE):
 - Queda TERMINANTEMENTE PROHIBIDO crear historias de Star Wars, Image Comics, Invincible, The Boys, Spawn, películas, series o mangas.
 - Cada historia DEBE SER 100% de SUPERHÉROES o SUPERVILLANOS de MARVEL COMICS o DC COMICS.
+{rejected_clause}
+ENFÓCATE PREFERENTEMENTE EN UNO DE ESTOS PERSONAJES O ARCOS:
+{target_roster}
 
 ESTRICTO HISTORIAL DE TEMAS YA PRODUCIDOS (TOTALMENTE PROHIBIDO REPETIR O REUTILIZAR ESTOS PERSONAJES O ARCOS):
 - Personajes ya cubiertos (PROHIBIDO REPETIR): {char_summary}
 - Títulos recientes ya publicados (PROHIBIDO REPETIR): {titles_summary}
-
-IDEAS DE TEMAS CANDIDATOS ULTRA-VIRALES DE SUPERHÉROES MARVEL/DC CON VIÑETAS INTERIORES VERIFICADAS (Elige uno de estos arcos no producidos o inventa otro arco similar de superhéroes Marvel/DC):
-- Sentry: La Maldición del Vacío (The Void devorando Asgard y Robert Reynolds)
-- Magneto vs Red Skull: El Castigo del Holocausto en el Búnker (Magneto enterrando vivo al líder nazi)
-- The Flash: El Asesinato de Iris West (Eobard Thawne haciendo vibrar su mano para asesinar a la esposa de Barry)
-- Black Panther: El Trato con Mephisto (T'Challa engañando al diablo para que los dioses pantera lo juzguen)
-- Batman: La Adicción al Veneno (Bruce Wayne consumiendo la droga Veneno en el laboratorio de la cueva)
-- Green Lantern: La Masacre de Hal Jordan en Oa (Hal derrotando a los Green Lanterns y absorbiendo la Batería Central)
-- X-23: El Olor Detonante (Laura Kinney perdiendo el control por el químico de laboratorio asesinando a su madre)
-- Namor: La Inundación de Wakanda (Namor poseído por la Fuerza Fénix enviando una ola gigante sobre la capital)
-- The Punisher: El Rostro Destrozado de Billy Russo (Frank Castle lanzando al mafioso contra los cristales creando a Jigsaw)
-- Robin: La Muerte Trágica de Damian Wayne (Damian empalado por la espada del Hereje en la azotea)
 
 REGLAS INVIOLABLES DE FORMATO:
 1. Exactamente 4 escenas narrativas.
@@ -382,7 +430,9 @@ REGLAS INVIOLABLES DE FORMATO:
    - Escena 2: Choque o revelación de horror (15 a 18 palabras).
    - Escena 3: Momento de máxima tensión, muerte o brutalidad (15 a 18 palabras).
    - Escena 4: Desenlace trágico, irónico o épico (15 a 18 palabras).
-5. ALINEACIÓN VISUAL 1:1: Cada escena debe describir EXACTAMENTE lo que se ve en la viñeta interior de cómic (PROHIBIDAS portadas comerciales, portadas variantes, logos, fotos reales y actores). En 'art_queries' proporciona términos de búsqueda enfocados en VIÑETAS INTERIORES del cómic (ej: 'Spider-Man Spiders Shadow interior panel 1', 'Batman White Knight panel Joker sanity').
+5. ALINEACIÓN VISUAL Y CONSULTAS DE BÚSQUEDA (art_queries):
+   - Proporciona exactamente 4 términos de búsqueda en INGLÉS súper CONCISOS (de 3 a 5 palabras clave, ej: 'Doctor Fate Nabu helmet panel', 'Ghost Rider Zarathos fire comic', 'Moon Knight Bushman fight comic').
+   - PROHIBIDO escribir oraciones largas de más de 5 palabras en art_queries.
 
 Devuelve ÚNICAMENTE un objeto JSON válido con este esquema:
 {{
@@ -400,10 +450,10 @@ Devuelve ÚNICAMENTE un objeto JSON válido con este esquema:
     "Texto de la Escena 4..."
   ],
   "art_queries": [
-    "Busqueda de comic escena 1",
-    "Busqueda de comic escena 2",
-    "Busqueda de comic escena 3",
-    "Busqueda de comic escena 4"
+    "Busqueda concisa escena 1",
+    "Busqueda concisa escena 2",
+    "Busqueda concisa escena 3",
+    "Busqueda concisa escena 4"
   ]
 }}
 """
@@ -411,7 +461,9 @@ Devuelve ÚNICAMENTE un objeto JSON válido con este esquema:
         payload = {
             "contents": [{"parts": [{"text": system_prompt}]}],
             "generationConfig": {
-                "responseMimeType": "application/json"
+                "responseMimeType": "application/json",
+                "temperature": 1.0,
+                "topP": 0.95
             }
         }
 
@@ -440,6 +492,7 @@ Devuelve ÚNICAMENTE un objeto JSON válido con este esquema:
         is_dup, reason = is_duplicate(story, ledger)
         if is_dup:
             log(f"Escudo Anti-Duplicados: Propuesta '{story.get('title')}' rechazada ({reason}). Reintentando con otro arco...")
+            rejected_session_titles.append(story.get("title", ""))
             continue
 
         # Resolver y validar viñetas oficiales en Fandom
@@ -470,7 +523,8 @@ Devuelve ÚNICAMENTE un objeto JSON válido con este esquema:
             else:
                 log(f"Aviso escena {idx}: Viñeta Fandom no resuelta en precarga. El scraper multi-fuente y Bing la obtendrán durante el render.")
 
-        if resolved_art:
+        # Solo asignar si se resolvieron las 4 escenas completas para evitar huecos parciales
+        if len(resolved_art) == len(story["scenes"]):
             story["scene_art_urls"] = resolved_art
         story["voice"] = "Puck"
         story["tts_model"] = "gemini-3.8-flash-tts"

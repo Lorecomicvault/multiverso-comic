@@ -1146,6 +1146,111 @@ EDITORIAL_STORIES = [
             "The Heretic impales Damian Wayne sword splash page comic panel",
             "Batman holding dead Damian Wayne crying rain comic panel"
         ]
+    },
+    {
+        "id": "doctor_fate_nabu_posesion_divina",
+        "universe": "DC",
+        "character": "Doctor Fate",
+        "title": "Doctor Fate: La Posesión de Nabu y el Sacrificio Humano",
+        "theme_signature": "doctor_fate:nabu:yelmo_dorado_posesion_hechicero",
+        "description": "Kent Nelson descubre el aterrador precio de portar el Casco de Nabu: cada vez que invoca su magia, la entidad cósmica toma el control absoluto de su cuerpo borrando su humanidad.",
+        "hashtags": "#DoctorFate #DCComics #JusticeSociety #Nabu #ComicsNarrados #Shorts #Reels",
+        "scenes": [
+            "¿Sabías que el casco dorado de Doctor Fate borra por completo la humanidad de quien lo porta?",
+            "Cuando Kent Nelson se coloca el yelmo, su cuerpo es poseído por la entidad milenaria Nabu.",
+            "Nabu utiliza su carne como una marioneta despiadada, desintegrando a sus rivales con magia cósmica.",
+            "Al quitárselo, Nelson despierta envejecido y aterrado, comprendiendo que ya no es dueño de su alma."
+        ],
+        "art_queries": [
+            "Doctor Fate helmet comic panel",
+            "Kent Nelson glowing eyes Nabu comic panel",
+            "Doctor Fate spell magic symbol comic panel",
+            "Doctor Fate removing helmet exhausted comic panel"
+        ]
+    },
+    {
+        "id": "ghost_rider_zarathos_posesion_oscura",
+        "universe": "Marvel",
+        "character": "Ghost Rider",
+        "title": "Ghost Rider: La Furia Desatada de Zarathos y el Fuego Infernal",
+        "theme_signature": "ghost_rider:zarathos:posesion_fuego_infernal_maldicion",
+        "description": "Cuando Johnny Blaze pierde el control emocional, el antiguo demonio Zarathos toma el mando total desatando una masacre de fuego que calcina el alma de sus enemigos.",
+        "hashtags": "#GhostRider #MarvelComics #Zarathos #MidnightSons #ComicsNarrados #Shorts #Reels",
+        "scenes": [
+            "¿Sabías que el Espíritu de la Venganza no es un poder, sino una maldición que devora almas?",
+            "Cuando Johnny Blaze pierde el control emocional, el antiguo demonio Zarathos toma el mando total de su cuerpo.",
+            "Envuelto en fuego infernal indestructible, Zarathos calcina a los criminales con una crueldad sin límites.",
+            "Blaze queda atrapado dentro de su propia mente, condenado a presenciar la masacre sin poder detenerla."
+        ],
+        "art_queries": [
+            "Ghost Rider flaming skull comic panel",
+            "Johnny Blaze turning Ghost Rider comic panel",
+            "Ghost Rider hellfire chain comic panel",
+            "Ghost Rider penance stare comic panel"
+        ]
+    },
+    {
+        "id": "constantine_engano_triunvirato_infierno",
+        "universe": "DC",
+        "character": "John Constantine",
+        "title": "John Constantine: El Engaño al Triunvirato del Infierno",
+        "theme_signature": "constantine:dangerous_habits:triunvirato_infierno_cancer",
+        "description": "Agonizando por un cáncer terminal, John Constantine vende su alma a los tres reyes del infierno por separado, forzándolos a salvarle la vida para evitar una guerra cósmica.",
+        "hashtags": "#Constantine #Hellblazer #DCComics #Vertigo #ComicsNarrados #Shorts #Reels",
+        "scenes": [
+            "¿Sabías cómo John Constantine engañó a los tres señores del infierno para salvar su propia vida?",
+            "Agonizando por un cáncer terminal, Constantine vendió su alma a los tres reyes demoníacos por separado.",
+            "Al enterarse de que reclamarlo desataría una guerra sangrienta entre ellos, los demonios se vieron forzados a curarlo.",
+            "El estafador de lo oculto sonrió victorioso, fumando un cigarrillo frente a la furia de los señores infernales."
+        ],
+        "art_queries": [
+            "John Constantine trench coat lighter Hellblazer comic panel",
+            "Constantine selling soul devil contract comic panel",
+            "Three lords of hell devils angry comic panel",
+            "Constantine smiling smoking middle finger comic panel"
+        ]
+    },
+    {
+        "id": "magneto_atracciones_fatales_adamantium",
+        "universe": "Marvel",
+        "character": "Magneto",
+        "title": "Magneto: La Extracción Brutal del Adamantium de Wolverine",
+        "theme_signature": "magneto:fatal_attractions:extraccion_adamantium_avalon",
+        "description": "En una de las escenas más sangrientas de Marvel, Magneto utiliza su control magnético absoluto para arrancar el metal líquido directamente de los huesos de Wolverine.",
+        "hashtags": "#Magneto #Wolverine #XMen #FatalAttractions #MarvelComics #ComicsNarrados #Reels",
+        "scenes": [
+            "¿Sabías cuál fue la tortura más brutal y sanguinaria que sufrió Wolverine a manos de Magneto?",
+            "Durante la batalla espacial en Avalon, Wolverine atravesó el pecho de Magneto con sus garras de adamantium.",
+            "Enloquecido de ira, el maestro del magnetismo controló el metal fundido adherido a los huesos de Logan.",
+            "Magneto arrancó el adamantium líquido desgarrando su piel y músculos, dejándolo al borde de la muerte definitiva."
+        ],
+        "art_queries": [
+            "Wolverine slashing Magneto chest claws Avalon comic panel",
+            "Magneto ripping adamantium Wolverine Fatal Attractions comic panel",
+            "Adamantium liquid coming out Wolverine pores comic panel",
+            "Wolverine dying bleeding bone claws comic panel"
+        ]
+    },
+    {
+        "id": "carnage_ravencroft_masacre_origen",
+        "universe": "Marvel",
+        "character": "Carnage",
+        "title": "Carnage: La Masacre Sangrienta en Ravencroft y el Nacimiento del Monstruo",
+        "theme_signature": "carnage:cletus_kasady:ravencroft_sangre_nacimiento",
+        "description": "Cletus Kasady se fusiona con la descendencia de Venom a través de su propio torrente sanguíneo, desatando al psicópata simbiótico más sádico en la prisión de Ravencroft.",
+        "hashtags": "#Carnage #Venom #SpiderMan #MaximumCarnage #MarvelComics #ComicsNarrados #Shorts",
+        "scenes": [
+            "¿Sabías cómo nació Carnage en una diminuta celda de máxima seguridad en Nueva York?",
+            "El asesino serial Cletus Kasady compartía celda con Eddie Brock cuando el simbionte Venom acudió a rescatarlo.",
+            "Al escapar, el simbionte dejó un residuo rojizo que se filtró directamente en la sangre de Kasady.",
+            "Fusionado con su torrente sanguíneo, Cletus desató una carnicería imparable riendo mientras aniquilaba a los guardias de Ravencroft."
+        ],
+        "art_queries": [
+            "Cletus Kasady prison cell Ravencroft comic panel",
+            "Venom symbiote leaving red offspring comic panel",
+            "Carnage first transformation red tendrils comic panel",
+            "Carnage killing prison guards laughing comic panel"
+        ]
     }
 ]
 

@@ -417,7 +417,7 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
             from .comic_precision_scraper import search_bing_comic_panels, download_web_panel, check_is_comic_art_inking, is_duplicate_panel, verify_visual_alignment_with_gemini
             art_queries = story.get("art_queries", [])
             q_term = art_queries[idx - 1] if art_queries and idx <= len(art_queries) else f"{story.get('character', '')} {narration[:40]}"
-            web_cand_urls = search_bing_comic_panels(f"{q_term} comic panel", limit=8)
+            web_cand_urls = search_bing_comic_panels(q_term, limit=8)
             for wb_u in web_cand_urls:
                 if download_web_panel(wb_u, str(img_file)):
                     try:
@@ -428,6 +428,25 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
                                     saved = True
                                     log(f"Scene {idx}: Fallback C approved ({eval_c.get('reason')}).")
                                     break
+                    except Exception:
+                        pass
+                    if img_file.exists():
+                        img_file.unlink(missing_ok=True)
+
+        # Fallback D: Emergency Character Interior Comic Panel Fallback
+        if not saved or not img_file.exists():
+            log(f"Scene {idx}: Activating Emergency Character Panel Fallback...")
+            from .comic_precision_scraper import search_bing_comic_panels, download_web_panel, check_is_comic_art_inking, is_duplicate_panel
+            char_clean = story.get("character", "Superhero").split("(")[0].strip()
+            emergency_urls = search_bing_comic_panels(f"{char_clean} interior comic panel", limit=8)
+            for em_u in emergency_urls:
+                if download_web_panel(em_u, str(img_file)):
+                    try:
+                        with Image.open(img_file) as em_im:
+                            if check_is_comic_art_inking(em_im) and not is_duplicate_panel(str(img_file), raw_downloaded_images + [str(p) for p in downloaded_images]):
+                                saved = True
+                                log(f"Scene {idx}: Fallback D approved authentic {char_clean} comic art.")
+                                break
                     except Exception:
                         pass
                     if img_file.exists():
@@ -615,8 +634,8 @@ def main():
                             selected = random.choice(unproduced_pool)
                         else:
                             log("[CRITICAL SHIELD] No unproduced stories remain in catalog or emergency pool, and AI generation failed.")
-                            log("ABORTING SAFELY: Publishing duplicate stories is strictly forbidden under the 5-layer anti-duplication policy.")
-                            sys.exit(0)
+                            log("ABORTING: Publishing duplicate stories is strictly forbidden under the 5-layer anti-duplication policy.")
+                            sys.exit(0 if args.dry_run else 1)
             else:
                 selected = random.choice(available)
                 log(f"Selected Unique Story: {selected['title']} (ID: {selected['id']})")
@@ -665,8 +684,8 @@ def main():
                 log(f"[CRITICAL FALLBACK] Backup candidate '{backup_story.get('title')}' failed: {backup_err}. Rotating to next...")
                 continue
         else:
-            log("[CRITICAL SHIELD FATAL] Zero unproduced stories available in catalog or emergency pool. Aborting safely to guarantee zero duplicate videos.")
-            sys.exit(0)
+            log("[CRITICAL SHIELD FATAL] Zero unproduced stories available in catalog or emergency pool. Aborting to prevent silent empty execution.")
+            sys.exit(0 if args.dry_run else 1)
 
     # IRONCLAD FINAL GATE: Verification before ANY render or publication
     final_is_dup, final_dup_reason = is_duplicate(selected, ledger)
@@ -674,7 +693,7 @@ def main():
         log(f"CRITICAL ANTI-DUPLICATION SHIELD FATAL: Story '{selected.get('title')}' is a DUPLICATE.")
         log(f"Reason: {final_dup_reason}")
         log("PIPELINE HALTED IMMEDIATELY: Under NO circumstances will duplicate videos ever be rendered or published.")
-        sys.exit(0)
+        sys.exit(0 if args.dry_run else 1)
 
     output_root = Path("output")
     output_root.mkdir(parents=True, exist_ok=True)
