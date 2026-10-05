@@ -127,8 +127,15 @@ def assemble_reel(
     )
 
     # 5. Renderizado final quemando subtítulos y compositando overlay social
-    escaped_ass = os.path.abspath(ass_path).replace(os.sep, "/").replace(":", r"\:")
-    escaped_fonts = os.path.abspath(fonts_dir).replace(os.sep, "/").replace(":", r"\:")
+    try:
+        escaped_ass = Path(ass_path).resolve().relative_to(Path.cwd()).as_posix()
+    except Exception:
+        escaped_ass = os.path.abspath(ass_path).replace(os.sep, "/").replace(":", r"\:")
+
+    try:
+        escaped_fonts = Path(fonts_dir).resolve().relative_to(Path.cwd()).as_posix()
+    except Exception:
+        escaped_fonts = os.path.abspath(fonts_dir).replace(os.sep, "/").replace(":", r"\:")
 
     has_cta = social_cta_mov and os.path.exists(social_cta_mov)
     print(f"[Master Assembler] Ensamblando video final con FFmpeg (CTA activo: {has_cta})...")

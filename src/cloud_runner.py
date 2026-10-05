@@ -386,7 +386,7 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
                 if download_comic_panel(target, story.get("character", ""), img_file):
                     from .comic_precision_scraper import verify_visual_alignment_with_gemini
                     eval_a = verify_visual_alignment_with_gemini(str(img_file), narration)
-                    if (eval_a.get("score", 0) >= 5 and eval_a.get("depicts_action", False)) or (eval_a.get("score", 0) >= 2 and eval_a.get("is_comic_panel", False)):
+                    if (eval_a.get("score", 0) >= 6 and eval_a.get("depicts_action", False)) or (eval_a.get("score", 0) >= 7 and eval_a.get("is_comic_panel", False)):
                         saved = True
                         log(f"Scene {idx}: Fallback A target approved ({eval_a.get('reason')}).")
                     else:
@@ -403,7 +403,7 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
                         with Image.open(img_file) as im_chk:
                             if check_is_comic_art_inking(im_chk) and not is_duplicate_panel(str(img_file), raw_downloaded_images + [str(p) for p in downloaded_images]):
                                 eval_b = verify_visual_alignment_with_gemini(str(img_file), narration)
-                                if (eval_b.get("score", 0) >= 5 and eval_b.get("depicts_action", False)) or (eval_b.get("score", 0) >= 2 and eval_b.get("is_comic_panel", False)):
+                                if (eval_b.get("score", 0) >= 6 and eval_b.get("depicts_action", False)) or (eval_b.get("score", 0) >= 7 and eval_b.get("is_comic_panel", False)):
                                     saved = True
                                     log(f"Scene {idx}: Fallback B approved ({eval_b.get('reason')}).")
                                     break
@@ -424,7 +424,7 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
                         with Image.open(img_file) as wb_im:
                             if check_is_comic_art_inking(wb_im) and not is_duplicate_panel(str(img_file), raw_downloaded_images + [str(p) for p in downloaded_images]):
                                 eval_c = verify_visual_alignment_with_gemini(str(img_file), narration)
-                                if (eval_c.get("score", 0) >= 5 and eval_c.get("depicts_action", False)) or (eval_c.get("score", 0) >= 2 and eval_c.get("is_comic_panel", False)):
+                                if (eval_c.get("score", 0) >= 6 and eval_c.get("depicts_action", False)) or (eval_c.get("score", 0) >= 7 and eval_c.get("is_comic_panel", False)):
                                     saved = True
                                     log(f"Scene {idx}: Fallback C approved ({eval_c.get('reason')}).")
                                     break
@@ -433,30 +433,11 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
                     if img_file.exists():
                         img_file.unlink(missing_ok=True)
 
-        # Fallback D: Emergency Character Interior Comic Panel Fallback
-        if not saved or not img_file.exists():
-            log(f"Scene {idx}: Activating Emergency Character Panel Fallback...")
-            from .comic_precision_scraper import search_bing_comic_panels, download_web_panel, check_is_comic_art_inking, is_duplicate_panel
-            char_clean = story.get("character", "Superhero").split("(")[0].strip()
-            emergency_urls = search_bing_comic_panels(f"{char_clean} interior comic panel", limit=8)
-            for em_u in emergency_urls:
-                if download_web_panel(em_u, str(img_file)):
-                    try:
-                        with Image.open(img_file) as em_im:
-                            if check_is_comic_art_inking(em_im) and not is_duplicate_panel(str(img_file), raw_downloaded_images + [str(p) for p in downloaded_images]):
-                                saved = True
-                                log(f"Scene {idx}: Fallback D approved authentic {char_clean} comic art.")
-                                break
-                    except Exception:
-                        pass
-                    if img_file.exists():
-                        img_file.unlink(missing_ok=True)
-
-        # CRITICAL FAIL-SAFE: NO BLACK SCREEN VIDEOS EVER!
+        # CRITICAL FAIL-SAFE: STRICT VISUAL FIDELITY - NO UNVERIFIED OR MISMATCHED PANELS EVER!
         if not saved or not img_file.exists():
             raise RuntimeError(
-                f"FATAL ERROR: Could not obtain real comic panels for '{story['title']}' (Scene {idx}). "
-                "Halting pipeline to guarantee zero black-screen videos are ever produced or uploaded."
+                f"FATAL ERROR: Could not obtain verified comic panels matching narration for '{story['title']}' (Scene {idx}). "
+                "Halting candidate generation to automatically rotate to another story candidate."
             )
 
         # Guardar copia del panel original sin enmarcar para deduplicación estricta inter-escenas

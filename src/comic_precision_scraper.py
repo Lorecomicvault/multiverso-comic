@@ -109,7 +109,11 @@ def is_cover_or_promo_image(file_title: str) -> bool:
         'homecoming', 'far from home', 'no way home', 'wandavision', 'she hulk',
         'she-hulk', 'defenders', 'jessica jones', 'luke cage', 'iron fist',
         'agents of shield', 'agents of s.h.i.e.l.d', 'daredevil born again season',
-        'multiverse of madness', 'quantumania', 'brave new world'
+        'multiverse of madness', 'quantumania', 'brave new world',
+        # Stock photos, cliparts, vectors, symbols, and logos
+        'shutterstock', 'alamy', 'getty', 'istock', 'stockphoto', 'dreamstime',
+        'depositphotos', '123rf', 'freepik', 'vectorstock', 'canva', 'vecteezy',
+        'clipart', 'vector', 'symbol', 'alphabet', 'watermark'
     ]
     if any(k in t for k in cover_keywords):
         return True
@@ -167,7 +171,10 @@ DISALLOWED_SCRAPER_KEYWORDS = [
     'mug', 'actor', 'film', 'movie', 'live-action', 'live action', 'cast', 'cosplay',
     'photo', 'shot', 'portrait', 'interview', 'trailer', 'commercial', 'fox', 'warner',
     'tv', 'series', 'clip', 'joaquin', 'variant', 'poster', 'logo', 'trading cards', 'video game',
-    'soundtrack', 'review', 'bts', 'behind the scenes', 'script', 'text'
+    'soundtrack', 'review', 'bts', 'behind the scenes', 'script', 'text',
+    'shutterstock', 'alamy', 'getty', 'istock', 'stockphoto', 'dreamstime', 'depositphotos',
+    '123rf', 'freepik', 'vectorstock', 'canva', 'vecteezy', 'clipart', 'vector', 'symbol',
+    'alphabet', 'watermark'
 ]
 
 
@@ -302,7 +309,14 @@ def search_bing_comic_panels(query: str, limit: int = 8) -> list:
         variants.append(f"{' '.join(words)} comic panel")
 
     collected_urls = []
-    disallowed = ['wallpaper', 'icon', 'steamstatic', 'action_figure', 'cosplay', 't-shirt', 'recipe', 'food', 'actor', 'cast']
+    disallowed = [
+        'wallpaper', 'icon', 'steamstatic', 'action_figure', 'cosplay', 't-shirt',
+        'recipe', 'food', 'actor', 'cast', 'live-action', 'mug', 'symbol', 'alphabet',
+        'shutterstock', 'alamy', 'gettyimages', 'getty', 'istockphoto', 'istock',
+        'dreamstime', 'depositphotos', '123rf', 'freepik', 'vectorstock', 'stockphoto',
+        'stockvault', 'bigstockphoto', 'canva', 'vecteezy', 'clipart', 'vector',
+        'watermark', 'stock-photo', 'stock-vector'
+    ]
 
     for v in variants:
         url = f"https://www.bing.com/images/search?q={urllib.parse.quote(v)}&form=HDRSC2&first=1"
@@ -423,20 +437,21 @@ def verify_visual_alignment_with_gemini(image_path: str, scene_text: str) -> dic
     if not scene_text or not os.path.exists(image_path):
         return {"score": 1, "is_comic_panel": False, "depicts_action": False, "reason": "Entrada inválida"}
 
-    prompt = f"""Eres el supervisor de edición gráfica y control de calidad de un canal de cómics.
-Evalúa con rigor si esta imagen ilustra con fidelidad la siguiente escena que narra la voz:
+    prompt = f"""Eres el supervisor de edición gráfica y control de calidad de un canal de cómics de máxima precisión.
+Evalúa con extremo rigor si esta imagen ilustra con fidelidad la siguiente escena que narra la voz:
 Escena narrada: "{scene_text}"
 
-REGLA DE TOLERANCIA CERO PARA PORTADAS Y LOGOTIPOS:
-- Si la imagen contiene el título del cómic en letras gigantes ("DAREDEVIL", "BATMAN", "SPIDER-MAN", etc.), sello Comics Code Authority, número de edición gigante, logos de Marvel/DC o código de barras, ES UNA PORTADA COMERCIAL.
-- Para cualquier portada o póster comercial, responde OBLIGATORIAMENTE con score 1 e is_comic_panel false.
-- Solo acepta viñetas o secuencias interiores que ilustren los sucesos relatados.
+REGLAS DE TOLERANCIA CERO (DESCALIFICACIÓN INMEDIATA CON SCORE 1 E IS_COMIC_PANEL FALSE):
+1. BANCOS DE IMÁGENES Y STOCK: Si la imagen proviene de bancos de imágenes (Shutterstock, Getty, Alamy, iStock, etc.), contiene marcas de agua, es un vector aislado, un logo, una letra del alfabeto (como la letra griega beta/alpha), clipart o gráfico decorativo, responde OBLIGATORIAMENTE con score: 1, is_comic_panel: false, depicts_action: false.
+2. PORTADAS Y PÓSTERS: Si la imagen contiene el título del cómic en letras gigantes ("DAREDEVIL", "BATMAN", "SPIDER-MAN", etc.), sello Comics Code Authority, número de edición gigante, logos de editorial o código de barras, es una portada comercial: responde score: 1, is_comic_panel: false.
+3. FOTOS REALES Y LIVE-ACTION: Si es una persona real, actor de cine/TV, cosplay o muñeco/figura de acción: responde score: 1, is_comic_panel: false.
+4. COHERENCIA DE ACCIÓN: Solo viñetas o páginas interiores dibujadas de cómic que muestren los personajes o los eventos narrados pueden recibir score >= 6. Si es cómic pero no tiene relación con el texto narrado, responde score <= 3.
 
 Responde ESTRICTAMENTE con un objeto JSON:
 {{
-  "score": <número entero de 1 a 10, donde 10 es viñeta exacta de la acción/personajes y 1 es portada, live-action o contenido no relacionado>,
-  "is_comic_panel": <true si es arte/viñeta interior de cómic, false si es portada, live-action o póster>,
-  "depicts_action": <true si muestra la acción o consecuencia de la escena narrada, false si no>,
+  "score": <número entero de 1 a 10, donde 10 es viñeta exacta de la acción/personajes y 1 es portada, live-action, stock photo, logo o contenido no relacionado>,
+  "is_comic_panel": <true si es viñeta/página interior narrativa de cómic, false si es portada, live-action, stock photo, logo o póster>,
+  "depicts_action": <true si muestra la acción, personajes o consecuencias de la escena narrada, false si no>,
   "reason": <1 frase breve de explicación>
 }}"""
 
@@ -650,62 +665,45 @@ def fetch_scene_image(
         reason = eval_result.get("reason", "")
         cand_name = cand.get("title") or cand.get("url", "")[:50]
 
-        # Guardar el candidato con la mayor puntuación encontrada (siempre que no sea duplicado)
-        if score > highest_score and not is_duplicate_panel(temp_candidate, existing_scene_images):
+        # Guardar el mejor candidato solo si es viñeta interior de cómic, no portada y no duplicado
+        depicts_action = eval_result.get("depicts_action", False)
+        cand_is_cover = cand.get("is_cover", False)
+        if score > highest_score and is_panel and not cand_is_cover and not is_duplicate_panel(temp_candidate, existing_scene_images):
             highest_score = score
             import shutil
             best_fallback_file = dest_path + ".best.jpg"
             shutil.copy2(temp_candidate, best_fallback_file)
 
-        # Si supera el umbral de aprobación visual (6+ de 10, y representa la acción narrada)
-        depicts_action = eval_result.get("depicts_action", False)
-        if (score >= 6 or (cand_src == "fandom_target" and score >= 5)) and is_panel and not cand["is_cover"] and (depicts_action or score >= 7):
-            if os.path.exists(dest_path):
-                os.remove(dest_path)
-            os.rename(temp_candidate, dest_path)
-            print(f"  [PRECISIÓN VISUAL {score}/10] ({cand_src}): {cand_name} -> {reason}")
-            if best_fallback_file and os.path.exists(best_fallback_file):
-                os.remove(best_fallback_file)
-            if used_sources is not None and cand_id:
-                used_sources.add(cand_id)
-            return dest_path
-        else:
-            print(f"  [Candidato descartado {score}/10] ({cand_src}): {cand_name} -> {reason}")
-            if os.path.exists(temp_candidate):
-                os.remove(temp_candidate)
+        # Si supera el umbral estricto de aprobación visual (6+ de 10 con acción narrada, o 7+ de 10 viñeta de alta relevancia)
+        if (score >= 6 and depicts_action) or score >= 7:
+            if is_panel and not cand_is_cover:
+                if os.path.exists(dest_path):
+                    os.remove(dest_path)
+                os.rename(temp_candidate, dest_path)
+                print(f"  [PRECISIÓN VISUAL {score}/10] ({cand_src}): {cand_name} -> {reason}")
+                if best_fallback_file and os.path.exists(best_fallback_file):
+                    os.remove(best_fallback_file)
+                if used_sources is not None and cand_id:
+                    used_sources.add(cand_id)
+                return dest_path
 
-    # Si ningún candidato superó el umbral estricto, usar el de mayor puntaje disponible que sea cómic verificado (>= 2)
-    if best_fallback_file and os.path.exists(best_fallback_file) and highest_score >= 2:
+        print(f"  [Candidato descartado {score}/10] ({cand_src}): {cand_name} -> {reason}")
+        if os.path.exists(temp_candidate):
+            os.remove(temp_candidate)
+
+    # Si ningún candidato superó el umbral en la evaluación primaria, permitir únicamente si el mejor candidato tiene score >= 6 verificado
+    if best_fallback_file and os.path.exists(best_fallback_file) and highest_score >= 6:
         if not is_duplicate_panel(best_fallback_file, existing_scene_images):
             if os.path.exists(dest_path):
                 os.remove(dest_path)
             os.rename(best_fallback_file, dest_path)
-            print(f"  [VIÑETA RESCATADA]: Utilizando viñeta de cómic con entintado/alineación confirmada (Score: {highest_score}/10).")
+            print(f"  [VIÑETA RESCATADA]: Utilizando viñeta de cómic aprobada con alineación visual confirmada (Score: {highest_score}/10).")
             return dest_path
 
     if best_fallback_file and os.path.exists(best_fallback_file):
         os.remove(best_fallback_file)
 
-    # Rescate de emergencia: búsqueda genérica del personaje para evitar fallo de producción
-    char_seed = (fallback_query or "").split()[0] if fallback_query else "comic"
-    emergency_urls = search_bing_comic_panels(f"{char_seed} comic panel interior scan", limit=6)
-    for em_u in emergency_urls:
-        if download_web_panel(em_u, temp_candidate):
-            if not is_duplicate_panel(temp_candidate, existing_scene_images):
-                try:
-                    with Image.open(temp_candidate) as em_im:
-                        if check_is_comic_art_inking(em_im):
-                            if os.path.exists(dest_path):
-                                os.remove(dest_path)
-                            os.rename(temp_candidate, dest_path)
-                            print(f"  [RESCATE DE EMERGENCIA]: Viñeta interior de cómic verificada obtenida para evitar fallo de producción.")
-                            return dest_path
-                except Exception:
-                    pass
-            if os.path.exists(temp_candidate):
-                os.remove(temp_candidate)
-
     if os.path.exists(temp_candidate):
         os.remove(temp_candidate)
 
-    raise RuntimeError(f"FATAL: No se encontró ninguna viñeta de cómic válida para '{fallback_query or target_file}' (Todas las imágenes analizadas fueron fotos reales, portadas o no superaron los controles de calidad).")
+    raise RuntimeError(f"FATAL: No se encontró ninguna viñeta con fidelidad visual verificada (Score >= 6) para '{fallback_query or target_file}'. Todas las imágenes analizadas fueron descartadas por baja alineación o calidad.")

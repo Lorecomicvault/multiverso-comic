@@ -1138,15 +1138,5 @@
     "mode": "live_release",
     "video_file": "Adam_Warlock_El_Día_que_el_Magus_Devoró_el_Alma_de_su_Creador.mp4",
     "status": "published"
-  },
-  {
-    "id": "beta_ray_bill_stormbreaker_thor",
-    "title": "Beta Ray Bill: El Día que Destruyó un Planeta Entero por Error",
-    "character": "Beta Ray Bill",
-    "theme_signature": "Beta Ray Bill:Stormbreaker:Destrucción",
-    "date": "2026-10-05 22:06",
-    "mode": "live_release",
-    "video_file": "Beta_Ray_Bill_El_Día_que_Destruyó_un_Planeta_Entero_por_Error.mp4",
-    "status": "published"
   }
 ]
