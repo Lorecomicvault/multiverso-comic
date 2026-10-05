@@ -1118,5 +1118,15 @@
     "mode": "live_release",
     "video_file": "Silver_Surfer_El_Día_que_Devoró_su_Propia_Alma_en_el_Vacío_Cósmico.mp4",
     "status": "published"
+  },
+  {
+    "id": "doctor_fate_nabu_possession",
+    "title": "Doctor Fate: El Día que Nabu Devoró el Alma de Kent Nelson",
+    "character": "Doctor Fate",
+    "theme_signature": "doctor_fate:nabu:possessions_dark_price",
+    "date": "2026-10-05 10:06",
+    "mode": "live_release",
+    "video_file": "Doctor_Fate_El_Día_que_Nabu_Devoró_el_Alma_de_Kent_Nelson.mp4",
+    "status": "published"
   }
 ]
