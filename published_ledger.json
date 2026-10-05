@@ -1128,5 +1128,15 @@
     "mode": "live_release",
     "video_file": "Doctor_Fate_El_Día_que_Nabu_Devoró_el_Alma_de_Kent_Nelson.mp4",
     "status": "published"
+  },
+  {
+    "id": "adam_warlock_magus_corruption",
+    "title": "Adam Warlock: El Día que el Magus Devoró el Alma de su Creador",
+    "character": "Adam Warlock",
+    "theme_signature": "Adam Warlock:La Saga del Magus:Corrupción absoluta",
+    "date": "2026-10-05 14:10",
+    "mode": "live_release",
+    "video_file": "Adam_Warlock_El_Día_que_el_Magus_Devoró_el_Alma_de_su_Creador.mp4",
+    "status": "published"
   }
 ]
