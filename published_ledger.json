@@ -1148,5 +1148,15 @@
     "mode": "deleted",
     "video_file": "Beta_Ray_Bill_El_Día_que_Destruyó_un_Planeta_Entero_por_Error.mp4",
     "status": "deleted"
+  },
+  {
+    "id": "punisher_jigsaw_desfiguracion_billy_russo",
+    "title": "The Punisher: El Rostro Destrozado de Billy Russo",
+    "character": "The Punisher",
+    "theme_signature": "the_punisher:billy_russo:jigsaw_trituradora_cristales",
+    "date": "2026-10-06 01:49",
+    "mode": "live_release",
+    "video_file": "The_Punisher_El_Rostro_Destrozado_de_Billy_Russo.mp4",
+    "status": "published"
   }
 ]
