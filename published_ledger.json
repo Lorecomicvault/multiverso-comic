@@ -1168,5 +1168,15 @@
     "mode": "live_release",
     "video_file": "King_Thor_El_Día_que_el_Dios_del_Trueno_Asesinó_a_la_Eternidad.mp4",
     "status": "published"
+  },
+  {
+    "id": "mister_fantastic_the_maker_evil",
+    "title": "The Maker: El Día que Reed Richards se Convirtió en el Monstruo Definitivo",
+    "character": "Mister Fantastic (The Maker)",
+    "theme_signature": "mister_fantastic:the_maker:corrupcion_multiversal",
+    "date": "2026-10-06 14:19",
+    "mode": "live_release",
+    "video_file": "The_Maker_El_Día_que_Reed_Richards_se_Convirtió_en_el_Monstruo_Definitivo.mp4",
+    "status": "published"
   }
 ]
