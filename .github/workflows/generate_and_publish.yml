@@ -9,6 +9,7 @@ on:
         default: 'autonomous_ai'
         type: choice
         options:
+          - punisher_jigsaw_desfiguracion_billy_russo
           - thanos_rising_el_origen_del_titan_loco
           - xmen_dias_del_futuro_pasado_centinelas
           - vengadores_desunidos_la_locura_de_wanda

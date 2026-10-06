@@ -1119,6 +1119,12 @@ EDITORIAL_STORIES = [
             "En lugar de dispararle, Frank arrojó brutalmente a Russo de cabeza contra una enorme cristalera.",
             "Los cirujanos reconstruyeron su rostro como un rompecabezas sangriento, naciendo el temido monstruo Jigsaw."
         ],
+        "scene_art_urls": [
+            "assets/curated_panels/punisher_jigsaw/scene_01.jpg",
+            "assets/curated_panels/punisher_jigsaw/scene_02.jpg",
+            "assets/curated_panels/punisher_jigsaw/scene_03.jpg",
+            "assets/curated_panels/punisher_jigsaw/scene_04.jpg"
+        ],
         "art_queries": [
             "Frank Castle The Punisher skull vest aiming gun comic panel",
             "Billy Russo handsome mob hitman suit comic panel",
