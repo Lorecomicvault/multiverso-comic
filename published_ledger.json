@@ -1158,5 +1158,15 @@
     "mode": "live_release",
     "video_file": "The_Punisher_El_Rostro_Destrozado_de_Billy_Russo.mp4",
     "status": "published"
+  },
+  {
+    "id": "gorr_king_thor_eternity",
+    "title": "King Thor: El Día que el Dios del Trueno Asesinó a la Eternidad",
+    "character": "King Thor",
+    "theme_signature": "thor:king_thor:eternity_murder",
+    "date": "2026-10-06 10:16",
+    "mode": "live_release",
+    "video_file": "King_Thor_El_Día_que_el_Dios_del_Trueno_Asesinó_a_la_Eternidad.mp4",
+    "status": "published"
   }
 ]
