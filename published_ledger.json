@@ -1198,5 +1198,15 @@
     "mode": "live_release",
     "video_file": "Bastion_El_Día_que_los_Centinelas_Eliminaron_a_la_Humanidad.mp4",
     "status": "published"
+  },
+  {
+    "id": "mister_sinister_mutant_genetics",
+    "title": "Mister Sinister: El Día que Diseñó la Extinción Genética",
+    "character": "Mister Sinister",
+    "theme_signature": "mister_sinister:genetics:horror",
+    "date": "2026-10-07 07:07",
+    "mode": "live_release",
+    "video_file": "Mister_Sinister_El_Día_que_Diseñó_la_Extinción_Genética.mp4",
+    "status": "published"
   }
 ]
