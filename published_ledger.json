@@ -1208,5 +1208,15 @@
     "mode": "live_release",
     "video_file": "Mister_Sinister_El_Día_que_Diseñó_la_Extinción_Genética.mp4",
     "status": "published"
+  },
+  {
+    "id": "atrocitus_red_lanterns_rage_of_sharah",
+    "title": "Atrocitus: El Juramento de Sangre y la Ira de los Red Lanterns",
+    "character": "Atrocitus",
+    "theme_signature": "atrocitus:red_lanterns:rage_of_sharah",
+    "date": "2026-10-07 10:06",
+    "mode": "live_release",
+    "video_file": "Atrocitus_El_Juramento_de_Sangre_y_la_Ira_de_los_Red_Lanterns.mp4",
+    "status": "published"
   }
 ]
