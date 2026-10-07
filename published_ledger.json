@@ -1188,5 +1188,15 @@
     "mode": "live_release",
     "video_file": "Quicksilver_La_Brutal_Ejecución_a_Manos_de_Magneto_en_House_of_M.mp4",
     "status": "published"
+  },
+  {
+    "id": "sentinel_omega_mutant_purge",
+    "title": "Bastion: El Día que los Centinelas Eliminaron a la Humanidad",
+    "character": "Bastion",
+    "theme_signature": "Bastion:Operación Tolerancia Cero:Exterminio",
+    "date": "2026-10-07 02:17",
+    "mode": "live_release",
+    "video_file": "Bastion_El_Día_que_los_Centinelas_Eliminaron_a_la_Humanidad.mp4",
+    "status": "published"
   }
 ]
