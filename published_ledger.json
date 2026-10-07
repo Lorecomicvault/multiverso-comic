@@ -1218,5 +1218,15 @@
     "mode": "live_release",
     "video_file": "Atrocitus_El_Juramento_de_Sangre_y_la_Ira_de_los_Red_Lanterns.mp4",
     "status": "published"
+  },
+  {
+    "id": "cabal_de_la_muerte_magik",
+    "title": "Magik: La Princesa del Infierno",
+    "character": "Magik",
+    "theme_signature": "Magik:Limbo:Corrupcion_Oscura",
+    "date": "2026-10-07 14:13",
+    "mode": "live_release",
+    "video_file": "Magik_La_Princesa_del_Infierno.mp4",
+    "status": "published"
   }
 ]
