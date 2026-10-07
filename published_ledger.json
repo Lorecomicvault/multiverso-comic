@@ -1238,5 +1238,15 @@
     "mode": "live_release",
     "video_file": "Shang-Chi_El_Pacto_Sangriento_que_Entregó_su_Alma_a_la_Diosa_del_Mar.mp4",
     "status": "published"
+  },
+  {
+    "id": "black_bolt_silent_king_bomb",
+    "title": "Black Bolt: La Voz que Destrozó el Imperio",
+    "character": "Black Bolt",
+    "theme_signature": "black_bolt:silent_war:terrigen_bomb",
+    "date": "2026-10-07 22:13",
+    "mode": "live_release",
+    "video_file": "Black_Bolt_La_Voz_que_Destrozó_el_Imperio.mp4",
+    "status": "published"
   }
 ]
