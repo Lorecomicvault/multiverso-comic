@@ -1228,5 +1228,15 @@
     "mode": "live_release",
     "video_file": "Magik_La_Princesa_del_Infierno.mp4",
     "status": "published"
+  },
+  {
+    "id": "shang_chi_ma_zu_dark_contract",
+    "title": "Shang-Chi: El Pacto Sangriento que Entregó su Alma a la Diosa del Mar",
+    "character": "Shang-Chi",
+    "theme_signature": "shang_chi:ma_zu:pacto_oscuro",
+    "date": "2026-10-07 19:14",
+    "mode": "live_release",
+    "video_file": "Shang-Chi_El_Pacto_Sangriento_que_Entregó_su_Alma_a_la_Diosa_del_Mar.mp4",
+    "status": "published"
   }
 ]
