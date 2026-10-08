@@ -1258,5 +1258,15 @@
     "mode": "live_release",
     "video_file": "Robin_El_Trágico_Sacrificio_y_Muerte_de_Damian_Wayne.mp4",
     "status": "published"
+  },
+  {
+    "id": "cable_virus_tecnologico_asgard",
+    "title": "Cable: El Abrazo Letal del Virus Tecnorgánico en la Sombra",
+    "character": "Cable",
+    "theme_signature": "cable:virus_tecnorganico:infeccion",
+    "date": "2026-10-08 07:18",
+    "mode": "live_release",
+    "video_file": "Cable_El_Abrazo_Letal_del_Virus_Tecnorgánico_en_la_Sombra.mp4",
+    "status": "published"
   }
 ]
