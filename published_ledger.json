@@ -1308,5 +1308,15 @@
     "mode": "live_release",
     "video_file": "The_Flash_Rompió_la_Física_La_Carrera_que_Superó_a_la_Teletransportación.mp4",
     "status": "published"
+  },
+  {
+    "id": "batman_zur_en_arrh_respaldo",
+    "title": "¡Batman Creó una Mente de Respaldo! El Guerrero Implacable de Zur-En-Arrh 🦇🧠",
+    "character": "Batman",
+    "theme_signature": "batman:zur_en_arrh:mente_respaldo_personalidad_violenta",
+    "date": "2026-10-08 22:51",
+    "mode": "live_release",
+    "video_file": "Batman_Creó_una_Mente_de_Respaldo_El_Guerrero_Implacable_de_Zur-En-Arrh.mp4",
+    "status": "published"
   }
 ]
