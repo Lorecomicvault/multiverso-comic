@@ -1288,5 +1288,15 @@
     "mode": "live_release",
     "video_file": "Spider-Man_Desató_su_Furia_El_Traje_Negro_que_Aterró_a_sus_Enemigos.mp4",
     "status": "published"
+  },
+  {
+    "id": "batman_white_knight_joker_cuerdo",
+    "title": "¡El Joker se Volvió Cuerdo! El Juicio que Encarceló a Batman en Gotham 🃏⚖️",
+    "character": "The Joker",
+    "theme_signature": "joker:white_knight:jack_napier_cuerdo_juicio",
+    "date": "2026-10-08 14:05",
+    "mode": "live_release",
+    "video_file": "El_Joker_se_Volvió_Cuerdo_El_Juicio_que_Encarceló_a_Batman_en_Gotham.mp4",
+    "status": "published"
   }
 ]
