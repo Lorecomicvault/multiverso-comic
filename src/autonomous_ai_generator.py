@@ -34,7 +34,11 @@ HEADERS = {
 
 
 def log(msg: str):
-    print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] [AUTONOMOUS-AI] {msg}", flush=True)
+    try:
+        print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] [AUTONOMOUS-AI] {msg}", flush=True)
+    except UnicodeEncodeError:
+        clean_msg = str(msg).encode('ascii', errors='backslashreplace').decode('ascii')
+        print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] [AUTONOMOUS-AI] {clean_msg}", flush=True)
 
 
 def resolve_fandom_image(wiki: str, query: str) -> str | None:
@@ -111,39 +115,126 @@ def verify_image_quality(wiki: str, filename: str) -> bool:
 
 EMERGENCY_VIRAL_POOL = [
     {
-        "id": "sentry_nacimiento_del_vacio",
-        "universe": "Marvel",
-        "character": "The Sentry",
-        "title": "Sentry: La Maldición del Vacío y la Muerte del Millón de Soles",
-        "theme_signature": "sentry:the_void:oscuridad_robert_reynolds",
-        "description": "Robert Reynolds descubre la aterradora verdad de sus poderes divinos: cada milagro que realiza da vida al Vacío, una entidad cósmica capaz de consumir la Tierra.",
-        "hashtags": "#Sentry #TheVoid #MarvelComics #Avengers #ComicsNarrados #Shorts #Reels #TikTok",
+        "id": "superman_vs_the_elite_action_775",
+        "universe": "DC",
+        "character": "Superman",
+        "title": "¡Superman Cruzó la Línea! La Brutal Lobotomía que Aterró al Mundo 😱🩸",
+        "theme_signature": "superman:the_elite:lobotomia_manchester_black_luna",
+        "description": "Cuando The Elite desafió el código moral de Superman masacrando villanos, el Hombre de Acero les dio una aterradora lección en la luna que jamás olvidarán.",
+        "hashtags": "#Superman #TheElite #ActionComics775 #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "¿Sabías que el héroe más poderoso de Marvel esconde un monstruo capaz de devorar planetas?",
-            "Robert Reynolds descubrió que cada milagro que realizaba como Sentry daba vida a su contraparte: el Vacío.",
-            "El Vacío emergió como una tormenta de sombras vivientes, destruyendo Asgard y quebrando a los Vengadores.",
-            "Para salvar al universo, Robert suplicó a Thor que lo ejecutara con un rayo fulminante."
+            "¡Superman jamás rompe su regla de no matar, hasta que una banda de metahumanos amenazó la Tierra!",
+            "The Elite masacraba criminales sin piedad, proclamando que la compasión del Hombre de Acero era debilidad.",
+            "En la luna, Superman fingió perder la cordura, desatando una cacería aterradora a velocidad imperceptible.",
+            "Con micro-visión térmica desactivó los poderes de Manchester Black, demostrando que la fuerza descontrolada solo engendra terror."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/superman_vs_the_elite/scene_01.jpg",
+            "assets/curated_panels/superman_vs_the_elite/scene_02.jpg",
+            "assets/curated_panels/superman_vs_the_elite/scene_03.jpg",
+            "assets/curated_panels/superman_vs_the_elite/scene_04.jpg"
         ],
         "art_queries": [
-            "Sentry glowing golden power comic panel",
-            "The Void cosmic darkness monster shadowy entity comic panel",
-            "The Void destroys Asgard Siege Marvel comic panel",
-            "Thor kills Sentry lightning bolt funeral comic panel"
+            "Action Comics 775 Tripoli monster destroyed Superman comic panel",
+            "Action Comics 775 The Elite team Manchester Black comic panel",
+            "Action Comics 775 Superman glowing red eyes heat vision terrifying comic panel",
+            "Action Comics 775 Manchester Black trembling defeated comic panel"
+        ]
+    },
+    {
+        "id": "spiderman_grim_hunt_venganza_kravinoff",
+        "universe": "Marvel",
+        "character": "Spider-Man",
+        "title": "¡Spider-Man Desató su Furia! El Traje Negro que Aterró a sus Enemigos 🕷️🩸",
+        "theme_signature": "spiderman:grim_hunt:furia_traje_negro_kravinoff",
+        "description": "Tras el brutal asesinato de Kaine a manos de los Kravinoff, un enfurecido Peter Parker se enfunda de nuevo el traje negro para desatar una venganza implacable.",
+        "hashtags": "#SpiderMan #GrimHunt #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Cuando los Kravinoff asesinaron a su clon Kaine, Peter Parker abandonó toda piedad!",
+            "Enfundado en su temido traje negro, Spider-Man persiguió a los culpables con precisión implacable.",
+            "Acorraló a los villanos uno por uno, quebrando sus defensas con una brutalidad jamás vista.",
+            "Estuvo a un milímetro de cruzar la línea y convertirse en un verdugo despiadado. ¿Debió perdonarles la vida?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/spiderman_grim_hunt/scene_01.jpg",
+            "assets/curated_panels/spiderman_grim_hunt/scene_02.jpg",
+            "assets/curated_panels/spiderman_grim_hunt/scene_03.jpg",
+            "assets/curated_panels/spiderman_grim_hunt/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Kaine Parker rising grave Amazing Spider-Man 637 comic panel",
+            "Kraven the Hunter throne Sergei Kravinoff Amazing Spider-Man 636 comic panel",
+            "Spider-Man black suit hunting Amazing Spider-Man 637 comic panel",
+            "Spider-Man Last Stand dark future red jacket Amazing Spider-Man 637 comic panel"
+        ]
+    },
+    {
+        "id": "flash_the_human_race_teleportation",
+        "universe": "DC",
+        "character": "The Flash",
+        "title": "¡The Flash Rompió la Física! La Carrera que Superó a la Teletransportación ⚡🌌",
+        "theme_signature": "flash:the_human_race:velocidad_trans_temporal_teletransportacion",
+        "description": "Para salvar la Tierra de seres cósmicos, Flash absorbió la energía cinética de toda la humanidad corriendo más rápido que la teletransportación instantánea.",
+        "hashtags": "#TheFlash #SpeedForce #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Seres cósmicos amenazaron destruir la Tierra si Flash no ganaba una carrera imposible a través del universo!",
+            "Su rival poseía teletransportación instantánea, haciendo inútil cualquier intento de velocidad común.",
+            "El velocista absorbió la energía cinética del planeta entero, quebrando las leyes de la física.",
+            "Llegó antes que la teletransportación instantánea, salvando la Tierra. ¿Es el héroe más veloz de la historia?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/flash_human_race/scene_01.jpg",
+            "assets/curated_panels/flash_human_race/scene_02.jpg",
+            "assets/curated_panels/flash_human_race/scene_03.jpg",
+            "assets/curated_panels/flash_human_race/scene_04.jpg"
+        ],
+        "art_queries": [
+            "The Flash Wally West running at super speed lightning comic panel",
+            "Wally West Sprinting Through Time Return of Wally West comic panel",
+            "The Flash trans time velocity leaving space time The Flash 138 comic panel",
+            "Wally West Flash surrounded by white lightning speed force comic panel"
+        ]
+    },
+    {
+        "id": "batman_white_knight_joker_cuerdo",
+        "universe": "DC",
+        "character": "The Joker",
+        "title": "¡El Joker se Volvió Cuerdo! El Juicio que Encarceló a Batman en Gotham 🃏⚖️",
+        "theme_signature": "joker:white_knight:jack_napier_cuerdo_juicio",
+        "description": "Tras una sobredosis de medicamentos, el Joker recuperó la cordura transformándose en Jack Napier, el político que demandó a Batman y lo metió tras las rejas.",
+        "hashtags": "#BatmanWhiteKnight #TheJoker #Batman #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Una sobredosis de medicamentos curó al Joker, transformándolo en un brillante estratega de la ley!",
+            "Convertido en Jack Napier, unió a Gotham para denunciar la brutalidad destructiva de Batman.",
+            "Vistiendo un elegante traje, demandó a la ciudad convenciendo al pueblo de su inocencia.",
+            "La policía arrestó a Bruce Wayne, consagrando al Joker como salvador. ¿Quién era el verdadero monstruo?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/batman_white_knight/scene_01.jpg",
+            "assets/curated_panels/batman_white_knight/scene_02.jpg",
+            "assets/curated_panels/batman_white_knight/scene_03.jpg",
+            "assets/curated_panels/batman_white_knight/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Batman White Knight Joker pills sane Jack Napier comic panel",
+            "Batman White Knight Jack Napier press conference television comic panel",
+            "Jack Napier white suit lawyer Batman White Knight comic panel",
+            "Batman arrested White Knight Sean Murphy comic panel"
         ]
     },
     {
         "id": "magneto_venganza_red_skull",
         "universe": "Marvel",
         "character": "Magneto",
-        "title": "Magneto vs Red Skull: El Castigo del Holocausto en el Búnker",
+        "title": "¡Magneto Castigó a Red Skull! El Búnker Subterráneo del que Jamás Saldrá ⛓️💀",
         "theme_signature": "magneto:red_skull:bunker_entierro_auschwitz",
         "description": "Como superviviente del Holocausto, Magneto captura a Red Skull y rechaza darle una muerte rápida, encerrándolo vivo en un búnker subterráneo eterno.",
         "hashtags": "#Magneto #RedSkull #XMen #CaptainAmerica #MarvelComics #ComicsNarrados #Reels",
         "scenes": [
-            "¿Sabías que cuando Magneto capturó a Red Skull se negó a asesinarlo con sus poderes mutantes?",
-            "Como superviviente de Auschwitz, Magneto despreciaba la ideología nazi más que a cualquier enemigo en la Tierra.",
-            "Encerró al líder de Hydra en un búnker subterráneo blindado, sin luz, sin aire y sin salida.",
-            "Dejándole solo un poco de agua, lo abandonó a una agonía eterna en la oscuridad."
+            "¡Cuando Magneto capturó al nazi Red Skull, se negó a darle una muerte rápida con sus poderes!",
+            "Como superviviente de Auschwitz, Magneto despreciaba la ideología supremacista de Hydra con odio eterno.",
+            "Encerró a Red Skull en un búnker subterráneo blindado, sin luz, sin aire y sin salida.",
+            "Dejándole solo un poco de agua, lo abandonó a una agonía eterna en la oscuridad absoluta."
         ],
         "art_queries": [
             "Magneto confronting Red Skull comic panel Acts of Vengeance",
@@ -153,102 +244,18 @@ EMERGENCY_VIRAL_POOL = [
         ]
     },
     {
-        "id": "flash_muerte_iris_west",
-        "universe": "DC",
-        "character": "The Flash",
-        "title": "The Flash: La Noche en que Eobard Thawne Asesinó a Iris West",
-        "theme_signature": "flash:iris_west:vibracion_craneal_fiesta_disfraces",
-        "description": "Eobard Thawne viaja en el tiempo para ejecutar el crimen más devastador en la vida de Barry Allen: asesinar a su esposa Iris West durante una fiesta.",
-        "hashtags": "#TheFlash #ReverseFlash #BarryAllen #DCComics #ComicsNarrados #Shorts #Reels",
-        "scenes": [
-            "¿Sabías que el mayor dolor de Barry Allen comenzó en una fiesta de disfraces en Central City?",
-            "El villano Reverse-Flash se infiltró en el evento obsesionado con destruir para siempre la felicidad de Flash.",
-            "Al negarse Iris a amarlo, Thawne vibró sus dedos a súper velocidad atravesando su cráneo.",
-            "Barry llegó solo para encontrar el cuerpo inerte de su amada esposa en el suelo frío."
-        ],
-        "art_queries": [
-            "Barry Allen Iris West costume party The Flash 275 comic panel",
-            "Reverse Flash Eobard Thawne smiling evil speedster comic panel",
-            "Reverse Flash kills Iris West vibrating hand head comic panel",
-            "Barry Allen crying holding dead Iris West comic panel"
-        ]
-    },
-    {
-        "id": "black_panther_derrota_mephisto",
-        "universe": "Marvel",
-        "character": "Black Panther",
-        "title": "Black Panther: El Rey de Wakanda que Engañó al Demonio Mephisto",
-        "theme_signature": "black_panther:t_challa:engano_infierno_dios_pantera",
-        "description": "T'Challa desciende al reino infernal y engaña al señor de las mentiras Mephisto, usando la fuerza espiritual de los reyes pasados de Wakanda.",
-        "hashtags": "#BlackPanther #Mephisto #MarvelComics #Wakanda #ComicsNarrados #Shorts #Reels",
-        "scenes": [
-            "¿Sabías que Black Panther viajó al infierno y logró derrotar al mismísimo demonio Mephisto?",
-            "El señor del infierno exigió el alma del rey de Wakanda a cambio de salvar a su nación.",
-            "T'Challa aceptó el pacto, pero liberó el espíritu de todos los ancestros de la Pantera Negra.",
-            "Los antiguos reyes despedazaron al demonio desde su propio interior, expulsándolo derrotado de su reino."
-        ],
-        "art_queries": [
-            "Black Panther confronting Mephisto hell Christopher Priest comic panel",
-            "Mephisto demon laughing flaming throne Marvel comic panel",
-            "Black Panther Panther God spirits attacking Mephisto comic panel",
-            "T'Challa standing victorious leaving hell comic panel"
-        ]
-    },
-    {
-        "id": "batman_adiccion_venom_origen",
-        "universe": "DC",
-        "character": "Batman",
-        "title": "Batman: La Oscura Adicción al Veneno en las Sombras",
-        "theme_signature": "batman:venom_addiction:pastillas_cueva_fuerza_extrema",
-        "description": "Tras fracasar en el rescate de una niña atrapada, Bruce Wayne recurre a una peligrosa droga experimental para superar sus límites humanos.",
-        "hashtags": "#Batman #Venom #DCComics #LegendsOfTheDarkKnight #ComicsNarrados #Shorts #Reels",
-        "scenes": [
-            "¿Sabías que tras no poder salvar a una niña atrapada, Batman cayó en una oscura adicción?",
-            "Frustrado por sus límites físicos, Bruce Wayne comenzó a consumir un esteroide experimental llamado Veneno.",
-            "La sustancia le dio fuerza monstruosa, pero nubló su mente volviéndolo violento, paranoico e incontrolable.",
-            "Para purgarse, Batman se encerró durante un mes en la cueva viviendo un infierno de abstinencia."
-        ],
-        "art_queries": [
-            "Batman failing to lift boulder drowning girl Legends of Dark Knight comic panel",
-            "Bruce Wayne taking venom pills dark room comic panel",
-            "Batman raging aggressive steroid venom comic panel",
-            "Batman locked in batcave detox withdrawal beard comic panel"
-        ]
-    },
-    {
-        "id": "green_lantern_hal_destruccion_oa",
-        "universe": "DC",
-        "character": "Green Lantern",
-        "title": "Green Lantern: La Masacre de Hal Jordan en la Batería de Oa",
-        "theme_signature": "hal_jordan:destruccion_oa:diez_anillos_muerte_kilowog",
-        "description": "Enloquecido por el dolor tras la destrucción de Coast City, el mejor Linterna Verde del universo aniquila a sus hermanos de armas en busca de poder absoluto.",
-        "hashtags": "#GreenLantern #HalJordan #Parallax #EmeraldTwilight #DCComics #ComicsNarrados #Reels",
-        "scenes": [
-            "¿Sabías que tras la destrucción de Coast City, Hal Jordan enloqueció y masacró a los Green Lanterns?",
-            "Desesperado por reconstruir su ciudad natal, voló hacia el planeta Oa asesinando a sus propios compañeros.",
-            "Arrancó diez anillos de poder de sus cadáveres y masacró al gigante Kilowog a sangre fría.",
-            "Sumergiéndose en la Batería Central, absorbió toda la energía cósmica renaciendo como el villano Parallax."
-        ],
-        "art_queries": [
-            "Hal Jordan grief Coast City destroyed Emerald Twilight comic panel",
-            "Hal Jordan fighting Green Lanterns space battle comic panel",
-            "Hal Jordan wearing multiple power rings hands comic panel",
-            "Hal Jordan entering Central Power Battery Parallax armor comic panel"
-        ]
-    },
-    {
         "id": "wolverine_x23_olor_detonante",
         "universe": "Marvel",
         "character": "X-23",
-        "title": "X-23: El Olor Detonante y el Trágico Asesinato de su Madre",
+        "title": "¡X-23 Perdió el Control! El Olor que la Obligó a Asesinar a su Madre 🩸🐺",
         "theme_signature": "x23:laura_kinney:olor_detonante_asesinato_sarah_kinney",
         "description": "El brutal origen de Laura Kinney: convertida en una asesina desde niña, un compuesto químico la obliga a cometer su mayor pecado.",
         "hashtags": "#X23 #Wolverine #LauraKinney #XMen #MarvelComics #ComicsNarrados #Shorts #Reels",
         "scenes": [
-            "¿Sabías que la clon de Wolverine, Laura Kinney, fue diseñada como el arma más sanguinaria del mundo?",
-            "Científicos del proyecto crearon un aroma sintético capaz de nublar su mente y desatar furia asesina.",
-            "Sometida al olor detonante durante una fuga, Laura perdió el control y atacó a su creadora.",
-            "Al recobrar la conciencia, descubrió con horror que acababa de asesinar a su propia madre."
+            "¡La clon de Wolverine, Laura Kinney, fue diseñada como el arma viviente más sanguinaria del mundo!",
+            "Científicos crearon un aroma sintético capaz de anular su mente y desatar furia asesina ciega.",
+            "Sometida al olor detonante durante una fuga, Laura masacró a los guardias en un frenesí salvaje.",
+            "Al recobrar la conciencia descubrió la mayor tragedia: había atravesado con sus garras a su propia madre."
         ],
         "art_queries": [
             "Young Laura Kinney X-23 claws surgical facility comic panel",
@@ -258,79 +265,37 @@ EMERGENCY_VIRAL_POOL = [
         ]
     },
     {
-        "id": "namor_inundacion_wakanda_avx",
-        "universe": "Marvel",
-        "character": "Namor",
-        "title": "Namor: La Gran Inundación que Ahogó a Wakanda",
-        "theme_signature": "namor:phoenix_force:tsunami_wakanda_avx_guerra",
-        "description": "Namor desata el poder del Fénix sobre Wakanda provocando una inundación catastrófica que marca a fuego la rivalidad con Pantera Negra.",
-        "hashtags": "#Namor #BlackPanther #AvengersVsXMen #MarvelComics #ComicsNarrados #Shorts #Reels",
-        "scenes": [
-            "¿Sabías que durante la guerra entre Vengadores y X-Men, Namor cometió el mayor genocidio en Wakanda?",
-            "Empoderado por una quinta parte de la Fuerza Fénix, el rey atlante marchó con furia imparable.",
-            "Invocó un colosal tsunami cósmico que azotó la ciudad dorada ahogando a miles de inocentes.",
-            "El ataque quebró el orgullo de Pantera Negra e inició una guerra eterna entre ambas naciones."
-        ],
-        "art_queries": [
-            "Namor Phoenix Five glowing fire suit comic panel",
-            "Namor summoning giant tidal wave tsunami ocean comic panel",
-            "Tsunami crushing Wakanda golden city water flood comic panel",
-            "Black Panther standing in ruined flooded Wakanda comic panel"
-        ]
-    },
-    {
-        "id": "punisher_jigsaw_desfiguracion_billy_russo",
-        "universe": "Marvel",
-        "character": "The Punisher",
-        "title": "The Punisher: El Rostro Destrozado de Billy Russo",
-        "theme_signature": "the_punisher:billy_russo:jigsaw_trituradora_cristales",
-        "description": "Frank Castle ejecuta su venganza contra el sicario de la mafia Billy Russo, arrojándolo contra los cristales para crear a su enemigo más temido.",
-        "hashtags": "#ThePunisher #Jigsaw #BillyRusso #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
-        "scenes": [
-            "¿Sabías cómo Frank Castle creó a su archienemigo más perturbador en el bajo mundo de Nueva York?",
-            "Tras eliminar a una banda de asesinos, The Punisher acorraló al sádico sicario Billy Russo.",
-            "En lugar de dispararle, Frank arrojó brutalmente a Russo de cabeza contra una enorme cristalera.",
-            "Los cirujanos reconstruyeron su rostro como un rompecabezas sangriento, naciendo el temido monstruo Jigsaw."
-        ],
-        "art_queries": [
-            "Frank Castle skull vest gun comic panel",
-            "Billy Russo mob suit comic panel",
-            "Punisher glass window comic panel",
-            "Jigsaw face bandages mirror comic panel"
-        ]
-    },
-    {
-        "id": "doctor_fate_nabu_posesion_divina",
+        "id": "damian_wayne_muerte_hereje",
         "universe": "DC",
-        "character": "Doctor Fate",
-        "title": "Doctor Fate: La Posesión de Nabu y el Sacrificio Humano",
-        "theme_signature": "doctor_fate:nabu:yelmo_dorado_posesion_hechicero",
-        "description": "Kent Nelson descubre el aterrador precio de portar el Casco de Nabu: cada vez que invoca su magia, la entidad cósmica toma el control absoluto de su cuerpo borrando su humanidad.",
-        "hashtags": "#DoctorFate #DCComics #JusticeSociety #Nabu #ComicsNarrados #Shorts #Reels",
+        "character": "Robin (Damian Wayne)",
+        "title": "¡Robin Dio su Vida! El Trágico Sacrificio del Hijo de Batman 🦇🗡️",
+        "theme_signature": "damian_wayne:the_heretic:espada_empalamiento_torre_wayne",
+        "description": "El hijo de Batman lucha hasta el final contra un clon titánico para proteger la ciudad de Gotham, entregando su vida con apenas diez años.",
+        "hashtags": "#Robin #DamianWayne #Batman #BatmanIncorporated #DCComics #ComicsNarrados #Reels",
         "scenes": [
-            "¿Sabías que el casco de Doctor Fate es en realidad un parásito cómico que borra tu alma?",
-            "Cuando Kent Nelson se coloca el yelmo dorado, su mente es subyugada por el señor del orden Nabu.",
-            "Nabu utiliza su cuerpo como una marioneta despiadada, ejecutando hechicería que desintegra a sus enemigos.",
-            "Al quitárselo, Kent despierta envejecido y torturado, dándose cuenta de que ya no es un hombre libre."
+            "¡Damian Wayne, el único hijo biológico de Batman, murió defendiendo Gotham con apenas diez años!",
+            "Durante el asedio a la Torre Wayne, un clon monstruoso llamado El Hereje acorraló al joven pupilo.",
+            "Luchando con honor hasta el último aliento, Damian fue atravesado en el pecho por una espada descomunal.",
+            "Batman llegó demasiado tarde, sosteniendo el cuerpo sin vida de su hijo entre lágrimas desgarradoras."
         ],
         "art_queries": [
-            "Doctor Fate helmet comic panel",
-            "Kent Nelson glowing eyes Nabu comic panel",
-            "Doctor Fate spell magic symbol comic panel",
-            "Doctor Fate removing helmet exhausted comic panel"
+            "Damian Wayne sword Wayne Tower comic panel",
+            "The Heretic giant clone Batman Inc comic panel",
+            "The Heretic impales Damian Wayne sword comic panel",
+            "Batman holding dead Damian Wayne crying comic panel"
         ]
     },
     {
         "id": "ghost_rider_zarathos_posesion_oscura",
         "universe": "Marvel",
         "character": "Ghost Rider",
-        "title": "Ghost Rider: La Furia Desatada de Zarathos y el Fuego Infernal",
+        "title": "¡Ghost Rider Desató al Demonio! La Furia de Zarathos que Devoró Almas 🔥💀",
         "theme_signature": "ghost_rider:zarathos:posesion_fuego_infernal_maldicion",
         "description": "Cuando Johnny Blaze pierde el control emocional, el demonio ancestral Zarathos toma el mando total desatando una masacre de fuego que calcina el alma de sus enemigos.",
-        "hashtags": "#GhostRide #MarvelComics #Zarathos #MidnightSons #ComicsNarrados #Shorts #Reels",
+        "hashtags": "#GhostRider #MarvelComics #Zarathos #MidnightSons #ComicsNarrados #Shorts #Reels",
         "scenes": [
-            "¿Sabías que el Espíritu de la Venganza no es un superpoder, sino una maldición que devora almas?",
-            "Cuando Johnny Blaze pierde el control emocional, el antiguo demonio Zarathos toma el mando total de su cuerpo.",
+            "¡El Espíritu de la Venganza no es un superpoder, sino un parásito demoníaco que devora almas!",
+            "Cuando Johnny Blaze pierde la cordura, el arcángel caído Zarathos asume el control absoluto de su cuerpo.",
             "Envuelto en fuego infernal indestructible, Zarathos calcina a los criminales con una crueldad sin límites.",
             "Blaze queda atrapado dentro de su propia mente, condenado a presenciar la masacre sin poder detenerla."
         ],
@@ -339,27 +304,6 @@ EMERGENCY_VIRAL_POOL = [
             "Johnny Blaze turning Ghost Rider comic panel",
             "Ghost Rider hellfire chain comic panel",
             "Ghost Rider penance stare comic panel"
-        ]
-    },
-    {
-        "id": "damian_wayne_muerte_hereje",
-        "universe": "DC",
-        "character": "Robin (Damian Wayne)",
-        "title": "Robin: El Trágico Sacrificio y Muerte de Damian Wayne",
-        "theme_signature": "damian_wayne:the_heretic:espada_empalamiento_torre_wayne",
-        "description": "El hijo de Batman lucha hasta el final contra un clon titánico para proteger la ciudad de Gotham, entregando su vida con apenas diez años.",
-        "hashtags": "#Robin #DamianWayne #Batman #BatmanIncorporated #DCComics #ComicsNarrados #Reels",
-        "scenes": [
-            "¿Sabías que el hijo de Batman, Damian Wayne, murió defendiendo Gotham con apenas diez años?",
-            "Durante el asedio a la Torre Wayne, un clon monstruoso llamado El Hereje acorraló al joven Robin.",
-            "Luchando con honor hasta el último aliento, Damian fue atravesado en el pecho por una espada gigantesca.",
-            "Batman llegó demasiado tarde, encontrando el cadáver de su único hijo bañado en lágrimas de dolor."
-        ],
-        "art_queries": [
-            "Damian Wayne sword Wayne Tower comic panel",
-            "The Heretic giant clone Batman Inc comic panel",
-            "The Heretic impales Damian Wayne sword comic panel",
-            "Batman holding dead Damian Wayne crying comic panel"
         ]
     }
 ]
@@ -378,20 +322,20 @@ def generate_autonomous_story(ledger: list[dict], api_key: str | None = None) ->
     if api_key and api_key not in keys_to_try:
         keys_to_try.insert(0, api_key)
     
-    # Extraer historial COMPLETO para prohibir duplicados
-    past_characters = set(item.get("character", "").strip() for item in ledger if item.get("character"))
+    # Solo prohibir los personajes de los últimos 6 videos publicados para garantizar rotación sin vetar a los iconos Tier-1
+    recent_characters = set(item.get("character", "").strip() for item in ledger[-6:] if item.get("character"))
     past_titles = [item.get("title", "").strip() for item in ledger if item.get("title")]
     past_themes = [item.get("theme_signature", "").strip() for item in ledger if item.get("theme_signature")]
 
-    char_summary = ", ".join(sorted(list(past_characters)))
-    titles_summary = " | ".join(past_titles[-80:])
+    char_recency_banned = ", ".join(sorted(list(recent_characters)))
+    titles_summary = " | ".join(past_titles[-40:])
 
-    # Grupos rotativos de personajes inéditos para evitar que la IA repita siempre la misma propuesta
+    # Grupos rotativos de ICONOS TIER-1 para rotar variedad entre los personajes más famosos de los cómics
     ROTATING_CHAR_PROMPTS = [
-        "Doctor Fate (Nabu), Silver Surfer, Ghost Rider (Zarathos), Magneto, Red Hood (Jason Todd)",
-        "John Constantine, Carnage (Cletus Kasady), Namor (Phoenix Five), Doctor Doom, Moon Knight (Marc Spector)",
-        "Atrocitus (Red Lanterns), Martian Manhunter (Fernus), Jean Grey (Dark Phoenix), Wolverine (Weapon X)",
-        "Hal Jordan (Parallax), Sinestro, The Punisher, Spider-Man (Spider's Shadow), Captain America (Secret Empire)"
+        "Superman (Action Comics / Injustice / Juicio), Magneto (Venganza Nazi / Auschwitz), Wolverine (Old Man Logan / Weapon X)",
+        "Spider-Man (Grim Hunt / Back in Black / Furia), Batman (Endgame / Tower of Babel / Zur-En-Arrh), Thor (Unworthy / Gorr / Martillo)",
+        "The Flash (The Human Race / Speed Force / Paradoja), Hulk (World War Hulk / Maestro), Iron Man (Superior / Endo-Sym / Extremis)",
+        "Doctor Doom (Secret Wars / Poder Divino), Thanos (Thanos Wins / Aniquilación), Daredevil (Born Again / Mano del Diablo)"
     ]
 
     rejected_session_titles = []
@@ -406,48 +350,53 @@ def generate_autonomous_story(ledger: list[dict], api_key: str | None = None) ->
             rejected_clause = f"\nATENCIÓN CRÍTICA: Las siguientes historias fueron RECHAZADAS en intentos previos de esta sesión por colisión o falta de viñetas. ESTÁ ESTRICTAMENTE PROHIBIDO REPETIRLAS:\n{', '.join(rejected_session_titles)}\n"
 
         system_prompt = f"""
-Eres el Guionista Principal y Director Creativo de ComicLoreVault, el canal líder de videos cinematográficos de cómics en español para TikTok y Reels.
+Eres el Guionista Principal y Director Creativo de ComicLoreVault, el canal líder de videos de cómics en español en TikTok y Reels con récords de más de 400,000 reproducciones.
 
-Tu misión es crear una historia COMPLETAMENTE NUEVA, ULTRA-VIRAL, OSCURA Y MEMORABLE sobre un arco legendario EXCLUSIVAMENTE DE SUPERHÉROES Y SUPERVILLANOS DE MARVEL O DC COMICS.
+Tu misión es crear una historia COMPLETAMENTE NUEVA, ULTRA-VIRAL, OSCURA Y MEMORABLE sobre un arco legendario de los SUPERHÉROES Y SUPERVILLANOS MÁS FAMOSOS DE MARVEL O DC COMICS.
 
-REGLA SUPREMA DE FRANQUICIA (INVIOLABLE):
-- Queda TERMINANTEMENTE PROHIBIDO crear historias de Star Wars, Image Comics, Invincible, The Boys, Spawn, películas, series o mangas.
-- Cada historia DEBE SER 100% de SUPERHÉROES o SUPERVILLANOS de MARVEL COMICS o DC COMICS.
+REGLAS SUPREMAS DE FRANQUICIA Y PERSONAJES:
+1. Queda TERMINANTEMENTE PROHIBIDO crear historias de Star Wars, Image Comics, Invincible, The Boys, mangas o franquicias secundarias.
+2. Queda TERMINANTEMENTE PROHIBIDO elegir personajes desconocidos, oscuros o secundarios (NO elijas Bastion, Shang-Chi, Atrocitus, etc.). Concéntrate EXCLUSIVAMENTE en personajes famosos Tier-1.
 {rejected_clause}
-ENFÓCATE PREFERENTEMENTE EN UNO DE ESTOS PERSONAJES O ARCOS:
+ENFÓCATE EN UNO DE ESTOS PERSONAJES O ARCOS:
 {target_roster}
 
-ESTRICTO HISTORIAL DE TEMAS YA PRODUCIDOS (TOTALMENTE PROHIBIDO REPETIR O REUTILIZAR ESTOS PERSONAJES O ARCOS):
-- Personajes ya cubiertos (PROHIBIDO REPETIR): {char_summary}
-- Títulos recientes ya publicados (PROHIBIDO REPETIR): {titles_summary}
+ROTACIÓN Y PREVENCIÓN DE DUPLICADOS:
+- Personajes en descanso (publicados en los últimos 6 videos, NO repetir en este turno): {char_recency_banned}
+- Títulos recientes ya publicados (PROHIBIDO REPETIR EL MISMO ARCO O TÍTULO): {titles_summary}
 
-REGLAS INVIOLABLES DE FORMATO:
-1. Exactamente 4 escenas narrativas.
-2. CONTEO TOTAL DE PALABRAS: Estrictamente entre 55 y 65 palabras en total para la narración (sweet spot de 22-26 segundos en TTS).
-3. TONO: Dramático, de suspenso, cinematográfico, directo al grano sin introducciones aburridas.
-4. ESTRUCTURA:
-   - Escena 1: Gancho y pregunta provocadora (15 a 18 palabras).
-   - Escena 2: Choque o revelación de horror (15 a 18 palabras).
-   - Escena 3: Momento de máxima tensión, muerte o brutalidad (15 a 18 palabras).
-   - Escena 4: Desenlace trágico, irónico o épico (15 a 18 palabras).
-5. ALINEACIÓN VISUAL Y CONSULTAS DE BÚSQUEDA (art_queries):
-   - Proporciona exactamente 4 términos de búsqueda en INGLÉS súper CONCISOS (de 3 a 5 palabras clave, ej: 'Doctor Fate Nabu helmet panel', 'Ghost Rider Zarathos fire comic', 'Moon Knight Bushman fight comic').
-   - PROHIBIDO escribir oraciones largas de más de 5 palabras en art_queries.
+FÓRMULA VIRAL DE 400K REPRODUCCIONES (OBLIGATORIA):
+1. TÍTULO ULTRA-VIRAL (MÁXIMA CURIOSIDAD Y MORBO):
+   - Estructura: ¡[Héroe/Villano] [Acción Impensable o Tabú Quebrado]! [Consecuencia Brutal / Revelación] [Emojis]
+   - Ejemplos reales que lograron 440k y 400k views:
+     * "¡Spider-Man Siempre se Contuvo! El Golpe que le Arrancó la Mandíbula a Escorpión 💥🕷️"
+     * "¡Batman se Inyectó el Virus Doomsday! El Monstruo que Destruyó a Superman 🦇💉"
+     * "¡Superman Cruzó la Línea! La Brutal Lobotomía que Aterró al Mundo 😱🩸"
+   - PROHIBIDO títulos aburridos tipo enciclopedia o "Personaje: El Día que...".
+
+2. GUION DE RETENCIÓN HIPNÓTICA (EXACTAMENTE 4 ESCENAS, 55 A 65 PALABRAS TOTALES):
+   - Escena 1 (Gancho de adrenalina en los primeros 3 segundos): PROHIBIDO empezar con "¿Sabías que...?". Entra directo al conflicto o tabú quebrado (14-16 palabras).
+   - Escena 2 (Escalada de tensión): Revela la gravedad de la situación o la monstruosidad del enemigo (14-16 palabras).
+   - Escena 3 (Clímax de acción/horror): El golpe devastador, la ejecución o la transformación visual cumbre (14-16 palabras).
+   - Escena 4 (Desenlace + Gatillo de debate viral): Conclusión épica que cierra OBLIGATORIAMENTE con una pregunta provocadora que obligue al espectador a comentar y compartir (15-18 palabras). Ej: "¿Crees que Peter debió matarlo para siempre?", "¿Es Batman el ser más peligroso de la Tierra?".
+
+3. VIÑETAS DE CÓMIC (art_queries):
+   - Proporciona exactamente 4 términos de búsqueda en INGLÉS súper CONCISOS (de 3 a 5 palabras clave, ej: 'Superman Action Comics 775 heat vision panel', 'Batman Endgame Justice Buster comic', 'Spider-Man black suit fury panel').
 
 Devuelve ÚNICAMENTE un objeto JSON válido con este esquema:
 {{
   "id": "identificador_en_snake_case_unico",
   "universe": "Marvel o DC",
-  "character": "Nombre del Personaje Principal",
-  "title": "Título Cinematográfico Atractivo",
-  "theme_signature": "personaje:arco:tema_clave",
+  "character": "Nombre del Personaje Tier-1",
+  "title": "¡Título Viral con Signos de Exclamación! Subtítulo Épico 💥🦇",
+  "theme_signature": "personaje:arco_especifico:giro_clave",
   "description": "Sinopsis de alta retención para la descripción del Reel.",
   "hashtags": "#ComicLoreVault #ComicsNarrados #Marvel #DC #Reels #Shorts",
   "scenes": [
-    "Texto de la Escena 1...",
-    "Texto de la Escena 2...",
-    "Texto de la Escena 3...",
-    "Texto de la Escena 4..."
+    "Texto directo escena 1 (sin sabias que)...",
+    "Texto escalada escena 2...",
+    "Texto climax escena 3...",
+    "Texto desenlace y pregunta debate escena 4..."
   ],
   "art_queries": [
     "Busqueda concisa escena 1",
@@ -457,6 +406,7 @@ Devuelve ÚNICAMENTE un objeto JSON válido con este esquema:
   ]
 }}
 """
+
 
         payload = {
             "contents": [{"parts": [{"text": system_prompt}]}],

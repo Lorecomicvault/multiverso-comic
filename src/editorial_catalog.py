@@ -728,15 +728,21 @@ EDITORIAL_STORIES = [
         "id": "batman_white_knight_joker_cuerdo",
         "universe": "DC",
         "character": "The Joker",
-        "title": "Batman White Knight: El Día que el Joker se Volvió Cuerdo",
+        "title": "¡El Joker se Volvió Cuerdo! El Juicio que Encarceló a Batman en Gotham 🃏⚖️",
         "theme_signature": "joker:white_knight:jack_napier_cuerdo_juicio",
-        "description": "En Batman White Knight, una sobredosis de medicamentos curó la psicopatía del Joker transformándolo en Jack Napier, el político que desenmascaró los crímenes de Batman.",
-        "hashtags": "#BatmanWhiteKnight #TheJoker #JackNapier #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "description": "Tras una sobredosis de medicamentos, el Joker recuperó la cordura transformándose en Jack Napier, el político que demandó a Batman y lo metió tras las rejas.",
+        "hashtags": "#BatmanWhiteKnight #TheJoker #Batman #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "¿Sabías que en Batman White Knight, una sobredosis forzada de medicamentos curó por completo la locura del Joker?",
-            "Convertido en el elocuente Jack Napier, denunció ante las cámaras de televisión la brutalidad ilegal y destructiva de Batman.",
-            "Vistiendo un impecable traje blanco, se convirtió en líder popular y usó las leyes de Gotham para encarcelar al héroe.",
-            "Por primera vez en la historia, Batman fue declarado el verdadero villano mientras el Joker era aclamado como salvador."
+            "¡Una sobredosis de medicamentos curó al Joker, transformándolo en un brillante estratega de la ley!",
+            "Convertido en Jack Napier, unió a Gotham para denunciar la brutalidad destructiva de Batman.",
+            "Vistiendo un elegante traje, demandó a la ciudad convenciendo al pueblo de su inocencia.",
+            "La policía arrestó a Bruce Wayne, consagrando al Joker como salvador. ¿Quién era el verdadero monstruo?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/batman_white_knight/scene_01.jpg",
+            "assets/curated_panels/batman_white_knight/scene_02.jpg",
+            "assets/curated_panels/batman_white_knight/scene_03.jpg",
+            "assets/curated_panels/batman_white_knight/scene_04.jpg"
         ],
         "art_queries": [
             "Batman White Knight Joker pills sane Jack Napier comic panel",
@@ -1256,6 +1262,87 @@ EDITORIAL_STORIES = [
             "Venom symbiote leaving red offspring comic panel",
             "Carnage first transformation red tendrils comic panel",
             "Carnage killing prison guards laughing comic panel"
+        ]
+    },
+    {
+        "id": "superman_vs_the_elite_action_775",
+        "universe": "DC",
+        "character": "Superman",
+        "title": "¡Superman Cruzó la Línea! La Brutal Lobotomía que Aterró al Mundo 😱🩸",
+        "theme_signature": "superman:the_elite:lobotomia_manchester_black_luna",
+        "description": "Cuando The Elite desafió el código moral de Superman masacrando villanos, el Hombre de Acero les dio una aterradora lección en la luna que jamás olvidarán.",
+        "hashtags": "#Superman #TheElite #ActionComics775 #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Superman jamás rompe su regla de no matar, hasta que una banda de metahumanos amenazó la Tierra!",
+            "The Elite masacraba criminales sin piedad, proclamando que la compasión del Hombre de Acero era debilidad.",
+            "En la luna, Superman fingió perder la cordura, desatando una cacería aterradora a velocidad imperceptible.",
+            "Con micro-visión térmica desactivó los poderes de Manchester Black, demostrando que la fuerza descontrolada solo engendra terror."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/superman_vs_the_elite/scene_01.jpg",
+            "assets/curated_panels/superman_vs_the_elite/scene_02.jpg",
+            "assets/curated_panels/superman_vs_the_elite/scene_03.jpg",
+            "assets/curated_panels/superman_vs_the_elite/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Action Comics 775 Tripoli monster destroyed Superman comic panel",
+            "Action Comics 775 The Elite team Manchester Black comic panel",
+            "Action Comics 775 Superman glowing red eyes heat vision terrifying comic panel",
+            "Action Comics 775 Manchester Black trembling defeated comic panel"
+        ]
+    },
+    {
+        "id": "spiderman_grim_hunt_venganza_kravinoff",
+        "universe": "Marvel",
+        "character": "Spider-Man",
+        "title": "¡Spider-Man Desató su Furia! El Traje Negro que Aterró a sus Enemigos 🕷️🩸",
+        "theme_signature": "spiderman:grim_hunt:furia_traje_negro_kravinoff",
+        "description": "Tras el brutal asesinato de Kaine a manos de los Kravinoff, un enfurecido Peter Parker se enfunda de nuevo el traje negro para desatar una venganza implacable.",
+        "hashtags": "#SpiderMan #GrimHunt #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Cuando los Kravinoff asesinaron a su clon Kaine, Peter Parker abandonó toda piedad!",
+            "Enfundado en su temido traje negro, Spider-Man persiguió a los culpables con precisión implacable.",
+            "Acorraló a los villanos uno por uno, quebrando sus defensas con una brutalidad jamás vista.",
+            "Estuvo a un milímetro de cruzar la línea y convertirse en un verdugo despiadado. ¿Debió perdonarles la vida?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/spiderman_grim_hunt/scene_01.jpg",
+            "assets/curated_panels/spiderman_grim_hunt/scene_02.jpg",
+            "assets/curated_panels/spiderman_grim_hunt/scene_03.jpg",
+            "assets/curated_panels/spiderman_grim_hunt/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Kaine Parker rising grave Amazing Spider-Man 637 comic panel",
+            "Kraven the Hunter throne Sergei Kravinoff Amazing Spider-Man 636 comic panel",
+            "Spider-Man black suit hunting Amazing Spider-Man 637 comic panel",
+            "Spider-Man Last Stand dark future red jacket Amazing Spider-Man 637 comic panel"
+        ]
+    },
+    {
+        "id": "flash_the_human_race_teleportation",
+        "universe": "DC",
+        "character": "The Flash",
+        "title": "¡The Flash Rompió la Física! La Carrera que Superó a la Teletransportación ⚡🌌",
+        "theme_signature": "flash:the_human_race:velocidad_trans_temporal_teletransportacion",
+        "description": "Para salvar la Tierra de seres cósmicos, Flash absorbió la energía cinética de toda la humanidad corriendo más rápido que la teletransportación instantánea.",
+        "hashtags": "#TheFlash #SpeedForce #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Seres cósmicos amenazaron destruir la Tierra si Flash no ganaba una carrera imposible a través del universo!",
+            "Su rival poseía teletransportación instantánea, haciendo inútil cualquier intento de velocidad común.",
+            "El velocista absorbió la energía cinética del planeta entero, quebrando las leyes de la física.",
+            "Llegó antes que la teletransportación instantánea, salvando la Tierra. ¿Es el héroe más veloz de la historia?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/flash_human_race/scene_01.jpg",
+            "assets/curated_panels/flash_human_race/scene_02.jpg",
+            "assets/curated_panels/flash_human_race/scene_03.jpg",
+            "assets/curated_panels/flash_human_race/scene_04.jpg"
+        ],
+        "art_queries": [
+            "The Flash Wally West running at super speed lightning comic panel",
+            "Wally West Sprinting Through Time Return of Wally West comic panel",
+            "The Flash trans time velocity leaving space time The Flash 138 comic panel",
+            "Wally West Flash surrounded by white lightning speed force comic panel"
         ]
     }
 ]

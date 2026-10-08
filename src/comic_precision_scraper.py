@@ -335,25 +335,7 @@ def search_bing_comic_panels(query: str, limit: int = 8) -> list:
         except Exception:
             continue
 
-    # Respaldo flexible: si no hubo suficientes con dominios específicos, tomar URLs de imágenes limpias
-    if len(collected_urls) < 4:
-        for v in variants:
-            url = f"https://www.bing.com/images/search?q={urllib.parse.quote(v)}&form=HDRSC2&first=1"
-            try:
-                r = requests.get(url, headers=headers, timeout=8)
-                if r.status_code == 200:
-                    urls = re.findall(r'murl&quot;:&quot;(http[^&]+)&quot;', r.text)
-                    for u in urls:
-                        u_low = u.lower()
-                        if any(bad in u_low for bad in disallowed):
-                            continue
-                        if any(u_low.endswith(ext) for ext in ['.jpg', '.jpeg', '.png', '.webp']) and u not in collected_urls:
-                            collected_urls.append(u)
-                            if len(collected_urls) >= limit:
-                                return collected_urls
-            except Exception:
-                continue
-
+    # Retornar únicamente URLs que pertenezcan a dominios verificados de cómic
     return collected_urls[:limit]
 
 
@@ -660,9 +642,9 @@ def fetch_scene_image(
         # Evaluación con Árbitro de IA Gemini Multimodal Vision
         eval_count += 1
         eval_result = verify_visual_alignment_with_gemini(temp_candidate, scene_text)
-        score = eval_result.get("score", 7)
-        is_panel = eval_result.get("is_comic_panel", True)
-        reason = eval_result.get("reason", "")
+        score = eval_result.get("score", 1)
+        is_panel = eval_result.get("is_comic_panel", False)
+        reason = eval_result.get("reason", "No verificado por Gemini")
         cand_name = cand.get("title") or cand.get("url", "")[:50]
 
         # Guardar el mejor candidato solo si es viñeta interior de cómic, no portada y no duplicado

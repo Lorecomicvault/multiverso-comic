@@ -35,7 +35,11 @@ load_env_file()
 
 
 def log(msg: str):
-    print(f"[{time.strftime('%H:%M:%S')}] {msg}", flush=True)
+    try:
+        print(f"[{time.strftime('%H:%M:%S')}] {msg}", flush=True)
+    except UnicodeEncodeError:
+        clean_msg = str(msg).encode('ascii', errors='backslashreplace').decode('ascii')
+        print(f"[{time.strftime('%H:%M:%S')}] {clean_msg}", flush=True)
 
 from .editorial_catalog import EDITORIAL_STORIES
 
