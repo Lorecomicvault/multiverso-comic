@@ -1248,5 +1248,15 @@
     "mode": "live_release",
     "video_file": "Black_Bolt_La_Voz_que_Destrozó_el_Imperio.mp4",
     "status": "published"
+  },
+  {
+    "id": "damian_wayne_muerte_hereje",
+    "title": "Robin: El Trágico Sacrificio y Muerte de Damian Wayne",
+    "character": "Robin (Damian Wayne)",
+    "theme_signature": "damian_wayne:the_heretic:espada_empalamiento_torre_wayne",
+    "date": "2026-10-08 02:22",
+    "mode": "live_release",
+    "video_file": "Robin_El_Trágico_Sacrificio_y_Muerte_de_Damian_Wayne.mp4",
+    "status": "published"
   }
 ]
