@@ -1344,6 +1344,87 @@ EDITORIAL_STORIES = [
             "The Flash trans time velocity leaving space time The Flash 138 comic panel",
             "Wally West Flash surrounded by white lightning speed force comic panel"
         ]
+    },
+    {
+        "id": "batman_zur_en_arrh_respaldo",
+        "universe": "DC",
+        "character": "Batman",
+        "title": "¡Batman Creó una Mente de Respaldo! El Guerrero Implacable de Zur-En-Arrh 🦇🧠",
+        "theme_signature": "batman:zur_en_arrh:mente_respaldo_personalidad_violenta",
+        "description": "Para prevenir que atacaran su cordura, Bruce Wayne programó una personalidad psicótica de reserva: el despiadado Batman de Zur-En-Arrh.",
+        "hashtags": "#Batman #ZurEnArrh #BatmanRIP #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Anticipando que destruirían su cordura, Bruce Wayne programó un aterrador protocolo psicológico en su cerebro!",
+            "Drogado y abandonado en Crime Alley por Black Glove, una palabra clave detonó su personalidad de reserva.",
+            "Nació el Batman de Zur-En-Arrh: un guerrero psicótico sin remordimientos que jamás siente compasión ni dolor.",
+            "Barrió a los villanos en Arkham con brutalidad salvaje antes de despertar. ¿Es el Batman más aterrador?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/batman_zur_en_arrh/scene_01.jpg",
+            "assets/curated_panels/batman_zur_en_arrh/scene_02.jpg",
+            "assets/curated_panels/batman_zur_en_arrh/scene_03.jpg",
+            "assets/curated_panels/batman_zur_en_arrh/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Bruce Wayne Crime Alley Batman RIP comic panel",
+            "Bat-Radia radio trigger Zur-En-Arrh comic panel",
+            "Batman of Zur-En-Arrh red purple yellow suit comic panel",
+            "Batman Zur-En-Arrh fighting Arkham Asylum comic panel"
+        ]
+    },
+    {
+        "id": "superior_iron_man_extremis_villano",
+        "universe": "Marvel",
+        "character": "Iron Man",
+        "title": "¡Iron Man se Volvió Malvado! La Droga Extremis que Esclavizó San Francisco 🦾😈",
+        "theme_signature": "iron_man:superior:extremis_inversion_armadura_endosym_san_francisco",
+        "description": "Con su brújula moral invertida tras AXIS, un despiadado Tony Stark viste una armadura plateada de metal líquido y vuelve adicta a toda una ciudad con Extremis 3.0.",
+        "hashtags": "#IronMan #SuperiorIronMan #TonyStark #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Tras un hechizo mágico que invirtió su moral, Tony Stark se transformó en un villano megalómano despiadado!",
+            "Creó la aplicación Extremis 3.0, regalando belleza y salud perfecta a los habitantes de San Francisco.",
+            "Al cumplirse el plazo, bloqueó la cura exigiendo cien dólares diarios para mantener la juventud eterna.",
+            "Enfundado en su armadura de metal líquido Endo-Sym, desafió a la humanidad: 'He jugado a ser Dios'."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/superior_iron_man/scene_01.jpg",
+            "assets/curated_panels/superior_iron_man/scene_02.jpg",
+            "assets/curated_panels/superior_iron_man/scene_03.jpg",
+            "assets/curated_panels/superior_iron_man/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Tony Stark white suit Superior Iron Man 1 comic panel",
+            "Extremis 3.0 app phone Superior Iron Man 1 comic panel",
+            "Superior Iron Man Endo-Sym armor liquid metal comic panel",
+            "Tony Stark evil smiling god complex Superior Iron Man comic panel"
+        ]
+    },
+    {
+        "id": "doctor_strange_el_juramento_elixir",
+        "universe": "Marvel",
+        "character": "Doctor Strange",
+        "title": "¡Doctor Strange Descubrió la Cura del Cáncer! El Dilema Moral que Casi Mata a Wong 🔮🧪",
+        "theme_signature": "doctor_strange:the_oath:elixir_otkid_cancer_wong_juramento",
+        "description": "Doctor Strange encuentra el elixir ancestral de Otkid para erradicar el cáncer terminal de Wong, pero una corporación criminal intenta robarlo.",
+        "hashtags": "#DoctorStrange #TheOath #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Al descubrir que su sirviente Wong padecía un cáncer cerebral incurable, Doctor Strange desafió a la muerte!",
+            "Viajó a templos místicos prohibidos hasta conseguir el Elixir de Otkid, la sustancia capaz de curar cualquier enfermedad.",
+            "Pero un sicario contratado por una farmacéutica le disparó a quemarropa buscando patentar y monopolizar la fórmula médica.",
+            "Al borde de la muerte, Stephen Strange tuvo que elegir entre salvar a su mejor amigo o a la humanidad entera."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/doctor_strange_the_oath/scene_01.jpg",
+            "assets/curated_panels/doctor_strange_the_oath/scene_02.jpg",
+            "assets/curated_panels/doctor_strange_the_oath/scene_03.jpg",
+            "assets/curated_panels/doctor_strange_the_oath/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Doctor Strange Sanctum Sanctorum The Oath 1 comic panel",
+            "Otkid Elixir magical potion glowing The Oath comic panel",
+            "Brigand shooting Doctor Strange handgun The Oath comic panel",
+            "Doctor Strange healing Wong astral projection The Oath comic panel"
+        ]
     }
 ]
 

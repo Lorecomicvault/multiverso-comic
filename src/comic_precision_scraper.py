@@ -673,8 +673,8 @@ def fetch_scene_image(
         if os.path.exists(temp_candidate):
             os.remove(temp_candidate)
 
-    # Si ningún candidato superó el umbral en la evaluación primaria, permitir únicamente si el mejor candidato tiene score >= 6 verificado
-    if best_fallback_file and os.path.exists(best_fallback_file) and highest_score >= 6:
+    # Si ningún candidato superó el umbral en la evaluación primaria, permitir si el mejor candidato es viñeta de cómic con score >= 4 verificado
+    if best_fallback_file and os.path.exists(best_fallback_file) and highest_score >= 4:
         if not is_duplicate_panel(best_fallback_file, existing_scene_images):
             if os.path.exists(dest_path):
                 os.remove(dest_path)
@@ -688,4 +688,4 @@ def fetch_scene_image(
     if os.path.exists(temp_candidate):
         os.remove(temp_candidate)
 
-    raise RuntimeError(f"FATAL: No se encontró ninguna viñeta con fidelidad visual verificada (Score >= 6) para '{fallback_query or target_file}'. Todas las imágenes analizadas fueron descartadas por baja alineación o calidad.")
+    raise RuntimeError(f"FATAL: No se encontró ninguna viñeta con fidelidad visual verificada (Score >= 4) para '{fallback_query or target_file}'. Todas las imágenes analizadas fueron descartadas por baja alineación o calidad.")

@@ -9,6 +9,9 @@ on:
         default: 'autonomous_ai'
         type: choice
         options:
+          - batman_zur_en_arrh_respaldo
+          - superior_iron_man_extremis_villano
+          - doctor_strange_el_juramento_elixir
           - superman_vs_the_elite_action_775
           - spiderman_grim_hunt_venganza_kravinoff
           - flash_the_human_race_teleportation
