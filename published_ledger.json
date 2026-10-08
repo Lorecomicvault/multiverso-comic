@@ -1278,5 +1278,15 @@
     "mode": "live_release",
     "video_file": "Superman_Cruzó_la_Línea_La_Brutal_Lobotomía_que_Aterró_al_Mundo.mp4",
     "status": "published"
+  },
+  {
+    "id": "spiderman_grim_hunt_venganza_kravinoff",
+    "title": "¡Spider-Man Desató su Furia! El Traje Negro que Aterró a sus Enemigos 🕷️🩸",
+    "character": "Spider-Man",
+    "theme_signature": "spiderman:grim_hunt:furia_traje_negro_kravinoff",
+    "date": "2026-10-08 10:04",
+    "mode": "live_release",
+    "video_file": "Spider-Man_Desató_su_Furia_El_Traje_Negro_que_Aterró_a_sus_Enemigos.mp4",
+    "status": "published"
   }
 ]
