@@ -1338,5 +1338,15 @@
     "mode": "live_release",
     "video_file": "Doctor_Strange_Descubrió_la_Cura_del_Cáncer_El_Dilema_Moral_que_Casi_Mata_a_Wong.mp4",
     "status": "published"
+  },
+  {
+    "id": "wolverine_weapon_x_escape_brutal",
+    "title": "¡Wolverine Destrozó el Laboratorio Weapon X! La Venganza Sangrienta que Aterró a sus Creadores 🩸🐺",
+    "character": "Wolverine",
+    "theme_signature": "wolverine:weapon_x:furia_salvaje",
+    "date": "2026-10-09 10:11",
+    "mode": "live_release",
+    "video_file": "Wolverine_Destrozó_el_Laboratorio_Weapon_X_La_Venganza_Sangrienta_que_Aterró_a_s.mp4",
+    "status": "published"
   }
 ]
