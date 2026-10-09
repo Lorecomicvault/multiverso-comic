@@ -1348,5 +1348,15 @@
     "mode": "live_release",
     "video_file": "Wolverine_Destrozó_el_Laboratorio_Weapon_X_La_Venganza_Sangrienta_que_Aterró_a_s.mp4",
     "status": "published"
+  },
+  {
+    "id": "thanos_annihilation_scourge_void",
+    "title": "¡Thanos Devoró a la Muerte! El Sacrificio Sangriento que Reescribió la Realidad 💀🌌",
+    "character": "Thanos",
+    "theme_signature": "thanos:annihilation:divinity_hunger",
+    "date": "2026-10-09 22:14",
+    "mode": "live_release",
+    "video_file": "Thanos_Devoró_a_la_Muerte_El_Sacrificio_Sangriento_que_Reescribió_la_Realidad.mp4",
+    "status": "published"
   }
 ]
