@@ -1328,5 +1328,15 @@
     "mode": "live_release",
     "video_file": "Iron_Man_se_Volvió_Malvado_La_Droga_Extremis_que_Esclavizó_San_Francisco.mp4",
     "status": "published"
+  },
+  {
+    "id": "doctor_strange_el_juramento_elixir",
+    "title": "¡Doctor Strange Descubrió la Cura del Cáncer! El Dilema Moral que Casi Mata a Wong 🔮🧪",
+    "character": "Doctor Strange",
+    "theme_signature": "doctor_strange:the_oath:elixir_otkid_cancer_wong_juramento",
+    "date": "2026-10-09 07:05",
+    "mode": "live_release",
+    "video_file": "Doctor_Strange_Descubrió_la_Cura_del_Cáncer_El_Dilema_Moral_que_Casi_Mata_a_Wong.mp4",
+    "status": "published"
   }
 ]
