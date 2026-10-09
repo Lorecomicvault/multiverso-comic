@@ -1318,5 +1318,15 @@
     "mode": "live_release",
     "video_file": "Batman_Creó_una_Mente_de_Respaldo_El_Guerrero_Implacable_de_Zur-En-Arrh.mp4",
     "status": "published"
+  },
+  {
+    "id": "superior_iron_man_extremis_villano",
+    "title": "¡Iron Man se Volvió Malvado! La Droga Extremis que Esclavizó San Francisco 🦾😈",
+    "character": "Iron Man",
+    "theme_signature": "iron_man:superior:extremis_inversion_armadura_endosym_san_francisco",
+    "date": "2026-10-09 02:04",
+    "mode": "live_release",
+    "video_file": "Iron_Man_se_Volvió_Malvado_La_Droga_Extremis_que_Esclavizó_San_Francisco.mp4",
+    "status": "published"
   }
 ]
