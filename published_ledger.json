@@ -1358,5 +1358,15 @@
     "mode": "live_release",
     "video_file": "Thanos_Devoró_a_la_Muerte_El_Sacrificio_Sangriento_que_Reescribió_la_Realidad.mp4",
     "status": "published"
+  },
+  {
+    "id": "wolverine_x23_olor_detonante",
+    "title": "¡X-23 Perdió el Control! El Olor que la Obligó a Asesinar a su Madre 🩸🐺",
+    "character": "X-23",
+    "theme_signature": "x23:laura_kinney:olor_detonante_asesinato_sarah_kinney",
+    "date": "2026-10-10 14:10",
+    "mode": "live_release",
+    "video_file": "X-23_Perdió_el_Control_El_Olor_que_la_Obligó_a_Asesinar_a_su_Madre.mp4",
+    "status": "published"
   }
 ]
