@@ -1368,5 +1368,15 @@
     "mode": "live_release",
     "video_file": "X-23_Perdió_el_Control_El_Olor_que_la_Obligó_a_Asesinar_a_su_Madre.mp4",
     "status": "published"
+  },
+  {
+    "id": "magneto_venganza_nazi_auschwitz",
+    "title": "¡Magneto Ejecutó su Venganza Nazi! El Día que Hundió el Submarino con los Cosechadores de Sangre 🩸⚡",
+    "character": "Magneto",
+    "theme_signature": "magneto:auschwitz_revenge:metal_execution",
+    "date": "2026-10-12 14:06",
+    "mode": "live_release",
+    "video_file": "Magneto_Ejecutó_su_Venganza_Nazi_El_Día_que_Hundió_el_Submarino_con_los_Cosechad.mp4",
+    "status": "published"
   }
 ]
