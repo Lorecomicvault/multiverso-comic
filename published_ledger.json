@@ -1378,5 +1378,15 @@
     "mode": "live_release",
     "video_file": "Magneto_Ejecutó_su_Venganza_Nazi_El_Día_que_Hundió_el_Submarino_con_los_Cosechad.mp4",
     "status": "published"
+  },
+  {
+    "id": "ghost_rider_zarathos_posesion_oscura",
+    "title": "Ghost Rider: La Furia Desatada de Zarathos y el Fuego Infernal",
+    "character": "Ghost Rider",
+    "theme_signature": "ghost_rider:zarathos:posesion_fuego_infernal_maldicion",
+    "date": "2026-10-12 19:11",
+    "mode": "live_release",
+    "video_file": "Ghost_Rider_La_Furia_Desatada_de_Zarathos_y_el_Fuego_Infernal.mp4",
+    "status": "published"
   }
 ]
