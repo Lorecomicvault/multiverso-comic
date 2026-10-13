@@ -1428,5 +1428,15 @@
     "mode": "live_release",
     "video_file": "Una_Fuerza_Imparable_Arrasó_Nueva_York_El_Desesperado_Asedio_de_Juggernaut.mp4",
     "status": "published"
+  },
+  {
+    "id": "daredevil_tragedia_elektra_asesinos",
+    "title": "¡Elektra Cayó Atravesada por su Propia Arma! El Duelo Letal de los Asesinos 💔🗡️",
+    "character": "Daredevil",
+    "theme_signature": "daredevil:elektra_tragedia:empalamiento_sai_murdock_brazos",
+    "date": "2026-10-13 22:06",
+    "mode": "live_release",
+    "video_file": "Elektra_Cayó_Atravesada_por_su_Propia_Arma_El_Duelo_Letal_de_los_Asesinos.mp4",
+    "status": "published"
   }
 ]
