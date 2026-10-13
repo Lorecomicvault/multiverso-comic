@@ -1388,5 +1388,15 @@
     "mode": "live_release",
     "video_file": "Ghost_Rider_La_Furia_Desatada_de_Zarathos_y_el_Fuego_Infernal.mp4",
     "status": "published"
+  },
+  {
+    "id": "batman_ultimatum_segundo_robin_pistola",
+    "title": "¡El Segundo Robin le Apuntó con un Arma a Batman! El Imposible Juicio del Callejón del Crimen 🦇🔫",
+    "character": "Batman",
+    "theme_signature": "batman:ultimatum_segundo_robin:pistola_decision_moral_ejecucion",
+    "date": "2026-10-13 07:05",
+    "mode": "live_release",
+    "video_file": "El_Segundo_Robin_le_Apuntó_con_un_Arma_a_Batman_El_Imposible_Juicio_del_Callejón.mp4",
+    "status": "published"
   }
 ]
