@@ -19,12 +19,11 @@ from pathlib import Path
 from PIL import Image, ImageStat
 
 CANDIDATE_MODELS = [
-    "gemini-flash-lite-latest",
-    "gemini-3.1-flash-lite",
-    "gemini-3.5-flash",
+    "gemini-2.5-flash",
+    "gemini-2.5-flash-lite",
     "gemini-flash-latest",
-    "gemini-3.8-flash",
-    "gemini-3.7-flash"
+    "gemini-flash-lite-latest",
+    "gemini-2.0-flash",
 ]
 
 HEADERS = {
@@ -344,6 +343,195 @@ EMERGENCY_VIRAL_POOL = [
             "Brigand shooting Doctor Strange handgun The Oath comic panel",
             "Doctor Strange healing Wong astral projection The Oath comic panel"
         ]
+    },
+    {
+        "id": "batman_ultimatum_segundo_robin_pistola",
+        "universe": "DC",
+        "character": "Batman",
+        "title": "¡El Segundo Robin le Apuntó con un Arma a Batman! El Imposible Juicio del Callejón del Crimen 🦇🔫",
+        "theme_signature": "batman:ultimatum_segundo_robin:pistola_decision_moral_ejecucion",
+        "description": "Jason Todd resucitó de la tumba para obligar a Batman a romper su regla más sagrada, poniéndole una pistola en la cabeza al Joker.",
+        "hashtags": "#Batman #RedHood #Joker #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡El antiguo Robin regresó de la muerte, acorralando al criminal que le arrebató la vida!",
+            "Armado hasta los dientes, castigó a las mafias sin respetar el código moral de Batman.",
+            "Acorraló al Joker, colocándole una pistola en la frente frente a su antiguo mentor.",
+            "Le exigió a Batman disparar o ver morir a su enemigo. ¿Debió Batman romper su regla?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/batman_under_red_hood/scene_01.jpg",
+            "assets/curated_panels/batman_under_red_hood/scene_02.jpg",
+            "assets/curated_panels/batman_under_red_hood/scene_03.jpg",
+            "assets/curated_panels/batman_under_red_hood/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Batman Under the Red Hood Jason Todd resurrection panel",
+            "Red Hood weapons beating criminals Gotham comic panel",
+            "Red Hood gun pointed at Joker Batman comic panel",
+            "Batman refusing kill Joker Red Hood dilemma panel"
+        ]
+    },
+    {
+        "id": "hulk_derroto_black_bolt_luna",
+        "universe": "Marvel",
+        "character": "Hulk",
+        "title": "¡Hulk Sometió al Rey de los Inhumanos! La Venganza Implacable que Hizo Temblar la Luna 🌕💥",
+        "theme_signature": "hulk:black_bolt_luna:venganza_armadura_gladiador_destierro_derrota",
+        "description": "Tras ser desterrado al espacio por los Iluminati, Hulk regresó convertido en el Cicatriz Verde y humilló a Black Bolt en la superficie lunar.",
+        "hashtags": "#Hulk #WorldWarHulk #BlackBolt #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Traicionado por sus supuestos aliados, el gigante verde regresó a exigir venganza absoluta!",
+            "Con una armadura gladiadora forjada en batalla, juró someter a cada héroe que lo desterró.",
+            "En la luna, embistió al rey de los Inhumanos soportando el poder destructor de su voz.",
+            "Aplastó a Black Bolt sin piedad, exhibiendo su corona destrozada. ¿Fue justa la furia del coloso?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/hulk_world_war/scene_01.jpg",
+            "assets/curated_panels/hulk_world_war/scene_02.jpg",
+            "assets/curated_panels/hulk_world_war/scene_03.jpg",
+            "assets/curated_panels/hulk_world_war/scene_04.jpg"
+        ],
+        "art_queries": [
+            "World War Hulk gladiator armor return comic panel",
+            "Hulk spaceship landing moon approach comic panel",
+            "Hulk vs Black Bolt sonic scream moon comic panel",
+            "Hulk holding defeated Black Bolt World War Hulk comic panel"
+        ]
+    },
+    {
+        "id": "daredevil_tragedia_elektra_asesinos",
+        "universe": "Marvel",
+        "character": "Daredevil",
+        "title": "¡Elektra Cayó Atravesada por su Propia Arma! El Duelo Letal de los Asesinos 💔🗡️",
+        "theme_signature": "daredevil:elektra_tragedia:empalamiento_sai_murdock_brazos",
+        "description": "En uno de los momentos más trágicos de Marvel, Bullseye y Elektra se enfrentaron a muerte en las calles de Hell's Kitchen.",
+        "hashtags": "#Daredevil #Elektra #Bullseye #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Hell's Kitchen presenció el duelo más sangriento cuando Bullseye emboscó a la letal Elektra!",
+            "En un choque despiadado en los tejados, el psicópata le arrebató uno de sus propios sais.",
+            "Con una frialdad macabra, atravesó el pecho de la guerrera ante el horror de la ciudad.",
+            "Moribunda, Elektra se arrastró hasta morir en brazos de Matt Murdock. ¿Merecía Bullseye la muerte?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/daredevil_muerte_elektra/scene_01.jpg",
+            "assets/curated_panels/daredevil_muerte_elektra/scene_02.jpg",
+            "assets/curated_panels/daredevil_muerte_elektra/scene_03.jpg",
+            "assets/curated_panels/daredevil_muerte_elektra/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Elektra fighting assassin Daredevil comic panel",
+            "Bullseye impaling Elektra sai Daredevil 181 comic panel",
+            "Bullseye smiling killer Daredevil 181 comic panel",
+            "Elektra dying in Matt Murdock arms Daredevil comic panel"
+        ]
+    },
+    {
+        "id": "spiderman_asedio_juggernaut_imparable",
+        "universe": "Marvel",
+        "character": "Spider-Man",
+        "title": "¡Una Fuerza Imparable Arrasó Nueva York! El Desesperado Asedio de Juggernaut 🕷️🧱",
+        "theme_signature": "spider_man:juggernaut:combate_fuerza_bruta_cemento_fosa",
+        "description": "Cuando Juggernaut marchó por Manhattan para destruir a Madame Web, Spider-Man arriesgó su vida en una de las batallas más desesperadas de su historia.",
+        "hashtags": "#SpiderMan #Juggernaut #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Una colosal fuerza destructiva marchó imparable por Manhattan, aplastando todo a su paso!",
+            "Juggernaut destrozaba edificios persiguiendo a Madame Web, mientras Spider-Man usaba cables sin causarle daño.",
+            "Desesperado, el arácnido lo atrajo hasta los cimientos de una obra con una trampa calculada.",
+            "Juggernaut se hundió en una piscina de cemento líquido, quedando sepultado. ¿Fue la mayor hazaña de Peter?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/spiderman_vs_juggernaut/scene_01.jpg",
+            "assets/curated_panels/spiderman_vs_juggernaut/scene_02.jpg",
+            "assets/curated_panels/spiderman_vs_juggernaut/scene_03.jpg",
+            "assets/curated_panels/spiderman_vs_juggernaut/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Amazing Spider-Man 229 Juggernaut marching city comic panel",
+            "Spider-Man attacking Juggernaut power cables comic panel",
+            "Spider-Man leading Juggernaut construction site comic panel",
+            "Juggernaut sinking wet cement trapped Spider-Man comic panel"
+        ]
+    },
+    {
+        "id": "wolverine_la_muerte_adamantium_liquido",
+        "universe": "Marvel",
+        "character": "Wolverine",
+        "title": "¡Wolverine Murió Asfixiado en Metal Hirviendo! El Sacrificio que Marcó el Fin del Mutante 🩸🐺",
+        "theme_signature": "wolverine:death_of_wolverine:adamantium_liquido_sacrificio_cornelius",
+        "description": "Sin su factor curativo, Wolverine asaltó el laboratorio del Doctor Cornelius para salvar vidas inocentes, sufriendo el destino más desgarrador.",
+        "hashtags": "#Wolverine #DeathOfWolverine #Logan #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Sin factor curativo y con el cuerpo destrozado, Logan marchó a su última misión suicida!",
+            "El doctor Cornelius planeaba crear cientos de mutantes esclavos inyectándoles adamantium a la fuerza.",
+            "Para salvarlos, Wolverine rompió el contenedor principal, cubriéndose por completo de metal líquido hirviendo.",
+            "Se endureció como una estatua frente al atardecer, muriendo con honor. ¿Es la despedida más heroica de Marvel?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/wolverine_muerte_adamantium/scene_01.jpg",
+            "assets/curated_panels/wolverine_muerte_adamantium/scene_02.jpg",
+            "assets/curated_panels/wolverine_muerte_adamantium/scene_03.jpg",
+            "assets/curated_panels/wolverine_muerte_adamantium/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Wolverine wounded claws out final mission comic panel",
+            "Doctor Cornelius lab Weapon X experiment Death of Wolverine panel",
+            "Wolverine covered hot liquid adamantium Death of Wolverine 4 panel",
+            "Wolverine adamantium statue sunset Death of Wolverine comic panel"
+        ]
+    },
+    {
+        "id": "thor_indigno_susurro_perdida_martillo",
+        "universe": "Marvel",
+        "character": "Thor",
+        "title": "¡Tres Palabras le Arrebataron el Mjolnir! El Secreto que Hizo Indigno al Príncipe de Asgard ⚡🔨",
+        "theme_signature": "thor:unworthy_original_sin:susurro_fury_asgard_perdida_martillo",
+        "description": "Durante la guerra de Original Sin, Nick Fury le susurró un secreto cósmico a Thor que quebró su fe divina y le impidió levantar su propio martillo.",
+        "hashtags": "#Thor #OriginalSin #Mjolnir #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡El Dios del Trueno era invencible en combate, hasta que un anciano humano reveló su mayor pecado!",
+            "En la superficie lunar, un Nick Fury cósmico se acercó a su oído susurrándole tres palabras prohibidas.",
+            "La revelación destrozó la fe de Thor, haciendo que el Mjolnir cayera al suelo lunar como plomo inerte.",
+            "Por más que tiró con toda su fuerza, jamás pudo volver a levantarlo. ¿Tenía razón Gorr sobre los dioses?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/thor_unworthy_susurro/scene_01.jpg",
+            "assets/curated_panels/thor_unworthy_susurro/scene_02.jpg",
+            "assets/curated_panels/thor_unworthy_susurro/scene_03.jpg",
+            "assets/curated_panels/thor_unworthy_susurro/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Thor Odinson fighting Avengers Original Sin comic panel",
+            "Nick Fury whispering Thor ear moon Original Sin 7 comic panel",
+            "Mjolnir dropped on moon surface unable to lift comic panel",
+            "Thor weeping on knees unworthy Mjolnir comic panel"
+        ]
+    },
+    {
+        "id": "batman_endgame_justice_buster_liga",
+        "universe": "DC",
+        "character": "Batman",
+        "title": "¡Batman Derrotó a Toda la Liga de la Justicia! La Armadura Implacable del Justice Buster 🦇🤖",
+        "theme_signature": "batman:endgame:justice_buster_armadura_fenrir_joker_toxina",
+        "description": "Cuando el Joker infectó a la Liga de la Justicia con una toxina homicida, Batman desató la armadura Fenrir para someter a sus mejores amigos.",
+        "hashtags": "#Batman #JusticeLeague #Endgame #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡El Joker envenenó a la Liga de la Justicia con una toxina sádica, enviándolos a masacrar a Batman!",
+            "Wonder Woman, Flash y Aquaman atacaron con furia ciega, destruyendo cuadras enteras en Ciudad Gótica.",
+            "Para sobrevivir, Bruce activó la colosal armadura Fenrir, diseñada con contramedidas letales para cada héroe.",
+            "Neutralizó a sus mejores amigos uno tras otro en una brutalidad desgarradora. ¿Es Batman la mayor amenaza de la Tierra?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/batman_justice_buster/scene_01.jpg",
+            "assets/curated_panels/batman_justice_buster/scene_02.jpg",
+            "assets/curated_panels/batman_justice_buster/scene_03.jpg",
+            "assets/curated_panels/batman_justice_buster/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Batman Endgame Wonder Woman attacking Batman comic panel",
+            "Justice League infected Joker toxin attacking Batman Endgame comic panel",
+            "Justice Buster armor Batman Endgame comic panel",
+            "Batman Endgame Superman vs Justice Buster comic panel"
+        ]
     }
 ]
 
@@ -463,9 +651,16 @@ Devuelve ÚNICAMENTE un objeto JSON válido con este esquema:
                 try:
                     r = requests.post(url, json=payload, headers={"Content-Type": "application/json"}, timeout=25)
                     if r.status_code == 200:
-                        raw_text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
+                        raw_text = r.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
+                        if "```json" in raw_text:
+                            raw_text = raw_text.split("```json")[1].split("```")[0].strip()
+                        elif "```" in raw_text:
+                            raw_text = raw_text.split("```")[1].split("```")[0].strip()
                         story = json.loads(raw_text)
                         log(f"Propuesta generada por {model}: '{story.get('title')}'")
+                        break
+                    elif r.status_code == 429:
+                        log(f"Modelo {model} respondió 429 (cuota excedida). Rotando inmediatamente a siguiente clave...")
                         break
                     else:
                         log(f"Modelo {model} respondió {r.status_code}")

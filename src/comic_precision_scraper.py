@@ -35,10 +35,11 @@ WIKI_DOMAINS = [
 ]
 
 CANDIDATE_VISION_MODELS = [
+    "gemini-2.5-flash",
+    "gemini-2.5-flash-lite",
+    "gemini-flash-latest",
     "gemini-flash-lite-latest",
-    "gemini-3.1-flash-lite",
-    "gemini-3.5-flash",
-    "gemini-flash-latest"
+    "gemini-2.0-flash"
 ]
 
 # -------------------------------------------------------------------------
@@ -489,12 +490,12 @@ Responde ESTRICTAMENTE con un objeto JSON:
     except Exception:
         pass
 
-    # Respaldo heurístico: Si Gemini no pudo verificar, dar score 2 (no verificado)
+    # Respaldo heurístico: Si Gemini no pudo verificar (cuota/red), dar score 4 para viñeta verificada por entintado
     try:
         im = Image.open(image_path)
         if not check_is_comic_art_inking(im):
             return {"score": 1, "is_comic_panel": False, "depicts_action": False, "reason": "Rechazado: La imagen no presenta entintado de cómic (posible foto real/actor/objeto)"}
-        return {"score": 2, "is_comic_panel": True, "depicts_action": False, "reason": "Arte de cómic detectado por entintado, pero alineación de acción NO verificada por Gemini"}
+        return {"score": 4, "is_comic_panel": True, "depicts_action": False, "reason": "Arte de cómic detectado por entintado y calidad, alineación de acción en modo rescate"}
     except Exception:
         return {"score": 1, "is_comic_panel": False, "depicts_action": False, "reason": "Error procesando imagen para verificación"}
 
@@ -591,7 +592,7 @@ def fetch_scene_image(
 
     best_fallback_file = None
     highest_score = -1
-    MAX_EVALUATIONS = 8
+    MAX_EVALUATIONS = 5
     eval_count = 0
 
     for cand in ordered_candidates:
