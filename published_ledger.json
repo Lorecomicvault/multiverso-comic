@@ -1398,5 +1398,15 @@
     "mode": "live_release",
     "video_file": "El_Segundo_Robin_le_Apuntó_con_un_Arma_a_Batman_El_Imposible_Juicio_del_Callejón.mp4",
     "status": "published"
+  },
+  {
+    "id": "hulk_derroto_black_bolt_luna",
+    "title": "¡Hulk Sometió al Rey de los Inhumanos! La Venganza Implacable que Hizo Temblar la Luna 🌕💥",
+    "character": "Hulk",
+    "theme_signature": "hulk:black_bolt_luna:venganza_armadura_gladiador_destierro_derrota",
+    "date": "2026-10-13 10:04",
+    "mode": "live_release",
+    "video_file": "Hulk_Sometió_al_Rey_de_los_Inhumanos_La_Venganza_Implacable_que_Hizo_Temblar_la_.mp4",
+    "status": "published"
   }
 ]
