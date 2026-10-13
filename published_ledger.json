@@ -1408,5 +1408,15 @@
     "mode": "live_release",
     "video_file": "Hulk_Sometió_al_Rey_de_los_Inhumanos_La_Venganza_Implacable_que_Hizo_Temblar_la_.mp4",
     "status": "published"
+  },
+  {
+    "id": "thor_indigno_susurro_perdida_martillo",
+    "title": "¡Tres Palabras le Arrebataron el Mjolnir! El Secreto que Hizo Indigno al Príncipe de Asgard ⚡🔨",
+    "character": "Thor",
+    "theme_signature": "thor:unworthy_original_sin:susurro_fury_asgard_perdida_martillo",
+    "date": "2026-10-13 14:05",
+    "mode": "live_release",
+    "video_file": "Tres_Palabras_le_Arrebataron_el_Mjolnir_El_Secreto_que_Hizo_Indigno_al_Príncipe_.mp4",
+    "status": "published"
   }
 ]
