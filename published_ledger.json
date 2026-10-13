@@ -1418,5 +1418,15 @@
     "mode": "live_release",
     "video_file": "Tres_Palabras_le_Arrebataron_el_Mjolnir_El_Secreto_que_Hizo_Indigno_al_Príncipe_.mp4",
     "status": "published"
+  },
+  {
+    "id": "spiderman_asedio_juggernaut_imparable",
+    "title": "¡Una Fuerza Imparable Arrasó Nueva York! El Desesperado Asedio de Juggernaut 🕷️🧱",
+    "character": "Spider-Man",
+    "theme_signature": "spider_man:juggernaut:combate_fuerza_bruta_cemento_fosa",
+    "date": "2026-10-13 19:06",
+    "mode": "live_release",
+    "video_file": "Una_Fuerza_Imparable_Arrasó_Nueva_York_El_Desesperado_Asedio_de_Juggernaut.mp4",
+    "status": "published"
   }
 ]
