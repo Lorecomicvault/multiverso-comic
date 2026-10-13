@@ -477,7 +477,7 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
     # =========================================================================
     # PRODUCTION QUALITY GATE (INVIOLABLE AUDIT SHIELD)
     # =========================================================================
-    log("Running Production Quality Gate audit on all 4 generated scene panels...")
+    log(f"Running Production Quality Gate audit on all {len(downloaded_images)} generated scene panels...")
     if len(downloaded_images) != len(story["scenes"]):
         raise RuntimeError(f"Quality Gate Failed: Expected {len(story['scenes'])} scenes, got {len(downloaded_images)}")
 

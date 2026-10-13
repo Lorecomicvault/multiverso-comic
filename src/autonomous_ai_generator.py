@@ -353,22 +353,25 @@ EMERGENCY_VIRAL_POOL = [
         "description": "Jason Todd resucitó de la tumba para obligar a Batman a romper su regla más sagrada, poniéndole una pistola en la cabeza al Joker.",
         "hashtags": "#Batman #RedHood #Joker #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "¡El antiguo Robin regresó de la muerte, acorralando al criminal que le arrebató la vida!",
-            "Armado hasta los dientes, castigó a las mafias sin respetar el código moral de Batman.",
-            "Acorraló al Joker, colocándole una pistola en la frente frente a su antiguo mentor.",
-            "Le exigió a Batman disparar o ver morir a su enemigo. ¿Debió Batman romper su regla?"
+            "¡El mayor fracaso de Batman regresó de entre los muertos convertido en Red Hood, un despiadado verdugo que castiga a los criminales con plomo!",
+            "Resucitado tras haber sido asesinado a golpes por el Joker, Jason Todd descubrió con furia que Bruce jamás cobró venganza por su muerte.",
+            "Con un arsenal militar y una brutalidad implacable, tomó el control del bajo mundo de Gotham ejecutando a sangre fría a los lugartenientes de Máscara Negra.",
+            "En el clímax, acorraló a Batman en un callejón, puso una pistola en la frente del Joker y le entregó un arma a su antiguo mentor.",
+            "Obligado a elegir entre matar a su pupilo o salvar a su peor enemigo, Batman cortó la garganta de Jason con un batarang desatando una explosión. ¿Debió Batman liquidar al Joker?"
         ],
         "scene_art_urls": [
             "assets/curated_panels/batman_under_red_hood/scene_01.jpg",
             "assets/curated_panels/batman_under_red_hood/scene_02.jpg",
             "assets/curated_panels/batman_under_red_hood/scene_03.jpg",
-            "assets/curated_panels/batman_under_red_hood/scene_04.jpg"
+            "assets/curated_panels/batman_under_red_hood/scene_04.jpg",
+            "assets/curated_panels/batman_under_red_hood/scene_05.jpg"
         ],
         "art_queries": [
-            "Batman Under the Red Hood Jason Todd resurrection panel",
-            "Red Hood weapons beating criminals Gotham comic panel",
-            "Red Hood gun pointed at Joker Batman comic panel",
-            "Batman refusing kill Joker Red Hood dilemma panel"
+            "Batman Under the Red Hood Jason Todd resurrection mask panel",
+            "Batman remembering Jason Todd death memorial Robin costume panel",
+            "Red Hood weapons beating Black Mask criminals Gotham comic panel",
+            "Red Hood gun pointed at Joker Batman moral ultimatum panel",
+            "Batman batarang Jason Todd neck explosion Under the Red Hood panel"
         ]
     },
     {
@@ -377,25 +380,28 @@ EMERGENCY_VIRAL_POOL = [
         "character": "Hulk",
         "title": "¡Hulk Sometió al Rey de los Inhumanos! La Venganza Implacable que Hizo Temblar la Luna 🌕💥",
         "theme_signature": "hulk:black_bolt_luna:venganza_armadura_gladiador_destierro_derrota",
-        "description": "Tras ser desterrado al espacio por los Iluminati, Hulk regresó convertido en el Cicatriz Verde y humilló a Black Bolt en la superficie lunar.",
+        "description": "Tras ser desterrado al espacio por los Illuminati, Hulk regresó convertido en el Cicatriz Verde y humilló a Black Bolt en la superficie lunar.",
         "hashtags": "#Hulk #WorldWarHulk #BlackBolt #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "¡Traicionado por sus supuestos aliados, el gigante verde regresó a exigir venganza absoluta!",
-            "Con una armadura gladiadora forjada en batalla, juró someter a cada héroe que lo desterró.",
-            "En la luna, embistió al rey de los Inhumanos soportando el poder destructor de su voz.",
-            "Aplastó a Black Bolt sin piedad, exhibiendo su corona destrozada. ¿Fue justa la furia del coloso?"
+            "¡Traicionado y exiliado al espacio por sus propios compañeros vengadores, Hulk regresó a la Tierra con una sed insaciable de venganza absoluta!",
+            "Convertido en el colosal Cicatriz Verde de Sakaar y armado como gladiador cósmico, su primera parada estratégica fue la ciudadela de Attilan en la luna.",
+            "Allí lo esperaba Black Bolt, rey de los Inhumanos, cuya voz puede quebrar planetas enteros y quien había aprobado su cruel destierro intergaláctico.",
+            "El monarca susurró provocando una devastadora onda sónica que reventó cráteres lunares, pero un enfurecido Hulk resistió el impacto y lo noqueó a puño limpio.",
+            "Sujetando la corona destrozada del rey ante el cosmos, Hulk anunció que Nueva York sería la siguiente en caer bajo su furia. ¿Tenía Hulk derecho a cobrar venganza?"
         ],
         "scene_art_urls": [
             "assets/curated_panels/hulk_world_war/scene_01.jpg",
             "assets/curated_panels/hulk_world_war/scene_02.jpg",
             "assets/curated_panels/hulk_world_war/scene_03.jpg",
-            "assets/curated_panels/hulk_world_war/scene_04.jpg"
+            "assets/curated_panels/hulk_world_war/scene_04.jpg",
+            "assets/curated_panels/hulk_world_war/scene_05.jpg"
         ],
         "art_queries": [
-            "World War Hulk gladiator armor return comic panel",
-            "Hulk spaceship landing moon approach comic panel",
-            "Hulk vs Black Bolt sonic scream moon comic panel",
-            "Hulk holding defeated Black Bolt World War Hulk comic panel"
+            "World War Hulk gladiator armor approaching moon comic panel",
+            "Black Bolt confronting Hulk Attilan moon surface comic panel",
+            "Black Bolt whisper sonic destruction World War Hulk comic panel",
+            "Hulk taking Black Bolt sonic blast punching king comic panel",
+            "Hulk holding defeated Black Bolt World War Hulk revenge comic panel"
         ]
     },
     {
@@ -407,22 +413,25 @@ EMERGENCY_VIRAL_POOL = [
         "description": "En uno de los momentos más trágicos de Marvel, Bullseye y Elektra se enfrentaron a muerte en las calles de Hell's Kitchen.",
         "hashtags": "#Daredevil #Elektra #Bullseye #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "¡Hell's Kitchen presenció el duelo más sangriento cuando Bullseye emboscó a la letal Elektra!",
-            "En un choque despiadado en los tejados, el psicópata le arrebató uno de sus propios sais.",
-            "Con una frialdad macabra, atravesó el pecho de la guerrera ante el horror de la ciudad.",
-            "Moribunda, Elektra se arrastró hasta morir en brazos de Matt Murdock. ¿Merecía Bullseye la muerte?"
+            "¡Las sombras de Hell's Kitchen fueron testigo del enfrentamiento más sangriento y desgarrador entre los dos asesinos más letales de la ciudad!",
+            "Bullseye escapó de prisión obsesionado con recuperar su estatus como el sicario principal de Kingpin, puesto que ahora ocupaba la temible Elektra Natchios.",
+            "En una feroz batalla sobre los tejados, ambos guerreros intercambiaron estocadas mortales hasta que el psicópata desarmó a la ninja con una carta metálica.",
+            "Con una frialdad perturbadora, Bullseye le arrebató su propio sai y atravesó el torso de Elektra de lado a lado ante la mirada atónita de la noche.",
+            "Agonizando lentamente, la guerrera se arrastró por la ciudad hasta desplomarse y morir en los brazos de Matt Murdock. ¿Debió Daredevil romper su código y liquidar a Bullseye?"
         ],
         "scene_art_urls": [
             "assets/curated_panels/daredevil_muerte_elektra/scene_01.jpg",
             "assets/curated_panels/daredevil_muerte_elektra/scene_02.jpg",
             "assets/curated_panels/daredevil_muerte_elektra/scene_03.jpg",
-            "assets/curated_panels/daredevil_muerte_elektra/scene_04.jpg"
+            "assets/curated_panels/daredevil_muerte_elektra/scene_04.jpg",
+            "assets/curated_panels/daredevil_muerte_elektra/scene_05.jpg"
         ],
         "art_queries": [
-            "Elektra fighting assassin Daredevil comic panel",
-            "Bullseye impaling Elektra sai Daredevil 181 comic panel",
-            "Bullseye smiling killer Daredevil 181 comic panel",
-            "Elektra dying in Matt Murdock arms Daredevil comic panel"
+            "Bullseye confronting Elektra rooftops Daredevil 181 comic panel",
+            "Elektra sai fighting Bullseye playing card throw comic panel",
+            "Bullseye disarming Elektra grabbing sai weapon comic panel",
+            "Bullseye impaling Elektra chest sai Daredevil 181 iconic panel",
+            "Elektra crawling dying in Matt Murdock arms Daredevil comic panel"
         ]
     },
     {
@@ -434,22 +443,25 @@ EMERGENCY_VIRAL_POOL = [
         "description": "Cuando Juggernaut marchó por Manhattan para destruir a Madame Web, Spider-Man arriesgó su vida en una de las batallas más desesperadas de su historia.",
         "hashtags": "#SpiderMan #Juggernaut #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "¡Una colosal fuerza destructiva marchó imparable por Manhattan, aplastando todo a su paso!",
-            "Juggernaut destrozaba edificios persiguiendo a Madame Web, mientras Spider-Man usaba cables sin causarle daño.",
-            "Desesperado, el arácnido lo atrajo hasta los cimientos de una obra con una trampa calculada.",
-            "Juggernaut se hundió en una piscina de cemento líquido, quedando sepultado. ¿Fue la mayor hazaña de Peter?"
+            "¡Un coloso imparable de fuerza ilimitada caminó en línea recta por Manhattan, destruyendo rascacielos y vehículos sin que nadie pudiera frenarlo!",
+            "Enviado por Black Tom Cassidy para secuestrar los poderes psíquicos de Madame Web, Juggernaut ignoró barricadas militares aplastando todo obstáculo a su paso.",
+            "Spider-Man lo arriesgó todo electrocutándolo con transformadores de alto voltaje y derribándole grúas encima, pero el monstruo ni siquiera pestañeó ante los impactos.",
+            "Al borde del colapso físico, Peter Parker saltó sobre su espalda cubriéndole los ojos de la armadura para guiarlo a ciegas hacia una gigantesca construcción.",
+            "Juggernaut pisó en falso hundiéndose en una piscina de hormigón líquido de doce metros que se solidificó al instante, atrapándolo bajo tierra. ¿Es esta la mayor hazaña de Spider-Man?"
         ],
         "scene_art_urls": [
             "assets/curated_panels/spiderman_vs_juggernaut/scene_01.jpg",
             "assets/curated_panels/spiderman_vs_juggernaut/scene_02.jpg",
             "assets/curated_panels/spiderman_vs_juggernaut/scene_03.jpg",
-            "assets/curated_panels/spiderman_vs_juggernaut/scene_04.jpg"
+            "assets/curated_panels/spiderman_vs_juggernaut/scene_04.jpg",
+            "assets/curated_panels/spiderman_vs_juggernaut/scene_05.jpg"
         ],
         "art_queries": [
-            "Amazing Spider-Man 229 Juggernaut marching city comic panel",
-            "Spider-Man attacking Juggernaut power cables comic panel",
-            "Spider-Man leading Juggernaut construction site comic panel",
-            "Juggernaut sinking wet cement trapped Spider-Man comic panel"
+            "Amazing Spider-Man 229 Juggernaut walking through building debris panel",
+            "Madame Web life support chair terrified Juggernaut approaching panel",
+            "Spider-Man throwing electric transformers at Juggernaut comic panel",
+            "Spider-Man jumping on Juggernaut helmet webbing eyes comic panel",
+            "Juggernaut sinking wet cement foundation trapped Spider-Man 230 panel"
         ]
     },
     {
@@ -470,13 +482,15 @@ EMERGENCY_VIRAL_POOL = [
             "assets/curated_panels/wolverine_muerte_adamantium/scene_01.jpg",
             "assets/curated_panels/wolverine_muerte_adamantium/scene_02.jpg",
             "assets/curated_panels/wolverine_muerte_adamantium/scene_03.jpg",
-            "assets/curated_panels/wolverine_muerte_adamantium/scene_04.jpg"
+            "assets/curated_panels/wolverine_muerte_adamantium/scene_04.jpg",
+            "assets/curated_panels/wolverine_muerte_adamantium/scene_05.jpg"
         ],
         "art_queries": [
             "Wolverine wounded claws out final mission comic panel",
             "Doctor Cornelius lab Weapon X experiment Death of Wolverine panel",
-            "Wolverine covered hot liquid adamantium Death of Wolverine 4 panel",
-            "Wolverine adamantium statue sunset Death of Wolverine comic panel"
+            "Wolverine slashing adamantium pipes tanks claws comic panel",
+            "Wolverine drenched liquid molten silver adamantium Death of Wolverine panel",
+            "Wolverine solid adamantium statue sunset roof Death of Wolverine 4 panel"
         ]
     },
     {
@@ -488,22 +502,25 @@ EMERGENCY_VIRAL_POOL = [
         "description": "Durante la guerra de Original Sin, Nick Fury le susurró un secreto cósmico a Thor que quebró su fe divina y le impidió levantar su propio martillo.",
         "hashtags": "#Thor #OriginalSin #Mjolnir #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "¡El Dios del Trueno era invencible en combate, hasta que un anciano humano reveló su mayor pecado!",
-            "En la superficie lunar, un Nick Fury cósmico se acercó a su oído susurrándole tres palabras prohibidas.",
-            "La revelación destrozó la fe de Thor, haciendo que el Mjolnir cayera al suelo lunar como plomo inerte.",
-            "Por más que tiró con toda su fuerza, jamás pudo volver a levantarlo. ¿Tenía razón Gorr sobre los dioses?"
+            "¡El Dios del Trueno era considerado el guerrero más digno del universo, hasta que un secreto cósmico desmoronó toda su divinidad en un instante!",
+            "Tras la misteriosa muerte del Vigilante Uatu en la luna, los secretos más oscuros de los héroes de la Tierra salieron a la luz sin censura.",
+            "En medio de una sangrienta batalla lunar, un envejecido Nick Fury dotado del conocimiento cósmico se acercó al oído de Thor susurrándole tres demoledoras palabras.",
+            "Fury le reveló que el Carnicero de Dioses tenía razón y que los dioses solo traen ruina, quebrando la fe que Thor tenía en sí mismo.",
+            "El poderoso Mjolnir cayó al polvo lunar como plomo inútil, y por más que Odinson tiró con desesperación, jamás pudo moverlo un solo milímetro. ¿Tenía razón Gorr sobre los dioses?"
         ],
         "scene_art_urls": [
             "assets/curated_panels/thor_unworthy_susurro/scene_01.jpg",
             "assets/curated_panels/thor_unworthy_susurro/scene_02.jpg",
             "assets/curated_panels/thor_unworthy_susurro/scene_03.jpg",
-            "assets/curated_panels/thor_unworthy_susurro/scene_04.jpg"
+            "assets/curated_panels/thor_unworthy_susurro/scene_04.jpg",
+            "assets/curated_panels/thor_unworthy_susurro/scene_05.jpg"
         ],
         "art_queries": [
-            "Thor Odinson fighting Avengers Original Sin comic panel",
-            "Nick Fury whispering Thor ear moon Original Sin 7 comic panel",
-            "Mjolnir dropped on moon surface unable to lift comic panel",
-            "Thor weeping on knees unworthy Mjolnir comic panel"
+            "Thor lightning Mjolnir celestial battle Original Sin comic panel",
+            "Watcher Uatu eye secrets cosmic Nick Fury Original Sin panel",
+            "Nick Fury whispering into Thor ear moon surface Original Sin 7 panel",
+            "Mjolnir falling hitting moon dust Thor horrified comic panel",
+            "Thor on knees weeping pulling Mjolnir Unworthy Thor comic panel"
         ]
     },
     {
@@ -515,22 +532,25 @@ EMERGENCY_VIRAL_POOL = [
         "description": "Cuando el Joker infectó a la Liga de la Justicia con una toxina homicida, Batman desató la armadura Fenrir para someter a sus mejores amigos.",
         "hashtags": "#Batman #JusticeLeague #Endgame #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "¡El Joker envenenó a la Liga de la Justicia con una toxina sádica, enviándolos a masacrar a Batman!",
-            "Wonder Woman, Flash y Aquaman atacaron con furia ciega, destruyendo cuadras enteras en Ciudad Gótica.",
-            "Para sobrevivir, Bruce activó la colosal armadura Fenrir, diseñada con contramedidas letales para cada héroe.",
-            "Neutralizó a sus mejores amigos uno tras otro en una brutalidad desgarradora. ¿Es Batman la mayor amenaza de la Tierra?"
+            "¡El Joker infectó a la Liga de la Justicia con una variante macabra de su toxina, enviando a los héroes más poderosos a asesinar a Batman!",
+            "Wonder Woman, Flash y Aquaman atacaron Gotham con una furia sádica descomunal, arrasando manzanas enteras sin mostrar una pizca de cordura o piedad.",
+            "Ante la aniquilación inminente, Bruce Wayne activó la colosal armadura Fenrir, conocida como el Justice Buster, equipada con contramedidas científicas para neutralizar a cada compañero.",
+            "Usó tejido místico contra Diana, servidores ultraveloces contra Flash y espuma de carbonato contra Aquaman, hasta que un Superman poseído destrozó la cabina desde el aire.",
+            "Acorralado y sin armadura, Batman escupió una cápsula de polvo de kriptonita directo a los ojos del Hombre de Acero para noquearlo. ¿Es Batman la mente más peligrosa del universo?"
         ],
         "scene_art_urls": [
             "assets/curated_panels/batman_justice_buster/scene_01.jpg",
             "assets/curated_panels/batman_justice_buster/scene_02.jpg",
             "assets/curated_panels/batman_justice_buster/scene_03.jpg",
-            "assets/curated_panels/batman_justice_buster/scene_04.jpg"
+            "assets/curated_panels/batman_justice_buster/scene_04.jpg",
+            "assets/curated_panels/batman_justice_buster/scene_05.jpg"
         ],
         "art_queries": [
-            "Batman Endgame Wonder Woman attacking Batman comic panel",
-            "Justice League infected Joker toxin attacking Batman Endgame comic panel",
-            "Justice Buster armor Batman Endgame comic panel",
-            "Batman Endgame Superman vs Justice Buster comic panel"
+            "Wonder Woman Joker venom attacking Batman Batman Endgame 35 panel",
+            "Justice League infected Joker smiles destroying Gotham Batman 35 panel",
+            "Batman Justice Buster Fenrir armor deploying Gotham Batman 35 panel",
+            "Superman Joker toxin attacking Justice Buster armor Batman 36 panel",
+            "Batman spitting kryptonite gum Superman eye Batman Endgame 36 panel"
         ]
     }
 ]
@@ -601,14 +621,15 @@ FÓRMULA VIRAL DE 400K REPRODUCCIONES (OBLIGATORIA):
      * "¡Superman Cruzó la Línea! La Brutal Lobotomía que Aterró al Mundo 😱🩸"
    - PROHIBIDO títulos aburridos tipo enciclopedia o "Personaje: El Día que...".
 
-2. GUION DE RETENCIÓN HIPNÓTICA (EXACTAMENTE 4 ESCENAS, 55 A 65 PALABRAS TOTALES):
-   - Escena 1 (Gancho de adrenalina en los primeros 3 segundos): PROHIBIDO empezar con "¿Sabías que...?". Entra directo al conflicto o tabú quebrado (14-16 palabras).
-   - Escena 2 (Escalada de tensión): Revela la gravedad de la situación o la monstruosidad del enemigo (14-16 palabras).
-   - Escena 3 (Clímax de acción/horror): El golpe devastador, la ejecución o la transformación visual cumbre (14-16 palabras).
-   - Escena 4 (Desenlace + Gatillo de debate viral): Conclusión épica que cierra OBLIGATORIAMENTE con una pregunta provocadora que obligue al espectador a comentar y compartir (15-18 palabras). Ej: "¿Crees que Peter debió matarlo para siempre?", "¿Es Batman el ser más peligroso de la Tierra?".
+2. GUION DE RETENCIÓN HIPNÓTICA (EXACTAMENTE 5 ESCENAS, 125 A 150 PALABRAS TOTALES, DURACIÓN 50 A 60 SEGUNDOS):
+   - Escena 1 (Gancho directo y tabú quebrado en el cómic): PROHIBIDO empezar con "¿Sabías que...?". Entra directo al conflicto o tabú quebrado en las viñetas (22-26 palabras).
+   - Escena 2 (Origen y contexto del cómic): Explica la motivación oculta, el número del cómic y por qué la situación llegó a un punto límite (24-28 palabras).
+   - Escena 3 (Escalada y tensión del enfrentamiento): El choque de fuerzas, las líneas de diálogo icónicas o la resistencia desesperada (24-28 palabras).
+   - Escena 4 (Clímax gráfico y horror/acción cumbre): El golpe devastador, la ejecución o la revelación visual cumbre (24-28 palabras).
+   - Escena 5 (Desenlace canónico del cómic + Gatillo de debate viral): Conclusión épica de cómo termina la historia en las viñetas, cerrando OBLIGATORIAMENTE con una pregunta provocadora que obligue al espectador a comentar y compartir (28-34 palabras). Ej: "¿Crees que Peter debió matarlo para siempre?", "¿Es Batman el ser más peligroso de la Tierra?".
 
 3. VIÑETAS DE CÓMIC (art_queries):
-   - Proporciona exactamente 4 términos de búsqueda en INGLÉS súper CONCISOS (de 3 a 5 palabras clave, ej: 'Superman Action Comics 775 heat vision panel', 'Batman Endgame Justice Buster comic', 'Spider-Man black suit fury panel').
+   - Proporciona exactamente 5 términos de búsqueda en INGLÉS súper CONCISOS (de 3 a 5 palabras clave, ej: 'Superman Action Comics 775 heat vision panel', 'Batman Endgame Justice Buster comic', 'Spider-Man black suit fury panel').
 
 Devuelve ÚNICAMENTE un objeto JSON válido con este esquema:
 {{
@@ -621,15 +642,17 @@ Devuelve ÚNICAMENTE un objeto JSON válido con este esquema:
   "hashtags": "#ComicLoreVault #ComicsNarrados #Marvel #DC #Reels #Shorts",
   "scenes": [
     "Texto directo escena 1 (sin sabias que)...",
-    "Texto escalada escena 2...",
-    "Texto climax escena 3...",
-    "Texto desenlace y pregunta debate escena 4..."
+    "Texto origen y contexto escena 2...",
+    "Texto escalada y combate escena 3...",
+    "Texto climax visual escena 4...",
+    "Texto desenlace canonico y pregunta debate escena 5..."
   ],
   "art_queries": [
     "Busqueda concisa escena 1",
     "Busqueda concisa escena 2",
     "Busqueda concisa escena 3",
-    "Busqueda concisa escena 4"
+    "Busqueda concisa escena 4",
+    "Busqueda concisa escena 5"
   ]
 }}
 """
