@@ -348,16 +348,21 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
             log(f"Scene {idx}: Explicit target '{target}' is a comic cover! Banned by Quality Shield to enforce interior action panels.")
             target = None
 
-        # Si target es un archivo local verificado en el repositorio, usarlo directamente
+        # Si target es un archivo local en el repositorio, auditarlo con Gemini Vision antes de usarlo
         if target and not saved:
             local_cand = Path(target)
             if not local_cand.is_absolute():
                 local_cand = Path.cwd() / target
             if local_cand.is_file() and local_cand.stat().st_size > 10000:
-                import shutil
-                shutil.copy2(str(local_cand), str(img_file))
-                saved = True
-                log(f"Scene {idx}: Using local verified authentic comic panel from repository: '{target}'")
+                from .comic_precision_scraper import verify_visual_alignment_with_gemini
+                val = verify_visual_alignment_with_gemini(str(local_cand), narration)
+                if val.get("is_comic_panel") and val.get("score", 0) >= 6 and (val.get("score", 0) >= 7 or val.get("depicts_action")):
+                    import shutil
+                    shutil.copy2(str(local_cand), str(img_file))
+                    saved = True
+                    log(f"Scene {idx}: Using verified local authentic panel (Gemini Score: {val['score']}/10): '{target}' - {val['reason']}")
+                else:
+                    log(f"Scene {idx}: Local file '{target}' REJECTED by Visual Alignment Shield (Score: {val.get('score')}/10, Comic: {val.get('is_comic_panel')}, Action: {val.get('depicts_action')}). Reason: {val.get('reason')}. Falling back to multi-source scraper.")
 
         # Primary: Multi-Source Precision Scraper with Gemini Vision Referee
         if not saved:
@@ -526,7 +531,19 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
                 "Detected real-life photo, non-comic object, or live-action actor. Halting video compilation."
             )
 
-    log("Production Quality Gate: ALL CHECKS PASSED (100% Unique Panels, 0 Duplicates, High Resolution, Verified Comic Art).")
+    # 4. Mandatory Gemini Vision Visual Alignment Audit across all generated scene panels
+    from .comic_precision_scraper import verify_visual_alignment_with_gemini
+    for idx_img, (p, scene_text) in enumerate(zip(downloaded_images, story["scenes"]), 1):
+        v_res = verify_visual_alignment_with_gemini(str(p), scene_text)
+        log(f"Quality Gate Visual Alignment Audit Scene {idx_img}: Score {v_res.get('score')}/10 (Comic: {v_res.get('is_comic_panel')}, Action: {v_res.get('depicts_action')}) - {v_res.get('reason')}")
+        if not v_res.get("is_comic_panel") or v_res.get("score", 0) < 6:
+            raise RuntimeError(
+                f"QUALITY GATE FATAL ERROR: Scene {idx_img} failed visual alignment audit (Score {v_res.get('score')}/10 < 6). "
+                f"Narration: '{scene_text[:60]}...'. Reason: {v_res.get('reason')}. "
+                "Halting production to prevent misaligned or irrelevant visual content from being published."
+            )
+
+    log("Production Quality Gate: ALL CHECKS PASSED (100% Unique Panels, 0 Duplicates, High Resolution, Verified Comic Art, 100% Visual-Narration Sync).")
 
     script_data = {
         "metadata": {

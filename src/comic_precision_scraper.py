@@ -207,28 +207,46 @@ def get_issue_category_panels(wiki_domain: str, query_str: str) -> list:
             if not re.search(r'\b(earth|season|episode|universe|movie|film)\b', cand, re.IGNORECASE):
                 issue_name = cand
 
-    if not issue_name or len(issue_name) < 4:
+    # Prioridad 3: Buscar patrón simple '<Comic Title> <IssueNumber>' (ej: 'Amazing Spider-Man 229' -> 'Amazing Spider-Man Vol 1 229')
+    candidates_to_try = []
+    if issue_name:
+        candidates_to_try.append(issue_name)
+    else:
+        m_simple = re.search(r'([A-Za-z\s\-]+?)\s+(\d{1,4})\b', cleaned, re.IGNORECASE)
+        if m_simple:
+            title_p = m_simple.group(1).strip()
+            num_p = m_simple.group(2).strip()
+            # Descartar palabras reservadas o metadatos
+            if len(title_p) > 3 and not re.search(r'\b(earth|season|episode|universe|movie|film|scene|panel|scan)\b', title_p, re.IGNORECASE):
+                candidates_to_try.append(f"{title_p} Vol 1 {num_p}")
+                candidates_to_try.append(f"{title_p} {num_p}")
+
+    if not candidates_to_try:
         return []
 
     url = f"https://{wiki_domain}/api.php"
-    params = {
-        "action": "query",
-        "list": "categorymembers",
-        "cmtitle": f"Category:{issue_name}/Images",
-        "cmnamespace": 6,
-        "format": "json",
-        "cmlimit": 35
-    }
-    try:
-        r = requests.get(url, params=params, headers=HEADERS, timeout=10)
-        items = r.json().get("query", {}).get("categorymembers", [])
-        return [
-            it["title"] for it in items
-            if not is_cover_or_promo_image(it["title"])
-            and not any(bad in it["title"].lower() for bad in DISALLOWED_SCRAPER_KEYWORDS)
-        ]
-    except Exception:
-        return []
+    for cand_issue in candidates_to_try:
+        params = {
+            "action": "query",
+            "list": "categorymembers",
+            "cmtitle": f"Category:{cand_issue}/Images",
+            "cmnamespace": 6,
+            "format": "json",
+            "cmlimit": 35
+        }
+        try:
+            r = requests.get(url, params=params, headers=HEADERS, timeout=10)
+            items = r.json().get("query", {}).get("categorymembers", [])
+            valid_items = [
+                it["title"] for it in items
+                if not is_cover_or_promo_image(it["title"])
+                and not any(bad in it["title"].lower() for bad in DISALLOWED_SCRAPER_KEYWORDS)
+            ]
+            if valid_items:
+                return valid_items
+        except Exception:
+            continue
+    return []
 
 
 def search_fandom_files(wiki_domain: str, query: str, max_results: int = 8) -> list:
@@ -299,15 +317,16 @@ def search_bing_comic_panels(query: str, limit: int = 8) -> list:
     }
 
     clean_q = re.sub(r'\b(comic|panel|scan|scans)\b', '', query, flags=re.IGNORECASE).strip()
-    words = [w for w in clean_q.split() if len(w) > 2]
-    
-    # Generar variantes de búsqueda: completa y simplificada (3-4 palabras clave)
-    variants = [f"{clean_q} comic panel scan"]
+    neg_ops = "-movie -film -actor -live-action -mcu -trailer -cinematic -cosplay -figure -toy -solitaire -species"
+    variants = [
+        f"{clean_q} comic panel scan {neg_ops}",
+        f"\"{clean_q}\" comic scan {neg_ops}"
+    ]
     if len(words) > 4:
-        variants.append(f"{' '.join(words[:4])} comic panel")
-        variants.append(f"{words[0]} {words[-1]} comic panel scan")
+        variants.append(f"{' '.join(words[:4])} comic panel {neg_ops}")
+        variants.append(f"{words[0]} {words[-1]} comic panel scan {neg_ops}")
     elif len(words) >= 2:
-        variants.append(f"{' '.join(words)} comic panel")
+        variants.append(f"{' '.join(words)} comic panel {neg_ops}")
 
     collected_urls = []
     disallowed = [
@@ -316,7 +335,8 @@ def search_bing_comic_panels(query: str, limit: int = 8) -> list:
         'shutterstock', 'alamy', 'gettyimages', 'getty', 'istockphoto', 'istock',
         'dreamstime', 'depositphotos', '123rf', 'freepik', 'vectorstock', 'stockphoto',
         'stockvault', 'bigstockphoto', 'canva', 'vecteezy', 'clipart', 'vector',
-        'watermark', 'stock-photo', 'stock-vector'
+        'watermark', 'stock-photo', 'stock-vector', 'solitaire', 'spider-solitaire',
+        'arachnid', 'macro-photography'
     ]
 
     for v in variants:

@@ -1526,10 +1526,10 @@ EDITORIAL_STORIES = [
         "hashtags": "#SpiderMan #Juggernaut #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
             "¡Un coloso imparable de fuerza ilimitada caminó en línea recta por Manhattan, destruyendo rascacielos y vehículos sin que nadie pudiera frenarlo!",
-            "Enviado por Black Tom Cassidy para secuestrar los poderes psíquicos de Madame Web, Juggernaut ignoró barricadas militares aplastando todo obstáculo a su paso.",
+            "Enviado por Black Tom para robar los poderes psíquicos de Madame Web, Juggernaut la arrancó de su soporte vital dejándola al borde de la muerte.",
             "Spider-Man lo arriesgó todo electrocutándolo con transformadores de alto voltaje y derribándole grúas encima, pero el monstruo ni siquiera pestañeó ante los impactos.",
-            "Al borde del colapso físico, Peter Parker saltó sobre su espalda cubriéndole los ojos de la armadura para guiarlo a ciegas hacia una gigantesca construcción.",
-            "Juggernaut pisó en falso hundiéndose en una piscina de hormigón líquido de doce metros que se solidificó al instante, atrapándolo bajo tierra. ¿Es esta la mayor hazaña de Spider-Man?"
+            "Al borde del colapso físico, Peter Parker saltó sobre su espalda cubriéndole los ojos para guiarlo a ciegas hacia una fosa de cemento fresco.",
+            "Sin poder impulsarse, Juggernaut se hundió irremediablemente en la piscina de hormigón líquido hasta quedar sepultado bajo tierra. ¿Es esta la mayor hazaña de Spider-Man?"
         ],
         "scene_art_urls": [
             "assets/curated_panels/spiderman_vs_juggernaut/scene_01.jpg",
