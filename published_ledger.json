@@ -1458,5 +1458,15 @@
     "mode": "live_release",
     "video_file": "Supergirl_Sucumbió_a_la_Furia_Roja_El_Terror_de_la_Hija_de_Krypton.mp4",
     "status": "published"
+  },
+  {
+    "id": "nova_richard_rider_desgarro_annihilus",
+    "title": "¡Nova le Arrancó las Entrañas a Annihilus! La Venganza Más Brutal del Cosmos 🌌⚡",
+    "character": "Nova",
+    "theme_signature": "nova:richard_rider:annihilation:annihilus:venganza",
+    "date": "2026-10-14 10:07",
+    "mode": "live_release",
+    "video_file": "Nova_le_Arrancó_las_Entrañas_a_Annihilus_La_Venganza_Más_Brutal_del_Cosmos.mp4",
+    "status": "published"
   }
 ]
