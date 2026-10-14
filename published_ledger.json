@@ -1468,5 +1468,15 @@
     "mode": "live_release",
     "video_file": "Nova_le_Arrancó_las_Entrañas_a_Annihilus_La_Venganza_Más_Brutal_del_Cosmos.mp4",
     "status": "published"
+  },
+  {
+    "id": "red_goblin_norman_osborn_simbionte_carnage",
+    "title": "¡Nació el Duende Rojo! La Fusión Monstruosa de Norman Osborn y Carnage 🩸🎃",
+    "character": "Norman Osborn",
+    "theme_signature": "norman_osborn:carnage:duende_rojo:fusion_simbionte:pesadilla",
+    "date": "2026-10-14 16:00",
+    "mode": "live_release",
+    "video_file": "Nació_el_Duende_Rojo_La_Fusión_Monstruosa_de_Norman_Osborn_y_Carnage.mp4",
+    "status": "published"
   }
 ]
