@@ -1478,5 +1478,15 @@
     "mode": "live_release",
     "video_file": "Nació_el_Duende_Rojo_La_Fusión_Monstruosa_de_Norman_Osborn_y_Carnage.mp4",
     "status": "published"
+  },
+  {
+    "id": "larfleeze_orange_lantern_avaricia_absoluta",
+    "title": "¡Larfleeze: Un Hombre y Todo un Ejército de Avaricia Cósmica! 🧡💎",
+    "character": "Larfleeze",
+    "theme_signature": "larfleeze:agent_orange:avaricia_bateria:anillo_naranja:ego",
+    "date": "2026-10-14 18:54",
+    "mode": "live_release",
+    "video_file": "Larfleeze_Un_Hombre_y_Todo_un_Ejército_de_Avaricia_Cósmica.mp4",
+    "status": "published"
   }
 ]
