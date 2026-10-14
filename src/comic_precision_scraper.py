@@ -35,11 +35,11 @@ WIKI_DOMAINS = [
 ]
 
 CANDIDATE_VISION_MODELS = [
-    "gemini-2.5-flash",
-    "gemini-2.5-flash-lite",
-    "gemini-flash-latest",
+    "gemini-3.5-flash",
+    "gemini-3.6-flash",
     "gemini-flash-lite-latest",
-    "gemini-2.0-flash"
+    "gemini-3.8-flash",
+    "gemini-2.5-flash"
 ]
 
 # -------------------------------------------------------------------------
@@ -317,6 +317,7 @@ def search_bing_comic_panels(query: str, limit: int = 8) -> list:
     }
 
     clean_q = re.sub(r'\b(comic|panel|scan|scans)\b', '', query, flags=re.IGNORECASE).strip()
+    words = clean_q.split()
     neg_ops = "-movie -film -actor -live-action -mcu -trailer -cinematic -cosplay -figure -toy -solitaire -species"
     variants = [
         f"{clean_q} comic panel scan {neg_ops}",
@@ -435,7 +436,8 @@ def verify_visual_alignment_with_gemini(image_path: str, scene_text: str) -> dic
     Utiliza el pool completo de claves de Gemini para máxima disponibilidad.
     """
     from .gemini_tts import get_candidate_keys
-    keys_to_try = get_candidate_keys()
+    raw_keys = get_candidate_keys()
+    keys_to_try = [k for k in raw_keys if k.startswith("AIzaSy")] + [k for k in raw_keys if not k.startswith("AIzaSy")]
 
     if not scene_text or not os.path.exists(image_path):
         return {"score": 1, "is_comic_panel": False, "depicts_action": False, "reason": "Entrada inválida"}

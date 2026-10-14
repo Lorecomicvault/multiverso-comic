@@ -19,11 +19,11 @@ from pathlib import Path
 from PIL import Image, ImageStat
 
 CANDIDATE_MODELS = [
-    "gemini-2.5-flash",
-    "gemini-2.5-flash-lite",
-    "gemini-flash-latest",
+    "gemini-3.5-flash",
+    "gemini-3.6-flash",
     "gemini-flash-lite-latest",
-    "gemini-2.0-flash",
+    "gemini-3.8-flash",
+    "gemini-2.5-flash",
 ]
 
 HEADERS = {
@@ -538,19 +538,192 @@ EMERGENCY_VIRAL_POOL = [
             "Usó tejido místico contra Diana, servidores ultraveloces contra Flash y espuma de carbonato contra Aquaman, hasta que un Superman poseído destrozó la cabina desde el aire.",
             "Acorralado y sin armadura, Batman escupió una cápsula de polvo de kriptonita directo a los ojos del Hombre de Acero para noquearlo. ¿Es Batman la mente más peligrosa del universo?"
         ],
-        "scene_art_urls": [
-            "assets/curated_panels/batman_justice_buster/scene_01.jpg",
-            "assets/curated_panels/batman_justice_buster/scene_02.jpg",
-            "assets/curated_panels/batman_justice_buster/scene_03.jpg",
-            "assets/curated_panels/batman_justice_buster/scene_04.jpg",
-            "assets/curated_panels/batman_justice_buster/scene_05.jpg"
-        ],
         "art_queries": [
             "Wonder Woman Joker venom attacking Batman Batman Endgame 35 panel",
             "Justice League infected Joker smiles destroying Gotham Batman 35 panel",
             "Batman Justice Buster Fenrir armor deploying Gotham Batman 35 panel",
             "Superman Joker toxin attacking Justice Buster armor Batman 36 panel",
             "Batman spitting kryptonite gum Superman eye Batman Endgame 36 panel"
+        ]
+    },
+    {
+        "id": "nova_richard_rider_desgarro_annihilus",
+        "universe": "Marvel",
+        "character": "Nova",
+        "title": "¡Nova le Arrancó las Entrañas a Annihilus! La Venganza Más Brutal del Cosmos 🌌⚡",
+        "theme_signature": "nova:richard_rider:annihilation:annihilus:venganza",
+        "description": "Con el universo al borde de la extinción ante la Ola de Aniquilación, Nova libró un duelo a muerte contra Annihilus para vengar al Cuerpo Nova.",
+        "hashtags": "#Nova #Annihilation #MarvelComics #RichardRider #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Cuando la Ola de Aniquilación arrasó galaxias enteras masacrando a billones de seres, el universo entero quedó al borde de la extinción total!",
+            "Annihilus, el implacable señor de la Zona Negativa, marchó conquistando planetas y aniquilando al legendario Cuerpo Nova hasta dejar a un único superviviente.",
+            "Cargando con toda la Nova Force en sus venas, Richard Rider lideró el Frente Unido lanzándose en una última misión suicida contra el tirano cósmico.",
+            "En un choque salvaje cuerpo a cuerpo, Nova metió su brazo directo por las fauces de Annihilus y tiró con toda su alma arrancándole las entrañas desde adentro.",
+            "Sosteniendo los restos del tirano en el vacío espacial, Nova salvó al cosmos demostrando hasta dónde llega la voluntad de un héroe. ¿Fue esta la victoria más sangrienta de Marvel?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/nova_annihilus_desgarro/scene_01.jpg",
+            "assets/curated_panels/nova_annihilus_desgarro/scene_02.jpg",
+            "assets/curated_panels/nova_annihilus_desgarro/scene_03.jpg",
+            "assets/curated_panels/nova_annihilus_desgarro/scene_04.jpg",
+            "assets/curated_panels/nova_annihilus_desgarro/scene_05.jpg"
+        ],
+        "art_queries": [
+            "Annihilation Wave destroying galaxy cosmic fleet Annihilation comic scan",
+            "Annihilus warlord conqueror Negative Zone Annihilation comic panel scan",
+            "Nova Richard Rider full Nova Force charging Annihilation comic scan",
+            "Nova turning Annihilus inside out Annihilation 6 comic panel scan",
+            "Nova Richard Rider floating space victorious Annihilation 6 comic panel"
+        ]
+    },
+    {
+        "id": "red_goblin_norman_osborn_simbionte_carnage",
+        "universe": "Marvel",
+        "character": "Norman Osborn",
+        "title": "¡Nació el Duende Rojo! La Fusión Monstruosa de Norman Osborn y Carnage 🩸🎃",
+        "theme_signature": "norman_osborn:carnage:duende_rojo:fusion_simbionte:pesadilla",
+        "description": "Desesperado por destruir a Spider-Man tras perder su suero, Norman Osborn se vinculó con el simbionte Carnage para convertirse en el letal Red Goblin.",
+        "hashtags": "#SpiderMan #RedGoblin #Carnage #NormanOsborn #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Inmune al fuego y sordo a las ondas sonoras, Norman Osborn creó al monstruo definitivo cuando fusionó su mente retorcida con el simbionte de Carnage!",
+            "Al haber perdido los poderes del Duende Verde, Osborn robó al simbionte asesino de Cletus Kasady para desatar una cacería implacable contra Peter Parker.",
+            "De su unión nació el Duende Rojo, una pesadilla carmesí que infectó a su propio nieto Normie con microduendes simbióticos para obligarlo a matar.",
+            "Desesperado ante la masacre, Spider-Man tuvo que vestir el simbionte de Venom y provocar el ego de Norman para que abandonara al monstruo y pelearan mano a mano.",
+            "Norman fue derrotado, pero el trauma cerebral lo dejó atrapado creyendo que él era Cletus Kasady para siempre. ¿Es el Duende Rojo la peor versión de Osborn?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/red_goblin_osborn_carnage/scene_01.jpg",
+            "assets/curated_panels/red_goblin_osborn_carnage/scene_02.jpg",
+            "assets/curated_panels/red_goblin_osborn_carnage/scene_03.jpg",
+            "assets/curated_panels/red_goblin_osborn_carnage/scene_04.jpg",
+            "assets/curated_panels/red_goblin_osborn_carnage/scene_05.jpg"
+        ],
+        "art_queries": [
+            "Red Goblin Norman Osborn Carnage first appearance Amazing Spider-Man 798 comic scan",
+            "Norman Osborn holding Carnage symbiote tube Amazing Spider-Man 795 comic scan",
+            "Red Goblin smiling fire Carnage glider Amazing Spider-Man comic panel",
+            "Spider-Man Venom symbiote fighting Red Goblin Amazing Spider-Man 800 comic scan",
+            "Norman Osborn insane Ravencroft thinking he is Cletus Kasady Amazing Spider-Man 800 comic scan"
+        ]
+    },
+    {
+        "id": "wonder_woman_ceguera_decapito_medusa",
+        "universe": "DC",
+        "character": "Wonder Woman",
+        "title": "¡Wonder Woman se Arrancó la Vista! El Sacrificio que Destruyó a Medusa ⚔️🐍",
+        "theme_signature": "wonder_woman:diana_prince:ceguera:medusa_decapitacion:sacrificio",
+        "description": "Para derrotar a la Gorgona Medusa y salvar a millones de inocentes, Diana Prince derramó veneno en sus propios ojos antes de blandir su espada.",
+        "hashtags": "#WonderWoman #Medusa #DCComics #DianaPrince #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Para salvar la vida de miles de inocentes amenazados por la mirada petrificante de Medusa, Wonder Woman cometió el mayor sacrificio físico de su vida!",
+            "Resucitada por Circe en el Yankee Stadium, la Gorgona desafió a Diana a un duelo a muerte transmitido en vivo ante la mirada aterrada de todo el planeta.",
+            "Sabiendo que un solo reflejo en sus ojos la convertiría en piedra instantáneamente, Diana tomó una serpiente venenosa y restregó su letal fluido directo sobre sus pupilas.",
+            "Completamente ciega y guiándose únicamente por sus sentidos de guerrera amazona, Diana esquivó los ataques de Medusa y le cercenó la cabeza de un solo tajo de espada.",
+            "Alzando la cabeza de serpientes ante la multitud perpleja, Diana demostró que la verdadera visión de un héroe no depende de sus ojos. ¿Fue este su combate más glorioso?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/wonder_woman_ceguera_medusa/scene_01.jpg",
+            "assets/curated_panels/wonder_woman_ceguera_medusa/scene_02.jpg",
+            "assets/curated_panels/wonder_woman_ceguera_medusa/scene_03.jpg",
+            "assets/curated_panels/wonder_woman_ceguera_medusa/scene_04.jpg",
+            "assets/curated_panels/wonder_woman_ceguera_medusa/scene_05.jpg"
+        ],
+        "art_queries": [
+            "Wonder Woman Diana Prince armor sword Wonder Woman 210 comic scan",
+            "Medusa Gorgon snakes hair Yankee Stadium Wonder Woman 209 comic scan",
+            "Wonder Woman blinding herself snake venom eyes Wonder Woman 210 comic scan",
+            "Wonder Woman blind slicing Medusa head sword Wonder Woman 210 comic scan",
+            "Wonder Woman holding severed Medusa head blind bleeding eyes comic scan"
+        ]
+    },
+    {
+        "id": "larfleeze_orange_lantern_avaricia_absoluta",
+        "universe": "DC",
+        "character": "Larfleeze",
+        "title": "¡Larfleeze: Un Hombre y Todo un Ejército de Avaricia Cósmica! 🧡💎",
+        "theme_signature": "larfleeze:agent_orange:avaricia_bateria:anillo_naranja:ego",
+        "description": "Durante milenios, Larfleeze fue el único portador de la batería naranja, conjurando los espectros energéticos de todos los guerreros que asesinó.",
+        "hashtags": "#Larfleeze #GreenLantern #AgentOrange #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡En lo profundo del sistema Vega habita un ser tan consumido por la codicia que la luz naranja de la avaricia lo convirtió en su único portador!",
+            "Conocido como el Agente Naranja, Larfleeze custodió durante millones de años la batería de poder en Okaara, jurando que todo lo que existe le pertenece.",
+            "A diferencia de otras corporaciones, él no comparte sus anillos: cada víctima que aniquila es resucitada como un constructo espectral de luz anaranjada bajo su mando.",
+            "Cuando los Guardianes del Universo intentaron despojarlo de su tesoro, Larfleeze desató su ejército de espectros devoradores poniendo de rodillas al Cuerpo de Linternas Verdes.",
+            "Aislado y abrazando su batería mientras grita que el cosmos es suyo, Larfleeze representa la soledad eterna de la avaricia. ¿Es el espectro naranja el más peligroso de DC?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/larfleeze_orange_lantern_avaricia/scene_01.jpg",
+            "assets/curated_panels/larfleeze_orange_lantern_avaricia/scene_02.jpg",
+            "assets/curated_panels/larfleeze_orange_lantern_avaricia/scene_03.jpg",
+            "assets/curated_panels/larfleeze_orange_lantern_avaricia/scene_04.jpg",
+            "assets/curated_panels/larfleeze_orange_lantern_avaricia/scene_05.jpg"
+        ],
+        "art_queries": [
+            "Larfleeze Agent Orange battery Vega system Green Lantern 42 comic scan",
+            "Larfleeze holding orange power battery laughing comic panel scan",
+            "Orange Lantern Corps constructs ghosts Larfleeze Green Lantern comic scan",
+            "Larfleeze Orange Lantern fighting Hal Jordan Guardians Green Lantern 42 comic scan",
+            "Larfleeze hugging orange battery alone greed Green Lantern comic scan"
+        ]
+    },
+    {
+        "id": "supergirl_red_lantern_anillo_ira",
+        "universe": "DC",
+        "character": "Supergirl",
+        "title": "¡Supergirl Sucumbió a la Furia Roja! El Terror de la Hija de Krypton 🔴💥",
+        "theme_signature": "supergirl:kara_zorel:red_lantern:ira_kryptoniana:atrocitus",
+        "description": "Ahogada en el dolor por la pérdida de su planeta, un anillo rojo de la ira eligió a Kara Zor-El, desatando una destructora cósmica imparable.",
+        "hashtags": "#Supergirl #RedLantern #DCComics #KaraZorEl #GreenLantern #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Consumida por el dolor de ver morir a su familia y su mundo, la furia contenida de Kara Zor-El atrajo al arma más destructiva del cosmos!",
+            "Un anillo de poder del espectro rojo cruzó el espacio sintiendo su rencor, reemplazando su corazón kryptoniano y expulsando sangre de plasma hirviendo por su boca.",
+            "Convertida en una Linterna Roja sin control ni juicio, Supergirl destruyó flotas alienígenas enteras enfrentándose a Superman y a la Liga de la Justicia.",
+            "Fue Guy Gardner quien la llevó al lago de sangre de Ysmault, donde Kara recuperó su cordura y aceptó su ira para proteger a los indefensos.",
+            "Tras purgar el anillo arrojándolo al corazón del sol, Kara renació como una protectora madura y temible. ¿Tiene Supergirl más potencial de ira que Superman?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/supergirl_red_lantern_ira/scene_01.jpg",
+            "assets/curated_panels/supergirl_red_lantern_ira/scene_02.jpg",
+            "assets/curated_panels/supergirl_red_lantern_ira/scene_03.jpg",
+            "assets/curated_panels/supergirl_red_lantern_ira/scene_04.jpg",
+            "assets/curated_panels/supergirl_red_lantern_ira/scene_05.jpg"
+        ],
+        "art_queries": [
+            "Kara Zor-El enraged crying Supergirl 28 comic panel scan",
+            "Supergirl Red Lantern transformation red ring vomiting plasma Supergirl 28 panel",
+            "Supergirl Red Lantern destroying alien spaceships comic scan",
+            "Guy Gardner Supergirl Ysmault blood lake Red Lanterns 29 comic scan",
+            "Supergirl removing red ring flying into sun Supergirl 33 comic scan"
+        ]
+    },
+    {
+        "id": "constantine_engano_triunvirato_infierno",
+        "universe": "DC",
+        "character": "John Constantine",
+        "title": "¡Constantine Engañó a los Reyes del Infierno! La Mayor Estafa a Lucifer 🚬🔥",
+        "theme_signature": "constantine:triunvirato_infierno:lucifer_azazel:cancer_pulmon:engano",
+        "description": "Agonizando por un cáncer terminal, John Constantine vende su alma a los tres reyes del infierno por separado, forzándolos a curarlo para evitar una guerra total.",
+        "hashtags": "#Constantine #Hellblazer #DCComics #Vertigo #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Condenado a morir por un cáncer de pulmón terminal, John Constantine orquestó la estafa sobrenatural más brillante y peligrosa de la historia!",
+            "Sabiendo que su alma estaba destinada al tormento eterno, visitó en secreto a los tres señores del Infierno: el Primer Caído, Azazel y Beelzebub.",
+            "A espaldas de cada demonio, Constantine vendió su alma por separado a los tres a cambio de promesas de poder, guardando silencio absoluto.",
+            "Al llegar la hora de su muerte, los tres reyes infernales se manifestaron para reclamar su botín descubriendo la triple traición que provocaría una guerra total en el averno.",
+            "Para evitar que el Infierno se destruyera en una guerra civil por su alma, Lucifer se vio obligado a extirparle el cáncer y devolverle la vida. ¿Es John Constantine el mortal más astuto?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/constantine_triunvirato_infierno/scene_01.jpg",
+            "assets/curated_panels/constantine_triunvirato_infierno/scene_02.jpg",
+            "assets/curated_panels/constantine_triunvirato_infierno/scene_03.jpg",
+            "assets/curated_panels/constantine_triunvirato_infierno/scene_04.jpg",
+            "assets/curated_panels/constantine_triunvirato_infierno/scene_05.jpg"
+        ],
+        "art_queries": [
+            "John Constantine trench coat hospital lung cancer Hellblazer 45 panel",
+            "First of the Fallen devil ruler Hellblazer comic panel scan",
+            "John Constantine making deal demon lord Hellblazer comic panel",
+            "Three lords of Hell devils confronting Constantine Hellblazer 45 panel",
+            "John Constantine cured smoking cigarette smiling Hellblazer 45 iconic panel"
         ]
     }
 ]
