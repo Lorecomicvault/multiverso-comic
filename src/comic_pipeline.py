@@ -10,7 +10,8 @@ except ImportError:
     from comic_transitions import build_torn_paper_clip
     from comic_subtitles import generate_comic_ass
 
-ASSETS_DIR = Path(__file__).resolve().parent.parent / "assets"
+ROOT_DIR = Path(__file__).resolve().parent.parent
+ASSETS_DIR = ROOT_DIR / "assets"
 
 def assemble_reel(
     panel_clips: list[str],
@@ -26,7 +27,9 @@ def assemble_reel(
     cta_duration: float = 5.0,
     alignment: int = 5,
     margin_v: int = 20,
-    font_size: int = 58
+    font_size: int = 58,
+    hook_title: str = None,
+    hook_duration: float = 3.8
 ) -> str:
     """
     Motor Cinematográfico Maestro para Video Vertical (1080x1920):
@@ -101,7 +104,7 @@ def assemble_reel(
             f.write(f"file '{os.path.abspath(c).replace(os.sep, '/')}'\n")
 
     # 3. Mezcla de audio Foley (sonidos de rasgado en cada corte de papel)
-    mixed_audio = os.path.join(work_dir, "audio_mixed.mp3")
+    mixed_foley_audio = os.path.join(work_dir, "audio_foley.mp3")
     if os.path.exists(sfx_rip) and trans_times:
         print(f"[Master Assembler] Mezclando {len(trans_times)} efectos Foley de rasgado de papel...")
         cmd_a = ["ffmpeg", "-y", "-i", narration_audio]
@@ -111,19 +114,58 @@ def assemble_reel(
             delay = int(round(t * 1000))
             f_parts.append(f"[{idx+1}:a]adelay={delay}|{delay},volume=0.85[s{idx}]")
         f_str = ";".join(f_parts) + f";[0:a]" + "".join(f"[s{k}]" for k in range(len(trans_times))) + f"amix=inputs={1+len(trans_times)}:duration=first:normalize=0[aout]"
-        cmd_a.extend(["-filter_complex", f_str, "-map", "[aout]", "-c:a", "libmp3lame", "-b:a", "192k", mixed_audio])
+        cmd_a.extend(["-filter_complex", f_str, "-map", "[aout]", "-c:a", "libmp3lame", "-b:a", "192k", mixed_foley_audio])
         subprocess.run(cmd_a, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=True)
-        final_audio = mixed_audio
+        base_audio = mixed_foley_audio
     else:
-        final_audio = narration_audio
+        base_audio = narration_audio
 
-    # 4. Generar subtítulos .ass estilo Caja de Narrador (Comic Noir)
+    # 3.1 Mezcla de Banda Sonora Cinemática con Sidechain Ducking
+    music_bed_file = ROOT_DIR / "music_bed.mp3"
+    if not music_bed_file.exists():
+        music_bed_file = ASSETS_DIR / "audio" / "music_bed.mp3"
+
+    if music_bed_file.exists() and os.environ.get("NO_MUSIC", "0") != "1":
+        print("[Master Assembler] Mezclando música de tensión cinemática con Sidechain Ducking adaptativo...")
+        final_mixed_audio = os.path.join(work_dir, "audio_master_ducked.mp3")
+        res_dur = subprocess.run(
+            ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1", base_audio],
+            stdout=subprocess.PIPE, text=True, check=True
+        )
+        total_audio_dur = float(res_dur.stdout.strip())
+        fade_out_st = max(0.0, total_audio_dur - 1.5)
+
+        music_chain = (
+            f"[0:a]dynaudnorm=p=0.95:m=100[voice];"
+            f"[1:a]aloop=loop=-1:size=2e9,atrim=0:{total_audio_dur:.3f},volume=0.22,"
+            f"afade=t=in:st=0:d=0.8,afade=t=out:st={fade_out_st:.3f}:d=1.5[music];"
+            f"[voice]asplit[vo1][vo2];"
+            f"[music][vo2]sidechaincompress=threshold=0.025:ratio=7:attack=20:release=250:makeup=1[ducked];"
+            f"[vo1][ducked]amix=inputs=2:duration=first[aout]"
+        )
+        cmd_m = [
+            "ffmpeg", "-y",
+            "-i", base_audio,
+            "-i", str(music_bed_file),
+            "-filter_complex", music_chain,
+            "-map", "[aout]",
+            "-c:a", "libmp3lame",
+            "-b:a", "192k",
+            final_mixed_audio
+        ]
+        subprocess.run(cmd_m, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=True)
+        final_audio = final_mixed_audio
+    else:
+        final_audio = base_audio
+
+    # 4. Generar subtítulos .ass estilo Caja de Narrador (Comic Noir) + Hook Header Banner
     ass_path = os.path.join(work_dir, "subs.ass")
-    print(f"[Master Assembler] Creando subtítulos ASS con estética Comic Noir y tipografía Bangers...")
+    print(f"[Master Assembler] Creando subtítulos ASS con estética Comic Noir, tipografía Bangers y Hook Banner...")
     generate_comic_ass(
         words_timing, ass_path, font_name="Bangers",
         box_bgr="&H00181818", text_bgr="&H00FFFFFF", highlight_bgr="&H0000F0FF",
-        keywords=keywords, alignment=alignment, margin_v=margin_v, font_size=font_size
+        keywords=keywords, alignment=alignment, margin_v=margin_v, font_size=font_size,
+        hook_title=hook_title, hook_duration=hook_duration
     )
 
     # 5. Renderizado final quemando subtítulos y compositando overlay social

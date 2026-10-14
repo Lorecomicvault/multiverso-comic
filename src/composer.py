@@ -81,6 +81,11 @@ def _build_zoompan_exprs(pattern: str, total_frames: int, nf: int, duration: flo
         z = '1.22'
         x = f'(iw - iw/zoom) * (1 - {t_norm})'
         y = '(ih - ih/zoom)/2'
+    elif pattern == 'climax-zoom':
+        # Clímax gráfico: punch zoom acelerado y profundo hacia el epicentro de la acción (1.05 a 1.35)
+        z = f'1.05 + 0.30 * {t_norm}'
+        x = '(iw - iw/zoom)/2'
+        y = '(ih - ih/zoom)/2'
     else:
         # zoom-in dinámico: empuje dramático hacia el centro de la acción (1.04 a 1.22)
         z = f'1.04 + 0.18 * {t_norm}'
@@ -91,24 +96,26 @@ def _build_zoompan_exprs(pattern: str, total_frames: int, nf: int, duration: flo
 
 
 def compose_scene_from_image(image_path: str, audio_path: str, duration: float, output: str, pattern_idx: int = 0, width: int = 1080, height: int = 1920, audio_codec: str = 'aac') -> str:
-    """Create a dynamic animated comic scene from an image with lively camera motion."""
+    """Create a dynamic animated comic scene from an image with lively camera motion and crisp comic color grading."""
     Path(output).parent.mkdir(parents=True, exist_ok=True)
     fps = 30
     total_frames = max(2, int(duration * fps))
     nf = total_frames - 1
 
-    patterns = ['zoom-in', 'zoom-out', 'pan-up', 'pan-down', 'pan-left-to-right', 'pan-right-to-left']
+    patterns = ['zoom-in', 'pan-down', 'pan-right-to-left', 'climax-zoom', 'zoom-out', 'pan-up', 'pan-left-to-right']
     pattern = patterns[pattern_idx % len(patterns)]
 
     z_expr, x_expr, y_expr, _, _ = _build_zoompan_exprs(
         pattern, total_frames, nf, duration, width, height
     )
 
-    # Native 1080x1920 dynamic Ken Burns rendering with exact aspect ratio
+    # Native 1080x1920 dynamic Ken Burns rendering with exact aspect ratio and crisp comic color enhancement
     video_chain = (
         f'[0:v]scale={width}:{height}:force_original_aspect_ratio=increase,'
         f'crop={width}:{height},'
         f'zoompan=z=\'{z_expr}\':x=\'{x_expr}\':y=\'{y_expr}\':d={total_frames}:s={width}x{height}:fps={fps},'
+        f'eq=contrast=1.04:saturation=1.08:brightness=-0.01,'
+        f'unsharp=luma_msize_x=5:luma_msize_y=5:luma_amount=0.4,'
         f'setsar=1[v]'
     )
 

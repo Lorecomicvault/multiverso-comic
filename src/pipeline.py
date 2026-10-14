@@ -25,8 +25,16 @@ VIDEO_LOG_FILE = 'videos_log.csv'
 
 
 def _motion_pattern(scene_number: int) -> int:
-    """Elige el movimiento cinematográfico según el número de escena (cicla entre 6 patrones dinámicos)."""
-    return (scene_number - 1) % 6
+    """
+    Elige el movimiento cinematográfico según el acto narrativo de 5 escenas:
+    - Escena 1 (Gancho): zoom-in (impacto y empuje hacia el conflicto)
+    - Escena 2 (Origen/Contexto): pan-down (escaneo vertical de viñeta)
+    - Escena 3 (Escalada/Tensión): pan-right-to-left (tensión horizontal dinámica)
+    - Escena 4 (Clímax gráfico): climax-zoom (punch zoom acelerado de alta intensidad)
+    - Escena 5 (Desenlace/Debate): zoom-out (descompresión visual para debatir)
+    """
+    motion_map = {1: 0, 2: 1, 3: 2, 4: 3, 5: 4}
+    return motion_map.get(scene_number, (scene_number - 1) % 5)
 
 
 def log(msg: str):
@@ -228,6 +236,7 @@ def run_pipeline(
             alignment=5,
             margin_v=20,
             font_size=58,
+            hook_title=title,
         )
     else:
         # Fallback estándar para videos 16:9 o sin locución
