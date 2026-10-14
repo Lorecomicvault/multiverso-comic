@@ -1448,5 +1448,15 @@
     "mode": "live_release",
     "video_file": "Wolverine_Murió_Asfixiado_en_Metal_Hirviendo_El_Sacrificio_que_Marcó_el_Fin_del_.mp4",
     "status": "published"
+  },
+  {
+    "id": "supergirl_red_lantern_anillo_ira",
+    "title": "¡Supergirl Sucumbió a la Furia Roja! El Terror de la Hija de Krypton 🔴💥",
+    "character": "Supergirl",
+    "theme_signature": "supergirl:kara_zorel:red_lantern:ira_kryptoniana:atrocitus",
+    "date": "2026-10-14 07:07",
+    "mode": "live_release",
+    "video_file": "Supergirl_Sucumbió_a_la_Furia_Roja_El_Terror_de_la_Hija_de_Krypton.mp4",
+    "status": "published"
   }
 ]
