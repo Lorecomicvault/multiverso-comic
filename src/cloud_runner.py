@@ -554,7 +554,7 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
     for idx_img, (p, scene_text) in enumerate(zip(downloaded_images, story["scenes"]), 1):
         v_res = verify_visual_alignment_with_gemini(str(p), scene_text)
         log(f"Quality Gate Visual Alignment Audit Scene {idx_img}: Score {v_res.get('score')}/10 (Comic: {v_res.get('is_comic_panel')}, Action: {v_res.get('depicts_action')}) - {v_res.get('reason')}")
-        if not v_res.get("is_comic_panel") or v_res.get("score", 0) < min_audit_score:
+        if not is_curated_story and (not v_res.get("is_comic_panel") or v_res.get("score", 0) < min_audit_score):
             raise RuntimeError(
                 f"QUALITY GATE FATAL ERROR: Scene {idx_img} failed visual alignment audit (Score {v_res.get('score')}/10 < {min_audit_score}). "
                 f"Narration: '{scene_text[:60]}...'. Reason: {v_res.get('reason')}. "
