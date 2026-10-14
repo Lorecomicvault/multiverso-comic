@@ -24,7 +24,7 @@ def assemble_reel(
     keywords: list[str] = None,
     social_cta_mov: str = None,
     cta_start_time: float = 18.0,
-    cta_duration: float = 5.0,
+    cta_duration: float = 6.0,
     alignment: int = 5,
     margin_v: int = 20,
     font_size: int = 58,
@@ -36,7 +36,7 @@ def assemble_reel(
     1. Trimming inteligente y transiciones orgánicas de papel rasgado lento (0.65s).
     2. Mezcla de audio Foley sincronizada con 'paper_rip.mp3' en cada corte.
     3. Subtítulos dinámicos estilo 'Caja de Narrador Comic Noir' (Bangers, #181818, resaltado #00F0FF).
-    4. Overlay elegante de tarjeta de redes sociales (@MultiversoComic) en Safe Zone.
+    4. Motion Graphic Overlay de Multiverso Cómic en Safe Zone (tamaño prudente con alfa).
     5. Normalización de audio profesional con EBU R128 (loudnorm).
     """
     if fonts_dir is None:
@@ -44,7 +44,9 @@ def assemble_reel(
     if sfx_rip is None:
         sfx_rip = str(ASSETS_DIR / "audio" / "paper_rip.mp3")
     if social_cta_mov is None:
-        default_cta = ASSETS_DIR / "vertical_cta_multiversocomic_dual_line.mov"
+        default_cta = ASSETS_DIR / "vertical_cta_multiversocomic_motion.mov"
+        if not default_cta.exists():
+            default_cta = ASSETS_DIR / "vertical_cta_multiversocomic_dual_line.mov"
         if default_cta.exists():
             social_cta_mov = str(default_cta)
 

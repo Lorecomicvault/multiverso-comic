@@ -214,7 +214,7 @@ def run_pipeline(
 
         social_mov = None
         if os.environ.get('NO_SOCIAL_CTA', '0') != '1':
-            cta_style = os.environ.get('SOCIAL_CTA_STYLE', 'dual_line')
+            cta_style = os.environ.get('SOCIAL_CTA_STYLE', 'motion')
             try:
                 social_mov = get_or_create_vertical_cta_mov(cta_style)
                 log(f"  OK -> Social CTA Overlay activado ({cta_style})")
@@ -222,7 +222,7 @@ def run_pipeline(
                 log(f"  Warning: No se pudo preparar el overlay social: {e}")
 
         total_dur = words_data.get('total_duration', 30.0)
-        cta_start = max(8.0, min(total_dur - 6.0, total_dur * 0.58))
+        cta_start = max(8.0, min(total_dur - 7.0, total_dur * 0.58))
 
         assemble_reel(
             panel_clips=composed_scenes,

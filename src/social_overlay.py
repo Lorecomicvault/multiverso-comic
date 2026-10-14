@@ -295,10 +295,15 @@ def generate_vertical_cta_mov(
     return str(out_path)
 
 
-def get_or_create_vertical_cta_mov(style: str = "dual_line") -> str:
+def get_or_create_vertical_cta_mov(style: str = "motion") -> str:
     """
     Returns the path to the cached vertical CTA MOV file, generating it once if needed.
     """
+    if style in ("motion", "motion_graphic", "comic_burst"):
+        motion_mov = ASSETS_DIR / "vertical_cta_multiversocomic_motion.mov"
+        if motion_mov.exists():
+            return str(motion_mov)
+
     cached_mov = ASSETS_DIR / f"vertical_cta_multiversocomic_{style}.mov"
     if not cached_mov.exists() or cached_mov.stat().st_size < 1000:
         generate_vertical_cta_mov(str(cached_mov), duration=5.0, fps=30, style=style)
