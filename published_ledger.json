@@ -1488,5 +1488,15 @@
     "mode": "live_release",
     "video_file": "Larfleeze_Un_Hombre_y_Todo_un_Ejército_de_Avaricia_Cósmica.mp4",
     "status": "published"
+  },
+  {
+    "id": "wonder_woman_ceguera_decapito_medusa",
+    "title": "¡Wonder Woman se Arrancó la Vista! El Sacrificio que Destruyó a Medusa ⚔️🐍",
+    "character": "Wonder Woman",
+    "theme_signature": "wonder_woman:diana_prince:ceguera:medusa_decapitacion:sacrificio",
+    "date": "2026-10-14 22:07",
+    "mode": "live_release",
+    "video_file": "Wonder_Woman_se_Arrancó_la_Vista_El_Sacrificio_que_Destruyó_a_Medusa.mp4",
+    "status": "published"
   }
 ]
