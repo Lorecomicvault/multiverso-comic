@@ -191,7 +191,8 @@ def create_full_panel_frame(im: Image.Image, target_w: int = 1080, target_h: int
 def resolve_fandom_canonical_url(wiki: str, file_title: str) -> str | None:
     """Uses Fandom MediaWiki API to resolve the exact, canonical full-resolution CDN image URL."""
     clean_title = file_title if file_title.startswith("File:") else f"File:{file_title}"
-    url = f"https://{wiki}.fandom.com/api.php"
+    clean_wiki = wiki.replace(".fandom.com", "").strip()
+    url = f"https://{clean_wiki}.fandom.com/api.php"
     params = {
         "action": "query",
         "titles": clean_title,
@@ -223,7 +224,8 @@ DC_UNIVERSE_MARKERS = [
     'injustice', 'crisis on infinite earths', 'kingdom come', 'watchmen', 'rorschach',
     'doctor manhattan', 'sandman', 'lucifer', 'morpheus', 'bialya', 'justice league',
     'justice society', 'teen titans', 'arkham', 'gotham', 'metropolis', 'themyscira',
-    'grim knight', 'the grim knight'
+    'grim knight', 'the grim knight', 'larfleeze', 'orange lantern', 'atrocitus', 'red lantern',
+    'yellow lantern', 'blue lantern', 'star sapphire', 'indigo tribe'
 ]
 
 
@@ -365,7 +367,18 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
                     shutil.copy2(str(local_cand), str(img_file))
                     saved = True
                     log(f"Scene {idx}: Using verified local authentic panel (Gemini Score: {score}/10): '{target}' - {val.get('reason')}")
-                else:
+                elif is_curated:
+                    from .comic_precision_scraper import check_is_comic_art_inking
+                    try:
+                        with Image.open(local_cand) as cur_im:
+                            if check_is_comic_art_inking(cur_im):
+                                import shutil
+                                shutil.copy2(str(local_cand), str(img_file))
+                                saved = True
+                                log(f"Scene {idx}: Curated comic inking verified for '{target}' (Score: {score}/10). Safeguard active.")
+                    except Exception as e_cur:
+                        log(f"Scene {idx}: Error verifying curated inking: {e_cur}")
+                if not saved:
                     log(f"Scene {idx}: Local file '{target}' REJECTED by Visual Alignment Shield (Score: {score}/10, Comic: {is_comic}, Action: {val.get('depicts_action')}). Reason: {val.get('reason')}. Falling back to multi-source scraper.")
 
         # Primary: Multi-Source Precision Scraper with Gemini Vision Referee
@@ -622,7 +635,14 @@ def main():
             curated_avail = [s for s in available if any("assets/curated_panels" in str(u) for u in s.get("scene_art_urls", []))]
 
             if curated_avail:
-                selected = random.choice(curated_avail)
+                priority_order = [
+                    "red_goblin_norman_osborn_simbionte_carnage",
+                    "larfleeze_orange_lantern_avaricia_absoluta",
+                    "wonder_woman_ceguera_decapito_medusa"
+                ]
+                selected = next((s for pid in priority_order for s in curated_avail if s["id"] == pid), None)
+                if not selected:
+                    selected = random.choice(curated_avail)
                 log(f"Selected Guaranteed Curated Story: {selected['title']} (ID: {selected['id']})")
             elif getattr(args, 'ai_story', False) or args.story_id == "autonomous_ai" or not available:
                 log(f"CATALOG EXHAUSTION / AI MODE: Activating Autonomous AI Story Engine (Attempt {attempt}/{MAX_CANDIDATE_ATTEMPTS})...")
