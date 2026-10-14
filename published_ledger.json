@@ -1438,5 +1438,15 @@
     "mode": "live_release",
     "video_file": "Elektra_Cayó_Atravesada_por_su_Propia_Arma_El_Duelo_Letal_de_los_Asesinos.mp4",
     "status": "published"
+  },
+  {
+    "id": "wolverine_la_muerte_adamantium_liquido",
+    "title": "¡Wolverine Murió Asfixiado en Metal Hirviendo! El Sacrificio que Marcó el Fin del Mutante 🩸🐺",
+    "character": "Wolverine",
+    "theme_signature": "wolverine:death_of_wolverine:adamantium_liquido_sacrificio_cornelius",
+    "date": "2026-10-14 02:06",
+    "mode": "live_release",
+    "video_file": "Wolverine_Murió_Asfixiado_en_Metal_Hirviendo_El_Sacrificio_que_Marcó_el_Fin_del_.mp4",
+    "status": "published"
   }
 ]
