@@ -487,7 +487,11 @@ Responde ESTRICTAMENTE con un objeto JSON:
                         raw = raw.split("```json")[1].split("```")[0].strip()
                     elif "```" in raw:
                         raw = raw.split("```")[1].split("```")[0].strip()
-                    return json.loads(raw)
+                    parsed = json.loads(raw)
+                    if isinstance(parsed, list) and len(parsed) > 0 and isinstance(parsed[0], dict):
+                        return parsed[0]
+                    elif isinstance(parsed, dict):
+                        return parsed
                 except Exception:
                     continue
         except Exception:
@@ -516,7 +520,11 @@ Responde ESTRICTAMENTE con un objeto JSON:
                             raw = raw.split("```json")[1].split("```")[0].strip()
                         elif "```" in raw:
                             raw = raw.split("```")[1].split("```")[0].strip()
-                        return json.loads(raw)
+                        parsed = json.loads(raw)
+                        if isinstance(parsed, list) and len(parsed) > 0 and isinstance(parsed[0], dict):
+                            return parsed[0]
+                        elif isinstance(parsed, dict):
+                            return parsed
                 except Exception:
                     continue
     except Exception:

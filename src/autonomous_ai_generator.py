@@ -726,6 +726,66 @@ EMERGENCY_VIRAL_POOL = [
             "Three lords of Hell devils confronting Constantine Hellblazer 45 panel",
             "John Constantine cured smoking cigarette smiling Hellblazer 45 iconic panel"
         ]
+    },
+    {
+        "id": "punisher_war_machine_armadura_blanca",
+        "universe": "Marvel",
+        "character": "War Machine (Frank Castle)",
+        "title": "¡War Machine Blindó al Castigador! La Armadura de Destrucción Masiva en Chernaya 💀🤖",
+        "theme_signature": "war_machine:punisher:chernaya_armadura_stark:calavera_titanio",
+        "description": "Cuando Nick Fury le entregó la armadura de War Machine, Frank Castle pintó su icónica calavera blanca en el titanio desatando una guerra implacable en Chernaya.",
+        "hashtags": "#ThePunisher #WarMachine #FrankCastle #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¿Qué sucede cuando combinas la letalidad de Frank Castle con el armamento más destructivo de Tony Stark? ¡El nacimiento del terror definitivo!",
+            "Reclutado por Nick Fury para derrocar a un sanguinario dictador en Europa del Este, Castle se infiltró en una base secreta y tomó posesión de la armadura de War Machine.",
+            "Pintando su icónica calavera blanca sobre el blindaje de titanio, el Castigador se convirtió en un ejército de un solo hombre con poder de fuego devastador.",
+            "Desatando misiles y ametralladoras pesadas, Frank destruyó tanques, helicópteros y batallones enteros sin mostrar un solo gramo de piedad.",
+            "Incluso cuando los Vengadores intentaron detenerlo, Castle demostró que ninguna ley humana puede frenar su castigo. ¿Crees que Frank es el héroe más temido de Marvel?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/punisher_war_machine_armadura/scene_01.jpg",
+            "assets/curated_panels/punisher_war_machine_armadura/scene_02.jpg",
+            "assets/curated_panels/punisher_war_machine_armadura/scene_03.jpg",
+            "assets/curated_panels/punisher_war_machine_armadura/scene_04.jpg",
+            "assets/curated_panels/punisher_war_machine_armadura/scene_05.jpg"
+        ],
+        "art_queries": [
+            "Punisher War Machine suit flying desert battle comic panel",
+            "Frank Castle War Machine armor cockpit interior comic panel",
+            "Punisher War Machine white skull armor heavy weapons comic panel",
+            "War Machine Punisher missiles gunfire destruction comic panel",
+            "Punisher War Machine confronting heroes unstoppable Marvel comic panel"
+        ]
+    },
+    {
+        "id": "saint_walker_primer_linterna_azul_esperanza",
+        "universe": "DC",
+        "character": "Saint Walker",
+        "title": "¡El Primer Linterna Azul del Cosmos! El Milagro que Salvó a Hal Jordan 💙✨",
+        "theme_signature": "saint_walker:blue_lantern:esperanza_bateria:hal_jordan_ysmault",
+        "description": "En un cosmos asolado por la ira y el dolor, Bro'Dee Walker ascendió como el primer Linterna Azul, portando la luz de la esperanza que curó el alma de Hal Jordan.",
+        "hashtags": "#SaintWalker #BlueLantern #GreenLantern #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡En un cosmos desgarrado por la ira y el miedo, un solo hombre demostró que la esperanza es el arma más poderosa del universo!",
+            "En el moribundo planeta Astonia, Bro'Dee Walker guio a los suyos hacia el Monte Helmgard sin perder jamás la fe ante la muerte.",
+            "Recompensado por los Guardianes Ganthet y Sayd, fue elegido como el primer Linterna Azul, portando la luz de la esperanza cósmica.",
+            "Cuando Hal Jordan caía víctima de la ira roja en Ysmault, Walker curó su alma proclamando su icónico lema: ¡todo estará bien!",
+            "Supercargando los anillos verdes al doscientos por ciento, el cuerpo azul demostró su valor divino. ¿Es el juramento más hermoso de los cómics?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/saint_walker_linterna_azul/scene_01.jpg",
+            "assets/curated_panels/saint_walker_linterna_azul/scene_02.jpg",
+            "assets/curated_panels/saint_walker_linterna_azul/scene_03.jpg",
+            "assets/curated_panels/saint_walker_linterna_azul/scene_04.jpg",
+            "assets/curated_panels/saint_walker_linterna_azul/scene_05.jpg"
+        ],
+        "art_queries": [
+            "Blue Lantern Corps soaring space comic panel",
+            "Saint Walker Bro Dee Walker Astonia hope comic panel",
+            "Blue Lantern Power Battery Odym Ganthet Sayd comic panel",
+            "Saint Walker healing Hal Jordan red lantern rage Ysmault comic panel",
+            "Blue Lantern Corps charging green lanterns comic panel"
+        ]
     }
 ]
 
@@ -751,16 +811,16 @@ def generate_autonomous_story(ledger: list[dict], api_key: str | None = None) ->
     char_recency_banned = ", ".join(sorted(list(recent_characters)))
     titles_summary = " | ".join(past_titles[-40:])
 
-    # Grupos rotativos de ICONOS TIER-1 para rotar variedad entre los personajes más famosos de los cómics
+    # Grupos rotativos con arcos legendarios INÉDITOS para garantizar que la IA nunca proponga historias ya existentes
     ROTATING_CHAR_PROMPTS = [
-        "Superman (Action Comics / Injustice / Juicio), Magneto (Venganza Nazi / Auschwitz), Wolverine (Old Man Logan / Weapon X)",
-        "Spider-Man (Grim Hunt / Back in Black / Furia), Batman (Endgame / Tower of Babel / Zur-En-Arrh), Thor (Unworthy / Gorr / Martillo)",
-        "The Flash (The Human Race / Speed Force / Paradoja), Hulk (World War Hulk / Maestro), Iron Man (Superior / Endo-Sym / Extremis)",
-        "Doctor Doom (Secret Wars / Poder Divino), Thanos (Thanos Wins / Aniquilación), Daredevil (Born Again / Mano del Diablo)"
+        "Miles Morales (Ultimate Spider-Man / Veneno Eléctrico / Prowler Aaron Davis), Red Hood (Lost Days / Venganza con All-Caste / Regreso de la Muerte), Death of Captain America (Asesinato en Escalinatas del Tribunal / Crossbones y Sharon Carter)",
+        "Saint Walker (Bro'Dee Walker / Primer Linterna Azul / Esperanza Cósmica), Zoom Hunter Zolomon (Blitz / Chasquido Sónico / Destrucción de Wally West), Moon Knight (Marc Spector / Misión de Medianoche / Venganza de Khonshu)",
+        "Sinestro (Linterna Blanca / Primera Batería de Vida / Volthoom), Ghost Rider Robbie Reyes (All-New Ghost Rider / Muscle Car del Infierno / Eli Morrow), Invincible Iron Man (Armor Wars / Traición de Armaduras Stark)",
+        "Daredevil (Guardian Devil / Muerte de Karen Page / Bullseye en la Iglesia), Wolverine (Venganza contra Hulk en Old Man Logan / Descuartizamiento Interior), Green Lantern Kyle Rayner (Ascenso a Ion / Poder Infinito de Oa)"
     ]
 
     rejected_session_titles = []
-    max_attempts = 4
+    max_attempts = 10
 
     for attempt in range(1, max_attempts + 1):
         log(f"Generando propuesta de historia con IA (Intento {attempt}/{max_attempts})...")

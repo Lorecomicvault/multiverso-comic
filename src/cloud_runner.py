@@ -225,7 +225,7 @@ DC_UNIVERSE_MARKERS = [
     'doctor manhattan', 'sandman', 'lucifer', 'morpheus', 'bialya', 'justice league',
     'justice society', 'teen titans', 'arkham', 'gotham', 'metropolis', 'themyscira',
     'grim knight', 'the grim knight', 'larfleeze', 'orange lantern', 'atrocitus', 'red lantern',
-    'yellow lantern', 'blue lantern', 'star sapphire', 'indigo tribe'
+    'yellow lantern', 'blue lantern', 'saint walker', 'bro\'dee walker', 'star sapphire', 'indigo tribe'
 ]
 
 
@@ -636,6 +636,8 @@ def main():
 
             if curated_avail:
                 priority_order = [
+                    "punisher_war_machine_armadura_blanca",
+                    "saint_walker_primer_linterna_azul_esperanza",
                     "red_goblin_norman_osborn_simbionte_carnage",
                     "larfleeze_orange_lantern_avaricia_absoluta",
                     "wonder_woman_ceguera_decapito_medusa"
