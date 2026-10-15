@@ -636,11 +636,16 @@ def main():
 
             if curated_avail:
                 priority_order = [
-                    "punisher_war_machine_armadura_blanca",
                     "saint_walker_primer_linterna_azul_esperanza",
-                    "red_goblin_norman_osborn_simbionte_carnage",
-                    "larfleeze_orange_lantern_avaricia_absoluta",
-                    "wonder_woman_ceguera_decapito_medusa"
+                    "captain_america_asesinato_civil_war_sharon",
+                    "zoom_hunter_zolomon_chasquido_sonico",
+                    "sinestro_luz_blanca_entidad_vida",
+                    "blue_beetle_jaime_reyes_escarabajo_khaji_da",
+                    "morlun_devora_ojo_spiderman",
+                    "doomsday_humilla_darkseid_apokolips",
+                    "venom_dios_de_la_luz_fuerza_enigma",
+                    "azrael_batman_armadura_asesina",
+                    "old_man_logan_estomago_hulk_canibal"
                 ]
                 selected = next((s for pid in priority_order for s in curated_avail if s["id"] == pid), None)
                 if not selected:

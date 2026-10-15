@@ -1819,34 +1819,274 @@ EDITORIAL_STORIES = [
         ]
     },
     {
-        "id": "saint_walker_primer_linterna_azul_esperanza",
-        "universe": "DC",
-        "character": "Saint Walker",
-        "title": "¡El Primer Linterna Azul del Cosmos! El Milagro que Salvó a Hal Jordan 💙✨",
-        "theme_signature": "saint_walker:blue_lantern:esperanza_bateria:hal_jordan_ysmault",
-        "description": "En un cosmos asolado por la ira y el dolor, Bro'Dee Walker ascendió como el primer Linterna Azul, portando la luz de la esperanza que curó el alma de Hal Jordan.",
-        "hashtags": "#SaintWalker #BlueLantern #GreenLantern #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
-        "scenes": [
-            "¡En un cosmos desgarrado por la ira y el miedo, un solo hombre demostró que la esperanza es el arma más poderosa del universo!",
-            "En el moribundo planeta Astonia, Bro'Dee Walker guio a los suyos hacia el Monte Helmgard sin perder jamás la fe ante la muerte.",
-            "Recompensado por los Guardianes Ganthet y Sayd, fue elegido como el primer Linterna Azul, portando la luz de la esperanza cósmica.",
-            "Cuando Hal Jordan caía víctima de la ira roja en Ysmault, Walker curó su alma proclamando su icónico lema: ¡todo estará bien!",
-            "Supercargando los anillos verdes al doscientos por ciento, el cuerpo azul demostró su valor divino. ¿Es el juramento más hermoso de los cómics?"
-        ],
-        "scene_art_urls": [
-            "assets/curated_panels/saint_walker_linterna_azul/scene_01.jpg",
-            "assets/curated_panels/saint_walker_linterna_azul/scene_02.jpg",
-            "assets/curated_panels/saint_walker_linterna_azul/scene_03.jpg",
-            "assets/curated_panels/saint_walker_linterna_azul/scene_04.jpg",
-            "assets/curated_panels/saint_walker_linterna_azul/scene_05.jpg"
-        ],
-        "art_queries": [
-            "Blue Lantern Corps soaring space comic panel",
-            "Saint Walker Bro Dee Walker Astonia hope comic panel",
-            "Blue Lantern Power Battery Odym Ganthet Sayd comic panel",
-            "Saint Walker healing Hal Jordan red lantern rage Ysmault comic panel",
-            "Blue Lantern Corps charging green lanterns comic panel"
-        ]
+            "id": "saint_walker_primer_linterna_azul_esperanza",
+            "universe": "DC",
+            "character": "Saint Walker",
+            "title": "¡El Primer Linterna Azul del Cosmos! El Milagro que Salvó a Hal Jordan 💙✨",
+            "theme_signature": "saint_walker:blue_lantern:esperanza_bateria:hal_jordan_ysmault",
+            "description": "En un cosmos desgarrado por la guerra, Bro'Dee Walker ascendió como el primer Linterna Azul, portando la luz de la esperanza que curó el alma de Hal Jordan.",
+            "hashtags": "#SaintWalker #BlueLantern #GreenLantern #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+            "scenes": [
+                    "¡En un cosmos desgarrado por la guerra, Bro'Dee Walker demostró que la fe es la mayor fuerza del universo!",
+                    "Tras la extinción de su mundo, los Guardianes lo consagraron como el primer Linterna Azul.",
+                    "Al viajar a Ysmault, curó la ira roja de Hal Jordan proclamando: ¡todo estará bien!",
+                    "Supercargando los anillos verdes al doscientos por ciento, probó el poder de la esperanza. ¿Supera a la voluntad?"
+            ],
+            "scene_art_urls": [
+                    "assets/curated_panels/saint_walker_linterna_azul/scene_01.jpg",
+                    "assets/curated_panels/saint_walker_linterna_azul/scene_02.jpg",
+                    "assets/curated_panels/saint_walker_linterna_azul/scene_03.jpg",
+                    "assets/curated_panels/saint_walker_linterna_azul/scene_04.jpg"
+            ],
+            "art_queries": [
+                    "Blue Lantern Corps soaring space comic panel",
+                    "Saint Walker Bro Dee Walker Astonia hope comic panel",
+                    "Saint Walker healing Hal Jordan red lantern rage Ysmault comic panel",
+                    "Blue Lantern Corps charging green lanterns comic panel"
+            ]
+    },
+    {
+            "id": "captain_america_asesinato_civil_war_sharon",
+            "universe": "Marvel",
+            "character": "Captain America (Steve Rogers)",
+            "title": "¡El Asesinato del Capitán América! El Disparo a Quemarropa que Conmocionó al Mundo 🇺🇸🩸",
+            "theme_signature": "captain_america:asesinato_civil_war:escalinatas_tribunal_sharon_carter:crossbones",
+            "description": "Tras rendirse en la Guerra Civil, Steve Rogers fue asesinado en las escalinatas del tribunal en un complot orquestado por Red Skull.",
+            "hashtags": "#CaptainAmerica #CivilWar #SteveRogers #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+            "scenes": [
+                    "¡Tras rendirse en la Guerra Civil, el Capitán América enfrentó su juicio final en las escalinatas de Nueva York!",
+                    "Desde un tejado, el francotirador Crossbones disparó una bala de alto calibre a su hombro.",
+                    "En medio del pánico, una hipnotizada Sharon Carter le disparó tres tiros mortales a quemarropa.",
+                    "Muriendo en brazos de Sam Wilson, el centinela de la libertad cayó. ¿Debió Steve jamás rendirse?"
+            ],
+            "scene_art_urls": [
+                    "assets/curated_panels/captain_america_asesinato_civil_war/scene_01.jpg",
+                    "assets/curated_panels/captain_america_asesinato_civil_war/scene_02.jpg",
+                    "assets/curated_panels/captain_america_asesinato_civil_war/scene_03.jpg",
+                    "assets/curated_panels/captain_america_asesinato_civil_war/scene_04.jpg"
+            ],
+            "art_queries": [
+                    "Civic Center from Captain America Vol 5 25 001.jpg",
+                    "Brock Rumlow Earth-616 Crossbones sniper comic panel",
+                    "Steven Rogers Sharon Carter gun shot Captain America 25 comic panel",
+                    "Samuel Wilson holding dying Steven Rogers Captain America 25 comic panel"
+            ]
+    },
+    {
+            "id": "zoom_hunter_zolomon_chasquido_sonico",
+            "universe": "DC",
+            "character": "Zoom (Hunter Zolomon)",
+            "title": "¡Zoom Destruyó a Wally West! El Chasquido Sónico que Rompió la Línea Temporal ⚡⏱️",
+            "theme_signature": "zoom:hunter_zolomon:chasquido_sonico_tiempo:tragedia_wally_west",
+            "description": "Hunter Zolomon manipula su propia línea temporal, desatando una onda de choque sónica para enseñarle a Flash el verdadero significado del dolor.",
+            "hashtags": "#TheFlash #Zoom #HunterZolomon #WallyWest #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+            "scenes": [
+                    "¡Hunter Zolomon no usa la Speed Force, sino que manipula el tiempo volviéndose inalcanzable para Flash!",
+                    "Convencido de que Wally necesitaba tragedia para madurar, Zoom desató el caos sobre Keystone City.",
+                    "Con un chasquido sónico de sus dedos provocó una onda expansiva que destruyó a la familia de Wally.",
+                    "Ni la velocidad luz pudo evitar el colapso de su vida. ¿Es Zoom el villano más sádico de DC?"
+            ],
+            "scene_art_urls": [
+                    "assets/curated_panels/zoom_hunter_zolomon_chasquido/scene_01.jpg",
+                    "assets/curated_panels/zoom_hunter_zolomon_chasquido/scene_02.jpg",
+                    "assets/curated_panels/zoom_hunter_zolomon_chasquido/scene_03.jpg",
+                    "assets/curated_panels/zoom_hunter_zolomon_chasquido/scene_04.jpg"
+            ],
+            "art_queries": [
+                    "Zoom Hunter Zolomon red eyes yellow suit comic panel",
+                    "Wally West Flash fighting Zoom Keystone City comic panel",
+                    "Zoom finger snap sonic boom shockwave comic panel",
+                    "Wally West defeated crying tragedy Flash comic panel"
+            ]
+    },
+    {
+            "id": "sinestro_luz_blanca_entidad_vida",
+            "universe": "DC",
+            "character": "Sinestro",
+            "title": "¡Sinestro se Fusionó con la Entidad Divina! El Milagro de la Creación Cósmica 🤍✨",
+            "theme_signature": "sinestro:entidad_blanca:luz_de_la_vida:resurreccion_universo",
+            "description": "Ante la aniquilación de la muerte cósmica encarnada en Nekron, Sinestro reclamó la Entidad de la Vida y renació como el primer Linterna Blanca.",
+            "hashtags": "#Sinestro #WhiteLantern #GreenLantern #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+            "scenes": [
+                    "¡Cuando Nekron amenazó con devorar toda la existencia, el mayor villano del cosmos dio el paso impensable!",
+                    "Rechazando el miedo amarillo, Sinestro se lanzó al centro de la Tierra hacia la Entidad de la Vida.",
+                    "Al fusionarse con ella renació como el primer Linterna Blanca, blandiendo el poder absoluto de la creación cósmica.",
+                    "Con luz divina derrotó a la muerte salvando al universo entero. ¿Fue Sinestro el verdadero salvador de DC?"
+            ],
+            "scene_art_urls": [
+                    "assets/curated_panels/sinestro_luz_blanca_entidad/scene_01.jpg",
+                    "assets/curated_panels/sinestro_luz_blanca_entidad/scene_02.jpg",
+                    "assets/curated_panels/sinestro_luz_blanca_entidad/scene_03.jpg",
+                    "assets/curated_panels/sinestro_luz_blanca_entidad/scene_04.jpg"
+            ],
+            "art_queries": [
+                    "Nekron Blackest Night cosmic threat comic panel",
+                    "Sinestro diving into White Lantern Life Entity earth center panel",
+                    "Sinestro becomes White Lantern glowing white suit comic panel",
+                    "White Lantern Sinestro destroying Nekron Blackest Night comic panel"
+            ]
+    },
+    {
+            "id": "blue_beetle_jaime_reyes_escarabajo_khaji_da",
+            "universe": "DC",
+            "character": "Blue Beetle (Jaime Reyes)",
+            "title": "¡El Escarabajo Alienígena se Fusionó con su Columna! El Origen de Jaime Reyes 🪲⚡",
+            "theme_signature": "blue_beetle:jaime_reyes:escarabajo_khaji_da:alcance_alienigena",
+            "description": "En El Paso, el joven Jaime Reyes encuentra el escarabajo Khaji Da, un arma biomecánica extraterrestre que se injerta en su cuerpo para transformarlo en Blue Beetle.",
+            "hashtags": "#BlueBeetle #JaimeReyes #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+            "scenes": [
+                    "¡Caminando por El Paso, el joven Jaime Reyes encontró un extraño escarabajo alienígena enterrado en un baldío!",
+                    "Durante la noche el artefacto despertó, perforando su piel e injertándose de por vida en su columna.",
+                    "El escarabajo Khaji Da desplegó una armadura biomecánica viviente con cañones sónicos destructores de mundos.",
+                    "Sometiendo a la entidad invasora con pura bondad, Jaime forjó su leyenda. ¿Es el arma definitiva de DC?"
+            ],
+            "scene_art_urls": [
+                    "assets/curated_panels/blue_beetle_jaime_reyes_escarabajo/scene_01.jpg",
+                    "assets/curated_panels/blue_beetle_jaime_reyes_escarabajo/scene_02.jpg",
+                    "assets/curated_panels/blue_beetle_jaime_reyes_escarabajo/scene_03.jpg",
+                    "assets/curated_panels/blue_beetle_jaime_reyes_escarabajo/scene_04.jpg"
+            ],
+            "art_queries": [
+                    "Jaime Reyes finding blue beetle scarab vacant lot comic panel",
+                    "Khaji Da scarab attaching Jaime Reyes spine bedroom comic panel",
+                    "Blue Beetle biomechanical armor sonic cannons transforming panel",
+                    "Blue Beetle soaring sky glowing weapons comic panel"
+            ]
+    },
+    {
+            "id": "morlun_devora_ojo_spiderman",
+            "universe": "Marvel",
+            "character": "Morlun (Vampiro Totémico)",
+            "title": "¡Morlun le Arrancó el Ojo a Spider-Man! La Masacre del Cazador Heredero 🩸🕷️",
+            "theme_signature": "morlun:vampiro_totemico:arranca_ojo_peter_parker:the_other",
+            "description": "El vampiro totémico Morlun acorraló a un exhausto Peter Parker, arrancándole un ojo y devorándolo vivo en la batalla más salvaje del trepamuros.",
+            "hashtags": "#SpiderMan #Morlun #TheOther #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+            "scenes": [
+                    "¡El vampiro totémico Morlun cazó a Spider-Man hasta llevar el cuerpo de Peter Parker a su límite!",
+                    "Ignorando cada ataque arácnido, el cazador quebró sus costillas y destrozó su máscara a golpes.",
+                    "En el clímax del horror, Morlun le arrancó el ojo izquierdo a Peter devorándolo ante sus ojos.",
+                    "Dejando al héroe agonizando al borde de la muerte, demostró su hambre insaciable. ¿Es el villano más brutal?"
+            ],
+            "scene_art_urls": [
+                    "assets/curated_panels/morlun_devora_ojo_spiderman/scene_01.jpg",
+                    "assets/curated_panels/morlun_devora_ojo_spiderman/scene_02.jpg",
+                    "assets/curated_panels/morlun_devora_ojo_spiderman/scene_03.jpg",
+                    "assets/curated_panels/morlun_devora_ojo_spiderman/scene_04.jpg"
+            ],
+            "art_queries": [
+                    "Morlun hunting Spider-Man exhausted bloody streets comic panel",
+                    "Morlun punching Spider-Man breaking ribs shattered mask panel",
+                    "Morlun ripping eating Spider-Man eye horror Amazing Spider-Man comic panel",
+                    "Spider-Man beaten dying hospital bed Morlun comic panel"
+            ]
+    },
+    {
+            "id": "doomsday_humilla_darkseid_apokolips",
+            "universe": "DC",
+            "character": "Doomsday (Juicio Final)",
+            "title": "¡Doomsday Destrozó a Darkseid en Apokolips! La Humillación del Dios del Mal 💀🔥",
+            "theme_signature": "doomsday:destrozo_darkseid:apokolips_invasion:rayos_omega_inutiles",
+            "description": "Al aterrizar en el planeta infernal de Apokolips, Doomsday resistió los legendarios Rayos Omega de Darkseid y lo molió a golpes con furia imparable.",
+            "hashtags": "#Doomsday #Darkseid #Superman #Apokolips #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+            "scenes": [
+                    "¡Al escapar al cosmos, Doomsday aterrizó en Apokolips desatando una masacre imparable contra los ejércitos oscuros!",
+                    "Confiado en su divinidad, Darkseid disparó sus infalibles Rayos Omega para desintegrar al coloso.",
+                    "Doomsday resistió el rayo sin rasguños, avanzando hasta quebrar los brazos del tirano a golpes.",
+                    "Dejando al señor del mal ensangrentado e impotente en su trono, demostró su furia. ¿Es Doomsday invencible?"
+            ],
+            "scene_art_urls": [
+                    "assets/curated_panels/doomsday_humilla_darkseid_apokolips/scene_01.jpg",
+                    "assets/curated_panels/doomsday_humilla_darkseid_apokolips/scene_02.jpg",
+                    "assets/curated_panels/doomsday_humilla_darkseid_apokolips/scene_03.jpg",
+                    "assets/curated_panels/doomsday_humilla_darkseid_apokolips/scene_04.jpg"
+            ],
+            "art_queries": [
+                    "Doomsday rampage Apokolips destroying parademons comic panel",
+                    "Darkseid firing Omega Beams at Doomsday Hunter Prey comic panel",
+                    "Doomsday shrugging off Omega Beams breaking Darkseid arms panel",
+                    "Darkseid beaten bloody lying defeated Doomsday standing comic panel"
+            ]
+    },
+    {
+            "id": "venom_dios_de_la_luz_fuerza_enigma",
+            "universe": "Marvel",
+            "character": "Captain Universe (Eddie Brock)",
+            "title": "¡El Hacha de Luz que Destruyó la Oscuridad! La Apoteosis Cósmica en King in Black 🤍⚡",
+            "theme_signature": "captain_universe:fuerza_enigma:hacha_cosmica_resurreccion:aniquilacion_sol",
+            "description": "Cuando Knull conquistó la Tierra con oscuridad absoluta, la legendaria Fuerza Enigma resucitó a Eddie Brock como el Dios de la Luz.",
+            "hashtags": "#Venom #KingInBlack #EnigmaForce #Knull #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+            "scenes": [
+                    "¡Cuando el Dios Simbionte Knull sumergió al planeta en oscuridad eterna, la última esperanza despertó!",
+                    "La Fuerza Enigma descendió del cosmos resucitando a un moribundo Eddie Brock como el Dios de la Luz.",
+                    "Forjando un hacha cósmica con el martillo de Thor, decapitó a las hordas de dragones alienígenas.",
+                    "Arrastró a Knull al corazón del sol incinerándolo para siempre. ¿Fue esta la mayor victoria de Marvel?"
+            ],
+            "scene_art_urls": [
+                    "assets/curated_panels/venom_dios_de_la_luz_fuerza_enigma/scene_01.jpg",
+                    "assets/curated_panels/venom_dios_de_la_luz_fuerza_enigma/scene_02.jpg",
+                    "assets/curated_panels/venom_dios_de_la_luz_fuerza_enigma/scene_03.jpg",
+                    "assets/curated_panels/venom_dios_de_la_luz_fuerza_enigma/scene_04.jpg"
+            ],
+            "art_queries": [
+                    "Knull symbiote dome covering Earth King in Black comic panel",
+                    "Eddie Brock glowing Enigma Force Captain Universe transformation panel",
+                    "Captain Universe Venom wielding light battle axe cutting symbiote dragons panel",
+                    "Venom throwing Knull into sun disintegrating King in Black finale panel"
+            ]
+    },
+    {
+            "id": "azrael_batman_armadura_asesina",
+            "universe": "DC",
+            "character": "Jean-Paul Valley (Azrael)",
+            "title": "¡El Batman Dorado de Azrael! Jean-Paul Valley Destrozó a Bane con Cuchillas y Fuego 🦇⚔️",
+            "theme_signature": "azrael:jean_paul_valley:armadura_cuchillas:orden_de_san_dumas",
+            "description": "Tras la caída de Bruce Wayne, Jean-Paul Valley reemplazó a Batman construyendo una aterradora armadura armada con garras y lanzallamas para imponer justicia despiadada.",
+            "hashtags": "#Batman #Azrael #Knightfall #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+            "scenes": [
+                    "¡Con la columna de Bruce Wayne quebrada por Bane, un fanático religioso asumió el manto de Gotham!",
+                    "Jean-Paul Valley rechazó la regla de no matar, construyendo una armadura mecánica armada con cuchillas y lanzallamas.",
+                    "Acorraló a Bane en combate despiadado, cortando sus tubos de Venom y moliéndolo a golpes.",
+                    "Consumido por la Orden de San Dumas, impuso el terror definitivo. ¿Debió Bruce confiarle su legado?"
+            ],
+            "scene_art_urls": [
+                    "assets/curated_panels/azrael_batman_armadura_asesina/scene_01.jpg",
+                    "assets/curated_panels/azrael_batman_armadura_asesina/scene_02.jpg",
+                    "assets/curated_panels/azrael_batman_armadura_asesina/scene_03.jpg",
+                    "assets/curated_panels/azrael_batman_armadura_asesina/scene_04.jpg"
+            ],
+            "art_queries": [
+                    "Azrael Batman Knightfall armor rooftop Gotham comic panel",
+                    "Jean-Paul Valley armored Batman gauntlets blades flame comic panel",
+                    "Azrael armored Batman slashing Bane venom tubes Batman 500 panel",
+                    "Azrael Batman standing victorious over defeated broken Bane Batman 500 panel"
+            ]
+    },
+    {
+            "id": "old_man_logan_estomago_hulk_canibal",
+            "universe": "Marvel",
+            "character": "Logan (Wasteland)",
+            "title": "¡Logan Desgarró a Hulk desde Adentro! El Fin del Tirano Caníbal en Wasteland 🥩🩸",
+            "theme_signature": "logan_anciano:coloso_canibal:regeneracion_tripas:caida_tirano_california",
+            "description": "En un futuro desolado, Wolverine desenfunda sus garras tras décadas de paz para vengar a su familia, sufriendo ser devorado por Hulk antes de desgarrar al monstruo desde su estómago.",
+            "hashtags": "#Wolverine #OldManLogan #Hulk #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+            "scenes": [
+                    "¡En un páramo dominado por villanos, Logan desenfundó sus garras decapitando a la banda de Hulk!",
+                    "Frente a su fortaleza, un decrépito Bruce Banner reveló la bestia imparable que aún habitaba en él.",
+                    "Logan se lanzó al ataque atravesando el cuerpo de Banner con sus garras, desatando la furia del gigante.",
+                    "Tras ser devorado, Wolverine se regeneró en las tripas de Hulk desgarrando su vientre desde adentro. ¿La muerte más grotesca?"
+            ],
+            "scene_art_urls": [
+                    "assets/curated_panels/old_man_logan_estomago_hulk/scene_01.jpg",
+                    "assets/curated_panels/old_man_logan_estomago_hulk/scene_02.jpg",
+                    "assets/curated_panels/old_man_logan_estomago_hulk/scene_03.jpg",
+                    "assets/curated_panels/old_man_logan_estomago_hulk/scene_04.jpg"
+            ],
+            "art_queries": [
+                    "James Howlett Bobbie-Jo Banner Wolverine Old Man Logan Giant-Size 1 001.jpg",
+                    "Bruce Banner James Howlett Billy-Bob Banner Wolverine Old Man Logan Giant-Size 1 001.jpg",
+                    "James Howlett Bruce Banner Wolverine Old Man Logan Giant-Size 1 001.jpg",
+                    "James Howlett Bruce Banner Wolverine Old Man Logan Giant-Size 1 003.jpg"
+            ]
     }
 ]
 
