@@ -1528,5 +1528,15 @@
     "mode": "live_release",
     "video_file": "El_Primer_Linterna_Azul_del_Cosmos_El_Milagro_que_Salvó_a_Hal_Jordan.mp4",
     "status": "published"
+  },
+  {
+    "id": "ghost_rider_robbie_reyes_eli_morrow",
+    "title": "¡Ghost Rider Robbie Reyes Desató al Demonio! El Asesinato que Aterró a Los Ángeles 💀🔥",
+    "character": "Ghost Rider Robbie Reyes",
+    "theme_signature": "ghost_rider:all_new_ghost_rider:eli_morrow_venganza",
+    "date": "2026-10-15 14:16",
+    "mode": "live_release",
+    "video_file": "Ghost_Rider_Robbie_Reyes_Desató_al_Demonio_El_Asesinato_que_Aterró_a_Los_Ángeles.mp4",
+    "status": "published"
   }
 ]
