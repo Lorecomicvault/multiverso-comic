@@ -1518,5 +1518,15 @@
     "mode": "live_release",
     "video_file": "War_Machine_Blindó_al_Castigador_La_Armadura_de_Destrucción_Masiva_en_Chernaya.mp4",
     "status": "published"
+  },
+  {
+    "id": "saint_walker_primer_linterna_azul_esperanza",
+    "title": "¡El Primer Linterna Azul del Cosmos! El Milagro que Salvó a Hal Jordan 💙✨",
+    "character": "Saint Walker",
+    "theme_signature": "saint_walker:blue_lantern:esperanza_bateria:hal_jordan_ysmault",
+    "date": "2026-10-15 10:06",
+    "mode": "live_release",
+    "video_file": "El_Primer_Linterna_Azul_del_Cosmos_El_Milagro_que_Salvó_a_Hal_Jordan.mp4",
+    "status": "published"
   }
 ]
