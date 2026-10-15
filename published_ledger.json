@@ -1508,5 +1508,15 @@
     "mode": "live_release",
     "video_file": "Constantine_Engañó_a_los_Reyes_del_Infierno_La_Mayor_Estafa_a_Lucifer.mp4",
     "status": "published"
+  },
+  {
+    "id": "punisher_war_machine_armadura_blanca",
+    "title": "¡War Machine Blindó al Castigador! La Armadura de Destrucción Masiva en Chernaya 💀🤖",
+    "character": "War Machine (Frank Castle)",
+    "theme_signature": "war_machine:punisher:chernaya_armadura_stark:calavera_titanio",
+    "date": "2026-10-15 07:35",
+    "mode": "live_release",
+    "video_file": "War_Machine_Blindó_al_Castigador_La_Armadura_de_Destrucción_Masiva_en_Chernaya.mp4",
+    "status": "published"
   }
 ]
