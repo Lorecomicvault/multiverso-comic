@@ -1548,5 +1548,15 @@
     "mode": "live_release",
     "video_file": "El_Asesinato_del_Capitán_América_El_Disparo_a_Quemarropa_que_Conmocionó_al_Mundo.mp4",
     "status": "published"
+  },
+  {
+    "id": "zoom_hunter_zolomon_chasquido_sonico",
+    "title": "¡Zoom Destruyó a Wally West! El Chasquido Sónico que Rompió la Línea Temporal ⚡⏱️",
+    "character": "Zoom (Hunter Zolomon)",
+    "theme_signature": "zoom:hunter_zolomon:chasquido_sonico_tiempo:tragedia_wally_west",
+    "date": "2026-10-15 22:06",
+    "mode": "live_release",
+    "video_file": "Zoom_Destruyó_a_Wally_West_El_Chasquido_Sónico_que_Rompió_la_Línea_Temporal.mp4",
+    "status": "published"
   }
 ]
