@@ -1538,5 +1538,15 @@
     "mode": "live_release",
     "video_file": "Ghost_Rider_Robbie_Reyes_Desató_al_Demonio_El_Asesinato_que_Aterró_a_Los_Ángeles.mp4",
     "status": "published"
+  },
+  {
+    "id": "captain_america_asesinato_civil_war_sharon",
+    "title": "¡El Asesinato del Capitán América! El Disparo a Quemarropa que Conmocionó al Mundo 🇺🇸🩸",
+    "character": "Captain America (Steve Rogers)",
+    "theme_signature": "captain_america:asesinato_civil_war:escalinatas_tribunal_sharon_carter:crossbones",
+    "date": "2026-10-15 20:31",
+    "mode": "live_release",
+    "video_file": "El_Asesinato_del_Capitán_América_El_Disparo_a_Quemarropa_que_Conmocionó_al_Mundo.mp4",
+    "status": "published"
   }
 ]
