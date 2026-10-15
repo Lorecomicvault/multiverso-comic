@@ -645,7 +645,8 @@ def main():
                     "doomsday_humilla_darkseid_apokolips",
                     "venom_dios_de_la_luz_fuerza_enigma",
                     "azrael_batman_armadura_asesina",
-                    "old_man_logan_estomago_hulk_canibal"
+                    "old_man_logan_estomago_hulk_canibal",
+                    "miles_morales_legado_nuevo_prodigio"
                 ]
                 selected = next((s for pid in priority_order for s in curated_avail if s["id"] == pid), None)
                 if not selected:

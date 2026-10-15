@@ -1026,6 +1026,33 @@ EMERGENCY_VIRAL_POOL = [
                     "James Howlett Bruce Banner Wolverine Old Man Logan Giant-Size 1 001.jpg",
                     "James Howlett Bruce Banner Wolverine Old Man Logan Giant-Size 1 003.jpg"
             ]
+    },
+    {
+        "id": "miles_morales_legado_nuevo_prodigio",
+        "universe": "Marvel",
+        "character": "Miles Morales",
+        "title": "¡El Nuevo Spider-Man de Brooklyn! El Legado Arácnido de Miles Morales 🕷️⚡",
+        "theme_signature": "miles_morales:ultimate_spiderman:patrullaje_brooklyn:aaron_davis_prowler",
+        "description": "Tras la muerte de Peter Parker, el joven Miles Morales asume el manto arácnido patrullando Brooklyn y enfrentando a su tío Aaron Davis.",
+        "hashtags": "#SpiderMan #MilesMorales #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Tras la caída de Peter Parker, un joven llamado Miles Morales heredó el manto del arácnido!",
+            "Superando sus miedos iniciales, Miles comenzó a patrullar los tejados de Brooklyn dominando sus reflejos arácnidos.",
+            "Al enfrentar a su tío Aaron Davis, comprendió que el peso del legado exige sacrificios desgarradores.",
+            "Decidido a honrar la memoria del héroe caído, Miles juró proteger a los inocentes. ¿Superó Miles a Peter?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/miles_morales_legado_prodigio/scene_01.jpg",
+            "assets/curated_panels/miles_morales_legado_prodigio/scene_02.jpg",
+            "assets/curated_panels/miles_morales_legado_prodigio/scene_03.jpg",
+            "assets/curated_panels/miles_morales_legado_prodigio/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Miles Morales Earth-1610 mask Ultimate Fallout 4 comic panel",
+            "Miles Morales jumping rooftops Brooklyn Ultimate Comics Spider-Man 5 panel",
+            "Miles Morales confronting Aaron Davis Prowler comic panel",
+            "Miles Morales determined face battle damage Spider-Man panel"
+        ]
     }
 ]
 
