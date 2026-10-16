@@ -1568,5 +1568,15 @@
     "mode": "live_release",
     "video_file": "Sinestro_se_Fusionó_con_la_Entidad_Divina_El_Milagro_de_la_Creación_Cósmica.mp4",
     "status": "published"
+  },
+  {
+    "id": "blue_beetle_jaime_reyes_escarabajo_khaji_da",
+    "title": "¡El Escarabajo Alienígena se Fusionó con su Columna! El Origen de Jaime Reyes 🪲⚡",
+    "character": "Blue Beetle (Jaime Reyes)",
+    "theme_signature": "blue_beetle:jaime_reyes:escarabajo_khaji_da:alcance_alienigena",
+    "date": "2026-10-16 07:06",
+    "mode": "live_release",
+    "video_file": "El_Escarabajo_Alienígena_se_Fusionó_con_su_Columna_El_Origen_de_Jaime_Reyes.mp4",
+    "status": "published"
   }
 ]
