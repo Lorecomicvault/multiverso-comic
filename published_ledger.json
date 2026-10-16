@@ -1578,5 +1578,15 @@
     "mode": "live_release",
     "video_file": "El_Escarabajo_Alienígena_se_Fusionó_con_su_Columna_El_Origen_de_Jaime_Reyes.mp4",
     "status": "published"
+  },
+  {
+    "id": "morlun_devora_ojo_spiderman",
+    "title": "¡Morlun le Arrancó el Ojo a Spider-Man! La Masacre del Cazador Heredero 🩸🕷️",
+    "character": "Morlun (Vampiro Totémico)",
+    "theme_signature": "morlun:vampiro_totemico:arranca_ojo_peter_parker:the_other",
+    "date": "2026-10-16 10:07",
+    "mode": "live_release",
+    "video_file": "Morlun_le_Arrancó_el_Ojo_a_Spider-Man_La_Masacre_del_Cazador_Heredero.mp4",
+    "status": "published"
   }
 ]
