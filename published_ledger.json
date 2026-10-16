@@ -1558,5 +1558,15 @@
     "mode": "live_release",
     "video_file": "Zoom_Destruyó_a_Wally_West_El_Chasquido_Sónico_que_Rompió_la_Línea_Temporal.mp4",
     "status": "published"
+  },
+  {
+    "id": "sinestro_luz_blanca_entidad_vida",
+    "title": "¡Sinestro se Fusionó con la Entidad Divina! El Milagro de la Creación Cósmica 🤍✨",
+    "character": "Sinestro",
+    "theme_signature": "sinestro:entidad_blanca:luz_de_la_vida:resurreccion_universo",
+    "date": "2026-10-16 01:06",
+    "mode": "live_release",
+    "video_file": "Sinestro_se_Fusionó_con_la_Entidad_Divina_El_Milagro_de_la_Creación_Cósmica.mp4",
+    "status": "published"
   }
 ]
