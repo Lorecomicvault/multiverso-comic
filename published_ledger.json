@@ -1608,5 +1608,15 @@
     "mode": "live_release",
     "video_file": "El_Hacha_de_Luz_que_Destruyó_la_Oscuridad_La_Apoteosis_Cósmica_en_King_in_Black.mp4",
     "status": "published"
+  },
+  {
+    "id": "azrael_batman_armadura_asesina",
+    "title": "¡El Batman Dorado de Azrael! Jean-Paul Valley Destrozó a Bane con Cuchillas y Fuego 🦇⚔️",
+    "character": "Jean-Paul Valley (Azrael)",
+    "theme_signature": "azrael:jean_paul_valley:armadura_cuchillas:orden_de_san_dumas",
+    "date": "2026-10-16 22:06",
+    "mode": "live_release",
+    "video_file": "El_Batman_Dorado_de_Azrael_Jean-Paul_Valley_Destrozó_a_Bane_con_Cuchillas_y_Fueg.mp4",
+    "status": "published"
   }
 ]
