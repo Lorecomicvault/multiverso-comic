@@ -1588,5 +1588,15 @@
     "mode": "live_release",
     "video_file": "Morlun_le_Arrancó_el_Ojo_a_Spider-Man_La_Masacre_del_Cazador_Heredero.mp4",
     "status": "published"
+  },
+  {
+    "id": "doomsday_humilla_darkseid_apokolips",
+    "title": "¡Doomsday Destrozó a Darkseid en Apokolips! La Humillación del Dios del Mal 💀🔥",
+    "character": "Doomsday (Juicio Final)",
+    "theme_signature": "doomsday:destrozo_darkseid:apokolips_invasion:rayos_omega_inutiles",
+    "date": "2026-10-16 14:07",
+    "mode": "live_release",
+    "video_file": "Doomsday_Destrozó_a_Darkseid_en_Apokolips_La_Humillación_del_Dios_del_Mal.mp4",
+    "status": "published"
   }
 ]
