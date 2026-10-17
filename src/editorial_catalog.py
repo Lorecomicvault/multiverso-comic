@@ -9,6 +9,37 @@ Every story features:
 
 EDITORIAL_STORIES = [
     {
+        "id": "bane_origen_prision_pena_duro",
+        "universe": "DC",
+        "character": "Bane",
+        "title": "¡El Nacimiento de Bane en Peña Duro! La Infancia Más Aterradora de DC 🧸⛓️",
+        "theme_signature": "bane:pena_duro:infancia_condena_osito_cuchillo_fosa_venom",
+        "description": "Nacido en la brutal prisión de Peña Duro para pagar la condena de su padre, Bane sobrevivió a la oscuridad con su oso Osito y el suero Veneno.",
+        "hashtags": "#Bane #Batman #DCComics #Knightfall #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Bane nació dentro de la prisión más brutal del mundo para pagar la cadena perpetua de su padre!",
+            "Creció en celdas oscuras con su oso Osito, donde escondía un cuchillo para defenderse de asesinos.",
+            "Castigado en una fosa inundada con ratas durante diez años, juró no temer a la muerte sino convertirse en el miedo.",
+            "Tras sobrevivir a la dosis letal del suero Veneno, escapó para quebrar a Batman. ¿Es el origen más desgarrador?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/bane_origen_prision_pena_duro/scene_01.jpg",
+            "assets/curated_panels/bane_origen_prision_pena_duro/scene_02.jpg",
+            "assets/curated_panels/bane_origen_prision_pena_duro/scene_03.jpg",
+            "assets/curated_panels/bane_origen_prision_pena_duro/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Bane baby born Pena Duro prison Santa Prisca comic panel",
+            "Young Bane cell Osito teddy bear knife comic panel",
+            "Young Bane flooded pit hole rats become fear comic panel",
+            "Bane Venom suit tubes breaking Batman Gotham comic panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
         "id": "venom_el_origen_del_simbionte_letal",
         "character": "Venom",
         "title": "Venom: El Nacimiento del Protector Letal",
