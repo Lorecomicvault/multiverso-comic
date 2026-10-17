@@ -1658,5 +1658,15 @@
     "mode": "live_release",
     "video_file": "Wolverine_Tuvo_que_Ahogar_a_su_Propio_Hijo_La_Tragedia_Desgarradora_de_Daken.mp4",
     "status": "published"
+  },
+  {
+    "id": "punisher_duelo_brutal_ruso_apartamento",
+    "title": "¡El Ruso Destrozó el Hogar de Frank Castle! La Pelea más Despiadada de Punisher 🥊🏢",
+    "character": "The Punisher (Frank Castle)",
+    "theme_signature": "punisher:frank_castle:pelea_brutal_apartamento:ruso_garth_ennis",
+    "date": "2026-10-17 18:05",
+    "mode": "live_release",
+    "video_file": "El_Ruso_Destrozó_el_Hogar_de_Frank_Castle_La_Pelea_más_Despiadada_de_Punisher.mp4",
+    "status": "published"
   }
 ]
