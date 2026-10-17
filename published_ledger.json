@@ -1638,5 +1638,15 @@
     "mode": "live_release",
     "video_file": "El_Nuevo_Spider-Man_de_Brooklyn_El_Legado_Arácnido_de_Miles_Morales.mp4",
     "status": "published"
+  },
+  {
+    "id": "batman_endgame_justice_buster_liga",
+    "title": "¡Batman Humilló a la Liga de la Justicia! La Imparable Armadura Fenrir 🦇🤖",
+    "character": "Batman",
+    "theme_signature": "batman:endgame:justice_buster_fenrir:liga_infeccion_joker",
+    "date": "2026-10-17 13:43",
+    "mode": "live_release",
+    "video_file": "Batman_Humilló_a_la_Liga_de_la_Justicia_La_Imparable_Armadura_Fenrir.mp4",
+    "status": "published"
   }
 ]
