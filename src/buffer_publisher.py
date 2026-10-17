@@ -121,7 +121,7 @@ def publish_to_tiktok_via_buffer(
     1. Uploads video binary to direct temporary HTTPS storage.
     2. Sends createPost mutation with channelId, video asset, and action thumbnail offset.
     """
-    token = access_token or os.environ.get("BUFFER_ACCESS_TOKEN")
+    token = access_token or os.environ.get("BUFFER_TIKTOK_ACCESS_TOKEN") or os.environ.get("BUFFER_ACCESS_TOKEN")
     ch_id = channel_id or os.environ.get("BUFFER_TIKTOK_CHANNEL_ID")
 
     if not token:
@@ -217,7 +217,7 @@ def publish_to_youtube_via_buffer(
     1. Uploads video binary to direct temporary HTTPS storage.
     2. Sends createPost mutation with YouTube metadata (title, privacy, madeForKids, notifySubscribers).
     """
-    token = access_token or os.environ.get("BUFFER_ACCESS_TOKEN")
+    token = access_token or os.environ.get("BUFFER_YOUTUBE_ACCESS_TOKEN") or os.environ.get("BUFFER_ACCESS_TOKEN")
     ch_id = channel_id or os.environ.get("BUFFER_YOUTUBE_CHANNEL_ID")
 
     if not token:

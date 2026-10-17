@@ -299,42 +299,43 @@ def publish_comic_video(
         )
         results['instagram'] = ig_res
 
-    # 3. Publish to TikTok via Buffer (if BUFFER_ACCESS_TOKEN is configured)
-    buffer_token = os.environ.get('BUFFER_ACCESS_TOKEN')
-    if buffer_token and not draft_only:
+    # 3. Publish to TikTok via Buffer (if configured)
+    tiktok_token = os.environ.get('BUFFER_TIKTOK_ACCESS_TOKEN') or os.environ.get('BUFFER_ACCESS_TOKEN')
+    if tiktok_token and not draft_only:
         try:
             from .buffer_publisher import publish_to_tiktok_via_buffer
             tt_res = publish_to_tiktok_via_buffer(
                 video_path=video_path,
                 caption=full_caption,
                 thumb_offset_ms=thumb_offset_ms,
-                access_token=buffer_token,
+                access_token=tiktok_token,
                 channel_id=os.environ.get('BUFFER_TIKTOK_CHANNEL_ID'),
             )
             results['tiktok'] = tt_res
         except Exception as e:
             log(f"Warning publishing to TikTok via Buffer: {e}")
             results['tiktok'] = {'success': False, 'error': str(e)}
-    elif not buffer_token:
-        results['tiktok'] = {'skipped': True, 'reason': 'BUFFER_ACCESS_TOKEN not set'}
+    elif not tiktok_token:
+        results['tiktok'] = {'skipped': True, 'reason': 'BUFFER token not set for TikTok'}
 
-    # 4. Publish to YouTube Shorts via Buffer (if BUFFER_ACCESS_TOKEN is configured)
-    if buffer_token and not draft_only:
+    # 4. Publish to YouTube Shorts via Buffer (if configured)
+    youtube_token = os.environ.get('BUFFER_YOUTUBE_ACCESS_TOKEN') or os.environ.get('BUFFER_ACCESS_TOKEN')
+    if youtube_token and not draft_only:
         try:
             from .buffer_publisher import publish_to_youtube_via_buffer
             yt_res = publish_to_youtube_via_buffer(
                 video_path=video_path,
                 title=title,
                 description=full_caption,
-                access_token=buffer_token,
+                access_token=youtube_token,
                 channel_id=os.environ.get('BUFFER_YOUTUBE_CHANNEL_ID'),
             )
             results['youtube'] = yt_res
         except Exception as e:
             log(f"Warning publishing to YouTube Shorts via Buffer: {e}")
             results['youtube'] = {'success': False, 'error': str(e)}
-    elif not buffer_token:
-        results['youtube'] = {'skipped': True, 'reason': 'BUFFER_ACCESS_TOKEN not set'}
+    elif not youtube_token:
+        results['youtube'] = {'skipped': True, 'reason': 'BUFFER token not set for YouTube'}
 
     return results
 

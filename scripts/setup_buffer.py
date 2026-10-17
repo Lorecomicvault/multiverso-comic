@@ -16,6 +16,12 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.buffer_publisher import get_buffer_channels
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv(PROJECT_ROOT / ".env")
+except ImportError:
+    pass
+
 
 def main():
     print("=" * 65)

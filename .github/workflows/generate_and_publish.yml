@@ -142,9 +142,11 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID || '17841427017671758' }}
           GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY || 'AIzaSyDpdDhoXt8GDwJ_sEj-vjtd6HqVflN_vSY' }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_ACCESS_TOKEN || 'TgAoAyRxipfYzSzSROuWF5GQcGD9rXnGE2_lshtduM3' }}
+          BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_ACCESS_TOKEN || '7nyND1vEJsOZqgErmjAsGKW_HaEABZ642EYVG8-5-QK' }}
+          BUFFER_TIKTOK_ACCESS_TOKEN: ${{ secrets.BUFFER_TIKTOK_ACCESS_TOKEN || 'TgAoAyRxipfYzSzSROuWF5GQcGD9rXnGE2_lshtduM3' }}
           BUFFER_TIKTOK_CHANNEL_ID: ${{ secrets.BUFFER_TIKTOK_CHANNEL_ID || '6aba9f05ea19ca0bde156163' }}
-          BUFFER_YOUTUBE_CHANNEL_ID: ${{ secrets.BUFFER_YOUTUBE_CHANNEL_ID }}
+          BUFFER_YOUTUBE_ACCESS_TOKEN: ${{ secrets.BUFFER_YOUTUBE_ACCESS_TOKEN || '7nyND1vEJsOZqgErmjAsGKW_HaEABZ642EYVG8-5-QK' }}
+          BUFFER_YOUTUBE_CHANNEL_ID: ${{ secrets.BUFFER_YOUTUBE_CHANNEL_ID || '6ad30a50778b240e2f35850d' }}
           VOICE: 'Puck'
           EVENT_MODE: ${{ github.event.inputs.mode || 'live_release' }}
         run: |
