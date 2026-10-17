@@ -1668,5 +1668,15 @@
     "mode": "live_release",
     "video_file": "El_Ruso_Destrozó_el_Hogar_de_Frank_Castle_La_Pelea_más_Despiadada_de_Punisher.mp4",
     "status": "published"
+  },
+  {
+    "id": "bane_origen_prision_pena_duro",
+    "title": "¡El Nacimiento de Bane en Peña Duro! La Infancia Más Aterradora de DC 🧸⛓️",
+    "character": "Bane",
+    "theme_signature": "bane:pena_duro:infancia_condena_osito_cuchillo_fosa_venom",
+    "date": "2026-10-17 23:32",
+    "mode": "live_release",
+    "video_file": "El_Nacimiento_de_Bane_en_Peña_Duro_La_Infancia_Más_Aterradora_de_DC.mp4",
+    "status": "published"
   }
 ]
