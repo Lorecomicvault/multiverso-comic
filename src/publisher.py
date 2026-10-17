@@ -318,6 +318,24 @@ def publish_comic_video(
     elif not buffer_token:
         results['tiktok'] = {'skipped': True, 'reason': 'BUFFER_ACCESS_TOKEN not set'}
 
+    # 4. Publish to YouTube Shorts via Buffer (if BUFFER_ACCESS_TOKEN is configured)
+    if buffer_token and not draft_only:
+        try:
+            from .buffer_publisher import publish_to_youtube_via_buffer
+            yt_res = publish_to_youtube_via_buffer(
+                video_path=video_path,
+                title=title,
+                description=full_caption,
+                access_token=buffer_token,
+                channel_id=os.environ.get('BUFFER_YOUTUBE_CHANNEL_ID'),
+            )
+            results['youtube'] = yt_res
+        except Exception as e:
+            log(f"Warning publishing to YouTube Shorts via Buffer: {e}")
+            results['youtube'] = {'success': False, 'error': str(e)}
+    elif not buffer_token:
+        results['youtube'] = {'skipped': True, 'reason': 'BUFFER_ACCESS_TOKEN not set'}
+
     return results
 
 

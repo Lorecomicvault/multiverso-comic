@@ -202,3 +202,108 @@ def publish_to_tiktok_via_buffer(
     except Exception as e:
         log(f"EXCEPTION publishing to TikTok via Buffer: {e}")
         return {"success": False, "error": str(e)}
+
+
+def publish_to_youtube_via_buffer(
+    video_path: str | Path,
+    title: str,
+    description: str,
+    access_token: str | None = None,
+    channel_id: str | None = None,
+    privacy: str = "public",
+) -> dict:
+    """
+    Publishes a vertical video as a YouTube Short using Buffer's GraphQL API.
+    1. Uploads video binary to direct temporary HTTPS storage.
+    2. Sends createPost mutation with YouTube metadata (title, privacy, madeForKids, notifySubscribers).
+    """
+    token = access_token or os.environ.get("BUFFER_ACCESS_TOKEN")
+    ch_id = channel_id or os.environ.get("BUFFER_YOUTUBE_CHANNEL_ID")
+
+    if not token:
+        log("Notice: BUFFER_ACCESS_TOKEN is missing. Skipping YouTube publishing.")
+        return {"skipped": True, "reason": "Missing BUFFER_ACCESS_TOKEN"}
+
+    # Auto-discover YouTube channel if channel_id not explicitly configured
+    if not ch_id:
+        channels = get_buffer_channels(token)
+        yt_ch = next((c for c in channels if str(c.get("service")).lower() == "youtube"), None)
+        if yt_ch:
+            ch_id = yt_ch["id"]
+            log(f"Auto-discovered YouTube channel in Buffer: '{yt_ch.get('displayName') or yt_ch.get('name')}' (ID: {ch_id})")
+        else:
+            log("Notice: No YouTube channel connected in Buffer account. Skipping YouTube publishing.")
+            return {"skipped": True, "reason": "No YouTube channel found in Buffer account"}
+
+    try:
+        # Step 1: Upload to temporary direct HTTPS host
+        direct_video_url = upload_to_temporary_public_url(video_path)
+
+        # Step 2: Post to Buffer via GraphQL mutation
+        log(f"Sending video to Buffer for YouTube Shorts publishing (Channel: {ch_id})...")
+        mutation = """
+        mutation CreateYouTubePost($input: CreatePostInput!) {
+          createPost(input: $input) {
+            ... on PostActionSuccess {
+              post {
+                id
+                text
+                status
+              }
+            }
+            ... on MutationError {
+              message
+            }
+          }
+        }
+        """
+
+        # YouTube title limit is 100 chars
+        clean_title = title[:100]
+
+        variables = {
+            "input": {
+                "channelId": ch_id,
+                "text": description,
+                "schedulingType": "automatic",
+                "mode": "shareNow",
+                "assets": [
+                    {
+                        "video": {
+                            "url": direct_video_url
+                        }
+                    }
+                ],
+                "metadata": {
+                    "youtube": {
+                        "title": clean_title,
+                        "privacy": privacy,
+                        "madeForKids": False,
+                        "notifySubscribers": True
+                    }
+                }
+            }
+        }
+
+        headers = {
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json"
+        }
+
+        r = requests.post(BUFFER_GRAPHQL_URL, json={"query": mutation, "variables": variables}, headers=headers, timeout=30)
+        res = r.json()
+
+        data = res.get("data", {}).get("createPost", {})
+        if "post" in data:
+            post_id = data["post"]["id"]
+            log(f"SUCCESS: Video published to YouTube Shorts via Buffer! Post ID: {post_id}")
+            return {"success": True, "post_id": post_id, "status": data["post"].get("status")}
+        else:
+            err_msg = data.get("message") or res.get("errors") or res
+            log(f"ERROR publishing to Buffer YouTube: {err_msg}")
+            return {"success": False, "error": str(err_msg)}
+
+    except Exception as e:
+        log(f"EXCEPTION publishing to YouTube Shorts via Buffer: {e}")
+        return {"success": False, "error": str(e)}
+
