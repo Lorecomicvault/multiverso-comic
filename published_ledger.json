@@ -1618,5 +1618,15 @@
     "mode": "live_release",
     "video_file": "El_Batman_Dorado_de_Azrael_Jean-Paul_Valley_Destrozó_a_Bane_con_Cuchillas_y_Fueg.mp4",
     "status": "published"
+  },
+  {
+    "id": "old_man_logan_estomago_hulk_canibal",
+    "title": "¡Logan Desgarró a Hulk desde Adentro! El Fin del Tirano Caníbal en Wasteland 🥩🩸",
+    "character": "Logan (Wasteland)",
+    "theme_signature": "logan_anciano:coloso_canibal:regeneracion_tripas:caida_tirano_california",
+    "date": "2026-10-17 01:05",
+    "mode": "live_release",
+    "video_file": "Logan_Desgarró_a_Hulk_desde_Adentro_El_Fin_del_Tirano_Caníbal_en_Wasteland.mp4",
+    "status": "published"
   }
 ]
