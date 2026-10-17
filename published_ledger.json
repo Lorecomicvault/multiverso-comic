@@ -1628,5 +1628,15 @@
     "mode": "live_release",
     "video_file": "Logan_Desgarró_a_Hulk_desde_Adentro_El_Fin_del_Tirano_Caníbal_en_Wasteland.mp4",
     "status": "published"
+  },
+  {
+    "id": "miles_morales_legado_nuevo_prodigio",
+    "title": "¡El Nuevo Spider-Man de Brooklyn! El Legado Arácnido de Miles Morales 🕷️⚡",
+    "character": "Miles Morales",
+    "theme_signature": "miles_morales:ultimate_spiderman:patrullaje_brooklyn:aaron_davis_prowler",
+    "date": "2026-10-17 07:05",
+    "mode": "live_release",
+    "video_file": "El_Nuevo_Spider-Man_de_Brooklyn_El_Legado_Arácnido_de_Miles_Morales.mp4",
+    "status": "published"
   }
 ]
