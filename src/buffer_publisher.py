@@ -277,6 +277,7 @@ def publish_to_youtube_via_buffer(
                 "metadata": {
                     "youtube": {
                         "title": clean_title,
+                        "categoryId": "24",
                         "privacy": privacy,
                         "madeForKids": False,
                         "notifySubscribers": True

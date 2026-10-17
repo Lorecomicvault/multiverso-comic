@@ -1619,23 +1619,27 @@ EDITORIAL_STORIES = [
         "id": "batman_endgame_justice_buster_liga",
         "universe": "DC",
         "character": "Batman",
-        "title": "¡Batman Derrotó a Toda la Liga de la Justicia! La Armadura Implacable del Justice Buster 🦇🤖",
-        "theme_signature": "batman:endgame:justice_buster_armadura_fenrir_joker_toxina",
+        "title": "¡Batman Humilló a la Liga de la Justicia! La Imparable Armadura Fenrir 🦇🤖",
+        "theme_signature": "batman:endgame:justice_buster_fenrir:liga_infeccion_joker",
         "description": "Cuando el Joker infectó a la Liga de la Justicia con una toxina homicida, Batman desató la armadura Fenrir para someter a sus mejores amigos.",
         "hashtags": "#Batman #JusticeLeague #Endgame #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "¡El Joker infectó a la Liga de la Justicia con una variante macabra de su toxina, enviando a los héroes más poderosos a asesinar a Batman!",
-            "Wonder Woman, Flash y Aquaman atacaron Gotham con una furia sádica descomunal, arrasando manzanas enteras sin mostrar una pizca de cordura o piedad.",
-            "Ante la aniquilación inminente, Bruce Wayne activó la colosal armadura Fenrir, conocida como el Justice Buster, equipada con contramedidas científicas para neutralizar a cada compañero.",
-            "Usó tejido místico contra Diana, servidores ultraveloces contra Flash y espuma de carbonato contra Aquaman, hasta que un Superman poseído destrozó la cabina desde el aire.",
-            "Acorralado y sin armadura, Batman escupió una cápsula de polvo de kriptonita directo a los ojos del Hombre de Acero para noquearlo. ¿Es Batman la mente más peligrosa del universo?"
+            "La Liga de la Justicia fue infectada por el Joker y atacó Gotham para matar a Batman.",
+            "Sin tiempo que perder, Bruce Wayne activó la Justice Buster, una armadura diseñada para destruir dioses.",
+            "Neutralizó la velocidad de Flash con fluidos sin fricción y contuvo a Wonder Woman con engaños místicos.",
+            "Finalmente, pulverizó a Superman disparando soles rojos microscópicos en sus nudillos. ¡El plan de contingencia definitivo!"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/batman_justice_buster/scene_01.jpg",
+            "assets/curated_panels/batman_justice_buster/scene_02.jpg",
+            "assets/curated_panels/batman_justice_buster/scene_03.jpg",
+            "assets/curated_panels/batman_justice_buster/scene_04.jpg"
         ],
         "art_queries": [
             "Wonder Woman Joker venom attacking Batman Batman Endgame 35 panel",
-            "Justice League infected Joker smiles destroying Gotham Batman 35 panel",
             "Batman Justice Buster Fenrir armor deploying Gotham Batman 35 panel",
-            "Superman Joker toxin attacking Justice Buster armor Batman 36 panel",
-            "Batman spitting kryptonite gum Superman eye Batman Endgame 36 panel"
+            "Batman Justice Buster neutralizing Flash Wonder Woman comic panel",
+            "Batman Justice Buster punching Superman red sun knuckles panel"
         ]
     },
     {
@@ -2113,6 +2117,141 @@ EDITORIAL_STORIES = [
             "Miles Morales jumping rooftops Brooklyn Ultimate Comics Spider-Man 5 panel",
             "Miles Morales confronting Aaron Davis Prowler comic panel",
             "Miles Morales determined face battle damage Spider-Man panel"
+        ]
+    },
+    {
+        "id": "wolverine_ahoga_hijo_daken_xforce",
+        "universe": "Marvel",
+        "character": "Wolverine (Logan)",
+        "title": "¡Wolverine Tuvo que Ahogar a su Propio Hijo! La Tragedia Desgarradora de Daken 💧💔",
+        "theme_signature": "wolverine:logan_xforce:charco_agua_ahogamiento_daken:profecia_oscura",
+        "description": "Para evitar que su hijo Daken aniquilara a los estudiantes de la Escuela Jean Grey, Wolverine tuvo que cometer el acto más desgarrador ahogándolo en un charco de lluvia.",
+        "hashtags": "#Wolverine #XForce #Daken #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Daken lideró a la Hermandad de Mutantes para aniquilar a los jóvenes alumnos de su padre.",
+            "Wolverine intentó razonar con su hijo bajo la lluvia, pero el odio de Daken era completamente insalvable.",
+            "Para detener la masacre, Logan tomó a Daken y sumergió su rostro en un charco lodoso.",
+            "Sin aire, el factor curativo de Daken falló y Logan lloró destrozado sosteniendo a su hijo muerto."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/wolverine_ahoga_hijo_daken/scene_01.jpg",
+            "assets/curated_panels/wolverine_ahoga_hijo_daken/scene_02.jpg",
+            "assets/curated_panels/wolverine_ahoga_hijo_daken/scene_03.jpg",
+            "assets/curated_panels/wolverine_ahoga_hijo_daken/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Wolverine fighting Daken rain Uncanny X-Force 34 panel",
+            "Daken smiling claws angry Uncanny X-Force 34 panel",
+            "Wolverine drowns Daken puddle Uncanny X-Force 34 panel",
+            "Wolverine weeping holding drowned Daken rain panel"
+        ]
+    },
+    {
+        "id": "punisher_duelo_brutal_ruso_apartamento",
+        "universe": "Marvel",
+        "character": "The Punisher (Frank Castle)",
+        "title": "¡El Ruso Destrozó el Hogar de Frank Castle! La Pelea más Despiadada de Punisher 🥊🏢",
+        "theme_signature": "punisher:frank_castle:pelea_brutal_apartamento:ruso_garth_ennis",
+        "description": "Un gigante indestructible conocido como El Ruso emboscó a Frank Castle en su propio departamento, desatando una pelea salvaje que casi le cuesta la vida.",
+        "hashtags": "#Punisher #TheRussian #GarthEnnis #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Un sicario gigante conocido como El Ruso derribó la puerta del departamento secreto de Frank Castle.",
+            "Frank le disparó a quemarropa, pero el coloso no sintió dolor y lo lanzó contra los muros.",
+            "Al borde de la muerte, Castle sacó una pizza hirviendo del horno y se la estampó.",
+            "Con el gigante cegado por el queso quemado, Frank lo asfixió con un sillón hasta matarlo."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/punisher_duelo_brutal_ruso/scene_01.jpg",
+            "assets/curated_panels/punisher_duelo_brutal_ruso/scene_02.jpg",
+            "assets/curated_panels/punisher_duelo_brutal_ruso/scene_03.jpg",
+            "assets/curated_panels/punisher_duelo_brutal_ruso/scene_04.jpg"
+        ],
+        "art_queries": [
+            "The Russian breaking door Frank Castle apartment Punisher comic panel",
+            "The Russian throwing Frank Castle wall Punisher panel",
+            "Frank Castle hot pizza pan Russian face Punisher panel",
+            "Punisher suffocating Russian couch pillow apartment panel"
+        ]
+    },
+    {
+        "id": "nightwing_disparo_cabeza_kgbeast_amnesia",
+        "universe": "DC",
+        "character": "Nightwing (Dick Grayson)",
+        "title": "¡Le Dispararon en la Cabeza a Nightwing! La Emboscada Sangrienta de KGBeast 🎯🩸",
+        "theme_signature": "nightwing:dick_grayson:disparo_francotirador_kgbeast:amnesia_gotham",
+        "description": "En una noche tranquila en Gotham, el implacable asesino KGBeast disparó a quemarropa con un rifle de francotirador a la cabeza de Nightwing.",
+        "hashtags": "#Nightwing #Batman #KGBeast #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Batman y Nightwing conversaban junto a la batiseñal en una noche tranquila sobre los techos de Gotham.",
+            "A cientos de metros, el asesino KGBeast apuntaba fríamente un rifle de francotirador hacia ellos.",
+            "Sin advertencia, una bala de alto calibre atravesó el cráneo de Nightwing en una sangrienta explosión.",
+            "Batman gritó desesperado mientras sostenía a su pupilo agonizante. Dick sobrevivió milagrosamente, pero perdió todos sus recuerdos."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/nightwing_disparo_cabeza_kgbeast/scene_01.jpg",
+            "assets/curated_panels/nightwing_disparo_cabeza_kgbeast/scene_02.jpg",
+            "assets/curated_panels/nightwing_disparo_cabeza_kgbeast/scene_03.jpg",
+            "assets/curated_panels/nightwing_disparo_cabeza_kgbeast/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Batman Nightwing rooftop Bat-Signal Batman 55 comic panel",
+            "KGBeast sniper rifle aiming rooftop Batman 55 panel",
+            "Nightwing shot head blood bullet Batman 55 comic panel",
+            "Batman screaming holding bleeding Nightwing rooftop panel"
+        ]
+    },
+    {
+        "id": "daredevil_asesinato_karen_page_bullseye",
+        "universe": "Marvel",
+        "character": "Daredevil (Matt Murdock)",
+        "title": "¡Bullseye Asesinó a Karen Page! La Mayor Tragedia en la Vida de Daredevil ⛪💔",
+        "theme_signature": "daredevil:karen_page:asesinato_iglesia_bastoncillo:bullseye_guardian_devil",
+        "description": "Bullseye asaltó la iglesia donde se refugiaba Karen Page y le arrebató la vida con el propio bastón de Daredevil, quebrando para siempre el corazón de Matt Murdock.",
+        "hashtags": "#Daredevil #Bullseye #KarenPage #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Karen Page y Matt Murdock se refugiaron dentro de una iglesia para proteger a un bebé inocente.",
+            "El despiadado asesino Bullseye irrumpió en el santuario buscando destruir la cordura del Hombre Sin Miedo.",
+            "Bullseye arrojó el propio bastón de Daredevil y atravesó el corazón de Karen cuando intentó salvar a Matt.",
+            "Daredevil cayó de rodillas llorando sobre el cadáver de su gran amor. ¡La tragedia que casi lo destruye!"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/daredevil_asesinato_karen_page/scene_01.jpg",
+            "assets/curated_panels/daredevil_asesinato_karen_page/scene_02.jpg",
+            "assets/curated_panels/daredevil_asesinato_karen_page/scene_03.jpg",
+            "assets/curated_panels/daredevil_asesinato_karen_page/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Daredevil Karen Page church sanctuary Guardian Devil panel",
+            "Bullseye breaking church doors Daredevil Guardian Devil panel",
+            "Bullseye throws billy club kills Karen Page Daredevil panel",
+            "Daredevil weeping dead Karen Page church floor panel"
+        ]
+    },
+    {
+        "id": "thanos_derriba_galactus_descarga_cosmica",
+        "universe": "Marvel",
+        "character": "Thanos (Titan Loco)",
+        "title": "¡Thanos Hizo Arrodillar a Galactus! El Disparo que Impactó al Devorador Cósmico 🪐💥",
+        "theme_signature": "thanos:titan_loco:descarga_energia_galactus:arrodillado_cosmos",
+        "description": "En un enfrentamiento colosal en el espacio profundo, Thanos canalizó una descarga devastadora de energía que obligó al todopoderoso Galactus a caer sobre sus rodillas.",
+        "hashtags": "#Thanos #Galactus #MarvelCosmic #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "En los confines del cosmos, Thanos confrontó al temido Devorador de Mundos sin mostrar el menor temor.",
+            "Galactus encendió su poder cósmico supremo, furioso porque un mortal osaba desafiar su presencia divina.",
+            "Pero Thanos canalizó una descarga monumental de energía que impactó de lleno en el pecho del gigante.",
+            "La fuerza del disparo obligó a Galactus a caer arrodillado. ¡El Titán Loco humilló a un dios viviente!"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/thanos_derriba_galactus_cosmico/scene_01.jpg",
+            "assets/curated_panels/thanos_derriba_galactus_cosmico/scene_02.jpg",
+            "assets/curated_panels/thanos_derriba_galactus_cosmico/scene_03.jpg",
+            "assets/curated_panels/thanos_derriba_galactus_cosmico/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Thanos facing Galactus deep space Thanos 5 comic panel",
+            "Galactus eyes glowing cosmic energy Thanos 5 comic panel",
+            "Thanos blasting Galactus powerful energy beam comic panel",
+            "Galactus knocked down knees space crater Thanos 5 panel"
         ]
     }
 ]

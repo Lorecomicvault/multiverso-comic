@@ -9,18 +9,15 @@ on:
         default: 'autonomous_ai'
         type: choice
         options:
-          - captain_america_asesinato_civil_war_sharon
-          - zoom_hunter_zolomon_chasquido_sonico
-          - sinestro_luz_blanca_entidad_vida
-          - blue_beetle_jaime_reyes_escarabajo_khaji_da
-          - morlun_devora_ojo_spiderman
-          - doomsday_humilla_darkseid_apokolips
-          - venom_dios_de_la_luz_fuerza_enigma
-          - azrael_batman_armadura_asesina
-          - old_man_logan_estomago_hulk_canibal
-          - miles_morales_legado_nuevo_prodigio
-          - autonomous_ai
+          - batman_endgame_justice_buster_liga
+          - wolverine_ahoga_hijo_daken_xforce
+          - punisher_duelo_brutal_ruso_apartamento
+          - nightwing_disparo_cabeza_kgbeast_amnesia
+          - daredevil_asesinato_karen_page_bullseye
+          - thanos_derriba_galactus_descarga_cosmica
           - any
+          - autonomous_ai
+          - captain_america_asesinato_civil_war_sharon
           - batman_zur_en_arrh_respaldo
           - superior_iron_man_extremis_villano
           - doctor_strange_el_juramento_elixir
