@@ -637,11 +637,6 @@ def main():
             if curated_avail:
                 priority_order = [
                     "batman_endgame_justice_buster_liga",
-                    "wolverine_ahoga_hijo_daken_xforce",
-                    "punisher_duelo_brutal_ruso_apartamento",
-                    "nightwing_disparo_cabeza_kgbeast_amnesia",
-                    "daredevil_asesinato_karen_page_bullseye",
-                    "thanos_derriba_galactus_descarga_cosmica",
                     "saint_walker_primer_linterna_azul_esperanza",
                     "captain_america_asesinato_civil_war_sharon",
                     "zoom_hunter_zolomon_chasquido_sonico",
