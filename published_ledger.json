@@ -1708,5 +1708,15 @@
     "mode": "live_release",
     "video_file": "Bruce_Wayne_Reclama_Gotham_El_Retorno_del_Verdadero_Defensor_de_la_Noche.mp4",
     "status": "published"
+  },
+  {
+    "id": "iron_man_silver_centurion_iron_monger",
+    "title": "¡El Poder del Centurión Plateado! La Furia de Acero que Destruyó a Iron Monger 🤖💥",
+    "character": "Iron Man",
+    "theme_signature": "centurion_plateado:traje_rojo_plata:obadiah_stane_monger:partida_ajedrez",
+    "date": "2026-10-18 14:05",
+    "mode": "live_release",
+    "video_file": "El_Poder_del_Centurión_Plateado_La_Furia_de_Acero_que_Destruyó_a_Iron_Monger.mp4",
+    "status": "published"
   }
 ]
