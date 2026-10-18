@@ -1728,5 +1728,15 @@
     "mode": "live_release",
     "video_file": "La_Macabra_Sonrisa_de_los_Peces_El_Ataque_Químico_del_Joker_en_Gotham.mp4",
     "status": "published"
+  },
+  {
+    "id": "batman_year_one_campana_murcielago",
+    "title": "¡La Noche en que Nació el Murciélago! La Herida Sangrienta en la Mansión Wayne 🦇🩸",
+    "character": "Batman (Bruce Wayne)",
+    "theme_signature": "bruce_wayne:year_one:cristal_roto_campana_alfred:padre_sere_murcielago",
+    "date": "2026-10-18 22:05",
+    "mode": "live_release",
+    "video_file": "La_Noche_en_que_Nació_el_Murciélago_La_Herida_Sangrienta_en_la_Mansión_Wayne.mp4",
+    "status": "published"
   }
 ]
