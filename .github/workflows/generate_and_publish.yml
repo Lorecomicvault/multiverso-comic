@@ -6,12 +6,19 @@ on:
       story_id:
         description: 'ID del Arco de Comic (o "autonomous_ai" para generacion infinita)'
         required: false
-        default: 'batman_el_culto_deacon_blackfire'
+        default: 'spiderman_if_this_be_my_destiny_acero'
         type: choice
         options:
-          - batman_el_culto_deacon_blackfire
           - spiderman_if_this_be_my_destiny_acero
-          - bane_origen_prision_pena_duro
+          - batman_recupera_el_manto_derrota_azrael
+          - iron_man_silver_centurion_iron_monger
+          - joker_el_pez_que_rie_detective_475
+          - batman_year_one_campana_murcielago
+          - wolverine_duelo_honor_japon_shingen
+          - carnage_primer_origen_asm_361
+          - thor_beta_ray_bill_levanta_mjolnir
+          - green_lantern_kyle_rayner_el_ultimo_anillo
+          - thanos_guantelete_del_infinito_desafio_cosmico
           - autonomous_ai
           - any
           - captain_america_asesinato_civil_war_sharon

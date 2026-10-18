@@ -71,6 +71,564 @@ EDITORIAL_STORIES = [
         "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
     },
     {
+        "id": "batman_recupera_el_manto_derrota_azrael",
+        "universe": "DC",
+        "character": "Batman (Bruce Wayne)",
+        "title": "¡Bruce Wayne Reclama Gotham! El Retorno del Verdadero Defensor de la Noche 🦇⚔️",
+        "theme_signature": "bruce_wayne:knightsend:recupera_manto_valley_tunel_luz",
+        "description": "Tras meses de dolorosa rehabilitación física y mental, Bruce Wayne regresó a Gotham City para arrebatarle el manto de Batman al desquiciado y violento Azrael.",
+        "hashtags": "#Batman #BruceWayne #Azrael #KnightsEnd #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Tras sanar su columna rota, Bruce Wayne regresó a Gotham para recuperar el manto del murciélago!",
+            "Jean-Paul Valley, corrompido por el fanatismo de Azrael, convirtió la cruzada en una masacre despiadada.",
+            "Bruce acorraló al usurpador en un estrecho túnel, obligándolo a quitarse la pesada armadura letal.",
+            "Bañado por la luz del amanecer, Valley aceptó su derrota. El auténtico caballero de la noche resurgió. ¿Lo sabías?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/batman_recupera_el_manto_derrota_azrael/scene_01.jpg",
+            "assets/curated_panels/batman_recupera_el_manto_derrota_azrael/scene_02.jpg",
+            "assets/curated_panels/batman_recupera_el_manto_derrota_azrael/scene_03.jpg",
+            "assets/curated_panels/batman_recupera_el_manto_derrota_azrael/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Bruce Wayne healed KnightsEnd Batman 509 panel",
+            "Azrael Batman armor mechanical claws KnightsEnd panel",
+            "Batman confronting Azrael dark tunnel cave KnightsEnd panel",
+            "Jean-Paul Valley defeated removing helmet sunlight Batman 510 panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "iron_man_silver_centurion_iron_monger",
+        "universe": "Marvel",
+        "character": "Iron Man",
+        "title": "¡El Poder del Centurión Plateado! La Furia de Acero que Destruyó a Iron Monger 🤖💥",
+        "theme_signature": "centurion_plateado:traje_rojo_plata:obadiah_stane_monger:partida_ajedrez",
+        "description": "Tras perder su empresa y tocar fondo en las calles, Tony Stark diseñó la legendaria armadura Centurión Plateado para frenar al despiadado Obadiah Stane.",
+        "hashtags": "#IronMan #TonyStark #SilverCenturion #IronMonger #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Tras perder su empresa y fortuna, Tony Stark renació construyendo la legendaria armadura Centurión Plateado!",
+            "El despiadado Obadiah Stane se enfundó en el colosal traje de combate de Iron Monger para aplastarlo.",
+            "Ambos colosos de acero chocaron en un duelo aéreo devastador que demolió el complejo industrial de Stane.",
+            "Superado por los rayos repulsores de Tony, Obadiah prefirió autodestruirse antes que ser capturado. ¿El mejor duelo de Stark?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/iron_man_silver_centurion_iron_monger/scene_01.jpg",
+            "assets/curated_panels/iron_man_silver_centurion_iron_monger/scene_02.jpg",
+            "assets/curated_panels/iron_man_silver_centurion_iron_monger/scene_03.jpg",
+            "assets/curated_panels/iron_man_silver_centurion_iron_monger/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Tony Stark building Silver Centurion armor Iron Man 200 panel",
+            "Obadiah Stane entering Iron Monger suit cockpit panel",
+            "Iron Man Silver Centurion fighting Iron Monger mid-air panel",
+            "Iron Monger defeated exploding suicide repulsor beam panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "joker_el_pez_que_rie_detective_475",
+        "universe": "DC",
+        "character": "The Joker (Guasón)",
+        "title": "¡La Macabra Sonrisa de los Peces! El Ataque Químico del Joker en Gotham 🐟🃏",
+        "theme_signature": "joker:pez_que_rie:toxina_sonrisa_comision_derechos:pescaderia_gotham",
+        "description": "El Joker envenenó las aguas de Gotham para que todos los peces tuvieran su macabra sonrisa, amenazando a burócratas para cobrar derechos de autor.",
+        "hashtags": "#Joker #Batman #LaughingFish #DetectiveComics #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡El Joker contaminó la bahía de Gotham con su toxina mortal, dejando a todos los peces sonriendo grotescamente!",
+            "Armado de cinismo, exigió a los burócratas registrar derechos de autor comerciales por su sonrisa marina.",
+            "Cuando los funcionarios se negaron, el payaso cumplió su macabra promesa asesinándolos con un veneno invisible.",
+            "Batman emboscó al villano en un tejado tormentoso, deteniendo su desquiciada broma química. ¿Su plan más delirante?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/joker_el_pez_que_rie_detective_475/scene_01.jpg",
+            "assets/curated_panels/joker_el_pez_que_rie_detective_475/scene_02.jpg",
+            "assets/curated_panels/joker_el_pez_que_rie_detective_475/scene_03.jpg",
+            "assets/curated_panels/joker_el_pez_que_rie_detective_475/scene_04.jpg"
+        ],
+        "art_queries": [
+            "The Laughing Fish Joker smiling fish crate Detective Comics 475 panel",
+            "Joker copyright office bureaucrat fish trademark panel",
+            "Joker victim laughing gas poison Carl Trench panel",
+            "Batman confronting Joker stormy rooftop rain panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "batman_year_one_campana_murcielago",
+        "universe": "DC",
+        "character": "Batman (Bruce Wayne)",
+        "title": "¡La Noche en que Nació el Murciélago! La Herida Sangrienta en la Mansión Wayne 🦇🩸",
+        "theme_signature": "bruce_wayne:year_one:cristal_roto_campana_alfred:padre_sere_murcielago",
+        "description": "Gravemente herido en su primera noche patrullando las calles de Gotham, Bruce Wayne se sentó a desangrarse en su estudio hasta que un murciélago le reveló su destino.",
+        "hashtags": "#Batman #YearOne #FrankMiller #BruceWayne #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Bruce Wayne regresó a Gotham tras años de entrenamiento jurando erradicar el crimen que devoró a sus padres!",
+            "Su primera incursión callejera terminó en desastre, volviendo a la mansión gravemente herido y ensangrentado.",
+            "Al borde de la muerte, se negó a llamar a Alfred, esperando una señal divina que guiara su lucha.",
+            "Un murciélago atravesó la ventana del estudio rompiendo el silencio. Supe qué ser: un murciélago. ¿Conocías este momento?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/batman_year_one_campana_murcielago/scene_01.jpg",
+            "assets/curated_panels/batman_year_one_campana_murcielago/scene_02.jpg",
+            "assets/curated_panels/batman_year_one_campana_murcielago/scene_03.jpg",
+            "assets/curated_panels/batman_year_one_campana_murcielago/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Bruce Wayne returning to Gotham train Year One 404 panel",
+            "Bruce Wayne undercover East End bleeding wounded fight panel",
+            "Bruce Wayne bleeding in armchair Wayne Manor study bell panel",
+            "Bat crashing through window study Yes Father I shall become a bat panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "wolverine_duelo_honor_japon_shingen",
+        "universe": "Marvel",
+        "character": "Wolverine (Logan)",
+        "title": "¡El Honor Samurái de Wolverine! La Venganza de las Garras en Japón 🗡️🩸",
+        "theme_signature": "wolverine_japon:shingen_yashida:espada_bokken_veneno:mano_clan_ninja",
+        "description": "Deshonrado y envenenado por Lord Shingen frente a su amada Mariko, Wolverine se abrió paso entre ninjas de La Mano para reclamar su honor con sangre.",
+        "hashtags": "#Wolverine #Logan #ChrisClaremont #FrankMiller #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Logan viajó a Japón por su amada Mariko, pero fue humillado y golpeado por Lord Shingen Yashida!",
+            "Traicionado con veneno durante un combate con espadas de madera, fue arrojado como basura a la calle.",
+            "Herido y consumido por la furia berserker, aniquiló decenas de ninjas que acechaban en las sombras de Tokio.",
+            "En el duelo final, sus garras de adamantium atravesaron a Shingen, restaurando su honor guerrero. ¿Su mejor victoria?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/wolverine_duelo_honor_japon_shingen/scene_01.jpg",
+            "assets/curated_panels/wolverine_duelo_honor_japon_shingen/scene_02.jpg",
+            "assets/curated_panels/wolverine_duelo_honor_japon_shingen/scene_03.jpg",
+            "assets/curated_panels/wolverine_duelo_honor_japon_shingen/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Logan Mariko Yashida garden Japan Claremont Miller panel",
+            "Shingen Yashida wooden sword bokken duel Wolverine poisoned panel",
+            "Wolverine shadows killing Hand ninjas claws Tokyo alley panel",
+            "Wolverine claws stabbing Shingen duel final page Wolverine 4 panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "carnage_primer_origen_asm_361",
+        "universe": "Marvel",
+        "character": "Cletus Kasady (Carnage)",
+        "title": "¡Caos en la Prisión de Ryker! La Fuga Letal de Cletus Kasady en Nueva York 🩸🕷️",
+        "theme_signature": "cletus_kasady:asm361:fuga_prision_rykers:masacre_celda_bagley",
+        "description": "Encarcelado junto a Eddie Brock en la prisión de Ryker, el asesino serial Cletus Kasady se unió al vástago mutado del simbionte alienígena creando al letal Carnage.",
+        "hashtags": "#Carnage #CletusKasady #SpiderMan #Venom #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡En la penitenciaría de Ryker, el asesino Cletus Kasady compartía celda con Eddie Brock sin sospechar su destino!",
+            "Al escapar Venom, una gota mutada del alienígena cayó sobre las heridas abiertas del peligroso convicto.",
+            "La fusión biológica creó a Carnage, un monstruo carmesí con tentáculos afilados y desprecio absoluto por la vida.",
+            "Desatando el pánico en Manhattan, obligó a Spider-Man a pedir ayuda a Venom. ¿El villano más salvaje?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/carnage_primer_origen_asm_361/scene_01.jpg",
+            "assets/curated_panels/carnage_primer_origen_asm_361/scene_02.jpg",
+            "assets/curated_panels/carnage_primer_origen_asm_361/scene_03.jpg",
+            "assets/curated_panels/carnage_primer_origen_asm_361/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Cletus Kasady prison cell Rykers Island Amazing Spider-Man 361 panel",
+            "Symbiote spawn merging blood cut Cletus Kasady panel",
+            "Carnage full reveal red tendrils claws Bagley Amazing Spider-Man 361 panel",
+            "Spider-Man shocked confronting Carnage Bagley splash panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "thor_beta_ray_bill_levanta_mjolnir",
+        "universe": "Marvel",
+        "character": "Beta Ray Bill (Korbinita)",
+        "title": "¡Un Guerrero Alienígena Digno de los Dioses! La Furia Dorada de Beta Ray Bill ⚡🐴",
+        "theme_signature": "beta_ray_bill:korbinita:scuttlebutt_nave_estelar_rival_odin",
+        "description": "Para proteger a los últimos supervivientes de su raza alienígena, Beta Ray Bill combatió a Thor y levantó el martillo Mjolnir demostrando ser digno.",
+        "hashtags": "#BetaRayBill #Thor #WaltSimonson #MarvelComics #Mjolnir #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Buscando salvar a su pueblo korbinita en extinción, el guerrero cíborg Beta Ray Bill cruzó la galaxia!",
+            "Al interceptar su nave estelar, Thor entabló una feroz batalla cuerpo a cuerpo contra el campeón alienígena.",
+            "Separado de su martillo encantado durante el brutal combate, el dios del trueno revirtió a su forma mortal.",
+            "Con nobleza pura, Bill alzó a Mjolnir reclamando el trueno ante el asombro cósmico. ¿Esperabas esta proeza?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/thor_beta_ray_bill_levanta_mjolnir/scene_01.jpg",
+            "assets/curated_panels/thor_beta_ray_bill_levanta_mjolnir/scene_02.jpg",
+            "assets/curated_panels/thor_beta_ray_bill_levanta_mjolnir/scene_03.jpg",
+            "assets/curated_panels/thor_beta_ray_bill_levanta_mjolnir/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Beta Ray Bill Scuttlebutt starship awakening Walt Simonson panel",
+            "Thor fighting Beta Ray Bill cosmic combat Thor 337 panel",
+            "Thor reverting to Donald Blake separated cane hammer panel",
+            "Beta Ray Bill holding Mjolnir lightning transformation Thor 337 panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "green_lantern_kyle_rayner_el_ultimo_anillo",
+        "universe": "DC",
+        "character": "Kyle Rayner (Linterna Verde)",
+        "title": "¡El Último Linterna Verde de la Galaxia! El Surgimiento de Kyle Rayner 🟢💍",
+        "theme_signature": "kyle_rayner:emerald_twilight:ganthet_ultimo_anillo:boceto_callejon_guardia",
+        "description": "Con el Cuerpo de Linternas Verdes destruido por Hal Jordan, el solitario Guardián Ganthet llegó a la Tierra para entregar el último anillo de poder al artista Kyle Rayner.",
+        "hashtags": "#GreenLantern #KyleRayner #EmeraldTwilight #Ganthet #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Entre las ruinas humeantes de Oa, Ganthet contempló la caída total del legendario Cuerpo de Linternas Verdes!",
+            "Consumido por el dolor y la ira, Hal Jordan absorbió la batería convirtiéndose en el destructor Parallax.",
+            "En un callejón oscuro de la Tierra, Ganthet entregó al artista Kyle Rayner el último anillo cósmico.",
+            "Sin entrenamiento pero con voluntad pura, Kyle encendió la llama esmeralda salvando el universo. ¿Conocías su debut?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/green_lantern_kyle_rayner_el_ultimo_anillo/scene_01.jpg",
+            "assets/curated_panels/green_lantern_kyle_rayner_el_ultimo_anillo/scene_02.jpg",
+            "assets/curated_panels/green_lantern_kyle_rayner_el_ultimo_anillo/scene_03.jpg",
+            "assets/curated_panels/green_lantern_kyle_rayner_el_ultimo_anillo/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Ganthet mourning fallen Guardians ruins of Oa Green Lantern 50 panel",
+            "Hal Jordan Parallax armor absorbing central power battery panel",
+            "Ganthet giving last power ring Kyle Rayner dark alley panel",
+            "Kyle Rayner Green Lantern suit glowing emerald energy burst panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "thanos_guantelete_del_infinito_desafio_cosmico",
+        "universe": "Marvel",
+        "character": "Thanos (Titán Loco)",
+        "title": "¡El Poder Absoluto de las Seis Gemas! La Resistencia Heroica Contra Thanos 💎🌌",
+        "theme_signature": "thanos:guantelete_infinito_gemas:starlin_cosmicos_eternidad:capitan_resistencia_escudo",
+        "description": "Armado con el Guantelete del Infinito, Thanos dominó el cosmos y sometió a los dioses, hasta que los últimos héroes de la Tierra lanzaron un asalto desesperado liderados por el Capitán América.",
+        "hashtags": "#Thanos #InfinityGauntlet #CaptainAmerica #Wolverine #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Con las seis gemas reunidas en su guantelete, Thanos se proclamó amo supremo de la creación!",
+            "Los dioses cósmicos lanzaron un ataque devastador, pero cayeron humillados ante el poder absoluto del titán.",
+            "Wolverine saltó al ataque con sus garras, pero Thanos convirtió su esqueleto de adamantium en goma.",
+            "Frente al dios todopoderoso, el Capitán América avanzó solo con su escudo sin retroceder jamás. ¿Su mayor hazaña?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_01.jpg",
+            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_02.jpg",
+            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_03.jpg",
+            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Thanos holding glowing Infinity Gauntlet six gems Starlin panel",
+            "Thanos confronting cosmic entities Eternity Galactus Infinity Gauntlet 4 panel",
+            "Wolverine leaping claws attacking Thanos rubber adamantium panel",
+            "Captain America facing Thanos shield stand As long as one man stands panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "batman_recupera_el_manto_derrota_azrael",
+        "universe": "DC",
+        "character": "Batman (Bruce Wayne)",
+        "title": "¡Bruce Wayne Reclama Gotham! El Retorno del Verdadero Defensor de la Noche 🦇⚔️",
+        "theme_signature": "bruce_wayne:knightsend:recupera_manto_valley_tunel_luz",
+        "description": "Tras meses de dolorosa rehabilitación física y mental, Bruce Wayne regresó a Gotham City para arrebatarle el manto de Batman al desquiciado y violento Azrael.",
+        "hashtags": "#Batman #BruceWayne #Azrael #KnightsEnd #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Tras sanar su columna rota, Bruce Wayne regresó a Gotham para recuperar el manto del murciélago!",
+            "Jean-Paul Valley, corrompido por el fanatismo de Azrael, convirtió la cruzada en una masacre despiadada.",
+            "Bruce acorraló al usurpador en un estrecho túnel, obligándolo a quitarse la pesada armadura letal.",
+            "Bañado por la luz del amanecer, Valley aceptó su derrota. El auténtico caballero de la noche resurgió. ¿Lo sabías?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/batman_recupera_el_manto_derrota_azrael/scene_01.jpg",
+            "assets/curated_panels/batman_recupera_el_manto_derrota_azrael/scene_02.jpg",
+            "assets/curated_panels/batman_recupera_el_manto_derrota_azrael/scene_03.jpg",
+            "assets/curated_panels/batman_recupera_el_manto_derrota_azrael/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Bruce Wayne healed KnightsEnd Batman 509 panel",
+            "Azrael Batman armor mechanical claws KnightsEnd panel",
+            "Batman confronting Azrael dark tunnel cave KnightsEnd panel",
+            "Jean-Paul Valley defeated removing helmet sunlight Batman 510 panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "iron_man_silver_centurion_iron_monger",
+        "universe": "Marvel",
+        "character": "Iron Man",
+        "title": "¡El Poder del Centurión Plateado! La Furia de Acero que Destruyó a Iron Monger 🤖💥",
+        "theme_signature": "centurion_plateado:traje_rojo_plata:obadiah_stane_monger:partida_ajedrez",
+        "description": "Tras perder su empresa y tocar fondo en las calles, Tony Stark diseñó la legendaria armadura Centurión Plateado para frenar al despiadado Obadiah Stane.",
+        "hashtags": "#IronMan #TonyStark #SilverCenturion #IronMonger #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Tras perder su empresa y fortuna, Tony Stark renació construyendo la legendaria armadura Centurión Plateado!",
+            "El despiadado Obadiah Stane se enfundó en el colosal traje de combate de Iron Monger para aplastarlo.",
+            "Ambos colosos de acero chocaron en un duelo aéreo devastador que demolió el complejo industrial de Stane.",
+            "Superado por los rayos repulsores de Tony, Obadiah prefirió autodestruirse antes que ser capturado. ¿El mejor duelo de Stark?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/iron_man_silver_centurion_iron_monger/scene_01.jpg",
+            "assets/curated_panels/iron_man_silver_centurion_iron_monger/scene_02.jpg",
+            "assets/curated_panels/iron_man_silver_centurion_iron_monger/scene_03.jpg",
+            "assets/curated_panels/iron_man_silver_centurion_iron_monger/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Tony Stark building Silver Centurion armor Iron Man 200 panel",
+            "Obadiah Stane entering Iron Monger suit cockpit panel",
+            "Iron Man Silver Centurion fighting Iron Monger mid-air panel",
+            "Iron Monger defeated exploding suicide repulsor beam panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "joker_el_pez_que_rie_detective_475",
+        "universe": "DC",
+        "character": "The Joker (Guasón)",
+        "title": "¡La Macabra Sonrisa de los Peces! El Ataque Químico del Joker en Gotham 🐟🃏",
+        "theme_signature": "joker:pez_que_rie:toxina_sonrisa_comision_derechos:pescaderia_gotham",
+        "description": "El Joker envenenó las aguas de Gotham para que todos los peces tuvieran su macabra sonrisa, amenazando a burócratas para cobrar derechos de autor.",
+        "hashtags": "#Joker #Batman #LaughingFish #DetectiveComics #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡El Joker contaminó la bahía de Gotham con su toxina mortal, dejando a todos los peces sonriendo grotescamente!",
+            "Armado de cinismo, exigió a los burócratas registrar derechos de autor comerciales por su sonrisa marina.",
+            "Cuando los funcionarios se negaron, el payaso cumplió su macabra promesa asesinándolos con un veneno invisible.",
+            "Batman emboscó al villano en un tejado tormentoso, deteniendo su desquiciada broma química. ¿Su plan más delirante?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/joker_el_pez_que_rie_detective_475/scene_01.jpg",
+            "assets/curated_panels/joker_el_pez_que_rie_detective_475/scene_02.jpg",
+            "assets/curated_panels/joker_el_pez_que_rie_detective_475/scene_03.jpg",
+            "assets/curated_panels/joker_el_pez_que_rie_detective_475/scene_04.jpg"
+        ],
+        "art_queries": [
+            "The Laughing Fish Joker smiling fish crate Detective Comics 475 panel",
+            "Joker copyright office bureaucrat fish trademark panel",
+            "Joker victim laughing gas poison Carl Trench panel",
+            "Batman confronting Joker stormy rooftop rain panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "batman_year_one_campana_murcielago",
+        "universe": "DC",
+        "character": "Batman (Bruce Wayne)",
+        "title": "¡La Noche en que Nació el Murciélago! La Herida Sangrienta en la Mansión Wayne 🦇🩸",
+        "theme_signature": "bruce_wayne:year_one:cristal_roto_campana_alfred:padre_sere_murcielago",
+        "description": "Gravemente herido en su primera noche patrullando las calles de Gotham, Bruce Wayne se sentó a desangrarse en su estudio hasta que un murciélago le reveló su destino.",
+        "hashtags": "#Batman #YearOne #FrankMiller #BruceWayne #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Bruce Wayne regresó a Gotham tras años de entrenamiento jurando erradicar el crimen que devoró a sus padres!",
+            "Su primera incursión callejera terminó en desastre, volviendo a la mansión gravemente herido y ensangrentado.",
+            "Al borde de la muerte, se negó a llamar a Alfred, esperando una señal divina que guiara su lucha.",
+            "Un murciélago atravesó la ventana del estudio rompiendo el silencio. Supe qué ser: un murciélago. ¿Conocías este momento?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/batman_year_one_campana_murcielago/scene_01.jpg",
+            "assets/curated_panels/batman_year_one_campana_murcielago/scene_02.jpg",
+            "assets/curated_panels/batman_year_one_campana_murcielago/scene_03.jpg",
+            "assets/curated_panels/batman_year_one_campana_murcielago/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Bruce Wayne returning to Gotham train Year One 404 panel",
+            "Bruce Wayne undercover East End bleeding wounded fight panel",
+            "Bruce Wayne bleeding in armchair Wayne Manor study bell panel",
+            "Bat crashing through window study Yes Father I shall become a bat panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "wolverine_duelo_honor_japon_shingen",
+        "universe": "Marvel",
+        "character": "Wolverine (Logan)",
+        "title": "¡El Honor Samurái de Wolverine! La Venganza de las Garras en Japón 🗡️🩸",
+        "theme_signature": "wolverine_japon:shingen_yashida:espada_bokken_veneno:mano_clan_ninja",
+        "description": "Deshonrado y envenenado por Lord Shingen frente a su amada Mariko, Wolverine se abrió paso entre ninjas de La Mano para reclamar su honor con sangre.",
+        "hashtags": "#Wolverine #Logan #ChrisClaremont #FrankMiller #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Logan viajó a Japón por su amada Mariko, pero fue humillado y golpeado por Lord Shingen Yashida!",
+            "Traicionado con veneno durante un combate con espadas de madera, fue arrojado como basura a la calle.",
+            "Herido y consumido por la furia berserker, aniquiló decenas de ninjas que acechaban en las sombras de Tokio.",
+            "En el duelo final, sus garras de adamantium atravesaron a Shingen, restaurando su honor guerrero. ¿Su mejor victoria?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/wolverine_duelo_honor_japon_shingen/scene_01.jpg",
+            "assets/curated_panels/wolverine_duelo_honor_japon_shingen/scene_02.jpg",
+            "assets/curated_panels/wolverine_duelo_honor_japon_shingen/scene_03.jpg",
+            "assets/curated_panels/wolverine_duelo_honor_japon_shingen/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Logan Mariko Yashida garden Japan Claremont Miller panel",
+            "Shingen Yashida wooden sword bokken duel Wolverine poisoned panel",
+            "Wolverine shadows killing Hand ninjas claws Tokyo alley panel",
+            "Wolverine claws stabbing Shingen duel final page Wolverine 4 panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "carnage_primer_origen_asm_361",
+        "universe": "Marvel",
+        "character": "Cletus Kasady (Carnage)",
+        "title": "¡Caos en la Prisión de Ryker! La Fuga Letal de Cletus Kasady en Nueva York 🩸🕷️",
+        "theme_signature": "cletus_kasady:asm361:fuga_prision_rykers:masacre_celda_bagley",
+        "description": "Encarcelado junto a Eddie Brock en la prisión de Ryker, el asesino serial Cletus Kasady se unió al vástago mutado del simbionte alienígena creando al letal Carnage.",
+        "hashtags": "#Carnage #CletusKasady #SpiderMan #Venom #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡En la penitenciaría de Ryker, el asesino Cletus Kasady compartía celda con Eddie Brock sin sospechar su destino!",
+            "Al escapar Venom, una gota mutada del alienígena cayó sobre las heridas abiertas del peligroso convicto.",
+            "La fusión biológica creó a Carnage, un monstruo carmesí con tentáculos afilados y desprecio absoluto por la vida.",
+            "Desatando el pánico en Manhattan, obligó a Spider-Man a pedir ayuda a Venom. ¿El villano más salvaje?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/carnage_primer_origen_asm_361/scene_01.jpg",
+            "assets/curated_panels/carnage_primer_origen_asm_361/scene_02.jpg",
+            "assets/curated_panels/carnage_primer_origen_asm_361/scene_03.jpg",
+            "assets/curated_panels/carnage_primer_origen_asm_361/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Cletus Kasady prison cell Rykers Island Amazing Spider-Man 361 panel",
+            "Symbiote spawn merging blood cut Cletus Kasady panel",
+            "Carnage full reveal red tendrils claws Bagley Amazing Spider-Man 361 panel",
+            "Spider-Man shocked confronting Carnage Bagley splash panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "thor_beta_ray_bill_levanta_mjolnir",
+        "universe": "Marvel",
+        "character": "Beta Ray Bill (Korbinita)",
+        "title": "¡Un Guerrero Alienígena Digno de los Dioses! La Furia Dorada de Beta Ray Bill ⚡🐴",
+        "theme_signature": "beta_ray_bill:korbinita:scuttlebutt_nave_estelar_rival_odin",
+        "description": "Para proteger a los últimos supervivientes de su raza alienígena, Beta Ray Bill combatió a Thor y levantó el martillo Mjolnir demostrando ser digno.",
+        "hashtags": "#BetaRayBill #Thor #WaltSimonson #MarvelComics #Mjolnir #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Buscando salvar a su pueblo korbinita en extinción, el guerrero cíborg Beta Ray Bill cruzó la galaxia!",
+            "Al interceptar su nave estelar, Thor entabló una feroz batalla cuerpo a cuerpo contra el campeón alienígena.",
+            "Separado de su martillo encantado durante el brutal combate, el dios del trueno revirtió a su forma mortal.",
+            "Con nobleza pura, Bill alzó a Mjolnir reclamando el trueno ante el asombro cósmico. ¿Esperabas esta proeza?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/thor_beta_ray_bill_levanta_mjolnir/scene_01.jpg",
+            "assets/curated_panels/thor_beta_ray_bill_levanta_mjolnir/scene_02.jpg",
+            "assets/curated_panels/thor_beta_ray_bill_levanta_mjolnir/scene_03.jpg",
+            "assets/curated_panels/thor_beta_ray_bill_levanta_mjolnir/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Beta Ray Bill Scuttlebutt starship awakening Walt Simonson panel",
+            "Thor fighting Beta Ray Bill cosmic combat Thor 337 panel",
+            "Thor reverting to Donald Blake separated cane hammer panel",
+            "Beta Ray Bill holding Mjolnir lightning transformation Thor 337 panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "green_lantern_kyle_rayner_el_ultimo_anillo",
+        "universe": "DC",
+        "character": "Kyle Rayner (Linterna Verde)",
+        "title": "¡El Último Linterna Verde de la Galaxia! El Surgimiento de Kyle Rayner 🟢💍",
+        "theme_signature": "kyle_rayner:emerald_twilight:ganthet_ultimo_anillo:boceto_callejon_guardia",
+        "description": "Con el Cuerpo de Linternas Verdes destruido por Hal Jordan, el solitario Guardián Ganthet llegó a la Tierra para entregar el último anillo de poder al artista Kyle Rayner.",
+        "hashtags": "#GreenLantern #KyleRayner #EmeraldTwilight #Ganthet #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Entre las ruinas humeantes de Oa, Ganthet contempló la caída total del legendario Cuerpo de Linternas Verdes!",
+            "Consumido por el dolor y la ira, Hal Jordan absorbió la batería convirtiéndose en el destructor Parallax.",
+            "En un callejón oscuro de la Tierra, Ganthet entregó al artista Kyle Rayner el último anillo cósmico.",
+            "Sin entrenamiento pero con voluntad pura, Kyle encendió la llama esmeralda salvando el universo. ¿Conocías su debut?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/green_lantern_kyle_rayner_el_ultimo_anillo/scene_01.jpg",
+            "assets/curated_panels/green_lantern_kyle_rayner_el_ultimo_anillo/scene_02.jpg",
+            "assets/curated_panels/green_lantern_kyle_rayner_el_ultimo_anillo/scene_03.jpg",
+            "assets/curated_panels/green_lantern_kyle_rayner_el_ultimo_anillo/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Ganthet mourning fallen Guardians ruins of Oa Green Lantern 50 panel",
+            "Hal Jordan Parallax armor absorbing central power battery panel",
+            "Ganthet giving last power ring Kyle Rayner dark alley panel",
+            "Kyle Rayner Green Lantern suit glowing emerald energy burst panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "thanos_guantelete_del_infinito_desafio_cosmico",
+        "universe": "Marvel",
+        "character": "Thanos (Titán Loco)",
+        "title": "¡El Poder Absoluto de las Seis Gemas! La Resistencia Heroica Contra Thanos 💎🌌",
+        "theme_signature": "thanos:guantelete_infinito_gemas:starlin_cosmicos_eternidad:capitan_resistencia_escudo",
+        "description": "Armado con el Guantelete del Infinito, Thanos dominó el cosmos y sometió a los dioses, hasta que los últimos héroes de la Tierra lanzaron un asalto desesperado liderados por el Capitán América.",
+        "hashtags": "#Thanos #InfinityGauntlet #CaptainAmerica #Wolverine #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Con las seis gemas reunidas en su guantelete, Thanos se proclamó amo supremo de la creación!",
+            "Los dioses cósmicos lanzaron un ataque devastador, pero cayeron humillados ante el poder absoluto del titán.",
+            "Wolverine saltó al ataque con sus garras, pero Thanos convirtió su esqueleto de adamantium en goma.",
+            "Frente al dios todopoderoso, el Capitán América avanzó solo con su escudo sin retroceder jamás. ¿Su mayor hazaña?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_01.jpg",
+            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_02.jpg",
+            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_03.jpg",
+            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Thanos holding glowing Infinity Gauntlet six gems Starlin panel",
+            "Thanos confronting cosmic entities Eternity Galactus Infinity Gauntlet 4 panel",
+            "Wolverine leaping claws attacking Thanos rubber adamantium panel",
+            "Captain America facing Thanos shield stand As long as one man stands panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
         "id": "bane_origen_prision_pena_duro",
         "universe": "DC",
         "character": "Bane",

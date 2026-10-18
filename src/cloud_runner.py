@@ -642,8 +642,19 @@ def main():
 
             if curated_avail:
                 priority_order = [
-                    "batman_el_culto_deacon_blackfire",
+                    # 10 Curated Guaranteed Comic Masterpieces (20-30s, 100% Comic Art, 0 Duplicates)
                     "spiderman_if_this_be_my_destiny_acero",
+                    "batman_recupera_el_manto_derrota_azrael",
+                    "iron_man_silver_centurion_iron_monger",
+                    "joker_el_pez_que_rie_detective_475",
+                    "batman_year_one_campana_murcielago",
+                    "wolverine_duelo_honor_japon_shingen",
+                    "carnage_primer_origen_asm_361",
+                    "thor_beta_ray_bill_levanta_mjolnir",
+                    "green_lantern_kyle_rayner_el_ultimo_anillo",
+                    "thanos_guantelete_del_infinito_desafio_cosmico",
+                    # Catalog fallbacks
+                    "batman_el_culto_deacon_blackfire",
                     "bane_origen_prision_pena_duro",
                     "batman_endgame_justice_buster_liga",
                     "saint_walker_primer_linterna_azul_esperanza",
