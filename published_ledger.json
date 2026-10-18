@@ -1678,5 +1678,15 @@
     "mode": "live_release",
     "video_file": "El_Nacimiento_de_Bane_en_Peña_Duro_La_Infancia_Más_Aterradora_de_DC.mp4",
     "status": "published"
+  },
+  {
+    "id": "batman_el_culto_deacon_blackfire",
+    "title": "¡El Día que Quebraron la Mente de Batman! El Culto Maldito de Blackfire 🦇🩸",
+    "character": "Batman",
+    "theme_signature": "batman:the_cult:deacon_blackfire_alcantarillas_lavado_cerebro_secta",
+    "date": "2026-10-18 01:50",
+    "mode": "live_release",
+    "video_file": "El_Día_que_Quebraron_la_Mente_de_Batman_El_Culto_Maldito_de_Blackfire.mp4",
+    "status": "published"
   }
 ]
