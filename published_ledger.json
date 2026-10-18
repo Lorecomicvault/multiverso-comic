@@ -1718,5 +1718,15 @@
     "mode": "live_release",
     "video_file": "El_Poder_del_Centurión_Plateado_La_Furia_de_Acero_que_Destruyó_a_Iron_Monger.mp4",
     "status": "published"
+  },
+  {
+    "id": "joker_el_pez_que_rie_detective_475",
+    "title": "¡La Macabra Sonrisa de los Peces! El Ataque Químico del Joker en Gotham 🐟🃏",
+    "character": "The Joker (Guasón)",
+    "theme_signature": "joker:pez_que_rie:toxina_sonrisa_comision_derechos:pescaderia_gotham",
+    "date": "2026-10-18 18:05",
+    "mode": "live_release",
+    "video_file": "La_Macabra_Sonrisa_de_los_Peces_El_Ataque_Químico_del_Joker_en_Gotham.mp4",
+    "status": "published"
   }
 ]
