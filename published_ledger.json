@@ -1688,5 +1688,15 @@
     "mode": "live_release",
     "video_file": "El_Día_que_Quebraron_la_Mente_de_Batman_El_Culto_Maldito_de_Blackfire.mp4",
     "status": "published"
+  },
+  {
+    "id": "spiderman_if_this_be_my_destiny_acero",
+    "title": "¡Spider-Man se Negó a Morir! La Hazaña Imposible Bajo Toneladas de Acero 🕷️🏗️",
+    "character": "Spider-Man",
+    "theme_signature": "spiderman:if_this_be_my_destiny:doc_ock_iso36_maquinaria_acero_viga",
+    "date": "2026-10-18 07:06",
+    "mode": "live_release",
+    "video_file": "Spider-Man_se_Negó_a_Morir_La_Hazaña_Imposible_Bajo_Toneladas_de_Acero.mp4",
+    "status": "published"
   }
 ]
