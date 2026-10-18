@@ -1698,5 +1698,15 @@
     "mode": "live_release",
     "video_file": "Spider-Man_se_Negó_a_Morir_La_Hazaña_Imposible_Bajo_Toneladas_de_Acero.mp4",
     "status": "published"
+  },
+  {
+    "id": "batman_recupera_el_manto_derrota_azrael",
+    "title": "¡Bruce Wayne Reclama Gotham! El Retorno del Verdadero Defensor de la Noche 🦇⚔️",
+    "character": "Batman (Bruce Wayne)",
+    "theme_signature": "bruce_wayne:knightsend:recupera_manto_valley_tunel_luz",
+    "date": "2026-10-18 10:05",
+    "mode": "live_release",
+    "video_file": "Bruce_Wayne_Reclama_Gotham_El_Retorno_del_Verdadero_Defensor_de_la_Noche.mp4",
+    "status": "published"
   }
 ]
