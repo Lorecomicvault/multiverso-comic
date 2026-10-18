@@ -9,6 +9,68 @@ Every story features:
 
 EDITORIAL_STORIES = [
     {
+        "id": "batman_el_culto_deacon_blackfire",
+        "universe": "DC",
+        "character": "Batman",
+        "title": "¡El Día que Quebraron la Mente de Batman! El Culto Maldito de Blackfire 🦇🩸",
+        "theme_signature": "batman:the_cult:deacon_blackfire_alcantarillas_lavado_cerebro_secta",
+        "description": "Capturado y drogado en las cloacas de Gotham por el culto de Deacon Blackfire, Batman sufrió el mayor colapso psicológico de su vida hasta que recuperó el control y reconquistó la ciudad.",
+        "hashtags": "#Batman #TheCult #DeaconBlackfire #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Batman fue drogado y secuestrado en las cloacas de Gotham por el culto fanático de Deacon Blackfire!",
+            "Reconquistando Gotham en un gigantesco Batmóvil blindado, Batman y Robin arrasaron las barricadas del culto.",
+            "En un brutal combate cuerpo a cuerpo, Batman descargó toda su furia destrozando a golpes al falso profeta.",
+            "Al ver sangrar a su mesías, los propios fanáticos se volvieron contra Blackfire despedazándolo. ¿La historia más oscura de Batman?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/batman_el_culto_deacon_blackfire/scene_01.jpg",
+            "assets/curated_panels/batman_el_culto_deacon_blackfire/scene_02.jpg",
+            "assets/curated_panels/batman_el_culto_deacon_blackfire/scene_03.jpg",
+            "assets/curated_panels/batman_el_culto_deacon_blackfire/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Batman night goggles rifle confronting cultist The Cult 4 panel",
+            "Batman monster tank Batmobile crushing barricades The Cult 3 panel",
+            "Batman punching Deacon Blackfire brutal fight The Cult 4 panel",
+            "Deacon Blackfire ripped apart killed by cult followers The Cult panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "spiderman_if_this_be_my_destiny_acero",
+        "universe": "Marvel",
+        "character": "Spider-Man",
+        "title": "¡Spider-Man se Negó a Morir! La Hazaña Imposible Bajo Toneladas de Acero 🕷️🏗️",
+        "theme_signature": "spiderman:if_this_be_my_destiny:doc_ock_iso36_maquinaria_acero_viga",
+        "description": "Atrapado bajo toneladas de acero en una base submarina derrumbándose, Spider-Man desató una fuerza sobrehumana para salvar el suero que salvaría a tía May.",
+        "hashtags": "#SpiderMan #SteveDitko #DoctorOctopus #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡El Doctor Octopus proclamó su dominio sobre la radiación jurando convertirse en el villano más temido!",
+            "Para salvar a tía May en el hospital, Peter Parker rastreó el suero experimental ISO-36 hasta su guarida.",
+            "Al colapsar el techo, Spider-Man quedó sepultado bajo toneladas de maquinaria mientras el agua helada lo ahogaba.",
+            "Recordando a su familia, desató una fuerza titánica levantando el colosal bloque de acero. ¿Su momento más épico?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/spiderman_if_this_be_my_destiny_acero/scene_01.jpg",
+            "assets/curated_panels/spiderman_if_this_be_my_destiny_acero/scene_02.jpg",
+            "assets/curated_panels/spiderman_if_this_be_my_destiny_acero/scene_03.jpg",
+            "assets/curated_panels/spiderman_if_this_be_my_destiny_acero/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Doctor Octopus controlling radiation laboratory Amazing Spider-Man 32 panel",
+            "Doctor Octopus mechanical arms holding ISO-36 serum vial panel",
+            "Spider-Man trapped heavy steel machinery water flooding Amazing Spider-Man 33 panel",
+            "Spider-Man lifting heavy machinery Ditko iconic page Amazing Spider-Man 33 panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
         "id": "bane_origen_prision_pena_duro",
         "universe": "DC",
         "character": "Bane",

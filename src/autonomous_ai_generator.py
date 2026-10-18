@@ -115,6 +115,68 @@ def verify_image_quality(wiki: str, filename: str) -> bool:
 
 EMERGENCY_VIRAL_POOL = [
     {
+        "id": "batman_el_culto_deacon_blackfire",
+        "universe": "DC",
+        "character": "Batman",
+        "title": "¡El Día que Quebraron la Mente de Batman! El Culto Maldito de Blackfire 🦇🩸",
+        "theme_signature": "batman:the_cult:deacon_blackfire_alcantarillas_lavado_cerebro_secta",
+        "description": "Capturado y drogado en las cloacas de Gotham por el culto de Deacon Blackfire, Batman sufrió el mayor colapso psicológico de su vida hasta que recuperó el control y reconquistó la ciudad.",
+        "hashtags": "#Batman #TheCult #DeaconBlackfire #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡Batman fue drogado y secuestrado en las cloacas de Gotham por el culto fanático de Deacon Blackfire!",
+            "Reconquistando Gotham en un gigantesco Batmóvil blindado, Batman y Robin arrasaron las barricadas del culto.",
+            "En un brutal combate cuerpo a cuerpo, Batman descargó toda su furia destrozando a golpes al falso profeta.",
+            "Al ver sangrar a su mesías, los propios fanáticos se volvieron contra Blackfire despedazándolo. ¿La historia más oscura de Batman?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/batman_el_culto_deacon_blackfire/scene_01.jpg",
+            "assets/curated_panels/batman_el_culto_deacon_blackfire/scene_02.jpg",
+            "assets/curated_panels/batman_el_culto_deacon_blackfire/scene_03.jpg",
+            "assets/curated_panels/batman_el_culto_deacon_blackfire/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Batman night goggles rifle confronting cultist The Cult 4 panel",
+            "Batman monster tank Batmobile crushing barricades The Cult 3 panel",
+            "Batman punching Deacon Blackfire brutal fight The Cult 4 panel",
+            "Deacon Blackfire ripped apart killed by cult followers The Cult panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "spiderman_if_this_be_my_destiny_acero",
+        "universe": "Marvel",
+        "character": "Spider-Man",
+        "title": "¡Spider-Man se Negó a Morir! La Hazaña Imposible Bajo Toneladas de Acero 🕷️🏗️",
+        "theme_signature": "spiderman:if_this_be_my_destiny:doc_ock_iso36_maquinaria_acero_viga",
+        "description": "Atrapado bajo toneladas de acero en una base submarina derrumbándose, Spider-Man desató una fuerza sobrehumana para salvar el suero que salvaría a tía May.",
+        "hashtags": "#SpiderMan #SteveDitko #DoctorOctopus #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "¡El Doctor Octopus proclamó su dominio sobre la radiación jurando convertirse en el villano más temido!",
+            "Para salvar a tía May en el hospital, Peter Parker rastreó el suero experimental ISO-36 hasta su guarida.",
+            "Al colapsar el techo, Spider-Man quedó sepultado bajo toneladas de maquinaria mientras el agua helada lo ahogaba.",
+            "Recordando a su familia, desató una fuerza titánica levantando el colosal bloque de acero. ¿Su momento más épico?"
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/spiderman_if_this_be_my_destiny_acero/scene_01.jpg",
+            "assets/curated_panels/spiderman_if_this_be_my_destiny_acero/scene_02.jpg",
+            "assets/curated_panels/spiderman_if_this_be_my_destiny_acero/scene_03.jpg",
+            "assets/curated_panels/spiderman_if_this_be_my_destiny_acero/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Doctor Octopus controlling radiation laboratory Amazing Spider-Man 32 panel",
+            "Doctor Octopus mechanical arms holding ISO-36 serum vial panel",
+            "Spider-Man trapped heavy steel machinery water flooding Amazing Spider-Man 33 panel",
+            "Spider-Man lifting heavy machinery Ditko iconic page Amazing Spider-Man 33 panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
         "id": "bane_origen_prision_pena_duro",
         "universe": "DC",
         "character": "Bane",
@@ -1111,10 +1173,10 @@ def generate_autonomous_story(ledger: list[dict], api_key: str | None = None) ->
 
     # Grupos rotativos con arcos legendarios INÉDITOS para garantizar que la IA nunca proponga historias ya existentes
     ROTATING_CHAR_PROMPTS = [
-        "Miles Morales (Ultimate Spider-Man / Veneno Eléctrico / Prowler Aaron Davis), Red Hood (Lost Days / Venganza con All-Caste / Regreso de la Muerte), Death of Captain America (Asesinato en Escalinatas del Tribunal / Crossbones y Sharon Carter)",
-        "Saint Walker (Bro'Dee Walker / Primer Linterna Azul / Esperanza Cósmica), Zoom Hunter Zolomon (Blitz / Chasquido Sónico / Destrucción de Wally West), Moon Knight (Marc Spector / Misión de Medianoche / Venganza de Khonshu)",
-        "Sinestro (Linterna Blanca / Primera Batería de Vida / Volthoom), Ghost Rider Robbie Reyes (All-New Ghost Rider / Muscle Car del Infierno / Eli Morrow), Invincible Iron Man (Armor Wars / Traición de Armaduras Stark)",
-        "Daredevil (Guardian Devil / Muerte de Karen Page / Bullseye en la Iglesia), Wolverine (Venganza contra Hulk en Old Man Logan / Descuartizamiento Interior), Green Lantern Kyle Rayner (Ascenso a Ion / Poder Infinito de Oa)"
+        "Spider-Man (The Amazing Spider-Man #33 / If This Be My Destiny / Viga de Acero Colosal / Suero ISO-36 / Doctor Octopus), Spider-Man (The Death of Jean DeWolff / Sin-Eater / Conflicto Moral con Daredevil)",
+        "Batman (The Cult / Deacon Blackfire / Alcantarillas de Gotham / Batmóvil Blindado Tanque), Batman (Batman #400 / Ruptura Masiva de Arkham por Ra's al Ghul)",
+        "Superman (Whatever Happened to the Man of Tomorrow? / Alan Moore / Mxyzptlk Demoníaco Multidimensional / Renuncia a Poderes con Kriptonita Dorada), Superman (Superman vs Brainiac / Botella de Kandor / Sacrificio de Jor-El)",
+        "Thor (The Surtur War / Walter Simonson / Espada del Crepúsculo / Defensa Épica del Puente Bifrost), The Punisher (The Rooftop Dilemma / Daredevil Encadenado a la Chimenea / Dilema Moral del Gatillo)"
     ]
 
     rejected_session_titles = []

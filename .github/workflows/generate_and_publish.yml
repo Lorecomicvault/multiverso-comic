@@ -6,9 +6,11 @@ on:
       story_id:
         description: 'ID del Arco de Comic (o "autonomous_ai" para generacion infinita)'
         required: false
-        default: 'bane_origen_prision_pena_duro'
+        default: 'batman_el_culto_deacon_blackfire'
         type: choice
         options:
+          - batman_el_culto_deacon_blackfire
+          - spiderman_if_this_be_my_destiny_acero
           - bane_origen_prision_pena_duro
           - autonomous_ai
           - any

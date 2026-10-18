@@ -642,6 +642,8 @@ def main():
 
             if curated_avail:
                 priority_order = [
+                    "batman_el_culto_deacon_blackfire",
+                    "spiderman_if_this_be_my_destiny_acero",
                     "bane_origen_prision_pena_duro",
                     "batman_endgame_justice_buster_liga",
                     "saint_walker_primer_linterna_azul_esperanza",
