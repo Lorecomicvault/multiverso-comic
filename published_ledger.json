@@ -1748,5 +1748,15 @@
     "mode": "live_release",
     "video_file": "El_Honor_Samurái_de_Wolverine_La_Venganza_de_las_Garras_en_Japón.mp4",
     "status": "published"
+  },
+  {
+    "id": "carnage_primer_origen_asm_361",
+    "title": "¡Caos en la Prisión de Ryker! La Fuga Letal de Cletus Kasady en Nueva York 🩸🕷️",
+    "character": "Cletus Kasady (Carnage)",
+    "theme_signature": "cletus_kasady:asm361:fuga_prision_rykers:masacre_celda_bagley",
+    "date": "2026-10-19 07:06",
+    "mode": "live_release",
+    "video_file": "Caos_en_la_Prisión_de_Ryker_La_Fuga_Letal_de_Cletus_Kasady_en_Nueva_York.mp4",
+    "status": "published"
   }
 ]
