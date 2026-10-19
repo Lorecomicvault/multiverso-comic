@@ -1778,5 +1778,15 @@
     "mode": "live_release",
     "video_file": "El_Último_Linterna_Verde_de_la_Galaxia_El_Surgimiento_de_Kyle_Rayner.mp4",
     "status": "published"
+  },
+  {
+    "id": "thanos_guantelete_del_infinito_desafio_cosmico",
+    "title": "¡El Poder Absoluto de las Seis Gemas! La Resistencia Heroica Contra Thanos 💎🌌",
+    "character": "Thanos (Titán Loco)",
+    "theme_signature": "thanos:guantelete_infinito_gemas:starlin_cosmicos_eternidad:capitan_resistencia_escudo",
+    "date": "2026-10-19 20:26",
+    "mode": "live_release",
+    "video_file": "El_Poder_Absoluto_de_las_Seis_Gemas_La_Resistencia_Heroica_Contra_Thanos.mp4",
+    "status": "published"
   }
 ]
