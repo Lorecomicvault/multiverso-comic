@@ -1758,5 +1758,15 @@
     "mode": "live_release",
     "video_file": "Caos_en_la_Prisión_de_Ryker_La_Fuga_Letal_de_Cletus_Kasady_en_Nueva_York.mp4",
     "status": "published"
+  },
+  {
+    "id": "thor_beta_ray_bill_levanta_mjolnir",
+    "title": "¡Un Guerrero Alienígena Digno de los Dioses! La Furia Dorada de Beta Ray Bill ⚡🐴",
+    "character": "Beta Ray Bill (Korbinita)",
+    "theme_signature": "beta_ray_bill:korbinita:scuttlebutt_nave_estelar_rival_odin",
+    "date": "2026-10-19 10:06",
+    "mode": "live_release",
+    "video_file": "Un_Guerrero_Alienígena_Digno_de_los_Dioses_La_Furia_Dorada_de_Beta_Ray_Bill.mp4",
+    "status": "published"
   }
 ]
