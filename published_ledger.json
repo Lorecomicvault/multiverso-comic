@@ -1788,5 +1788,15 @@
     "mode": "live_release",
     "video_file": "El_Poder_Absoluto_de_las_Seis_Gemas_La_Resistencia_Heroica_Contra_Thanos.mp4",
     "status": "published"
+  },
+  {
+    "id": "blade_origen_mordedura_deacon_frost",
+    "title": "¡El Nacimiento del Caminante Diurno! La Sangre Maldita de Deacon Frost 🗡️🩸",
+    "character": "Blade (Eric Brooks)",
+    "theme_signature": "blade:deacon_frost:mordedura_madre_parto_londres_colmillos",
+    "date": "2026-10-19 22:06",
+    "mode": "live_release",
+    "video_file": "El_Nacimiento_del_Caminante_Diurno_La_Sangre_Maldita_de_Deacon_Frost.mp4",
+    "status": "published"
   }
 ]
