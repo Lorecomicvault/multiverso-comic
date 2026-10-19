@@ -1768,5 +1768,15 @@
     "mode": "live_release",
     "video_file": "Un_Guerrero_Alienígena_Digno_de_los_Dioses_La_Furia_Dorada_de_Beta_Ray_Bill.mp4",
     "status": "published"
+  },
+  {
+    "id": "green_lantern_kyle_rayner_el_ultimo_anillo",
+    "title": "¡El Último Linterna Verde de la Galaxia! El Surgimiento de Kyle Rayner 🟢💍",
+    "character": "Kyle Rayner (Linterna Verde)",
+    "theme_signature": "kyle_rayner:emerald_twilight:ganthet_ultimo_anillo:boceto_callejon_guardia",
+    "date": "2026-10-19 14:16",
+    "mode": "live_release",
+    "video_file": "El_Último_Linterna_Verde_de_la_Galaxia_El_Surgimiento_de_Kyle_Rayner.mp4",
+    "status": "published"
   }
 ]
