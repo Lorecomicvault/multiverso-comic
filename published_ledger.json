@@ -1738,5 +1738,15 @@
     "mode": "live_release",
     "video_file": "La_Noche_en_que_Nació_el_Murciélago_La_Herida_Sangrienta_en_la_Mansión_Wayne.mp4",
     "status": "published"
+  },
+  {
+    "id": "wolverine_duelo_honor_japon_shingen",
+    "title": "¡El Honor Samurái de Wolverine! La Venganza de las Garras en Japón 🗡️🩸",
+    "character": "Wolverine (Logan)",
+    "theme_signature": "wolverine_japon:shingen_yashida:espada_bokken_veneno:mano_clan_ninja",
+    "date": "2026-10-19 01:07",
+    "mode": "live_release",
+    "video_file": "El_Honor_Samurái_de_Wolverine_La_Venganza_de_las_Garras_en_Japón.mp4",
+    "status": "published"
   }
 ]
