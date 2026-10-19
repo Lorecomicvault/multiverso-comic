@@ -643,6 +643,19 @@ def main():
             if curated_avail:
                 priority_order = [
                     # 10 Curated Guaranteed Comic Masterpieces (20-30s, 100% Comic Art, 0 Duplicates)
+                    "thanos_guantelete_del_infinito_desafio_cosmico",
+                    "blade_origen_mordedura_deacon_frost",
+                    "hellboy_mano_derecha_del_destino_anung",
+                    "cassandra_nova_genocidio_genosha_centinelas",
+                    "invincible_conquest_asalto_brutal_sangre",
+                    "silver_surfer_requiem_muerte_norrin_radd",
+                    "flash_wally_west_supera_barry_thawne",
+                    "hulk_profesor_fusion_mente_banner",
+                    "thor_skurge_ejecutor_puente_gjallerbru",
+                    "xmen_masacre_mutante_cloacas_merodeadores",
+                    # Catalog fallbacks
+                    "batman_el_culto_deacon_blackfire",
+                    "bane_origen_prision_pena_duro",
                     "spiderman_if_this_be_my_destiny_acero",
                     "batman_recupera_el_manto_derrota_azrael",
                     "iron_man_silver_centurion_iron_monger",
@@ -651,23 +664,7 @@ def main():
                     "wolverine_duelo_honor_japon_shingen",
                     "carnage_primer_origen_asm_361",
                     "thor_beta_ray_bill_levanta_mjolnir",
-                    "green_lantern_kyle_rayner_el_ultimo_anillo",
-                    "thanos_guantelete_del_infinito_desafio_cosmico",
-                    # Catalog fallbacks
-                    "batman_el_culto_deacon_blackfire",
-                    "bane_origen_prision_pena_duro",
-                    "batman_endgame_justice_buster_liga",
-                    "saint_walker_primer_linterna_azul_esperanza",
-                    "captain_america_asesinato_civil_war_sharon",
-                    "zoom_hunter_zolomon_chasquido_sonico",
-                    "sinestro_luz_blanca_entidad_vida",
-                    "blue_beetle_jaime_reyes_escarabajo_khaji_da",
-                    "morlun_devora_ojo_spiderman",
-                    "doomsday_humilla_darkseid_apokolips",
-                    "venom_dios_de_la_luz_fuerza_enigma",
-                    "azrael_batman_armadura_asesina",
-                    "old_man_logan_estomago_hulk_canibal",
-                    "miles_morales_legado_nuevo_prodigio"
+                    "green_lantern_kyle_rayner_el_ultimo_anillo"
                 ]
                 selected = next((s for pid in priority_order for s in curated_avail if s["id"] == pid), None)
                 if not selected:

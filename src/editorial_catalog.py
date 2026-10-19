@@ -9,6 +9,317 @@ Every story features:
 
 EDITORIAL_STORIES = [
     {
+        "id": "thanos_guantelete_del_infinito_desafio_cosmico",
+        "universe": "Marvel",
+        "character": "Thanos (Titán Loco)",
+        "title": "¡El Poder Absoluto de las Seis Gemas! La Resistencia Heroica Contra Thanos 💎🌌",
+        "theme_signature": "thanos:guantelete_infinito_gemas:starlin_cosmicos_eternidad:capitan_resistencia_escudo",
+        "description": "Armado con el Guantelete del Infinito, Thanos dominó el cosmos y sometió a los dioses, hasta que los últimos héroes de la Tierra lanzaron un asalto desesperado liderados por el Capitán América.",
+        "hashtags": "#Thanos #InfinityGauntlet #CaptainAmerica #Wolverine #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Con las seis gemas del infinito, Thanos controlaba el espacio y el tiempo a su antojo.",
+            "Los mayores héroes de la Tierra y entidades cósmicas se unieron en un desesperado asedio.",
+            "Wolverine atacó con sus garras, pero Thanos transformó su adamantium en goma derretida.",
+            "Solo el Capitán América resistió en pie, encarando al titán sin dar un paso atrás."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_01.jpg",
+            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_02.jpg",
+            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_03.jpg",
+            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Thanos holding glowing Infinity Gauntlet six gems Starlin panel",
+            "Thanos confronting cosmic entities Eternity Galactus Infinity Gauntlet 4 panel",
+            "Wolverine leaping claws attacking Thanos rubber adamantium panel",
+            "Captain America facing Thanos shield stand As long as one man stands panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "blade_origen_mordedura_deacon_frost",
+        "universe": "Marvel",
+        "character": "Blade (Eric Brooks)",
+        "title": "¡El Nacimiento del Caminante Diurno! La Sangre Maldita de Deacon Frost 🗡️🩸",
+        "theme_signature": "blade:deacon_frost:mordedura_madre_parto_londres_colmillos",
+        "description": "Durante su nacimiento en un callejón londinense, la madre de Blade fue atacada por el vampiro Deacon Frost, otorgándole inmunidad al vampirismo y dando origen al Caminante Diurno.",
+        "hashtags": "#Blade #DeaconFrost #MarvelComics #Daywalker #Vampiros #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "En un oscuro callejón de Londres, una madre al borde de la muerte dio a luz.",
+            "El vampiro Deacon Frost la atacó durante el parto, contaminando la sangre del recién nacido.",
+            "Inmune a la mordedura mortal y con fuerza sobrehumana, Eric Brooks juró vengarse.",
+            "Empuñando su espada de plata, cazó a los chupasangres en la noche. Nació el Caminante Diurno."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/blade_origen_mordedura_deacon_frost/scene_01.jpg",
+            "assets/curated_panels/blade_origen_mordedura_deacon_frost/scene_02.jpg",
+            "assets/curated_panels/blade_origen_mordedura_deacon_frost/scene_03.jpg",
+            "assets/curated_panels/blade_origen_mordedura_deacon_frost/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Tara Cross Tomb of Dracula 13 panel",
+            "Deacon Frost biting Tara Cross Tomb of Dracula panel",
+            "Blade young training weapons comic panel",
+            "Blade holding silver sword wooden daggers Tomb of Dracula panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "hellboy_mano_derecha_del_destino_anung",
+        "universe": "Dark Horse",
+        "character": "Hellboy (Anung Un Rama)",
+        "title": "¡La Bestia del Apocalipsis Llegó a la Tierra! El Misterio de la Mano de Piedra 👹🔥",
+        "theme_signature": "hellboy:anung_un_rama:invocacion_rasputin_mano_piedra_bruttenholm",
+        "description": "Invocado en las ruinas de una iglesia durante la Segunda Guerra Mundial, el demonio Anung Un Rama fue adoptado por el profesor Bruttenholm, convirtiéndose en el protector de la humanidad.",
+        "hashtags": "#Hellboy #DarkHorse #MikeMignola #AnungUnRama #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "En una iglesia en ruinas durante la guerra, un oscuro ritual abrió el abismo cósmico.",
+            "Entre las llamas descendió un demonio rojo con una gigantesca mano indestructible de piedra.",
+            "El noble profesor Bruttenholm lo adoptó, criándolo con cariño humano en lugar del mal.",
+            "Limando sus propios cuernos, Hellboy empuñó su revólver Samaritano para defender la Tierra."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/hellboy_mano_derecha_del_destino_anung/scene_01.jpg",
+            "assets/curated_panels/hellboy_mano_derecha_del_destino_anung/scene_02.jpg",
+            "assets/curated_panels/hellboy_mano_derecha_del_destino_anung/scene_03.jpg",
+            "assets/curated_panels/hellboy_mano_derecha_del_destino_anung/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Project Ragna Rok church ruins ceremony Seed of Destruction panel",
+            "Hellboy baby right hand of doom arrival soldiers 1944 panel",
+            "Trevor Bruttenholm baby Hellboy pancakes Seed of Destruction panel",
+            "Hellboy filing horns right hand of doom trenchcoat panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "cassandra_nova_genocidio_genosha_centinelas",
+        "universe": "Marvel",
+        "character": "Cassandra Nova",
+        "title": "¡El Genocidio de Dieciséis Millones! El Apocalipsis de Genosha por Cassandra Nova 🧬🔥",
+        "theme_signature": "cassandra_nova:genosha:centinelas_salvajes_dieciseis_millones_ruinas_xavier",
+        "description": "La villana psíquica Cassandra Nova desató un ejército de Centinelas colosales sobre Genosha, aniquilando a dieciséis millones de mutantes en la mayor tragedia de la historia de los X-Men.",
+        "hashtags": "#CassandraNova #XMen #Genosha #Sentinels #EmmaFrost #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "En la selva sudamericana, la gemela de Xavier activó una fábrica clandestina de Centinelas salvajes.",
+            "Enjambres de máquinas gigantes cruzaron el océano para arrasar la próspera nación de Genosha.",
+            "Rayos desintegradores destruyeron ciudades enteras, aniquilando a dieciséis millones de mutantes inocentes.",
+            "Entre los escombros llameantes, Emma Frost despertó milagrosamente en su nueva forma de diamante indestructible."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/cassandra_nova_genocidio_genosha_centinelas/scene_01.jpg",
+            "assets/curated_panels/cassandra_nova_genocidio_genosha_centinelas/scene_02.jpg",
+            "assets/curated_panels/cassandra_nova_genocidio_genosha_centinelas/scene_03.jpg",
+            "assets/curated_panels/cassandra_nova_genocidio_genosha_centinelas/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Cassandra Nova Ecuador master mold wild sentinels New X-Men 114 panel",
+            "Wild Sentinels flying approaching island Genosha sky panel",
+            "Genosha destroyed falling buildings mutant casualties panel",
+            "Emma Frost diamond form surviving ruins Genosha New X-Men 115 panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "invincible_conquest_asalto_brutal_sangre",
+        "universe": "Image Comics",
+        "character": "Invincible (Mark Grayson)",
+        "title": "¡La Masacre de Conquest! La Pelea más Despiadada en el Cielo de la Tierra 💥🩸",
+        "theme_signature": "invincible:conquest:pelea_viltrumita_craneo_sangre_atomo_eve",
+        "description": "El guerrero viltrumita Conquest aterrizó para conquistar la Tierra, desencadenando la pelea más brutal y sangrienta de toda la vida de Mark Grayson.",
+        "hashtags": "#Invincible #Conquest #Viltrumite #MarkGrayson #ImageComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "El despiadado viltrumita Conquest llegó a la Tierra para exigir su rendición inmediata.",
+            "Mark Grayson se negó a rendirse, librando un colosal combate en el cielo terrestre.",
+            "Conquest casi quiebra su espíritu al herir de gravedad a Atom Eve frente a él.",
+            "Ciego de furia, Invincible destruyó a su enemigo a brutales cabezazos hasta partirle el cráneo."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/invincible_conquest_asalto_brutal_sangre/scene_01.jpg",
+            "assets/curated_panels/invincible_conquest_asalto_brutal_sangre/scene_02.jpg",
+            "assets/curated_panels/invincible_conquest_asalto_brutal_sangre/scene_03.jpg",
+            "assets/curated_panels/invincible_conquest_asalto_brutal_sangre/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Conquest arriving Earth Viltrumite Invincible 61 panel",
+            "Invincible fighting Conquest sky atmosphere shockwave panel",
+            "Atom Eve injured bleeding ground Invincible 64 panel",
+            "Invincible headbutting Conquest skull broken blood panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "silver_surfer_requiem_muerte_norrin_radd",
+        "universe": "Marvel",
+        "character": "Silver Surfer (Norrin Radd)",
+        "title": "¡Los Últimos Días del Heraldo! El Adiós Dorado de Silver Surfer al Cosmos ✨🌌",
+        "theme_signature": "silver_surfer:requiem:norrin_radd_energia_cosmica_muerte_zenn_la",
+        "description": "Al enterarse de que su energía cósmica se está extinguiendo para siempre, Norrin Radd viaja a través del universo para despedirse de los héroes y de su amada Shalla-Bal.",
+        "hashtags": "#SilverSurfer #Requiem #Galactus #FantasticFour #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "El Heraldo Plateado descubrió que su cuerpo cósmico se estaba apagando irremediablemente.",
+            "Reed Richards intentó encontrar una cura médica, pero la energía cósmica de Norrin agonizaba.",
+            "Incluso el devorador Galactus detuvo su marcha para honrar al servidor más noble del universo.",
+            "Antes de convertirse en polvo cósmico, Silver Surfer descansó eternamente junto a su amada Shalla-Bal."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/silver_surfer_requiem_muerte_norrin_radd/scene_01.jpg",
+            "assets/curated_panels/silver_surfer_requiem_muerte_norrin_radd/scene_02.jpg",
+            "assets/curated_panels/silver_surfer_requiem_muerte_norrin_radd/scene_03.jpg",
+            "assets/curated_panels/silver_surfer_requiem_muerte_norrin_radd/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Norrin Radd Baxter Building Silver Surfer Requiem panel",
+            "Fantastic Four examining Silver Surfer dying cosmic energy panel",
+            "Galactus honoring Silver Surfer cosmos Requiem panel",
+            "Silver Surfer dying Zenn-La Shalla-Bal stars panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "flash_wally_west_supera_barry_thawne",
+        "universe": "DC",
+        "character": "Flash (Wally West)",
+        "title": "¡El Heredero Más Veloz! Wally West Superó a su Maestro y Salvó Central City ⚡🏃",
+        "theme_signature": "wally_west:speed_force:supera_barry_heredero_manto_rayo",
+        "description": "Frente a un impostor temporal que decía ser Barry Allen, Wally West desbloqueó la Speed Force definitiva para superar el legado de su mentor y derrotar a Eobard Thawne.",
+        "hashtags": "#TheFlash #WallyWest #ReverseFlash #SpeedForce #DCComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Un velocista trastornado que decía ser Barry Allen comenzó a aterrorizar las calles.",
+            "Wally West descubrió la oscura verdad: el impostor era el temible viajero temporal Eobard Thawne.",
+            "Superando el miedo a eclipsar a su mentor, Wally liberó todo el poder de la Speed Force.",
+            "Corriendo más rápido que el tiempo, West noqueó a Reverse-Flash, convirtiéndose en el Flash definitivo."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/flash_wally_west_supera_barry_thawne/scene_01.jpg",
+            "assets/curated_panels/flash_wally_west_supera_barry_thawne/scene_02.jpg",
+            "assets/curated_panels/flash_wally_west_supera_barry_thawne/scene_03.jpg",
+            "assets/curated_panels/flash_wally_west_supera_barry_thawne/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Flash 79 Wally West running Reverse Flash 006",
+            "Reverse Flash 007 fighting Wally West speed",
+            "Reverse Flash 008 knocked down defeat panel",
+            "Flash Wally West 0097 speed force lightning panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "hulk_profesor_fusion_mente_banner",
+        "universe": "Marvel",
+        "character": "Profesor Hulk (Bruce Banner)",
+        "title": "¡Tres Mentes en un Solo Monstruo! La Fusión Psicológica que Creó al Profesor Hulk 🧠💚",
+        "theme_signature": "hulk_profesor:doc_samson:fusion_mentes_gris_salvaje_keown_377",
+        "description": "Atormentado por la lucha entre el salvaje Hulk verde y el astuto Joe Fixit, Bruce Banner se somete a una terapia psiquiátrica que une sus tres mentes en el colosal Profesor Hulk.",
+        "hashtags": "#Hulk #ProfessorHulk #BruceBanner #DocSamson #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Atormentado por la guerra interna entre el monstruo verde y Joe Fixit, Bruce Banner colapsó.",
+            "El psiquiatra Leonard Samson usó hipnosis profunda para entrar en sus traumas de la infancia.",
+            "Al enfrentar los abusos de su padre, las tres personalidades de Bruce hicieron las paces.",
+            "De la terapia emergió el colosal Profesor Hulk: fuerza titánica con la mente brillante de Banner."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/hulk_profesor_fusion_mente_banner/scene_01.jpg",
+            "assets/curated_panels/hulk_profesor_fusion_mente_banner/scene_02.jpg",
+            "assets/curated_panels/hulk_profesor_fusion_mente_banner/scene_03.jpg",
+            "assets/curated_panels/hulk_profesor_fusion_mente_banner/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Bruce Banner collapsing psychology mind Hulk 377 panel",
+            "Doc Samson hypnotizing Bruce Banner mind therapy panel",
+            "Brian Banner ghost confrontation Bruce Hulk trauma panel",
+            "Professor Hulk emergence merged mind Keown panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "thor_skurge_ejecutor_puente_gjallerbru",
+        "universe": "Marvel",
+        "character": "Skurge el Ejecutor",
+        "title": "¡Un Solo Hombre Contra los Ejércitos de Hel! El Sacrificio Inmortal de Skurge en el Puente ⚡🪓",
+        "theme_signature": "skurge:ejecutor:m16_rifles_puente_gjallerbru_hela_hel_valhalla",
+        "description": "Para permitir que Thor y sus camaradas escaparan del inframundo de Hel, Skurge el Ejecutor se quedó solo en el puente Gjallerbru, defendiendo la posición con rifles de asalto.",
+        "hashtags": "#Thor #Skurge #Executioner #Gjallerbru #Hela #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "En el reino tenebroso de Hel, la diosa de la muerte acorraló a los asgardianos.",
+            "Para que sus camaradas pudieran escapar, Skurge el Ejecutor decidió resistir en solitario.",
+            "Empuñando dos rifles de asalto mortales, disparó sin tregua contra millones de monstruos demoníacos.",
+            "Él se mantuvo en pie en el puente Gjallerbru, ganándose el Valhalla para siempre."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/thor_skurge_ejecutor_puente_gjallerbru/scene_01.jpg",
+            "assets/curated_panels/thor_skurge_ejecutor_puente_gjallerbru/scene_02.jpg",
+            "assets/curated_panels/thor_skurge_ejecutor_puente_gjallerbru/scene_03.jpg",
+            "assets/curated_panels/thor_skurge_ejecutor_puente_gjallerbru/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Naglfar ship of dead Hel Thor 362 panel",
+            "Gjallerbru bridge river Gjoll Thor 361 panel",
+            "Skurge firing rifles assault demons Simonson panel",
+            "Skurge stands alone at Gjallerbru Thor 362 iconic panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "xmen_masacre_mutante_cloacas_merodeadores",
+        "universe": "Marvel",
+        "character": "X-Men (Morlocks)",
+        "title": "¡La Masacre de los Inocentes! El Terror de los Merodeadores en las Cloacas 🩸⚔️",
+        "theme_signature": "xmen:mutant_massacre:merodeadores_morlocks_alcantarillas_sabertooth",
+        "description": "Bajo las calles de Manhattan, los despiadados Merodeadores irrumpieron en los túneles para masacrar a los indefensos mutantes Morlocks, forzando a los X-Men a una sangrienta batalla.",
+        "hashtags": "#XMen #MutantMassacre #Morlocks #Wolverine #Marauders #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Bajo las calles de Manhattan, los pacíficos mutantes Morlocks vivían ocultos en la oscuridad.",
+            "Los sanguinarios Merodeadores irrumpieron con armas de asalto ejecutando una masacre despiadada.",
+            "Wolverine y Psylocke descendieron a las cloacas siguiendo el rastro de sangre en los túneles.",
+            "Luchando entre las sombras, los X-Men frenaron el exterminio y salvaron a los últimos sobrevivientes."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/xmen_masacre_mutante_cloacas_merodeadores/scene_01.jpg",
+            "assets/curated_panels/xmen_masacre_mutante_cloacas_merodeadores/scene_02.jpg",
+            "assets/curated_panels/xmen_masacre_mutante_cloacas_merodeadores/scene_03.jpg",
+            "assets/curated_panels/xmen_masacre_mutante_cloacas_merodeadores/scene_04.jpg"
+        ],
+        "art_queries": [
+            "John Greycrow Marauders shooting Morlocks tunnels panel",
+            "Wolverine Healer bleeding Morlock tunnels Uncanny X-Men 212 panel",
+            "Psylocke fighting Victor Creed Sabretooth Uncanny X-Men 213 panel",
+            "Wolverine ambushing Sabretooth tunnels Mutant Massacre panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+
+    {
         "id": "batman_el_culto_deacon_blackfire",
         "universe": "DC",
         "character": "Batman",
@@ -319,37 +630,6 @@ EDITORIAL_STORIES = [
         "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
     },
     {
-        "id": "thanos_guantelete_del_infinito_desafio_cosmico",
-        "universe": "Marvel",
-        "character": "Thanos (Titán Loco)",
-        "title": "¡El Poder Absoluto de las Seis Gemas! La Resistencia Heroica Contra Thanos 💎🌌",
-        "theme_signature": "thanos:guantelete_infinito_gemas:starlin_cosmicos_eternidad:capitan_resistencia_escudo",
-        "description": "Armado con el Guantelete del Infinito, Thanos dominó el cosmos y sometió a los dioses, hasta que los últimos héroes de la Tierra lanzaron un asalto desesperado liderados por el Capitán América.",
-        "hashtags": "#Thanos #InfinityGauntlet #CaptainAmerica #Wolverine #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
-        "scenes": [
-            "¡Con las seis gemas reunidas en su guantelete, Thanos se proclamó amo supremo de la creación!",
-            "Los dioses cósmicos lanzaron un ataque devastador, pero cayeron humillados ante el poder absoluto del titán.",
-            "Wolverine saltó al ataque con sus garras, pero Thanos convirtió su esqueleto de adamantium en goma.",
-            "Frente al dios todopoderoso, el Capitán América avanzó solo con su escudo sin retroceder jamás. ¿Su mayor hazaña?"
-        ],
-        "scene_art_urls": [
-            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_01.jpg",
-            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_02.jpg",
-            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_03.jpg",
-            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_04.jpg"
-        ],
-        "art_queries": [
-            "Thanos holding glowing Infinity Gauntlet six gems Starlin panel",
-            "Thanos confronting cosmic entities Eternity Galactus Infinity Gauntlet 4 panel",
-            "Wolverine leaping claws attacking Thanos rubber adamantium panel",
-            "Captain America facing Thanos shield stand As long as one man stands panel"
-        ],
-        "voice": "Puck",
-        "tts_model": "gemini-3.8-flash-tts",
-        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
-        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
-    },
-    {
         "id": "batman_recupera_el_manto_derrota_azrael",
         "universe": "DC",
         "character": "Batman (Bruce Wayne)",
@@ -591,37 +871,6 @@ EDITORIAL_STORIES = [
             "Hal Jordan Parallax armor absorbing central power battery panel",
             "Ganthet giving last power ring Kyle Rayner dark alley panel",
             "Kyle Rayner Green Lantern suit glowing emerald energy burst panel"
-        ],
-        "voice": "Puck",
-        "tts_model": "gemini-3.8-flash-tts",
-        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
-        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
-    },
-    {
-        "id": "thanos_guantelete_del_infinito_desafio_cosmico",
-        "universe": "Marvel",
-        "character": "Thanos (Titán Loco)",
-        "title": "¡El Poder Absoluto de las Seis Gemas! La Resistencia Heroica Contra Thanos 💎🌌",
-        "theme_signature": "thanos:guantelete_infinito_gemas:starlin_cosmicos_eternidad:capitan_resistencia_escudo",
-        "description": "Armado con el Guantelete del Infinito, Thanos dominó el cosmos y sometió a los dioses, hasta que los últimos héroes de la Tierra lanzaron un asalto desesperado liderados por el Capitán América.",
-        "hashtags": "#Thanos #InfinityGauntlet #CaptainAmerica #Wolverine #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
-        "scenes": [
-            "¡Con las seis gemas reunidas en su guantelete, Thanos se proclamó amo supremo de la creación!",
-            "Los dioses cósmicos lanzaron un ataque devastador, pero cayeron humillados ante el poder absoluto del titán.",
-            "Wolverine saltó al ataque con sus garras, pero Thanos convirtió su esqueleto de adamantium en goma.",
-            "Frente al dios todopoderoso, el Capitán América avanzó solo con su escudo sin retroceder jamás. ¿Su mayor hazaña?"
-        ],
-        "scene_art_urls": [
-            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_01.jpg",
-            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_02.jpg",
-            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_03.jpg",
-            "assets/curated_panels/thanos_guantelete_del_infinito_desafio_cosmico/scene_04.jpg"
-        ],
-        "art_queries": [
-            "Thanos holding glowing Infinity Gauntlet six gems Starlin panel",
-            "Thanos confronting cosmic entities Eternity Galactus Infinity Gauntlet 4 panel",
-            "Wolverine leaping claws attacking Thanos rubber adamantium panel",
-            "Captain America facing Thanos shield stand As long as one man stands panel"
         ],
         "voice": "Puck",
         "tts_model": "gemini-3.8-flash-tts",
