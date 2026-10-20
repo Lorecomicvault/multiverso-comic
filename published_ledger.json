@@ -1838,5 +1838,15 @@
     "mode": "live_release",
     "video_file": "La_Masacre_de_los_Inocentes_El_Terror_de_los_Merodeadores_en_las_Cloacas.mp4",
     "status": "published"
+  },
+  {
+    "id": "thor_skurge_ejecutor_puente_gjallerbru",
+    "title": "¡Un Solo Hombre Contra los Ejércitos de Hel! El Sacrificio Inmortal de Skurge en el Puente ⚡🪓",
+    "character": "Skurge el Ejecutor",
+    "theme_signature": "skurge:ejecutor:m16_rifles_puente_gjallerbru_hela_hel_valhalla",
+    "date": "2026-10-20 22:09",
+    "mode": "live_release",
+    "video_file": "Un_Solo_Hombre_Contra_los_Ejércitos_de_Hel_El_Sacrificio_Inmortal_de_Skurge_en_e.mp4",
+    "status": "published"
   }
 ]
