@@ -1818,5 +1818,15 @@
     "mode": "live_release",
     "video_file": "El_Heredero_Más_Veloz_Wally_West_Superó_a_su_Maestro_y_Salvó_Central_City.mp4",
     "status": "published"
+  },
+  {
+    "id": "hulk_profesor_fusion_mente_banner",
+    "title": "¡Tres Mentes en un Solo Monstruo! La Fusión Psicológica que Creó al Profesor Hulk 🧠💚",
+    "character": "Profesor Hulk (Bruce Banner)",
+    "theme_signature": "hulk_profesor:doc_samson:fusion_mentes_gris_salvaje_keown_377",
+    "date": "2026-10-20 10:06",
+    "mode": "live_release",
+    "video_file": "Tres_Mentes_en_un_Solo_Monstruo_La_Fusión_Psicológica_que_Creó_al_Profesor_Hulk.mp4",
+    "status": "published"
   }
 ]
