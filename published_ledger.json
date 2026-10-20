@@ -1798,5 +1798,15 @@
     "mode": "live_release",
     "video_file": "El_Nacimiento_del_Caminante_Diurno_La_Sangre_Maldita_de_Deacon_Frost.mp4",
     "status": "published"
+  },
+  {
+    "id": "silver_surfer_requiem_muerte_norrin_radd",
+    "title": "¡Los Últimos Días del Heraldo! El Adiós Dorado de Silver Surfer al Cosmos ✨🌌",
+    "character": "Silver Surfer (Norrin Radd)",
+    "theme_signature": "silver_surfer:requiem:norrin_radd_energia_cosmica_muerte_zenn_la",
+    "date": "2026-10-20 01:07",
+    "mode": "live_release",
+    "video_file": "Los_Últimos_Días_del_Heraldo_El_Adiós_Dorado_de_Silver_Surfer_al_Cosmos.mp4",
+    "status": "published"
   }
 ]
