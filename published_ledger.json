@@ -1808,5 +1808,15 @@
     "mode": "live_release",
     "video_file": "Los_Últimos_Días_del_Heraldo_El_Adiós_Dorado_de_Silver_Surfer_al_Cosmos.mp4",
     "status": "published"
+  },
+  {
+    "id": "flash_wally_west_supera_barry_thawne",
+    "title": "¡El Heredero Más Veloz! Wally West Superó a su Maestro y Salvó Central City ⚡🏃",
+    "character": "Flash (Wally West)",
+    "theme_signature": "wally_west:speed_force:supera_barry_heredero_manto_rayo",
+    "date": "2026-10-20 07:07",
+    "mode": "live_release",
+    "video_file": "El_Heredero_Más_Veloz_Wally_West_Superó_a_su_Maestro_y_Salvó_Central_City.mp4",
+    "status": "published"
   }
 ]
