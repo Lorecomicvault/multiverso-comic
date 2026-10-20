@@ -1828,5 +1828,15 @@
     "mode": "live_release",
     "video_file": "Tres_Mentes_en_un_Solo_Monstruo_La_Fusión_Psicológica_que_Creó_al_Profesor_Hulk.mp4",
     "status": "published"
+  },
+  {
+    "id": "xmen_masacre_mutante_cloacas_merodeadores",
+    "title": "¡La Masacre de los Inocentes! El Terror de los Merodeadores en las Cloacas 🩸⚔️",
+    "character": "X-Men (Morlocks)",
+    "theme_signature": "xmen:mutant_massacre:merodeadores_morlocks_alcantarillas_sabertooth",
+    "date": "2026-10-20 18:21",
+    "mode": "live_release",
+    "video_file": "La_Masacre_de_los_Inocentes_El_Terror_de_los_Merodeadores_en_las_Cloacas.mp4",
+    "status": "published"
   }
 ]
