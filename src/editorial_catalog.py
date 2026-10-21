@@ -175,7 +175,7 @@ EDITORIAL_STORIES = [
             "Una brecha dimensional desató el horror cuando Sentry cayó infectado en Times Square.",
             "Intentando salvar civiles, Spider-Man fue mordido en el hombro por Colonel America.",
             "Al llegar a su casa, el hambre caníbal venció su voluntad y devoró a sus seres queridos.",
-            "Llorando en la azotea al recobrar la cordura, comprendió con horror su eterna condena."
+            "Completamente consumido por la plaga, el arácnido emboscó a Nova para continuar la sangrienta masacre."
         ],
         "scene_art_urls": [
             "assets/curated_panels/plaga_canibal_sentry_caida_vengadores/scene_01.jpg",
