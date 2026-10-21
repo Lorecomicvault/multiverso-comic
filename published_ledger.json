@@ -1848,5 +1848,15 @@
     "mode": "live_release",
     "video_file": "Un_Solo_Hombre_Contra_los_Ejércitos_de_Hel_El_Sacrificio_Inmortal_de_Skurge_en_e.mp4",
     "status": "published"
+  },
+  {
+    "id": "cassandra_nova_genocidio_genosha_centinelas",
+    "title": "¡El Genocidio de Dieciséis Millones! El Apocalipsis de Genosha por Cassandra Nova 🧬🔥",
+    "character": "Cassandra Nova",
+    "theme_signature": "cassandra_nova:genosha:centinelas_salvajes_dieciseis_millones_ruinas_xavier",
+    "date": "2026-10-21 22:07",
+    "mode": "live_release",
+    "video_file": "El_Genocidio_de_Dieciséis_Millones_El_Apocalipsis_de_Genosha_por_Cassandra_Nova.mp4",
+    "status": "published"
   }
 ]
