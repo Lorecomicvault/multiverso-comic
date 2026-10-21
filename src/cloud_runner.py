@@ -642,12 +642,17 @@ def main():
 
             if curated_avail:
                 priority_order = [
-                    # 10 Curated Guaranteed Comic Masterpieces (20-30s, 100% Comic Art, 0 Duplicates)
+                    # Top Guaranteed Curated Comic Masterpieces (20-30s, 100% Comic Art, 0 Duplicates)
+                    "cassandra_nova_genocidio_genosha_centinelas",
+                    "plaga_canibal_sentry_caida_vengadores",
+                    "zombies_consumen_galactus_poder_infinito",
+                    "giant_man_laboratorio_secreto_prisionero_panther",
+                    "ash_williams_ejercito_tinieblas_invasion_muertos",
+                    "invincible_conquest_asalto_brutal_sangre",
+                    # Historical catalog fallbacks
                     "thanos_guantelete_del_infinito_desafio_cosmico",
                     "blade_origen_mordedura_deacon_frost",
                     "hellboy_mano_derecha_del_destino_anung",
-                    "cassandra_nova_genocidio_genosha_centinelas",
-                    "invincible_conquest_asalto_brutal_sangre",
                     "silver_surfer_requiem_muerte_norrin_radd",
                     "flash_wally_west_supera_barry_thawne",
                     "hulk_profesor_fusion_mente_banner",

@@ -164,6 +164,130 @@ EDITORIAL_STORIES = [
         "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
     },
     {
+        "id": "plaga_canibal_sentry_caida_vengadores",
+        "universe": "Marvel",
+        "character": "Sentry Infectado",
+        "title": "¡El Día del Hambre Eterna! La Oscura Caída de los Héroes Más Poderosos 🧟🩸",
+        "theme_signature": "sentry_infectado:apocalipsis_canibal:infeccion_inicial_dead_days",
+        "description": "Una brecha interdimensional desata una pesadilla biológica cuando Sentry cae en la Tierra infectado con un hambre imposible de saciar.",
+        "hashtags": "#MarvelZombies #Sentry #SpiderMan #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Una brecha dimensional desató el horror cuando Sentry cayó infectado en Times Square.",
+            "Intentando salvar civiles, Spider-Man fue mordido en el hombro por Colonel America.",
+            "Al llegar a su casa, el hambre caníbal venció su voluntad y devoró a sus seres queridos.",
+            "Llorando en la azotea al recobrar la cordura, comprendió con horror su eterna condena."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/plaga_canibal_sentry_caida_vengadores/scene_01.jpg",
+            "assets/curated_panels/plaga_canibal_sentry_caida_vengadores/scene_02.jpg",
+            "assets/curated_panels/plaga_canibal_sentry_caida_vengadores/scene_03.jpg",
+            "assets/curated_panels/plaga_canibal_sentry_caida_vengadores/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Sentry zombie landing Times Square Dead Days comic panel",
+            "Spider-Man bitten by Colonel America Dead Days comic panel",
+            "Spider-Man horror eating Mary Jane Dead Days comic panel",
+            "Spider-Man weeping rooftop Dead Days comic panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "zombies_consumen_galactus_poder_infinito",
+        "universe": "Marvel",
+        "character": "Zombies Cósmicos",
+        "title": "¡El Festín Prohibido de los No-Muertos! La Caída del Gigante de las Estrellas 🌌🧟",
+        "theme_signature": "zombies_energia:banquete_galactus:hulk_surfer_estrellas_espacio",
+        "description": "Los héroes infectados emboscan a Silver Surfer y derriban al devorador de planetas para absorber su poder cósmico supremo.",
+        "hashtags": "#MarvelZombies #Galactus #SilverSurfer #Hulk #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Cuando Silver Surfer llegó a la Tierra, Hulk decapitó al heraldo plateado de un brutal mordisco.",
+            "Furioso por su sirviente, el colosal Galactus descendió para erradicar a los muertos vivientes.",
+            "Combinando su poder con armas avanzadas, los monstruos derribaron al gigante y devoraron su carne cósmica.",
+            "Absorbiendo su energía divina, los nuevos dioses del hambre volaron al espacio para consumir galaxias enteras."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/zombies_consumen_galactus_poder_infinito/scene_01.jpg",
+            "assets/curated_panels/zombies_consumen_galactus_poder_infinito/scene_02.jpg",
+            "assets/curated_panels/zombies_consumen_galactus_poder_infinito/scene_03.jpg",
+            "assets/curated_panels/zombies_consumen_galactus_poder_infinito/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Hulk zombie biting Silver Surfer head Marvel Zombies comic panel",
+            "Galactus landing Earth Marvel Zombies comic panel",
+            "Zombies eating Galactus flesh Marvel Zombies comic panel",
+            "Cosmic zombies flying space Galactus power comic panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "giant_man_laboratorio_secreto_prisionero_panther",
+        "universe": "Marvel",
+        "character": "Giant-Man Zombie",
+        "title": "¡El Macabro Secreto de Giant-Man! El Laboratorio Prohibido de Hank Pym 🧪🥩",
+        "theme_signature": "giant_man_zombie:laboratorio_secreto:reserva_carne_prisionero_wasp",
+        "description": "Hank Pym esconde un aterrador secreto en las profundidades de su laboratorio: un héroe mantenido como suministro vivo.",
+        "hashtags": "#MarvelZombies #GiantMan #BlackPanther #Wasp #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Ocultando su apetito a los demás, Hank Pym descendió a las sombras de su laboratorio secreto.",
+            "Allí mantenía sedado a Black Panther, mutilándolo poco a poco como reserva secreta de alimento.",
+            "Al ser descubierto por su esposa Wasp, Giant-Man perdió la calma y la decapitó de un mordisco.",
+            "Aprovechando la sangrienta disputa, T'Challa logró liberarse y huyó cargando los restos de Janet."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/giant_man_laboratorio_secreto_prisionero_panther/scene_01.jpg",
+            "assets/curated_panels/giant_man_laboratorio_secreto_prisionero_panther/scene_02.jpg",
+            "assets/curated_panels/giant_man_laboratorio_secreto_prisionero_panther/scene_03.jpg",
+            "assets/curated_panels/giant_man_laboratorio_secreto_prisionero_panther/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Hank Pym laboratory Marvel Zombies comic panel",
+            "Black Panther captive table Marvel Zombies comic panel",
+            "Giant-Man confronting Wasp Marvel Zombies comic panel",
+            "Black Panther escaping Marvel Zombies comic panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
+        "id": "ash_williams_ejercito_tinieblas_invasion_muertos",
+        "universe": "Marvel/Dynamite",
+        "character": "Ash Williams",
+        "title": "¡La Motosierra Contra el Apocalipsis! El Viaje Interdimensional de Ash Williams 🪚💀",
+        "theme_signature": "ash_williams:necronomicon:viaje_multiverso_motosierra_escopeta",
+        "description": "El guerrero de la profecía aterriza en una dimensión devastada por la carne viva y empuña su motosierra para hacer justicia.",
+        "hashtags": "#AshWilliams #ArmyOfDarkness #MarvelZombies #EvilDead #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Tras cruzar un vórtice con el Necronomicón, Ash Williams cayó en un callejón nevado de otra dimensión.",
+            "Confundido en las calles extrañas, descubrió horrorizado que una plaga insaciable devoraba a los civiles.",
+            "Al ser rodeado por versiones corruptas de los héroes, comprendió que no eran demonios ordinarios.",
+            "Encendiendo su motosierra y amartillando su escopeta, el elegido juró exterminar a cada monstruo sin piedad."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/ash_williams_ejercito_tinieblas_invasion_muertos/scene_01.jpg",
+            "assets/curated_panels/ash_williams_ejercito_tinieblas_invasion_muertos/scene_02.jpg",
+            "assets/curated_panels/ash_williams_ejercito_tinieblas_invasion_muertos/scene_03.jpg",
+            "assets/curated_panels/ash_williams_ejercito_tinieblas_invasion_muertos/scene_04.jpg"
+        ],
+        "art_queries": [
+            "Ash Williams falling alley Marvel Zombies Army of Darkness comic panel",
+            "Ash Williams confused snowy streets comic panel",
+            "Ash Williams facing zombie heroes comic panel",
+            "Ash Williams chainsaw shotgun boomstick comic panel"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, apasionado, tenso y enérgico en español latinoamericano"
+    },
+    {
         "id": "silver_surfer_requiem_muerte_norrin_radd",
         "universe": "Marvel",
         "character": "Silver Surfer (Norrin Radd)",
