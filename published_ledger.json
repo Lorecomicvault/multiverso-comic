@@ -1878,5 +1878,15 @@
     "mode": "live_release",
     "video_file": "El_Festín_Prohibido_de_los_No-Muertos_La_Caída_del_Gigante_de_las_Estrellas.mp4",
     "status": "published"
+  },
+  {
+    "id": "giant_man_laboratorio_secreto_prisionero_panther",
+    "title": "¡El Macabro Secreto de Giant-Man! El Laboratorio Prohibido de Hank Pym 🧪🥩",
+    "character": "Giant-Man Zombie",
+    "theme_signature": "giant_man_zombie:laboratorio_secreto:reserva_carne_prisionero_wasp",
+    "date": "2026-10-22 10:05",
+    "mode": "live_release",
+    "video_file": "El_Macabro_Secreto_de_Giant-Man_El_Laboratorio_Prohibido_de_Hank_Pym.mp4",
+    "status": "published"
   }
 ]
