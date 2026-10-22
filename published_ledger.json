@@ -1858,5 +1858,15 @@
     "mode": "live_release",
     "video_file": "El_Genocidio_de_Dieciséis_Millones_El_Apocalipsis_de_Genosha_por_Cassandra_Nova.mp4",
     "status": "published"
+  },
+  {
+    "id": "plaga_canibal_sentry_caida_vengadores",
+    "title": "¡El Día del Hambre Eterna! La Oscura Caída de los Héroes Más Poderosos 🧟🩸",
+    "character": "Sentry Infectado",
+    "theme_signature": "sentry_infectado:apocalipsis_canibal:infeccion_inicial_dead_days",
+    "date": "2026-10-22 01:06",
+    "mode": "live_release",
+    "video_file": "El_Día_del_Hambre_Eterna_La_Oscura_Caída_de_los_Héroes_Más_Poderosos.mp4",
+    "status": "published"
   }
 ]
