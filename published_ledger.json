@@ -1868,5 +1868,15 @@
     "mode": "live_release",
     "video_file": "El_Día_del_Hambre_Eterna_La_Oscura_Caída_de_los_Héroes_Más_Poderosos.mp4",
     "status": "published"
+  },
+  {
+    "id": "zombies_consumen_galactus_poder_infinito",
+    "title": "¡El Festín Prohibido de los No-Muertos! La Caída del Gigante de las Estrellas 🌌🧟",
+    "character": "Zombies Cósmicos",
+    "theme_signature": "zombies_energia:banquete_galactus:hulk_surfer_estrellas_espacio",
+    "date": "2026-10-22 07:07",
+    "mode": "live_release",
+    "video_file": "El_Festín_Prohibido_de_los_No-Muertos_La_Caída_del_Gigante_de_las_Estrellas.mp4",
+    "status": "published"
   }
 ]
