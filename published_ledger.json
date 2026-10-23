@@ -1908,5 +1908,15 @@
     "mode": "live_release",
     "video_file": "Hawkeye_Sin_Vengadores_La_Desastrosa_Vida_Callejera_de_Clint_Barton.mp4",
     "status": "published"
+  },
+  {
+    "id": "invincible_battle_beast_duelo_viltrumita",
+    "title": "¡Battle Beast: La Bestia Cósmica! El Sangriento Duelo por el Honor Viltrumita ⚔️🦁",
+    "character": "Battle Beast",
+    "theme_signature": "battle_beast:invincible:honor_duelo_viltrumita_espacio_sangre",
+    "date": "2026-10-23 07:06",
+    "mode": "live_release",
+    "video_file": "Battle_Beast_La_Bestia_Cósmica_El_Sangriento_Duelo_por_el_Honor_Viltrumita.mp4",
+    "status": "published"
   }
 ]
