@@ -1938,5 +1938,15 @@
     "mode": "live_release",
     "video_file": "La_Pesadilla_de_Moon_Knight_El_Manicomio_de_Dioses_de_Marc_Spector.mp4",
     "status": "published"
+  },
+  {
+    "id": "moira_mactaggert_diez_vidas_house_of_x",
+    "title": "¡Las Diez Vidas de Moira MacTaggert! El Secreto que Cambió el Destino Mutante 🧬⏳",
+    "character": "Moira MacTaggert",
+    "theme_signature": "moira_mactaggert:house_of_x:reencarnacion_vidas_mutantes_krakoa",
+    "date": "2026-10-23 18:06",
+    "mode": "live_release",
+    "video_file": "Las_Diez_Vidas_de_Moira_MacTaggert_El_Secreto_que_Cambió_el_Destino_Mutante.mp4",
+    "status": "published"
   }
 ]
