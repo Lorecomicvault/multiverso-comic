@@ -1918,5 +1918,15 @@
     "mode": "live_release",
     "video_file": "Battle_Beast_La_Bestia_Cósmica_El_Sangriento_Duelo_por_el_Honor_Viltrumita.mp4",
     "status": "published"
+  },
+  {
+    "id": "immortal_hulk_demonio_noche_al_ewing",
+    "title": "¡El Monstruo Inmortal! La Noche en que el Demonio Hulk Regresó de la Muerte 🟢🧟",
+    "character": "Immortal Hulk",
+    "theme_signature": "immortal_hulk:al_ewing:puerta_verde_resurreccion_demonio_noche",
+    "date": "2026-10-23 11:57",
+    "mode": "live_release",
+    "video_file": "El_Monstruo_Inmortal_La_Noche_en_que_el_Demonio_Hulk_Regresó_de_la_Muerte.mp4",
+    "status": "published"
   }
 ]
