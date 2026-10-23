@@ -1898,5 +1898,15 @@
     "mode": "live_release",
     "video_file": "La_Masacre_de_Conquest_La_Pelea_más_Despiadada_en_el_Cielo_de_la_Tierra.mp4",
     "status": "published"
+  },
+  {
+    "id": "hawkeye_mi_vida_como_arma_fraction",
+    "title": "¡Hawkeye Sin Vengadores! La Desastrosa Vida Callejera de Clint Barton 🎯🍕",
+    "character": "Hawkeye Clint",
+    "theme_signature": "hawkeye:clint_barton:perro_pizza_mafia_chandal_brooklyn",
+    "date": "2026-10-23 01:06",
+    "mode": "live_release",
+    "video_file": "Hawkeye_Sin_Vengadores_La_Desastrosa_Vida_Callejera_de_Clint_Barton.mp4",
+    "status": "published"
   }
 ]
