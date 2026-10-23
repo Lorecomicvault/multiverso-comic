@@ -67,10 +67,10 @@ EDITORIAL_STORIES = [
         "description": "Bruce Banner puede morir a la luz del día, pero cuando el sol se oculta, la Puerta Verde se abre y el Demonio inmortal camina sobre la Tierra.",
         "hashtags": "#ImmortalHulk #BruceBanner #MarvelComics #PuertaVerde #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "Asesinado a sangre fría de un disparo en la cabeza durante un asalto, el cadáver inerte de Bruce Banner yacía en la morgue.",
-            "Pero en el abismo radiactivo de la Puerta Verde rige una ley cósmica: el sol pertenece a Bruce, pero la noche es del monstruo.",
-            "Al caer la medianoche, las heridas mortales cicatrizaron y una masa colosal de músculo esmeralda emergió de las sombras.",
-            "Con ojos diabólicos y una mente sádica indestructible, el Inmortal Hulk prometió cazar a los culpables sin descanso."
+                    "Durante el día, Bruce Banner puede morir asesinado por cualquier bala o enfermedad común.",
+                    "Pero cuando el sol se oculta en el horizonte, la Puerta Verde del inframundo se abre de par en par.",
+                    "Renaciendo de entre los muertos con ojos esmeralda, el Demonio Hulk camina buscando venganza.",
+                    "Aplastando a sus asesinos en la oscuridad, la bestia inmortal demuestra que la noche le pertenece."
         ],
         "scene_art_urls": [
             "assets/curated_panels/immortal_hulk_demonio_noche_al_ewing/scene_01.jpg",
@@ -142,10 +142,10 @@ EDITORIAL_STORIES = [
         "description": "Un ejército interdimensional inmune a los hechizos extermina a los hechiceros del cosmos, obligando a Strange a luchar con hachas y sangre.",
         "hashtags": "#DoctorStrange #Empirikul #MarvelComics #HechiceroSupremo #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "A través del multiverso, una inquisición biomecánica llamada Empirikul comenzó a purgar y quemar cada dimensión mágica.",
-            "Al descender sobre la Tierra, sus armas científicas absorbieron la energía de los Ojos de Agamotto y anularon todos los conjuros.",
-            "Despojado de sus encantamientos y con el santuario en cenizas, el Doctor Strange empuñó un hacha de batalla ancestral.",
-            "Sangrando sobre el frío asfalto de Manhattan, el Hechicero Supremo demostró que el verdadero valor reside en el corazón y no en los hechizos."
+                    "A través del multiverso, la inquisición científica del Empirikul comenzó a purgar cada dimensión mágica.",
+                    "Al descender sobre la Tierra, sus armas mecánicas anularon todos los conjuros de los hechiceros.",
+                    "Despojado de sus encantamientos y con el santuario en cenizas, Stephen Strange empuñó un hacha ancestral.",
+                    "Sangrando en Manhattan, el Hechicero Supremo demostró que el verdadero valor reside en el espíritu."
         ],
         "scene_art_urls": [
             "assets/curated_panels/doctor_strange_ultimos_dias_magia_empirikul/scene_01.jpg",
@@ -292,10 +292,10 @@ EDITORIAL_STORIES = [
         "description": "En una emboscada en San Francisco, el toque mutante de Rogue drena para siempre los recuerdos, el vuelo y la fuerza cósmica de Carol Danvers.",
         "hashtags": "#Rogue #CapitanaMarvel #CarolDanvers #XMen #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "Bajo las órdenes de Mystique, la joven mutante Rogue acechaba en los muelles de San Francisco en busca de su destino.",
-            "En una emboscada letal sobre el puente, sujetó a Carol Danvers con sus manos desnudas para drenar su energía cósmica.",
-            "Pero el contacto se prolongó demasiado: los recuerdos, la fuerza colosal y el alma de Danvers quedaron atrapados en su mente.",
-            "Abrumada por voces ajenas y un poder incontrolable, Rogue huyó entre lágrimas convertida en la mutante más temida del mundo."
+                    "Bajo las órdenes de Mystique, la joven mutante Rogue acechaba en los muelles de San Francisco.",
+                    "En una emboscada letal sobre el puente, sujetó a Carol Danvers para drenar su energía cósmica.",
+                    "Pero el contacto se prolongó: la fuerza, el vuelo y los recuerdos de Danvers quedaron atrapados en su mente.",
+                    "Abrumada por voces ajenas, Rogue huyó entre lágrimas convertida en la mutante más poderosa del planeta."
         ],
         "scene_art_urls": [
             "assets/curated_panels/rogue_absorbe_poderes_capitana_marvel/scene_01.jpg",
@@ -442,10 +442,10 @@ EDITORIAL_STORIES = [
         "description": "Transformado por un baño de ácido corrosivo, el exdelincuente Patrick O'Brian oculta el poder más inmortal e indestructible de la Liga de la Justicia.",
         "hashtags": "#PlasticMan #PatrickOBrian #DCComics #LigaDeLaJusticia #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "Durante un asalto nocturno a una fábrica química, el ladrón callejero Patrick O'Brian cayó dentro de un caldero de ácido corrosivo.",
-            "El compuesto reorganizó su estructura celular a nivel molecular, volviendo su cuerpo inmune al dolor, al fuego y a las balas.",
-            "Aunque se oculta tras una máscara de payaso y bromas ridículas, Batman considera su biología la más indestructible de la Tierra.",
-            "Capaz de estirarse por kilómetros o resistir milenios en el fondo del océano, Plastic Man es el titán definitivo de la Liga."
+                    "Durante un atraco nocturno a una fábrica química, Patrick O'Brian cayó en un caldero de ácido.",
+                    "El compuesto alteró sus células, volviendo su cuerpo maleable e inmune al fuego, balas y dolor.",
+                    "Aunque se oculta tras bromas ridículas, Batman considera su biología la más indestructible de la Tierra.",
+                    "Capaz de estirarse por kilómetros o resistir milenios bajo el mar, Plastic Man es el titán supremo."
         ],
         "scene_art_urls": [
             "assets/curated_panels/plastic_man_eel_obrian_resistencia_inmortal/scene_01.jpg",
@@ -467,10 +467,10 @@ EDITORIAL_STORIES = [
         "description": "Un niño huérfano es elegido por el antiguo hechicero para heredar el relámpago místico y convertirse en el Campeón de la Tierra al gritar ¡SHAZAM!",
         "hashtags": "#Shazam #BillyBatson #DCComics #RocaDeLaEternidad #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [
-            "Vagando por las frías calles de Filadelfia, el niño huérfano Billy Batson abordó un tren subterráneo guiado por una fuerza mística.",
-            "El vagón lo condujo a las profundidades de la Roca de la Eternidad, donde un anciano hechicero custodiaba los pecados del cosmos.",
-            "Al reconocer la pureza intacta en su corazón, el mago le transfirió el poder de los dioses con una sola palabra ancestral.",
-            "Pronunciando ¡SHAZAM! bajo un relámpago colosal, el niño se transformó en el campeón divino más poderoso del universo."
+                    "Vagando por Filadelfia, el huérfano Billy Batson abordó un tren subterráneo guiado por una fuerza mística.",
+                    "El vagón lo condujo a la Roca de la Eternidad, donde un anciano hechicero custodiaba el cosmos.",
+                    "Al reconocer la pureza en su corazón, el mago le transfirió el poder de los dioses ancestrales.",
+                    "Pronunciando ¡SHAZAM! bajo un relámpago divino, el niño renació como el campeón definitivo de la magia."
         ],
         "scene_art_urls": [
             "assets/curated_panels/shazam_billy_batson_relampago_dioses/scene_01.jpg",

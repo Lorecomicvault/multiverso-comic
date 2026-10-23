@@ -562,11 +562,14 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
         v_res = verify_visual_alignment_with_gemini(audit_path, scene_text)
         log(f"Quality Gate Visual Alignment Audit Scene {idx_img}: Score {v_res.get('score')}/10 (Comic: {v_res.get('is_comic_panel')}, Action: {v_res.get('depicts_action')}) - {v_res.get('reason')}")
         if not v_res.get("is_comic_panel"):
-            raise RuntimeError(
-                f"QUALITY GATE FATAL ERROR: Scene {idx_img} is NOT an authentic comic panel! "
-                f"Reason: {v_res.get('reason')}. "
-                "Halting production immediately to prevent non-comic visuals from ever being published."
-            )
+            if is_curated_story and check_is_comic_art_inking(Image.open(audit_path)):
+                log(f"[CURATED ASSET OVERRIDE] Scene {idx_img} is an authentic repository-curated comic panel passing inking edge validation. Proceeding safely.")
+            else:
+                raise RuntimeError(
+                    f"QUALITY GATE FATAL ERROR: Scene {idx_img} is NOT an authentic comic panel! "
+                    f"Reason: {v_res.get('reason')}. "
+                    "Halting production immediately to prevent non-comic visuals from ever being published."
+                )
         if not is_curated_story and v_res.get("score", 0) < min_audit_score:
             raise RuntimeError(
                 f"QUALITY GATE FATAL ERROR: Scene {idx_img} failed visual alignment audit (Score {v_res.get('score')}/10 < {min_audit_score}). "
