@@ -1948,5 +1948,15 @@
     "mode": "live_release",
     "video_file": "Las_Diez_Vidas_de_Moira_MacTaggert_El_Secreto_que_Cambió_el_Destino_Mutante.mp4",
     "status": "published"
+  },
+  {
+    "id": "doctor_strange_ultimos_dias_magia_empirikul",
+    "title": "¡Los Últimos Días de la Magia! La Inquisición Científica del Empirikul 🔮⚔️",
+    "character": "Doctor Strange Mago",
+    "theme_signature": "doctor_strange:empirikul:imperator_inquisicion_muerte_magia_tierra",
+    "date": "2026-10-23 22:07",
+    "mode": "live_release",
+    "video_file": "Los_Últimos_Días_de_la_Magia_La_Inquisición_Científica_del_Empirikul.mp4",
+    "status": "published"
   }
 ]
