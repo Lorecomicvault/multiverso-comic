@@ -1928,5 +1928,15 @@
     "mode": "live_release",
     "video_file": "El_Monstruo_Inmortal_La_Noche_en_que_el_Demonio_Hulk_Regresó_de_la_Muerte.mp4",
     "status": "published"
+  },
+  {
+    "id": "moon_knight_manicomio_khonshu_lemire",
+    "title": "¡La Pesadilla de Moon Knight! El Manicomio de Dioses de Marc Spector 🌙🏥",
+    "character": "Moon Knight Marc",
+    "theme_signature": "moon_knight:jeff_lemire:manicomio_khonshu_ammit_personalidades",
+    "date": "2026-10-23 14:12",
+    "mode": "live_release",
+    "video_file": "La_Pesadilla_de_Moon_Knight_El_Manicomio_de_Dioses_de_Marc_Spector.mp4",
+    "status": "published"
   }
 ]
