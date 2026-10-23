@@ -81,9 +81,15 @@ def is_duplicate(story: dict, ledger: list[dict]) -> tuple[bool, str]:
     story_title_norm = normalize_text(story.get("title", ""))
     story_char = normalize_text(story.get("character", ""))
 
+    # Layer 0: Strict Policy Exclusion (Zero Marvel Zombies Content)
+    story_text = f"{story_id} {story_theme} {story_title_norm}".lower()
+    if any(k in story_text for k in ["marvel_zombies", "plaga_canibal", "zombies_consumen", "giant_man_laboratorio"]):
+        return True, "Layer 0 (Strict Policy Filter): Marvel Zombies content is permanently excluded by user policy."
+
     stopwords = {
         "de", "la", "el", "los", "las", "un", "una", "unos", "unas", "y", "en", "por",
-        "con", "que", "del", "al", "para", "the", "of", "and", "in", "to", "su", "sus"
+        "con", "que", "del", "al", "para", "the", "of", "and", "in", "to", "su", "sus",
+        "marvel", "dc", "comics", "comic", "zombies", "zombi", "multiverso", "universo", "historia"
     }
 
     story_title_tokens = set(w for w in story_title_norm.split() if len(w) > 3 and w not in stopwords)
@@ -124,14 +130,14 @@ def is_duplicate(story: dict, ledger: list[dict]) -> tuple[bool, str]:
 
             overlap = all_story_tokens.intersection(all_item_tokens)
 
-            # If both feature the same character, require only 2 specific topical arc words to block
+            # If both feature the same character, require 3 specific topical arc words to block
             if story_char and item_char and (story_char in item_char or item_char in story_char):
                 char_tokens = set(story_char.split())
                 specific_overlap = overlap - char_tokens
-                if len(specific_overlap) >= 2:
+                if len(specific_overlap) >= 3:
                     return True, f"Layer 5 (Character Arc Collision): Character '{story_char}' has redundant arc topics {specific_overlap} with '{item.get('title')}'"
-            # Or if across any character, 3 or more thematic keywords overlap
-            elif len(overlap) >= 3:
+            # Or if across different characters, 4 or more thematic keywords overlap
+            elif len(overlap) >= 4:
                 return True, f"Layer 5 (High Semantic Collision): Redundant thematic tokens {overlap} with '{item.get('title')}'"
 
     return False, ""
@@ -551,8 +557,9 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
     # 4. Mandatory Gemini Vision Visual Alignment Audit across all generated scene panels
     is_curated_story = any("assets/curated_panels" in str(u) for u in story.get("scene_art_urls", []))
     min_audit_score = 4 if is_curated_story else 6
-    for idx_img, (p, scene_text) in enumerate(zip(downloaded_images, story["scenes"]), 1):
-        v_res = verify_visual_alignment_with_gemini(str(p), scene_text)
+    for idx_img, (p, raw_p, scene_text) in enumerate(zip(downloaded_images, raw_downloaded_images, story["scenes"]), 1):
+        audit_path = str(raw_p) if os.path.exists(str(raw_p)) else str(p)
+        v_res = verify_visual_alignment_with_gemini(audit_path, scene_text)
         log(f"Quality Gate Visual Alignment Audit Scene {idx_img}: Score {v_res.get('score')}/10 (Comic: {v_res.get('is_comic_panel')}, Action: {v_res.get('depicts_action')}) - {v_res.get('reason')}")
         if not v_res.get("is_comic_panel"):
             raise RuntimeError(
@@ -642,14 +649,20 @@ def main():
 
             if curated_avail:
                 priority_order = [
-                    # Top Guaranteed Curated Comic Masterpieces (20-30s, 100% Comic Art, 0 Duplicates)
-                    "cassandra_nova_genocidio_genosha_centinelas",
-                    "plaga_canibal_sentry_caida_vengadores",
-                    "zombies_consumen_galactus_poder_infinito",
-                    "giant_man_laboratorio_secreto_prisionero_panther",
-                    "ash_williams_ejercito_tinieblas_invasion_muertos",
-                    "invincible_conquest_asalto_brutal_sangre",
+                    # Top 10 Guaranteed Curated Comic Masterpieces (20-30s, 100% Comic Scans, 0 Zombies, 0 Duplicates)
+                    "invincible_battle_beast_duelo_viltrumita",
+                    "hawkeye_mi_vida_como_arma_fraction",
+                    "immortal_hulk_demonio_noche_al_ewing",
+                    "moon_knight_manicomio_khonshu_lemire",
+                    "moira_mactaggert_diez_vidas_house_of_x",
+                    "doctor_strange_ultimos_dias_magia_empirikul",
+                    "ghost_rider_johnny_blaze_rey_infierno",
+                    "thanos_supremo_eterno_kieron_gillen",
+                    "daredevil_sentido_radar_mark_waid",
+                    "ms_marvel_kamala_khan_niebla_terrigena",
                     # Historical catalog fallbacks
+                    "ash_williams_ejercito_tinieblas_invasion_muertos",
+                    "cassandra_nova_genocidio_genosha_centinelas",
                     "thanos_guantelete_del_infinito_desafio_cosmico",
                     "blade_origen_mordedura_deacon_frost",
                     "hellboy_mano_derecha_del_destino_anung",

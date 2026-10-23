@@ -11,6 +11,7 @@ MÓDULO DE PRECISIÓN VISUAL MULTI-FUENTE PARA CÓMICS CON ÁRBITRO DE IA
 
 import base64
 import json
+import html
 import os
 import re
 import urllib.parse
@@ -346,7 +347,8 @@ def search_bing_comic_panels(query: str, limit: int = 8) -> list:
         try:
             r = requests.get(url, headers=headers, timeout=8)
             if r.status_code == 200:
-                urls = re.findall(r'murl&quot;:&quot;(http[^&]+)&quot;', r.text)
+                raw_html = html.unescape(r.text)
+                urls = re.findall(r'"murl":"(https?://[^"]+)"', raw_html) + re.findall(r'murl&quot;:&quot;(http[^&]+)&quot;', r.text)
                 for u in urls:
                     u_low = u.lower()
                     if any(bad in u_low for bad in disallowed):

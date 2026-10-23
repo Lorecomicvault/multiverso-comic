@@ -1888,5 +1888,15 @@
     "mode": "live_release",
     "video_file": "El_Macabro_Secreto_de_Giant-Man_El_Laboratorio_Prohibido_de_Hank_Pym.mp4",
     "status": "published"
+  },
+  {
+    "id": "invincible_conquest_asalto_brutal_sangre",
+    "title": "¡La Masacre de Conquest! La Pelea más Despiadada en el Cielo de la Tierra 💥🩸",
+    "character": "Invincible (Mark Grayson)",
+    "theme_signature": "invincible:conquest:pelea_viltrumita_craneo_sangre_atomo_eve",
+    "date": "2026-10-22 19:03",
+    "mode": "live_release",
+    "video_file": "La_Masacre_de_Conquest_La_Pelea_más_Despiadada_en_el_Cielo_de_la_Tierra.mp4",
+    "status": "published"
   }
 ]

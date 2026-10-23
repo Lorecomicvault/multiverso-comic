@@ -9,6 +9,256 @@ Every story features:
 
 EDITORIAL_STORIES = [
     {
+        "id": "invincible_battle_beast_duelo_viltrumita",
+        "universe": "Image Comics",
+        "character": "Battle Beast",
+        "title": "¡Battle Beast: La Bestia Cósmica! El Sangriento Duelo por el Honor Viltrumita ⚔️🦁",
+        "theme_signature": "battle_beast:invincible:honor_duelo_viltrumita_espacio_sangre",
+        "description": "Viajando por los confines de la galaxia, Battle Beast busca con furia insaciable un rival digno capaz de darle una muerte gloriosa.",
+        "hashtags": "#BattleBeast #Invincible #ImageComics #Viltrumitas #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Maldito por una sed insaciable de combate, Battle Beast abandonó su planeta natal surcando el cosmos en busca de su destino.",
+            "Ningún monstruo o guerrero alienígena lograba hacerle frente: cada batalla terminaba en masacres aplastantes a su paso.",
+            "Al cruzarse en la órbita terrestre con el imperio viltrumita, sus ojos brillaron al encontrar por fin guerreros invencibles.",
+            "Empuñando su maza ensangrentada, la bestia se lanzó al vacío jurando que solo la muerte más gloriosa detendría su furia."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/invincible_battle_beast_duelo_viltrumita/scene_01.jpg",
+            "assets/curated_panels/invincible_battle_beast_duelo_viltrumita/scene_02.jpg",
+            "assets/curated_panels/invincible_battle_beast_duelo_viltrumita/scene_03.jpg",
+            "assets/curated_panels/invincible_battle_beast_duelo_viltrumita/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo feroz, colosal, enérgico y épico en español latinoamericano"
+    },
+    {
+        "id": "hawkeye_mi_vida_como_arma_fraction",
+        "universe": "Marvel",
+        "character": "Hawkeye Clint",
+        "title": "¡Hawkeye Sin Vengadores! La Desastrosa Vida Callejera de Clint Barton 🎯🍕",
+        "theme_signature": "hawkeye:clint_barton:perro_pizza_mafia_chandal_brooklyn",
+        "description": "Sin armaduras ni poderes divinos, Clint Barton rescata a un perro herido y defiende su departamento en Brooklyn contra la mafia en chándal.",
+        "hashtags": "#Hawkeye #ClintBarton #PizzaDog #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Lejos de los dioses y titanes con los que combate en los Vengadores, Clint Barton vivía en un modesto edificio de Brooklyn.",
+            "Al ver cómo la despiadada mafia rusa maltrataba a un perro callejero, Clint arriesgó su propia vida para rescatarlo.",
+            "Bautizado como Lucky el Perro de la Pizza, el can herido se convirtió en el único aliado leal del arquero.",
+            "Viviendo a base de café y vendajes, Clint empuñó su arco tradicional para defender a sus vecinos hasta el final."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/hawkeye_mi_vida_como_arma_fraction/scene_01.jpg",
+            "assets/curated_panels/hawkeye_mi_vida_como_arma_fraction/scene_02.jpg",
+            "assets/curated_panels/hawkeye_mi_vida_como_arma_fraction/scene_03.jpg",
+            "assets/curated_panels/hawkeye_mi_vida_como_arma_fraction/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo callejero, sarcástico, rápido y emocionante en español latinoamericano"
+    },
+    {
+        "id": "immortal_hulk_demonio_noche_al_ewing",
+        "universe": "Marvel",
+        "character": "Immortal Hulk",
+        "title": "¡El Monstruo Inmortal! La Noche en que el Demonio Hulk Regresó de la Muerte 🟢🧟",
+        "theme_signature": "immortal_hulk:al_ewing:puerta_verde_resurreccion_demonio_noche",
+        "description": "Bruce Banner puede morir a la luz del día, pero cuando el sol se oculta, la Puerta Verde se abre y el Demonio inmortal camina sobre la Tierra.",
+        "hashtags": "#ImmortalHulk #BruceBanner #MarvelComics #PuertaVerde #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Asesinado a sangre fría de un disparo en la cabeza durante un asalto, el cadáver inerte de Bruce Banner yacía en la morgue.",
+            "Pero en el abismo radiactivo de la Puerta Verde rige una ley cósmica: el sol pertenece a Bruce, pero la noche es del monstruo.",
+            "Al caer la medianoche, las heridas mortales cicatrizaron y una masa colosal de músculo esmeralda emergió de las sombras.",
+            "Con ojos diabólicos y una mente sádica indestructible, el Inmortal Hulk prometió cazar a los culpables sin descanso."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/immortal_hulk_demonio_noche_al_ewing/scene_01.jpg",
+            "assets/curated_panels/immortal_hulk_demonio_noche_al_ewing/scene_02.jpg",
+            "assets/curated_panels/immortal_hulk_demonio_noche_al_ewing/scene_03.jpg",
+            "assets/curated_panels/immortal_hulk_demonio_noche_al_ewing/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo siniestro, sobrecogedor, tenso e implacable en español latinoamericano"
+    },
+    {
+        "id": "moon_knight_manicomio_khonshu_lemire",
+        "universe": "Marvel",
+        "character": "Moon Knight Marc",
+        "title": "¡La Pesadilla de Moon Knight! El Manicomio de Dioses de Marc Spector 🌙🏥",
+        "theme_signature": "moon_knight:jeff_lemire:manicomio_khonshu_ammit_personalidades",
+        "description": "Encerrado en un hospital psiquiátrico donde los médicos son dioses egipcios, Marc Spector duda de su propia existencia bajo la luna de Khonshu.",
+        "hashtags": "#MoonKnight #MarcSpector #Khonshu #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Marc Spector despertó atado con una camisa de fuerza en las celdas asépticas del hospital psiquiátrico New Bain.",
+            "Los médicos le aseguraron que su vida como justiciero encapuchado era solo un delirio fruto de su esquizofrenia.",
+            "Sin embargo, bajo la luz de la luna llena, los rostros del personal médico se transformaron en chacales de Anubis y sirvientes de Ammit.",
+            "Desgarrando sus ataduras con furia mística, Marc abrazó sus personalidades fracturadas para recuperar el manto sagrado de Khonshu."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/moon_knight_manicomio_khonshu_lemire/scene_01.jpg",
+            "assets/curated_panels/moon_knight_manicomio_khonshu_lemire/scene_02.jpg",
+            "assets/curated_panels/moon_knight_manicomio_khonshu_lemire/scene_03.jpg",
+            "assets/curated_panels/moon_knight_manicomio_khonshu_lemire/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo psicológico, misterioso, tenso y explosivo en español latinoamericano"
+    },
+    {
+        "id": "moira_mactaggert_diez_vidas_house_of_x",
+        "universe": "Marvel",
+        "character": "Moira MacTaggert",
+        "title": "¡Las Diez Vidas de Moira MacTaggert! El Secreto que Cambió el Destino Mutante 🧬⏳",
+        "theme_signature": "moira_mactaggert:house_of_x:reencarnacion_vidas_mutantes_krakoa",
+        "description": "Con la habilidad de reencarnar recordando cada vida, Moira vivió un milenio de futuros apocalípticos antes de fundar la nación de Krakoa.",
+        "hashtags": "#XMen #HouseOfX #MoiraMacTaggert #MarvelComics #Krakoa #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Considerada durante décadas una simple científica humana, Moira MacTaggert ocultaba el gen mutante más asombroso de la historia.",
+            "Cada vez que moría, su conciencia retrocedía en el tiempo hasta el vientre materno con todos los recuerdos intactos.",
+            "Vio morir a la raza mutante bajo centinelas, virus letales y guerras cósmicas a lo largo de nueve vidas trágicas.",
+            "En su décima vida, Moira reunió a Xavier y Magneto para romper el ciclo eterno y levantar la nación viviente de Krakoa."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/moira_mactaggert_diez_vidas_house_of_x/scene_01.jpg",
+            "assets/curated_panels/moira_mactaggert_diez_vidas_house_of_x/scene_02.jpg",
+            "assets/curated_panels/moira_mactaggert_diez_vidas_house_of_x/scene_03.jpg",
+            "assets/curated_panels/moira_mactaggert_diez_vidas_house_of_x/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo revelador, épico, solemne e impactante en español latinoamericano"
+    },
+    {
+        "id": "doctor_strange_ultimos_dias_magia_empirikul",
+        "universe": "Marvel",
+        "character": "Doctor Strange Mago",
+        "title": "¡Los Últimos Días de la Magia! La Inquisición Científica del Empirikul 🔮⚔️",
+        "theme_signature": "doctor_strange:empirikul:imperator_inquisicion_muerte_magia_tierra",
+        "description": "Un ejército interdimensional inmune a los hechizos extermina a los hechiceros del cosmos, obligando a Strange a luchar con hachas y sangre.",
+        "hashtags": "#DoctorStrange #Empirikul #MarvelComics #HechiceroSupremo #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "A través del multiverso, una inquisición biomecánica llamada Empirikul comenzó a purgar y quemar cada dimensión mágica.",
+            "Al descender sobre la Tierra, sus armas científicas absorbieron la energía de los Ojos de Agamotto y anularon todos los conjuros.",
+            "Despojado de sus encantamientos y con el santuario en cenizas, el Doctor Strange empuñó un hacha de batalla ancestral.",
+            "Sangrando sobre el frío asfalto de Manhattan, el Hechicero Supremo demostró que el verdadero valor reside en el corazón y no en los hechizos."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/doctor_strange_ultimos_dias_magia_empirikul/scene_01.jpg",
+            "assets/curated_panels/doctor_strange_ultimos_dias_magia_empirikul/scene_02.jpg",
+            "assets/curated_panels/doctor_strange_ultimos_dias_magia_empirikul/scene_03.jpg",
+            "assets/curated_panels/doctor_strange_ultimos_dias_magia_empirikul/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo épico, visceral, desesperado y heroico en español latinoamericano"
+    },
+    {
+        "id": "ghost_rider_johnny_blaze_rey_infierno",
+        "universe": "Marvel",
+        "character": "Ghost Rider Rey",
+        "title": "¡Johnny Blaze Rey del Infierno! El Motorista se Corona en el Trono Maldito 💀🔥",
+        "theme_signature": "ghost_rider:johnny_blaze:trono_infierno_corona_fuego_mephisto",
+        "description": "Tras derrocar a Mephisto, Johnny Blaze asume el trono del inframundo y doma a millones de demonios con su cadena de fuego infernal.",
+        "hashtags": "#GhostRider #JohnnyBlaze #MarvelComics #ReyDelInfierno #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Tras una guerra devastadora en el abismo, Mephisto fue despojado de su reino infernal y encadenado ante las llamas.",
+            "Para evitar que hordas de demonios invadieran la Tierra, Johnny Blaze tomó la decisión más oscura de su existencia.",
+            "Sentándose sobre el Trono del Infierno, una corona de fuego negro se encendió sobre su cráneo en llamas.",
+            "Gobernando a los condenados con puño de hierro, el Motorista Fantasma se convirtió en el soberano supremo del fuego eterno."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/ghost_rider_johnny_blaze_rey_infierno/scene_01.jpg",
+            "assets/curated_panels/ghost_rider_johnny_blaze_rey_infierno/scene_02.jpg",
+            "assets/curated_panels/ghost_rider_johnny_blaze_rey_infierno/scene_03.jpg",
+            "assets/curated_panels/ghost_rider_johnny_blaze_rey_infierno/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo sombrío, poderoso, ardiente e implacable en español latinoamericano"
+    },
+    {
+        "id": "thanos_supremo_eterno_kieron_gillen",
+        "universe": "Marvel",
+        "character": "Thanos Eterno",
+        "title": "¡Thanos Supremo de la Tierra! El Titán Conquista a los Eternos 👑🪐",
+        "theme_signature": "thanos:eternos:supremo_tierra_kieron_gillen_maquina_muerte",
+        "description": "Aprovechando una falla en los protocolos de resurrección, Thanos asesina a los patriarcas eternos y se corona como el soberano absoluto.",
+        "hashtags": "#Thanos #Eternals #MarvelComics #TitanLoco #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Al descubrir que la Gran Máquina de la Tierra sufría una avería cósmica, Thanos vio la oportunidad de oro que esperaba.",
+            "Infiltrándose en las sagradas cámaras de resurrección, el titán masacró a sangre fría a los antiguos patriarcas eternos.",
+            "Sometiendo la voluntad de la red celestial, Thanos hackeó el sistema para autonombrarse Eterno Supremo de la Tierra.",
+            "Sentado en el trono de Olimpia con una sonrisa despiadada, el titán loco juró remodelar el destino del planeta a su imagen."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/thanos_supremo_eterno_kieron_gillen/scene_01.jpg",
+            "assets/curated_panels/thanos_supremo_eterno_kieron_gillen/scene_02.jpg",
+            "assets/curated_panels/thanos_supremo_eterno_kieron_gillen/scene_03.jpg",
+            "assets/curated_panels/thanos_supremo_eterno_kieron_gillen/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo calculador, implacable, majestuoso y sombrío en español latinoamericano"
+    },
+    {
+        "id": "daredevil_sentido_radar_mark_waid",
+        "universe": "Marvel",
+        "character": "Matt Murdock",
+        "title": "¡La Sonrisa de Matt Murdock! El Juicio Público y la Nueva Vida del Abogado Ciego ⚖️🏙️",
+        "theme_signature": "matt_murdock:waid_rivera:confesion_juicio_abogado_nueva_vida_manhattan",
+        "description": "Cansado de la tragedia, Matt Murdock afronta su juicio público ante Nueva York y redescubre la libertad de proteger su ciudad con una sonrisa.",
+        "hashtags": "#MattMurdock #Daredevil #MarkWaid #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Cansado de la oscuridad y la tragedia, Matt Murdock decidió afrontar su destino con una sonrisa inquebrantable.",
+            "En los tribunales de Manhattan, reveló públicamente su doble vida de vigilante ante el juez y el jurado atónito.",
+            "Balanceándose bajo la luz del sol entre los rascacielos, redescubrió el placer y la libertad de proteger a su ciudad.",
+            "Acompañado por su mejor amigo Foggy Nelson, demostró que la verdadera justicia siempre vence a la desesperanza."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/daredevil_sentido_radar_mark_waid/scene_01.jpg",
+            "assets/curated_panels/daredevil_sentido_radar_mark_waid/scene_02.jpg",
+            "assets/curated_panels/daredevil_sentido_radar_mark_waid/scene_03.jpg",
+            "assets/curated_panels/daredevil_sentido_radar_mark_waid/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo audaz, enérgico, optimista y épico en español latinoamericano"
+    },
+    {
+        "id": "ms_marvel_kamala_khan_niebla_terrigena",
+        "universe": "Marvel",
+        "character": "Ms Marvel Kamala",
+        "title": "¡El Nacimiento de Ms. Marvel! La Niebla Terrígena Despierta a Kamala Khan ⚡🧣",
+        "theme_signature": "ms_marvel:kamala_khan:niebla_terrigena_inhumano_jersey_city",
+        "description": "Una extraña niebla cubre Jersey City y envuelve a una joven fanática de los superhéroes en un capullo místico que transformará su vida para siempre.",
+        "hashtags": "#MsMarvel #KamalaKhan #Inhumanos #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Kamala Khan era solo una chica soñadora de Jersey City que escribía historias sobre sus héroes favoritos como Capitana Marvel.",
+            "Al escapar de noche hacia la costa, una misteriosa niebla terrígena invadió las calles envolviéndola en un capullo bioluminiscente.",
+            "En medio de visiones místicas donde sus ídolos le hablaban, sus genes inhumanos ancestrales despertaron de golpe.",
+            "Al romper el capullo con sus extremidades elásticas gigantes, Kamala comprendió que ahora el destino de su ciudad dependía de ella."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/ms_marvel_kamala_khan_niebla_terrigena/scene_01.jpg",
+            "assets/curated_panels/ms_marvel_kamala_khan_niebla_terrigena/scene_02.jpg",
+            "assets/curated_panels/ms_marvel_kamala_khan_niebla_terrigena/scene_03.jpg",
+            "assets/curated_panels/ms_marvel_kamala_khan_niebla_terrigena/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo juvenil, dinámico, asombroso y enérgico en español latinoamericano"
+    },
+    {
         "id": "thanos_guantelete_del_infinito_desafio_cosmico",
         "universe": "Marvel",
         "character": "Thanos (Titán Loco)",
