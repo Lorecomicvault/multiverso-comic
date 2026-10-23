@@ -259,6 +259,256 @@ EDITORIAL_STORIES = [
         "style_direction": "Narrador de cómic con ritmo juvenil, dinámico, asombroso y enérgico en español latinoamericano"
     },
     {
+        "id": "spiderman_2099_miguel_ohara_alchemax",
+        "universe": "Marvel",
+        "character": "Spider-Man 2099",
+        "title": "¡Spider-Man del Año 2099! El Sabotaje Genético que Creó a Miguel O'Hara 🕷️⚡",
+        "theme_signature": "spiderman_2099:miguel_ohara:alchemax_adn_arana_nueva_york_futuro",
+        "description": "En una distopía futurista gobernada por megacorporaciones, un sabotaje genético fusiona a Miguel O'Hara con una araña para desafiar a Alchemax.",
+        "hashtags": "#SpiderMan2099 #MiguelOHara #MarvelComics #NuevaYork2099 #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "En el sombrío Nueva York del año 2099, el brillante genetista Miguel O'Hara desafió a la corrupta corporación Alchemax.",
+            "Traicionado y drogado por su propio jefe, Miguel intentó purgar su organismo en una cámara de recombinación genética.",
+            "Un colega saboteó el experimento, fusionando su código genético al cincuenta por ciento con el de una araña.",
+            "Emergiendo con garras afiladas y colmillos venenosos, Miguel juró castigar a los tiranos desde las alturas de Nueva York."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/spiderman_2099_miguel_ohara_alchemax/scene_01.jpg",
+            "assets/curated_panels/spiderman_2099_miguel_ohara_alchemax/scene_02.jpg",
+            "assets/curated_panels/spiderman_2099_miguel_ohara_alchemax/scene_03.jpg",
+            "assets/curated_panels/spiderman_2099_miguel_ohara_alchemax/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo futurista, rápido, tenso y heroico en español latinoamericano"
+    },
+    {
+        "id": "rogue_absorbe_poderes_capitana_marvel",
+        "universe": "Marvel",
+        "character": "Rogue Anna Marie",
+        "title": "¡El Trágico Beso de Rogue! La Absorción que Destruyó a Capitana Marvel 🧤💥",
+        "theme_signature": "rogue:anna_marie:absorcion_permanente_carol_danvers_san_francisco",
+        "description": "En una emboscada en San Francisco, el toque mutante de Rogue drena para siempre los recuerdos, el vuelo y la fuerza cósmica de Carol Danvers.",
+        "hashtags": "#Rogue #CapitanaMarvel #CarolDanvers #XMen #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Bajo las órdenes de Mystique, la joven mutante Rogue acechaba en los muelles de San Francisco en busca de su destino.",
+            "En una emboscada letal sobre el puente, sujetó a Carol Danvers con sus manos desnudas para drenar su energía cósmica.",
+            "Pero el contacto se prolongó demasiado: los recuerdos, la fuerza colosal y el alma de Danvers quedaron atrapados en su mente.",
+            "Abrumada por voces ajenas y un poder incontrolable, Rogue huyó entre lágrimas convertida en la mutante más temida del mundo."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/rogue_absorbe_poderes_capitana_marvel/scene_01.jpg",
+            "assets/curated_panels/rogue_absorbe_poderes_capitana_marvel/scene_02.jpg",
+            "assets/curated_panels/rogue_absorbe_poderes_capitana_marvel/scene_03.jpg",
+            "assets/curated_panels/rogue_absorbe_poderes_capitana_marvel/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo dramático, intenso, trágico y poderoso en español latinoamericano"
+    },
+    {
+        "id": "colossus_sacrificio_cura_virus_legado",
+        "universe": "Marvel",
+        "character": "Colossus Piotr",
+        "title": "¡El Sacrificio de Colossus! La Muerte Heroica para Curar el Virus Legado 🛡️🧪",
+        "theme_signature": "colossus:piotr_rasputin:sacrificio_cura_virus_legado_acero_organico",
+        "description": "Para salvar a la raza mutante de la extinción biológica, Piotr Rasputin se inyecta la cura del Virus Legado y entrega su vida con nobleza.",
+        "hashtags": "#Colossus #XMen #VirusLegado #PiotrRasputin #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Durante años, la peste del Virus Legado exterminó a miles de mutantes, cobrándose la vida de la pequeña hermana de Piotr.",
+            "Cuando Beast descubrió la fórmula de la cura definitiva, advirtió que requería activarse en el cuerpo de un portador.",
+            "Sin vacilar un solo instante, Colossus se inyectó el suero y mutó su piel en acero orgánico para dispersar el antídoto.",
+            "Exhalando su último aliento mientras la atmósfera se purificaba, el titán ruso murió sonriendo al salvar a su pueblo."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/colossus_sacrificio_cura_virus_legado/scene_01.jpg",
+            "assets/curated_panels/colossus_sacrificio_cura_virus_legado/scene_02.jpg",
+            "assets/curated_panels/colossus_sacrificio_cura_virus_legado/scene_03.jpg",
+            "assets/curated_panels/colossus_sacrificio_cura_virus_legado/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo solemne, heroico, conmovedor y épico en español latinoamericano"
+    },
+    {
+        "id": "taskmaster_memoria_fotografica_olvido",
+        "universe": "Marvel",
+        "character": "Taskmaster Tony",
+        "title": "¡La Maldición de Taskmaster! La Memoria Fotográfica que Borra sus Recuerdos 💀🎯",
+        "theme_signature": "taskmaster:anthony_masters:reflejos_fotograficos_olvido_familia_tragedia",
+        "description": "Capaz de replicar cualquier estilo de combate humano con solo observarlo, Taskmaster sufre la maldición de olvidar su propia vida familiar con cada habilidad aprendida.",
+        "hashtags": "#Taskmaster #TonyMasters #MarvelComics #CapitanAmerica #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Dotado de un cerebro prodigioso, Anthony Masters es capaz de duplicar cualquier técnica de combate humano con solo verla.",
+            "Empuñando el escudo del Capitán América y el arco de Hawkeye, puede anticipar cada movimiento de sus rivales mortales.",
+            "Pero cada técnica marcial que memoriza su cerebro sobrescribe y borra para siempre sus recuerdos personales más valiosos.",
+            "Venciendo a ejércitos enteros en silencio, Taskmaster se marcha solitario sin siquiera recordar el rostro de su propia esposa."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/taskmaster_memoria_fotografica_olvido/scene_01.jpg",
+            "assets/curated_panels/taskmaster_memoria_fotografica_olvido/scene_02.jpg",
+            "assets/curated_panels/taskmaster_memoria_fotografica_olvido/scene_03.jpg",
+            "assets/curated_panels/taskmaster_memoria_fotografica_olvido/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo rápido, calculador, sombrío y trágico en español latinoamericano"
+    },
+    {
+        "id": "nightcrawler_kurt_wagner_fe_espadachin",
+        "universe": "Marvel",
+        "character": "Nightcrawler Kurt",
+        "title": "¡El Espadachín Celestial! La Fe Inquebrantable de Nightcrawler en el Combate ⚔️✝️",
+        "theme_signature": "nightcrawler:kurt_wagner:teletransportacion_espada_baviera_excalibur",
+        "description": "Juzgado por su aspecto demoníaco, Kurt Wagner utiliza su teletransportación y espadas gemelas para proteger a la humanidad con nobleza cristiana.",
+        "hashtags": "#Nightcrawler #KurtWagner #XMen #Excalibur #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Perseguido desde su infancia en los bosques bávaros por su aspecto demoníaco, Kurt Wagner jamás perdió su devoción y nobleza.",
+            "Bajo el estruendo de nubes sulfurosas, domina la teletransportación instantánea desarmando batallones en una fracción de segundo.",
+            "Empuñando espadas gemelas con agilidad circense, el mutante danza entre las sombras salvando vidas sin derramar sangre inocente.",
+            "Aun cuando el mundo lo juzga como a un monstruo, Nightcrawler sonríe demostrando que la verdadera luz nace del alma."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/nightcrawler_kurt_wagner_fe_espadachin/scene_01.jpg",
+            "assets/curated_panels/nightcrawler_kurt_wagner_fe_espadachin/scene_02.jpg",
+            "assets/curated_panels/nightcrawler_kurt_wagner_fe_espadachin/scene_03.jpg",
+            "assets/curated_panels/nightcrawler_kurt_wagner_fe_espadachin/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo ágil, acrobático, noble y esperanzador en español latinoamericano"
+    },
+    {
+        "id": "gwenpool_rompe_realidad_vinetas_multiverso",
+        "universe": "Marvel",
+        "character": "Gwenpool Poole",
+        "title": "¡Gwenpool Rompe el Cómic! La Chica que Puede Salir de las Viñetas 🎀📖",
+        "theme_signature": "gwenpool:gwendolyn_poole:ruptura_cuarta_pared_espacio_blanco_vinetas",
+        "description": "Atrapada dentro del universo Marvel, Gwenpool aprende a caminar por los márgenes de las viñetas y alterar la continuidad del cómic a su antojo.",
+        "hashtags": "#Gwenpool #CuartaPared #MarvelComics #GwendolynPoole #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Gwendolyn Poole era solo una lectora fanática del mundo real hasta que despertó misteriosamente atrapada dentro de un cómic.",
+            "Comprendiendo que las leyes editoriales gobernaban su existencia, descubrió que los personajes secundarios siempre terminan muriendo.",
+            "Al dominar el Espacio Blanco entre viñetas, aprendió a salir físicamente de las páginas y alterar el pasado de sus enemigos.",
+            "Armada con pistolas y espadas, Gwenpool desafía al mismísimo guionista para escribir su propio destino en el multiverso."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/gwenpool_rompe_realidad_vinetas_multiverso/scene_01.jpg",
+            "assets/curated_panels/gwenpool_rompe_realidad_vinetas_multiverso/scene_02.jpg",
+            "assets/curated_panels/gwenpool_rompe_realidad_vinetas_multiverso/scene_03.jpg",
+            "assets/curated_panels/gwenpool_rompe_realidad_vinetas_multiverso/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo divertido, frenético, asombroso y rebelde en español latinoamericano"
+    },
+    {
+        "id": "jessica_jones_alias_investigacion_killgrave",
+        "universe": "Marvel",
+        "character": "Jessica Jones Alias",
+        "title": "¡Las Sombras de Jessica Jones! La Trágica Resistencia Contra Killgrave 🥃🕵️",
+        "theme_signature": "jessica_jones:alias_investigations:killgrave_control_mental_superviviente",
+        "description": "Una detective privada con superfuerza lucha contra los fantasmas psicológicos de su pasado para proteger a los inocentes de Nueva York.",
+        "hashtags": "#JessicaJones #Killgrave #Alias #MarvelComics #HellsKitchen #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Retirada de su breve carrera como heroína tras un trauma devastador, Jessica Jones abrió una agencia de detectives en Hell's Kitchen.",
+            "Durante meses, el sádico Hombre Púrpura controló su voluntad y mente mediante feromonas psíquicas de sumisión absoluta.",
+            "Sobreviviendo al tormento gracias a su fuerza bruta y un cinismo inquebrantable, logró reconstruir los pedazos de su vida.",
+            "Vigilando los callejones oscuros de Manhattan entre cigarrillos y expedientes, Jessica juró que ningún tirano volverá a someterla."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/jessica_jones_alias_investigacion_killgrave/scene_01.jpg",
+            "assets/curated_panels/jessica_jones_alias_investigacion_killgrave/scene_02.jpg",
+            "assets/curated_panels/jessica_jones_alias_investigacion_killgrave/scene_03.jpg",
+            "assets/curated_panels/jessica_jones_alias_investigacion_killgrave/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo detectivesco, crudo, tenso y resiliente en español latinoamericano"
+    },
+    {
+        "id": "plastic_man_eel_obrian_resistencia_inmortal",
+        "universe": "DC",
+        "character": "Plastic Man Patrick",
+        "title": "¡El Monstruo Inmortal de Goma! La Absurda y Letal Furia de Plastic Man 🔴🕶️",
+        "theme_signature": "plastic_man:patrick_obrian:acido_quimico_maleable_inmortal_liga",
+        "description": "Transformado por un baño de ácido corrosivo, el exdelincuente Patrick O'Brian oculta el poder más inmortal e indestructible de la Liga de la Justicia.",
+        "hashtags": "#PlasticMan #PatrickOBrian #DCComics #LigaDeLaJusticia #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Durante un asalto nocturno a una fábrica química, el ladrón callejero Patrick O'Brian cayó dentro de un caldero de ácido corrosivo.",
+            "El compuesto reorganizó su estructura celular a nivel molecular, volviendo su cuerpo inmune al dolor, al fuego y a las balas.",
+            "Aunque se oculta tras una máscara de payaso y bromas ridículas, Batman considera su biología la más indestructible de la Tierra.",
+            "Capaz de estirarse por kilómetros o resistir milenios en el fondo del océano, Plastic Man es el titán definitivo de la Liga."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/plastic_man_eel_obrian_resistencia_inmortal/scene_01.jpg",
+            "assets/curated_panels/plastic_man_eel_obrian_resistencia_inmortal/scene_02.jpg",
+            "assets/curated_panels/plastic_man_eel_obrian_resistencia_inmortal/scene_03.jpg",
+            "assets/curated_panels/plastic_man_eel_obrian_resistencia_inmortal/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo enérgico, elocuente, imponente y divertido en español latinoamericano"
+    },
+    {
+        "id": "shazam_billy_batson_relampago_dioses",
+        "universe": "DC",
+        "character": "Shazam Billy",
+        "title": "¡El Trueno de la Roca de la Eternidad! El Nacimiento Místico de Shazam ⚡🏛️",
+        "theme_signature": "shazam:billy_batson:roca_eternidad_relampago_seis_dioses_magia",
+        "description": "Un niño huérfano es elegido por el antiguo hechicero para heredar el relámpago místico y convertirse en el Campeón de la Tierra al gritar ¡SHAZAM!",
+        "hashtags": "#Shazam #BillyBatson #DCComics #RocaDeLaEternidad #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Vagando por las frías calles de Filadelfia, el niño huérfano Billy Batson abordó un tren subterráneo guiado por una fuerza mística.",
+            "El vagón lo condujo a las profundidades de la Roca de la Eternidad, donde un anciano hechicero custodiaba los pecados del cosmos.",
+            "Al reconocer la pureza intacta en su corazón, el mago le transfirió el poder de los dioses con una sola palabra ancestral.",
+            "Pronunciando ¡SHAZAM! bajo un relámpago colosal, el niño se transformó en el campeón divino más poderoso del universo."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/shazam_billy_batson_relampago_dioses/scene_01.jpg",
+            "assets/curated_panels/shazam_billy_batson_relampago_dioses/scene_02.jpg",
+            "assets/curated_panels/shazam_billy_batson_relampago_dioses/scene_03.jpg",
+            "assets/curated_panels/shazam_billy_batson_relampago_dioses/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo colosal, mágico, radiante y épico en español latinoamericano"
+    },
+    {
+        "id": "zatanna_magia_inversa_conjuro_sombras",
+        "universe": "DC",
+        "character": "Zatanna Zatara Mago",
+        "title": "¡Las Palabras del Revés! La Magia Prohibida de Zatanna Contra el Caos 🎩✨",
+        "theme_signature": "zatanna:zatanna_zatara:homo_magi_hechizos_reves_sombras_abismo",
+        "description": "Pronunciando antiguos conjuros en orden inverso, Zatanna Zatara dobla las leyes del tiempo y la materia para derrotar a los demonios del abismo.",
+        "hashtags": "#Zatanna #Zatara #DCComics #JusticeLeagueDark #Magia #ComicsNarrados #Shorts #Reels #TikTok",
+        "scenes": [
+            "Heredera del legendario linaje de los Homo Magi, Zatanna creció aprendiendo los secretos ocultos de su padre en el escenario.",
+            "Cuando demonios interdimensionales invaden nuestro mundo, desata su misticismo pronunciando encantamientos en orden inverso.",
+            "Con cada frase pronunciada al revés, las leyes de la física colapsan y las tinieblas del inframundo quedan encadenadas.",
+            "Ajustando su sombrero de copa y empuñando su varita de plata, la maga suprema defiende la frontera de la realidad con elegancia."
+        ],
+        "scene_art_urls": [
+            "assets/curated_panels/zatanna_magia_inversa_conjuro_sombras/scene_01.jpg",
+            "assets/curated_panels/zatanna_magia_inversa_conjuro_sombras/scene_02.jpg",
+            "assets/curated_panels/zatanna_magia_inversa_conjuro_sombras/scene_03.jpg",
+            "assets/curated_panels/zatanna_magia_inversa_conjuro_sombras/scene_04.jpg"
+        ],
+        "voice": "Puck",
+        "tts_model": "gemini-3.8-flash-tts",
+        "fallback_tts_model": "gemini-3.8-flash-lite-tts",
+        "style_direction": "Narrador de cómic con ritmo misterioso, elegante, veloz y asombroso en español latinoamericano"
+    },
+    {
         "id": "thanos_guantelete_del_infinito_desafio_cosmico",
         "universe": "Marvel",
         "character": "Thanos (Titán Loco)",
