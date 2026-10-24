@@ -1988,5 +1988,15 @@
     "mode": "live_release",
     "video_file": "La_Sonrisa_de_Matt_Murdock_El_Juicio_Público_y_la_Nueva_Vida_del_Abogado_Ciego.mp4",
     "status": "published"
+  },
+  {
+    "id": "ms_marvel_kamala_khan_niebla_terrigena",
+    "title": "¡El Nacimiento de Ms. Marvel! La Niebla Terrígena Despierta a Kamala Khan ⚡🧣",
+    "character": "Ms Marvel Kamala",
+    "theme_signature": "ms_marvel:kamala_khan:niebla_terrigena_inhumano_jersey_city",
+    "date": "2026-10-24 14:06",
+    "mode": "live_release",
+    "video_file": "El_Nacimiento_de_Ms_Marvel_La_Niebla_Terrígena_Despierta_a_Kamala_Khan.mp4",
+    "status": "published"
   }
 ]
