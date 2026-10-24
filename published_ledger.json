@@ -1998,5 +1998,15 @@
     "mode": "live_release",
     "video_file": "El_Nacimiento_de_Ms_Marvel_La_Niebla_Terrígena_Despierta_a_Kamala_Khan.mp4",
     "status": "published"
+  },
+  {
+    "id": "spiderman_2099_miguel_ohara_alchemax",
+    "title": "¡Spider-Man del Año 2099! El Sabotaje Genético que Creó a Miguel O'Hara 🕷️⚡",
+    "character": "Spider-Man 2099",
+    "theme_signature": "spiderman_2099:miguel_ohara:alchemax_adn_arana_nueva_york_futuro",
+    "date": "2026-10-24 18:06",
+    "mode": "live_release",
+    "video_file": "Spider-Man_del_Año_2099_El_Sabotaje_Genético_que_Creó_a_Miguel_OHara.mp4",
+    "status": "published"
   }
 ]
