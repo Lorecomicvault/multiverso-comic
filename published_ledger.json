@@ -1958,5 +1958,15 @@
     "mode": "live_release",
     "video_file": "Los_Últimos_Días_de_la_Magia_La_Inquisición_Científica_del_Empirikul.mp4",
     "status": "published"
+  },
+  {
+    "id": "ghost_rider_johnny_blaze_rey_infierno",
+    "title": "¡Johnny Blaze Rey del Infierno! El Motorista se Corona en el Trono Maldito 💀🔥",
+    "character": "Ghost Rider Rey",
+    "theme_signature": "ghost_rider:johnny_blaze:trono_infierno_corona_fuego_mephisto",
+    "date": "2026-10-24 01:06",
+    "mode": "live_release",
+    "video_file": "Johnny_Blaze_Rey_del_Infierno_El_Motorista_se_Corona_en_el_Trono_Maldito.mp4",
+    "status": "published"
   }
 ]
