@@ -2008,5 +2008,15 @@
     "mode": "live_release",
     "video_file": "Spider-Man_del_Año_2099_El_Sabotaje_Genético_que_Creó_a_Miguel_OHara.mp4",
     "status": "published"
+  },
+  {
+    "id": "rogue_absorbe_poderes_capitana_marvel",
+    "title": "¡El Trágico Beso de Rogue! La Absorción que Destruyó a Capitana Marvel 🧤💥",
+    "character": "Rogue Anna Marie",
+    "theme_signature": "rogue:anna_marie:absorcion_permanente_carol_danvers_san_francisco",
+    "date": "2026-10-24 22:05",
+    "mode": "live_release",
+    "video_file": "El_Trágico_Beso_de_Rogue_La_Absorción_que_Destruyó_a_Capitana_Marvel.mp4",
+    "status": "published"
   }
 ]
