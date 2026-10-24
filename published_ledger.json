@@ -1968,5 +1968,15 @@
     "mode": "live_release",
     "video_file": "Johnny_Blaze_Rey_del_Infierno_El_Motorista_se_Corona_en_el_Trono_Maldito.mp4",
     "status": "published"
+  },
+  {
+    "id": "thanos_supremo_eterno_kieron_gillen",
+    "title": "¡Thanos Supremo de la Tierra! El Titán Conquista a los Eternos 👑🪐",
+    "character": "Thanos Eterno",
+    "theme_signature": "thanos:eternos:supremo_tierra_kieron_gillen_maquina_muerte",
+    "date": "2026-10-24 07:05",
+    "mode": "live_release",
+    "video_file": "Thanos_Supremo_de_la_Tierra_El_Titán_Conquista_a_los_Eternos.mp4",
+    "status": "published"
   }
 ]
