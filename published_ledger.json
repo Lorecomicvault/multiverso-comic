@@ -1978,5 +1978,15 @@
     "mode": "live_release",
     "video_file": "Thanos_Supremo_de_la_Tierra_El_Titán_Conquista_a_los_Eternos.mp4",
     "status": "published"
+  },
+  {
+    "id": "daredevil_sentido_radar_mark_waid",
+    "title": "¡La Sonrisa de Matt Murdock! El Juicio Público y la Nueva Vida del Abogado Ciego ⚖️🏙️",
+    "character": "Matt Murdock",
+    "theme_signature": "matt_murdock:waid_rivera:confesion_juicio_abogado_nueva_vida_manhattan",
+    "date": "2026-10-24 10:05",
+    "mode": "live_release",
+    "video_file": "La_Sonrisa_de_Matt_Murdock_El_Juicio_Público_y_la_Nueva_Vida_del_Abogado_Ciego.mp4",
+    "status": "published"
   }
 ]
