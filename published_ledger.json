@@ -1911,152 +1911,27 @@
   },
   {
     "id": "invincible_battle_beast_duelo_viltrumita",
-    "title": "¡Battle Beast: La Bestia Cósmica! El Sangriento Duelo por el Honor Viltrumita ⚔️🦁",
+    "title": "Battle Beast vs Thragg: El Duelo Más Sangriento del Cómic",
     "character": "Battle Beast",
-    "theme_signature": "battle_beast:invincible:honor_duelo_viltrumita_espacio_sangre",
-    "date": "2026-10-23 07:06",
-    "mode": "live_release",
-    "video_file": "Battle_Beast_La_Bestia_Cósmica_El_Sangriento_Duelo_por_el_Honor_Viltrumita.mp4",
+    "theme_signature": "battle_beast:thragg:duelo_viltrumita:honor_muerte_cosmos",
+    "date": "2026-10-24 12:00",
+    "mode": "user_published",
+    "video_file": "Battle_Beast_vs_Thragg_El_Duelo_Más_Sangriento_del_Cómic.mp4",
     "status": "published"
   },
   {
-    "id": "immortal_hulk_demonio_noche_al_ewing",
-    "title": "¡El Monstruo Inmortal! La Noche en que el Demonio Hulk Regresó de la Muerte 🟢🧟",
-    "character": "Immortal Hulk",
-    "theme_signature": "immortal_hulk:al_ewing:puerta_verde_resurreccion_demonio_noche",
-    "date": "2026-10-23 11:57",
-    "mode": "live_release",
-    "video_file": "El_Monstruo_Inmortal_La_Noche_en_que_el_Demonio_Hulk_Regresó_de_la_Muerte.mp4",
-    "status": "published"
-  },
-  {
-    "id": "moon_knight_manicomio_khonshu_lemire",
-    "title": "¡La Pesadilla de Moon Knight! El Manicomio de Dioses de Marc Spector 🌙🏥",
-    "character": "Moon Knight Marc",
-    "theme_signature": "moon_knight:jeff_lemire:manicomio_khonshu_ammit_personalidades",
-    "date": "2026-10-23 14:12",
-    "mode": "live_release",
-    "video_file": "La_Pesadilla_de_Moon_Knight_El_Manicomio_de_Dioses_de_Marc_Spector.mp4",
-    "status": "published"
-  },
-  {
-    "id": "moira_mactaggert_diez_vidas_house_of_x",
-    "title": "¡Las Diez Vidas de Moira MacTaggert! El Secreto que Cambió el Destino Mutante 🧬⏳",
-    "character": "Moira MacTaggert",
-    "theme_signature": "moira_mactaggert:house_of_x:reencarnacion_vidas_mutantes_krakoa",
-    "date": "2026-10-23 18:06",
-    "mode": "live_release",
-    "video_file": "Las_Diez_Vidas_de_Moira_MacTaggert_El_Secreto_que_Cambió_el_Destino_Mutante.mp4",
-    "status": "published"
-  },
-  {
-    "id": "doctor_strange_ultimos_dias_magia_empirikul",
-    "title": "¡Los Últimos Días de la Magia! La Inquisición Científica del Empirikul 🔮⚔️",
-    "character": "Doctor Strange Mago",
-    "theme_signature": "doctor_strange:empirikul:imperator_inquisicion_muerte_magia_tierra",
-    "date": "2026-10-23 22:07",
-    "mode": "live_release",
-    "video_file": "Los_Últimos_Días_de_la_Magia_La_Inquisición_Científica_del_Empirikul.mp4",
-    "status": "published"
-  },
-  {
-    "id": "ghost_rider_johnny_blaze_rey_infierno",
-    "title": "¡Johnny Blaze Rey del Infierno! El Motorista se Corona en el Trono Maldito 💀🔥",
-    "character": "Ghost Rider Rey",
-    "theme_signature": "ghost_rider:johnny_blaze:trono_infierno_corona_fuego_mephisto",
-    "date": "2026-10-24 01:06",
-    "mode": "live_release",
-    "video_file": "Johnny_Blaze_Rey_del_Infierno_El_Motorista_se_Corona_en_el_Trono_Maldito.mp4",
-    "status": "published"
-  },
-  {
-    "id": "thanos_supremo_eterno_kieron_gillen",
-    "title": "¡Thanos Supremo de la Tierra! El Titán Conquista a los Eternos 👑🪐",
-    "character": "Thanos Eterno",
-    "theme_signature": "thanos:eternos:supremo_tierra_kieron_gillen_maquina_muerte",
-    "date": "2026-10-24 07:05",
-    "mode": "live_release",
-    "video_file": "Thanos_Supremo_de_la_Tierra_El_Titán_Conquista_a_los_Eternos.mp4",
-    "status": "published"
-  },
-  {
-    "id": "daredevil_sentido_radar_mark_waid",
-    "title": "¡La Sonrisa de Matt Murdock! El Juicio Público y la Nueva Vida del Abogado Ciego ⚖️🏙️",
-    "character": "Matt Murdock",
-    "theme_signature": "matt_murdock:waid_rivera:confesion_juicio_abogado_nueva_vida_manhattan",
-    "date": "2026-10-24 10:05",
-    "mode": "live_release",
-    "video_file": "La_Sonrisa_de_Matt_Murdock_El_Juicio_Público_y_la_Nueva_Vida_del_Abogado_Ciego.mp4",
-    "status": "published"
-  },
-  {
-    "id": "ms_marvel_kamala_khan_niebla_terrigena",
-    "title": "¡El Nacimiento de Ms. Marvel! La Niebla Terrígena Despierta a Kamala Khan ⚡🧣",
-    "character": "Ms Marvel Kamala",
-    "theme_signature": "ms_marvel:kamala_khan:niebla_terrigena_inhumano_jersey_city",
-    "date": "2026-10-24 14:06",
-    "mode": "live_release",
-    "video_file": "El_Nacimiento_de_Ms_Marvel_La_Niebla_Terrígena_Despierta_a_Kamala_Khan.mp4",
-    "status": "published"
-  },
-  {
-    "id": "spiderman_2099_miguel_ohara_alchemax",
-    "title": "¡Spider-Man del Año 2099! El Sabotaje Genético que Creó a Miguel O'Hara 🕷️⚡",
-    "character": "Spider-Man 2099",
-    "theme_signature": "spiderman_2099:miguel_ohara:alchemax_adn_arana_nueva_york_futuro",
-    "date": "2026-10-24 18:06",
-    "mode": "live_release",
-    "video_file": "Spider-Man_del_Año_2099_El_Sabotaje_Genético_que_Creó_a_Miguel_OHara.mp4",
-    "status": "published"
-  },
-  {
-    "id": "rogue_absorbe_poderes_capitana_marvel",
-    "title": "¡El Trágico Beso de Rogue! La Absorción que Destruyó a Capitana Marvel 🧤💥",
-    "character": "Rogue Anna Marie",
-    "theme_signature": "rogue:anna_marie:absorcion_permanente_carol_danvers_san_francisco",
-    "date": "2026-10-24 22:05",
-    "mode": "live_release",
-    "video_file": "El_Trágico_Beso_de_Rogue_La_Absorción_que_Destruyó_a_Capitana_Marvel.mp4",
-    "status": "published"
-  },
-  {
-    "id": "colossus_sacrificio_cura_virus_legado",
-    "title": "¡El Sacrificio de Colossus! La Muerte Heroica para Curar el Virus Legado 🛡️🧪",
-    "character": "Colossus Piotr",
-    "theme_signature": "colossus:piotr_rasputin:sacrificio_cura_virus_legado_acero_organico",
-    "date": "2026-10-25 01:06",
-    "mode": "live_release",
-    "video_file": "El_Sacrificio_de_Colossus_La_Muerte_Heroica_para_Curar_el_Virus_Legado.mp4",
-    "status": "published"
-  },
-  {
-    "id": "taskmaster_memoria_fotografica_olvido",
-    "title": "¡La Maldición de Taskmaster! La Memoria Fotográfica que Borra sus Recuerdos 💀🎯",
-    "character": "Taskmaster Tony",
-    "theme_signature": "taskmaster:anthony_masters:reflejos_fotograficos_olvido_familia_tragedia",
-    "date": "2026-10-25 07:06",
-    "mode": "live_release",
-    "video_file": "La_Maldición_de_Taskmaster_La_Memoria_Fotográfica_que_Borra_sus_Recuerdos.mp4",
-    "status": "published"
-  },
-  {
-    "id": "nightcrawler_kurt_wagner_fe_espadachin",
-    "title": "¡El Espadachín Celestial! La Fe Inquebrantable de Nightcrawler en el Combate ⚔️✝️",
-    "character": "Nightcrawler Kurt",
-    "theme_signature": "nightcrawler:kurt_wagner:teletransportacion_espada_baviera_excalibur",
-    "date": "2026-10-25 10:05",
-    "mode": "live_release",
-    "video_file": "El_Espadachín_Celestial_La_Fe_Inquebrantable_de_Nightcrawler_en_el_Combate.mp4",
-    "status": "published"
-  },
-  {
-    "id": "gwenpool_rompe_realidad_vinetas_multiverso",
-    "title": "¡Gwenpool Rompe el Cómic! La Chica que Puede Salir de las Viñetas 🎀📖",
-    "character": "Gwenpool Poole",
-    "theme_signature": "gwenpool:gwendolyn_poole:ruptura_cuarta_pared_espacio_blanco_vinetas",
-    "date": "2026-10-25 14:06",
-    "mode": "live_release",
-    "video_file": "Gwenpool_Rompe_el_Cómic_La_Chica_que_Puede_Salir_de_las_Viñetas.mp4",
+    "id": "spiderman_reign_2_1792947278",
+    "title": "¡El Duelo Más Trágico! Peter Parker vs Miles Morales Anciano 🕷️🩸",
+    "description": "¿Sabías que en el futuro distópico de Spider-Man: Reign 2, Kingpin contrata a un Miles Morales anciano y despiadado para cazar a la hija de Peter Parker? El choque más desgarrador entre viejos héroes.",
+    "hashtags": "#SpiderMan #MilesMorales #PeterParker #SpiderManReign #MultiversoComic #Marvel #Comics #Reels #Shorts #TikTok",
+    "video_file": "C:\\Users\\Vanes\\comics en espanol\\output\\pruebas_local_referencia\\reign2_test_video\\Spider_Man_Reign_2_V3_TORN_PAPER_COMIC.mp4",
+    "timestamp": "2026-10-25 11:54:38",
+    "social_links": {
+      "facebook": "https://www.facebook.com/1289410784257454/videos/1151004734167725",
+      "instagram": "https://www.instagram.com/reel/De7L5b-jx3y/",
+      "tiktok": "6ade34333d5b27036be1e964",
+      "youtube": "6ade34443d5b27036be1eafa"
+    },
     "status": "published"
   }
 ]

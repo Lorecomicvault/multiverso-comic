@@ -51,3 +51,6 @@ node_modules/
 .idea/
 .DS_Store
 Thumbs.db
+
+!scheduled_queue/
+!scheduled_queue/**

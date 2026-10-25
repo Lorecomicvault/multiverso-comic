@@ -619,6 +619,81 @@ def main():
     ledger = load_ledger()
     log(f"Historical Ledger: {len(ledger)} previously produced videos registered.")
 
+    # =========================================================================
+    # SCHEDULED QUEUE CHECK (Prioridad #1: Despacho de Videos Pre-renderizados)
+    # =========================================================================
+    queue_dir = Path("scheduled_queue")
+    if queue_dir.exists():
+        pending_items = sorted([d for d in queue_dir.iterdir() if d.is_dir() and (d / "video.mp4").exists()])
+        if pending_items:
+            target_item = pending_items[0]
+            log("===========================================================")
+            log(f"🎯 COLA PROGRAMADA DETECTADA: Despachando '{target_item.name}'")
+            log("===========================================================")
+
+            meta_file = target_item / "metadata.json"
+            meta = {}
+            if meta_file.exists():
+                try:
+                    import json
+                    with open(meta_file, "r", encoding="utf-8") as mf:
+                        meta = json.load(mf)
+                except Exception as me:
+                    log(f"Aviso leyendo metadata de cola: {me}")
+
+            title = meta.get("title") or target_item.name
+            desc = meta.get("description") or title
+            tags = meta.get("hashtags") or "#Comics #Marvel #DC #MultiversoComic #Shorts #Reels #TikTok"
+            video_file = target_item / "video.mp4"
+            thumb_file = target_item / "thumb.jpg"
+
+            if args.dry_run:
+                log(f"[DRY-RUN] Video en cola listo para publicar: {video_file} (Título: {title})")
+                sys.exit(0)
+
+            # Publicación directa multi-plataforma
+            log(f"Iniciando publicación de video pre-renderizado '{title}' a todas las redes...")
+            pub_results = publish_comic_video(
+                video_path=video_file,
+                title=title,
+                description=desc,
+                hashtags=tags,
+                thumbnail_path=thumb_file if thumb_file.exists() else None,
+                draft_only=args.draft
+            )
+
+            # Registro en ledger
+            ledger_entry = {
+                "id": meta.get("id") or target_item.name,
+                "title": title,
+                "description": desc,
+                "hashtags": tags,
+                "video_file": str(video_file),
+                "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+                "social_links": {
+                    "facebook": pub_results.get("facebook", {}).get("video_id"),
+                    "instagram": pub_results.get("instagram", {}).get("permalink"),
+                    "tiktok": pub_results.get("tiktok", {}).get("post_id"),
+                    "youtube": pub_results.get("youtube", {}).get("post_id")
+                },
+                "status": "published",
+                "source": "scheduled_queue"
+            }
+            ledger.append(ledger_entry)
+            save_ledger(ledger)
+
+            # Remover carpeta de la cola para que la siguiente ejecución tome el siguiente video
+            try:
+                import shutil
+                shutil.rmtree(target_item, ignore_errors=True)
+                log(f"✅ Video '{target_item.name}' consumido y removido de scheduled_queue.")
+            except Exception as re:
+                log(f"Advertencia eliminando carpeta de cola: {re}")
+
+            log(f"🎉 Despacho programado de '{target_item.name}' completado exitosamente.")
+            sys.exit(0)
+
+
     MAX_CANDIDATE_ATTEMPTS = max(10, len(EDITORIAL_STORIES))
     generation = None
     selected = None

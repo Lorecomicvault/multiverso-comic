@@ -181,7 +181,7 @@ jobs:
         run: |
           git config user.name "ComicLoreVault Engine"
           git config user.email "Lorecomicvault@users.noreply.github.com"
-          git add published_ledger.json
+          git add published_ledger.json scheduled_queue
           if [ -f output/videos_log.csv ]; then
             git add -f output/videos_log.csv 2>/dev/null || true
           fi
