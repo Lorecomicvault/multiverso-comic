@@ -2048,5 +2048,15 @@
     "mode": "live_release",
     "video_file": "El_Espadachín_Celestial_La_Fe_Inquebrantable_de_Nightcrawler_en_el_Combate.mp4",
     "status": "published"
+  },
+  {
+    "id": "gwenpool_rompe_realidad_vinetas_multiverso",
+    "title": "¡Gwenpool Rompe el Cómic! La Chica que Puede Salir de las Viñetas 🎀📖",
+    "character": "Gwenpool Poole",
+    "theme_signature": "gwenpool:gwendolyn_poole:ruptura_cuarta_pared_espacio_blanco_vinetas",
+    "date": "2026-10-25 14:06",
+    "mode": "live_release",
+    "video_file": "Gwenpool_Rompe_el_Cómic_La_Chica_que_Puede_Salir_de_las_Viñetas.mp4",
+    "status": "published"
   }
 ]
