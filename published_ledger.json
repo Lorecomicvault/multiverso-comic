@@ -2018,5 +2018,15 @@
     "mode": "live_release",
     "video_file": "El_Trágico_Beso_de_Rogue_La_Absorción_que_Destruyó_a_Capitana_Marvel.mp4",
     "status": "published"
+  },
+  {
+    "id": "colossus_sacrificio_cura_virus_legado",
+    "title": "¡El Sacrificio de Colossus! La Muerte Heroica para Curar el Virus Legado 🛡️🧪",
+    "character": "Colossus Piotr",
+    "theme_signature": "colossus:piotr_rasputin:sacrificio_cura_virus_legado_acero_organico",
+    "date": "2026-10-25 01:06",
+    "mode": "live_release",
+    "video_file": "El_Sacrificio_de_Colossus_La_Muerte_Heroica_para_Curar_el_Virus_Legado.mp4",
+    "status": "published"
   }
 ]
