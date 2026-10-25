@@ -1966,5 +1966,21 @@
       "youtube": "6ade5af70b5343d070eb4c57"
     },
     "status": "published"
+  },
+  {
+    "id": "01_marvel_zombies_spiderman",
+    "title": "Marvel Zombies: El Desgarrador Canibalismo de Peter Parker 🧟🩸",
+    "description": "La tragedia más perturbadora y oscura de Spider-Man: tras ser mordido por el Coronel América, Peter pierde el control y devora a Mary Jane y Tía May en un frenesí caníbal. Basado en el canon de Marvel Zombies: Dead Days.",
+    "hashtags": "#MarvelZombies #SpiderMan #MarvelComics #Comics #PeterParker #MaryJane #ComicLore #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/01_17h_marvel_zombies_spiderman/video.mp4",
+    "timestamp": "2026-10-25 22:04:27",
+    "social_links": {
+      "facebook": "2902746186749060",
+      "instagram": null,
+      "tiktok": "6ade7cdae4be8a4d86cb9a8a",
+      "youtube": "6ade7ce80b5343d070f39776"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
