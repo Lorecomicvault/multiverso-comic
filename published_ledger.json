@@ -2038,5 +2038,15 @@
     "mode": "live_release",
     "video_file": "La_Maldición_de_Taskmaster_La_Memoria_Fotográfica_que_Borra_sus_Recuerdos.mp4",
     "status": "published"
+  },
+  {
+    "id": "nightcrawler_kurt_wagner_fe_espadachin",
+    "title": "¡El Espadachín Celestial! La Fe Inquebrantable de Nightcrawler en el Combate ⚔️✝️",
+    "character": "Nightcrawler Kurt",
+    "theme_signature": "nightcrawler:kurt_wagner:teletransportacion_espada_baviera_excalibur",
+    "date": "2026-10-25 10:05",
+    "mode": "live_release",
+    "video_file": "El_Espadachín_Celestial_La_Fe_Inquebrantable_de_Nightcrawler_en_el_Combate.mp4",
+    "status": "published"
   }
 ]
