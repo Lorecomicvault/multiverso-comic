@@ -2028,5 +2028,15 @@
     "mode": "live_release",
     "video_file": "El_Sacrificio_de_Colossus_La_Muerte_Heroica_para_Curar_el_Virus_Legado.mp4",
     "status": "published"
+  },
+  {
+    "id": "taskmaster_memoria_fotografica_olvido",
+    "title": "¡La Maldición de Taskmaster! La Memoria Fotográfica que Borra sus Recuerdos 💀🎯",
+    "character": "Taskmaster Tony",
+    "theme_signature": "taskmaster:anthony_masters:reflejos_fotograficos_olvido_familia_tragedia",
+    "date": "2026-10-25 07:06",
+    "mode": "live_release",
+    "video_file": "La_Maldición_de_Taskmaster_La_Memoria_Fotográfica_que_Borra_sus_Recuerdos.mp4",
+    "status": "published"
   }
 ]
