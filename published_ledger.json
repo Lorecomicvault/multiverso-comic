@@ -2062,5 +2062,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "07_spiderman_2099",
+    "title": "Spider-Man 2099: El Oscuro Origen Genético de Miguel O'Hara 🕷️⚡",
+    "description": "En una Nueva York futurista dominada por Alchemax, Miguel O'Hara es saboteado genéticamente, renaciendo con colmillos venenosos y garras de titanio como Spider-Man 2099.",
+    "hashtags": "#SpiderMan2099 #MiguelOHara #Alchemax #SpiderVerse #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/07_dia2_20h_spiderman_2099/video.mp4",
+    "timestamp": "2026-10-26 22:04:12",
+    "social_links": {
+      "facebook": "1119888353742467",
+      "instagram": null,
+      "tiktok": "6adfce4bade6626d93158b26",
+      "youtube": "6adfce59c26d8b40cc795a0a"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
