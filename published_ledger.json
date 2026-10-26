@@ -1982,5 +1982,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "02_red_goblin_carnage",
+    "title": "The Red Goblin: La Sádica Fusión de Norman Osborn y Carnage 👺🩸",
+    "description": "Cuando Norman Osborn fusionó su cuerpo con el simbionte Carnage para destruir a Spider-Man, nació el Red Goblin: una pesadilla inmune al fuego y al sonido que torturó a Peter Parker hasta el límite.",
+    "hashtags": "#RedGoblin #Carnage #SpiderMan #NormanOsborn #MarvelComics #Venom #ComicLore #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/02_20h_red_goblin_carnage/video.mp4",
+    "timestamp": "2026-10-26 01:04:04",
+    "social_links": {
+      "facebook": "1750129409388289",
+      "instagram": null,
+      "tiktok": "6adea6f2e4be8a4d86d71942",
+      "youtube": "6adea7006887a2efc1342de5"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
