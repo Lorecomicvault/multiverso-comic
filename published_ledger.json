@@ -2046,5 +2046,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "06_daredevil_muerte_elektra",
+    "title": "Daredevil: La Brutal Muerte de Elektra a Manos de Bullseye 🎯🩸",
+    "description": "El duelo más despiadado de Hell's Kitchen: Bullseye embosca a Elektra y le atraviesa el corazón con su propio sai, marcando para siempre la tragedia del Hombre sin Miedo.",
+    "hashtags": "#Daredevil #Elektra #Bullseye #MarvelComics #MattMurdock #Comics #HellsKitchen #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/06_dia2_17h_daredevil_muerte_elektra/video.mp4",
+    "timestamp": "2026-10-26 18:05:52",
+    "social_links": {
+      "facebook": "2247908562788396",
+      "instagram": null,
+      "tiktok": "6adf966d35213ac4125dfac9",
+      "youtube": "6adf967c43b77056967c2906"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
