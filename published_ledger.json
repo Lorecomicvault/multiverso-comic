@@ -2030,5 +2030,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "05_dceased_batman",
+    "title": "DCeased: El Trágico y Desgarrador Final de Batman 🦇☣️",
+    "description": "La Ecuación Anti-Vida infecta a Gotham a través de las pantallas. Tras ser mordido por Nightwing, Batman le entrega una escopeta a Alfred exigiéndole que le dispare para salvar al mundo.",
+    "hashtags": "#DCeased #Batman #Alfred #DCComics #JusticeLeague #Comics #ComicLore #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/05_dia2_13h_dceased_batman/video.mp4",
+    "timestamp": "2026-10-26 14:04:14",
+    "social_links": {
+      "facebook": "1147021447851829",
+      "instagram": null,
+      "tiktok": "6adf5dc504950309ed1dcd43",
+      "youtube": "6adf5dd413bbb91ebaf1a884"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
