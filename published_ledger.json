@@ -2014,5 +2014,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "04_ghost_rider_rey_infierno",
+    "title": "Ghost Rider: Johnny Blaze y la Conquista del Infierno 💀🔥",
+    "description": "Cansado de ser el esclavo de Mephisto, Johnny Blaze desciende al averno, somete al señor del engaño con su mirada de penitencia y se corona como el nuevo Rey del Infierno.",
+    "hashtags": "#GhostRider #JohnnyBlaze #Mephisto #MarvelComics #Marvel #Comics #Inferno #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/04_dia2_10h_ghost_rider_rey_infierno/video.mp4",
+    "timestamp": "2026-10-26 10:04:06",
+    "social_links": {
+      "facebook": "1438583621797095",
+      "instagram": "https://www.instagram.com/reel/De9BerijnI7/",
+      "tiktok": "6adf258547c45bda994bcf24",
+      "youtube": "6adf259347c45bda994bd50f"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
