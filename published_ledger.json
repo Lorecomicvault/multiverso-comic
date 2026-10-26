@@ -1998,5 +1998,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "03_batman_under_red_hood",
+    "title": "Batman: Under the Red Hood: La Sangrienta Resurrección de Jason Todd 🦇🩸",
+    "description": "El desgarrador regreso de Jason Todd: asesinado brutalmente por el Joker, resucita consumido por la venganza y confronta a Batman en un dilema mortal sobre por qué dejó con vida al payaso.",
+    "hashtags": "#Batman #RedHood #JasonTodd #Joker #DCComics #Comics #Gotham #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/03_dia2_07h_batman_under_red_hood/video.mp4",
+    "timestamp": "2026-10-26 07:04:22",
+    "social_links": {
+      "facebook": "1139133925438132",
+      "instagram": null,
+      "tiktok": "6adefb5f7333971c1eb9d518",
+      "youtube": "6adefb6dba65356abc95e4ca"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
