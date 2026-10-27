@@ -2169,5 +2169,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "01_wonder_woman_ceguera_medusa",
+    "title": "Wonder Woman: ¡El Sacrificio Ciego que Destruyó a Medusa! ⚔️🐍",
+    "description": "El día en que Wonder Woman se arrancó la vista con veneno de serpiente para decapitar a Medusa y salvar a miles de inocentes. La hazaña más heroica de DC Comics.",
+    "hashtags": "#WonderWoman #Medusa #DCComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/13_dia4_07h_wonder_woman_ceguera_medusa/video.mp4",
+    "timestamp": "2026-10-27 22:05:28",
+    "social_links": {
+      "facebook": "1620181733182480",
+      "instagram": null,
+      "tiktok": "6ae120177ee83e48a97b46c7",
+      "youtube": "6ae120257ee83e48a97b4bdf"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
