@@ -312,8 +312,16 @@ async def _generate_edge_tts(
     clean_text = _ensure_punctuation(text)
 
     mp3_path = str(Path(output).with_suffix('.mp3'))
-    communicate = edge_tts.Communicate(clean_text, voice, rate=rate_str, pitch=pitch)
-    await communicate.save(mp3_path)
+    for attempt in range(1, 5):
+        try:
+            communicate = edge_tts.Communicate(clean_text, voice, rate=rate_str, pitch=pitch)
+            await communicate.save(mp3_path)
+            if os.path.exists(mp3_path) and os.path.getsize(mp3_path) > 500:
+                break
+        except Exception as e:
+            if attempt == 4:
+                raise e
+            await asyncio.sleep(1.5 * attempt)
 
     audio_filter = 'aresample=48000'
     if trailing_pause > 0:
