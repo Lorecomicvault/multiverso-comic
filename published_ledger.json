@@ -2110,5 +2110,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "10_supergirl_red_lantern",
+    "title": "Supergirl: ¡La Despiadada Furia del Red Lantern de la Ira! 🔴🩸",
+    "description": "Consumida por el dolor de la destrucción de Krypton, Kara Zor-El es elegida por el anillo rojo de la ira, convirtiéndose en una fuerza cósmica imparable que ni los Linternas Rojas pueden contener.",
+    "hashtags": "#Supergirl #RedLantern #DCComics #KaraZorEl #GreenLantern #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/10_dia3_13h_supergirl_red_lantern/video.mp4",
+    "timestamp": "2026-10-27 10:04:33",
+    "social_links": {
+      "facebook": "1623659872731332",
+      "instagram": null,
+      "tiktok": "6ae0771ef8fdca14fefb0d36",
+      "youtube": "6ae0772de3a1beb2ea00c051"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
