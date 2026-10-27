@@ -2126,5 +2126,16 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "superior_spiderman_mandibula_escorpion_long",
+    "title": "El Día Que SPIDER-MAN Dejó de Contenerse (Historia Completa) | Superior Spider-Man",
+    "character": "Superior Spider-Man & Doctor Octopus",
+    "theme_signature": "superior_spiderman:doctor_octopus:mandibula_escorpion_fuerza_desatada",
+    "date": "2026-10-26 17:56",
+    "mode": "long_video_youtube",
+    "video_file": "output/superior_spiderman_long/superior_spiderman_el_golpe_definitivo_1080p.mp4",
+    "duration_seconds": 356.08,
+    "status": "ready_to_publish"
   }
 ]

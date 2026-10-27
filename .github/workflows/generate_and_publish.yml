@@ -194,17 +194,9 @@ jobs:
             echo "Ledger al dia. No hay nuevas entradas para commitear."
           fi
 
-      - name: Subir Video Final como Artefacto (Descarga y Revision)
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: multiverso-comic-video-${{ github.run_number }}
-          path: output/**/*.mp4
-          if-no-files-found: ignore
-          retention-days: 1
-
       - name: Archivar Logs de Produccion y Manifiesto
         if: always()
+        continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
           name: multiverso-comic-production-logs-${{ github.run_number }}
