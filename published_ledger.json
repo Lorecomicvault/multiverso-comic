@@ -2094,5 +2094,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "09_darth_vader_down",
+    "title": "Darth Vader: ¡Solo Rodeado de Miedo y Hombres Muertos! 🔴💀",
+    "description": "Rodeado por tres batallones de la Alianza Rebelde en Vrogas Vas, Darth Vader enciende su sable carmesí y pronuncia la frase más temida de Star Wars antes de desatar una masacre bíblica.",
+    "hashtags": "#DarthVader #StarWars #VaderDown #Sith #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/09_dia3_10h_darth_vader_down/video.mp4",
+    "timestamp": "2026-10-27 07:04:28",
+    "social_links": {
+      "facebook": "1114277201015693",
+      "instagram": null,
+      "tiktok": "6ae04ce96546b985f8d54193",
+      "youtube": "6ae04cf84c0869d0f8d6f5f4"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
