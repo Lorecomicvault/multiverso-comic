@@ -2078,5 +2078,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "08_thor_gorr_butcher",
+    "title": "Thor: ¡Gorr el Carnicero de Dioses y la Batalla de los Tres Thors! ⚡🩸",
+    "description": "El carnicero de dioses Gorr desata la Necroespada All-Black para exterminar a todas las deidades del cosmos, obligando a tres versiones de Thor a unirse en una guerra celestial sin precedentes.",
+    "hashtags": "#Thor #Gorr #GodButcher #MarvelComics #Avengers #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/08_dia3_07h_thor_gorr_butcher/video.mp4",
+    "timestamp": "2026-10-27 01:04:02",
+    "social_links": {
+      "facebook": "1868284071193509",
+      "instagram": null,
+      "tiktok": "6adff87158889217814408ad",
+      "youtube": "6adff87ff266a5f7e1083292"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
