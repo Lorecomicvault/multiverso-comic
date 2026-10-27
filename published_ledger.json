@@ -2137,5 +2137,21 @@
     "video_file": "output/superior_spiderman_long/superior_spiderman_el_golpe_definitivo_1080p.mp4",
     "duration_seconds": 356.08,
     "status": "ready_to_publish"
+  },
+  {
+    "id": "11_plastic_man_inmortal",
+    "title": "Plastic Man: ¡El Terror Oculto de Batman en la Liga de la Justicia! 🕶️⚠️",
+    "description": "En sus archivos secretos de contingencia, Batman confiesa la aterradora verdad sobre Plastic Man: un ser inmortal e indestructible que ninguna fuerza del universo puede aniquilar permanentemente.",
+    "hashtags": "#PlasticMan #Batman #JusticeLeague #DCComics #TowerOfBabel #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/11_dia3_17h_plastic_man_inmortal/video.mp4",
+    "timestamp": "2026-10-27 14:04:01",
+    "social_links": {
+      "facebook": "1703177941168494",
+      "instagram": null,
+      "tiktok": "6ae0af4001a7b9ebe439facf",
+      "youtube": "6ae0af4e01a7b9ebe43a012f"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
