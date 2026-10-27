@@ -2153,5 +2153,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "12_taskmaster_olvido",
+    "title": "Taskmaster: ¡La Desgarradora Maldición de su Memoria Fotográfica! 💀🧠",
+    "description": "Por cada nuevo estilo de combate mortal que Taskmaster aprende con sus reflejos fotográficos, su cerebro borra un recuerdo de su vida personal, olvidando a sus padres, su boda y al amor de su vida.",
+    "hashtags": "#Taskmaster #MarvelComics #CaptainAmerica #SpiderMan #Avengers #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/12_dia3_20h_taskmaster_olvido/video.mp4",
+    "timestamp": "2026-10-27 18:04:37",
+    "social_links": {
+      "facebook": "2019641505420392",
+      "instagram": null,
+      "tiktok": "6ae0e79fb83eef4600d0b856",
+      "youtube": "6ae0e7b0049681f2b00ab2d9"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
