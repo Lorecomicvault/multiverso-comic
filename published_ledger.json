@@ -2185,5 +2185,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "02_constantine_triunvirato_infierno",
+    "title": "John Constantine: ¡La Gran Estafa a los Reyes del Infierno! 🚬🔥",
+    "description": "John Constantine engañó a Lucifer, Azazel y Beelzebub vendiendo su alma tres veces para obligarlos a curarle el cáncer terminal. La mayor estafa al Infierno.",
+    "hashtags": "#JohnConstantine #Hellblazer #DCComics #Vertigo #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/14_dia4_10h_constantine_triunvirato_infierno/video.mp4",
+    "timestamp": "2026-10-28 01:04:16",
+    "social_links": {
+      "facebook": "1432527544950815",
+      "instagram": null,
+      "tiktok": "6ae14a00ed0a3f2cb415156e",
+      "youtube": "6ae14a0d8bc396ba2f164c7e"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
