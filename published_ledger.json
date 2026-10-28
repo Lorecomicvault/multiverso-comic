@@ -2265,5 +2265,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "07_saint_walker_linterna_azul",
+    "title": "Saint Walker: ¡La Esperanza que Salvó a Hal Jordan! 💙✨",
+    "description": "¡Todo estará bien! Bro'Dee Walker se convirtió en el primer Linterna Azul y salvó el corazón de Hal Jordan de la ira roja. La luz de la esperanza.",
+    "hashtags": "#SaintWalker #GreenLantern #BlueLantern #DCComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/19_dia5_10h_saint_walker_linterna_azul/video.mp4",
+    "timestamp": "2026-10-28 22:05:12",
+    "social_links": {
+      "facebook": "896498680120420",
+      "instagram": null,
+      "tiktok": "6ae2718404f348da40f52092",
+      "youtube": "6ae27193cc91be5434b16b3d"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
