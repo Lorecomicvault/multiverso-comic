@@ -2249,5 +2249,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "06_flash_human_race",
+    "title": "The Flash: ¡Más Rápido que la Teletransportación Instantánea! ⚡🌌",
+    "description": "Wally West rompió la física: corrió más rápido que la teletransportación instantánea absorbiendo la energía cinética de toda la humanidad. The Human Race.",
+    "hashtags": "#TheFlash #WallyWest #DCComics #SpeedForce #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/18_dia5_07h_flash_human_race/video.mp4",
+    "timestamp": "2026-10-28 18:05:33",
+    "social_links": {
+      "facebook": "1094990982983959",
+      "instagram": "https://www.instagram.com/reel/DfDCJr0jxa5/",
+      "tiktok": "6ae23953e1bf4fa83be8e6cb",
+      "youtube": "6ae23963449418df5b783149"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
