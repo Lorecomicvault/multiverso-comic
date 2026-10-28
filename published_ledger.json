@@ -2201,5 +2201,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "03_spiderman_vs_juggernaut",
+    "title": "Spider-Man vs Juggernaut: ¡La Trampa de Cemento Líquido! 🕷️🧱",
+    "description": "¡Nada puede detener al Juggernaut! Excepto el ingenio de Spider-Man enterrándolo en doce metros de cemento líquido para salvar a Madame Web.",
+    "hashtags": "#SpiderMan #Juggernaut #MarvelComics #Marvel #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/15_dia4_13h_spiderman_vs_juggernaut/video.mp4",
+    "timestamp": "2026-10-28 07:04:25",
+    "social_links": {
+      "facebook": "1112471168074463",
+      "instagram": null,
+      "tiktok": null,
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
