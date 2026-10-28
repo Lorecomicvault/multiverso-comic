@@ -2233,5 +2233,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "05_red_goblin_osborn_carnage",
+    "title": "¡Nació el Duende Rojo! La Fusión de Norman Osborn y Carnage 🩸🎃",
+    "description": "La pesadilla carmesí: Norman Osborn fusionado con Carnage para crear al Duende Rojo, inmune al fuego y las ondas sonoras. El clímax de Dan Slott.",
+    "hashtags": "#RedGoblin #Carnage #SpiderMan #MarvelComics #Marvel #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/17_dia4_20h_red_goblin_osborn_carnage/video.mp4",
+    "timestamp": "2026-10-28 14:04:06",
+    "social_links": {
+      "facebook": "1909678819995879",
+      "instagram": null,
+      "tiktok": "6ae200c4b7a8343b7427a666",
+      "youtube": "6ae200d39bcf8f4f823a30b4"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
