@@ -2297,5 +2297,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "09_zatanna_magia_inversa_conjuro_sombras",
+    "title": "Zatanna: ¡El Secreto de la Magia Inversa que Dobla la Realidad! 🎩✨",
+    "description": "Zatanna y el misterio del lenguaje inverso: cuando hablar al revés dobla las leyes de la física y expulsa a los demonios del multiverso.",
+    "hashtags": "#Zatanna #JusticeLeagueDark #DCComics #Magic #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/21_dia5_17h_zatanna_magia_inversa_conjuro_sombras/video.mp4",
+    "timestamp": "2026-10-29 07:03:44",
+    "social_links": {
+      "facebook": "27876161908726209",
+      "instagram": "https://www.instagram.com/reel/DfEbO2KDJvE/",
+      "tiktok": "6ae2efc1f66393dd569238dc",
+      "youtube": "6ae2efce35657f219b317594"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
