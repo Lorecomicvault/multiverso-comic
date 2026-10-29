@@ -2281,5 +2281,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "08_shazam_billy_batson_relampago_dioses",
+    "title": "¡El Místico Origen de Shazam! El Relámpago de los Seis Dioses ⚡🏛️",
+    "description": "El origen místico del Campeón de la Magia: Billy Batson en la Roca de la Eternidad y el relámpago sagrado de los seis dioses inmortales. ¡SHAZAM!",
+    "hashtags": "#Shazam #BillyBatson #DCComics #CaptainMarvel #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/20_dia5_13h_shazam_billy_batson_relampago_dioses/video.mp4",
+    "timestamp": "2026-10-29 01:04:30",
+    "social_links": {
+      "facebook": "980451227860968",
+      "instagram": "https://www.instagram.com/reel/DfDyHEbEm3G/",
+      "tiktok": "6ae29b8ccc91be5434bd63b4",
+      "youtube": "6ae29b9a42598d490d7896cc"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
