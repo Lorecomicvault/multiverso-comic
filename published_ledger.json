@@ -2329,5 +2329,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "23_ash_williams_marvel_zombies",
+    "title": "¡Ash Williams vs Marvel Zombies! La Motosierra en el Fin del Mundo 🪚💀",
+    "description": "El mítico guerrero Ash Williams aterriza en la dimensión de Marvel Zombies y enciende su motosierra para enfrentar la plaga de carne viva.",
+    "hashtags": "#AshWilliams #ArmyOfDarkness #MarvelZombies #EvilDead #Marvel #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/23_dia6_07h_ash_williams_marvel_zombies/video.mp4",
+    "timestamp": "2026-10-29 14:05:17",
+    "social_links": {
+      "facebook": "1474862521179517",
+      "instagram": null,
+      "tiktok": "6ae3528b958f4a52750af4d0",
+      "youtube": "6ae3529a835dd2febef17f0e"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
