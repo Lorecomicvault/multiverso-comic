@@ -2345,5 +2345,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "24_moira_mactaggert_house_of_x",
+    "title": "¡El Gran Secreto de Moira MacTaggert! Las 10 Vidas de House of X 🧬⏳",
+    "description": "La gran revelación de House of X: Moira MacTaggert es una mutante inmortal que reencarnó 10 veces para romper la extinción mutante y fundar Krakoa.",
+    "hashtags": "#MoiraMacTaggert #HouseOfX #PowersOfX #XMen #MarvelComics #Marvel #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/24_dia6_10h_moira_mactaggert_house_of_x/video.mp4",
+    "timestamp": "2026-10-29 18:04:33",
+    "social_links": {
+      "facebook": "2597499760769061",
+      "instagram": "https://www.instagram.com/reel/DfFm01JgSZh/",
+      "tiktok": "6ae38a99145e9f24d45cba09",
+      "youtube": "6ae38aa7b3aaeefe2320fcff"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
