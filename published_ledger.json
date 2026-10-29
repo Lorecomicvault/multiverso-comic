@@ -2313,5 +2313,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "10_moon_knight_manicomio_khonshu_lemire",
+    "title": "Moon Knight: ¡El Manicomio de Khonshu y las Mentes de Marc Spector! 🌙🏥",
+    "description": "Marc Spector encerrado en un psiquiátrico donde los doctores son demonios egipcios de Ammit. La obra maestra psicológica de Moon Knight por Jeff Lemire.",
+    "hashtags": "#MoonKnight #MarcSpector #Khonshu #MarvelComics #Marvel #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/22_dia5_20h_moon_knight_manicomio_khonshu_lemire/video.mp4",
+    "timestamp": "2026-10-29 10:04:26",
+    "social_links": {
+      "facebook": "4482341002081527",
+      "instagram": "https://www.instagram.com/reel/DfEv52fiLVi/",
+      "tiktok": "6ae31a189ebbdfcb8db431df",
+      "youtube": "6ae31a267b777f7b03bf3e6f"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
