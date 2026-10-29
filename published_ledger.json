@@ -2361,5 +2361,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "25_doctor_strange_empirikul",
+    "title": "¿Qué Hace Doctor Strange Sin Magia? ¡El Hacha Ancestral de Sangre! 🔮⚔️",
+    "description": "¿Qué hace Doctor Strange cuando la magia deja de existir? Empuñar un hacha de batalla ancestral para defender la Tierra a sangre y fuego.",
+    "hashtags": "#DoctorStrange #Empirikul #MarvelComics #SorcererSupreme #Marvel #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/25_dia6_13h_doctor_strange_empirikul/video.mp4",
+    "timestamp": "2026-10-29 22:04:05",
+    "social_links": {
+      "facebook": "2422237575256064",
+      "instagram": "https://www.instagram.com/reel/DfGCQvxie-z/",
+      "tiktok": "6ae3c2c3f3a9d5311bd33155",
+      "youtube": "6ae3c2d160532fc2b0d34c28"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
