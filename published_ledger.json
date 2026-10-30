@@ -2409,5 +2409,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "28_jessica_jones_purple_man",
+    "title": "¡La Orden Más Perturbadora de Killgrave a Jessica Jones! 🥃🕵️",
+    "description": "¿Cuál fue el mayor trauma de Jessica Jones? El aterrador control mental de Zebediah Killgrave y su renacimiento como detective privada.",
+    "hashtags": "#JessicaJones #Killgrave #Alias #MarvelComics #Marvel #HellsKitchen #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/28_dia7_07h_jessica_jones_purple_man/video.mp4",
+    "timestamp": "2026-10-30 10:04:29",
+    "social_links": {
+      "facebook": "2183135515921115",
+      "instagram": null,
+      "tiktok": "6ae46b9cd518fcaf80ad914a",
+      "youtube": "6ae46baad518fcaf80ad9515"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
