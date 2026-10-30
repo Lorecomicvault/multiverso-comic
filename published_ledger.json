@@ -2441,5 +2441,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "30_hellboy_mano_derecha_destino",
+    "title": "¡El Secreto de la Mano de Hellboy! La Llave del Apocalipsis 🔴🔑",
+    "description": "¿Por qué la mano de Hellboy es de piedra roja? El secreto de la Mano Derecha del Destino, Anung Un Rama y la llave del Apocalipsis.",
+    "hashtags": "#Hellboy #MikeMignola #DarkHorseComics #AnungUnRama #RightHandOfDoom #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/30_dia7_13h_hellboy_mano_derecha_destino/video.mp4",
+    "timestamp": "2026-10-30 18:04:14",
+    "social_links": {
+      "facebook": "1479823090689205",
+      "instagram": null,
+      "tiktok": "6ae4dc0dcd8290b9b90514c5",
+      "youtube": "6ae4dc1b34702c2daac3fdf0"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
