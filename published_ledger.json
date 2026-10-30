@@ -2393,5 +2393,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "27_nightcrawler_espadachin_fe",
+    "title": "Nightcrawler: ¡El Espadachín que los Demonios Temen en X-Men! ⚔️💙",
+    "description": "Cuerpo de demonio, alma de mosquetero: Kurt Wagner es el mutante más noble de los X-Men y el espadachín más ágil del multiverso.",
+    "hashtags": "#Nightcrawler #KurtWagner #XMen #MarvelComics #Marvel #Excalibur #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/27_dia6_20h_nightcrawler_espadachin_fe/video.mp4",
+    "timestamp": "2026-10-30 07:03:36",
+    "social_links": {
+      "facebook": "1565440662277531",
+      "instagram": "https://www.instagram.com/reel/DfHABKYDBR9/",
+      "tiktok": "6ae441386385db216a2d16e5",
+      "youtube": "6ae4414656e01b97639039d6"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
