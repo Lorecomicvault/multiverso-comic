@@ -2457,5 +2457,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "31_swamp_thing_leccion_anatomia",
+    "title": "¡La Perturbadora Autopsia de Swamp Thing! El Gran Engaño del Pantano 🌿🫀",
+    "description": "La Lección de Anatomía (Alan Moore): La escalofriante autopsia que reveló que Alec Holland nunca sobrevivió al pantano.",
+    "hashtags": "#SwampThing #AlanMoore #TheAnatomyLesson #DCComics #Vertigo #AlecHolland #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/31_dia7_17h_swamp_thing_leccion_anatomia/video.mp4",
+    "timestamp": "2026-10-30 22:03:59",
+    "social_links": {
+      "facebook": "1036791329447474",
+      "instagram": "https://www.instagram.com/reel/DfInC1GkfHb/",
+      "tiktok": "6ae5143ea1145743497045de",
+      "youtube": "6ae5144cb84259308ba35e44"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
