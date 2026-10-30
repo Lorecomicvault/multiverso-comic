@@ -2377,5 +2377,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "26_green_arrow_longbow_hunters",
+    "title": "¡Por Qué Flecha Verde Empezó a Matar! The Longbow Hunters 🏹🌧️",
+    "description": "El día que Green Arrow cruzó la línea: Oliver Queen abandona los trucos en Seattle y mata para salvar a Canario Negro. The Longbow Hunters.",
+    "hashtags": "#GreenArrow #LongbowHunters #BlackCanary #DCComics #OliverQueen #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/26_dia6_17h_green_arrow_longbow_hunters/video.mp4",
+    "timestamp": "2026-10-30 01:05:07",
+    "social_links": {
+      "facebook": "2322301248522746",
+      "instagram": "https://www.instagram.com/reel/DfGW-qAkUrY/",
+      "tiktok": "6ae3ed31ba1ca51fd3ea42c6",
+      "youtube": "6ae3ed40a83a7fb63c88b791"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
