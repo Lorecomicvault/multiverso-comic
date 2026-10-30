@@ -41,6 +41,7 @@ from src.composer import (
 from src.transcribe import extract_scene_word_timings
 from src.comic_pipeline import assemble_reel
 from src.social_overlay import get_or_create_vertical_cta_mov
+from src.comic_precision_scraper import verify_visual_alignment_with_gemini
 
 CURATED_BASE = PROJECT_ROOT / "assets" / "curated_panels"
 OUTPUT_BASE = PROJECT_ROOT / "output" / "batch_2_voicebox_60s"
@@ -424,6 +425,19 @@ def produce_and_schedule_single(proj: dict):
     
     total_audio_dur = get_duration(full_audio)
     print(f"   OK -> Audio completo optimizado: {total_audio_dur:.2f} segundos")
+
+    # 2.0 ESCUDO DE CALIDAD VISUAL: Validar con IA que el 100% de las imágenes sean viñetas reales de cómic
+    print("2/5 Validando autenticidad visual de paneles con IA...")
+    for sc in scenes:
+        sn = sc["scene_number"]
+        src_img = str(curated_folder / sc["file"])
+        val = verify_visual_alignment_with_gemini(src_img, f"{proj['character']} comic book narrative art panel")
+        if not val.get("is_comic_panel", False) or val.get("score", 0) <= 2:
+            raise RuntimeError(
+                f"BLOQUEO DE SEGURIDAD CRÍTICO: La imagen '{sc['file']}' en '{folder_name}' NO es una viñeta de cómic válida. "
+                f"Motivo detectado: {val.get('reason')}. ¡Render abortado inmediatamente para evitar publicar imágenes ajenas al cómic!"
+            )
+        print(f"   OK -> Viñeta {sn} verificada auténtica por IA (Score: {val.get('score')}/10).")
 
     # 2. Componer escenas visuales con Ken Burns
     print("2/5 Componiendo escenas visuales...")

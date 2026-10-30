@@ -281,7 +281,7 @@ def search_fandom_files(wiki_domain: str, query: str, max_results: int = 8) -> l
 COMIC_APPROVED_DOMAINS = [
     "fandom.com", "nocookie.net", "comicvine.gamespot.com", "cbr.com", "cbrimages.com",
     "srcdn.com", "screenrant.com", "aiptcomics.com", "readallcomics.com", "viewcomic.com",
-    "bleedingcool.com", "reddit.com", "pinimg.com", "tumblr.com", "marvel.com", "dc.com",
+    "bleedingcool.com", "reddit.com", "tumblr.com", "marvel.com", "dc.com",
     "comicosity.com", "panelsandpixels.com", "previewsworld.com", "comicartfans.com",
     "comic-watch.com", "gamespot.com", "blogspot.com", "blogger.com", "googleusercontent.com",
     "wordpress.com", "wp.com"
@@ -339,7 +339,7 @@ def search_bing_comic_panels(query: str, limit: int = 8) -> list:
         'dreamstime', 'depositphotos', '123rf', 'freepik', 'vectorstock', 'stockphoto',
         'stockvault', 'bigstockphoto', 'canva', 'vecteezy', 'clipart', 'vector',
         'watermark', 'stock-photo', 'stock-vector', 'solitaire', 'spider-solitaire',
-        'arachnid', 'macro-photography'
+        'arachnid', 'macro-photography', 'pinterest', 'pinimg', 'idiom', 'recipe', 'food', 'dish', 'craft', 'diy', 'tshirt', 'clipart', 'vector', 'etsy'
     ]
 
     for v in variants:
@@ -395,6 +395,17 @@ def download_image(url: str, referer_domain: str, dest_path: str, min_dim: int =
         if dest_dir:
             os.makedirs(dest_dir, exist_ok=True)
         img.save(dest_path, "JPEG", quality=95)
+
+        # AI Vision Shield: Validar obligatoriamente con Gemini que sea viñeta de cómic real
+        try:
+            val = verify_visual_alignment_with_gemini(dest_path, "Comic book narrative art interior panel")
+            if not val.get("is_comic_panel", False) or val.get("score", 0) <= 2:
+                if os.path.exists(dest_path):
+                    os.remove(dest_path)
+                return False
+        except Exception:
+            pass
+
         return True
     except Exception:
         return False
@@ -424,6 +435,17 @@ def download_web_panel(url: str, dest_path: str, min_dim: int = 350) -> bool:
         if dest_dir:
             os.makedirs(dest_dir, exist_ok=True)
         img.save(dest_path, "JPEG", quality=95)
+
+        # AI Vision Shield: Validar obligatoriamente con Gemini que sea viñeta de cómic real
+        try:
+            val = verify_visual_alignment_with_gemini(dest_path, "Comic book narrative art interior panel")
+            if not val.get("is_comic_panel", False) or val.get("score", 0) <= 2:
+                if os.path.exists(dest_path):
+                    os.remove(dest_path)
+                return False
+        except Exception:
+            pass
+
         return True
     except Exception:
         return False
