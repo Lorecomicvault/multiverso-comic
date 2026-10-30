@@ -2425,5 +2425,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "29_daredevil_sentido_radar",
+    "title": "¡El Sentido Radar de Daredevil! La Visión que Superó la Ceguera 📡🦯",
+    "description": "¿Cómo ve el mundo Daredevil? La asombrosa representación visual del sentido radar de Matt Murdock creada por Mark Waid y Paolo Rivera.",
+    "hashtags": "#Daredevil #MattMurdock #MarkWaid #MarvelComics #Marvel #HellsKitchen #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/29_dia7_10h_daredevil_sentido_radar/video.mp4",
+    "timestamp": "2026-10-30 14:04:20",
+    "social_links": {
+      "facebook": "1805241387376174",
+      "instagram": "https://www.instagram.com/reel/DfHwJ8KDMA0/",
+      "tiktok": "6ae4a3d39394ea34c1194821",
+      "youtube": "6ae4a3e19394ea34c1194bd0"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
