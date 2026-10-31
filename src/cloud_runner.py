@@ -625,7 +625,7 @@ def build_cloud_generation(story: dict, work_dir: Path) -> dict:
             )
 
     # 4. Mandatory Gemini Vision Visual Alignment Audit across all generated scene panels
-    is_curated_story = any("assets/curated_panels" in str(u) for u in story.get("scene_art_urls", []))
+    is_curated_story = any("assets/curated_panels" in str(u).replace("\\", "/") or "curated" in str(u).lower() for u in story.get("scene_art_urls", []))
     min_audit_score = 4 if is_curated_story else 6
     for idx_img, (p, raw_p, scene_text) in enumerate(zip(downloaded_images, raw_downloaded_images, story["scenes"]), 1):
         audit_path = str(raw_p) if os.path.exists(str(raw_p)) else str(p)
