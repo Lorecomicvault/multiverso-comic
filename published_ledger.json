@@ -7,7 +7,15 @@
     "date": "2026-09-02 02:02",
     "mode": "live_release",
     "video_file": "Franklin_Richards_Lore_Real_Comic.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "franklin richards el nino que crea universos",
+    "tokens": [
+      "franklin",
+      "richards",
+      "nino",
+      "crea",
+      "universos"
+    ]
   },
   {
     "id": "red_hood_capucha_roja",
@@ -17,7 +25,17 @@
     "date": "2026-09-02 17:34",
     "mode": "live_release",
     "video_file": "Batman_Bajo_la_Capucha_Roja_El_Regreso_de_Jason_Todd.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "batman bajo la capucha roja el regreso de jason todd",
+    "tokens": [
+      "batman",
+      "bajo",
+      "capucha",
+      "roja",
+      "regreso",
+      "jason",
+      "todd"
+    ]
   },
   {
     "id": "secret_wars_dios_doom",
@@ -27,7 +45,15 @@
     "date": "2026-09-03 00:50",
     "mode": "live_release",
     "video_file": "God_Emperor_Doom_El_Amo_del_Multiverso.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "secret wars dios emperor doom y el fin del multiverso",
+    "tokens": [
+      "secret",
+      "wars",
+      "dios",
+      "emperor",
+      "doom"
+    ]
   },
   {
     "id": "muerte_superman",
@@ -37,7 +63,19 @@
     "date": "2026-09-03 18:22",
     "mode": "live_release",
     "video_file": "La_Muerte_de_Superman_El_Sacrificio_Final.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1097807469486509",
+    "published_at": "2026-09-03T18:22:55+0000",
+    "tokens": [
+      "muerte",
+      "superman",
+      "sacrificio",
+      "final",
+      "ante",
+      "doomsday"
+    ],
+    "ig_media_id": "18091911425134733",
+    "normalized_title": "la muerte de superman el sacrificio final ante doomsday"
   },
   {
     "id": "killing_joke_broma_asesina",
@@ -47,7 +85,15 @@
     "date": "2026-09-04 01:23",
     "mode": "live_release",
     "video_file": "Batman_La_Broma_Asesina_The_Killing_Joke.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "batman la broma asesina the killing joke",
+    "tokens": [
+      "batman",
+      "broma",
+      "asesina",
+      "killing",
+      "joke"
+    ]
   },
   {
     "id": "civil_war_caida_heroes",
@@ -57,7 +103,14 @@
     "date": "2026-09-04 19:15",
     "mode": "live_release",
     "video_file": "Civil_War_La_Caida_de_los_Heroes.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "civil war la tragica caida de los heroes",
+    "tokens": [
+      "civil",
+      "tragica",
+      "caida",
+      "heroes"
+    ]
   },
   {
     "id": "robo_del_mysterium",
@@ -67,7 +120,16 @@
     "date": "2026-09-05 01:13",
     "mode": "live_release",
     "video_file": "El_Robo_del_Mysterium_Tony_Stark_y_Emma_Frost.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "el robo del mysterium tony stark y emma frost",
+    "tokens": [
+      "robo",
+      "mysterium",
+      "tony",
+      "stark",
+      "emma",
+      "frost"
+    ]
   },
   {
     "id": "world_war_hulk_coloso",
@@ -77,7 +139,14 @@
     "date": "2026-09-05 17:25",
     "mode": "live_release",
     "video_file": "World_War_Hulk_La_Venganza_del_Coloso.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "world war hulk la venganza del rompemundos",
+    "tokens": [
+      "world",
+      "hulk",
+      "venganza",
+      "rompemundos"
+    ]
   },
   {
     "id": "torre_de_babel",
@@ -87,7 +156,15 @@
     "date": "2026-09-06 01:19",
     "mode": "live_release",
     "video_file": "Batman_Torre_de_Babel_Los_Planes_Secretos.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "batman torre de babel y los planes de contingencia",
+    "tokens": [
+      "batman",
+      "torre",
+      "babel",
+      "planes",
+      "contingencia"
+    ]
   },
   {
     "id": "blackest_night_rebelion",
@@ -97,7 +174,14 @@
     "date": "2026-09-06 17:44",
     "mode": "live_release",
     "video_file": "Blackest_Night_La_Rebelion_de_los_Muertos.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "blackest night la rebelion de los muertos",
+    "tokens": [
+      "blackest",
+      "night",
+      "rebelion",
+      "muertos"
+    ]
   },
   {
     "id": "thanos_wins_fin_existencia",
@@ -107,7 +191,14 @@
     "date": "2026-09-07 01:10",
     "mode": "live_release",
     "video_file": "Thanos_Wins_El_Fin_de_la_Existencia.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "thanos wins el fin de toda la existencia",
+    "tokens": [
+      "thanos",
+      "wins",
+      "toda",
+      "existencia"
+    ]
   },
   {
     "id": "crisis_tierras_infinitas",
@@ -117,7 +208,15 @@
     "date": "2026-09-07 17:17",
     "mode": "live_release",
     "video_file": "Crisis_en_Tierras_Infinitas_El_Sacrificio_de_los_Heroes.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "crisis en tierras infinitas el sacrificio de los heroes",
+    "tokens": [
+      "crisis",
+      "tierras",
+      "infinitas",
+      "sacrificio",
+      "heroes"
+    ]
   },
   {
     "id": "marvel_zombies",
@@ -127,7 +226,11 @@
     "date": "2026-09-08 01:10",
     "mode": "live_release",
     "video_file": "Marvel_Zombies_El_Hambre_del_Multiverso.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "marvel zombies el hambre del multiverso",
+    "tokens": [
+      "hambre"
+    ]
   },
   {
     "id": "injustice_regimen_superman",
@@ -137,7 +240,14 @@
     "date": "2026-09-08 18:05",
     "mode": "live_release",
     "video_file": "Injustice_El_Regimen_del_Hombre_de_Acero.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "injustice el regimen del hombre de acero",
+    "tokens": [
+      "injustice",
+      "regimen",
+      "hombre",
+      "acero"
+    ]
   },
   {
     "id": "knull_dios_simbiontes",
@@ -147,7 +257,14 @@
     "date": "2026-09-01 12:00",
     "mode": "live_release",
     "video_file": "Knull_El_Dios_de_los_Simbiontes.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "knull el dios de los simbiontes y la necroespada",
+    "tokens": [
+      "knull",
+      "dios",
+      "simbiontes",
+      "necroespada"
+    ]
   },
   {
     "id": "batman_que_rie",
@@ -157,7 +274,13 @@
     "date": "2026-09-01 13:00",
     "mode": "live_release",
     "video_file": "El_Batman_Que_Rie_Pesadilla_del_Multiverso.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "el batman que rie la pesadilla del multiverso oscuro",
+    "tokens": [
+      "batman",
+      "pesadilla",
+      "oscuro"
+    ]
   },
   {
     "id": "gorr_carnicero_dioses",
@@ -167,7 +290,15 @@
     "date": "2026-09-01 14:00",
     "mode": "live_release",
     "video_file": "Gorr_el_Carnicero_de_Dioses.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "gorr el carnicero de dioses la venganza de la necroespada",
+    "tokens": [
+      "gorr",
+      "carnicero",
+      "dioses",
+      "venganza",
+      "necroespada"
+    ]
   },
   {
     "id": "flashpoint_paradoja",
@@ -177,7 +308,14 @@
     "date": "2026-09-01 15:00",
     "mode": "live_release",
     "video_file": "Flashpoint_La_Paradoja_del_Tiempo.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "flashpoint la paradoja que destruyo el mundo",
+    "tokens": [
+      "flashpoint",
+      "paradoja",
+      "destruyo",
+      "mundo"
+    ]
   },
   {
     "id": "dark_nights_metal",
@@ -187,7 +325,15 @@
     "date": "2026-09-01 16:00",
     "mode": "live_release",
     "video_file": "Dark_Nights_Metal_La_Invasion_del_Multiverso_Oscuro.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "dark nights metal la invasion del multiverso oscuro",
+    "tokens": [
+      "dark",
+      "nights",
+      "metal",
+      "invasion",
+      "oscuro"
+    ]
   },
   {
     "id": "old_man_logan",
@@ -197,7 +343,13 @@
     "date": "2026-09-01 17:00",
     "mode": "live_release",
     "video_file": "Wolverine_Old_Man_Logan_La_Masacre_de_los_X-Men.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "wolverine old man logan la masacre de los x men",
+    "tokens": [
+      "wolverine",
+      "logan",
+      "masacre"
+    ]
   },
   {
     "id": "muerte_gwen_stacy",
@@ -207,7 +359,16 @@
     "date": "2026-09-01 18:00",
     "mode": "live_release",
     "video_file": "Spider-Man_La_Muerte_de_Gwen_Stacy_Historia_Real.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "spider man la tragica noche en que murio gwen stacy",
+    "tokens": [
+      "spider",
+      "tragica",
+      "noche",
+      "murio",
+      "gwen",
+      "stacy"
+    ]
   },
   {
     "id": "superboy_prime",
@@ -217,7 +378,14 @@
     "date": "2026-09-01 19:00",
     "mode": "live_release",
     "video_file": "Superboy_Prime_El_Destructor_de_la_Realidad.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "superboy prime el destructor de la realidad",
+    "tokens": [
+      "superboy",
+      "prime",
+      "destructor",
+      "realidad"
+    ]
   },
   {
     "id": "cosmic_ghost_rider",
@@ -227,7 +395,15 @@
     "date": "2026-09-01 20:00",
     "mode": "live_release",
     "video_file": "Cosmic_Ghost_Rider_El_Vengador_del_Infinito.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "cosmic ghost rider el castigador del infinito",
+    "tokens": [
+      "cosmic",
+      "ghost",
+      "rider",
+      "castigador",
+      "infinito"
+    ]
   },
   {
     "id": "batman_corte_de_los_buhos",
@@ -237,7 +413,15 @@
     "date": "2026-09-01 21:00",
     "mode": "live_release",
     "video_file": "Batman_La_Corte_de_los_Buhos.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "batman la corte de los buhos el laberinto de gotham",
+    "tokens": [
+      "batman",
+      "corte",
+      "buhos",
+      "laberinto",
+      "gotham"
+    ]
   },
   {
     "id": "batman_knightfall_quiebre",
@@ -247,7 +431,15 @@
     "date": "2026-09-12 16:07",
     "mode": "local_production",
     "video_file": "Batman_Knightfall_-_El_Día_en_que_Bane_Quebró_al_Murciélago.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "batman knightfall el dia en que bane quebro al murcielago",
+    "tokens": [
+      "batman",
+      "knightfall",
+      "bane",
+      "quebro",
+      "murcielago"
+    ]
   },
   {
     "id": "magneto_arranca_adamantium_wolverine",
@@ -257,7 +449,15 @@
     "date": "2026-09-12 16:10",
     "mode": "local_production",
     "video_file": "Magneto_vs_Wolverine_La_Extracción_Brutal_del_Adamantium.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "magneto vs wolverine la extraccion brutal del adamantium",
+    "tokens": [
+      "magneto",
+      "wolverine",
+      "extraccion",
+      "brutal",
+      "adamantium"
+    ]
   },
   {
     "id": "batman_muerte_en_la_familia",
@@ -267,7 +467,16 @@
     "date": "2026-09-12 19:57",
     "mode": "local_production",
     "video_file": "Batman_Una_Muerte_en_la_Familia_-_El_Asesinato_de_Jason_Todd.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "batman una muerte en la familia el asesinato de jason todd",
+    "tokens": [
+      "batman",
+      "muerte",
+      "familia",
+      "asesinato",
+      "jason",
+      "todd"
+    ]
   },
   {
     "id": "green_lantern_crepusculo_esmeralda",
@@ -277,7 +486,16 @@
     "date": "2026-09-12 20:00",
     "mode": "local_production",
     "video_file": "Green_Lantern_Crepúsculo_Esmeralda_-_La_Caída_de_Hal_Jordan.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "green lantern crepusculo esmeralda la caida de hal jordan",
+    "tokens": [
+      "green",
+      "lantern",
+      "crepusculo",
+      "esmeralda",
+      "caida",
+      "jordan"
+    ]
   },
   {
     "id": "all_star_superman_sacrificio",
@@ -287,7 +505,16 @@
     "date": "2026-09-12 20:02",
     "mode": "local_production",
     "video_file": "All-Star_Superman_El_Sacrificio_Final_del_Hombre_del_Mañana.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "all star superman el sacrificio final del hombre del manana",
+    "tokens": [
+      "star",
+      "superman",
+      "sacrificio",
+      "final",
+      "hombre",
+      "manana"
+    ]
   },
   {
     "id": "batman_hush_silencio",
@@ -297,7 +524,15 @@
     "date": "2026-09-12 20:05",
     "mode": "local_production",
     "video_file": "Batman_Silencio_Hush_-_La_Conspiración_Definitiva.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "batman silencio hush la conspiracion definitiva",
+    "tokens": [
+      "batman",
+      "silencio",
+      "hush",
+      "conspiracion",
+      "definitiva"
+    ]
   },
   {
     "id": "spiderman_kravens_last_hunt",
@@ -307,7 +542,16 @@
     "date": "2026-09-12 20:07",
     "mode": "local_production",
     "video_file": "Spider-Man_La_Última_Cacería_de_Kraven_-_Enterrado_Vivo.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "spider man la ultima caceria de kraven enterrado vivo",
+    "tokens": [
+      "spider",
+      "ultima",
+      "caceria",
+      "kraven",
+      "enterrado",
+      "vivo"
+    ]
   },
   {
     "id": "sentry_vs_ares_siege",
@@ -317,7 +561,15 @@
     "date": "2026-09-13 17:11",
     "mode": "local_production",
     "video_file": "Siege_Sentry_vs_Ares_-_La_Muerte_Más_Brutal_de_Marvel.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "siege sentry vs ares la muerte mas brutal de marvel",
+    "tokens": [
+      "siege",
+      "sentry",
+      "ares",
+      "muerte",
+      "brutal"
+    ]
   },
   {
     "id": "reverse_flash_odio_thawne",
@@ -327,7 +579,16 @@
     "date": "2026-09-13 17:12",
     "mode": "local_production",
     "video_file": "Flash_El_Reverso_-_La_Noche_en_que_Mató_a_Nora_Allen.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "flash el reverso la noche en que mato a nora allen",
+    "tokens": [
+      "flash",
+      "reverso",
+      "noche",
+      "mato",
+      "nora",
+      "allen"
+    ]
   },
   {
     "id": "wolverine_arma_x_origen",
@@ -337,7 +598,14 @@
     "date": "2026-09-13 17:13",
     "mode": "local_production",
     "video_file": "Wolverine_Arma_X_-_El_Experimento_Más_Sangriento.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "wolverine arma x el experimento mas sangriento",
+    "tokens": [
+      "wolverine",
+      "arma",
+      "experimento",
+      "sangriento"
+    ]
   },
   {
     "id": "emperor_joker_poder_divino",
@@ -347,7 +615,17 @@
     "date": "2026-09-13 17:13",
     "mode": "local_production",
     "video_file": "Superman_Emperador_Joker_-_Cuando_el_Joker_se_Volvió_Dios.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "superman emperador joker cuando el joker se volvio dios",
+    "tokens": [
+      "superman",
+      "emperador",
+      "joker",
+      "cuando",
+      "joker",
+      "volvio",
+      "dios"
+    ]
   },
   {
     "id": "spiderman_back_in_black_kingpin",
@@ -357,7 +635,16 @@
     "date": "2026-09-13 17:14",
     "mode": "local_production",
     "video_file": "Spider-Man_Back_in_Black_-_La_Venganza_Contra_Kingpin.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "spider man back in black la venganza contra kingpin",
+    "tokens": [
+      "spider",
+      "back",
+      "black",
+      "venganza",
+      "contra",
+      "kingpin"
+    ]
   },
   {
     "id": "superior_spiderman_mandibula_scorpion",
@@ -367,7 +654,15 @@
     "date": "2026-09-13 17:23",
     "mode": "local_production",
     "video_file": "Superior_Spider-Man_El_Golpe_que_Destrozó_a_Escorpión.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "superior spider man el golpe que destrozo a escorpion",
+    "tokens": [
+      "superior",
+      "spider",
+      "golpe",
+      "destrozo",
+      "escorpion"
+    ]
   },
   {
     "id": "deathstroke_identity_crisis",
@@ -377,7 +672,14 @@
     "date": "2026-09-17 17:36",
     "mode": "local_production",
     "video_file": "Deathstroke_La_Humillación_a_la_Liga_de_la_Justicia.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "deathstroke la humillacion a la liga de la justicia",
+    "tokens": [
+      "deathstroke",
+      "humillacion",
+      "liga",
+      "justicia"
+    ]
   },
   {
     "id": "thor_mata_galactus_heraldo",
@@ -387,7 +689,15 @@
     "date": "2026-09-13 17:24",
     "mode": "local_production",
     "video_file": "Thor_vs_Galactus_La_Muerte_del_Devorador_de_Mundos.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "thor vs galactus la muerte del devorador de mundos",
+    "tokens": [
+      "thor",
+      "galactus",
+      "muerte",
+      "devorador",
+      "mundos"
+    ]
   },
   {
     "id": "batman_the_devastator_doomsday",
@@ -397,7 +707,15 @@
     "date": "2026-09-13 17:25",
     "mode": "local_production",
     "video_file": "Batman_Devastator_El_Monstruo_que_Destruyó_a_Superman.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "batman devastator el monstruo que destruyo a superman",
+    "tokens": [
+      "batman",
+      "devastator",
+      "monstruo",
+      "destruyo",
+      "superman"
+    ]
   },
   {
     "id": "absolute_carnage_cletus_kasady",
@@ -407,7 +725,16 @@
     "date": "2026-09-13 17:26",
     "mode": "local_production",
     "video_file": "Absolute_Carnage_La_Cacería_Sangrienta_de_Cletus_Kasady.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "absolute carnage la caceria sangrienta de cletus kasady",
+    "tokens": [
+      "absolute",
+      "carnage",
+      "caceria",
+      "sangrienta",
+      "cletus",
+      "kasady"
+    ]
   },
   {
     "id": "batman_devastator_parte_2_invasion",
@@ -417,7 +744,16 @@
     "date": "2026-09-15 17:32",
     "mode": "local_production",
     "video_file": "Batman_Devastator_Parte_2_La_Invasión_del_Virus_Doomsday.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "batman devastator parte 2 la invasion del virus doomsday",
+    "tokens": [
+      "batman",
+      "devastator",
+      "parte",
+      "invasion",
+      "virus",
+      "doomsday"
+    ]
   },
   {
     "id": "batman_flashpoint_martha_wayne_joker",
@@ -427,7 +763,20 @@
     "date": "2026-09-16 20:41",
     "mode": "local_production",
     "video_file": "Batman_Flashpoint_Cuando_Martha_Wayne_se_Convirtió_en_el_Joker.mp4",
-    "status": "produced"
+    "status": "produced",
+    "fb_video_id": "1423320799905164",
+    "published_at": "2026-09-17T02:11:26+0000",
+    "tokens": [
+      "batman",
+      "flashpoint",
+      "cuando",
+      "martha",
+      "wayne",
+      "convirtio",
+      "joker"
+    ],
+    "ig_media_id": "17945246619324773",
+    "normalized_title": "batman flashpoint cuando martha wayne se convirtio en el joker"
   },
   {
     "id": "batman_vs_superman_dark_knight_returns",
@@ -437,7 +786,16 @@
     "date": "2026-09-18 19:34",
     "mode": "local_production",
     "video_file": "The_Dark_Knight_Returns_El_Día_en_que_Batman_Humilló_a_Superman.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "the dark knight returns el dia en que batman humillo a superman",
+    "tokens": [
+      "dark",
+      "knight",
+      "returns",
+      "batman",
+      "humillo",
+      "superman"
+    ]
   },
   {
     "id": "deadpool_kills_thor",
@@ -447,7 +805,16 @@
     "date": "2026-09-21 10:46",
     "mode": "local_production",
     "video_file": "Deadpool_Mata_a_Thor_La_Muerte_Más_Brutal_e_Ingeniosa_de_Marvel.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "deadpool mata a thor la muerte mas brutal e ingeniosa de marvel",
+    "tokens": [
+      "deadpool",
+      "mata",
+      "thor",
+      "muerte",
+      "brutal",
+      "ingeniosa"
+    ]
   },
   {
     "id": "wonder_woman_kills_maxwell_lord",
@@ -457,7 +824,16 @@
     "date": "2026-09-18 19:37",
     "mode": "local_production",
     "video_file": "Wonder_Woman_La_Ejecución_Fría_de_Maxwell_Lord.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "wonder woman la ejecucion fria de maxwell lord",
+    "tokens": [
+      "wonder",
+      "woman",
+      "ejecucion",
+      "fria",
+      "maxwell",
+      "lord"
+    ]
   },
   {
     "id": "batman_the_merciless_ares",
@@ -467,7 +843,16 @@
     "date": "2026-09-18 19:38",
     "mode": "local_production",
     "video_file": "Batman_The_Merciless_El_Batman_que_se_Convirtió_en_el_Dios_de_la_Guerra.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "batman the merciless el batman que se convirtio en el dios de la guerra",
+    "tokens": [
+      "batman",
+      "merciless",
+      "batman",
+      "convirtio",
+      "dios",
+      "guerra"
+    ]
   },
   {
     "id": "captain_america_secret_empire_hail_hydra",
@@ -477,7 +862,15 @@
     "date": "2026-09-18 19:39",
     "mode": "local_production",
     "video_file": "Capitán_América_La_Traición_de_Hail_Hydra.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "capitan america la traicion de hail hydra",
+    "tokens": [
+      "capitan",
+      "america",
+      "traicion",
+      "hail",
+      "hydra"
+    ]
   },
   {
     "id": "injustice_alfred_golpea_superman",
@@ -487,7 +880,14 @@
     "date": "2026-09-21 15:12",
     "mode": "local_production",
     "video_file": "Injustice_El_Día_en_que_Alfred_Destrozó_a_Superman.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "injustice el dia en que alfred destrozo a superman",
+    "tokens": [
+      "injustice",
+      "alfred",
+      "destrozo",
+      "superman"
+    ]
   },
   {
     "id": "superior_spiderman_arranca_mandibula_scorpion",
@@ -497,7 +897,16 @@
     "date": "2026-09-21 15:12",
     "mode": "local_production",
     "video_file": "Superior_Spider-Man_El_Golpe_que_Arrancó_la_Mandíbula_de_Scorpion.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "superior spider man el golpe que arranco la mandibula de scorpion",
+    "tokens": [
+      "superior",
+      "spider",
+      "golpe",
+      "arranco",
+      "mandibula",
+      "scorpion"
+    ]
   },
   {
     "id": "secret_wars_god_doom_arranca_columna_thanos",
@@ -507,7 +916,18 @@
     "date": "2026-09-21 15:12",
     "mode": "local_production",
     "video_file": "Secret_Wars_God_Emperor_Doom_Destruye_a_Thanos_Arrancándole_la_Columna.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "secret wars god emperor doom destruye a thanos arrancandole la columna",
+    "tokens": [
+      "secret",
+      "wars",
+      "emperor",
+      "doom",
+      "destruye",
+      "thanos",
+      "arrancandole",
+      "columna"
+    ]
   },
   {
     "id": "batman_dios_del_conocimiento_mobius",
@@ -517,7 +937,20 @@
     "date": "2026-09-21 15:12",
     "mode": "local_production",
     "video_file": "Batman_Dios_del_Conocimiento_La_Silla_de_Mobius_y_los_Tres_Jokers.mp4",
-    "status": "produced"
+    "status": "produced",
+    "fb_video_id": "1415873473213126",
+    "published_at": "2026-09-25T23:08:00+0000",
+    "tokens": [
+      "batman",
+      "dios",
+      "conocimiento",
+      "silla",
+      "mobius",
+      "tres",
+      "jokers"
+    ],
+    "ig_media_id": "18128193673837686",
+    "normalized_title": "batman dios del conocimiento la silla de mobius y los tres jokers"
   },
   {
     "id": "batman_death_of_the_family_joker_rostro",
@@ -527,7 +960,20 @@
     "date": "2026-09-21 15:12",
     "mode": "local_production",
     "video_file": "Batman_Muerte_de_la_Familia_Cuando_el_Joker_se_Arrancó_el_Rostro.mp4",
-    "status": "produced"
+    "status": "produced",
+    "fb_video_id": "1714650330479863",
+    "published_at": "2026-09-23T02:55:05+0000",
+    "tokens": [
+      "batman",
+      "muerte",
+      "familia",
+      "cuando",
+      "joker",
+      "arranco",
+      "rostro"
+    ],
+    "ig_media_id": "18083744531507939",
+    "normalized_title": "batman muerte de la familia cuando el joker se arranco el rostro"
   },
   {
     "id": "house_of_m_las_tres_palabras_de_bruja_escarlata_qu",
@@ -537,7 +983,20 @@
     "date": "2026-09-26 18:00",
     "mode": "local_production",
     "video_file": "House_of_M_Las_Tres_Palabras_de_Bruja_Escarlata_que_Extinguieron_a_los_Mutantes.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "4401158283478731",
+    "published_at": "2026-09-23T23:04:14+0000",
+    "tokens": [
+      "house",
+      "tres",
+      "palabras",
+      "bruja",
+      "escarlata",
+      "extinguieron",
+      "mutantes"
+    ],
+    "ig_media_id": "18081310394361430",
+    "normalized_title": "house of m las tres palabras de bruja escarlata que extinguieron a los mutantes"
   },
   {
     "id": "hulk_maestro_el_tirano_del_futuro_imperfecto",
@@ -547,7 +1006,15 @@
     "date": "2026-09-26 18:00",
     "mode": "local_production",
     "video_file": "Hulk_Maestro_El_Tirano_del_Futuro_Imperfecto.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "hulk maestro el tirano del futuro imperfecto",
+    "tokens": [
+      "hulk",
+      "maestro",
+      "tirano",
+      "futuro",
+      "imperfecto"
+    ]
   },
   {
     "id": "moon_knight_la_venganza_de_khonshu_y_la_mutilacin_",
@@ -557,7 +1024,16 @@
     "date": "2026-09-26 18:00",
     "mode": "local_production",
     "video_file": "Moon_Knight_La_Venganza_de_Khonshu_y_la_Mutilación_de_Bushman.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "moon knight la venganza de khonshu y la mutilacion de bushman",
+    "tokens": [
+      "moon",
+      "knight",
+      "venganza",
+      "khonshu",
+      "mutilacion",
+      "bushman"
+    ]
   },
   {
     "id": "secret_wars_el_fin_del_multiverso_y_dios_doom",
@@ -567,7 +1043,14 @@
     "date": "2026-09-26 18:00",
     "mode": "local_production",
     "video_file": "Secret_Wars_El_Fin_del_Multiverso_y_Dios_Doom.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "secret wars el fin del multiverso y dios doom",
+    "tokens": [
+      "secret",
+      "wars",
+      "dios",
+      "doom"
+    ]
   },
   {
     "id": "superior_iron_man_el_tony_stark_socipata_que_humil",
@@ -577,7 +1060,17 @@
     "date": "2026-09-26 18:00",
     "mode": "local_production",
     "video_file": "Superior_Iron_Man_El_Tony_Stark_Sociópata_que_Humilló_a_Daredevil.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "superior iron man el tony stark sociopata que humillo a daredevil",
+    "tokens": [
+      "superior",
+      "iron",
+      "tony",
+      "stark",
+      "sociopata",
+      "humillo",
+      "daredevil"
+    ]
   },
   {
     "id": "the_immortal_hulk_el_experimento_donde_descuartiza",
@@ -587,7 +1080,17 @@
     "date": "2026-09-26 18:00",
     "mode": "local_production",
     "video_file": "The_Immortal_Hulk_El_Experimento_donde_Descuartizaron_a_Hulk_en_Frascos.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "the immortal hulk el experimento donde descuartizaron a hulk en frascos",
+    "tokens": [
+      "immortal",
+      "hulk",
+      "experimento",
+      "donde",
+      "descuartizaron",
+      "hulk",
+      "frascos"
+    ]
   },
   {
     "id": "ultimate_wolverine_vs_hulk_el_da_en_que_hulk_parti",
@@ -597,7 +1100,16 @@
     "date": "2026-09-26 18:00",
     "mode": "local_production",
     "video_file": "Ultimate_Wolverine_vs_Hulk_El_Día_en_que_Hulk_Partió_en_Dos_a_Wolverine.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "ultimate wolverine vs hulk el dia en que hulk partio en dos a wolverine",
+    "tokens": [
+      "ultimate",
+      "wolverine",
+      "hulk",
+      "hulk",
+      "partio",
+      "wolverine"
+    ]
   },
   {
     "id": "world_war_hulk_la_furia_del_destructor_de_mundos",
@@ -607,7 +1119,15 @@
     "date": "2026-09-26 18:00",
     "mode": "local_production",
     "video_file": "World_War_Hulk_La_Furia_del_Destructor_de_Mundos.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "world war hulk la furia del destructor de mundos",
+    "tokens": [
+      "world",
+      "hulk",
+      "furia",
+      "destructor",
+      "mundos"
+    ]
   },
   {
     "id": "batman_red_death_el_da_en_que_bruce_rob_la_speed_f",
@@ -617,7 +1137,16 @@
     "date": "2026-09-26 18:00",
     "mode": "local_production",
     "video_file": "Batman_Red_Death_El_Día_en_que_Bruce_Robó_la_Speed_Force.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "batman red death el dia en que bruce robo la speed force",
+    "tokens": [
+      "batman",
+      "death",
+      "bruce",
+      "robo",
+      "speed",
+      "force"
+    ]
   },
   {
     "id": "black_manta_el_asesinato_del_hijo_de_aquaman",
@@ -627,7 +1156,15 @@
     "date": "2026-09-26 18:00",
     "mode": "local_production",
     "video_file": "Black_Manta_El_Asesinato_del_Hijo_de_Aquaman.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "black manta el asesinato del hijo de aquaman",
+    "tokens": [
+      "black",
+      "manta",
+      "asesinato",
+      "hijo",
+      "aquaman"
+    ]
   },
   {
     "id": "daredevil_shadowland_la_muerte_de_bullseye",
@@ -637,7 +1174,14 @@
     "date": "2026-09-26 18:00",
     "mode": "local_production",
     "video_file": "Daredevil_Shadowland_La_Muerte_de_Bullseye.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "daredevil shadowland la muerte de bullseye",
+    "tokens": [
+      "daredevil",
+      "shadowland",
+      "muerte",
+      "bullseye"
+    ]
   },
   {
     "id": "dceased_el_da_en_que_john_constantine_asesin_al_de",
@@ -647,7 +1191,16 @@
     "date": "2026-09-26 18:00",
     "mode": "local_production",
     "video_file": "DCeased_El_Día_en_que_John_Constantine_Asesinó_al_Demonio_Trigon.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "dceased el dia en que john constantine asesino al demonio trigon",
+    "tokens": [
+      "dceased",
+      "john",
+      "constantine",
+      "asesino",
+      "demonio",
+      "trigon"
+    ]
   },
   {
     "id": "flashpoint_batman_el_da_en_que_thomas_wayne_ejecut",
@@ -657,7 +1210,16 @@
     "date": "2026-09-26 18:00",
     "mode": "local_production",
     "video_file": "Flashpoint_Batman_El_Día_en_que_Thomas_Wayne_Ejecutó_a_Joe_Chill.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "flashpoint batman el dia en que thomas wayne ejecuto a joe chill",
+    "tokens": [
+      "flashpoint",
+      "batman",
+      "thomas",
+      "wayne",
+      "ejecuto",
+      "chill"
+    ]
   },
   {
     "id": "injustice_ano_1_la_caida_de_superman_historia_comp",
@@ -667,7 +1229,15 @@
     "date": "2026-09-26 18:00",
     "mode": "local_production",
     "video_file": "Injustice_Ano_1_La_Caida_de_Superman_Historia_Completa_16x9.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "injustice ano 1 la caida de superman historia completa 16x9",
+    "tokens": [
+      "injustice",
+      "caida",
+      "superman",
+      "completa",
+      "16x9"
+    ]
   },
   {
     "id": "world_war_hulk_cuando_ghost_rider_se_neg_a_pelear_",
@@ -677,7 +1247,19 @@
     "date": "2026-09-26 18:00",
     "mode": "local_production",
     "video_file": "World_War_Hulk_Cuando_Ghost_Rider_se_Negó_a_Pelear_contra_Hulk.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "world war hulk cuando ghost rider se nego a pelear contra hulk",
+    "tokens": [
+      "world",
+      "hulk",
+      "cuando",
+      "ghost",
+      "rider",
+      "nego",
+      "pelear",
+      "contra",
+      "hulk"
+    ]
   },
   {
     "id": "flash_godspeed_el_ladron_de_velocidad",
@@ -687,7 +1269,15 @@
     "date": "2026-09-27 15:07",
     "mode": "render_only",
     "video_file": "The_Flash_Godspeed_el_Despiadado_Asesino_de_Velocistas.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "the flash godspeed el despiadado asesino de velocistas",
+    "tokens": [
+      "flash",
+      "godspeed",
+      "despiadado",
+      "asesino",
+      "velocistas"
+    ]
   },
   {
     "id": "sinestro_corps_war",
@@ -697,7 +1287,20 @@
     "date": "2026-09-27 17:05",
     "mode": "live_release",
     "video_file": "La_Guerra_de_los_Sinestro_Corps_El_Terror_Amarillo_Conquista_el_Cosmos.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1961374101202346",
+    "published_at": "2026-09-27T17:04:36+0000",
+    "tokens": [
+      "guerra",
+      "sinestro",
+      "corps",
+      "terror",
+      "amarillo",
+      "conquista",
+      "cosmos"
+    ],
+    "ig_media_id": "18021427247722612",
+    "normalized_title": "la guerra de los sinestro corps el terror amarillo conquista el cosmos"
   },
   {
     "id": "marvel_ruins_el_universo_maldito",
@@ -707,7 +1310,19 @@
     "date": "2026-09-27 22:05",
     "mode": "live_release",
     "video_file": "Marvel_Ruins_El_Universo_Donde_Todo_lo_que_Podía_Salir_Mal_Salió_Mal.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1433056325556708",
+    "published_at": "2026-09-27T22:04:27+0000",
+    "tokens": [
+      "ruins",
+      "donde",
+      "todo",
+      "podia",
+      "salir",
+      "salio"
+    ],
+    "ig_media_id": "17888769318615063",
+    "normalized_title": "marvel ruins el universo donde todo lo que podia salir mal salio mal"
   },
   {
     "id": "daredevil_born_again_kingpin",
@@ -717,7 +1332,19 @@
     "date": "2026-09-28 01:04",
     "mode": "live_release",
     "video_file": "Daredevil_Born_Again_y_la_Caida_de_Matt_Murdock.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1016652648100392",
+    "published_at": "2026-09-28T01:04:04+0000",
+    "tokens": [
+      "daredevil",
+      "born",
+      "again",
+      "caida",
+      "matt",
+      "murdock"
+    ],
+    "ig_media_id": "18087881480488134",
+    "normalized_title": "daredevil born again y la caida de matt murdock"
   },
   {
     "id": "batman_grim_knight_crime_alley",
@@ -727,7 +1354,17 @@
     "date": "2026-09-28 10:01",
     "mode": "local_production",
     "video_file": "The_Grim_Knight_El_Batman_que_Disparó_a_Matar_en_Crime_Alley.mp4",
-    "status": "produced"
+    "status": "produced",
+    "normalized_title": "the grim knight el batman que disparo a matar en crime alley",
+    "tokens": [
+      "grim",
+      "knight",
+      "batman",
+      "disparo",
+      "matar",
+      "crime",
+      "alley"
+    ]
   },
   {
     "id": "flash_forward_wally_west_doctor_manhattan",
@@ -737,7 +1374,20 @@
     "date": "2026-09-28 15:44",
     "mode": "live_release",
     "video_file": "Flash_Forward_Wally_West_y_los_Poderes_de_Doctor_Manhattan.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2485657425291481",
+    "published_at": "2026-09-28T15:43:54+0000",
+    "tokens": [
+      "flash",
+      "forward",
+      "wally",
+      "west",
+      "poderes",
+      "doctor",
+      "manhattan"
+    ],
+    "ig_media_id": "17932644876142352",
+    "normalized_title": "flash forward wally west y los poderes de doctor manhattan"
   },
   {
     "id": "punisher_kills_marvel_universe",
@@ -747,7 +1397,17 @@
     "date": "2026-09-28 20:18",
     "mode": "live_release",
     "video_file": "The_Punisher_El_Día_en_que_Frank_Castle_Masacró_a_Marvel.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1813005416706388",
+    "published_at": "2026-09-28T20:17:44+0000",
+    "tokens": [
+      "punisher",
+      "frank",
+      "castle",
+      "masacro"
+    ],
+    "ig_media_id": "18118621458253370",
+    "normalized_title": "the punisher el dia en que frank castle masacro a marvel"
   },
   {
     "id": "black_adam_tercera_guerra_mundial",
@@ -757,7 +1417,20 @@
     "date": "2026-09-29 00:16",
     "mode": "live_release",
     "video_file": "Black_Adam_La_Masacre_que_Desató_la_Tercera_Guerra_Mundial.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1107103092213633",
+    "published_at": "2026-09-29T00:15:15+0000",
+    "tokens": [
+      "black",
+      "adam",
+      "masacre",
+      "desato",
+      "tercera",
+      "guerra",
+      "mundial"
+    ],
+    "ig_media_id": "18371495200242617",
+    "normalized_title": "black adam la masacre que desato la tercera guerra mundial"
   },
   {
     "id": "superman_red_son_comunismo",
@@ -767,7 +1440,18 @@
     "date": "2026-09-29 02:42",
     "mode": "live_release",
     "video_file": "Superman_Red_Son_El_Hijo_Rojo_de_la_Unión_Soviética.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1494575402716676",
+    "published_at": "2026-09-29T02:41:01+0000",
+    "tokens": [
+      "superman",
+      "hijo",
+      "rojo",
+      "union",
+      "sovietica"
+    ],
+    "ig_media_id": "17992015395029263",
+    "normalized_title": "superman red son el hijo rojo de la union sovietica"
   },
   {
     "id": "spider_man_spiders_shadow_kingpin",
@@ -777,7 +1461,19 @@
     "date": "2026-09-29 16:00",
     "mode": "live_release",
     "video_file": "Spider-Man_Spiders_Shadow_La_Ejecución_Sádica_de_Kingpin.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1424141016517632",
+    "published_at": "2026-09-29T15:59:15+0000",
+    "tokens": [
+      "spider",
+      "spider",
+      "shadow",
+      "ejecucion",
+      "sadica",
+      "kingpin"
+    ],
+    "ig_media_id": "17958808965210635",
+    "normalized_title": "spider man spider s shadow la ejecucion sadica de kingpin"
   },
   {
     "id": "hulk_the_end_ultimo_humano",
@@ -787,7 +1483,17 @@
     "date": "2026-09-29 17:07",
     "mode": "live_release",
     "video_file": "Hulk_The_End_El_Último_Ser_Vivo_en_la_Tierra.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1079859961622850",
+    "published_at": "2026-09-29T17:06:47+0000",
+    "tokens": [
+      "hulk",
+      "ultimo",
+      "vivo",
+      "tierra"
+    ],
+    "ig_media_id": "18636112297055009",
+    "normalized_title": "hulk the end el ultimo ser vivo en la tierra"
   },
   {
     "id": "dark_phoenix_genocidio_dbari",
@@ -797,7 +1503,20 @@
     "date": "2026-09-29 19:06",
     "mode": "live_release",
     "video_file": "Dark_Phoenix_El_Genocidio_Cósmico_de_Cinco_Mil_Millones_de_Vidas.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2013890712660508",
+    "published_at": "2026-09-29T19:05:22+0000",
+    "tokens": [
+      "dark",
+      "phoenix",
+      "genocidio",
+      "cosmico",
+      "cinco",
+      "millones",
+      "vidas"
+    ],
+    "ig_media_id": "18092580419267109",
+    "normalized_title": "dark phoenix el genocidio cosmico de cinco mil millones de vidas"
   },
   {
     "id": "ultron_unlimited_masacre_slorenia",
@@ -807,7 +1526,17 @@
     "date": "2026-09-29 22:07",
     "mode": "live_release",
     "video_file": "Ultron_Unlimited_La_Purga_de_Slorenia.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1804519870891005",
+    "published_at": "2026-09-29T22:06:15+0000",
+    "tokens": [
+      "ultron",
+      "unlimited",
+      "purga",
+      "slorenia"
+    ],
+    "ig_media_id": "18178469920442501",
+    "normalized_title": "ultron unlimited la purga de slorenia"
   },
   {
     "id": "wolverine_enemy_of_the_state",
@@ -817,7 +1546,19 @@
     "date": "2026-09-30 02:06",
     "mode": "live_release",
     "video_file": "Wolverine_Enemy_of_the_State_La_Masacre_Controlada_por_Hydra.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1728351861580396",
+    "published_at": "2026-09-30T02:05:34+0000",
+    "tokens": [
+      "wolverine",
+      "enemy",
+      "state",
+      "masacre",
+      "controlada",
+      "hydra"
+    ],
+    "ig_media_id": "17907120804334443",
+    "normalized_title": "wolverine enemy of the state la masacre controlada por hydra"
   },
   {
     "id": "lobo_genocidio_czarnia",
@@ -827,7 +1568,16 @@
     "date": "2026-09-30 14:08",
     "mode": "live_release",
     "video_file": "Lobo_El_Genocidio_de_Czarnia.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1460867595898757",
+    "published_at": "2026-09-30T14:07:45+0000",
+    "tokens": [
+      "lobo",
+      "genocidio",
+      "czarnia"
+    ],
+    "ig_media_id": "18190783825401678",
+    "normalized_title": "lobo el genocidio de czarnia"
   },
   {
     "id": "spawn_guerra_malebolgia",
@@ -837,7 +1587,19 @@
     "date": "2026-09-30 19:10",
     "mode": "live_release",
     "video_file": "Spawn_La_Guerra_Sangrienta_Contra_Malebolgia_en_el_Infierno.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1121534230395823",
+    "published_at": "2026-09-30T19:10:03+0000",
+    "tokens": [
+      "spawn",
+      "guerra",
+      "sangrienta",
+      "contra",
+      "malebolgia",
+      "infierno"
+    ],
+    "ig_media_id": "18078879476737139",
+    "normalized_title": "spawn la guerra sangrienta contra malebolgia en el infierno"
   },
   {
     "id": "magneto_ultimatum_genocidio",
@@ -847,7 +1609,16 @@
     "date": "2026-09-30 22:09",
     "mode": "live_release",
     "video_file": "Magneto_El_Día_que_Ahogó_al_Mundo.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "28505318962463252",
+    "published_at": "2026-09-30T22:08:16+0000",
+    "tokens": [
+      "magneto",
+      "ahogo",
+      "mundo"
+    ],
+    "ig_media_id": "18013889264953952",
+    "normalized_title": "magneto el dia que ahogo al mundo"
   },
   {
     "id": "invincible_omni_man_massacre",
@@ -857,7 +1628,18 @@
     "date": "2026-10-01 02:07",
     "mode": "live_release",
     "video_file": "Omni-Man_La_Brutal_Masacre_de_los_Guardianes_del_Globo.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2114990395760979",
+    "published_at": "2026-10-01T02:06:46+0000",
+    "tokens": [
+      "omni",
+      "brutal",
+      "masacre",
+      "guardianes",
+      "globo"
+    ],
+    "ig_media_id": "18084777917742810",
+    "normalized_title": "omni man la brutal masacre de los guardianes del globo"
   },
   {
     "id": "avx_cyclops_kills_xavier",
@@ -867,7 +1649,17 @@
     "date": "2026-10-01 07:12",
     "mode": "live_release",
     "video_file": "El_Día_que_Cíclope_Asesinó_a_Charles_Xavier.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1815582526252654",
+    "published_at": "2026-10-01T07:09:35+0000",
+    "tokens": [
+      "ciclope",
+      "asesino",
+      "charles",
+      "xavier"
+    ],
+    "ig_media_id": "17992529802050720",
+    "normalized_title": "el dia que ciclope asesino a charles xavier"
   },
   {
     "id": "blue_beetle_sacrificio_ted_kord",
@@ -877,7 +1669,18 @@
     "date": "2026-10-01 10:06",
     "mode": "live_release",
     "video_file": "Blue_Beetle_El_Trágico_Destino_de_Ted_Kord.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2724437461344383",
+    "published_at": "2026-10-01T10:05:56+0000",
+    "tokens": [
+      "blue",
+      "beetle",
+      "tragico",
+      "destino",
+      "kord"
+    ],
+    "ig_media_id": "18107725730632287",
+    "normalized_title": "blue beetle el tragico destino de ted kord"
   },
   {
     "id": "watchmen_la_tragica_muerte_de_rorschach",
@@ -887,7 +1690,17 @@
     "date": "2026-10-01 14:09",
     "mode": "live_release",
     "video_file": "Watchmen_La_Trágica_Muerte_de_Rorschach.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1459643442694977",
+    "published_at": "2026-10-01T14:08:25+0000",
+    "tokens": [
+      "watchmen",
+      "tragica",
+      "muerte",
+      "rorschach"
+    ],
+    "ig_media_id": "17948084808286202",
+    "normalized_title": "watchmen la tragica muerte de rorschach"
   },
   {
     "id": "venom_el_origen_del_simbionte_letal",
@@ -897,7 +1710,17 @@
     "date": "2026-10-01 16:39",
     "mode": "live_release",
     "video_file": "Venom_El_Nacimiento_del_Protector_Letal.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "985404614588415",
+    "published_at": "2026-10-01T16:38:16+0000",
+    "tokens": [
+      "venom",
+      "nacimiento",
+      "protector",
+      "letal"
+    ],
+    "ig_media_id": "18111389081164581",
+    "normalized_title": "venom el nacimiento del protector letal"
   },
   {
     "id": "darth_vader_vader_down_hombres_muertos",
@@ -907,7 +1730,19 @@
     "date": "2026-10-01 18:39",
     "mode": "live_release",
     "video_file": "Darth_Vader_Solo_Veo_Miedo_y_Hombres_Muertos.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "28834836712819192",
+    "published_at": "2026-10-01T18:39:00+0000",
+    "tokens": [
+      "darth",
+      "vader",
+      "solo",
+      "miedo",
+      "hombres",
+      "muertos"
+    ],
+    "ig_media_id": "18106389968242768",
+    "normalized_title": "darth vader solo veo miedo y hombres muertos"
   },
   {
     "id": "dceased_infeccion_anti_vida_batman",
@@ -917,7 +1752,19 @@
     "date": "2026-10-01 19:12",
     "mode": "live_release",
     "video_file": "DCeased_La_Caída_de_Batman_y_la_Trágica_Despedida_a_Alfred.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "4468563383390424",
+    "published_at": "2026-10-01T19:11:16+0000",
+    "tokens": [
+      "dceased",
+      "caida",
+      "batman",
+      "tragica",
+      "despedida",
+      "alfred"
+    ],
+    "ig_media_id": "17973311711942862",
+    "normalized_title": "dceased la caida de batman y la tragica despedida a alfred"
   },
   {
     "id": "doctor_strange_doctor_doom_triumph_and_torment",
@@ -927,7 +1774,20 @@
     "date": "2026-10-01 22:09",
     "mode": "live_release",
     "video_file": "Doctor_Strange_y_Doctor_Doom_El_Pacto_Sangriento_en_el_Infierno.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2287531362089918",
+    "published_at": "2026-10-01T22:08:13+0000",
+    "tokens": [
+      "doctor",
+      "strange",
+      "doctor",
+      "doom",
+      "pacto",
+      "sangriento",
+      "infierno"
+    ],
+    "ig_media_id": "18096438926559014",
+    "normalized_title": "doctor strange y doctor doom el pacto sangriento en el infierno"
   },
   {
     "id": "captain_america_el_soldado_del_invierno",
@@ -937,7 +1797,18 @@
     "date": "2026-10-02 03:43",
     "mode": "live_release",
     "video_file": "Capitán_América_El_Regreso_del_Soldado_del_Invierno.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1127312903195479",
+    "published_at": "2026-10-02T03:42:41+0000",
+    "tokens": [
+      "capitan",
+      "america",
+      "regreso",
+      "soldado",
+      "invierno"
+    ],
+    "ig_media_id": "18632494879037460",
+    "normalized_title": "capitan america el regreso del soldado del invierno"
   },
   {
     "id": "thanos_rising_el_origen_del_titan_loco",
@@ -947,7 +1818,18 @@
     "date": "2026-10-02 07:05",
     "mode": "live_release",
     "video_file": "Thanos_El_Perturbador_Origen_y_la_Obsesión_con_la_Muerte.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1744854243239618",
+    "published_at": "2026-10-02T07:04:10+0000",
+    "tokens": [
+      "thanos",
+      "perturbador",
+      "origen",
+      "obsesion",
+      "muerte"
+    ],
+    "ig_media_id": "18634473790042753",
+    "normalized_title": "thanos el perturbador origen y la obsesion con la muerte"
   },
   {
     "id": "archangel_dark_angel_saga",
@@ -957,7 +1839,17 @@
     "date": "2026-10-02 10:25",
     "mode": "live_release",
     "video_file": "La_Caída_de_Archangel_El_Heredero_de_Apocalipsis.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1068470749312950",
+    "published_at": "2026-10-02T10:24:37+0000",
+    "tokens": [
+      "caida",
+      "archangel",
+      "heredero",
+      "apocalipsis"
+    ],
+    "ig_media_id": "18106870472619383",
+    "normalized_title": "la caida de archangel el heredero de apocalipsis"
   },
   {
     "id": "xmen_dias_del_futuro_pasado_centinelas",
@@ -967,7 +1859,19 @@
     "date": "2026-10-02 17:39",
     "mode": "live_release",
     "video_file": "Días_del_Futuro_Pasado_El_Exterminio_Mutante_de_los_Centinelas.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1414206180844222",
+    "published_at": "2026-10-02T17:38:46+0000",
+    "tokens": [
+      "dias",
+      "futuro",
+      "pasado",
+      "exterminio",
+      "mutante",
+      "centinelas"
+    ],
+    "ig_media_id": "18075258539752595",
+    "normalized_title": "dias del futuro pasado el exterminio mutante de los centinelas"
   },
   {
     "id": "doctor_strange_dormammu_bucle_dimension_oscura",
@@ -977,7 +1881,21 @@
     "date": "2026-10-02 19:43",
     "mode": "live_release",
     "video_file": "Doctor_Strange_El_Duelo_Eterno_contra_Dormammu_en_la_Dimensión_Oscura.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1839569223699968",
+    "published_at": "2026-10-03T22:10:25+0000",
+    "tokens": [
+      "doctor",
+      "strange",
+      "duelo",
+      "eterno",
+      "contra",
+      "dormammu",
+      "dimension",
+      "oscura"
+    ],
+    "ig_media_id": "18354089521174369",
+    "normalized_title": "doctor strange el duelo eterno contra dormammu en la dimension oscura"
   },
   {
     "id": "green_lantern_alexandra_dewitt",
@@ -987,7 +1905,17 @@
     "date": "2026-10-02 22:22",
     "mode": "live_release",
     "video_file": "Green_Lantern_El_Asesinato_que_Conmocionó_el_Universo.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1834973911173236",
+    "published_at": "2026-10-02T22:21:22+0000",
+    "tokens": [
+      "green",
+      "lantern",
+      "asesinato",
+      "conmociono"
+    ],
+    "ig_media_id": "17934977850390237",
+    "normalized_title": "green lantern el asesinato que conmociono el universo"
   },
   {
     "id": "vengadores_desunidos_la_locura_de_wanda",
@@ -997,7 +1925,18 @@
     "date": "2026-10-03 02:12",
     "mode": "live_release",
     "video_file": "Vengadores_Desunidos_El_Día_en_que_Wanda_Destruyó_a_los_Héroes.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2975904135917897",
+    "published_at": "2026-10-03T02:11:20+0000",
+    "tokens": [
+      "vengadores",
+      "desunidos",
+      "wanda",
+      "destruyo",
+      "heroes"
+    ],
+    "ig_media_id": "18622624126000057",
+    "normalized_title": "vengadores desunidos el dia en que wanda destruyo a los heroes"
   },
   {
     "id": "daredevil_el_hombre_sin_miedo_origen_quimico",
@@ -1007,7 +1946,19 @@
     "date": "2026-10-03 02:24",
     "mode": "live_release",
     "video_file": "Daredevil_El_Accidente_Químico_que_Creó_al_Hombre_Sin_Miedo.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1761580058504225",
+    "published_at": "2026-10-03T02:23:06+0000",
+    "tokens": [
+      "daredevil",
+      "accidente",
+      "quimico",
+      "creo",
+      "hombre",
+      "miedo"
+    ],
+    "ig_media_id": "18100152824056631",
+    "normalized_title": "daredevil el accidente quimico que creo al hombre sin miedo"
   },
   {
     "id": "martian_manhunter_fernus_el_incendio",
@@ -1017,7 +1968,18 @@
     "date": "2026-10-03 07:06",
     "mode": "live_release",
     "video_file": "Martian_Manhunter_Fernus_La_Masacre_Marciana.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "965023746644173",
+    "published_at": "2026-10-03T07:05:32+0000",
+    "tokens": [
+      "martian",
+      "manhunter",
+      "fernus",
+      "masacre",
+      "marciana"
+    ],
+    "ig_media_id": "17943228339349356",
+    "normalized_title": "martian manhunter fernus la masacre marciana"
   },
   {
     "id": "batman_arkham_asylum_locura_joker",
@@ -1027,7 +1989,20 @@
     "date": "2026-10-03 10:09",
     "mode": "live_release",
     "video_file": "Batman_Una_Casa_Seria_en_una_Tierra_Seria_-_La_Pesadilla_de_Arkham.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2556536774851811",
+    "published_at": "2026-10-03T10:08:19+0000",
+    "tokens": [
+      "batman",
+      "casa",
+      "seria",
+      "tierra",
+      "seria",
+      "pesadilla",
+      "arkham"
+    ],
+    "ig_media_id": "18089223155682236",
+    "normalized_title": "batman una casa seria en una tierra seria la pesadilla de arkham"
   },
   {
     "id": "ghost_rider_penance_stare_galactus",
@@ -1037,7 +2012,18 @@
     "date": "2026-10-03 14:10",
     "mode": "live_release",
     "video_file": "Ghost_Rider_La_Mirada_de_Penitencia_a_Galactus.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2631338807326193",
+    "published_at": "2026-10-03T14:09:19+0000",
+    "tokens": [
+      "ghost",
+      "rider",
+      "mirada",
+      "penitencia",
+      "galactus"
+    ],
+    "ig_media_id": "18419309314157377",
+    "normalized_title": "ghost rider la mirada de penitencia a galactus"
   },
   {
     "id": "aquaman_la_mano_de_arpon",
@@ -1047,7 +2033,18 @@
     "date": "2026-10-03 19:06",
     "mode": "live_release",
     "video_file": "Aquaman_El_Día_que_Charybdis_Devoró_su_Mano_en_las_Pirañas.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2064778744157753",
+    "published_at": "2026-10-03T19:05:16+0000",
+    "tokens": [
+      "aquaman",
+      "charybdis",
+      "devoro",
+      "mano",
+      "piranas"
+    ],
+    "ig_media_id": "18076968599477139",
+    "normalized_title": "aquaman el dia que charybdis devoro su mano en las piranas"
   },
   {
     "id": "black_panther_mephisto_deal",
@@ -1057,7 +2054,19 @@
     "date": "2026-10-04 02:12",
     "mode": "live_release",
     "video_file": "Black_Panther_El_Día_que_TChalla_Engañó_al_Diablo_en_el_Infierno.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1622150405984609",
+    "published_at": "2026-10-04T02:09:37+0000",
+    "tokens": [
+      "black",
+      "panther",
+      "challa",
+      "engano",
+      "diablo",
+      "infierno"
+    ],
+    "ig_media_id": "17984259003085798",
+    "normalized_title": "black panther el dia que t challa engano al diablo en el infierno"
   },
   {
     "id": "green_lantern_la_masacre_de_oas",
@@ -1067,7 +2076,17 @@
     "date": "2026-10-04 07:08",
     "mode": "live_release",
     "video_file": "Green_Lantern_La_Masacre_de_Hal_Jordan_en_Oa.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1022311144200095",
+    "published_at": "2026-10-04T07:07:51+0000",
+    "tokens": [
+      "green",
+      "lantern",
+      "masacre",
+      "jordan"
+    ],
+    "ig_media_id": "17964551810979648",
+    "normalized_title": "green lantern la masacre de hal jordan en oa"
   },
   {
     "id": "sentry_la_maldicion_del_vacio",
@@ -1077,7 +2096,19 @@
     "date": "2026-10-04 10:08",
     "mode": "live_release",
     "video_file": "Sentry_La_Maldición_del_Vacío_-_El_Monstruo_que_Devoró_Asgard.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2155914785299234",
+    "published_at": "2026-10-04T10:07:38+0000",
+    "tokens": [
+      "sentry",
+      "maldicion",
+      "vacio",
+      "monstruo",
+      "devoro",
+      "asgard"
+    ],
+    "ig_media_id": "17967287619188791",
+    "normalized_title": "sentry la maldicion del vacio el monstruo que devoro asgard"
   },
   {
     "id": "namor_inundacion_wakanda",
@@ -1087,7 +2118,19 @@
     "date": "2026-10-04 14:07",
     "mode": "live_release",
     "video_file": "Namor_La_Ira_del_Fénix_-_El_Día_que_Wakanda_Quedó_Bajo_el_Agua.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1108416848245243",
+    "published_at": "2026-10-04T14:06:03+0000",
+    "tokens": [
+      "namor",
+      "fenix",
+      "wakanda",
+      "quedo",
+      "bajo",
+      "agua"
+    ],
+    "ig_media_id": "18021301052928721",
+    "normalized_title": "namor la ira del fenix el dia que wakanda quedo bajo el agua"
   },
   {
     "id": "the_flash_iris_west_death",
@@ -1097,7 +2140,19 @@
     "date": "2026-10-04 19:10",
     "mode": "live_release",
     "video_file": "The_Flash_El_Asesinato_Silencioso_de_Iris_West_en_la_Fiesta.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "29300462276256560",
+    "published_at": "2026-10-04T19:09:09+0000",
+    "tokens": [
+      "flash",
+      "asesinato",
+      "silencioso",
+      "iris",
+      "west",
+      "fiesta"
+    ],
+    "ig_media_id": "17878786593554845",
+    "normalized_title": "the flash el asesinato silencioso de iris west en la fiesta"
   },
   {
     "id": "batman_venom_addiction_cave",
@@ -1107,7 +2162,20 @@
     "date": "2026-10-04 22:08",
     "mode": "live_release",
     "video_file": "Batman_La_Cruel_Adicción_al_Veneno_que_Casi_Destruye_al_Murciélago.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1838930850606254",
+    "published_at": "2026-10-04T22:07:04+0000",
+    "tokens": [
+      "batman",
+      "cruel",
+      "adiccion",
+      "veneno",
+      "casi",
+      "destruye",
+      "murcielago"
+    ],
+    "ig_media_id": "17970521757177357",
+    "normalized_title": "batman la cruel adiccion al veneno que casi destruye al murcielago"
   },
   {
     "id": "silver_surfer_black_void",
@@ -1117,7 +2185,20 @@
     "date": "2026-10-05 07:07",
     "mode": "live_release",
     "video_file": "Silver_Surfer_El_Día_que_Devoró_su_Propia_Alma_en_el_Vacío_Cósmico.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1583314439684993",
+    "published_at": "2026-10-05T07:06:47+0000",
+    "tokens": [
+      "silver",
+      "surfer",
+      "devoro",
+      "propia",
+      "alma",
+      "vacio",
+      "cosmico"
+    ],
+    "ig_media_id": "18118711820005468",
+    "normalized_title": "silver surfer el dia que devoro su propia alma en el vacio cosmico"
   },
   {
     "id": "doctor_fate_nabu_possession",
@@ -1127,7 +2208,20 @@
     "date": "2026-10-05 10:06",
     "mode": "live_release",
     "video_file": "Doctor_Fate_El_Día_que_Nabu_Devoró_el_Alma_de_Kent_Nelson.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1760160498401032",
+    "published_at": "2026-10-05T10:05:10+0000",
+    "tokens": [
+      "doctor",
+      "fate",
+      "nabu",
+      "devoro",
+      "alma",
+      "kent",
+      "nelson"
+    ],
+    "ig_media_id": "18108607763622493",
+    "normalized_title": "doctor fate el dia que nabu devoro el alma de kent nelson"
   },
   {
     "id": "adam_warlock_magus_corruption",
@@ -1137,7 +2231,19 @@
     "date": "2026-10-05 14:10",
     "mode": "live_release",
     "video_file": "Adam_Warlock_El_Día_que_el_Magus_Devoró_el_Alma_de_su_Creador.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1407632748150946",
+    "published_at": "2026-10-05T14:10:06+0000",
+    "tokens": [
+      "adam",
+      "warlock",
+      "magus",
+      "devoro",
+      "alma",
+      "creador"
+    ],
+    "ig_media_id": "18152524648531558",
+    "normalized_title": "adam warlock el dia que el magus devoro el alma de su creador"
   },
   {
     "id": "beta_ray_bill_stormbreaker_thor",
@@ -1147,7 +2253,17 @@
     "date": "2026-10-05 22:06",
     "mode": "deleted",
     "video_file": "Beta_Ray_Bill_El_Día_que_Destruyó_un_Planeta_Entero_por_Error.mp4",
-    "status": "deleted"
+    "status": "deleted",
+    "ig_media_id": "18074986709726901",
+    "normalized_title": "beta ray bill el dia que destruyo un planeta entero por error",
+    "tokens": [
+      "beta",
+      "bill",
+      "destruyo",
+      "planeta",
+      "entero",
+      "error"
+    ]
   },
   {
     "id": "punisher_jigsaw_desfiguracion_billy_russo",
@@ -1157,7 +2273,18 @@
     "date": "2026-10-06 01:49",
     "mode": "live_release",
     "video_file": "The_Punisher_El_Rostro_Destrozado_de_Billy_Russo.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1639090384556568",
+    "published_at": "2026-10-06T01:48:59+0000",
+    "tokens": [
+      "punisher",
+      "rostro",
+      "destrozado",
+      "billy",
+      "russo"
+    ],
+    "ig_media_id": "18124642888927608",
+    "normalized_title": "the punisher el rostro destrozado de billy russo"
   },
   {
     "id": "gorr_king_thor_eternity",
@@ -1167,7 +2294,19 @@
     "date": "2026-10-06 10:16",
     "mode": "live_release",
     "video_file": "King_Thor_El_Día_que_el_Dios_del_Trueno_Asesinó_a_la_Eternidad.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1759008751876168",
+    "published_at": "2026-10-06T10:15:15+0000",
+    "tokens": [
+      "king",
+      "thor",
+      "dios",
+      "trueno",
+      "asesino",
+      "eternidad"
+    ],
+    "ig_media_id": "18078670829449553",
+    "normalized_title": "king thor el dia que el dios del trueno asesino a la eternidad"
   },
   {
     "id": "mister_fantastic_the_maker_evil",
@@ -1177,7 +2316,19 @@
     "date": "2026-10-06 14:19",
     "mode": "live_release",
     "video_file": "The_Maker_El_Día_que_Reed_Richards_se_Convirtió_en_el_Monstruo_Definitivo.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "29173789362228834",
+    "published_at": "2026-10-06T14:18:38+0000",
+    "tokens": [
+      "maker",
+      "reed",
+      "richards",
+      "convirtio",
+      "monstruo",
+      "definitivo"
+    ],
+    "ig_media_id": "18162022090497671",
+    "normalized_title": "the maker el dia que reed richards se convirtio en el monstruo definitivo"
   },
   {
     "id": "quicksilver_house_of_m_death",
@@ -1187,7 +2338,19 @@
     "date": "2026-10-06 19:24",
     "mode": "live_release",
     "video_file": "Quicksilver_La_Brutal_Ejecución_a_Manos_de_Magneto_en_House_of_M.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1370595224864818",
+    "published_at": "2026-10-06T19:23:43+0000",
+    "tokens": [
+      "quicksilver",
+      "brutal",
+      "ejecucion",
+      "manos",
+      "magneto",
+      "house"
+    ],
+    "ig_media_id": "17899284441655953",
+    "normalized_title": "quicksilver la brutal ejecucion a manos de magneto en house of m"
   },
   {
     "id": "sentinel_omega_mutant_purge",
@@ -1197,7 +2360,17 @@
     "date": "2026-10-07 02:17",
     "mode": "live_release",
     "video_file": "Bastion_El_Día_que_los_Centinelas_Eliminaron_a_la_Humanidad.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1563582285809103",
+    "published_at": "2026-10-07T02:16:25+0000",
+    "tokens": [
+      "bastion",
+      "centinelas",
+      "eliminaron",
+      "humanidad"
+    ],
+    "ig_media_id": "17974437990140742",
+    "normalized_title": "bastion el dia que los centinelas eliminaron a la humanidad"
   },
   {
     "id": "mister_sinister_mutant_genetics",
@@ -1207,7 +2380,18 @@
     "date": "2026-10-07 07:07",
     "mode": "live_release",
     "video_file": "Mister_Sinister_El_Día_que_Diseñó_la_Extinción_Genética.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1720664239637453",
+    "published_at": "2026-10-07T07:06:14+0000",
+    "tokens": [
+      "mister",
+      "sinister",
+      "diseno",
+      "extincion",
+      "genetica"
+    ],
+    "ig_media_id": "18122702447479077",
+    "normalized_title": "mister sinister el dia que diseno la extincion genetica"
   },
   {
     "id": "atrocitus_red_lanterns_rage_of_sharah",
@@ -1217,7 +2401,17 @@
     "date": "2026-10-07 10:06",
     "mode": "live_release",
     "video_file": "Atrocitus_El_Juramento_de_Sangre_y_la_Ira_de_los_Red_Lanterns.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2296164294500094",
+    "published_at": "2026-10-07T10:05:46+0000",
+    "tokens": [
+      "atrocitus",
+      "juramento",
+      "sangre",
+      "lanterns"
+    ],
+    "ig_media_id": "18155497093523240",
+    "normalized_title": "atrocitus el juramento de sangre y la ira de los red lanterns"
   },
   {
     "id": "cabal_de_la_muerte_magik",
@@ -1227,7 +2421,16 @@
     "date": "2026-10-07 14:13",
     "mode": "live_release",
     "video_file": "Magik_La_Princesa_del_Infierno.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1532062615325604",
+    "published_at": "2026-10-07T14:12:47+0000",
+    "tokens": [
+      "magik",
+      "princesa",
+      "infierno"
+    ],
+    "ig_media_id": "18103270142016498",
+    "normalized_title": "magik la princesa del infierno"
   },
   {
     "id": "shang_chi_ma_zu_dark_contract",
@@ -1237,7 +2440,19 @@
     "date": "2026-10-07 19:14",
     "mode": "live_release",
     "video_file": "Shang-Chi_El_Pacto_Sangriento_que_Entregó_su_Alma_a_la_Diosa_del_Mar.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1251680103802568",
+    "published_at": "2026-10-07T19:13:04+0000",
+    "tokens": [
+      "shang",
+      "pacto",
+      "sangriento",
+      "entrego",
+      "alma",
+      "diosa"
+    ],
+    "ig_media_id": "18137176015653847",
+    "normalized_title": "shang chi el pacto sangriento que entrego su alma a la diosa del mar"
   },
   {
     "id": "black_bolt_silent_king_bomb",
@@ -1247,7 +2462,17 @@
     "date": "2026-10-07 22:13",
     "mode": "live_release",
     "video_file": "Black_Bolt_La_Voz_que_Destrozó_el_Imperio.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "860858857052453",
+    "published_at": "2026-10-07T22:12:50+0000",
+    "tokens": [
+      "black",
+      "bolt",
+      "destrozo",
+      "imperio"
+    ],
+    "ig_media_id": "18464810218142058",
+    "normalized_title": "black bolt la voz que destrozo el imperio"
   },
   {
     "id": "damian_wayne_muerte_hereje",
@@ -1257,7 +2482,19 @@
     "date": "2026-10-08 02:22",
     "mode": "live_release",
     "video_file": "Robin_El_Trágico_Sacrificio_y_Muerte_de_Damian_Wayne.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "925676310406714",
+    "published_at": "2026-10-08T02:21:28+0000",
+    "tokens": [
+      "robin",
+      "tragico",
+      "sacrificio",
+      "muerte",
+      "damian",
+      "wayne"
+    ],
+    "ig_media_id": "18169576411464690",
+    "normalized_title": "robin el tragico sacrificio y muerte de damian wayne"
   },
   {
     "id": "cable_virus_tecnologico_asgard",
@@ -1267,7 +2504,19 @@
     "date": "2026-10-08 07:18",
     "mode": "live_release",
     "video_file": "Cable_El_Abrazo_Letal_del_Virus_Tecnorgánico_en_la_Sombra.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1774600090353301",
+    "published_at": "2026-10-08T07:17:12+0000",
+    "tokens": [
+      "cable",
+      "abrazo",
+      "letal",
+      "virus",
+      "tecnorganico",
+      "sombra"
+    ],
+    "ig_media_id": "18130802221802177",
+    "normalized_title": "cable el abrazo letal del virus tecnorganico en la sombra"
   },
   {
     "id": "superman_vs_the_elite_action_775",
@@ -1277,7 +2526,20 @@
     "date": "2026-10-08 08:04",
     "mode": "live_release",
     "video_file": "Superman_Cruzó_la_Línea_La_Brutal_Lobotomía_que_Aterró_al_Mundo.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1807791527200046",
+    "published_at": "2026-10-08T08:03:02+0000",
+    "tokens": [
+      "superman",
+      "cruzo",
+      "linea",
+      "brutal",
+      "lobotomia",
+      "aterro",
+      "mundo"
+    ],
+    "ig_media_id": "18382204099231322",
+    "normalized_title": "superman cruzo la linea la brutal lobotomia que aterro al mundo"
   },
   {
     "id": "spiderman_grim_hunt_venganza_kravinoff",
@@ -1287,7 +2549,20 @@
     "date": "2026-10-08 10:04",
     "mode": "live_release",
     "video_file": "Spider-Man_Desató_su_Furia_El_Traje_Negro_que_Aterró_a_sus_Enemigos.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "39043087418640269",
+    "published_at": "2026-10-08T10:03:53+0000",
+    "tokens": [
+      "spider",
+      "desato",
+      "furia",
+      "traje",
+      "negro",
+      "aterro",
+      "enemigos"
+    ],
+    "ig_media_id": "18034070243911031",
+    "normalized_title": "spider man desato su furia el traje negro que aterro a sus enemigos"
   },
   {
     "id": "batman_white_knight_joker_cuerdo",
@@ -1297,7 +2572,20 @@
     "date": "2026-10-08 14:05",
     "mode": "live_release",
     "video_file": "El_Joker_se_Volvió_Cuerdo_El_Juicio_que_Encarceló_a_Batman_en_Gotham.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1871834337530984",
+    "published_at": "2026-10-08T14:04:36+0000",
+    "tokens": [
+      "joker",
+      "volvio",
+      "cuerdo",
+      "juicio",
+      "encarcelo",
+      "batman",
+      "gotham"
+    ],
+    "ig_media_id": "18121926260284255",
+    "normalized_title": "el joker se volvio cuerdo el juicio que encarcelo a batman en gotham"
   },
   {
     "id": "flash_the_human_race_teleportation",
@@ -1307,7 +2595,19 @@
     "date": "2026-10-08 19:05",
     "mode": "live_release",
     "video_file": "The_Flash_Rompió_la_Física_La_Carrera_que_Superó_a_la_Teletransportación.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "929116299998461",
+    "published_at": "2026-10-08T19:05:00+0000",
+    "tokens": [
+      "flash",
+      "rompio",
+      "fisica",
+      "carrera",
+      "supero",
+      "teletransportacion"
+    ],
+    "ig_media_id": "18625203922000343",
+    "normalized_title": "the flash rompio la fisica la carrera que supero a la teletransportacion"
   },
   {
     "id": "batman_zur_en_arrh_respaldo",
@@ -1317,7 +2617,20 @@
     "date": "2026-10-08 22:51",
     "mode": "live_release",
     "video_file": "Batman_Creó_una_Mente_de_Respaldo_El_Guerrero_Implacable_de_Zur-En-Arrh.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1815191182999990",
+    "published_at": "2026-10-08T22:51:04+0000",
+    "tokens": [
+      "batman",
+      "creo",
+      "mente",
+      "respaldo",
+      "guerrero",
+      "implacable",
+      "arrh"
+    ],
+    "ig_media_id": "18109121183604862",
+    "normalized_title": "batman creo una mente de respaldo el guerrero implacable de zur en arrh"
   },
   {
     "id": "superior_iron_man_extremis_villano",
@@ -1327,7 +2640,20 @@
     "date": "2026-10-09 02:04",
     "mode": "live_release",
     "video_file": "Iron_Man_se_Volvió_Malvado_La_Droga_Extremis_que_Esclavizó_San_Francisco.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "3397346603779053",
+    "published_at": "2026-10-09T02:03:54+0000",
+    "tokens": [
+      "iron",
+      "volvio",
+      "malvado",
+      "droga",
+      "extremis",
+      "esclavizo",
+      "francisco"
+    ],
+    "ig_media_id": "18144904486577590",
+    "normalized_title": "iron man se volvio malvado la droga extremis que esclavizo san francisco"
   },
   {
     "id": "doctor_strange_el_juramento_elixir",
@@ -1337,7 +2663,23 @@
     "date": "2026-10-09 07:05",
     "mode": "live_release",
     "video_file": "Doctor_Strange_Descubrió_la_Cura_del_Cáncer_El_Dilema_Moral_que_Casi_Mata_a_Wong.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1081951027885841",
+    "published_at": "2026-10-09T07:04:11+0000",
+    "tokens": [
+      "doctor",
+      "strange",
+      "descubrio",
+      "cura",
+      "cancer",
+      "dilema",
+      "moral",
+      "casi",
+      "mata",
+      "wong"
+    ],
+    "ig_media_id": "18156170992508479",
+    "normalized_title": "doctor strange descubrio la cura del cancer el dilema moral que casi mata a wong"
   },
   {
     "id": "wolverine_weapon_x_escape_brutal",
@@ -1347,7 +2689,21 @@
     "date": "2026-10-09 10:11",
     "mode": "live_release",
     "video_file": "Wolverine_Destrozó_el_Laboratorio_Weapon_X_La_Venganza_Sangrienta_que_Aterró_a_s.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2094981997793380",
+    "published_at": "2026-10-09T10:10:19+0000",
+    "tokens": [
+      "wolverine",
+      "destrozo",
+      "laboratorio",
+      "weapon",
+      "venganza",
+      "sangrienta",
+      "aterro",
+      "creadores"
+    ],
+    "ig_media_id": "18639737044018974",
+    "normalized_title": "wolverine destrozo el laboratorio weapon x la venganza sangrienta que aterro a sus creadores"
   },
   {
     "id": "thanos_annihilation_scourge_void",
@@ -1357,7 +2713,20 @@
     "date": "2026-10-09 22:14",
     "mode": "live_release",
     "video_file": "Thanos_Devoró_a_la_Muerte_El_Sacrificio_Sangriento_que_Reescribió_la_Realidad.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1807736060280391",
+    "published_at": "2026-10-09T22:13:13+0000",
+    "tokens": [
+      "thanos",
+      "devoro",
+      "muerte",
+      "sacrificio",
+      "sangriento",
+      "reescribio",
+      "realidad"
+    ],
+    "ig_media_id": "17976283488129499",
+    "normalized_title": "thanos devoro a la muerte el sacrificio sangriento que reescribio la realidad"
   },
   {
     "id": "wolverine_x23_olor_detonante",
@@ -1367,7 +2736,19 @@
     "date": "2026-10-10 14:10",
     "mode": "live_release",
     "video_file": "X-23_Perdió_el_Control_El_Olor_que_la_Obligó_a_Asesinar_a_su_Madre.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "3604852239697574",
+    "published_at": "2026-10-10T14:09:29+0000",
+    "tokens": [
+      "perdio",
+      "control",
+      "olor",
+      "obligo",
+      "asesinar",
+      "madre"
+    ],
+    "ig_media_id": "17950717914326655",
+    "normalized_title": "x 23 perdio el control el olor que la obligo a asesinar a su madre"
   },
   {
     "id": "magneto_venganza_nazi_auschwitz",
@@ -1377,7 +2758,21 @@
     "date": "2026-10-12 14:06",
     "mode": "live_release",
     "video_file": "Magneto_Ejecutó_su_Venganza_Nazi_El_Día_que_Hundió_el_Submarino_con_los_Cosechad.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "3226765024380502",
+    "published_at": "2026-10-12T14:05:20+0000",
+    "tokens": [
+      "magneto",
+      "ejecuto",
+      "venganza",
+      "nazi",
+      "hundio",
+      "submarino",
+      "cosechadores",
+      "sangre"
+    ],
+    "ig_media_id": "18115741793090593",
+    "normalized_title": "magneto ejecuto su venganza nazi el dia que hundio el submarino con los cosechadores de sangre"
   },
   {
     "id": "ghost_rider_zarathos_posesion_oscura",
@@ -1387,7 +2782,20 @@
     "date": "2026-10-12 19:11",
     "mode": "live_release",
     "video_file": "Ghost_Rider_La_Furia_Desatada_de_Zarathos_y_el_Fuego_Infernal.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1774193280511199",
+    "published_at": "2026-10-12T19:10:12+0000",
+    "tokens": [
+      "ghost",
+      "rider",
+      "furia",
+      "desatada",
+      "zarathos",
+      "fuego",
+      "infernal"
+    ],
+    "ig_media_id": "18109251574925872",
+    "normalized_title": "ghost rider la furia desatada de zarathos y el fuego infernal"
   },
   {
     "id": "batman_ultimatum_segundo_robin_pistola",
@@ -1397,7 +2805,22 @@
     "date": "2026-10-13 07:05",
     "mode": "live_release",
     "video_file": "El_Segundo_Robin_le_Apuntó_con_un_Arma_a_Batman_El_Imposible_Juicio_del_Callejón.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2311440942941518",
+    "published_at": "2026-10-13T07:04:54+0000",
+    "tokens": [
+      "segundo",
+      "robin",
+      "apunto",
+      "arma",
+      "batman",
+      "imposible",
+      "juicio",
+      "callejon",
+      "crimen"
+    ],
+    "ig_media_id": "18337486576272599",
+    "normalized_title": "el segundo robin le apunto con un arma a batman el imposible juicio del callejon del crimen"
   },
   {
     "id": "hulk_derroto_black_bolt_luna",
@@ -1407,7 +2830,21 @@
     "date": "2026-10-13 10:04",
     "mode": "live_release",
     "video_file": "Hulk_Sometió_al_Rey_de_los_Inhumanos_La_Venganza_Implacable_que_Hizo_Temblar_la_.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1072371312384058",
+    "published_at": "2026-10-13T10:03:49+0000",
+    "tokens": [
+      "hulk",
+      "sometio",
+      "inhumanos",
+      "venganza",
+      "implacable",
+      "hizo",
+      "temblar",
+      "luna"
+    ],
+    "ig_media_id": "18073451387755039",
+    "normalized_title": "hulk sometio al rey de los inhumanos la venganza implacable que hizo temblar la luna"
   },
   {
     "id": "thor_indigno_susurro_perdida_martillo",
@@ -1417,7 +2854,22 @@
     "date": "2026-10-13 14:05",
     "mode": "live_release",
     "video_file": "Tres_Palabras_le_Arrebataron_el_Mjolnir_El_Secreto_que_Hizo_Indigno_al_Príncipe_.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2542318356237760",
+    "published_at": "2026-10-13T14:04:11+0000",
+    "tokens": [
+      "tres",
+      "palabras",
+      "arrebataron",
+      "mjolnir",
+      "secreto",
+      "hizo",
+      "indigno",
+      "principe",
+      "asgard"
+    ],
+    "ig_media_id": "18131419465687205",
+    "normalized_title": "tres palabras le arrebataron el mjolnir el secreto que hizo indigno al principe de asgard"
   },
   {
     "id": "spiderman_asedio_juggernaut_imparable",
@@ -1427,7 +2879,21 @@
     "date": "2026-10-13 19:06",
     "mode": "live_release",
     "video_file": "Una_Fuerza_Imparable_Arrasó_Nueva_York_El_Desesperado_Asedio_de_Juggernaut.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1412582761061508",
+    "published_at": "2026-10-13T19:05:20+0000",
+    "tokens": [
+      "fuerza",
+      "imparable",
+      "arraso",
+      "nueva",
+      "york",
+      "desesperado",
+      "asedio",
+      "juggernaut"
+    ],
+    "ig_media_id": "18356212171222870",
+    "normalized_title": "una fuerza imparable arraso nueva york el desesperado asedio de juggernaut"
   },
   {
     "id": "daredevil_tragedia_elektra_asesinos",
@@ -1437,7 +2903,21 @@
     "date": "2026-10-13 22:06",
     "mode": "live_release",
     "video_file": "Elektra_Cayó_Atravesada_por_su_Propia_Arma_El_Duelo_Letal_de_los_Asesinos.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1633841268142482",
+    "published_at": "2026-10-13T22:05:53+0000",
+    "tokens": [
+      "elektra",
+      "cayo",
+      "atravesada",
+      "propia",
+      "arma",
+      "duelo",
+      "letal",
+      "asesinos"
+    ],
+    "ig_media_id": "18355403965220523",
+    "normalized_title": "elektra cayo atravesada por su propia arma el duelo letal de los asesinos"
   },
   {
     "id": "wolverine_la_muerte_adamantium_liquido",
@@ -1447,7 +2927,21 @@
     "date": "2026-10-14 02:06",
     "mode": "live_release",
     "video_file": "Wolverine_Murió_Asfixiado_en_Metal_Hirviendo_El_Sacrificio_que_Marcó_el_Fin_del_.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1445645757503280",
+    "published_at": "2026-10-14T02:05:37+0000",
+    "tokens": [
+      "wolverine",
+      "murio",
+      "asfixiado",
+      "metal",
+      "hirviendo",
+      "sacrificio",
+      "marco",
+      "mutante"
+    ],
+    "ig_media_id": "18132077077667232",
+    "normalized_title": "wolverine murio asfixiado en metal hirviendo el sacrificio que marco el fin del mutante"
   },
   {
     "id": "supergirl_red_lantern_anillo_ira",
@@ -1457,7 +2951,20 @@
     "date": "2026-10-14 07:07",
     "mode": "live_release",
     "video_file": "Supergirl_Sucumbió_a_la_Furia_Roja_El_Terror_de_la_Hija_de_Krypton.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1642248264189882",
+    "published_at": "2026-10-14T07:06:52+0000",
+    "tokens": [
+      "supergirl",
+      "sucumbio",
+      "furia",
+      "roja",
+      "terror",
+      "hija",
+      "krypton"
+    ],
+    "ig_media_id": "18002123678809478",
+    "normalized_title": "supergirl sucumbio a la furia roja el terror de la hija de krypton"
   },
   {
     "id": "nova_richard_rider_desgarro_annihilus",
@@ -1467,7 +2974,20 @@
     "date": "2026-10-14 10:07",
     "mode": "live_release",
     "video_file": "Nova_le_Arrancó_las_Entrañas_a_Annihilus_La_Venganza_Más_Brutal_del_Cosmos.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1727501888321339",
+    "published_at": "2026-10-14T10:06:00+0000",
+    "tokens": [
+      "nova",
+      "arranco",
+      "entranas",
+      "annihilus",
+      "venganza",
+      "brutal",
+      "cosmos"
+    ],
+    "ig_media_id": "18112537340153166",
+    "normalized_title": "nova le arranco las entranas a annihilus la venganza mas brutal del cosmos"
   },
   {
     "id": "red_goblin_norman_osborn_simbionte_carnage",
@@ -1477,7 +2997,20 @@
     "date": "2026-10-14 16:00",
     "mode": "live_release",
     "video_file": "Nació_el_Duende_Rojo_La_Fusión_Monstruosa_de_Norman_Osborn_y_Carnage.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1141819391606414",
+    "published_at": "2026-10-14T15:59:18+0000",
+    "tokens": [
+      "nacio",
+      "duende",
+      "rojo",
+      "fusion",
+      "monstruosa",
+      "norman",
+      "osborn",
+      "carnage"
+    ],
+    "normalized_title": "nacio el duende rojo la fusion monstruosa de norman osborn y carnage"
   },
   {
     "id": "larfleeze_orange_lantern_avaricia_absoluta",
@@ -1487,7 +3020,19 @@
     "date": "2026-10-14 18:54",
     "mode": "live_release",
     "video_file": "Larfleeze_Un_Hombre_y_Todo_un_Ejército_de_Avaricia_Cósmica.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2248584465710834",
+    "published_at": "2026-10-14T18:52:50+0000",
+    "tokens": [
+      "larfleeze",
+      "hombre",
+      "todo",
+      "ejercito",
+      "avaricia",
+      "cosmica"
+    ],
+    "ig_media_id": "18132891136739705",
+    "normalized_title": "larfleeze un hombre y todo un ejercito de avaricia cosmica"
   },
   {
     "id": "wonder_woman_ceguera_decapito_medusa",
@@ -1497,7 +3042,19 @@
     "date": "2026-10-14 22:07",
     "mode": "live_release",
     "video_file": "Wonder_Woman_se_Arrancó_la_Vista_El_Sacrificio_que_Destruyó_a_Medusa.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "3210085282522344",
+    "published_at": "2026-10-14T22:06:03+0000",
+    "tokens": [
+      "wonder",
+      "woman",
+      "arranco",
+      "vista",
+      "sacrificio",
+      "destruyo",
+      "medusa"
+    ],
+    "normalized_title": "wonder woman se arranco la vista el sacrificio que destruyo a medusa"
   },
   {
     "id": "constantine_engano_triunvirato_infierno",
@@ -1507,7 +3064,19 @@
     "date": "2026-10-15 01:08",
     "mode": "live_release",
     "video_file": "Constantine_Engañó_a_los_Reyes_del_Infierno_La_Mayor_Estafa_a_Lucifer.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "28296616680035055",
+    "published_at": "2026-10-15T01:07:05+0000",
+    "tokens": [
+      "constantine",
+      "engano",
+      "reyes",
+      "infierno",
+      "mayor",
+      "estafa",
+      "lucifer"
+    ],
+    "normalized_title": "constantine engano a los reyes del infierno la mayor estafa a lucifer"
   },
   {
     "id": "punisher_war_machine_armadura_blanca",
@@ -1517,7 +3086,20 @@
     "date": "2026-10-15 07:35",
     "mode": "live_release",
     "video_file": "War_Machine_Blindó_al_Castigador_La_Armadura_de_Destrucción_Masiva_en_Chernaya.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1579055990098281",
+    "published_at": "2026-10-15T07:34:53+0000",
+    "tokens": [
+      "machine",
+      "blindo",
+      "castigador",
+      "armadura",
+      "destruccion",
+      "masiva",
+      "chernaya"
+    ],
+    "ig_media_id": "18193027588403830",
+    "normalized_title": "war machine blindo al castigador la armadura de destruccion masiva en chernaya"
   },
   {
     "id": "saint_walker_primer_linterna_azul_esperanza",
@@ -1527,7 +3109,20 @@
     "date": "2026-10-15 10:06",
     "mode": "live_release",
     "video_file": "El_Primer_Linterna_Azul_del_Cosmos_El_Milagro_que_Salvó_a_Hal_Jordan.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1135386479145700",
+    "published_at": "2026-10-15T10:05:38+0000",
+    "tokens": [
+      "primer",
+      "linterna",
+      "azul",
+      "cosmos",
+      "milagro",
+      "salvo",
+      "jordan"
+    ],
+    "ig_media_id": "17908122897568724",
+    "normalized_title": "el primer linterna azul del cosmos el milagro que salvo a hal jordan"
   },
   {
     "id": "ghost_rider_robbie_reyes_eli_morrow",
@@ -1537,7 +3132,22 @@
     "date": "2026-10-15 14:16",
     "mode": "live_release",
     "video_file": "Ghost_Rider_Robbie_Reyes_Desató_al_Demonio_El_Asesinato_que_Aterró_a_Los_Ángeles.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1451054303573782",
+    "published_at": "2026-10-15T14:14:17+0000",
+    "tokens": [
+      "ghost",
+      "rider",
+      "robbie",
+      "reyes",
+      "desato",
+      "demonio",
+      "asesinato",
+      "aterro",
+      "angeles"
+    ],
+    "ig_media_id": "17965216164210527",
+    "normalized_title": "ghost rider robbie reyes desato al demonio el asesinato que aterro a los angeles"
   },
   {
     "id": "captain_america_asesinato_civil_war_sharon",
@@ -1547,7 +3157,20 @@
     "date": "2026-10-15 20:31",
     "mode": "live_release",
     "video_file": "El_Asesinato_del_Capitán_América_El_Disparo_a_Quemarropa_que_Conmocionó_al_Mundo.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1504902668162743",
+    "published_at": "2026-10-15T20:30:06+0000",
+    "tokens": [
+      "asesinato",
+      "capitan",
+      "america",
+      "disparo",
+      "quemarropa",
+      "conmociono",
+      "mundo"
+    ],
+    "ig_media_id": "18389012854225471",
+    "normalized_title": "el asesinato del capitan america el disparo a quemarropa que conmociono al mundo"
   },
   {
     "id": "zoom_hunter_zolomon_chasquido_sonico",
@@ -1557,7 +3180,22 @@
     "date": "2026-10-15 22:06",
     "mode": "live_release",
     "video_file": "Zoom_Destruyó_a_Wally_West_El_Chasquido_Sónico_que_Rompió_la_Línea_Temporal.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "29180973284831563",
+    "published_at": "2026-10-15T22:05:22+0000",
+    "tokens": [
+      "zoom",
+      "destruyo",
+      "wally",
+      "west",
+      "chasquido",
+      "sonico",
+      "rompio",
+      "linea",
+      "temporal"
+    ],
+    "ig_media_id": "18114217496035149",
+    "normalized_title": "zoom destruyo a wally west el chasquido sonico que rompio la linea temporal"
   },
   {
     "id": "sinestro_luz_blanca_entidad_vida",
@@ -1567,7 +3205,20 @@
     "date": "2026-10-16 01:06",
     "mode": "live_release",
     "video_file": "Sinestro_se_Fusionó_con_la_Entidad_Divina_El_Milagro_de_la_Creación_Cósmica.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1120666950359353",
+    "published_at": "2026-10-16T01:05:13+0000",
+    "tokens": [
+      "sinestro",
+      "fusiono",
+      "entidad",
+      "divina",
+      "milagro",
+      "creacion",
+      "cosmica"
+    ],
+    "ig_media_id": "18132411043666314",
+    "normalized_title": "sinestro se fusiono con la entidad divina el milagro de la creacion cosmica"
   },
   {
     "id": "blue_beetle_jaime_reyes_escarabajo_khaji_da",
@@ -1577,7 +3228,20 @@
     "date": "2026-10-16 07:06",
     "mode": "live_release",
     "video_file": "El_Escarabajo_Alienígena_se_Fusionó_con_su_Columna_El_Origen_de_Jaime_Reyes.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2250791862516245",
+    "published_at": "2026-10-16T07:05:07+0000",
+    "tokens": [
+      "escarabajo",
+      "alienigena",
+      "fusiono",
+      "columna",
+      "origen",
+      "jaime",
+      "reyes"
+    ],
+    "ig_media_id": "17923892868428674",
+    "normalized_title": "el escarabajo alienigena se fusiono con su columna el origen de jaime reyes"
   },
   {
     "id": "morlun_devora_ojo_spiderman",
@@ -1587,7 +3251,19 @@
     "date": "2026-10-16 10:07",
     "mode": "live_release",
     "video_file": "Morlun_le_Arrancó_el_Ojo_a_Spider-Man_La_Masacre_del_Cazador_Heredero.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "4452100015105501",
+    "published_at": "2026-10-16T10:06:08+0000",
+    "tokens": [
+      "morlun",
+      "arranco",
+      "spider",
+      "masacre",
+      "cazador",
+      "heredero"
+    ],
+    "ig_media_id": "18103476674302284",
+    "normalized_title": "morlun le arranco el ojo a spider man la masacre del cazador heredero"
   },
   {
     "id": "doomsday_humilla_darkseid_apokolips",
@@ -1597,7 +3273,19 @@
     "date": "2026-10-16 14:07",
     "mode": "live_release",
     "video_file": "Doomsday_Destrozó_a_Darkseid_en_Apokolips_La_Humillación_del_Dios_del_Mal.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1469120905317057",
+    "published_at": "2026-10-16T14:06:35+0000",
+    "tokens": [
+      "doomsday",
+      "destrozo",
+      "darkseid",
+      "apokolips",
+      "humillacion",
+      "dios"
+    ],
+    "ig_media_id": "18167932264480214",
+    "normalized_title": "doomsday destrozo a darkseid en apokolips la humillacion del dios del mal"
   },
   {
     "id": "venom_dios_de_la_luz_fuerza_enigma",
@@ -1607,7 +3295,20 @@
     "date": "2026-10-16 18:07",
     "mode": "live_release",
     "video_file": "El_Hacha_de_Luz_que_Destruyó_la_Oscuridad_La_Apoteosis_Cósmica_en_King_in_Black.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1806816227315068",
+    "published_at": "2026-10-16T18:06:51+0000",
+    "tokens": [
+      "hacha",
+      "destruyo",
+      "oscuridad",
+      "apoteosis",
+      "cosmica",
+      "king",
+      "black"
+    ],
+    "ig_media_id": "18135147250737976",
+    "normalized_title": "el hacha de luz que destruyo la oscuridad la apoteosis cosmica en king in black"
   },
   {
     "id": "azrael_batman_armadura_asesina",
@@ -1617,7 +3318,23 @@
     "date": "2026-10-16 22:06",
     "mode": "live_release",
     "video_file": "El_Batman_Dorado_de_Azrael_Jean-Paul_Valley_Destrozó_a_Bane_con_Cuchillas_y_Fueg.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "3624722954373179",
+    "published_at": "2026-10-16T22:05:59+0000",
+    "tokens": [
+      "batman",
+      "dorado",
+      "azrael",
+      "jean",
+      "paul",
+      "valley",
+      "destrozo",
+      "bane",
+      "cuchillas",
+      "fuego"
+    ],
+    "ig_media_id": "18119422717950483",
+    "normalized_title": "el batman dorado de azrael jean paul valley destrozo a bane con cuchillas y fuego"
   },
   {
     "id": "old_man_logan_estomago_hulk_canibal",
@@ -1627,7 +3344,21 @@
     "date": "2026-10-17 01:05",
     "mode": "live_release",
     "video_file": "Logan_Desgarró_a_Hulk_desde_Adentro_El_Fin_del_Tirano_Caníbal_en_Wasteland.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1636674354535690",
+    "published_at": "2026-10-17T01:04:48+0000",
+    "tokens": [
+      "logan",
+      "desgarro",
+      "hulk",
+      "desde",
+      "adentro",
+      "tirano",
+      "canibal",
+      "wasteland"
+    ],
+    "ig_media_id": "18124858456958450",
+    "normalized_title": "logan desgarro a hulk desde adentro el fin del tirano canibal en wasteland"
   },
   {
     "id": "miles_morales_legado_nuevo_prodigio",
@@ -1637,7 +3368,20 @@
     "date": "2026-10-17 07:05",
     "mode": "live_release",
     "video_file": "El_Nuevo_Spider-Man_de_Brooklyn_El_Legado_Arácnido_de_Miles_Morales.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1878616439793309",
+    "published_at": "2026-10-17T07:04:15+0000",
+    "tokens": [
+      "nuevo",
+      "spider",
+      "brooklyn",
+      "legado",
+      "aracnido",
+      "miles",
+      "morales"
+    ],
+    "ig_media_id": "18567329302077933",
+    "normalized_title": "el nuevo spider man de brooklyn el legado aracnido de miles morales"
   },
   {
     "id": "batman_endgame_justice_buster_liga",
@@ -1647,7 +3391,20 @@
     "date": "2026-10-17 13:43",
     "mode": "live_release",
     "video_file": "Batman_Humilló_a_la_Liga_de_la_Justicia_La_Imparable_Armadura_Fenrir.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1463041055771502",
+    "published_at": "2026-10-17T13:42:49+0000",
+    "tokens": [
+      "batman",
+      "humillo",
+      "liga",
+      "justicia",
+      "imparable",
+      "armadura",
+      "fenrir"
+    ],
+    "ig_media_id": "18146205094540757",
+    "normalized_title": "batman humillo a la liga de la justicia la imparable armadura fenrir"
   },
   {
     "id": "wolverine_ahoga_hijo_daken_xforce",
@@ -1657,7 +3414,18 @@
     "date": "2026-10-17 14:04",
     "mode": "live_release",
     "video_file": "Wolverine_Tuvo_que_Ahogar_a_su_Propio_Hijo_La_Tragedia_Desgarradora_de_Daken.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "wolverine tuvo que ahogar a su propio hijo la tragedia desgarradora de daken",
+    "tokens": [
+      "wolverine",
+      "tuvo",
+      "ahogar",
+      "propio",
+      "hijo",
+      "tragedia",
+      "desgarradora",
+      "daken"
+    ]
   },
   {
     "id": "punisher_duelo_brutal_ruso_apartamento",
@@ -1667,7 +3435,21 @@
     "date": "2026-10-17 18:05",
     "mode": "live_release",
     "video_file": "El_Ruso_Destrozó_el_Hogar_de_Frank_Castle_La_Pelea_más_Despiadada_de_Punisher.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2122311945022194",
+    "published_at": "2026-10-17T18:04:01+0000",
+    "tokens": [
+      "ruso",
+      "destrozo",
+      "hogar",
+      "frank",
+      "castle",
+      "pelea",
+      "despiadada",
+      "punisher"
+    ],
+    "ig_media_id": "18353019652270541",
+    "normalized_title": "el ruso destrozo el hogar de frank castle la pelea mas despiadada de punisher"
   },
   {
     "id": "bane_origen_prision_pena_duro",
@@ -1677,7 +3459,19 @@
     "date": "2026-10-17 23:32",
     "mode": "live_release",
     "video_file": "El_Nacimiento_de_Bane_en_Peña_Duro_La_Infancia_Más_Aterradora_de_DC.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1103647525741130",
+    "published_at": "2026-10-17T23:31:16+0000",
+    "tokens": [
+      "nacimiento",
+      "bane",
+      "pena",
+      "duro",
+      "infancia",
+      "aterradora"
+    ],
+    "ig_media_id": "18116254109095529",
+    "normalized_title": "el nacimiento de bane en pena duro la infancia mas aterradora de dc"
   },
   {
     "id": "batman_el_culto_deacon_blackfire",
@@ -1687,7 +3481,19 @@
     "date": "2026-10-18 01:50",
     "mode": "live_release",
     "video_file": "El_Día_que_Quebraron_la_Mente_de_Batman_El_Culto_Maldito_de_Blackfire.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1625660079352197",
+    "published_at": "2026-10-18T01:49:54+0000",
+    "tokens": [
+      "quebraron",
+      "mente",
+      "batman",
+      "culto",
+      "maldito",
+      "blackfire"
+    ],
+    "ig_media_id": "18117876718788385",
+    "normalized_title": "el dia que quebraron la mente de batman el culto maldito de blackfire"
   },
   {
     "id": "spiderman_if_this_be_my_destiny_acero",
@@ -1697,7 +3503,20 @@
     "date": "2026-10-18 07:06",
     "mode": "live_release",
     "video_file": "Spider-Man_se_Negó_a_Morir_La_Hazaña_Imposible_Bajo_Toneladas_de_Acero.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1436541918621860",
+    "published_at": "2026-10-18T07:04:52+0000",
+    "tokens": [
+      "spider",
+      "nego",
+      "morir",
+      "hazana",
+      "imposible",
+      "bajo",
+      "toneladas",
+      "acero"
+    ],
+    "normalized_title": "spider man se nego a morir la hazana imposible bajo toneladas de acero"
   },
   {
     "id": "batman_recupera_el_manto_derrota_azrael",
@@ -1707,7 +3526,21 @@
     "date": "2026-10-18 10:05",
     "mode": "live_release",
     "video_file": "Bruce_Wayne_Reclama_Gotham_El_Retorno_del_Verdadero_Defensor_de_la_Noche.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2066700203984985",
+    "published_at": "2026-10-18T10:04:31+0000",
+    "tokens": [
+      "bruce",
+      "wayne",
+      "reclama",
+      "gotham",
+      "retorno",
+      "verdadero",
+      "defensor",
+      "noche"
+    ],
+    "ig_media_id": "17931735426161885",
+    "normalized_title": "bruce wayne reclama gotham el retorno del verdadero defensor de la noche"
   },
   {
     "id": "iron_man_silver_centurion_iron_monger",
@@ -1717,7 +3550,21 @@
     "date": "2026-10-18 14:05",
     "mode": "live_release",
     "video_file": "El_Poder_del_Centurión_Plateado_La_Furia_de_Acero_que_Destruyó_a_Iron_Monger.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1636514227971986",
+    "published_at": "2026-10-18T14:04:45+0000",
+    "tokens": [
+      "poder",
+      "centurion",
+      "plateado",
+      "furia",
+      "acero",
+      "destruyo",
+      "iron",
+      "monger"
+    ],
+    "ig_media_id": "18114679784117978",
+    "normalized_title": "el poder del centurion plateado la furia de acero que destruyo a iron monger"
   },
   {
     "id": "joker_el_pez_que_rie_detective_475",
@@ -1727,7 +3574,20 @@
     "date": "2026-10-18 18:05",
     "mode": "live_release",
     "video_file": "La_Macabra_Sonrisa_de_los_Peces_El_Ataque_Químico_del_Joker_en_Gotham.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1692123119092461",
+    "published_at": "2026-10-18T18:04:48+0000",
+    "tokens": [
+      "macabra",
+      "sonrisa",
+      "peces",
+      "ataque",
+      "quimico",
+      "joker",
+      "gotham"
+    ],
+    "ig_media_id": "18643851508003324",
+    "normalized_title": "la macabra sonrisa de los peces el ataque quimico del joker en gotham"
   },
   {
     "id": "batman_year_one_campana_murcielago",
@@ -1737,7 +3597,20 @@
     "date": "2026-10-18 22:05",
     "mode": "live_release",
     "video_file": "La_Noche_en_que_Nació_el_Murciélago_La_Herida_Sangrienta_en_la_Mansión_Wayne.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1445655830992745",
+    "published_at": "2026-10-18T22:03:58+0000",
+    "tokens": [
+      "noche",
+      "nacio",
+      "murcielago",
+      "herida",
+      "sangrienta",
+      "mansion",
+      "wayne"
+    ],
+    "ig_media_id": "18138193183629540",
+    "normalized_title": "la noche en que nacio el murcielago la herida sangrienta en la mansion wayne"
   },
   {
     "id": "wolverine_duelo_honor_japon_shingen",
@@ -1747,7 +3620,19 @@
     "date": "2026-10-19 01:07",
     "mode": "live_release",
     "video_file": "El_Honor_Samurái_de_Wolverine_La_Venganza_de_las_Garras_en_Japón.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1464798895519325",
+    "published_at": "2026-10-19T01:06:03+0000",
+    "tokens": [
+      "honor",
+      "samurai",
+      "wolverine",
+      "venganza",
+      "garras",
+      "japon"
+    ],
+    "ig_media_id": "17973164445154083",
+    "normalized_title": "el honor samurai de wolverine la venganza de las garras en japon"
   },
   {
     "id": "carnage_primer_origen_asm_361",
@@ -1757,7 +3642,22 @@
     "date": "2026-10-19 07:06",
     "mode": "live_release",
     "video_file": "Caos_en_la_Prisión_de_Ryker_La_Fuga_Letal_de_Cletus_Kasady_en_Nueva_York.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1734158020995785",
+    "published_at": "2026-10-19T07:05:18+0000",
+    "tokens": [
+      "caos",
+      "prision",
+      "ryker",
+      "fuga",
+      "letal",
+      "cletus",
+      "kasady",
+      "nueva",
+      "york"
+    ],
+    "ig_media_id": "18397666846206869",
+    "normalized_title": "caos en la prision de ryker la fuga letal de cletus kasady en nueva york"
   },
   {
     "id": "thor_beta_ray_bill_levanta_mjolnir",
@@ -1767,7 +3667,21 @@
     "date": "2026-10-19 10:06",
     "mode": "live_release",
     "video_file": "Un_Guerrero_Alienígena_Digno_de_los_Dioses_La_Furia_Dorada_de_Beta_Ray_Bill.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1107272721920075",
+    "published_at": "2026-10-19T10:05:06+0000",
+    "tokens": [
+      "guerrero",
+      "alienigena",
+      "digno",
+      "dioses",
+      "furia",
+      "dorada",
+      "beta",
+      "bill"
+    ],
+    "ig_media_id": "18144572710558815",
+    "normalized_title": "un guerrero alienigena digno de los dioses la furia dorada de beta ray bill"
   },
   {
     "id": "green_lantern_kyle_rayner_el_ultimo_anillo",
@@ -1777,7 +3691,20 @@
     "date": "2026-10-19 14:16",
     "mode": "live_release",
     "video_file": "El_Último_Linterna_Verde_de_la_Galaxia_El_Surgimiento_de_Kyle_Rayner.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1510955927525612",
+    "published_at": "2026-10-19T14:15:52+0000",
+    "tokens": [
+      "ultimo",
+      "linterna",
+      "verde",
+      "galaxia",
+      "surgimiento",
+      "kyle",
+      "rayner"
+    ],
+    "ig_media_id": "18120683102471916",
+    "normalized_title": "el ultimo linterna verde de la galaxia el surgimiento de kyle rayner"
   },
   {
     "id": "thanos_guantelete_del_infinito_desafio_cosmico",
@@ -1787,7 +3714,21 @@
     "date": "2026-10-19 20:26",
     "mode": "live_release",
     "video_file": "El_Poder_Absoluto_de_las_Seis_Gemas_La_Resistencia_Heroica_Contra_Thanos.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "28594075296954562",
+    "published_at": "2026-10-19T20:25:19+0000",
+    "tokens": [
+      "poder",
+      "absoluto",
+      "seis",
+      "gemas",
+      "resistencia",
+      "heroica",
+      "contra",
+      "thanos"
+    ],
+    "ig_media_id": "17917514472465727",
+    "normalized_title": "el poder absoluto de las seis gemas la resistencia heroica contra thanos"
   },
   {
     "id": "blade_origen_mordedura_deacon_frost",
@@ -1797,7 +3738,20 @@
     "date": "2026-10-19 22:06",
     "mode": "live_release",
     "video_file": "El_Nacimiento_del_Caminante_Diurno_La_Sangre_Maldita_de_Deacon_Frost.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1737540470673530",
+    "published_at": "2026-10-19T22:04:53+0000",
+    "tokens": [
+      "nacimiento",
+      "caminante",
+      "diurno",
+      "sangre",
+      "maldita",
+      "deacon",
+      "frost"
+    ],
+    "ig_media_id": "17949467661323957",
+    "normalized_title": "el nacimiento del caminante diurno la sangre maldita de deacon frost"
   },
   {
     "id": "silver_surfer_requiem_muerte_norrin_radd",
@@ -1807,7 +3761,21 @@
     "date": "2026-10-20 01:07",
     "mode": "live_release",
     "video_file": "Los_Últimos_Días_del_Heraldo_El_Adiós_Dorado_de_Silver_Surfer_al_Cosmos.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "3000135046994857",
+    "published_at": "2026-10-20T01:06:31+0000",
+    "tokens": [
+      "ultimos",
+      "dias",
+      "heraldo",
+      "adios",
+      "dorado",
+      "silver",
+      "surfer",
+      "cosmos"
+    ],
+    "ig_media_id": "17884062192523211",
+    "normalized_title": "los ultimos dias del heraldo el adios dorado de silver surfer al cosmos"
   },
   {
     "id": "flash_wally_west_supera_barry_thawne",
@@ -1817,7 +3785,22 @@
     "date": "2026-10-20 07:07",
     "mode": "live_release",
     "video_file": "El_Heredero_Más_Veloz_Wally_West_Superó_a_su_Maestro_y_Salvó_Central_City.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2632734983844555",
+    "published_at": "2026-10-20T07:06:29+0000",
+    "tokens": [
+      "heredero",
+      "veloz",
+      "wally",
+      "west",
+      "supero",
+      "maestro",
+      "salvo",
+      "central",
+      "city"
+    ],
+    "ig_media_id": "18119148557064749",
+    "normalized_title": "el heredero mas veloz wally west supero a su maestro y salvo central city"
   },
   {
     "id": "hulk_profesor_fusion_mente_banner",
@@ -1827,7 +3810,22 @@
     "date": "2026-10-20 10:06",
     "mode": "live_release",
     "video_file": "Tres_Mentes_en_un_Solo_Monstruo_La_Fusión_Psicológica_que_Creó_al_Profesor_Hulk.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "960522063311311",
+    "published_at": "2026-10-20T10:05:30+0000",
+    "tokens": [
+      "tres",
+      "mentes",
+      "solo",
+      "monstruo",
+      "fusion",
+      "psicologica",
+      "creo",
+      "profesor",
+      "hulk"
+    ],
+    "ig_media_id": "18113168330580206",
+    "normalized_title": "tres mentes en un solo monstruo la fusion psicologica que creo al profesor hulk"
   },
   {
     "id": "xmen_masacre_mutante_cloacas_merodeadores",
@@ -1837,7 +3835,18 @@
     "date": "2026-10-20 18:21",
     "mode": "live_release",
     "video_file": "La_Masacre_de_los_Inocentes_El_Terror_de_los_Merodeadores_en_las_Cloacas.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1635083651415290",
+    "published_at": "2026-10-20T18:20:40+0000",
+    "tokens": [
+      "masacre",
+      "inocentes",
+      "terror",
+      "merodeadores",
+      "cloacas"
+    ],
+    "ig_media_id": "18090693395300696",
+    "normalized_title": "la masacre de los inocentes el terror de los merodeadores en las cloacas"
   },
   {
     "id": "thor_skurge_ejecutor_puente_gjallerbru",
@@ -1847,7 +3856,21 @@
     "date": "2026-10-20 22:09",
     "mode": "live_release",
     "video_file": "Un_Solo_Hombre_Contra_los_Ejércitos_de_Hel_El_Sacrificio_Inmortal_de_Skurge_en_e.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1840927623728355",
+    "published_at": "2026-10-20T22:08:50+0000",
+    "tokens": [
+      "solo",
+      "hombre",
+      "contra",
+      "ejercitos",
+      "sacrificio",
+      "inmortal",
+      "skurge",
+      "puente"
+    ],
+    "ig_media_id": "18178504060429008",
+    "normalized_title": "un solo hombre contra los ejercitos de hel el sacrificio inmortal de skurge en el puente"
   },
   {
     "id": "cassandra_nova_genocidio_genosha_centinelas",
@@ -1857,7 +3880,20 @@
     "date": "2026-10-21 22:07",
     "mode": "live_release",
     "video_file": "El_Genocidio_de_Dieciséis_Millones_El_Apocalipsis_de_Genosha_por_Cassandra_Nova.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1813867966295612",
+    "published_at": "2026-10-21T22:06:02+0000",
+    "tokens": [
+      "genocidio",
+      "dieciseis",
+      "millones",
+      "apocalipsis",
+      "genosha",
+      "cassandra",
+      "nova"
+    ],
+    "ig_media_id": "17962939716213511",
+    "normalized_title": "el genocidio de dieciseis millones el apocalipsis de genosha por cassandra nova"
   },
   {
     "id": "plaga_canibal_sentry_caida_vengadores",
@@ -1867,7 +3903,19 @@
     "date": "2026-10-22 01:06",
     "mode": "live_release",
     "video_file": "El_Día_del_Hambre_Eterna_La_Oscura_Caída_de_los_Héroes_Más_Poderosos.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1778971193397371",
+    "published_at": "2026-10-22T01:05:22+0000",
+    "tokens": [
+      "hambre",
+      "eterna",
+      "oscura",
+      "caida",
+      "heroes",
+      "poderosos"
+    ],
+    "ig_media_id": "18022253600927354",
+    "normalized_title": "el dia del hambre eterna la oscura caida de los heroes mas poderosos"
   },
   {
     "id": "zombies_consumen_galactus_poder_infinito",
@@ -1877,7 +3925,19 @@
     "date": "2026-10-22 07:07",
     "mode": "live_release",
     "video_file": "El_Festín_Prohibido_de_los_No-Muertos_La_Caída_del_Gigante_de_las_Estrellas.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1120839530434987",
+    "published_at": "2026-10-22T07:06:04+0000",
+    "tokens": [
+      "festin",
+      "prohibido",
+      "muertos",
+      "caida",
+      "gigante",
+      "estrellas"
+    ],
+    "ig_media_id": "18013878560968546",
+    "normalized_title": "el festin prohibido de los no muertos la caida del gigante de las estrellas"
   },
   {
     "id": "giant_man_laboratorio_secreto_prisionero_panther",
@@ -1887,7 +3947,19 @@
     "date": "2026-10-22 10:05",
     "mode": "live_release",
     "video_file": "El_Macabro_Secreto_de_Giant-Man_El_Laboratorio_Prohibido_de_Hank_Pym.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1102364339357184",
+    "published_at": "2026-10-22T10:04:51+0000",
+    "tokens": [
+      "macabro",
+      "secreto",
+      "giant",
+      "laboratorio",
+      "prohibido",
+      "hank"
+    ],
+    "ig_media_id": "18435888319182093",
+    "normalized_title": "el macabro secreto de giant man el laboratorio prohibido de hank pym"
   },
   {
     "id": "invincible_conquest_asalto_brutal_sangre",
@@ -1897,7 +3969,19 @@
     "date": "2026-10-22 19:03",
     "mode": "live_release",
     "video_file": "La_Masacre_de_Conquest_La_Pelea_más_Despiadada_en_el_Cielo_de_la_Tierra.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1395514669237583",
+    "published_at": "2026-10-23T00:02:18+0000",
+    "tokens": [
+      "masacre",
+      "conquest",
+      "pelea",
+      "despiadada",
+      "cielo",
+      "tierra"
+    ],
+    "ig_media_id": "18017642534954775",
+    "normalized_title": "la masacre de conquest la pelea mas despiadada en el cielo de la tierra"
   },
   {
     "id": "hawkeye_mi_vida_como_arma_fraction",
@@ -1907,7 +3991,20 @@
     "date": "2026-10-23 01:06",
     "mode": "live_release",
     "video_file": "Hawkeye_Sin_Vengadores_La_Desastrosa_Vida_Callejera_de_Clint_Barton.mp4",
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1676866240442913",
+    "published_at": "2026-10-23T01:05:17+0000",
+    "tokens": [
+      "hawkeye",
+      "vengadores",
+      "desastrosa",
+      "vida",
+      "callejera",
+      "clint",
+      "barton"
+    ],
+    "ig_media_id": "18183877576426402",
+    "normalized_title": "hawkeye sin vengadores la desastrosa vida callejera de clint barton"
   },
   {
     "id": "invincible_battle_beast_duelo_viltrumita",
@@ -1917,7 +4014,15 @@
     "date": "2026-10-24 12:00",
     "mode": "user_published",
     "video_file": "Battle_Beast_vs_Thragg_El_Duelo_Más_Sangriento_del_Cómic.mp4",
-    "status": "published"
+    "status": "published",
+    "normalized_title": "battle beast vs thragg el duelo mas sangriento del comic",
+    "tokens": [
+      "battle",
+      "beast",
+      "thragg",
+      "duelo",
+      "sangriento"
+    ]
   },
   {
     "id": "spiderman_reign_2_1792947278",
@@ -1932,7 +4037,20 @@
       "tiktok": "6ade34333d5b27036be1e964",
       "youtube": "6ade34443d5b27036be1eafa"
     },
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "1151004734167725",
+    "published_at": "2026-10-25T16:52:41+0000",
+    "tokens": [
+      "duelo",
+      "tragico",
+      "peter",
+      "parker",
+      "miles",
+      "morales",
+      "anciano"
+    ],
+    "ig_media_id": "18116991110040248",
+    "normalized_title": "el duelo mas tragico peter parker vs miles morales anciano"
   },
   {
     "id": "01_13h_superior_spiderman",
@@ -1948,7 +4066,18 @@
       "youtube": "6ade4498bd33ce99c38462f2"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1428517965436017",
+    "published_at": "2026-10-25T18:02:29+0000",
+    "tokens": [
+      "superior",
+      "spider",
+      "arranco",
+      "mandibula",
+      "escorpion"
+    ],
+    "ig_media_id": "18147693721584800",
+    "normalized_title": "superior spider man le arranco la mandibula a escorpion"
   },
   {
     "id": "punisher_war_machine_1792957180",
@@ -1965,7 +4094,18 @@
       "tiktok": "6ade5ad63d5b27036bec2de9",
       "youtube": "6ade5af70b5343d070eb4c57"
     },
-    "status": "published"
+    "status": "published",
+    "fb_video_id": "2163716714494829",
+    "published_at": "2026-10-25T19:36:59+0000",
+    "tokens": [
+      "punisher",
+      "frank",
+      "castle",
+      "armadura",
+      "machine"
+    ],
+    "ig_media_id": "17960247879258644",
+    "normalized_title": "the punisher frank castle con la armadura war machine"
   },
   {
     "id": "01_marvel_zombies_spiderman",
@@ -1981,7 +4121,16 @@
       "youtube": "6ade7ce80b5343d070f39776"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "2902746186749060",
+    "published_at": "2026-10-25T22:02:48+0000",
+    "tokens": [
+      "desgarrador",
+      "canibalismo",
+      "peter",
+      "parker"
+    ],
+    "normalized_title": "marvel zombies el desgarrador canibalismo de peter parker"
   },
   {
     "id": "02_red_goblin_carnage",
@@ -1997,7 +4146,18 @@
       "youtube": "6adea7006887a2efc1342de5"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1750129409388289",
+    "published_at": "2026-10-26T01:02:26+0000",
+    "tokens": [
+      "goblin",
+      "sadica",
+      "fusion",
+      "norman",
+      "osborn",
+      "carnage"
+    ],
+    "normalized_title": "the red goblin la sadica fusion de norman osborn y carnage"
   },
   {
     "id": "03_batman_under_red_hood",
@@ -2013,7 +4173,19 @@
       "youtube": "6adefb6dba65356abc95e4ca"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1139133925438132",
+    "published_at": "2026-10-26T07:02:39+0000",
+    "tokens": [
+      "batman",
+      "under",
+      "hood",
+      "sangrienta",
+      "resurreccion",
+      "jason",
+      "todd"
+    ],
+    "normalized_title": "batman under the red hood la sangrienta resurreccion de jason todd"
   },
   {
     "id": "04_ghost_rider_rey_infierno",
@@ -2029,7 +4201,19 @@
       "youtube": "6adf259347c45bda994bd50f"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1438583621797095",
+    "published_at": "2026-10-26T10:02:21+0000",
+    "tokens": [
+      "ghost",
+      "rider",
+      "johnny",
+      "blaze",
+      "conquista",
+      "infierno"
+    ],
+    "ig_media_id": "18075302420734515",
+    "normalized_title": "ghost rider johnny blaze y la conquista del infierno"
   },
   {
     "id": "05_dceased_batman",
@@ -2045,7 +4229,17 @@
       "youtube": "6adf5dd413bbb91ebaf1a884"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1147021447851829",
+    "published_at": "2026-10-26T14:02:30+0000",
+    "tokens": [
+      "dceased",
+      "tragico",
+      "desgarrador",
+      "final",
+      "batman"
+    ],
+    "normalized_title": "dceased el tragico y desgarrador final de batman"
   },
   {
     "id": "06_daredevil_muerte_elektra",
@@ -2061,7 +4255,18 @@
       "youtube": "6adf967c43b77056967c2906"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "2247908562788396",
+    "published_at": "2026-10-26T18:04:08+0000",
+    "tokens": [
+      "daredevil",
+      "brutal",
+      "muerte",
+      "elektra",
+      "manos",
+      "bullseye"
+    ],
+    "normalized_title": "daredevil la brutal muerte de elektra a manos de bullseye"
   },
   {
     "id": "07_spiderman_2099",
@@ -2077,7 +4282,20 @@
       "youtube": "6adfce59c26d8b40cc795a0a"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "2105395210088034",
+    "published_at": "2026-10-26T22:02:29+0000",
+    "tokens": [
+      "spider",
+      "2099",
+      "oscuro",
+      "origen",
+      "genetico",
+      "miguel",
+      "hara"
+    ],
+    "ig_media_id": "17906110965599160",
+    "normalized_title": "spider man 2099 el oscuro origen genetico de miguel o hara"
   },
   {
     "id": "08_thor_gorr_butcher",
@@ -2093,7 +4311,19 @@
       "youtube": "6adff87ff266a5f7e1083292"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1868284071193509",
+    "published_at": "2026-10-27T01:02:23+0000",
+    "tokens": [
+      "thor",
+      "gorr",
+      "carnicero",
+      "dioses",
+      "batalla",
+      "tres",
+      "thors"
+    ],
+    "normalized_title": "thor gorr el carnicero de dioses y la batalla de los tres thors"
   },
   {
     "id": "09_darth_vader_down",
@@ -2109,7 +4339,19 @@
       "youtube": "6ae04cf84c0869d0f8d6f5f4"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1114277201015693",
+    "published_at": "2026-10-27T07:02:48+0000",
+    "tokens": [
+      "darth",
+      "vader",
+      "solo",
+      "rodeado",
+      "miedo",
+      "hombres",
+      "muertos"
+    ],
+    "normalized_title": "darth vader solo rodeado de miedo y hombres muertos"
   },
   {
     "id": "10_supergirl_red_lantern",
@@ -2125,7 +4367,16 @@
       "youtube": "6ae0772de3a1beb2ea00c051"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1623659872731332",
+    "published_at": "2026-10-27T10:02:49+0000",
+    "tokens": [
+      "supergirl",
+      "despiadada",
+      "furia",
+      "lantern"
+    ],
+    "normalized_title": "supergirl la despiadada furia del red lantern de la ira"
   },
   {
     "id": "superior_spiderman_mandibula_escorpion_long",
@@ -2136,7 +4387,16 @@
     "mode": "long_video_youtube",
     "video_file": "output/superior_spiderman_long/superior_spiderman_el_golpe_definitivo_1080p.mp4",
     "duration_seconds": 356.08,
-    "status": "ready_to_publish"
+    "status": "ready_to_publish",
+    "normalized_title": "el dia que spider man dejo de contenerse historia completa superior spider man",
+    "tokens": [
+      "spider",
+      "dejo",
+      "contenerse",
+      "completa",
+      "superior",
+      "spider"
+    ]
   },
   {
     "id": "11_plastic_man_inmortal",
@@ -2152,7 +4412,18 @@
       "youtube": "6ae0af4e01a7b9ebe43a012f"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1703177941168494",
+    "published_at": "2026-10-27T14:02:22+0000",
+    "tokens": [
+      "plastic",
+      "terror",
+      "oculto",
+      "batman",
+      "liga",
+      "justicia"
+    ],
+    "normalized_title": "plastic man el terror oculto de batman en la liga de la justicia"
   },
   {
     "id": "12_taskmaster_olvido",
@@ -2168,7 +4439,17 @@
       "youtube": "6ae0e7b0049681f2b00ab2d9"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "2019641505420392",
+    "published_at": "2026-10-27T18:02:54+0000",
+    "tokens": [
+      "taskmaster",
+      "desgarradora",
+      "maldicion",
+      "memoria",
+      "fotografica"
+    ],
+    "normalized_title": "taskmaster la desgarradora maldicion de su memoria fotografica"
   },
   {
     "id": "01_wonder_woman_ceguera_medusa",
@@ -2184,7 +4465,18 @@
       "youtube": "6ae120257ee83e48a97b4bdf"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1620181733182480",
+    "published_at": "2026-10-27T22:03:43+0000",
+    "tokens": [
+      "wonder",
+      "woman",
+      "sacrificio",
+      "ciego",
+      "destruyo",
+      "medusa"
+    ],
+    "normalized_title": "wonder woman el sacrificio ciego que destruyo a medusa"
   },
   {
     "id": "02_constantine_triunvirato_infierno",
@@ -2200,7 +4492,18 @@
       "youtube": "6ae14a0d8bc396ba2f164c7e"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1432527544950815",
+    "published_at": "2026-10-28T01:02:39+0000",
+    "tokens": [
+      "john",
+      "constantine",
+      "gran",
+      "estafa",
+      "reyes",
+      "infierno"
+    ],
+    "normalized_title": "john constantine la gran estafa a los reyes del infierno"
   },
   {
     "id": "03_spiderman_vs_juggernaut",
@@ -2216,7 +4519,17 @@
       "youtube": null
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1112471168074463",
+    "published_at": "2026-10-28T07:02:20+0000",
+    "tokens": [
+      "spider",
+      "juggernaut",
+      "trampa",
+      "cemento",
+      "liquido"
+    ],
+    "normalized_title": "spider man vs juggernaut la trampa de cemento liquido"
   },
   {
     "id": "04_nova_annihilus_desgarro",
@@ -2232,7 +4545,18 @@
       "youtube": null
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1436307265147178",
+    "published_at": "2026-10-28T10:03:54+0000",
+    "tokens": [
+      "nova",
+      "annihilus",
+      "despiadado",
+      "desgarro",
+      "cosmico"
+    ],
+    "ig_media_id": "18115260077600437",
+    "normalized_title": "nova vs annihilus el despiadado desgarro cosmico"
   },
   {
     "id": "05_red_goblin_osborn_carnage",
@@ -2248,7 +4572,19 @@
       "youtube": "6ae200d39bcf8f4f823a30b4"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1909678819995879",
+    "published_at": "2026-10-28T14:02:22+0000",
+    "tokens": [
+      "nacio",
+      "duende",
+      "rojo",
+      "fusion",
+      "norman",
+      "osborn",
+      "carnage"
+    ],
+    "normalized_title": "nacio el duende rojo la fusion de norman osborn y carnage"
   },
   {
     "id": "06_flash_human_race",
@@ -2264,7 +4600,17 @@
       "youtube": "6ae23963449418df5b783149"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1094990982983959",
+    "published_at": "2026-10-28T18:04:18+0000",
+    "tokens": [
+      "flash",
+      "rapido",
+      "teletransportacion",
+      "instantanea"
+    ],
+    "ig_media_id": "17872500231648370",
+    "normalized_title": "the flash mas rapido que la teletransportacion instantanea"
   },
   {
     "id": "07_saint_walker_linterna_azul",
@@ -2280,7 +4626,17 @@
       "youtube": "6ae27193cc91be5434b16b3d"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "896498680120420",
+    "published_at": "2026-10-28T22:03:29+0000",
+    "tokens": [
+      "saint",
+      "walker",
+      "esperanza",
+      "salvo",
+      "jordan"
+    ],
+    "normalized_title": "saint walker la esperanza que salvo a hal jordan"
   },
   {
     "id": "08_shazam_billy_batson_relampago_dioses",
@@ -2296,7 +4652,19 @@
       "youtube": "6ae29b9a42598d490d7896cc"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "980451227860968",
+    "published_at": "2026-10-29T01:03:24+0000",
+    "tokens": [
+      "mistico",
+      "origen",
+      "shazam",
+      "relampago",
+      "seis",
+      "dioses"
+    ],
+    "ig_media_id": "18156449593524032",
+    "normalized_title": "el mistico origen de shazam el relampago de los seis dioses"
   },
   {
     "id": "09_zatanna_magia_inversa_conjuro_sombras",
@@ -2312,7 +4680,19 @@
       "youtube": "6ae2efce35657f219b317594"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "27876161908726209",
+    "published_at": "2026-10-29T07:02:43+0000",
+    "tokens": [
+      "zatanna",
+      "secreto",
+      "magia",
+      "inversa",
+      "dobla",
+      "realidad"
+    ],
+    "ig_media_id": "18101709557068363",
+    "normalized_title": "zatanna el secreto de la magia inversa que dobla la realidad"
   },
   {
     "id": "10_moon_knight_manicomio_khonshu_lemire",
@@ -2328,7 +4708,20 @@
       "youtube": "6ae31a267b777f7b03bf3e6f"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1699992441706541",
+    "published_at": "2026-10-29T10:03:14+0000",
+    "tokens": [
+      "moon",
+      "knight",
+      "manicomio",
+      "khonshu",
+      "mentes",
+      "marc",
+      "spector"
+    ],
+    "ig_media_id": "18139460599620442",
+    "normalized_title": "moon knight el manicomio de khonshu y las mentes de marc spector"
   },
   {
     "id": "23_ash_williams_marvel_zombies",
@@ -2344,7 +4737,15 @@
       "youtube": "6ae3529a835dd2febef17f0e"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1474862521179517",
+    "published_at": "2026-10-29T14:03:40+0000",
+    "tokens": [
+      "williams",
+      "motosierra",
+      "mundo"
+    ],
+    "normalized_title": "ash williams vs marvel zombies la motosierra en el fin del mundo"
   },
   {
     "id": "24_moira_mactaggert_house_of_x",
@@ -2360,7 +4761,19 @@
       "youtube": "6ae38aa7b3aaeefe2320fcff"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "2597499760769061",
+    "published_at": "2026-10-29T18:02:38+0000",
+    "tokens": [
+      "gran",
+      "secreto",
+      "moira",
+      "mactaggert",
+      "vidas",
+      "house"
+    ],
+    "ig_media_id": "18119253142954470",
+    "normalized_title": "el gran secreto de moira mactaggert las 10 vidas de house of x"
   },
   {
     "id": "25_doctor_strange_empirikul",
@@ -2376,7 +4789,20 @@
       "youtube": "6ae3c2d160532fc2b0d34c28"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "2422237575256064",
+    "published_at": "2026-10-29T22:03:00+0000",
+    "tokens": [
+      "hace",
+      "doctor",
+      "strange",
+      "magia",
+      "hacha",
+      "ancestral",
+      "sangre"
+    ],
+    "ig_media_id": "17977326840147987",
+    "normalized_title": "que hace doctor strange sin magia el hacha ancestral de sangre"
   },
   {
     "id": "26_green_arrow_longbow_hunters",
@@ -2392,7 +4818,19 @@
       "youtube": "6ae3ed40a83a7fb63c88b791"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "2322301248522746",
+    "published_at": "2026-10-30T01:04:01+0000",
+    "tokens": [
+      "flecha",
+      "verde",
+      "empezo",
+      "matar",
+      "longbow",
+      "hunters"
+    ],
+    "ig_media_id": "18029552393865521",
+    "normalized_title": "por que flecha verde empezo a matar the longbow hunters"
   },
   {
     "id": "27_nightcrawler_espadachin_fe",
@@ -2408,7 +4846,17 @@
       "youtube": "6ae4414656e01b97639039d6"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1565440662277531",
+    "published_at": "2026-10-30T07:02:38+0000",
+    "tokens": [
+      "nightcrawler",
+      "espadachin",
+      "demonios",
+      "temen"
+    ],
+    "ig_media_id": "18457204450193645",
+    "normalized_title": "nightcrawler el espadachin que los demonios temen en x men"
   },
   {
     "id": "28_jessica_jones_purple_man",
@@ -2424,7 +4872,17 @@
       "youtube": "6ae46baad518fcaf80ad9515"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "2183135515921115",
+    "published_at": "2026-10-30T10:02:54+0000",
+    "tokens": [
+      "orden",
+      "perturbadora",
+      "killgrave",
+      "jessica",
+      "jones"
+    ],
+    "normalized_title": "la orden mas perturbadora de killgrave a jessica jones"
   },
   {
     "id": "29_daredevil_sentido_radar",
@@ -2440,7 +4898,19 @@
       "youtube": "6ae4a3e19394ea34c1194bd0"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1805241387376174",
+    "published_at": "2026-10-30T14:02:39+0000",
+    "tokens": [
+      "sentido",
+      "radar",
+      "daredevil",
+      "vision",
+      "supero",
+      "ceguera"
+    ],
+    "ig_media_id": "18134702197672674",
+    "normalized_title": "el sentido radar de daredevil la vision que supero la ceguera"
   },
   {
     "id": "30_hellboy_mano_derecha_destino",
@@ -2456,7 +4926,17 @@
       "youtube": "6ae4dc1b34702c2daac3fdf0"
     },
     "status": "published",
-    "source": "scheduled_queue"
+    "source": "scheduled_queue",
+    "fb_video_id": "1479823090689205",
+    "published_at": "2026-10-30T18:02:39+0000",
+    "tokens": [
+      "secreto",
+      "mano",
+      "hellboy",
+      "llave",
+      "apocalipsis"
+    ],
+    "normalized_title": "el secreto de la mano de hellboy la llave del apocalipsis"
   },
   {
     "id": "immortal_hulk_demonio_noche_al_ewing",
@@ -2470,7 +4950,1521 @@
       "tiktok": "6ae53f78ceb491e585cdfc02",
       "youtube": "6ae53f85a1145743497bd44a"
     },
-    "timestamp": "2026-10-31 01:08:24"
+    "timestamp": "2026-10-31 01:08:24",
+    "fb_video_id": "2533699197114612",
+    "published_at": "2026-10-31T01:07:31+0000",
+    "tokens": [
+      "monstruo",
+      "inmortal",
+      "noche",
+      "demonio",
+      "hulk",
+      "regreso",
+      "muerte"
+    ],
+    "ig_media_id": "18019518563951494",
+    "normalized_title": "el monstruo inmortal la noche en que el demonio hulk regreso de la muerte"
+  },
+  {
+    "id": "fb_la_sonrisa_de_matt_murdock_el_juicio_publico_y_la",
+    "title": "¡La Sonrisa de Matt Murdock! El Juicio Público y la Nueva Vida del Abogado Ciego ⚖️🏙️",
+    "normalized_title": "la sonrisa de matt murdock el juicio publico y la nueva vida del abogado ciego",
+    "character": "La Sonrisa de Matt Murdock! El Juicio Público y la Nueva Vida del Abogado Ciego ⚖️🏙️",
+    "theme_signature": "fb_published:la_sonrisa_de_matt_murdock_el_juicio_publico_y_la",
+    "tokens": [
+      "sonrisa",
+      "matt",
+      "murdock",
+      "juicio",
+      "publico",
+      "nueva",
+      "vida",
+      "abogado",
+      "ciego"
+    ],
+    "date": "2026-10-31",
+    "published_at": "2026-10-31T14:04:52+0000",
+    "fb_video_id": "2301325420614299",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18599844748070436"
+  },
+  {
+    "id": "fb_thanos_supremo_de_la_tierra_el_titan_conquista_a_l",
+    "title": "¡Thanos Supremo de la Tierra! El Titán Conquista a los Eternos 👑🪐",
+    "normalized_title": "thanos supremo de la tierra el titan conquista a los eternos",
+    "character": "Thanos Supremo de la Tierra! El Titán Conquista a los Eternos 👑🪐",
+    "theme_signature": "fb_published:thanos_supremo_de_la_tierra_el_titan_conquista_a_l",
+    "tokens": [
+      "thanos",
+      "supremo",
+      "tierra",
+      "titan",
+      "conquista",
+      "eternos"
+    ],
+    "date": "2026-10-31",
+    "published_at": "2026-10-31T10:07:09+0000",
+    "fb_video_id": "1470678768268659",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18218623951356081"
+  },
+  {
+    "id": "fb_los_ultimos_dias_de_la_magia_la_inquisicion_cienti",
+    "title": "¡Los Últimos Días de la Magia! La Inquisición Científica del Empirikul 🔮⚔️",
+    "normalized_title": "los ultimos dias de la magia la inquisicion cientifica del empirikul",
+    "character": "Los Últimos Días de la Magia! La Inquisición Científica del Empirikul 🔮⚔️",
+    "theme_signature": "fb_published:los_ultimos_dias_de_la_magia_la_inquisicion_cienti",
+    "tokens": [
+      "ultimos",
+      "dias",
+      "magia",
+      "inquisicion",
+      "cientifica",
+      "empirikul"
+    ],
+    "date": "2026-10-31",
+    "published_at": "2026-10-31T07:05:07+0000",
+    "fb_video_id": "1103592195790854",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18001347201033601"
+  },
+  {
+    "id": "fb_gwenpool_rompe_el_comic_la_chica_que_puede_salir_d",
+    "title": "¡Gwenpool Rompe el Cómic! La Chica que Puede Salir de las Viñetas 🎀📖",
+    "normalized_title": "gwenpool rompe el comic la chica que puede salir de las vinetas",
+    "character": "Gwenpool Rompe el Cómic! La Chica que Puede Salir de las Viñetas 🎀📖",
+    "theme_signature": "fb_published:gwenpool_rompe_el_comic_la_chica_que_puede_salir_d",
+    "tokens": [
+      "gwenpool",
+      "rompe",
+      "chica",
+      "puede",
+      "salir",
+      "vinetas"
+    ],
+    "date": "2026-10-25",
+    "published_at": "2026-10-25T14:04:55+0000",
+    "fb_video_id": "1112695628429404",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18129541570855411"
+  },
+  {
+    "id": "fb_el_espadachin_celestial_la_fe_inquebrantable_de_ni",
+    "title": "¡El Espadachín Celestial! La Fe Inquebrantable de Nightcrawler en el Combate ⚔️✝️",
+    "normalized_title": "el espadachin celestial la fe inquebrantable de nightcrawler en el combate",
+    "character": "El Espadachín Celestial! La Fe Inquebrantable de Nightcrawler en el Combate ⚔️✝️",
+    "theme_signature": "fb_published:el_espadachin_celestial_la_fe_inquebrantable_de_ni",
+    "tokens": [
+      "espadachin",
+      "celestial",
+      "inquebrantable",
+      "nightcrawler",
+      "combate"
+    ],
+    "date": "2026-10-25",
+    "published_at": "2026-10-25T10:04:38+0000",
+    "fb_video_id": "1370795738224575",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18118616938982696"
+  },
+  {
+    "id": "fb_la_maldicion_de_taskmaster_la_memoria_fotografica",
+    "title": "¡La Maldición de Taskmaster! La Memoria Fotográfica que Borra sus Recuerdos 💀🎯",
+    "normalized_title": "la maldicion de taskmaster la memoria fotografica que borra sus recuerdos",
+    "character": "La Maldición de Taskmaster! La Memoria Fotográfica que Borra sus Recuerdos 💀🎯",
+    "theme_signature": "fb_published:la_maldicion_de_taskmaster_la_memoria_fotografica",
+    "tokens": [
+      "maldicion",
+      "taskmaster",
+      "memoria",
+      "fotografica",
+      "borra",
+      "recuerdos"
+    ],
+    "date": "2026-10-25",
+    "published_at": "2026-10-25T07:05:04+0000",
+    "fb_video_id": "1846682736347943",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "17962308461996768"
+  },
+  {
+    "id": "fb_el_sacrificio_de_colossus_la_muerte_heroica_para_c",
+    "title": "¡El Sacrificio de Colossus! La Muerte Heroica para Curar el Virus Legado 🛡️🧪",
+    "normalized_title": "el sacrificio de colossus la muerte heroica para curar el virus legado",
+    "character": "El Sacrificio de Colossus! La Muerte Heroica para Curar el Virus Legado 🛡️🧪",
+    "theme_signature": "fb_published:el_sacrificio_de_colossus_la_muerte_heroica_para_c",
+    "tokens": [
+      "sacrificio",
+      "colossus",
+      "muerte",
+      "heroica",
+      "curar",
+      "virus",
+      "legado"
+    ],
+    "date": "2026-10-25",
+    "published_at": "2026-10-25T01:04:58+0000",
+    "fb_video_id": "29280741104947242",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "17970823214961578"
+  },
+  {
+    "id": "fb_el_tragico_beso_de_rogue_la_absorcion_que_destruyo",
+    "title": "¡El Trágico Beso de Rogue! La Absorción que Destruyó a Capitana Marvel 🧤💥",
+    "normalized_title": "el tragico beso de rogue la absorcion que destruyo a capitana marvel",
+    "character": "El Trágico Beso de Rogue! La Absorción que Destruyó a Capitana Marvel 🧤💥",
+    "theme_signature": "fb_published:el_tragico_beso_de_rogue_la_absorcion_que_destruyo",
+    "tokens": [
+      "tragico",
+      "beso",
+      "rogue",
+      "absorcion",
+      "destruyo",
+      "capitana"
+    ],
+    "date": "2026-10-24",
+    "published_at": "2026-10-24T22:04:43+0000",
+    "fb_video_id": "4158422207788471",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18375759157213864"
+  },
+  {
+    "id": "fb_el_nacimiento_de_ms_marvel_la_niebla_terrigena_des",
+    "title": "¡El Nacimiento de Ms. Marvel! La Niebla Terrígena Despierta a Kamala Khan ⚡🧣",
+    "normalized_title": "el nacimiento de ms marvel la niebla terrigena despierta a kamala khan",
+    "character": "El Nacimiento de Ms. Marvel! La Niebla Terrígena Despierta a Kamala Khan ⚡🧣",
+    "theme_signature": "fb_published:el_nacimiento_de_ms_marvel_la_niebla_terrigena_des",
+    "tokens": [
+      "nacimiento",
+      "niebla",
+      "terrigena",
+      "despierta",
+      "kamala",
+      "khan"
+    ],
+    "date": "2026-10-24",
+    "published_at": "2026-10-24T14:05:50+0000",
+    "fb_video_id": "4026985814271104",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18115688837124333"
+  },
+  {
+    "id": "fb_johnny_blaze_rey_del_infierno_el_motorista_se_coro",
+    "title": "¡Johnny Blaze Rey del Infierno! El Motorista se Corona en el Trono Maldito 💀🔥",
+    "normalized_title": "johnny blaze rey del infierno el motorista se corona en el trono maldito",
+    "character": "Johnny Blaze Rey del Infierno! El Motorista se Corona en el Trono Maldito 💀🔥",
+    "theme_signature": "fb_published:johnny_blaze_rey_del_infierno_el_motorista_se_coro",
+    "tokens": [
+      "johnny",
+      "blaze",
+      "infierno",
+      "motorista",
+      "corona",
+      "trono",
+      "maldito"
+    ],
+    "date": "2026-10-24",
+    "published_at": "2026-10-24T01:05:15+0000",
+    "fb_video_id": "1653075082933986",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18238709542319886"
+  },
+  {
+    "id": "fb_asi_fue_la_verdadera_caida_de_los_heroes_en_marvel",
+    "title": "Así fue la verdadera caída de los héroes en Marvel Zombies (Historia Completa) 🧟‍♂️💥",
+    "normalized_title": "asi fue la verdadera caida de los heroes en marvel zombies historia completa",
+    "character": "Así fue la verdadera caída de los héroes en Marvel Zombies (Historia Completa) 🧟‍♂️💥",
+    "theme_signature": "fb_published:asi_fue_la_verdadera_caida_de_los_heroes_en_marvel",
+    "tokens": [
+      "verdadera",
+      "caida",
+      "heroes",
+      "completa"
+    ],
+    "date": "2026-10-23",
+    "published_at": "2026-10-23T19:00:35+0000",
+    "fb_video_id": "1827968858213180",
+    "status": "published",
+    "source": "facebook_sync"
+  },
+  {
+    "id": "fb_las_diez_vidas_de_moira_mactaggert_el_secreto_que",
+    "title": "¡Las Diez Vidas de Moira MacTaggert! El Secreto que Cambió el Destino Mutante 🧬⏳",
+    "normalized_title": "las diez vidas de moira mactaggert el secreto que cambio el destino mutante",
+    "character": "Las Diez Vidas de Moira MacTaggert! El Secreto que Cambió el Destino Mutante 🧬⏳",
+    "theme_signature": "fb_published:las_diez_vidas_de_moira_mactaggert_el_secreto_que",
+    "tokens": [
+      "diez",
+      "vidas",
+      "moira",
+      "mactaggert",
+      "secreto",
+      "cambio",
+      "destino",
+      "mutante"
+    ],
+    "date": "2026-10-23",
+    "published_at": "2026-10-23T18:05:09+0000",
+    "fb_video_id": "1105654822284912",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "17908981329591818"
+  },
+  {
+    "id": "fb_",
+    "title": "",
+    "normalized_title": "",
+    "character": "",
+    "theme_signature": "fb_published:",
+    "tokens": [],
+    "date": "2026-10-23",
+    "published_at": "2026-10-23T16:19:24+0000",
+    "fb_video_id": "1097332946013094",
+    "status": "published",
+    "source": "facebook_sync"
+  },
+  {
+    "id": "fb_battle_beast_la_bestia_cosmica_el_sangriento_duelo",
+    "title": "¡Battle Beast: La Bestia Cósmica! El Sangriento Duelo por el Honor Viltrumita ⚔️🦁",
+    "normalized_title": "battle beast la bestia cosmica el sangriento duelo por el honor viltrumita",
+    "character": "Battle Beast",
+    "theme_signature": "fb_published:battle_beast_la_bestia_cosmica_el_sangriento_duelo",
+    "tokens": [
+      "battle",
+      "beast",
+      "bestia",
+      "cosmica",
+      "sangriento",
+      "duelo",
+      "honor",
+      "viltrumita"
+    ],
+    "date": "2026-10-23",
+    "published_at": "2026-10-23T07:05:00+0000",
+    "fb_video_id": "1095821370108414",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18144712294590825"
+  },
+  {
+    "id": "fb_thor_rompio_la_espada_del_crepusculo_la_batalla_ep",
+    "title": "¡Thor Rompió la Espada del Crepúsculo! La Batalla Épica que Aterró a los Dioses de Asgard ⚡🪓",
+    "normalized_title": "thor rompio la espada del crepusculo la batalla epica que aterro a los dioses de asgard",
+    "character": "Thor Rompió la Espada del Crepúsculo! La Batalla Épica que Aterró a los Dioses de Asgard ⚡🪓",
+    "theme_signature": "fb_published:thor_rompio_la_espada_del_crepusculo_la_batalla_ep",
+    "tokens": [
+      "thor",
+      "rompio",
+      "espada",
+      "crepusculo",
+      "batalla",
+      "epica",
+      "aterro",
+      "dioses",
+      "asgard"
+    ],
+    "date": "2026-10-21",
+    "published_at": "2026-10-21T18:23:42+0000",
+    "fb_video_id": "1832382591232806",
+    "status": "published",
+    "source": "facebook_sync"
+  },
+  {
+    "id": "fb_el_dia_que_batman_le_robo_la_velocidad_a_flash_en",
+    "title": "El día que Batman le robó la velocidad a Flash 💀  En la Tierra -52, un Bruce Wayne desesperado por salvar a Gotham tomó la decisión más despiadada de su vida: cazar a Barry Allen y fusionarse a la fuerza con la Speed Force. Así nació The Red Death, una de las versiones más aterradoras del Multiverso Oscuro de DC Comics.",
+    "normalized_title": "el dia que batman le robo la velocidad a flash en la tierra 52 un bruce wayne desesperado por salvar a gotham tomo la decision mas despiadada de su vida cazar a barry allen y fusionarse a la fuerza con la speed force asi nacio the red death una de las versiones mas aterradoras del multiverso oscuro de dc comics",
+    "character": "El día que Batman le robó la velocidad a Flash 💀  En la Tierra -52, un Bruce Wayne desesperado por salvar a Gotham tomó la decisión más despiadada de su vida",
+    "theme_signature": "fb_published:el_dia_que_batman_le_robo_la_velocidad_a_flash_en",
+    "tokens": [
+      "batman",
+      "robo",
+      "velocidad",
+      "flash",
+      "tierra",
+      "bruce",
+      "wayne",
+      "desesperado",
+      "salvar",
+      "gotham",
+      "tomo",
+      "decision",
+      "despiadada",
+      "vida",
+      "cazar",
+      "barry",
+      "allen",
+      "fusionarse",
+      "fuerza",
+      "speed",
+      "force",
+      "nacio",
+      "death",
+      "versiones",
+      "aterradoras",
+      "oscuro"
+    ],
+    "date": "2026-10-11",
+    "published_at": "2026-10-11T00:13:14+0000",
+    "fb_video_id": "1120526597010596",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "17923401690430019"
+  },
+  {
+    "id": "fb_el_dia_que_daredevil_rompio_su_unica_regla_y_acabo",
+    "title": "¡El día que Daredevil rompió su única regla y acabó con Bullseye! 🩸😈",
+    "normalized_title": "el dia que daredevil rompio su unica regla y acabo con bullseye",
+    "character": "El día que Daredevil rompió su única regla y acabó con Bullseye! 🩸😈",
+    "theme_signature": "fb_published:el_dia_que_daredevil_rompio_su_unica_regla_y_acabo",
+    "tokens": [
+      "daredevil",
+      "rompio",
+      "unica",
+      "regla",
+      "acabo",
+      "bullseye"
+    ],
+    "date": "2026-10-05",
+    "published_at": "2026-10-05T20:44:33+0000",
+    "fb_video_id": "1860891995227505",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18378588982236150"
+  },
+  {
+    "id": "fb_john_constantine_vs_trigon_la_muerte_mas_brutal_de",
+    "title": "John Constantine vs Trigon: La muerte más brutal de DCeased ⚡",
+    "normalized_title": "john constantine vs trigon la muerte mas brutal de dceased",
+    "character": "John Constantine vs Trigon",
+    "theme_signature": "fb_published:john_constantine_vs_trigon_la_muerte_mas_brutal_de",
+    "tokens": [
+      "john",
+      "constantine",
+      "trigon",
+      "muerte",
+      "brutal",
+      "dceased"
+    ],
+    "date": "2026-09-27",
+    "published_at": "2026-09-27T02:08:18+0000",
+    "fb_video_id": "1070968205712186",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "17950453425279908"
+  },
+  {
+    "id": "fb_el_dia_en_que_batman_humillo_a_superman_la_pelea_d",
+    "title": "¡El Día en que Batman Humilló a Superman! La Pelea Definitiva en Gotham 🦇💥",
+    "normalized_title": "el dia en que batman humillo a superman la pelea definitiva en gotham",
+    "character": "El Día en que Batman Humilló a Superman! La Pelea Definitiva en Gotham 🦇💥",
+    "theme_signature": "fb_published:el_dia_en_que_batman_humillo_a_superman_la_pelea_d",
+    "tokens": [
+      "batman",
+      "humillo",
+      "superman",
+      "pelea",
+      "definitiva",
+      "gotham"
+    ],
+    "date": "2026-09-26",
+    "published_at": "2026-09-26T22:22:10+0000",
+    "fb_video_id": "1091344970146443",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "17895528099410266"
+  },
+  {
+    "id": "fb_el_batman_que_se_convirtio_en_el_dios_de_la_guerra",
+    "title": "¡El Batman que se Convirtió en el Dios de la Guerra! La Furia de Ares y la Caída de la Liga ⚔💀",
+    "normalized_title": "el batman que se convirtio en el dios de la guerra la furia de ares y la caida de la liga",
+    "character": "El Batman que se Convirtió en el Dios de la Guerra! La Furia de Ares y la Caída de la Liga ⚔💀",
+    "theme_signature": "fb_published:el_batman_que_se_convirtio_en_el_dios_de_la_guerra",
+    "tokens": [
+      "batman",
+      "convirtio",
+      "dios",
+      "guerra",
+      "furia",
+      "ares",
+      "caida",
+      "liga"
+    ],
+    "date": "2026-09-26",
+    "published_at": "2026-09-26T17:26:50+0000",
+    "fb_video_id": "933397536499184",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18150559630538897"
+  },
+  {
+    "id": "fb_el_capitan_america_era_de_hydra_la_traicion_que_pa",
+    "title": "¡El Capitán América Era de Hydra! La Traición que Paralizó al Mundo 🛡🐙",
+    "normalized_title": "el capitan america era de hydra la traicion que paralizo al mundo",
+    "character": "El Capitán América Era de Hydra! La Traición que Paralizó al Mundo 🛡🐙",
+    "theme_signature": "fb_published:el_capitan_america_era_de_hydra_la_traicion_que_pa",
+    "tokens": [
+      "capitan",
+      "america",
+      "hydra",
+      "traicion",
+      "paralizo",
+      "mundo"
+    ],
+    "date": "2026-09-26",
+    "published_at": "2026-09-26T02:27:07+0000",
+    "fb_video_id": "1021271134269831",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "17898389085599931"
+  },
+  {
+    "id": "fb_moon_knight_cruzo_la_linea_cuando_le_desollo_el_ro",
+    "title": "¡Moon Knight Cruzó la Línea! Cuando le Desolló el Rostro a su Archienemigo 🌙🔪",
+    "normalized_title": "moon knight cruzo la linea cuando le desollo el rostro a su archienemigo",
+    "character": "Moon Knight Cruzó la Línea! Cuando le Desolló el Rostro a su Archienemigo 🌙🔪",
+    "theme_signature": "fb_published:moon_knight_cruzo_la_linea_cuando_le_desollo_el_ro",
+    "tokens": [
+      "moon",
+      "knight",
+      "cruzo",
+      "linea",
+      "cuando",
+      "desollo",
+      "rostro",
+      "archienemigo"
+    ],
+    "date": "2026-09-25",
+    "published_at": "2026-09-25T18:25:03+0000",
+    "fb_video_id": "1562387425083264",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "17976958988918137"
+  },
+  {
+    "id": "fb_descuartizaron_a_hulk_en_frascos_de_vidrio_la_resu",
+    "title": "¡Descuartizaron a Hulk en Frascos de Vidrio! La Resurrección Más Aterradora 🟢💀",
+    "normalized_title": "descuartizaron a hulk en frascos de vidrio la resurreccion mas aterradora",
+    "character": "Descuartizaron a Hulk en Frascos de Vidrio! La Resurrección Más Aterradora 🟢💀",
+    "theme_signature": "fb_published:descuartizaron_a_hulk_en_frascos_de_vidrio_la_resu",
+    "tokens": [
+      "descuartizaron",
+      "hulk",
+      "frascos",
+      "vidrio",
+      "resurreccion",
+      "aterradora"
+    ],
+    "date": "2026-09-25",
+    "published_at": "2026-09-25T00:20:53+0000",
+    "fb_video_id": "1153957810916173",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "17880678579533742"
+  },
+  {
+    "id": "fb_el_tony_stark_mas_cruel_de_marvel_cuando_humillo_y",
+    "title": "¡El Tony Stark Más Cruel de Marvel! Cuando Humilló y Volvió a Cegar a Daredevil 🤖🩸",
+    "normalized_title": "el tony stark mas cruel de marvel cuando humillo y volvio a cegar a daredevil",
+    "character": "El Tony Stark Más Cruel de Marvel! Cuando Humilló y Volvió a Cegar a Daredevil 🤖🩸",
+    "theme_signature": "fb_published:el_tony_stark_mas_cruel_de_marvel_cuando_humillo_y",
+    "tokens": [
+      "tony",
+      "stark",
+      "cruel",
+      "cuando",
+      "humillo",
+      "volvio",
+      "cegar",
+      "daredevil"
+    ],
+    "date": "2026-09-24",
+    "published_at": "2026-09-24T17:27:25+0000",
+    "fb_video_id": "1634478131615563",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18058509848535648"
+  },
+  {
+    "id": "fb_hulk_partio_a_wolverine_en_dos_mitades_la_pelea_ma",
+    "title": "¡Hulk Partió a Wolverine en Dos Mitades! La Pelea Más Salvaje de Marvel 🩸🏔",
+    "normalized_title": "hulk partio a wolverine en dos mitades la pelea mas salvaje de marvel",
+    "character": "Hulk Partió a Wolverine en Dos Mitades! La Pelea Más Salvaje de Marvel 🩸🏔",
+    "theme_signature": "fb_published:hulk_partio_a_wolverine_en_dos_mitades_la_pelea_ma",
+    "tokens": [
+      "hulk",
+      "partio",
+      "wolverine",
+      "mitades",
+      "pelea",
+      "salvaje"
+    ],
+    "date": "2026-09-23",
+    "published_at": "2026-09-23T17:49:35+0000",
+    "fb_video_id": "1428623225869750",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18205732291370802"
+  },
+  {
+    "id": "fb_alfred_humillo_a_superman_el_mayordomo_que_le_romp",
+    "title": "¡Alfred Humilló a Superman! El Mayordomo que le Rompió la Nariz al Hombre de Acero 👊💥",
+    "normalized_title": "alfred humillo a superman el mayordomo que le rompio la nariz al hombre de acero",
+    "character": "Alfred Humilló a Superman! El Mayordomo que le Rompió la Nariz al Hombre de Acero 👊💥",
+    "theme_signature": "fb_published:alfred_humillo_a_superman_el_mayordomo_que_le_romp",
+    "tokens": [
+      "alfred",
+      "humillo",
+      "superman",
+      "mayordomo",
+      "rompio",
+      "nariz",
+      "hombre",
+      "acero"
+    ],
+    "date": "2026-09-22",
+    "published_at": "2026-09-22T22:54:06+0000",
+    "fb_video_id": "28311174405200229",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18149455285490697"
+  },
+  {
+    "id": "fb_el_peor_error_de_thanos_desafio_a_doctor_doom_dios",
+    "title": "¡El Peor Error de Thanos! Desafió a Doctor Doom Dios y Pagó el Precio ⚡🩸",
+    "normalized_title": "el peor error de thanos desafio a doctor doom dios y pago el precio",
+    "character": "El Peor Error de Thanos! Desafió a Doctor Doom Dios y Pagó el Precio ⚡🩸",
+    "theme_signature": "fb_published:el_peor_error_de_thanos_desafio_a_doctor_doom_dios",
+    "tokens": [
+      "peor",
+      "error",
+      "thanos",
+      "desafio",
+      "doctor",
+      "doom",
+      "dios",
+      "pago",
+      "precio"
+    ],
+    "date": "2026-09-22",
+    "published_at": "2026-09-22T19:23:51+0000",
+    "fb_video_id": "2252012205729471",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18150142780526734"
+  },
+  {
+    "id": "fb_el_dia_que_wonder_woman_rompio_el_codigo_de_los_he",
+    "title": "El día que Wonder Woman ROMPIÓ el código de los héroes 😱💥",
+    "normalized_title": "el dia que wonder woman rompio el codigo de los heroes",
+    "character": "El día que Wonder Woman ROMPIÓ el código de los héroes 😱💥",
+    "theme_signature": "fb_published:el_dia_que_wonder_woman_rompio_el_codigo_de_los_he",
+    "tokens": [
+      "wonder",
+      "woman",
+      "rompio",
+      "codigo",
+      "heroes"
+    ],
+    "date": "2026-09-21",
+    "published_at": "2026-09-21T22:45:12+0000",
+    "fb_video_id": "1779658549823264",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18113257130030012"
+  },
+  {
+    "id": "fb_la_muerte_mas_humillante_de_thor_a_manos_de_deadpo",
+    "title": "¡La muerte más HUMILLANTE de Thor a manos de Deadpool! 🔨💀",
+    "normalized_title": "la muerte mas humillante de thor a manos de deadpool",
+    "character": "La muerte más HUMILLANTE de Thor a manos de Deadpool! 🔨💀",
+    "theme_signature": "fb_published:la_muerte_mas_humillante_de_thor_a_manos_de_deadpo",
+    "tokens": [
+      "muerte",
+      "humillante",
+      "thor",
+      "manos",
+      "deadpool"
+    ],
+    "date": "2026-09-21",
+    "published_at": "2026-09-21T17:35:30+0000",
+    "fb_video_id": "2581443848994473",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18131959144664902"
+  },
+  {
+    "id": "fb_la_mayor_conspiracion_contra_bruce_wayne_la_obra_m",
+    "title": "¡La Mayor Conspiración Contra Bruce Wayne! La Obra Maestra de Batman: Hush 🦇🎭",
+    "normalized_title": "la mayor conspiracion contra bruce wayne la obra maestra de batman hush",
+    "character": "La Mayor Conspiración Contra Bruce Wayne! La Obra Maestra de Batman",
+    "theme_signature": "fb_published:la_mayor_conspiracion_contra_bruce_wayne_la_obra_m",
+    "tokens": [
+      "mayor",
+      "conspiracion",
+      "contra",
+      "bruce",
+      "wayne",
+      "obra",
+      "maestra",
+      "batman",
+      "hush"
+    ],
+    "date": "2026-09-20",
+    "published_at": "2026-09-20T23:10:50+0000",
+    "fb_video_id": "1071146678959869",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18128095031503079"
+  },
+  {
+    "id": "fb_el_hulk_que_asesino_a_todos_los_vengadores_la_tira",
+    "title": "¡El Hulk que Asesinó a Todos los Vengadores! La Tiranía del Maestro 🟢👑",
+    "normalized_title": "el hulk que asesino a todos los vengadores la tirania del maestro",
+    "character": "El Hulk que Asesinó a Todos los Vengadores! La Tiranía del Maestro 🟢👑",
+    "theme_signature": "fb_published:el_hulk_que_asesino_a_todos_los_vengadores_la_tira",
+    "tokens": [
+      "hulk",
+      "asesino",
+      "todos",
+      "vengadores",
+      "tirania",
+      "maestro"
+    ],
+    "date": "2026-09-20",
+    "published_at": "2026-09-20T17:46:08+0000",
+    "fb_video_id": "1647304343492315",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18006528023996030"
+  },
+  {
+    "id": "fb_kraven_disparo_y_enterro_vivo_a_spider_man_la_hist",
+    "title": "¡Kraven Disparó y Enterró Vivo a Spider-Man! La Historia Más Oscura de Marvel 🕷⚰",
+    "normalized_title": "kraven disparo y enterro vivo a spider man la historia mas oscura de marvel",
+    "character": "Kraven Disparó y Enterró Vivo a Spider-Man! La Historia Más Oscura de Marvel 🕷⚰",
+    "theme_signature": "fb_published:kraven_disparo_y_enterro_vivo_a_spider_man_la_hist",
+    "tokens": [
+      "kraven",
+      "disparo",
+      "enterro",
+      "vivo",
+      "spider",
+      "oscura"
+    ],
+    "date": "2026-09-19",
+    "published_at": "2026-09-19T23:13:24+0000",
+    "fb_video_id": "1057455670260007",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18122213018486490"
+  },
+  {
+    "id": "fb_el_mayor_linterna_verde_se_volvio_villano_la_caida",
+    "title": "¡El Mayor Linterna Verde se Volvió Villano! La Caída de Hal Jordan y Parallax 🟢💀",
+    "normalized_title": "el mayor linterna verde se volvio villano la caida de hal jordan y parallax",
+    "character": "El Mayor Linterna Verde se Volvió Villano! La Caída de Hal Jordan y Parallax 🟢💀",
+    "theme_signature": "fb_published:el_mayor_linterna_verde_se_volvio_villano_la_caida",
+    "tokens": [
+      "mayor",
+      "linterna",
+      "verde",
+      "volvio",
+      "villano",
+      "caida",
+      "jordan",
+      "parallax"
+    ],
+    "date": "2026-09-19",
+    "published_at": "2026-09-19T17:41:08+0000",
+    "fb_video_id": "1087127820723889",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18123658726681256"
+  },
+  {
+    "id": "fb_el_dia_en_que_batman_fue_quebrado_bane_destruye_al",
+    "title": "¡El Día en que Batman Fue Quebrado! Bane Destruye al Murciélago en la Batcueva 🦇💥",
+    "normalized_title": "el dia en que batman fue quebrado bane destruye al murcielago en la batcueva",
+    "character": "El Día en que Batman Fue Quebrado! Bane Destruye al Murciélago en la Batcueva 🦇💥",
+    "theme_signature": "fb_published:el_dia_en_que_batman_fue_quebrado_bane_destruye_al",
+    "tokens": [
+      "batman",
+      "quebrado",
+      "bane",
+      "destruye",
+      "murcielago",
+      "batcueva"
+    ],
+    "date": "2026-09-19",
+    "published_at": "2026-09-19T01:36:03+0000",
+    "fb_video_id": "1793588861826305",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18071956121740697"
+  },
+  {
+    "id": "fb_el_momento_mas_doloroso_de_los_x_men_magneto_le_ar",
+    "title": "¡El Momento Más Doloroso de los X-Men! Magneto le Arranca el Adamantium a Wolverine 🧲🩸",
+    "normalized_title": "el momento mas doloroso de los x men magneto le arranca el adamantium a wolverine",
+    "character": "El Momento Más Doloroso de los X-Men! Magneto le Arranca el Adamantium a Wolverine 🧲🩸",
+    "theme_signature": "fb_published:el_momento_mas_doloroso_de_los_x_men_magneto_le_ar",
+    "tokens": [
+      "momento",
+      "doloroso",
+      "magneto",
+      "arranca",
+      "adamantium",
+      "wolverine"
+    ],
+    "date": "2026-09-18",
+    "published_at": "2026-09-18T22:48:44+0000",
+    "fb_video_id": "1777439290226918",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18064906976773377"
+  },
+  {
+    "id": "fb_thor_asesino_a_galactus_la_brutal_ejecucion_del_de",
+    "title": "¡Thor Asesinó a Galactus! La Brutal Ejecución del Devorador de Mundos ⚡👑",
+    "normalized_title": "thor asesino a galactus la brutal ejecucion del devorador de mundos",
+    "character": "Thor Asesinó a Galactus! La Brutal Ejecución del Devorador de Mundos ⚡👑",
+    "theme_signature": "fb_published:thor_asesino_a_galactus_la_brutal_ejecucion_del_de",
+    "tokens": [
+      "thor",
+      "asesino",
+      "galactus",
+      "brutal",
+      "ejecucion",
+      "devorador",
+      "mundos"
+    ],
+    "date": "2026-09-18",
+    "published_at": "2026-09-18T17:57:44+0000",
+    "fb_video_id": "1140246781997243",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18105000107358758"
+  },
+  {
+    "id": "fb_un_solo_mercenario_humillo_a_la_liga_de_la_justici",
+    "title": "¡Un Solo Mercenario Humilló a la Liga de la Justicia! La Hazaña de Deathstroke ⚔🔥",
+    "normalized_title": "un solo mercenario humillo a la liga de la justicia la hazana de deathstroke",
+    "character": "Un Solo Mercenario Humilló a la Liga de la Justicia! La Hazaña de Deathstroke ⚔🔥",
+    "theme_signature": "fb_published:un_solo_mercenario_humillo_a_la_liga_de_la_justici",
+    "tokens": [
+      "solo",
+      "mercenario",
+      "humillo",
+      "liga",
+      "justicia",
+      "hazana",
+      "deathstroke"
+    ],
+    "date": "2026-09-18",
+    "published_at": "2026-09-18T01:23:00+0000",
+    "fb_video_id": "1129478709750883",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18124640840488571"
+  },
+  {
+    "id": "fb_el_comic_mas_perturbador_de_marvel_carnage_arranca",
+    "title": "¡El Cómic Más Perturbador de Marvel! Carnage Arranca las Columnas Vertebrales 🩸🕷",
+    "normalized_title": "el comic mas perturbador de marvel carnage arranca las columnas vertebrales",
+    "character": "El Cómic Más Perturbador de Marvel! Carnage Arranca las Columnas Vertebrales 🩸🕷",
+    "theme_signature": "fb_published:el_comic_mas_perturbador_de_marvel_carnage_arranca",
+    "tokens": [
+      "perturbador",
+      "carnage",
+      "arranca",
+      "columnas",
+      "vertebrales"
+    ],
+    "date": "2026-09-17",
+    "published_at": "2026-09-17T19:51:55+0000",
+    "fb_video_id": "1734582387842647",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "17957069370212891"
+  },
+  {
+    "id": "fb_el_joker_se_comio_a_china_cuando_el_payaso_robo_el",
+    "title": "¡El Joker se Comió a China! Cuando el Payaso Robó el Poder de un Dios Cósmico 🃏🥢",
+    "normalized_title": "el joker se comio a china cuando el payaso robo el poder de un dios cosmico",
+    "character": "El Joker se Comió a China! Cuando el Payaso Robó el Poder de un Dios Cósmico 🃏🥢",
+    "theme_signature": "fb_published:el_joker_se_comio_a_china_cuando_el_payaso_robo_el",
+    "tokens": [
+      "joker",
+      "comio",
+      "china",
+      "cuando",
+      "payaso",
+      "robo",
+      "poder",
+      "dios",
+      "cosmico"
+    ],
+    "date": "2026-09-16",
+    "published_at": "2026-09-16T20:23:35+0000",
+    "fb_video_id": "1372901495010632",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "17992561398011194"
+  },
+  {
+    "id": "fb_el_villano_mas_retorcido_de_dc_por_que_flash_rever",
+    "title": "¡El Villano Más Retorcido de DC! Por Qué Flash Reverso Destruyó la Vida de Barry Allen ⚡🔪",
+    "normalized_title": "el villano mas retorcido de dc por que flash reverso destruyo la vida de barry allen",
+    "character": "El Villano Más Retorcido de DC! Por Qué Flash Reverso Destruyó la Vida de Barry Allen ⚡🔪",
+    "theme_signature": "fb_published:el_villano_mas_retorcido_de_dc_por_que_flash_rever",
+    "tokens": [
+      "villano",
+      "retorcido",
+      "flash",
+      "reverso",
+      "destruyo",
+      "vida",
+      "barry",
+      "allen"
+    ],
+    "date": "2026-09-16",
+    "published_at": "2026-09-16T02:09:46+0000",
+    "fb_video_id": "2557920578016855",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "17971225773150913"
+  },
+  {
+    "id": "fb_si_batman_mato_a_superman_por_que_sigue_vivo_la_in",
+    "title": "¡Si Batman Mató a Superman, Por Qué Sigue Vivo! La Invasión del Devastador 🦇☣",
+    "normalized_title": "si batman mato a superman por que sigue vivo la invasion del devastador",
+    "character": "Si Batman Mató a Superman, Por Qué Sigue Vivo! La Invasión del Devastador 🦇☣",
+    "theme_signature": "fb_published:si_batman_mato_a_superman_por_que_sigue_vivo_la_in",
+    "tokens": [
+      "batman",
+      "mato",
+      "superman",
+      "sigue",
+      "vivo",
+      "invasion",
+      "devastador"
+    ],
+    "date": "2026-09-15",
+    "published_at": "2026-09-15T22:39:45+0000",
+    "fb_video_id": "1613233397053011",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18043357202825601"
+  },
+  {
+    "id": "fb_sin_mascara_y_sin_piedad_spider_man_humilla_a_king",
+    "title": "¡Sin Máscara y Sin Piedad! Spider-Man Humilla a Kingpin en la Cárcel 🕷⛓",
+    "normalized_title": "sin mascara y sin piedad spider man humilla a kingpin en la carcel",
+    "character": "Sin Máscara y Sin Piedad! Spider-Man Humilla a Kingpin en la Cárcel 🕷⛓",
+    "theme_signature": "fb_published:sin_mascara_y_sin_piedad_spider_man_humilla_a_king",
+    "tokens": [
+      "mascara",
+      "piedad",
+      "spider",
+      "humilla",
+      "kingpin",
+      "carcel"
+    ],
+    "date": "2026-09-15",
+    "published_at": "2026-09-15T19:31:46+0000",
+    "fb_video_id": "2973838069622291",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18620141611033482"
+  },
+  {
+    "id": "fb_batman_se_inyecto_el_virus_doomsday_el_monstruo_qu",
+    "title": "¡Batman se Inyectó el Virus Doomsday! El Monstruo que Asesinó a Superman 🦇💀",
+    "normalized_title": "batman se inyecto el virus doomsday el monstruo que asesino a superman",
+    "character": "Batman se Inyectó el Virus Doomsday! El Monstruo que Asesinó a Superman 🦇💀",
+    "theme_signature": "fb_published:batman_se_inyecto_el_virus_doomsday_el_monstruo_qu",
+    "tokens": [
+      "batman",
+      "inyecto",
+      "virus",
+      "doomsday",
+      "monstruo",
+      "asesino",
+      "superman"
+    ],
+    "date": "2026-09-15",
+    "published_at": "2026-09-15T02:04:17+0000",
+    "fb_video_id": "1495619342324124",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "17906384730493393"
+  },
+  {
+    "id": "fb_la_muerte_mas_censurada_de_marvel_sentry_descuarti",
+    "title": "¡La Muerte Más Censurada de Marvel! Sentry Descuartiza a Ares en Dos Mitades ⚡🩸",
+    "normalized_title": "la muerte mas censurada de marvel sentry descuartiza a ares en dos mitades",
+    "character": "La Muerte Más Censurada de Marvel! Sentry Descuartiza a Ares en Dos Mitades ⚡🩸",
+    "theme_signature": "fb_published:la_muerte_mas_censurada_de_marvel_sentry_descuarti",
+    "tokens": [
+      "muerte",
+      "censurada",
+      "sentry",
+      "descuartiza",
+      "ares",
+      "mitades"
+    ],
+    "date": "2026-09-14",
+    "published_at": "2026-09-14T19:38:28+0000",
+    "fb_video_id": "1081486144580446",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18122707411859271"
+  },
+  {
+    "id": "fb_spider_man_siempre_se_contuvo_el_golpe_que_le_arra",
+    "title": "¡Spider-Man Siempre se Contuvo! El Golpe que le Arrancó la Mandíbula a Escorpión 🕷💥",
+    "normalized_title": "spider man siempre se contuvo el golpe que le arranco la mandibula a escorpion",
+    "character": "Spider-Man Siempre se Contuvo! El Golpe que le Arrancó la Mandíbula a Escorpión 🕷💥",
+    "theme_signature": "fb_published:spider_man_siempre_se_contuvo_el_golpe_que_le_arra",
+    "tokens": [
+      "spider",
+      "siempre",
+      "contuvo",
+      "golpe",
+      "arranco",
+      "mandibula",
+      "escorpion"
+    ],
+    "date": "2026-09-14",
+    "published_at": "2026-09-14T01:54:38+0000",
+    "fb_video_id": "1078972484624005",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18210195451362944"
+  },
+  {
+    "id": "fb_el_comic_mas_perfecto_de_superman_cuando_solo_le_q",
+    "title": "El cómic más perfecto de Superman: cuando solo le quedaba un año de vida y decidió salvar a la Tierra una última vez... ☀️💔",
+    "normalized_title": "el comic mas perfecto de superman cuando solo le quedaba un ano de vida y decidio salvar a la tierra una ultima vez",
+    "character": "El cómic más perfecto de Superman",
+    "theme_signature": "fb_published:el_comic_mas_perfecto_de_superman_cuando_solo_le_q",
+    "tokens": [
+      "perfecto",
+      "superman",
+      "cuando",
+      "solo",
+      "quedaba",
+      "vida",
+      "decidio",
+      "salvar",
+      "tierra",
+      "ultima"
+    ],
+    "date": "2026-09-13",
+    "published_at": "2026-09-13T21:04:21+0000",
+    "fb_video_id": "1059601950023827",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18130100737739026"
+  },
+  {
+    "id": "fb_el_batman_que_rie_la_fusion_mas_siniestra_entre_br",
+    "title": "¡El Batman Que Ríe! La Fusión más Siniestra entre Bruce Wayne y el Joker 🃏🦇",
+    "normalized_title": "el batman que rie la fusion mas siniestra entre bruce wayne y el joker",
+    "character": "El Batman Que Ríe! La Fusión más Siniestra entre Bruce Wayne y el Joker 🃏🦇",
+    "theme_signature": "fb_published:el_batman_que_rie_la_fusion_mas_siniestra_entre_br",
+    "tokens": [
+      "batman",
+      "fusion",
+      "siniestra",
+      "entre",
+      "bruce",
+      "wayne",
+      "joker"
+    ],
+    "date": "2026-09-13",
+    "published_at": "2026-09-13T01:44:44+0000",
+    "fb_video_id": "1699538301148259",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "17980139915900720"
+  },
+  {
+    "id": "fb_la_tragedia_de_old_man_logan_por_que_wolverine_mat",
+    "title": "¡La Tragedia de Old Man Logan! Por Qué Wolverine Mató a los X-Men 🐺🩸",
+    "normalized_title": "la tragedia de old man logan por que wolverine mato a los x men",
+    "character": "La Tragedia de Old Man Logan! Por Qué Wolverine Mató a los X-Men 🐺🩸",
+    "theme_signature": "fb_published:la_tragedia_de_old_man_logan_por_que_wolverine_mat",
+    "tokens": [
+      "tragedia",
+      "logan",
+      "wolverine",
+      "mato"
+    ],
+    "date": "2026-09-12",
+    "published_at": "2026-09-12T19:40:48+0000",
+    "fb_video_id": "1401482542189507",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18129544192776827"
+  },
+  {
+    "id": "fb_el_error_fatal_de_spider_man_la_verdadera_muerte_d",
+    "title": "¡El Error Fatal de Spider-Man! La Verdadera Muerte de Gwen Stacy 🕷💔",
+    "normalized_title": "el error fatal de spider man la verdadera muerte de gwen stacy",
+    "character": "El Error Fatal de Spider-Man! La Verdadera Muerte de Gwen Stacy 🕷💔",
+    "theme_signature": "fb_published:el_error_fatal_de_spider_man_la_verdadera_muerte_d",
+    "tokens": [
+      "error",
+      "fatal",
+      "spider",
+      "verdadera",
+      "muerte",
+      "gwen",
+      "stacy"
+    ],
+    "date": "2026-09-12",
+    "published_at": "2026-09-12T01:37:12+0000",
+    "fb_video_id": "4381821378813819",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "17992901793030032"
+  },
+  {
+    "id": "fb_gorr_el_carnicero_de_dioses_el_mortal_que_juro_ase",
+    "title": "¡Gorr el Carnicero de Dioses! El Mortal que Juró Asesinar a Todas las Deidades ⚔⚡",
+    "normalized_title": "gorr el carnicero de dioses el mortal que juro asesinar a todas las deidades",
+    "character": "Gorr el Carnicero de Dioses! El Mortal que Juró Asesinar a Todas las Deidades ⚔⚡",
+    "theme_signature": "fb_published:gorr_el_carnicero_de_dioses_el_mortal_que_juro_ase",
+    "tokens": [
+      "gorr",
+      "carnicero",
+      "dioses",
+      "mortal",
+      "juro",
+      "asesinar",
+      "todas",
+      "deidades"
+    ],
+    "date": "2026-09-11",
+    "published_at": "2026-09-11T19:28:18+0000",
+    "fb_video_id": "1085481474447658",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18351166948168033"
+  },
+  {
+    "id": "fb_dios_emperador_doom_el_humano_que_doblego_a_los_se",
+    "title": "¡Dios Emperador Doom! El Humano que Doblegó a los Seres Celestiales 👑",
+    "normalized_title": "dios emperador doom el humano que doblego a los seres celestiales",
+    "character": "Dios Emperador Doom! El Humano que Doblegó a los Seres Celestiales 👑",
+    "theme_signature": "fb_published:dios_emperador_doom_el_humano_que_doblego_a_los_se",
+    "tokens": [
+      "dios",
+      "emperador",
+      "doom",
+      "humano",
+      "doblego",
+      "seres",
+      "celestiales"
+    ],
+    "date": "2026-09-11",
+    "published_at": "2026-09-11T01:49:20+0000",
+    "fb_video_id": "2218084875402253",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18096227384227308"
+  },
+  {
+    "id": "fb_el_creador_de_venom_knull_el_dios_primordial_de_la",
+    "title": "¡El Creador de Venom! Knull, el Dios Primordial de la Oscuridad 🖤⚔",
+    "normalized_title": "el creador de venom knull el dios primordial de la oscuridad",
+    "character": "El Creador de Venom! Knull, el Dios Primordial de la Oscuridad 🖤⚔",
+    "theme_signature": "fb_published:el_creador_de_venom_knull_el_dios_primordial_de_la",
+    "tokens": [
+      "creador",
+      "venom",
+      "knull",
+      "dios",
+      "primordial",
+      "oscuridad"
+    ],
+    "date": "2026-09-10",
+    "published_at": "2026-09-10T22:46:02+0000",
+    "fb_video_id": "1385545649793108",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18077690324519976"
+  },
+  {
+    "id": "fb_el_golpe_que_rompio_la_realidad_la_locura_de_super",
+    "title": "¡El Golpe que Rompió la Realidad! La Locura de Superboy Prime 🥊🌌",
+    "normalized_title": "el golpe que rompio la realidad la locura de superboy prime",
+    "character": "El Golpe que Rompió la Realidad! La Locura de Superboy Prime 🥊🌌",
+    "theme_signature": "fb_published:el_golpe_que_rompio_la_realidad_la_locura_de_super",
+    "tokens": [
+      "golpe",
+      "rompio",
+      "realidad",
+      "locura",
+      "superboy",
+      "prime"
+    ],
+    "date": "2026-09-10",
+    "published_at": "2026-09-10T17:41:37+0000",
+    "fb_video_id": "1795087028178393",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18559585711072935"
+  },
+  {
+    "id": "fb_flashpoint_el_error_de_barry_allen_que_destruyo_la",
+    "title": "¡Flashpoint! El Error de Barry Allen que Destruyó la Línea Temporal ⚡⏳",
+    "normalized_title": "flashpoint el error de barry allen que destruyo la linea temporal",
+    "character": "Flashpoint! El Error de Barry Allen que Destruyó la Línea Temporal ⚡⏳",
+    "theme_signature": "fb_published:flashpoint_el_error_de_barry_allen_que_destruyo_la",
+    "tokens": [
+      "flashpoint",
+      "error",
+      "barry",
+      "allen",
+      "destruyo",
+      "linea",
+      "temporal"
+    ],
+    "date": "2026-09-09",
+    "published_at": "2026-09-09T22:20:00+0000",
+    "fb_video_id": "1553875802661319",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18038835113650223"
+  },
+  {
+    "id": "fb_punisher_se_convierte_en_ghost_rider_cosmico_con_e",
+    "title": "¡Punisher se Convierte en Ghost Rider Cósmico con el Poder de Galactus! 🔥🪐",
+    "normalized_title": "punisher se convierte en ghost rider cosmico con el poder de galactus",
+    "character": "Punisher se Convierte en Ghost Rider Cósmico con el Poder de Galactus! 🔥🪐",
+    "theme_signature": "fb_published:punisher_se_convierte_en_ghost_rider_cosmico_con_e",
+    "tokens": [
+      "punisher",
+      "convierte",
+      "ghost",
+      "rider",
+      "cosmico",
+      "poder",
+      "galactus"
+    ],
+    "date": "2026-09-09",
+    "published_at": "2026-09-09T17:30:20+0000",
+    "fb_video_id": "1053656924181679",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18410891524083726"
+  },
+  {
+    "id": "fb_el_multiverso_oscuro_batman_abre_el_portal_a_sus_p",
+    "title": "¡El Multiverso Oscuro! Batman Abre el Portal a sus Peores Pesadillas 🦇🌌",
+    "normalized_title": "el multiverso oscuro batman abre el portal a sus peores pesadillas",
+    "character": "El Multiverso Oscuro! Batman Abre el Portal a sus Peores Pesadillas 🦇🌌",
+    "theme_signature": "fb_published:el_multiverso_oscuro_batman_abre_el_portal_a_sus_p",
+    "tokens": [
+      "oscuro",
+      "batman",
+      "abre",
+      "portal",
+      "peores",
+      "pesadillas"
+    ],
+    "date": "2026-09-09",
+    "published_at": "2026-09-09T01:17:59+0000",
+    "fb_video_id": "1848363747064213",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18139788397599163"
+  },
+  {
+    "id": "fb_superman_se_vuelve_un_tirano_la_tragedia_de_injust",
+    "title": "¡Superman se Vuelve un Tirano! La Tragedia de Injustice 🔴🏛",
+    "normalized_title": "superman se vuelve un tirano la tragedia de injustice",
+    "character": "Superman se Vuelve un Tirano! La Tragedia de Injustice 🔴🏛",
+    "theme_signature": "fb_published:superman_se_vuelve_un_tirano_la_tragedia_de_injust",
+    "tokens": [
+      "superman",
+      "vuelve",
+      "tirano",
+      "tragedia",
+      "injustice"
+    ],
+    "date": "2026-09-08",
+    "published_at": "2026-09-08T18:05:46+0000",
+    "fb_video_id": "1944206686252847",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18139544368582405"
+  },
+  {
+    "id": "fb_el_virus_zombie_que_devoro_a_los_vengadores_y_al_m",
+    "title": "¡El Virus Zombie que Devoró a los Vengadores y al Multiverso! 🧟‍♂️🩸",
+    "normalized_title": "el virus zombie que devoro a los vengadores y al multiverso",
+    "character": "El Virus Zombie que Devoró a los Vengadores y al Multiverso! 🧟‍♂️🩸",
+    "theme_signature": "fb_published:el_virus_zombie_que_devoro_a_los_vengadores_y_al_m",
+    "tokens": [
+      "virus",
+      "zombie",
+      "devoro",
+      "vengadores"
+    ],
+    "date": "2026-09-08",
+    "published_at": "2026-09-08T01:10:33+0000",
+    "fb_video_id": "1082576474132247",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18111200900039426"
+  },
+  {
+    "id": "fb_crisis_en_tierras_infinitas_la_muerte_de_flash_y_s",
+    "title": "¡Crisis en Tierras Infinitas! La Muerte de Flash y Supergirl ⚡🌌",
+    "normalized_title": "crisis en tierras infinitas la muerte de flash y supergirl",
+    "character": "Crisis en Tierras Infinitas! La Muerte de Flash y Supergirl ⚡🌌",
+    "theme_signature": "fb_published:crisis_en_tierras_infinitas_la_muerte_de_flash_y_s",
+    "tokens": [
+      "crisis",
+      "tierras",
+      "infinitas",
+      "muerte",
+      "flash",
+      "supergirl"
+    ],
+    "date": "2026-09-07",
+    "published_at": "2026-09-07T17:18:04+0000",
+    "fb_video_id": "1089034636846196",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18188314948401789"
+  },
+  {
+    "id": "fb_thanos_gana_el_titan_loco_conquisto_el_fin_del_uni",
+    "title": "¡Thanos Gana! El Titán Loco Conquistó el Fin del Universo 🪐💀",
+    "normalized_title": "thanos gana el titan loco conquisto el fin del universo",
+    "character": "Thanos Gana! El Titán Loco Conquistó el Fin del Universo 🪐💀",
+    "theme_signature": "fb_published:thanos_gana_el_titan_loco_conquisto_el_fin_del_uni",
+    "tokens": [
+      "thanos",
+      "gana",
+      "titan",
+      "loco",
+      "conquisto"
+    ],
+    "date": "2026-09-07",
+    "published_at": "2026-09-07T01:10:41+0000",
+    "fb_video_id": "1789579465580142",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "17919648750436575"
+  },
+  {
+    "id": "fb_la_noche_mas_oscura_los_muertos_se_levantan_en_el",
+    "title": "¡La Noche Más Oscura! Los Muertos se Levantan en el Universo DC 💀💍",
+    "normalized_title": "la noche mas oscura los muertos se levantan en el universo dc",
+    "character": "La Noche Más Oscura! Los Muertos se Levantan en el Universo DC 💀💍",
+    "theme_signature": "fb_published:la_noche_mas_oscura_los_muertos_se_levantan_en_el",
+    "tokens": [
+      "noche",
+      "oscura",
+      "muertos",
+      "levantan"
+    ],
+    "date": "2026-09-06",
+    "published_at": "2026-09-06T17:44:22+0000",
+    "fb_video_id": "4573963276173771",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18087055652383356"
+  },
+  {
+    "id": "fb_los_planes_secretos_de_batman_para_destruir_a_la_l",
+    "title": "¡Los Planes Secretos de Batman para Destruir a la Liga de la Justicia! 🦇⚡",
+    "normalized_title": "los planes secretos de batman para destruir a la liga de la justicia",
+    "character": "Los Planes Secretos de Batman para Destruir a la Liga de la Justicia! 🦇⚡",
+    "theme_signature": "fb_published:los_planes_secretos_de_batman_para_destruir_a_la_l",
+    "tokens": [
+      "planes",
+      "secretos",
+      "batman",
+      "destruir",
+      "liga",
+      "justicia"
+    ],
+    "date": "2026-09-06",
+    "published_at": "2026-09-06T01:19:27+0000",
+    "fb_video_id": "2086182732014400",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18141692740505599"
+  },
+  {
+    "id": "fb_hulk_aplasta_a_los_illuminati_la_venganza_de_world",
+    "title": "¡Hulk Aplasta a los Illuminati! La Venganza de World War Hulk 🟢👑",
+    "normalized_title": "hulk aplasta a los illuminati la venganza de world war hulk",
+    "character": "Hulk Aplasta a los Illuminati! La Venganza de World War Hulk 🟢👑",
+    "theme_signature": "fb_published:hulk_aplasta_a_los_illuminati_la_venganza_de_world",
+    "tokens": [
+      "hulk",
+      "aplasta",
+      "illuminati",
+      "venganza",
+      "world",
+      "hulk"
+    ],
+    "date": "2026-09-05",
+    "published_at": "2026-09-05T17:35:28+0000",
+    "fb_video_id": "1806850937023165",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18110377747847015"
+  },
+  {
+    "id": "fb_el_metal_mutante_indestructible_el_gran_robo_de_to",
+    "title": "¡El Metal Mutante Indestructible! El Gran Robo de Tony Stark y Emma Frost 🤖",
+    "normalized_title": "el metal mutante indestructible el gran robo de tony stark y emma frost",
+    "character": "El Metal Mutante Indestructible! El Gran Robo de Tony Stark y Emma Frost 🤖",
+    "theme_signature": "fb_published:el_metal_mutante_indestructible_el_gran_robo_de_to",
+    "tokens": [
+      "metal",
+      "mutante",
+      "indestructible",
+      "gran",
+      "robo",
+      "tony",
+      "stark",
+      "emma",
+      "frost"
+    ],
+    "date": "2026-09-05",
+    "published_at": "2026-09-05T01:13:54+0000",
+    "fb_video_id": "963987423384539",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18105564395577368"
+  },
+  {
+    "id": "fb_guerra_civil_de_marvel_la_traicion_de_iron_man_y_e",
+    "title": "¡Guerra Civil de Marvel! La Traición de Iron Man y el Sacrificio de Cap 🛡️",
+    "normalized_title": "guerra civil de marvel la traicion de iron man y el sacrificio de cap",
+    "character": "Guerra Civil de Marvel! La Traición de Iron Man y el Sacrificio de Cap 🛡️",
+    "theme_signature": "fb_published:guerra_civil_de_marvel_la_traicion_de_iron_man_y_e",
+    "tokens": [
+      "guerra",
+      "civil",
+      "traicion",
+      "iron",
+      "sacrificio"
+    ],
+    "date": "2026-09-04",
+    "published_at": "2026-09-04T19:15:33+0000",
+    "fb_video_id": "1579623896997824",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18101797577240576"
+  },
+  {
+    "id": "fb_la_broma_asesina_la_verdadera_razon_de_la_locura_d",
+    "title": "¡La Broma Asesina! La Verdadera Razón de la Locura del Joker 🃏",
+    "normalized_title": "la broma asesina la verdadera razon de la locura del joker",
+    "character": "La Broma Asesina! La Verdadera Razón de la Locura del Joker 🃏",
+    "theme_signature": "fb_published:la_broma_asesina_la_verdadera_razon_de_la_locura_d",
+    "tokens": [
+      "broma",
+      "asesina",
+      "verdadera",
+      "razon",
+      "locura",
+      "joker"
+    ],
+    "date": "2026-09-04",
+    "published_at": "2026-09-04T01:23:38+0000",
+    "fb_video_id": "1108945438159808",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18353188561222944"
+  },
+  {
+    "id": "fb_el_dia_en_que_doctor_doom_se_convirtio_en_dios_del",
+    "title": "¡El Día en que Doctor Doom se Convirtió en DIOS del Multiverso! ⚠️",
+    "normalized_title": "el dia en que doctor doom se convirtio en dios del multiverso",
+    "character": "El Día en que Doctor Doom se Convirtió en DIOS del Multiverso! ⚠️",
+    "theme_signature": "fb_published:el_dia_en_que_doctor_doom_se_convirtio_en_dios_del",
+    "tokens": [
+      "doctor",
+      "doom",
+      "convirtio",
+      "dios"
+    ],
+    "date": "2026-09-03",
+    "published_at": "2026-09-03T00:50:37+0000",
+    "fb_video_id": "2569831053484728",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "18114985831961866"
+  },
+  {
+    "id": "fb_el_mayor_fracaso_de_batman_el_regreso_de_jason_tod",
+    "title": "¡El Mayor Fracaso de Batman! El Regreso de Jason Todd 🦇😔",
+    "normalized_title": "el mayor fracaso de batman el regreso de jason todd",
+    "character": "El Mayor Fracaso de Batman! El Regreso de Jason Todd 🦇😔",
+    "theme_signature": "fb_published:el_mayor_fracaso_de_batman_el_regreso_de_jason_tod",
+    "tokens": [
+      "mayor",
+      "fracaso",
+      "batman",
+      "regreso",
+      "jason",
+      "todd"
+    ],
+    "date": "2026-09-02",
+    "published_at": "2026-09-02T17:34:54+0000",
+    "fb_video_id": "950908063966269",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "17864457615686359"
+  },
+  {
+    "id": "fb_el_mutante_mas_roto_de_marvel_franklin_richards_no",
+    "title": "¿El mutante más roto de Marvel? 🔥🧬 Franklin Richards no es un niño cualquiera. Hijo de los 4 Fantásticos y capaz de poner de rodillas a los mismos Celestiales.",
+    "normalized_title": "el mutante mas roto de marvel franklin richards no es un nino cualquiera hijo de los 4 fantasticos y capaz de poner de rodillas a los mismos celestiales",
+    "character": "¿El mutante más roto de Marvel? 🔥🧬 Franklin Richards no es un niño cualquiera. Hijo de los 4 Fantásticos y capaz de poner de rodillas a los mismos Celestiales.",
+    "theme_signature": "fb_published:el_mutante_mas_roto_de_marvel_franklin_richards_no",
+    "tokens": [
+      "mutante",
+      "roto",
+      "franklin",
+      "richards",
+      "nino",
+      "cualquiera",
+      "hijo",
+      "fantasticos",
+      "capaz",
+      "poner",
+      "rodillas",
+      "mismos",
+      "celestiales"
+    ],
+    "date": "2026-09-02",
+    "published_at": "2026-09-02T02:02:46+0000",
+    "fb_video_id": "1083253864240252",
+    "status": "published",
+    "source": "facebook_sync",
+    "ig_media_id": "17908050399521946"
   },
   {
     "id": "doctor_strange_ultimos_dias_magia_empirikul",

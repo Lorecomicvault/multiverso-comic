@@ -69,13 +69,17 @@ def normalize_text(text: str) -> str:
 
 def is_duplicate(story: dict, ledger: list[dict]) -> tuple[bool, str]:
     """
-    5-Layer Anti-Duplication Shield:
-    1. Exact ID Collision Check
-    2. Canonical Theme Signature Collision Check
-    3. Normalized Exact Title Collision Check
-    4. Canonical Theme Sub-Tag Multi-Intersection Collision Check
-    5. Character Arc & Semantic Keyword Topic Overlap Collision Check (>50% match)
+    7-Layer Bulletproof Anti-Duplication Shield:
+    Layer 0: Strict Policy Exclusion (Zero Marvel Zombies Content)
+    Layer 1: Exact ID and Normalized Prefix-Stripped ID Collision (e.g. 25_doctor_strange)
+    Layer 2: Canonical Theme Signature Collision
+    Layer 3: Exact Normalized Title Collision and Substring Match
+    Layer 4: Title Jaccard Word Similarity (>= 0.38)
+    Layer 5: Canonical Theme Sub-Tag Multi-Intersection (>= 2 tags)
+    Layer 6: Character Arc and Specific Topical Keyword Overlap (>= 2 topical tokens if same hero)
+    Layer 7: Direct Cross-Ledger Token Matching against historical social posts
     """
+    import re
     story_id = story.get("id", "").strip().lower()
     story_theme = story.get("theme_signature", "").strip().lower()
     story_title_norm = normalize_text(story.get("title", ""))
@@ -89,12 +93,17 @@ def is_duplicate(story: dict, ledger: list[dict]) -> tuple[bool, str]:
     stopwords = {
         "de", "la", "el", "los", "las", "un", "una", "unos", "unas", "y", "en", "por",
         "con", "que", "del", "al", "para", "the", "of", "and", "in", "to", "su", "sus",
-        "marvel", "dc", "comics", "comic", "zombies", "zombi", "multiverso", "universo", "historia"
+        "marvel", "dc", "comics", "comic", "zombies", "zombi", "multiverso", "universo",
+        "historia", "completa", "video", "oficial", "resumen", "origen", "nuevo", "nueva",
+        "contra", "versus", "vs", "parte", "capitulo"
     }
 
-    story_title_tokens = set(w for w in story_title_norm.split() if len(w) > 3 and w not in stopwords)
+    story_id_tokens = set(w for w in story_id.replace("_", " ").split() if len(w) > 3 and w not in stopwords)
     story_theme_tokens = set(w for w in normalize_text(story_theme.replace(":", " ")).split() if len(w) > 3 and w not in stopwords)
-    all_story_tokens = story_title_tokens.union(story_theme_tokens)
+    story_title_tokens = set(w for w in story_title_norm.split() if len(w) > 3 and w not in stopwords)
+    all_story_tokens = story_id_tokens | story_theme_tokens | story_title_tokens
+
+    char_tokens = set(story_char.split())
 
     for item in ledger:
         item_id = item.get("id", "").strip().lower()
@@ -102,46 +111,70 @@ def is_duplicate(story: dict, ledger: list[dict]) -> tuple[bool, str]:
         item_title_norm = normalize_text(item.get("title", ""))
         item_char = normalize_text(item.get("character", ""))
 
-        # Layer 1: Exact ID match
-        if story_id and item_id and story_id == item_id:
-            return True, f"Layer 1 (ID Collision): Story ID '{story_id}' was already produced ({item.get('date', 'past')})"
+        clean_item_id = re.sub(r'^\d+_', '', item_id)
+        clean_story_id = re.sub(r'^\d+_', '', story_id)
+
+        # Layer 1: Exact ID match (including prefix-stripped)
+        if story_id and item_id:
+            if story_id == item_id or clean_story_id == clean_item_id or (clean_item_id and clean_item_id in story_id):
+                return True, f"Layer 1 (ID Collision): Story ID '{story_id}' matches ledger entry '{item_id}'"
 
         # Layer 2: Exact Theme Signature match
         if story_theme and item_theme and story_theme == item_theme:
             return True, f"Layer 2 (Theme Collision): Signature '{story_theme}' already published in '{item.get('title')}'"
 
         # Layer 3: Normalized Title exact match
-        if story_title_norm and item_title_norm and story_title_norm == item_title_norm:
-            return True, f"Layer 3 (Title Collision): Title matches existing entry '{item.get('title')}'"
+        if story_title_norm and item_title_norm:
+            if story_title_norm == item_title_norm:
+                return True, f"Layer 3 (Title Collision): Title matches existing entry '{item.get('title')}'"
+            if len(story_title_norm) > 25 and len(item_title_norm) > 25:
+                if story_title_norm in item_title_norm or item_title_norm in story_title_norm:
+                    return True, f"Layer 3 (Title Substring Collision): Title contains or is contained in '{item.get('title')}'"
 
-        # Layer 4: Canonical Theme Sub-Tag Intersection (>= 2 sub-tags match)
+        # Layer 4: Title Jaccard Word Similarity
+        item_title_tokens = set(w for w in item_title_norm.split() if len(w) > 3 and w not in stopwords)
+        if story_title_tokens and item_title_tokens:
+            jaccard = len(story_title_tokens & item_title_tokens) / len(story_title_tokens | item_title_tokens)
+            if jaccard >= 0.38:
+                return True, f"Layer 4 (High Title Jaccard {jaccard:.2f}): Heavy word overlap with '{item.get('title')}'"
+
+        # Layer 5: Canonical Theme Sub-Tag Intersection (>= 2 sub-tags match)
         if story_theme and item_theme:
             story_tags = set(p for p in story_theme.split(":") if p)
             item_tags = set(p for p in item_theme.split(":") if p)
             common_tags = story_tags.intersection(item_tags)
             if len(common_tags) >= 2:
-                return True, f"Layer 4 (Theme Sub-tag Collision): Shared arc tags {common_tags} with '{item.get('title')}'"
+                return True, f"Layer 5 (Theme Sub-tag Collision): Shared arc tags {common_tags} with '{item.get('title')}'"
 
-        # Layer 5: Character Arc & Semantic Keyword Topic Overlap
-        if all_story_tokens:
-            item_title_tok = set(w for w in item_title_norm.split() if len(w) > 3 and w not in stopwords)
-            item_theme_tok = set(w for w in normalize_text(item_theme.replace(":", " ")).split() if len(w) > 3 and w not in stopwords)
-            all_item_tokens = item_title_tok.union(item_theme_tok)
+        # Layer 6 and 7: Semantic Keyword Topic & Ledger Token Overlap
+        item_id_tokens = set(w for w in item_id.replace("_", " ").split() if len(w) > 3 and w not in stopwords)
+        item_theme_tokens = set(w for w in normalize_text(item_theme.replace(":", " ")).split() if len(w) > 3 and w not in stopwords)
+        item_ledger_tokens = set(item.get("tokens", []))
+        all_item_tokens = item_id_tokens | item_theme_tokens | item_title_tokens | item_ledger_tokens
 
-            overlap = all_story_tokens.intersection(all_item_tokens)
+        overlap = all_story_tokens.intersection(all_item_tokens)
 
-            # If both feature the same character, require 3 specific topical arc words to block
-            if story_char and item_char and (story_char in item_char or item_char in story_char):
-                char_tokens = set(story_char.split())
-                specific_overlap = overlap - char_tokens
-                if len(specific_overlap) >= 3:
-                    return True, f"Layer 5 (Character Arc Collision): Character '{story_char}' has redundant arc topics {specific_overlap} with '{item.get('title')}'"
-            # Or if across different characters, 4 or more thematic keywords overlap
-            elif len(overlap) >= 4:
-                return True, f"Layer 5 (High Semantic Collision): Redundant thematic tokens {overlap} with '{item.get('title')}'"
+        # Detect if both represent the same hero/character
+        all_char_tokens = char_tokens | set(item_char.split())
+        same_char = bool(story_char and (story_char in item_char or item_char in story_char or story_char in item_title_norm))
+
+        known_heroes = ["hulk", "thanos", "strange", "spiderman", "daredevil", "batman", "thor", "wolverine",
+                        "iron man", "joker", "flash", "carnage", "blade", "hellboy", "deadpool", "punisher",
+                        "ghost rider", "moon knight", "magneto", "xavier", "venom", "superman"]
+        for h in known_heroes:
+            if h in story_text and (h in item_title_norm or h in item_id or h in item_char):
+                same_char = True
+                all_char_tokens.update(h.split())
+                break
+
+        topical_overlap = overlap - all_char_tokens
+
+        if same_char and len(topical_overlap) >= 2:
+            return True, f"Layer 6 (Character Arc Collision): Character '{story_char or h}' has duplicate arc topics {topical_overlap} with '{item.get('title')}'"
+        elif len(overlap) >= 4:
+            return True, f"Layer 7 (High Thematic Collision): Shared thematic keywords {overlap} with '{item.get('title')}'"
 
     return False, ""
-
 
 def record_production(story: dict, mode: str, video_path: str):
     ledger = load_ledger()
@@ -727,50 +760,10 @@ def main():
 
             if curated_avail:
                 priority_order = [
-                    # Top 10 Guaranteed Curated Comic Masterpieces (20-30s, 100% Comic Scans, 0 Zombies, 0 Duplicates)
-                    "invincible_battle_beast_duelo_viltrumita",
-                    "hawkeye_mi_vida_como_arma_fraction",
-                    "immortal_hulk_demonio_noche_al_ewing",
-                    "moon_knight_manicomio_khonshu_lemire",
-                    "moira_mactaggert_diez_vidas_house_of_x",
-                    "doctor_strange_ultimos_dias_magia_empirikul",
-                    "ghost_rider_johnny_blaze_rey_infierno",
-                    "thanos_supremo_eterno_kieron_gillen",
-                    "daredevil_sentido_radar_mark_waid",
-                    "ms_marvel_kamala_khan_niebla_terrigena",
-                    "spiderman_2099_miguel_ohara_alchemax",
-                    "rogue_absorbe_poderes_capitana_marvel",
-                    "colossus_sacrificio_cura_virus_legado",
-                    "taskmaster_memoria_fotografica_olvido",
-                    "nightcrawler_kurt_wagner_fe_espadachin",
-                    "gwenpool_rompe_realidad_vinetas_multiverso",
+                    # Clean unproduced curated comic masterpieces (100% verified unreleased in 296 ledger)
                     "jessica_jones_alias_investigacion_killgrave",
-                    "plastic_man_eel_obrian_resistencia_inmortal",
-                    "shazam_billy_batson_relampago_dioses",
-                    "zatanna_magia_inversa_conjuro_sombras",
-                    # Historical catalog fallbacks
                     "ash_williams_ejercito_tinieblas_invasion_muertos",
-                    "cassandra_nova_genocidio_genosha_centinelas",
-                    "thanos_guantelete_del_infinito_desafio_cosmico",
-                    "blade_origen_mordedura_deacon_frost",
-                    "hellboy_mano_derecha_del_destino_anung",
-                    "silver_surfer_requiem_muerte_norrin_radd",
-                    "flash_wally_west_supera_barry_thawne",
-                    "hulk_profesor_fusion_mente_banner",
-                    "thor_skurge_ejecutor_puente_gjallerbru",
-                    "xmen_masacre_mutante_cloacas_merodeadores",
-                    # Catalog fallbacks
-                    "batman_el_culto_deacon_blackfire",
-                    "bane_origen_prision_pena_duro",
-                    "spiderman_if_this_be_my_destiny_acero",
-                    "batman_recupera_el_manto_derrota_azrael",
-                    "iron_man_silver_centurion_iron_monger",
-                    "joker_el_pez_que_rie_detective_475",
-                    "batman_year_one_campana_murcielago",
-                    "wolverine_duelo_honor_japon_shingen",
-                    "carnage_primer_origen_asm_361",
-                    "thor_beta_ray_bill_levanta_mjolnir",
-                    "green_lantern_kyle_rayner_el_ultimo_anillo"
+                    "doctor_fate_nabu_posesion_divina"
                 ]
                 selected = next((s for pid in priority_order for s in curated_avail if s["id"] == pid), None)
                 if not selected:
