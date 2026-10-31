@@ -1732,10 +1732,10 @@ def generate_autonomous_story(ledger: list[dict], api_key: str | None = None) ->
 
     # Grupos rotativos con arcos legendarios INÉDITOS para garantizar que la IA nunca proponga historias ya existentes
     ROTATING_CHAR_PROMPTS = [
-        "Spider-Man (The Amazing Spider-Man #33 / If This Be My Destiny / Viga de Acero Colosal / Suero ISO-36 / Doctor Octopus), Spider-Man (The Death of Jean DeWolff / Sin-Eater / Conflicto Moral con Daredevil)",
-        "Batman (The Cult / Deacon Blackfire / Alcantarillas de Gotham / Batmóvil Blindado Tanque), Batman (Batman #400 / Ruptura Masiva de Arkham por Ra's al Ghul)",
+        "Spider-Man (The Death of Jean DeWolff / Sin-Eater / Conflicto Moral con Daredevil en la Iglesia), Spider-Man (Back in Black / Kingpin en Prisión / Sin Máscara)",
+        "Batman (The Court of Owls / Tribunal de los Búhos / Laberinto Subterráneo / Garras de los Talons), Batman (A Death in the Family / Asesinato de Jason Todd en Etiopía)",
         "Superman (Whatever Happened to the Man of Tomorrow? / Alan Moore / Mxyzptlk Demoníaco Multidimensional / Renuncia a Poderes con Kriptonita Dorada), Superman (Superman vs Brainiac / Botella de Kandor / Sacrificio de Jor-El)",
-        "Thor (The Surtur War / Walter Simonson / Espada del Crepúsculo / Defensa Épica del Puente Bifrost), The Punisher (The Rooftop Dilemma / Daredevil Encadenado a la Chimenea / Dilema Moral del Gatillo)"
+        "Thor (The Surtur War / Walter Simonson / Espada del Crepúsculo / Defensa Épica del Puente Bifrost), The Punisher (The Rooftop Dilemma / Garth Ennis / Daredevil Encadenado a la Chimenea / Dilema Moral del Gatillo)"
     ]
 
     rejected_session_titles = []
