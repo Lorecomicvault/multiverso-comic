@@ -6495,5 +6495,15 @@
     "mode": "live_release",
     "video_file": "La_Sonrisa_de_Matt_Murdock_El_Juicio_Público_y_la_Nueva_Vida_del_Abogado_Ciego.mp4",
     "status": "published"
+  },
+  {
+    "id": "spiderman_sin_eater_iglesia_conflicto",
+    "title": "¡Spider-Man Perdió el Control en la Iglesia! La Balacera de Sin-Eater y Jean DeWolff 🕷️⛪",
+    "character": "Spider-Man",
+    "theme_signature": "spiderman:jean_dewolff:sin_eater:iglesia_conflicto",
+    "date": "2026-10-31 14:52",
+    "mode": "live_release",
+    "video_file": "Spider-Man_Perdió_el_Control_en_la_Iglesia_La_Balacera_de_Sin-Eater_y_Jean_DeWol.mp4",
+    "status": "published"
   }
 ]
