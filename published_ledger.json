@@ -2471,5 +2471,15 @@
       "youtube": "6ae53f85a1145743497bd44a"
     },
     "timestamp": "2026-10-31 01:08:24"
+  },
+  {
+    "id": "doctor_strange_ultimos_dias_magia_empirikul",
+    "title": "¡Los Últimos Días de la Magia! La Inquisición Científica del Empirikul 🔮⚔️",
+    "character": "Doctor Strange Mago",
+    "theme_signature": "doctor_strange:empirikul:imperator_inquisicion_muerte_magia_tierra",
+    "date": "2026-10-31 07:06",
+    "mode": "live_release",
+    "video_file": "Los_Últimos_Días_de_la_Magia_La_Inquisición_Científica_del_Empirikul.mp4",
+    "status": "published"
   }
 ]
