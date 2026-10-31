@@ -191,12 +191,14 @@ def is_duplicate(story: dict, ledger: list[dict]) -> tuple[bool, str]:
             "spiderman": ["peter", "parker", "spider", "spiderman"],
             "spider-man": ["peter", "parker", "spider", "spiderman"],
             "batman": ["bruce", "wayne"],
-            "thor": ["odinson", "odin", "asgard"],
+            "thor": ["odinson", "odin", "asgard", "dioses"],
             "superman": ["clark", "kent", "kal", "el"],
             "daredevil": ["matt", "murdock"],
-            "iron man": ["tony", "stark"],
+            "iron man": ["tony", "stark", "iron", "man", "armadura"],
             "hulk": ["bruce", "banner"],
-            "wolverine": ["logan", "weapon"]
+            "wolverine": ["logan", "weapon"],
+            "captain america": ["steve", "rogers", "capitan", "america"],
+            "flash": ["barry", "allen", "wally", "west", "flash", "speed", "force", "velocidad", "velocistas", "central", "city"]
         }
         for hero_key, aliases in hero_aliases.items():
             if hero_key in f"{story_id} {story_title_norm} {story_char}":
@@ -206,8 +208,8 @@ def is_duplicate(story: dict, ledger: list[dict]) -> tuple[bool, str]:
 
         if same_char and len(topical_overlap) >= 1:
             return True, f"Layer 6 (Character Arc Collision): Character '{story_char or h}' has duplicate arc topic {topical_overlap} with '{item.get('title')}'"
-        elif len(overlap) >= 3:
-            return True, f"Layer 7 (High Thematic Collision): Shared thematic keywords {overlap} with '{item.get('title')}'"
+        elif len(topical_overlap) >= 3:
+            return True, f"Layer 7 (High Thematic Collision): Shared thematic keywords {topical_overlap} with '{item.get('title')}'"
 
     return False, ""
 
