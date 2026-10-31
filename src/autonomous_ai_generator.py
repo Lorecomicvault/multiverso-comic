@@ -120,6 +120,12 @@ EMERGENCY_VIRAL_POOL = [
         "character": "Spider-Man",
         "title": "¡Spider-Man Perdió el Control en la Iglesia! La Balacera de Sin-Eater y Jean DeWolff 🕷️⛪",
         "theme_signature": "spiderman:jean_dewolff:sin_eater:iglesia_conflicto",
+        "scene_art_urls": [
+            "assets/curated_panels/spiderman_sin_eater_iglesia_conflicto/scene_01.jpg",
+            "assets/curated_panels/spiderman_sin_eater_iglesia_conflicto/scene_02.jpg",
+            "assets/curated_panels/spiderman_sin_eater_iglesia_conflicto/scene_03.jpg",
+            "assets/curated_panels/spiderman_sin_eater_iglesia_conflicto/scene_04.jpg"
+        ],
         "description": "El brutal asesinato de la capitana Jean DeWolff desató la furia de Peter Parker, quien persiguió a Sin-Eater hasta una iglesia donde casi comete el mayor error de su vida.",
         "hashtags": "#SpiderMan #SinEater #JeanDeWolff #Daredevil #MarvelComics #ComicsNarrados #Shorts #Reels #TikTok",
         "scenes": [

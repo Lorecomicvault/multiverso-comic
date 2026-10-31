@@ -771,8 +771,11 @@ def main():
 
     for attempt in range(1, MAX_CANDIDATE_ATTEMPTS + 1):
         # Story Selection & Anti-Duplication Verification
+        from .autonomous_ai_generator import EMERGENCY_VIRAL_POOL
+        all_catalog = EDITORIAL_STORIES + EMERGENCY_VIRAL_POOL
+
         if args.story_id and args.story_id not in ("any", "autonomous_ai"):
-            selected = next((s for s in EDITORIAL_STORIES if s["id"] == args.story_id), None)
+            selected = next((s for s in all_catalog if s["id"] == args.story_id), None)
             if not selected:
                 old_item = next((item for item in ledger if item.get("id") == args.story_id), None)
                 if old_item:
@@ -791,16 +794,23 @@ def main():
                 log("No duplicate videos will ever be produced. Aborting safely.")
                 sys.exit(0)
         else:
-            available = [s for s in EDITORIAL_STORIES if not is_duplicate(s, ledger)[0]]
-            log(f"Available unproduced stories in catalog: {len(available)} / {len(EDITORIAL_STORIES)}")
+            available = [s for s in all_catalog if not is_duplicate(s, ledger)[0]]
+            log(f"Available unproduced stories in catalog: {len(available)} / {len(all_catalog)}")
             curated_avail = [s for s in available if any("assets/curated_panels" in str(u) for u in s.get("scene_art_urls", []))]
 
             if curated_avail:
                 priority_order = [
-                    # Clean unproduced curated comic masterpieces (100% verified unreleased in 296 ledger)
-                    "jessica_jones_alias_investigacion_killgrave",
-                    "ash_williams_ejercito_tinieblas_invasion_muertos",
-                    "doctor_fate_nabu_posesion_divina"
+                    # 100% Inéditos garantizados en el ledger de 299 videos
+                    "spiderman_sin_eater_iglesia_conflicto",
+                    "punisher_the_slavers_tibor_bulat",
+                    "ghost_rider_trail_of_tears_travis_parham",
+                    "silver_surfer_parable_falso_mesias",
+                    "blue_marvel_adam_brashear_secreto_prohibido",
+                    "captain_america_dimension_z_ian_zola",
+                    "iron_man_demon_in_a_bottle_alcoholismo",
+                    "daredevil_out_identidad_filtrada_globe",
+                    "invincible_viltrumite_war_scourge_virus",
+                    "flash_rebelion_secreta_the_top_mente_villanos"
                 ]
                 selected = next((s for pid in priority_order for s in curated_avail if s["id"] == pid), None)
                 if not selected:
