@@ -95,7 +95,17 @@ def is_duplicate(story: dict, ledger: list[dict]) -> tuple[bool, str]:
         "con", "que", "del", "al", "para", "the", "of", "and", "in", "to", "su", "sus",
         "marvel", "dc", "comics", "comic", "zombies", "zombi", "multiverso", "universo",
         "historia", "completa", "video", "oficial", "resumen", "origen", "nuevo", "nueva",
-        "contra", "versus", "vs", "parte", "capitulo"
+        "contra", "versus", "vs", "parte", "capitulo",
+        # Generic dramatic and setting words (NOT arc-specific)
+        "venganza", "pesadilla", "asgard", "gotham", "metropolis", "final", "sangrienta", 
+        "mortal", "oscura", "oscuro", "terror", "miedo", "destino", "secreto", "leyes", 
+        "reglas", "orden", "ejecucion", "masacre", "batalla", "combate", "vida", "muerte", 
+        "fin", "inicio", "verdad", "guerra", "furia", "poder", "heroe", "villano", "tierra", 
+        "mundo", "ciudad", "noche", "dia", "salvo", "destruyo", "destruccion", "alma", "cuerpo",
+        "mente", "caos", "fuerza", "traicion", "traidor", "caida", "retorno", "regreso",
+        "death", "dark", "shadow", "war", "world", "time", "legend", "fall", "story",
+        "garth", "ennis", "brian", "michael", "bendis", "stan", "lee", "jack", "kirby",
+        "grant", "morrison", "alan", "moore", "miller", "geoff", "johns", "peter", "david"
     }
 
     story_id_tokens = set(w for w in story_id.replace("_", " ").split() if len(w) > 3 and w not in stopwords)
@@ -146,7 +156,7 @@ def is_duplicate(story: dict, ledger: list[dict]) -> tuple[bool, str]:
             if len(common_tags) >= 2:
                 return True, f"Layer 5 (Theme Sub-tag Collision): Shared arc tags {common_tags} with '{item.get('title')}'"
 
-        # Layer 6 and 7: Semantic Keyword Topic & Ledger Token Overlap
+        # Layer 6 & 7: Semantic Keyword Topic & Ledger Token Overlap
         item_id_tokens = set(w for w in item_id.replace("_", " ").split() if len(w) > 3 and w not in stopwords)
         item_theme_tokens = set(w for w in normalize_text(item_theme.replace(":", " ")).split() if len(w) > 3 and w not in stopwords)
         item_ledger_tokens = set(item.get("tokens", []))
@@ -154,24 +164,49 @@ def is_duplicate(story: dict, ledger: list[dict]) -> tuple[bool, str]:
 
         overlap = all_story_tokens.intersection(all_item_tokens)
 
-        # Detect if both represent the same hero/character
+        # Detect hero identity safely (avoid empty string containment bugs)
         all_char_tokens = char_tokens | set(item_char.split())
-        same_char = bool(story_char and (story_char in item_char or item_char in story_char or story_char in item_title_norm))
+        same_char = False
+        if story_char and item_char and (story_char in item_char or item_char in story_char):
+            same_char = True
+        elif story_char and story_char in item_title_norm:
+            same_char = True
 
-        known_heroes = ["hulk", "thanos", "strange", "spiderman", "daredevil", "batman", "thor", "wolverine",
-                        "iron man", "joker", "flash", "carnage", "blade", "hellboy", "deadpool", "punisher",
-                        "ghost rider", "moon knight", "magneto", "xavier", "venom", "superman"]
+        known_heroes = [
+            "jessica jones", "doctor fate", "ash williams", "hulk", "thanos", "strange", 
+            "spiderman", "spider-man", "daredevil", "batman", "thor", "wolverine", "iron man", 
+            "joker", "flash", "carnage", "blade", "hellboy", "deadpool", "punisher", "ghost rider", 
+            "moon knight", "magneto", "xavier", "venom", "superman", "plastic man", "zatanna", 
+            "taskmaster", "nightcrawler", "colossus", "rogue", "shazam", "green lantern", "aquaman"
+        ]
         for h in known_heroes:
-            if h in story_text and (h in item_title_norm or h in item_id or h in item_char):
+            hnorm = normalize_text(h)
+            if hnorm in f"{story_id} {story_title_norm} {story_char}" and (hnorm in item_title_norm or hnorm in item_id or hnorm in item_char):
                 same_char = True
-                all_char_tokens.update(h.split())
+                all_char_tokens.update(hnorm.split())
                 break
+
+        hero_aliases = {
+            "punisher": ["frank", "castle"],
+            "spiderman": ["peter", "parker", "spider", "spiderman"],
+            "spider-man": ["peter", "parker", "spider", "spiderman"],
+            "batman": ["bruce", "wayne"],
+            "thor": ["odinson", "odin", "asgard"],
+            "superman": ["clark", "kent", "kal", "el"],
+            "daredevil": ["matt", "murdock"],
+            "iron man": ["tony", "stark"],
+            "hulk": ["bruce", "banner"],
+            "wolverine": ["logan", "weapon"]
+        }
+        for hero_key, aliases in hero_aliases.items():
+            if hero_key in f"{story_id} {story_title_norm} {story_char}":
+                all_char_tokens.update(aliases)
 
         topical_overlap = overlap - all_char_tokens
 
-        if same_char and len(topical_overlap) >= 2:
-            return True, f"Layer 6 (Character Arc Collision): Character '{story_char or h}' has duplicate arc topics {topical_overlap} with '{item.get('title')}'"
-        elif len(overlap) >= 4:
+        if same_char and len(topical_overlap) >= 1:
+            return True, f"Layer 6 (Character Arc Collision): Character '{story_char or h}' has duplicate arc topic {topical_overlap} with '{item.get('title')}'"
+        elif len(overlap) >= 3:
             return True, f"Layer 7 (High Thematic Collision): Shared thematic keywords {overlap} with '{item.get('title')}'"
 
     return False, ""
