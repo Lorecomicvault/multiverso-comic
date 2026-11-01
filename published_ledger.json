@@ -6585,5 +6585,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "blackbolt_bomba_t_falla_espacio",
+    "title": "¡Black Bolt Destruyó el Espacio con su Voz y Abrió una Falla en el Cosmos! 👑⚡",
+    "description": "El grito de Black Bolt que desgarró el espacio cósmico y creó La Falla en War of Kings.",
+    "hashtags": "#BlackBolt #Inhumans #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/06_blackbolt_bomba_t_falla_espacio/video.mp4",
+    "timestamp": "2026-11-01 22:04:33",
+    "social_links": {
+      "facebook": "1130167213133884",
+      "instagram": "https://www.instagram.com/reel/DfNwspsgZIM/",
+      "tiktok": "6ae7b75dd016796999f2a9e5",
+      "youtube": "6ae7b76b902c3fb1debd68fe"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
