@@ -6569,5 +6569,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "swampthing_leccion_anatomia_vegetal",
+    "title": "¡El Secreto más Oscuro de Swamp Thing! La Planta que Creía Ser Humana 🌿🧪",
+    "description": "La perturbadora revelación de Alan Moore: Swamp Thing nunca fue humano, sino una planta que creyó ser un hombre.",
+    "hashtags": "#SwampThing #AlanMoore #DCComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/05_swampthing_leccion_anatomia_vegetal/video.mp4",
+    "timestamp": "2026-11-01 18:04:23",
+    "social_links": {
+      "facebook": "1454960139937467",
+      "instagram": null,
+      "tiktok": "6ae77f0ecfdcf9feb7180106",
+      "youtube": "6ae77f1dd27d61fd660495a5"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
