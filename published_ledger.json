@@ -6537,5 +6537,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "moonknight_mr_knight_edificio_rescate",
+    "title": "¡Mr. Knight Limpió un Edificio Entero de Secuestradores con Traje Blanco! 🌙🥋",
+    "description": "La legendaria escena de acción de Mr. Knight limpiando un edificio piso por piso en traje blanco. Moon Knight de Warren Ellis.",
+    "hashtags": "#MoonKnight #MrKnight #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/03_moonknight_mr_knight_edificio/video.mp4",
+    "timestamp": "2026-11-01 10:03:46",
+    "social_links": {
+      "facebook": "1121272290268705",
+      "instagram": "https://www.instagram.com/reel/DfMeNyOj0-J/",
+      "tiktok": "6ae70e701ee172cd6dedc468",
+      "youtube": "6ae70e7e37c1acd2a0f9b29b"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
