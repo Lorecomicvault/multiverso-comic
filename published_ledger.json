@@ -6505,5 +6505,21 @@
     "mode": "live_release",
     "video_file": "Spider-Man_Perdió_el_Control_en_la_Iglesia_La_Balacera_de_Sin-Eater_y_Jean_DeWol.mp4",
     "status": "published"
+  },
+  {
+    "id": "punisher_oso_polar_zoologico_gnucci",
+    "title": "¡The Punisher Alimentó a un Oso Polar con un Gangster en el Zoológico! 🐻❄️",
+    "description": "El día en que The Punisher alimentó a un oso polar con un mafioso en Central Park. La justicia más brutal de Frank Castle en Welcome Back, Frank.",
+    "hashtags": "#ThePunisher #FrankCastle #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/01_punisher_oso_polar_zoologico/video.mp4",
+    "timestamp": "2026-11-01 01:07:25",
+    "social_links": {
+      "facebook": "1915822776076346",
+      "instagram": "https://www.instagram.com/reel/DfLg19mjVjg/",
+      "tiktok": "6ae690bdf0984eef333eb6e0",
+      "youtube": "6ae690ca1ee172cd6dd1a6df"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
