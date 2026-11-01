@@ -6553,5 +6553,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "namor_destruccion_tierra_antimateria",
+    "title": "¡Namor Apretó el Gatillo y Destruyó una Tierra Entera para Salvar a Marvel! 🌊💣",
+    "description": "El día en que Namor apretó el detonador de antimateria para destruir un planeta entero durante las Incursiones de Hickman.",
+    "hashtags": "#Namor #Illuminati #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/04_namor_destruccion_tierra_antimateria/video.mp4",
+    "timestamp": "2026-11-01 14:04:36",
+    "social_links": {
+      "facebook": "1063370160090316",
+      "instagram": null,
+      "tiktok": "6ae746e2f0984eef336b50b8",
+      "youtube": "6ae746f1f0984eef336b564a"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
