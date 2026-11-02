@@ -6601,5 +6601,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "deadpool_wolverine_corea_del_norte",
+    "title": "¡Deadpool y Wolverine Rescataron a Niños Mutantes en Corea del Norte! ⚔️🇰🇷",
+    "description": "La desgarradora misión de Deadpool, Wolverine y Cap en Corea del Norte en The Good, the Bad and the Ugly.",
+    "hashtags": "#Deadpool #Wolverine #Marvel #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/07_deadpool_wolverine_corea_norte/video.mp4",
+    "timestamp": "2026-11-02 01:03:57",
+    "social_links": {
+      "facebook": "2018275565707191",
+      "instagram": "https://www.instagram.com/reel/DfOFPbLjjdK/",
+      "tiktok": "6ae7e16d2da2578c189091b6",
+      "youtube": "6ae7e17a902c3fb1dec8d93d"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
