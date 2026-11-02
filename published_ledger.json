@@ -6681,5 +6681,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "12_wolverine_decapito_red_skull_escudo_capitan",
+    "title": "¡Wolverine Decapitó a Red Skull con el Escudo del Capitán América! 🩸🛡️",
+    "description": "La ejecución más brutal de Old Man Logan: Wolverine decapita a Red Skull usando el escudo del Capitán América.",
+    "hashtags": "#Wolverine #OldManLogan #RedSkull #CaptainAmerica #Marvel #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/12_wolverine_decapito_red_skull_escudo_capitan/video.mp4",
+    "timestamp": "2026-11-02 22:05:22",
+    "social_links": {
+      "facebook": "1851884249287773",
+      "instagram": null,
+      "tiktok": "6ae908f88d258062778f21ce",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
