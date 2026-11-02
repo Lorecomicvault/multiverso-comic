@@ -6617,5 +6617,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "wonderwoman_hiketeia_bota_batman",
+    "title": "¡Wonder Woman le Puso la Bota en la Cara a Batman por un Juramento Sagrado! 🏛️⚔️",
+    "description": "El legendario enfrentamiento en The Hiketeia: Wonder Woman vence a Batman y le coloca su bota en el rostro por un juramento sagrado.",
+    "hashtags": "#WonderWoman #Batman #DCComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/08_wonderwoman_hiketeia_bota_batman/video.mp4",
+    "timestamp": "2026-11-02 07:04:28",
+    "social_links": {
+      "facebook": "2547056975820961",
+      "instagram": "https://www.instagram.com/reel/DfOufSTj916/",
+      "tiktok": "6ae835eb7817c41d1a4c1f4e",
+      "youtube": "6ae835f81a965d64fbf4d759"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
