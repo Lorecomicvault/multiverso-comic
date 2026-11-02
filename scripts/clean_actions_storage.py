@@ -6,7 +6,8 @@ para liberar espacio de almacenamiento.
 import sys
 import requests
 
-TOKEN = "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"
+import os
+TOKEN = os.environ.get("GITHUB_TOKEN", "")
 REPO = "Lorecomicvault/multiverso-comic"
 
 headers = {
