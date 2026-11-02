@@ -6649,5 +6649,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "batman_black_mirror_james_gordon_jr",
+    "title": "¡El Hijo Psicópata del Comisionado Gordon que Aterrorizó a Gotham! 🔪🩸🦇",
+    "description": "La siniestra historia de James Gordon Jr., el hijo del comisionado que intentó convertir a los niños de Gotham en psicópatas.",
+    "hashtags": "#Batman #JamesGordonJr #TheBlackMirror #DCComics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/10_batman_black_mirror_james_gordon/video.mp4",
+    "timestamp": "2026-11-02 14:06:11",
+    "social_links": {
+      "facebook": "4032855830341601",
+      "instagram": null,
+      "tiktok": "6ae898ba3911b6a45d55b073",
+      "youtube": "6ae898c909c35c01e8d1afbf"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
