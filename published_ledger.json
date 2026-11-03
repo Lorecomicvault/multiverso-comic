@@ -6761,5 +6761,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "17_punisher_masacre_funeral_familia_mafia",
+    "title": "¡The Punisher Masacró a la Mafia en Pleno Funeral! 💀⚰️🔫",
+    "description": "El día en que Frank Castle ejecutó a los líderes de la mafia Gnucci en pleno cementerio durante un funeral.",
+    "hashtags": "#ThePunisher #FrankCastle #GnucciFamily #MarvelComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/17_punisher_masacre_funeral_familia_mafia/video.mp4",
+    "timestamp": "2026-11-03 18:04:55",
+    "social_links": {
+      "facebook": "1770347834447908",
+      "instagram": null,
+      "tiktok": "6aea223002521ecbfd8dffe0",
+      "youtube": "6aea22411f06859f7ba3cc4c"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
