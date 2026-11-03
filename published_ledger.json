@@ -6729,5 +6729,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "15_daredevil_nuevo_rey_del_crimen_hells_kitchen",
+    "title": "¡Daredevil Destrozó a Kingpin y se Proclamó el Nuevo Rey del Crimen! 😈👑🩸",
+    "description": "Cuando Matt Murdock rompió todos sus límites, destruyó a Wilson Fisk y se proclamó Kingpin de Hell's Kitchen.",
+    "hashtags": "#Daredevil #MattMurdock #Kingpin #WilsonFisk #MarvelComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/15_daredevil_nuevo_rey_del_crimen_hells_kitchen/video.mp4",
+    "timestamp": "2026-11-03 10:04:34",
+    "social_links": {
+      "facebook": "2589717368197206",
+      "instagram": null,
+      "tiktok": "6ae9b1a0de49dc57f01077bd",
+      "youtube": "6ae9b1aefe2f16b703bb7e86"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
