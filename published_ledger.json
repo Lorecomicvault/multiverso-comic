@@ -6713,5 +6713,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "14_spiderman_noquea_firelord_heraldo_galactus",
+    "title": "¡Spider-Man Olvidó Contenerse y Noqueó a un Heraldo de Galactus! 🕷️🔥💥",
+    "description": "La hazaña física más brutal de Spider-Man: Peter Parker noquea a Firelord, heraldo de Galactus, a puño limpio.",
+    "hashtags": "#SpiderMan #PeterParker #Firelord #Galactus #MarvelComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/14_spiderman_noquea_firelord_heraldo_galactus/video.mp4",
+    "timestamp": "2026-11-03 07:05:18",
+    "social_links": {
+      "facebook": "2520165111813513",
+      "instagram": null,
+      "tiktok": "6ae9879c3f84a453ac0cb227",
+      "youtube": "6ae987abe5f645e4e332803e"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
