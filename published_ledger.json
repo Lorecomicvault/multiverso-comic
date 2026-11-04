@@ -6825,5 +6825,15 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "blue_marvel_exilio_presidente",
+    "title": "¡El Gobierno Exilió al Héroe Más Poderoso de la Tierra! La Traición Racista Contra Blue Marvel 💥🇺🇸",
+    "character": "Blue Marvel",
+    "theme_signature": "blue_marvel:adam_brashear:exilio_gubernamental_antimateria",
+    "date": "2026-11-04 10:15",
+    "mode": "live_release",
+    "video_file": "El_Gobierno_Exilió_al_Héroe_Más_Poderoso_de_la_Tierra_La_Traición_Racista_Contra.mp4",
+    "status": "published"
   }
 ]
