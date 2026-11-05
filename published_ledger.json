@@ -6867,5 +6867,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "23_punisher_esclavistas_incinerador",
+    "title": "¡La Venganza Más Despiadada de Punisher! La Caída de los Esclavistas 💀🔥🪓",
+    "description": "El arco más crudo de Punisher MAX: The Slavers. La cacería implacable de Frank Castle contra los hermanos Bulat.",
+    "hashtags": "#ThePunisher #FrankCastle #PunisherMAX #GarthEnnis #Marvel #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/23_punisher_esclavistas_incinerador/video.mp4",
+    "timestamp": "2026-11-05 07:05:43",
+    "social_links": {
+      "facebook": "1830308448303774",
+      "instagram": null,
+      "tiktok": "6aec2ab580f7fd0537f7000b",
+      "youtube": "6aec2ac47877e0eab27e0d1a"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
