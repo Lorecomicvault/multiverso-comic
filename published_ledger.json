@@ -6995,5 +6995,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "31_green_lantern_destruccion_planeta_xanshi",
+    "title": "¡El Mayor Pecado de Green Lantern! La Arrogancia que Destruyó un Planeta Entero 🟢💥🪐",
+    "description": "La mayor tragedia de John Stewart en Cosmic Odyssey #2: la arrogancia que provocó la destrucción de Xanshi.",
+    "hashtags": "#GreenLantern #JohnStewart #CosmicOdyssey #DCComics #JusticeLeague #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/31_green_lantern_destruccion_planeta_xanshi/video.mp4",
+    "timestamp": "2026-11-06 18:04:13",
+    "social_links": {
+      "facebook": "2221257688802953",
+      "instagram": "https://www.instagram.com/reel/DfaNHwbDuYl/",
+      "tiktok": "6aee168b004e4879a7076214",
+      "youtube": "6aee169a004e4879a7076d42"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
