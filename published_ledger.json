@@ -6963,5 +6963,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "29_iron_man_demonio_botella_espejo",
+    "title": "¡La Caída Más Trágica de Tony Stark! El Demonio en la Botella 🥃🤖💔",
+    "description": "El clásico histórico Iron Man #128: Demon in a Bottle. La caída y lucha contra el alcoholismo de Tony Stark.",
+    "hashtags": "#IronMan #TonyStark #DemonInABottle #MarvelComics #Avengers #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/29_iron_man_demonio_botella_espejo/video.mp4",
+    "timestamp": "2026-11-06 10:04:26",
+    "social_links": {
+      "facebook": "1128797982860146",
+      "instagram": "https://www.instagram.com/reel/DfZWPH-lQ_I/",
+      "tiktok": "6aeda618f3498efda7856ae1",
+      "youtube": "6aeda627c1e74b84e5e08de9"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
