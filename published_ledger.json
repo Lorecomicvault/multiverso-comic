@@ -6947,5 +6947,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "28_capitan_america_dimension_z_ian",
+    "title": "¡Capitán América Atrapado 12 Años en Otra Dimensión! La Odisea de Ian Rogers 🛡️⏳👾",
+    "description": "La conmovedora epopeya de Rick Remender: Captain America: Castaway in Dimension Z y la crianza de Ian Rogers.",
+    "hashtags": "#CaptainAmerica #SteveRogers #DimensionZ #MarvelComics #Avengers #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/28_capitan_america_dimension_z_ian/video.mp4",
+    "timestamp": "2026-11-06 01:04:53",
+    "social_links": {
+      "facebook": "1108865768426689",
+      "instagram": null,
+      "tiktok": "6aed27a407f945cca931ae54",
+      "youtube": "6aed27b27b7e47e8f4fc5bae"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
