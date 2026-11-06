@@ -108,12 +108,14 @@ def publish_to_instagram_reels(
     ig_user_id: str | None = None,
     max_wait_seconds: int = 300,
 ) -> dict:
-    """Publishes a video as an Instagram Reel to @comicloreevault via Instagram Graph API.
+    """Publishes a video as an Instagram Reel to @multiversoocomic via Instagram Graph API.
 
     Supports:
-    1. Direct native binary upload (upload_type=resumable via rupload.facebook.com) - Preferred & 100% reliable.
-    2. Public URL ingestion (video_url) - Fallback.
-    3. thumb_offset_ms parameter ensuring the cover is never dark/black and captures the action artwork.
+    1. Public URL ingestion (video_url) - Highly recommended & 100% reliable for Meta.
+    2. Auto-resolution to GitHub raw CDN if video is in scheduled_queue.
+    3. Direct native binary upload (upload_type=resumable via rupload.facebook.com) - Fallback.
+    4. Emergency temporary host fallback (tmpfiles.org) if binary upload hits gateway timeouts.
+    5. thumb_offset_ms parameter ensuring the cover captures the action artwork.
     """
     token = access_token or os.environ.get('FB_PAGE_TOKEN') or DEFAULT_ACCESS_TOKEN
     ig_id = ig_user_id or os.environ.get('IG_USER_ID', DEFAULT_IG_USER_ID)
@@ -124,12 +126,41 @@ def publish_to_instagram_reels(
 
     create_url = f"https://graph.facebook.com/{GRAPH_API_VERSION}/{ig_id}/media"
 
+    # Auto-resolve public video URL if not explicitly provided
+    if not video_url and video_path:
+        vpath = Path(video_path)
+        posix_str = vpath.as_posix()
+        if "scheduled_queue/" in posix_str:
+            subpath = posix_str[posix_str.find("scheduled_queue/"):]
+            video_url = f"https://raw.githubusercontent.com/Lorecomicvault/multiverso-comic/main/{subpath}"
+            log(f"Auto-resolved GitHub raw URL for Instagram Reels: {video_url}")
+
+    creation_id = None
+
     try:
-        # Path A: Direct local video binary upload (Meta Resumable API)
-        if video_path and Path(video_path).exists():
+        # Strategy 1: Public video URL ingestion (Preferred & robust against gateway timeouts)
+        if video_url and video_url.startswith('http'):
+            log(f"Step 1: Creating Instagram Reels container via public URL for @multiversoocomic (ID: {ig_id}, URL: {video_url})...")
+            create_payload = {
+                'media_type': 'REELS',
+                'video_url': video_url,
+                'caption': caption,
+                'thumb_offset': str(thumb_offset_ms),
+                'access_token': token,
+            }
+            r = requests.post(create_url, data=create_payload, timeout=60)
+            res = r.json()
+            if 'id' in res:
+                creation_id = res['id']
+                log(f"Container created successfully via URL. Creation ID: {creation_id}")
+            else:
+                log(f"WARNING: URL container creation failed ({r.status_code}): {res}. Falling back to binary upload...")
+
+        # Strategy 2: Direct local video binary upload (Meta Resumable API) if Strategy 1 not used or failed
+        if not creation_id and video_path and Path(video_path).exists():
             vpath = Path(video_path)
             file_size = vpath.stat().st_size
-            log(f"Step 1: Initializing Reels resumable container for @comicloreevault (ID: {ig_id}, {file_size / (1024*1024):.1f} MB, thumb_offset: {thumb_offset_ms}ms)...")
+            log(f"Step 1 (Fallback): Initializing Reels resumable container for @multiversoocomic (ID: {ig_id}, {file_size / (1024*1024):.1f} MB)...")
 
             init_payload = {
                 'upload_type': 'resumable',
@@ -159,7 +190,6 @@ def publish_to_instagram_reels(
                 'Content-Type': 'application/octet-stream'
             }
 
-            log(f"Container created. Creation ID: {creation_id}. Uploading {len(video_bytes)} bytes to Meta ({upload_uri})...")
             r_upload = requests.post(upload_uri, headers=upload_headers, data=video_bytes, timeout=600)
 
             # Retry once if Meta returns a transient error on rupload
@@ -173,31 +203,33 @@ def publish_to_instagram_reels(
                     r_upload = requests.post(upload_uri, headers=upload_headers, data=video_bytes, timeout=600)
 
             if r_upload.status_code not in (200, 201):
-                log(f"ERROR uploading video binary to rupload: {r_upload.status_code} {r_upload.text}")
-                return {'success': False, 'error': r_upload.text}
+                # If rupload failed, try emergency temporary public URL (tmpfiles.org)
+                log(f"WARNING: rupload failed ({r_upload.status_code}). Attempting emergency temporary host fallback...")
+                try:
+                    from .buffer_publisher import upload_to_temporary_public_url
+                    temp_url = upload_to_temporary_public_url(vpath)
+                    log(f"Emergency public URL obtained: {temp_url}. Creating container...")
+                    r_temp = requests.post(create_url, data={
+                        'media_type': 'REELS',
+                        'video_url': temp_url,
+                        'caption': caption,
+                        'thumb_offset': str(thumb_offset_ms),
+                        'access_token': token,
+                    }, timeout=60).json()
+                    if 'id' in r_temp:
+                        creation_id = r_temp['id']
+                        log(f"Container created successfully via emergency URL. ID: {creation_id}")
+                    else:
+                        return {'success': False, 'error': f"rupload failed and emergency url failed: {r_temp}"}
+                except Exception as ex_temp:
+                    log(f"ERROR: Emergency fallback failed: {ex_temp}")
+                    return {'success': False, 'error': r_upload.text}
+            else:
+                log("Binary uploaded successfully to Meta Reel server.")
 
-            log("Binary uploaded successfully to Meta Reel server.")
-
-        # Path B: Public video URL ingestion
-        elif video_url and video_url.startswith('http'):
-            log(f"Step 1: Creating Instagram Reels container via public URL for @comicloreevault (ID: {ig_id}, thumb_offset: {thumb_offset_ms}ms)...")
-            create_payload = {
-                'media_type': 'REELS',
-                'video_url': video_url,
-                'caption': caption,
-                'thumb_offset': str(thumb_offset_ms),
-                'access_token': token,
-            }
-            r = requests.post(create_url, data=create_payload, timeout=60)
-            res = r.json()
-            if 'id' not in res:
-                log(f"ERROR creating container ({r.status_code}): {res}")
-                return {'success': False, 'error': res}
-            creation_id = res['id']
-            log(f"Container created successfully. Creation ID: {creation_id}")
-        else:
-            log("ERROR: Neither valid video_path nor video_url provided for Instagram Reels.")
-            return {'success': False, 'error': 'No video source provided'}
+        if not creation_id:
+            log("ERROR: Could not create Instagram Reels container through any method.")
+            return {'success': False, 'error': 'No container created'}
 
         # Step 2: Polling container processing status
         log("Step 2: Polling container processing status...")
@@ -225,7 +257,7 @@ def publish_to_instagram_reels(
             return {'success': False, 'error': 'Timeout waiting for video processing'}
 
         # Step 3: Publishing Reel
-        log("Step 3: Publishing Reel to @comicloreevault...")
+        log("Step 3: Publishing Reel to @multiversoocomic...")
         pub_url = f"https://graph.facebook.com/{GRAPH_API_VERSION}/{ig_id}/media_publish"
         pub_res = requests.post(pub_url, data={
             'creation_id': creation_id,
@@ -245,7 +277,7 @@ def publish_to_instagram_reels(
             except Exception:
                 permalink = f'https://www.instagram.com/reel/{media_id}'
 
-            log(f"SUCCESS: Reel published to @comicloreevault! Media ID: {media_id} | URL: {permalink}")
+            log(f"SUCCESS: Reel published to @multiversoocomic! Media ID: {media_id} | URL: {permalink}")
             return {'success': True, 'media_id': media_id, 'permalink': permalink}
         else:
             log(f"ERROR publishing container: {pub_res}")
@@ -254,6 +286,7 @@ def publish_to_instagram_reels(
     except Exception as e:
         log(f"EXCEPTION publishing to Instagram: {e}")
         return {'success': False, 'error': str(e)}
+
 
 
 def publish_comic_video(

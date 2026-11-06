@@ -723,11 +723,13 @@ def main():
 
             # Publicación directa multi-plataforma
             log(f"Iniciando publicación de video pre-renderizado '{title}' a todas las redes...")
+            raw_url = f"https://raw.githubusercontent.com/Lorecomicvault/multiverso-comic/main/{video_file.as_posix()}"
             pub_results = publish_comic_video(
                 video_path=video_file,
                 title=title,
                 description=desc,
                 hashtags=tags,
+                video_url=raw_url,
                 thumbnail_path=thumb_file if thumb_file.exists() else None,
                 draft_only=args.draft
             )
