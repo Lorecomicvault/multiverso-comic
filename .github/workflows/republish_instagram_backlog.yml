@@ -1,0 +1,39 @@
+name: Publicar Backlog de Instagram Reels
+
+on:
+  schedule:
+    # 01:00 AM a 07:00 AM local (UTC-5) -> 06:00 a 12:00 UTC
+    - cron: '0 6,7,8,9,10,11,12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-backlog:
+    name: Publicar Siguiente Reel del Backlog en Instagram
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout Codigo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar Dependencias
+        run: |
+          pip install requests
+
+      - name: Procesar Publicacion de Instagram
+        env:
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN || 'EAAduw9ZBIaysBSVYGkNZCmRYBKHwiPpwlkZBiFxM5SNCWCBnmMLhl7SDSvUNFJXzn6xSYQBeKDNseZA3bM5cwCxcIV7L4bim7nlIU5CtgsB8gZCy82iew2MZB72Q13ODT8yBKcFrdRHXhUziR7DwOqMCoZBOcTd4whcwZByMWR4xQfqWJEl7gHZCRT3HOtZA73OMBCaZCzi' }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID || '1289410784257454' }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID || '17841427017671758' }}
+        run: |
+          python scripts/process_instagram_backlog.py
