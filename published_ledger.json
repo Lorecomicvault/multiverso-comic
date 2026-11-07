@@ -7027,5 +7027,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "33_capitan_america_asesinato_escaleras_juzgado",
+    "title": "¡El Asesinato del Capitán América! El Disparo a Quemarropa en las Escaleras 🛡️🩸🏛️",
+    "description": "La trágica muerte de Steve Rogers en Captain America #25 de Ed Brubaker y Steve Epting. El asesinato tras Civil War.",
+    "hashtags": "#CaptainAmerica #SteveRogers #CivilWar #MarvelComics #Avengers #WinterSoldier #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/33_capitan_america_asesinato_escaleras_juzgado/video.mp4",
+    "timestamp": "2026-11-07 01:04:23",
+    "social_links": {
+      "facebook": "2203757770213949",
+      "instagram": "https://www.instagram.com/reel/Dfa9NvSClYb/",
+      "tiktok": "6aee7905229bf05daf1db411",
+      "youtube": "6aee7914a7751de7c9ba1fb5"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
