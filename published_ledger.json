@@ -7139,5 +7139,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "40_batman_whatever_happened_funeral_caped_crusader",
+    "title": "¡El Funeral Secreto de Batman! El Emotivo Homenaje Donde Todos Vieron su Muerte 🦇⚰️🌹",
+    "description": "La obra maestra de Neil Gaiman y Andy Kubert: Batman: Whatever Happened to the Caped Crusader? El funeral definitivo de Bruce Wayne.",
+    "hashtags": "#Batman #NeilGaiman #DCComics #CapedCrusader #BruceWayne #Joker #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/40_batman_whatever_happened_funeral_caped_crusader/video.mp4",
+    "timestamp": "2026-11-08 07:03:50",
+    "social_links": {
+      "facebook": "40949649511301110",
+      "instagram": "https://www.instagram.com/reel/DfeLKOCGXP7/",
+      "tiktok": "6af01ec551492b796e214c7e",
+      "youtube": "6af01ed3004e4879a79f0e87"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
