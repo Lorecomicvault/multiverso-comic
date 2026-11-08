@@ -7171,5 +7171,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "42_doctor_strange_the_oath_cirugia",
+    "title": "¡Doctor Strange se Operó a Sí Mismo en Forma Astral! La Balacera en el Sanctum 🔮🫀🏥",
+    "description": "La brillante historia de Brian K. Vaughan y Marcos Martín: Doctor Strange: The Oath. La cirugía astral más impactante de Marvel.",
+    "hashtags": "#DoctorStrange #NightNurse #Marvel #MarvelComics #HechiceroSupremo #TheOath #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/42_doctor_strange_the_oath_cirugia/video.mp4",
+    "timestamp": "2026-11-08 14:03:51",
+    "social_links": {
+      "facebook": "3484235831757334",
+      "instagram": "https://www.instagram.com/reel/Dfe7OSGD5rm/",
+      "tiktok": "6af08137d6bbae6fa1f0d3d6",
+      "youtube": "6af08144229bf05dafb62dd0"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
