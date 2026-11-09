@@ -7267,5 +7267,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "48_xmen_schism_cyclops_wolverine",
+    "title": "¡La Pelea que Destruyó a los X-Men! La Sangrienta Guerra Moral entre Wolverine y Cyclops ⚔️🩸❌",
+    "description": "El histórico evento de Jason Aaron y Carlos Pacheco: X-Men: Schism #4-5. El enfrentamiento que dividió a los mutantes.",
+    "hashtags": "#XMen #Wolverine #Cyclops #Schism #Marvel #MarvelComics #Mutants #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/48_xmen_schism_cyclops_wolverine/video.mp4",
+    "timestamp": "2026-11-09 14:04:13",
+    "social_links": {
+      "facebook": "2677445036027985",
+      "instagram": "https://www.instagram.com/reel/DfhgDW-AXtl/",
+      "tiktok": "6af1d2cb49a9d0ada8dafcb1",
+      "youtube": "6af1d2da37d8d906e7c1d8f0"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
