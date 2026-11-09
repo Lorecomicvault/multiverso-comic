@@ -258,7 +258,7 @@ def run_pipeline(
     if generate_thumbnail and os.environ.get('NO_THUMB', '0') != '1':
         thumb_path = str(final_dir / f'{safe_name}_thumb.jpg')
         try:
-            extract_thumbnail(final_video, thumb_path, timestamp=2.5)
+            extract_thumbnail(final_video, thumb_path, timestamp=0.0)
             log(f"  OK -> Miniatura oficial generada: {thumb_path}")
         except Exception as e:
             log(f"  Warning: No se pudo generar archivo de miniatura: {e}")

@@ -1,0 +1,102 @@
+[
+  {
+    "slot": "21",
+    "title": "¡Cyclops se Quitó el Visor! El Disparo Óptico que Desintegró a un Centinela 🔴💥🌲",
+    "character": "Cyclops",
+    "duration": 74.6,
+    "video_size_mb": 19.5,
+    "thumb_size_kb": 338.58,
+    "status": "✅ PASSED",
+    "folder": "21_cyclops_disparo_optico_centinela"
+  },
+  {
+    "slot": "22",
+    "title": "¡La Escena Más Aterradora de Watchmen! Rorschach en la Prisión 🥄🔥🩸",
+    "character": "Rorschach",
+    "duration": 73.6,
+    "video_size_mb": 33.22,
+    "thumb_size_kb": 406.66,
+    "status": "✅ PASSED",
+    "folder": "22_rorschach_aceite_hirviendo_watchmen"
+  },
+  {
+    "slot": "23",
+    "title": "¡La Venganza Más Despiadada de Punisher! La Caída de los Esclavistas 💀🔥🪓",
+    "character": "The Punisher",
+    "duration": 80.3,
+    "video_size_mb": 27.12,
+    "thumb_size_kb": 298.15,
+    "status": "✅ PASSED",
+    "folder": "23_punisher_esclavistas_incinerador"
+  },
+  {
+    "slot": "24",
+    "title": "¡Daredevil Encarcelado con Kingpin y Bullseye! El Motín Sangriento de Ryker 😈🏢⛓️",
+    "character": "Daredevil",
+    "duration": 71.5,
+    "video_size_mb": 21.87,
+    "thumb_size_kb": 381.35,
+    "status": "✅ PASSED",
+    "folder": "24_daredevil_motin_carcel_cell_block_d"
+  },
+  {
+    "slot": "25",
+    "title": "¡Superman se Despojó de sus Poderes! La Tragedia de la Kryptonita Dorada ☀️💀💔",
+    "character": "Superman",
+    "duration": 75.3,
+    "video_size_mb": 35.15,
+    "thumb_size_kb": 416.93,
+    "status": "✅ PASSED",
+    "folder": "25_superman_kryptonita_dorada_mxyzptlk"
+  },
+  {
+    "slot": "26",
+    "title": "¡Batman le Devolvió la Jugada a Bane! El Brutal Choque en Arkham Asylum 🦇💥🦴",
+    "character": "Batman",
+    "duration": 77.399675,
+    "video_size_mb": 20.56,
+    "thumb_size_kb": 304.85,
+    "status": "✅ PASSED",
+    "folder": "26_batman_quiebra_espalda_bane_arkham"
+  },
+  {
+    "slot": "27",
+    "title": "¡Mark Grayson Perdió el Control! La Despiadada Furia Contra Angstrom Levy 🩸👊🌌",
+    "character": "Invincible",
+    "duration": 79.5,
+    "video_size_mb": 27.17,
+    "thumb_size_kb": 329.03,
+    "status": "✅ PASSED",
+    "folder": "27_invincible_furia_angstrom_levy"
+  },
+  {
+    "slot": "28",
+    "title": "¡Capitán América Atrapado 12 Años en Otra Dimensión! La Odisea de Ian Rogers 🛡️⏳👾",
+    "character": "Captain America",
+    "duration": 76.7,
+    "video_size_mb": 27.92,
+    "thumb_size_kb": 376.1,
+    "status": "✅ PASSED",
+    "folder": "28_capitan_america_dimension_z_ian"
+  },
+  {
+    "slot": "29",
+    "title": "¡La Caída Más Trágica de Tony Stark! El Demonio en la Botella 🥃🤖💔",
+    "character": "Iron Man",
+    "duration": 76.0,
+    "video_size_mb": 40.24,
+    "thumb_size_kb": 478.38,
+    "status": "✅ PASSED",
+    "folder": "29_iron_man_demonio_botella_espejo"
+  },
+  {
+    "slot": "30",
+    "title": "¡La Traición que Destruyó a los Titanes! El Oscuro Secreto de Terra 🪨💔⚔️",
+    "character": "Teen Titans",
+    "duration": 75.0,
+    "video_size_mb": 39.03,
+    "thumb_size_kb": 418.2,
+    "status": "✅ PASSED",
+    "folder": "30_teen_titans_traicion_terra_slade"
+  }
+]

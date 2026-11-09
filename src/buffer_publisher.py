@@ -112,7 +112,7 @@ def get_buffer_channels(access_token: str | None = None) -> list[dict]:
 def publish_to_tiktok_via_buffer(
     video_path: str | Path,
     caption: str,
-    thumb_offset_ms: int = 2500,
+    thumb_offset_ms: int = 0,
     access_token: str | None = None,
     channel_id: str | None = None,
 ) -> dict:

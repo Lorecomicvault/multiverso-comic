@@ -51,12 +51,12 @@ def publish_to_facebook_page(
             thumbnail_path = candidate
         else:
             try:
-                subprocess.run(['ffmpeg', '-y', '-ss', '2.5', '-i', str(vpath), '-frames:v', '1', str(candidate)],
+                subprocess.run(['ffmpeg', '-y', '-ss', '0.0', '-i', str(vpath), '-frames:v', '1', str(candidate)],
                                capture_output=True, check=True)
                 if candidate.exists() and candidate.stat().st_size > 0:
                     thumbnail_path = candidate
             except Exception as e:
-                log(f"Notice: Could not auto-generate thumbnail at 2.5s: {e}")
+                log(f"Notice: Could not auto-generate thumbnail at 0.0s: {e}")
 
     status_str = "PUBLISHED" if published else "DRAFT (Unpublished)"
     log(f"Publishing video to Facebook Page '{pid}' ({vpath.name}, {vpath.stat().st_size / (1024*1024):.1f} MB, mode: {status_str})...")
@@ -103,7 +103,7 @@ def publish_to_instagram_reels(
     video_path: str | Path | None = None,
     caption: str = "",
     video_url: str | None = None,
-    thumb_offset_ms: int = 2500,
+    thumb_offset_ms: int = 0,
     access_token: str | None = None,
     ig_user_id: str | None = None,
     max_wait_seconds: int = 300,
@@ -296,7 +296,7 @@ def publish_comic_video(
     hashtags: str = '#Comics #Marvel #DC #ComicLoreVault #ComicTok #Reels',
     video_url: str | None = None,
     thumbnail_path: str | Path | None = None,
-    thumb_offset_ms: int = 2500,
+    thumb_offset_ms: int = 0,
     draft_only: bool = False,
 ) -> dict:
     """Orchestrates publishing across Comic Lore Vault Facebook and Instagram destinations with custom thumbnails."""
