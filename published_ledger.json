@@ -7283,5 +7283,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "49_green_arrow_cry_for_justice_prometheus",
+    "title": "¡Green Arrow Cruzó la Línea que Batman Jamás Cruzaría! La Venganza por Star City 🏹🎯🩸",
+    "description": "El oscuro desenlace de Justice League: Cry for Justice #7 por James Robinson y Mauro Cascioli. La venganza de Green Arrow.",
+    "hashtags": "#GreenArrow #JusticeLeague #Prometheus #DCComics #StarCity #OliverQueen #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/49_green_arrow_cry_for_justice_prometheus/video.mp4",
+    "timestamp": "2026-11-09 18:04:36",
+    "social_links": {
+      "facebook": "1100529196150882",
+      "instagram": "https://www.instagram.com/reel/Dfh7jpoCS-d/",
+      "tiktok": "6af20b1b4af3cc032bb69456",
+      "youtube": "6af20b2a7176a1c9260068ba"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
