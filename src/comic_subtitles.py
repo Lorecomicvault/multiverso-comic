@@ -65,7 +65,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     for w in words:
         start_t = format_ass_time(w["start"])
         end_t = format_ass_time(w["end"])
-        clean = re.sub(r'^[^\w¿¡]+|[^\w?!\.]+$', '', w["word"]).upper()
+        word_val = str(w.get("word") or w.get("text") or "")
+        clean = re.sub(r'^[^\w¿¡]+|[^\w?!\.]+$', '', word_val).upper()
         if not clean:
             continue
         

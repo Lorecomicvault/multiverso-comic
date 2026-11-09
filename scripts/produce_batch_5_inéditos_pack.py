@@ -473,19 +473,19 @@ def produce_single_project(proj):
 
 if __name__ == "__main__":
     target_slot = None
-    if len(sys.argv) > 1:
-        arg = sys.argv[1].strip().lower()
-        if arg.isdigit():
-            target_slot = int(arg)
+    force_mode = "--force" in [a.lower() for a in sys.argv]
+    for a in sys.argv[1:]:
+        if a.strip().isdigit():
+            target_slot = int(a.strip())
 
-    print(f"🎬 Batch 5 Master Production Engine (Slots 41 al 50)")
+    print(f"🎬 Batch 5 Master Production Engine (Slots 41 al 50) [Force: {force_mode}]")
     for proj in PROJECTS:
         slot = proj["slot"]
         if target_slot and slot != target_slot:
             continue
         
         dest = SCHEDULED_QUEUE / proj["queue_folder"]
-        if (dest / "video.mp4").exists() and (dest / "metadata.json").exists():
+        if not force_mode and (dest / "video.mp4").exists() and (dest / "metadata.json").exists():
             print(f"⏩ Slot {slot} ya existe en scheduled_queue. Saltando.")
             continue
 
