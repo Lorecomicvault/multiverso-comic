@@ -6925,7 +6925,7 @@
     "timestamp": "2026-11-05 18:05:33",
     "social_links": {
       "facebook": "1761344324977752",
-      "instagram": null,
+      "instagram": "https://www.instagram.com/reel/DfkGkb6ny_3/",
       "tiktok": "6aecc5537c2c23ac24c7acf9",
       "youtube": "6aecc5660e16d12311070b9c"
     },
@@ -7312,6 +7312,86 @@
       "instagram": "https://www.instagram.com/reel/DfiW_VcAZKk/",
       "tiktok": "6af24353718d70ae70a80224",
       "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
+  },
+  {
+    "id": "51_spiderman_escorpion_mandibula_superior",
+    "title": "¡Spider-Man Jamás Usó Toda su Fuerza! El Puñetazo que Destrozó a Escorpión 🕷️💥🩸",
+    "description": "La legendaria revelación de Dan Slott y Ryan Stegman: Superior Spider-Man #1. El puñetazo que arrancó la mandíbula de Escorpión.",
+    "hashtags": "#SpiderMan #SuperiorSpiderMan #Scorpion #DoctorOctopus #PeterParker #Marvel #MarvelComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/51_spiderman_escorpion_mandibula_superior/video.mp4",
+    "timestamp": "2026-11-10 01:04:28",
+    "social_links": {
+      "facebook": "1883618266105032",
+      "instagram": "https://www.instagram.com/reel/DfirnKYjnK1/",
+      "tiktok": "6af26d8a26f9e6aeead6130d",
+      "youtube": "6af26d9926f9e6aeead617f4"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
+  },
+  {
+    "id": "52_batman_virus_doomsday_devastator",
+    "title": "¡Batman se Clavó el Virus Doomsday en el Pecho! La Caída del Hombre de Acero 🦇💉💀",
+    "description": "La escalofriante pesadilla de Frank Tieri y Tony Daniel: Batman: The Devastator #1. El nacimiento del Batman Doomsday.",
+    "hashtags": "#Batman #Superman #Doomsday #TheDevastator #DarkMultiverse #DCComics #JusticeLeague #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/52_batman_virus_doomsday_devastator/video.mp4",
+    "timestamp": "2026-11-10 07:04:46",
+    "social_links": {
+      "facebook": "2096799647863341",
+      "instagram": "https://www.instagram.com/reel/DfjU1-YDRwG/",
+      "tiktok": "6af2c1fbe261c09acca6db9d",
+      "youtube": "6af2c20b26f9e6aeeaee2748"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
+  },
+  {
+    "id": "53_spiderman_back_in_black_kingpin",
+    "title": "¡Spider-Man Humilló a Kingpin en la Cárcel! La Furia de Back in Black 🕷️⛓️🩸",
+    "description": "La legendaria obra maestra de J. Michael Straczynski y Ron Garney: Amazing Spider-Man #542. La paliza a Wilson Fisk en Ryker's.",
+    "hashtags": "#SpiderMan #Kingpin #BackInBlack #PeterParker #WilsonFisk #Marvel #MarvelComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/53_spiderman_back_in_black_kingpin/video.mp4",
+    "timestamp": "2026-11-10 10:04:10",
+    "social_links": {
+      "facebook": "1702429864552248",
+      "instagram": "https://www.instagram.com/reel/DfjpX2Wjrk4/",
+      "tiktok": "6af2ec07eea2cc573bb491c5",
+      "youtube": "6af2ec1601446117738cbfaa"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
+  },
+  {
+    "id": "54_sentry_descuartiza_ares_siege",
+    "title": "¡Sentry Descuartizó a Ares con sus Propias Manos! La Muerte Más Brutal de Marvel ⚡🪓🩸",
+    "description": "El brutal clímax de Brian Michael Bendis y Olivier Coipel: Siege #2. Sentry descuartiza a Ares, Dios de la Guerra.",
+    "hashtags": "#Sentry #Ares #Siege #TheVoid #NormanOsborn #Avengers #Marvel #MarvelComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/54_sentry_descuartiza_ares_siege/video.mp4",
+    "timestamp": "2026-11-10 14:11:19",
+    "social_links": {
+      "facebook": "1442937383977708",
+      "instagram": "https://www.instagram.com/reel/DfkFq0bkkLn/",
+      "tiktok": "6af325f4c7f7e0290ae75d5b",
+      "youtube": "6af32604c7f7e0290ae7615c"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
+  },
+  {
+    "id": "55_batman_que_rie_dark_multiverse",
+    "title": "¡El Origen del Batman Que Ríe! La Noche que Bruce Wayne Rompió su Código 🃏🦇🩸",
+    "description": "El origen definitivo creado por James Tynion IV y Riley Rossmo: Dark Nights: The Batman Who Laughs #1. El fin de Bruce Wayne.",
+    "hashtags": "#TheBatmanWhoLaughs #Batman #Joker #DarkMultiverse #DCComics #BatmanQueRie #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/55_batman_que_rie_dark_multiverse/video.mp4",
+    "timestamp": "2026-11-10 18:06:26",
+    "social_links": {
+      "facebook": "3451130448392427",
+      "instagram": "https://www.instagram.com/reel/DfkgkBlApmS/",
+      "tiktok": "6af35d0ceca53e2861f8c883",
+      "youtube": "6af35d1e341cea4af6273bd6"
     },
     "status": "published",
     "source": "scheduled_queue"
