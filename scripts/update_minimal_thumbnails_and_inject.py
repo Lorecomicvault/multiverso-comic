@@ -143,6 +143,11 @@ def inject_thumbnail_into_video(video_path: Path, thumb_path: Path, slot_name: s
         str(audit_f0)
     ], capture_output=True)
 
+    if Path(video_path).exists():
+        try:
+            Path(video_path).unlink()
+        except Exception:
+            pass
     shutil.move(temp_out, video_path)
     return True
 

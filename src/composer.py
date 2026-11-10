@@ -50,49 +50,49 @@ def compose_scene(video_path: str, audio_path: str, duration: float, output: str
 
 def _build_zoompan_exprs(pattern: str, total_frames: int, nf: int, duration: float, width: int, height: int) -> tuple[str, str, str, float, float]:
     """
-    Movimiento Ken Burns cinematográfico dinámico, vivo y fluido.
-    Recorre e interactúa con la viñeta con movimientos de cámara visibles (18% a 22%)
-    creando zooms y paneos espectaculares que dan vida a cada panel de cómic.
+    Movimiento Ken Burns cinematográfico dinámico, vivo y no destructivo.
+    Mantiene el 100% de la acción, personajes y viñetas visibles dentro de la safe-zone,
+    utilizando zooms sutiles y elegantes (1.00 a 1.05) sin recortar cabezas ni globos de texto.
     """
     t_norm = f'on/{nf}' if nf > 0 else '0'
 
     if pattern == 'zoom-out':
-        # Zoom out cinematográfico: inicia en primer plano (1.22) y retrocede suavemente (1.04)
-        z = f'1.22 - 0.18 * {t_norm}'
+        # Zoom out cinematográfico suave: inicia en 1.05 y retrocede elegantemente a 1.00
+        z = f'1.05 - 0.05 * {t_norm}'
         x = '(iw - iw/zoom)/2'
         y = '(ih - ih/zoom)/2'
     elif pattern == 'pan-up':
-        # Paneo ascendente: recorre la viñeta desde abajo hacia arriba
-        z = '1.22'
+        # Paneo ascendente sutil: recorre la viñeta con escala segura (1.04)
+        z = '1.04'
         x = '(iw - iw/zoom)/2'
         y = f'(ih - ih/zoom) * (1 - {t_norm})'
     elif pattern == 'pan-down':
-        # Paneo descendente: escaneo vertical clásico de cómic desde arriba hacia abajo
-        z = '1.22'
+        # Paneo descendente sutil: escaneo vertical clásico desde arriba hacia abajo (1.04)
+        z = '1.04'
         x = '(iw - iw/zoom)/2'
         y = f'(ih - ih/zoom) * {t_norm}'
     elif pattern == 'pan-left-to-right':
-        # Paneo horizontal de izquierda a derecha
-        z = '1.22'
+        # Paneo horizontal de izquierda a derecha (1.04)
+        z = '1.04'
         x = f'(iw - iw/zoom) * {t_norm}'
         y = '(ih - ih/zoom)/2'
     elif pattern == 'pan-right-to-left':
-        # Paneo horizontal de derecha a izquierda
-        z = '1.22'
+        # Paneo horizontal de derecha a izquierda (1.04)
+        z = '1.04'
         x = f'(iw - iw/zoom) * (1 - {t_norm})'
         y = '(ih - ih/zoom)/2'
     elif pattern == 'climax-zoom':
-        # Clímax gráfico: punch zoom acelerado y profundo hacia el epicentro de la acción (1.05 a 1.35)
-        z = f'1.05 + 0.30 * {t_norm}'
+        # Clímax gráfico: punch zoom controlado y cinemático (1.00 a 1.06)
+        z = f'1.00 + 0.06 * {t_norm}'
         x = '(iw - iw/zoom)/2'
         y = '(ih - ih/zoom)/2'
     else:
-        # zoom-in dinámico: empuje dramático hacia el centro de la acción (1.04 a 1.22)
-        z = f'1.04 + 0.18 * {t_norm}'
+        # zoom-in dinámico elegante: empuje suave hacia el centro de la acción (1.00 a 1.05)
+        z = f'1.00 + 0.05 * {t_norm}'
         x = '(iw - iw/zoom)/2'
         y = '(ih - ih/zoom)/2'
 
-    return z, x, y, 0.18, 0.0
+    return z, x, y, 0.05, 0.0
 
 
 def compose_scene_from_image(image_path: str, audio_path: str, duration: float, output: str, pattern_idx: int = 0, width: int = 1080, height: int = 1920, audio_codec: str = 'aac') -> str:
