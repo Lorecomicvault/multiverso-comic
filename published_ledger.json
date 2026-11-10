@@ -7347,5 +7347,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "53_spiderman_back_in_black_kingpin",
+    "title": "¡Spider-Man Humilló a Kingpin en la Cárcel! La Furia de Back in Black 🕷️⛓️🩸",
+    "description": "La legendaria obra maestra de J. Michael Straczynski y Ron Garney: Amazing Spider-Man #542. La paliza a Wilson Fisk en Ryker's.",
+    "hashtags": "#SpiderMan #Kingpin #BackInBlack #PeterParker #WilsonFisk #Marvel #MarvelComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/53_spiderman_back_in_black_kingpin/video.mp4",
+    "timestamp": "2026-11-10 10:04:10",
+    "social_links": {
+      "facebook": "1702429864552248",
+      "instagram": "https://www.instagram.com/reel/DfjpX2Wjrk4/",
+      "tiktok": "6af2ec07eea2cc573bb491c5",
+      "youtube": "6af2ec1601446117738cbfaa"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
