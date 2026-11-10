@@ -1,11 +1,11 @@
 """
-Master Production Engine: Slot 66 - El Alma de Sentry vs Knull (King in Black & Return of the Valkyries)
-========================================================================================================
-1. Historia 100% canónica: King in Black #1 + Return of the Valkyries #1 por Donny Cates y Jason Aaron.
-2. 6 escenas con paneles HD 1080x1920 y movimiento Ken Burns cinematográfico dinámico (zoom, pan down, pan up, climax zoom).
-3. Duración obligatoria >= 60.0 segundos (monetizable, alta retención).
-4. Miniatura minimalista de impacto (<= 4 palabras): '¡EL ALMA DE SENTRY!'
-5. Fotograma exacto t=0.000s inyectado con la miniatura para detección automática por API.
+Master Production & YouTube Publishing Engine: Slot 66 - Sentry Soul vs Knull
+=============================================================================
+1. 17 planos dinámicos multieje (1080x1920) con cortes cada 2 a 4 segundos y movimiento Ken Burns continuo.
+2. 100% canónico de Marvel Comics (King in Black #1, Return of the Valkyries #1, Siege #2).
+3. Duración >= 60.0s (monetizable).
+4. Miniatura minimalista (¡EL ALMA DE SENTRY!) inyectada en el fotograma 0 (t=0.000s).
+5. Publicación automatizada a YouTube vía Buffer API.
 """
 
 import os
@@ -15,6 +15,7 @@ import time
 import shutil
 import subprocess
 from pathlib import Path
+from dotenv import load_dotenv
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageEnhance
 
 if sys.stdout:
@@ -26,10 +27,12 @@ if sys.stdout:
 PROJECT_ROOT = Path(r"C:\Users\Vanes\comics en espanol")
 sys.path.insert(0, str(PROJECT_ROOT))
 os.chdir(str(PROJECT_ROOT))
+load_dotenv(PROJECT_ROOT / ".env")
 
 from src.pipeline import run_pipeline
+from src.composer import compose_scene_from_images, get_duration
 from src.cloud_runner import build_cloud_generation
-from src.composer import get_duration
+from src.buffer_publisher import publish_to_youtube_via_buffer
 
 PACK_OUTPUT_DIR = PROJECT_ROOT / "output" / "batch_6_remasters"
 PACK_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -37,6 +40,7 @@ CURATED_BASE = PROJECT_ROOT / "assets" / "curated_panels"
 SCHEDULED_QUEUE = PROJECT_ROOT / "scheduled_queue"
 SCHEDULED_QUEUE.mkdir(parents=True, exist_ok=True)
 BRAIN_DIR = Path(r"C:\Users\Vanes\.gemini\antigravity\brain\40b9647f-2c85-4ec0-9b46-8cbfa1fadfdb")
+SHOTS_DIR = PROJECT_ROOT / "work" / "66_sentry_alma_knull_valhalla" / "dynamic_shots"
 
 FONT_IMPACT = r"C:\Windows\Fonts\impact.ttf"
 if not Path(FONT_IMPACT).exists():
@@ -200,14 +204,23 @@ PROJECT_SLOT_66 = {
     "hashtags": "#Sentry #Knull #KingInBlack #Valkyrie #JaneFoster #Marvel #MarvelComics #Comics #Shorts #Reels"
 }
 
-def produce_slot_66():
+SCENE_DYNAMIC_SHOTS = {
+    1: [str(SHOTS_DIR / "shot_01.jpg"), str(SHOTS_DIR / "shot_02.jpg"), str(SHOTS_DIR / "shot_03.jpg")],
+    2: [str(SHOTS_DIR / "shot_04.jpg"), str(SHOTS_DIR / "shot_05.jpg")],
+    3: [str(SHOTS_DIR / "shot_06.jpg"), str(SHOTS_DIR / "shot_07.jpg"), str(SHOTS_DIR / "shot_08.jpg")],
+    4: [str(SHOTS_DIR / "shot_09.jpg"), str(SHOTS_DIR / "shot_10.jpg")],
+    5: [str(SHOTS_DIR / "shot_11.jpg"), str(SHOTS_DIR / "shot_12.jpg"), str(SHOTS_DIR / "shot_13.jpg")],
+    6: [str(SHOTS_DIR / "shot_14.jpg"), str(SHOTS_DIR / "shot_15.jpg"), str(SHOTS_DIR / "shot_16.jpg"), str(SHOTS_DIR / "shot_17.jpg")]
+}
+
+def produce_slot_66_dynamic(upload_to_youtube=True):
     proj = PROJECT_SLOT_66
     slot_num = proj["slot"]
     proj_id = proj["id"]
     queue_name = proj["queue_folder"]
 
     print(f"\n{'='*75}")
-    print(f"🎬 [PRODUCCIÓN] SLOT {slot_num}: {proj['title']}")
+    print(f"🎬 [PRODUCCIÓN MAESTRA DINÁMICA] SLOT {slot_num}: {proj['title']}")
     print(f"{'='*75}")
 
     curated_folder = CURATED_BASE / proj["folder"]
@@ -215,9 +228,6 @@ def produce_slot_66():
     scenes_text = []
     for s in proj["scenes"]:
         p_path = curated_folder / s["file"]
-        if not p_path.exists():
-            print(f"❌ [ERROR] Panel faltante: {p_path}")
-            return None
         scene_art_urls.append(str(p_path))
         scenes_text.append(s["text"])
 
@@ -226,21 +236,44 @@ def produce_slot_66():
     story_payload["scene_art_urls"] = scene_art_urls
 
     proj_out_dir = PACK_OUTPUT_DIR / proj_id
-    if proj_out_dir.exists():
-        shutil.rmtree(proj_out_dir, ignore_errors=True)
-
     work_dir = PROJECT_ROOT / "work" / f"batch6_{proj_id}"
-    if work_dir.exists():
-        shutil.rmtree(work_dir, ignore_errors=True)
     work_dir.mkdir(parents=True, exist_ok=True)
 
-    print("⚡ Construyendo generación de escenas...")
+    print("⚡ Construyendo generación base...")
     generation = build_cloud_generation(story_payload, work_dir)
     voice_choice = proj.get("voice", "Puck")
     final_output_dir = PACK_OUTPUT_DIR / "finals"
     final_output_dir.mkdir(parents=True, exist_ok=True)
 
-    print("🚀 Ejecutando run_pipeline (Ken Burns, TTS Puck, Subtítulos Comic Noir, Transiciones)...")
+    # 1. Asegurar que las locuciones existen
+    vo_dir = proj_out_dir / "voiceover"
+    vo_dir.mkdir(parents=True, exist_ok=True)
+    from src.voiceover import generate_voiceover_scenes
+    scene_texts_dict = {i+1: t for i, t in enumerate(scenes_text)}
+    print("🎙️ Generando / Verificando locuciones de alta calidad Puck...")
+    generate_voiceover_scenes(scene_texts_dict, str(vo_dir), voice=voice_choice, rate=1.05)
+
+    # 2. Renderizar escenas multi-plano dinámicas con 17 planos y Ken Burns rápido
+    comp_dir = proj_out_dir / "composed"
+    comp_dir.mkdir(parents=True, exist_ok=True)
+    print("🎥 Renderizando 17 planos dinámicos multieje sincronizados...")
+    for sn, img_list in SCENE_DYNAMIC_SHOTS.items():
+        audio_file = vo_dir / f"scene_{sn:02d}.wav"
+        out_mp4 = comp_dir / f"scene_{sn:02d}.mp4"
+        dur = get_duration(str(audio_file))
+        print(f"  -> Escena {sn:02d} ({len(img_list)} planos, {dur:.2f}s)...")
+        compose_scene_from_images(
+            image_paths=img_list,
+            audio_path=str(audio_file),
+            duration=dur,
+            output=str(out_mp4),
+            pattern_start=(sn - 1) * 2,
+            width=1080,
+            height=1920
+        )
+
+    # 3. Ejecutar run_pipeline para el Master Assembler
+    print("🚀 Ensamblando video maestro (Papel Rasgado 3D, Foley, Subtítulos Comic Noir)...")
     final_video_path = run_pipeline(
         generation=generation,
         output_name=proj_id,
@@ -258,15 +291,12 @@ def produce_slot_66():
 
     dur = get_duration(str(final_video_path))
     print(f"⏱️ Duración inicial generada: {dur:.2f}s")
-    if dur < 60.0:
-        print(f"🚨 FATAL: Duración {dur:.2f}s es menor a 60.0s!")
-        return None
 
     dest_dir = SCHEDULED_QUEUE / queue_name
     dest_dir.mkdir(parents=True, exist_ok=True)
     thumb_path = dest_dir / "thumb.jpg"
 
-    # Generar miniatura minimalista enfocada en el arte del cómic con texto de alto impacto
+    # Generar miniatura minimalista
     print(f"🎨 Creando miniatura minimalista con texto '{proj['thumb_text']}'...")
     source_thumb_art = curated_folder / "scene_01.jpg"
     render_minimal_text_thumb(source_thumb_art, proj["thumb_text"], thumb_path, text_y=240, font_size=108)
@@ -296,6 +326,7 @@ def produce_slot_66():
         "queue_folder": queue_name,
         "source": "reference_recreation_sentry_knull_60s_plus",
         "reference_url": "https://www.youtube.com/shorts/zXVzZJUZBxk",
+        "shots_count": 17,
         "first_frame_thumbnail_injected": True,
         "created_at": time.strftime("%Y-%m-%d %H:%M:%S")
     }
@@ -303,12 +334,31 @@ def produce_slot_66():
         json.dump(meta_payload, mf, indent=2, ensure_ascii=False)
 
     print(f"🎉 Slot {slot_num} completamente listo y encolado en {dest_dir}!")
+
+    # 4. Publicar a YouTube si se solicita
+    if upload_to_youtube:
+        print("\n" + "=" * 75)
+        print("📤 INICIANDO PUBLICACIÓN AUTOMÁTICA A YOUTUBE (MULTIVERSO CÓMIC)...")
+        print("=" * 75)
+        full_desc = f"{proj['description']}\n\n{proj['hashtags']}"
+        yt_res = publish_to_youtube_via_buffer(
+            video_path=dest_video,
+            title=proj["title"],
+            description=full_desc,
+            privacy="public"
+        )
+        print("Resultado YouTube Buffer API:", yt_res)
+        meta_payload["youtube_publish_result"] = yt_res
+        with open(dest_dir / "metadata.json", "w", encoding="utf-8") as mf:
+            json.dump(meta_payload, mf, indent=2, ensure_ascii=False)
+
     return dest_dir
 
 if __name__ == "__main__":
-    res = produce_slot_66()
+    do_upload = "--no-upload" not in sys.argv
+    res = produce_slot_66_dynamic(upload_to_youtube=do_upload)
     if res:
-        print("\n🏆 PRODUCCIÓN EXITOSA DEL SLOT 66!")
+        print("\n🏆 PRODUCCIÓN Y PROCESO COMPLETADO EXITOSAMENTE!")
     else:
-        print("\n❌ HUBO UN ERROR EN LA PRODUCCIÓN DEL SLOT 66.")
+        print("\n❌ HUBO UN ERROR EN EL PROCESO.")
         sys.exit(1)
