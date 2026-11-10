@@ -7379,5 +7379,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "55_batman_que_rie_dark_multiverse",
+    "title": "¡El Origen del Batman Que Ríe! La Noche que Bruce Wayne Rompió su Código 🃏🦇🩸",
+    "description": "El origen definitivo creado por James Tynion IV y Riley Rossmo: Dark Nights: The Batman Who Laughs #1. El fin de Bruce Wayne.",
+    "hashtags": "#TheBatmanWhoLaughs #Batman #Joker #DarkMultiverse #DCComics #BatmanQueRie #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/55_batman_que_rie_dark_multiverse/video.mp4",
+    "timestamp": "2026-11-10 18:06:26",
+    "social_links": {
+      "facebook": "3451130448392427",
+      "instagram": "https://www.instagram.com/reel/DfkgkBlApmS/",
+      "tiktok": "6af35d0ceca53e2861f8c883",
+      "youtube": "6af35d1e341cea4af6273bd6"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
