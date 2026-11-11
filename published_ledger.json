@@ -7443,5 +7443,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "54_sentry_descuartiza_ares_siege",
+    "title": "¡Sentry Descuartizó a Ares con sus Propias Manos! La Muerte Más Brutal de Marvel ⚡🪓🩸",
+    "description": "El brutal clímax de Brian Michael Bendis y Olivier Coipel: Siege #2. Sentry descuartiza a Ares, Dios de la Guerra.",
+    "hashtags": "#Sentry #Ares #Siege #TheVoid #NormanOsborn #Avengers #Marvel #MarvelComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/54_sentry_descuartiza_ares_siege/video.mp4",
+    "timestamp": "2026-11-11 10:05:25",
+    "social_links": {
+      "facebook": "1804947137380524",
+      "instagram": "https://www.instagram.com/reel/DfmOUnWic5n/",
+      "tiktok": "6af43dd32e62829420e148c8",
+      "youtube": "6af43de227d84871c7ebad57"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
