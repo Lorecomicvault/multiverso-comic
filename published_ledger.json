@@ -7651,5 +7651,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "iron_man_mysterium_gran_robo",
+    "title": "¡El Metal Mutante Indestructible! El Gran Robo de Tony Stark y Emma Frost 🤖💎",
+    "description": "La audaz infiltración de Tony Stark y Emma Frost en Invincible Iron Man #10. El robo del Mysterium para forjar la Mark 72.",
+    "hashtags": "#IronMan #EmmaFrost #Mysterium #XMen #FallOfX #MarvelComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/67_iron_man_mysterium_gran_robo/video.mp4",
+    "timestamp": "2026-11-13 18:05:10",
+    "social_links": {
+      "facebook": "2097003320940654",
+      "instagram": "https://www.instagram.com/reel/DfsO0G4jS8g/",
+      "tiktok": "6af751431047b6144cb90abe",
+      "youtube": "6af751525bbd7cc6dbc5c795"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
