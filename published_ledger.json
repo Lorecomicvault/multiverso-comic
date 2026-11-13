@@ -7667,5 +7667,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "thor_gorr_carnicero_dioses",
+    "title": "¡Gorr el Carnicero de Dioses! El Mortal que Juró Asesinar a Todas las Deidades ⚔️⚡🩸",
+    "description": "La épica saga de Jason Aaron y Esad Ribic en Thor: God of Thunder #1-11. Gorr el Carnicero de Dioses y la Necroespada.",
+    "hashtags": "#Thor #Gorr #GodButcher #AllBlackNecrosword #Marvel #MarvelComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/68_thor_gorr_carnicero_dioses/video.mp4",
+    "timestamp": "2026-11-13 22:04:52",
+    "social_links": {
+      "facebook": "4155341857933748",
+      "instagram": "https://www.instagram.com/reel/DfsqQQ4Dhk6/",
+      "tiktok": "6af789739257ce339813abdd",
+      "youtube": "6af7898181e1228421c8a953"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
