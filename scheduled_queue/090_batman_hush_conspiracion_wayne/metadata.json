@@ -6,9 +6,11 @@
   "character": "Batman & Hush (Thomas Elliot)",
   "description": "La conspiración definitiva en Batman: Hush (Batman #608-619) de Jeph Loeb y Jim Lee. El complot de Thomas Elliot.",
   "hashtags": "#Batman #Hush #ThomasElliot #DCComics #BatmanHush #Gotham #Comics #Shorts #Reels",
-  "duration": 28.25,
+  "duration": 28.8,
   "video_file": "video.mp4",
   "thumbnail_file": "thumb.jpg",
   "format": "viral_25_30s",
-  "produced_at": "2026-11-13 21:09:34"
+  "produced_at": "2026-11-14 13:20:18",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA"
 }

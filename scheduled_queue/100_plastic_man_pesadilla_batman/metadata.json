@@ -6,9 +6,11 @@
   "character": "Plastic Man",
   "description": "La revelación de Mark Waid y Howard Porter en JLA: Tower of Babel. El poder ilimitado e inmortal de Plastic Man.",
   "hashtags": "#PlasticMan #Batman #JusticeLeague #TowerOfBabel #DCComics #JLA #Comics #Shorts #Reels",
-  "duration": 27.7,
+  "duration": 27.5,
   "video_file": "video.mp4",
   "thumbnail_file": "thumb.jpg",
   "format": "viral_25_30s",
-  "produced_at": "2026-11-14 00:14:31"
+  "produced_at": "2026-11-14 13:59:55",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA"
 }

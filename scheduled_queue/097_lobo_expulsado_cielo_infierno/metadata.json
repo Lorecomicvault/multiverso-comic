@@ -6,9 +6,11 @@
   "character": "Lobo",
   "description": "La legendaria mitología de Alan Grant, Keith Giffen y Simon Bisley en The Last Czarnian y Lobo's Back. La inmortalidad eterna de Lobo.",
   "hashtags": "#Lobo #TheMainMan #Czarnia #SimonBisley #DCComics #Inmortal #Comics #Shorts #Reels",
-  "duration": 28.493991,
+  "duration": 28.5,
   "video_file": "video.mp4",
   "thumbnail_file": "thumb.jpg",
   "format": "viral_25_30s",
-  "produced_at": "2026-11-14 00:10:40"
+  "produced_at": "2026-11-14 13:51:18",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA"
 }

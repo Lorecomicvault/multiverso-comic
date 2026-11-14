@@ -6,9 +6,11 @@
   "character": "Venom",
   "description": "La apoteósica batalla final en King in Black #5 de Donny Cates y Ryan Stegman. Venom Dios de la Luz aniquila a Knull.",
   "hashtags": "#Venom #KingInBlack #EddieBrock #Knull #Marvel #MarvelComics #Symbiote #Comics #Shorts #Reels",
-  "duration": 26.9,
+  "duration": 26.8,
   "video_file": "video.mp4",
   "thumbnail_file": "thumb.jpg",
   "format": "viral_25_30s",
-  "produced_at": "2026-11-14 00:15:55"
+  "produced_at": "2026-11-14 14:02:47",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA"
 }

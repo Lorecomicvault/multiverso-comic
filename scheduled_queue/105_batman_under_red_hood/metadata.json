@@ -6,9 +6,11 @@
   "character": "Red Hood",
   "description": "El doloroso desenlace de Judd Winick y Doug Mahnke en Batman: Under the Red Hood. El ultimátum de Jason Todd.",
   "hashtags": "#RedHood #JasonTodd #Batman #Joker #UnderTheRedHood #DCComics #Gotham #Comics #Shorts #Reels",
-  "duration": 27.4,
+  "duration": 27.9,
   "video_file": "video.mp4",
   "thumbnail_file": "thumb.jpg",
   "format": "viral_25_30s",
-  "produced_at": "2026-11-14 00:24:55"
+  "produced_at": "2026-11-14 14:14:53",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA"
 }
