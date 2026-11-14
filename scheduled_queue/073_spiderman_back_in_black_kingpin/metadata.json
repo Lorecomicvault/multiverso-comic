@@ -6,9 +6,11 @@
   "character": "Spider-Man",
   "description": "La legendaria obra maestra de J. Michael Straczynski y Ron Garney en Amazing Spider-Man #542. La paliza a Wilson Fisk en Ryker's.",
   "hashtags": "#SpiderMan #Kingpin #BackInBlack #PeterParker #WilsonFisk #Marvel #MarvelComics #Comics #Shorts #Reels",
-  "duration": 25.759002,
+  "duration": 24.6,
   "video_file": "video.mp4",
   "thumbnail_file": "thumb.jpg",
   "format": "viral_top10_25_30s",
-  "produced_at": "2026-11-13 22:32:23"
+  "produced_at": "2026-11-14 10:47:57",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA"
 }

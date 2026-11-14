@@ -6,9 +6,11 @@
   "character": "Doctor Doom",
   "description": "La escena más aplastante de Jonathan Hickman y Esad Ribic en Secret Wars #8. God Emperor Doom arranca la columna vertebral de Thanos.",
   "hashtags": "#DoctorDoom #Thanos #GodEmperorDoom #SecretWars #Marvel #MarvelComics #Comics #Shorts #Reels",
-  "duration": 26.8,
+  "duration": 25.95,
   "video_file": "video.mp4",
   "thumbnail_file": "thumb.jpg",
   "format": "viral_top10_25_30s",
-  "produced_at": "2026-11-13 22:42:34"
+  "produced_at": "2026-11-14 11:05:09",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA"
 }

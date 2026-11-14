@@ -6,9 +6,11 @@
   "character": "The Batman Who Laughs",
   "description": "El origen definitivo creado por James Tynion IV y Riley Rossmo en Dark Nights: The Batman Who Laughs #1.",
   "hashtags": "#TheBatmanWhoLaughs #Batman #Joker #DarkMultiverse #DCComics #BatmanQueRie #Comics #Shorts #Reels",
-  "duration": 27.5,
+  "duration": 27.1,
   "video_file": "video.mp4",
   "thumbnail_file": "thumb.jpg",
   "format": "viral_top10_25_30s",
-  "produced_at": "2026-11-13 22:35:01"
+  "produced_at": "2026-11-14 10:55:15",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA"
 }

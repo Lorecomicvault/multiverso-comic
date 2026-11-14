@@ -6,9 +6,11 @@
   "character": "Alfred Pennyworth",
   "description": "El momento legendario de Tom Taylor y Bruno Redondo en Injustice: Gods Among Us #36. Alfred Pennyworth destroza a Superman.",
   "hashtags": "#AlfredPennyworth #Superman #Batman #Injustice #DCComics #InjusticeGodsAmongUs #Comics #Shorts #Reels",
-  "duration": 26.6,
+  "duration": 25.26,
   "video_file": "video.mp4",
   "thumbnail_file": "thumb.jpg",
   "format": "viral_top10_25_30s",
-  "produced_at": "2026-11-13 22:37:42"
+  "produced_at": "2026-11-14 10:58:20",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA"
 }

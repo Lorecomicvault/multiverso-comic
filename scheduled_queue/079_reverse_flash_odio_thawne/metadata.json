@@ -10,5 +10,7 @@
   "video_file": "video.mp4",
   "thumbnail_file": "thumb.jpg",
   "format": "viral_top10_25_30s",
-  "produced_at": "2026-11-13 22:45:07"
+  "produced_at": "2026-11-14 11:08:27",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA"
 }
