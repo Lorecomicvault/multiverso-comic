@@ -6,9 +6,11 @@
   "character": "The Immortal Hulk",
   "description": "El escalofriante clímax de The Immortal Hulk #8 de Al Ewing y Joe Bennett. Hulk descuartizado en frascos.",
   "hashtags": "#Hulk #ImmortalHulk #Marvel #MarvelComics #Comics #Shorts #Reels",
-  "duration": 28.6,
+  "duration": 28.9,
   "video_file": "video.mp4",
   "thumbnail_file": "thumb.jpg",
   "format": "viral_25_30s",
-  "produced_at": "2026-11-13 20:47:17"
+  "produced_at": "2026-11-14 11:43:08",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA"
 }

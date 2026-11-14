@@ -21,49 +21,88 @@ FONT_IMPACT = r"C:\Windows\Fonts\impact.ttf"
 if not Path(FONT_IMPACT).exists():
     FONT_IMPACT = r"C:\Users\Vanes\comics en espanol\fonts\impact.ttf"
 
+def restart_voicebox_cuda():
+    print("  [Auto-Heal] Reiniciando Voicebox CUDA backend para limpiar VRAM...")
+    subprocess.run(["powershell", "-Command", "Stop-Process -Name voicebox-server-cuda -Force -ErrorAction SilentlyContinue"], capture_output=True)
+    time.sleep(2)
+    exe_path = r"C:\Users\Vanes\AppData\Roaming\sh.voicebox.app\backends\cuda\voicebox-server-cuda.exe"
+    work_dir = r"C:\Users\Vanes\AppData\Roaming\sh.voicebox.app\backends\cuda"
+    subprocess.Popen([exe_path], cwd=work_dir, creationflags=subprocess.DETACHED_PROCESS if os.name == 'nt' else 0)
+    for i in range(20):
+        time.sleep(1.0)
+        try:
+            r = requests.get(f"{VOICEBOX_URL}/profiles", timeout=2)
+            if r.status_code == 200:
+                print(f"  [Auto-Heal] Voicebox CUDA listo y operativo ({i+1}s).")
+                return True
+        except Exception:
+            pass
+    print("  [Auto-Heal Warning] No se pudo verificar respuesta inmediata.")
+    return False
+
 def synthesize_voicebox_scene(text: str, out_wav: Path) -> Path:
     out_wav.parent.mkdir(parents=True, exist_ok=True)
     payload = {'profile_id': PROFILE_ID, 'text': text}
     
-    gen_id = None
-    for attempt in range(1, 4):
-        try:
-            res = requests.post(f"{VOICEBOX_URL}/generate", json=payload, timeout=20)
-            if res.status_code == 200:
-                gen_id = res.json().get('id')
-                break
-        except Exception:
-            time.sleep(2)
-            
-    if not gen_id:
-        raise RuntimeError(f"No se pudo iniciar generación en Voicebox para: {text[:30]}")
+    for outer_retry in range(1, 4):
+        gen_id = None
+        for attempt in range(1, 4):
+            try:
+                res = requests.post(f"{VOICEBOX_URL}/generate", json=payload, timeout=20)
+                if res.status_code == 200:
+                    gen_id = res.json().get('id')
+                    break
+            except Exception:
+                time.sleep(2)
+                
+        if not gen_id:
+            print("  [Voicebox] No se pudo conectar al endpoint, intentando reiniciar CUDA...")
+            restart_voicebox_cuda()
+            continue
 
-    for _ in range(80):
-        time.sleep(1.0)
-        try:
-            st = requests.get(f"{VOICEBOX_URL}/generate/{gen_id}/status", timeout=10)
-            for line in st.text.splitlines():
-                if line.startswith('data:'):
-                    j = json.loads(line[5:].strip())
-                    status = j.get('status')
-                    if status == 'completed':
-                        audio_res = requests.get(f"{VOICEBOX_URL}/audio/{gen_id}", timeout=25)
-                        raw_tmp = str(out_wav) + '.raw.wav'
-                        with open(raw_tmp, 'wb') as f:
-                            f.write(audio_res.content)
-                        subprocess.run([
-                            'ffmpeg', '-y', '-i', raw_tmp,
-                            '-af', 'aresample=48000,apad=pad_dur=0.25',
-                            '-acodec', 'pcm_s16le', str(out_wav)
-                        ], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                        if Path(raw_tmp).exists():
-                            Path(raw_tmp).unlink()
-                        return out_wav
-                    elif status == 'failed':
-                        raise RuntimeError(f"Voicebox falló: {j.get('error')}")
-        except Exception as e:
-            if "Voicebox falló" in str(e):
-                raise e
+        oom_detected = False
+        for _ in range(80):
+            time.sleep(1.0)
+            try:
+                st = requests.get(f"{VOICEBOX_URL}/generate/{gen_id}/status", timeout=10)
+                for line in st.text.splitlines():
+                    if line.startswith('data:'):
+                        j = json.loads(line[5:].strip())
+                        status = j.get('status')
+                        if status == 'completed':
+                            audio_res = requests.get(f"{VOICEBOX_URL}/audio/{gen_id}", timeout=25)
+                            raw_tmp = str(out_wav) + '.raw.wav'
+                            with open(raw_tmp, 'wb') as f:
+                                f.write(audio_res.content)
+                            subprocess.run([
+                                'ffmpeg', '-y', '-i', raw_tmp,
+                                '-af', 'aresample=48000,apad=pad_dur=0.25',
+                                '-acodec', 'pcm_s16le', str(out_wav)
+                            ], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                            if Path(raw_tmp).exists():
+                                Path(raw_tmp).unlink()
+                            return out_wav
+                        elif status == 'failed':
+                            err = j.get('error', '')
+                            if 'CUDA' in err or 'memory' in err.lower():
+                                print(f"  [Voicebox OOM detectado]: {err}")
+                                restart_voicebox_cuda()
+                                oom_detected = True
+                                break
+                            else:
+                                raise RuntimeError(f"Voicebox falló: {err}")
+            except Exception as e:
+                if "CUDA" in str(e) or "memory" in str(e).lower():
+                    restart_voicebox_cuda()
+                    oom_detected = True
+                    break
+                elif "Voicebox falló" in str(e):
+                    raise e
+            if oom_detected:
+                break
+        if not oom_detected and gen_id:
+            break
+            
     raise TimeoutError(f"Voicebox timeout para: {text[:30]}")
 
 def apply_cinematic_grade(im: Image.Image) -> Image.Image:

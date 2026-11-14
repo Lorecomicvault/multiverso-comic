@@ -6,9 +6,11 @@
   "character": "Hal Jordan / Parallax",
   "description": "La mítica saga Emerald Twilight (Green Lantern #48-50) de Ron Marz. El nacimiento de Parallax.",
   "hashtags": "#GreenLantern #HalJordan #Parallax #DCComics #EmeraldTwilight #Comics #Shorts #Reels",
-  "duration": 26.0,
+  "duration": 28.8,
   "video_file": "video.mp4",
   "thumbnail_file": "thumb.jpg",
   "format": "viral_25_30s",
-  "produced_at": "2026-11-13 20:44:58"
+  "produced_at": "2026-11-14 11:28:18",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA"
 }

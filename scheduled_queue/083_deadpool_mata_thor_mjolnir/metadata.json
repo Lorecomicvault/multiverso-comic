@@ -6,9 +6,11 @@
   "character": "Deadpool & Thor",
   "description": "Deadpool Kills the Marvel Universe #4 por Cullen Bunn y Dalibor Talajic. La muerte de Thor.",
   "hashtags": "#Deadpool #Thor #Mjolnir #Marvel #MarvelComics #Comics #Shorts #Reels",
-  "duration": 29.3,
+  "duration": 28.8,
   "video_file": "video.mp4",
   "thumbnail_file": "thumb.jpg",
   "format": "viral_25_30s",
-  "produced_at": "2026-11-13 19:52:10"
+  "produced_at": "2026-11-14 11:31:48",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA"
 }

@@ -6,9 +6,11 @@
   "character": "Deathstroke",
   "description": "La inolvidable pelea en Identity Crisis #3 de Brad Meltzer y Rags Morales. Slade Wilson humilla a la Liga de la Justicia.",
   "hashtags": "#Deathstroke #JusticeLeague #Flash #GreenLantern #DCComics #Comics #Shorts #Reels",
-  "duration": 27.865011,
+  "duration": 28.8,
   "video_file": "video.mp4",
   "thumbnail_file": "thumb.jpg",
   "format": "viral_25_30s",
-  "produced_at": "2026-11-13 19:37:29"
+  "produced_at": "2026-11-14 11:21:14",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA"
 }
