@@ -1,13 +1,14 @@
 {
   "slot": 76,
   "queue_folder": "76_magneto_ultimatum_tsunami_manhattan",
-  "id": "magneto_ultimatum_tsunami_manhattan",
+  "id": "magneto_ultimatum_tsunami_manhattan_25s",
   "title": "Magneto: El Día que Ahogó al Mundo en Ultimatum 🌊💀🗽",
   "character": "Magneto",
-  "description": "El evento cataclísmico de Jeph Loeb y David Finch en Ultimatum #1. Magneto inunda Manhattan con una ola titánica.",
-  "hashtags": "#Magneto #Ultimatum #UltimateMarvel #SpiderMan #XMen #Avengers #Comics #Shorts #Reels",
-  "duration": 67.7,
+  "description": "El cataclismo de Jeph Loeb y David Finch en Ultimatum #1. Magneto ahoga la ciudad de Nueva York.",
+  "hashtags": "#Magneto #Ultimatum #XMen #Avengers #Marvel #MarvelComics #Comics #Shorts #Reels",
+  "duration": 29.1,
   "video_file": "video.mp4",
   "thumbnail_file": "thumb.jpg",
-  "produced_at": "2026-11-10 16:41:27"
+  "format": "viral_25_30s",
+  "produced_at": "2026-11-13 20:53:13"
 }

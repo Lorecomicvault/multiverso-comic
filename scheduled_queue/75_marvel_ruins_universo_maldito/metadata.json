@@ -1,13 +1,14 @@
 {
   "slot": 75,
   "queue_folder": "75_marvel_ruins_universo_maldito",
-  "id": "marvel_ruins_universo_maldito",
+  "id": "marvel_ruins_universo_maldito_25s",
   "title": "Marvel Ruins: El Universo Donde Todo lo que Podía Salir Mal, Salió Mal ☣️💀🌑",
   "character": "Marvel Ruins",
-  "description": "La desgarradora pesadilla distópica de Warren Ellis en Marvel Ruins #1-2. El universo donde ningún héroe triunfó.",
-  "hashtags": "#MarvelRuins #Ruins #WarrenEllis #SpiderMan #Hulk #Marvel #MarvelComics #Comics #Shorts #Reels",
-  "duration": 71.561995,
+  "description": "La retorcida distopía Marvel Ruins #1-2 de Warren Ellis. Todo lo que podía salir mal, salió mal.",
+  "hashtags": "#MarvelRuins #SpiderMan #Hulk #Marvel #MarvelComics #Comics #Shorts #Reels",
+  "duration": 28.1,
   "video_file": "video.mp4",
   "thumbnail_file": "thumb.jpg",
-  "produced_at": "2026-11-10 16:38:56"
+  "format": "viral_25_30s",
+  "produced_at": "2026-11-13 20:50:00"
 }
