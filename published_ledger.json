@@ -7811,5 +7811,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "sentry_descuartiza_ares_siege_top10_25s",
+    "title": "¡La Muerte Más Censurada de Marvel! Sentry Descuartiza a Ares en Dos Mitades ⚡🩸🪓",
+    "description": "El brutal clímax de Brian Michael Bendis y Olivier Coipel en Siege #2. Sentry descuartiza a Ares, Dios de la Guerra.",
+    "hashtags": "#Sentry #Ares #Siege #TheVoid #Avengers #Marvel #MarvelComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/074_sentry_descuartiza_ares_siege/video.mp4",
+    "timestamp": "2026-11-15 10:04:20",
+    "social_links": {
+      "facebook": "40273918372222059",
+      "instagram": "https://www.instagram.com/reel/DfwhaiAgBNb/",
+      "tiktok": "6af98392c5b364e06249a58f",
+      "youtube": "6af983a1b9a106584c9e4d12"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
