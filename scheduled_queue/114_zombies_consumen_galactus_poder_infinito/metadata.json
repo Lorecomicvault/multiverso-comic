@@ -1,0 +1,16 @@
+{
+  "slot": 114,
+  "queue_folder": "114_zombies_consumen_galactus_poder_infinito",
+  "id": "114_zombies_consumen_galactus_poder_infinito",
+  "title": "Marvel Zombies: ¡El Festín que Devoró a Galactus! 🧟‍♂️🌌",
+  "character": "Marvel Zombies",
+  "description": "Los Vengadores Zombis despedazan y consumen vivo al devorador de mundos Galactus para apoderarse del poder cósmico.",
+  "hashtags": "#MarvelZombies #Galactus #SpiderMan #Hulk #MarvelComics #Comics #Shorts #Reels #TikTok",
+  "duration": 28.5,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "viral_25_30s",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA",
+  "produced_at": "2026-11-14 21:12:31"
+}
