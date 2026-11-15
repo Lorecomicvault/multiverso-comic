@@ -7779,5 +7779,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "hellboy_mano_derecha_apocalipsis_top10_25s",
+    "title": "¡El Secreto de la Mano de Hellboy! La Llave del Fin del Mundo 🗝️🔥💀",
+    "description": "La mitología original creada por Mike Mignola en Dark Horse Comics: Hellboy y el enigma profético de la Mano Derecha del Destino.",
+    "hashtags": "#Hellboy #DarkHorse #AnungUnRama #RightHandOfDoom #MikeMignola #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/072_hellboy_mano_derecha_apocalipsis/video.mp4",
+    "timestamp": "2026-11-15 01:03:26",
+    "social_links": {
+      "facebook": "985307724164185",
+      "instagram": "https://www.instagram.com/reel/Dfvjgx3AVje/",
+      "tiktok": "6af904ce76c23bf1c74e58fb",
+      "youtube": "6af904dce5a113497abaa495"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
