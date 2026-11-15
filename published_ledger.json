@@ -7827,5 +7827,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "batman_que_rie_dark_multiverse_top10_25s",
+    "title": "¡El Batman Que Ríe! La Fusión Más Siniestra entre Bruce Wayne y el Joker 🃏🦇🩸",
+    "description": "El origen definitivo creado por James Tynion IV y Riley Rossmo en Dark Nights: The Batman Who Laughs #1.",
+    "hashtags": "#TheBatmanWhoLaughs #Batman #Joker #DarkMultiverse #DCComics #BatmanQueRie #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/075_batman_que_rie_dark_multiverse/video.mp4",
+    "timestamp": "2026-11-15 14:04:05",
+    "social_links": {
+      "facebook": "1165106206132318",
+      "instagram": "https://www.instagram.com/reel/Dfw8260AP3l/",
+      "tiktok": "6af9bbc5918fe79d2ee9203c",
+      "youtube": "6af9bbd3b9a106584cb170b5"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
