@@ -8003,5 +8003,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "magneto_ultimatum_tsunami_manhattan_25s",
+    "title": "Magneto: El Día que Ahogó al Mundo en Ultimatum 🌊💀🗽",
+    "description": "El cataclismo de Jeph Loeb y David Finch en Ultimatum #1. Magneto ahoga la ciudad de Nueva York.",
+    "hashtags": "#Magneto #Ultimatum #XMen #Avengers #Marvel #MarvelComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/086_magneto_ultimatum_tsunami_manhattan/video.mp4",
+    "timestamp": "2026-11-16 21:05:08",
+    "social_links": {
+      "facebook": "1821348239015815",
+      "instagram": "https://www.instagram.com/reel/Df0R0X4CTiY/",
+      "tiktok": "6afb6fecf8739e57039b4693",
+      "youtube": "6afb7000424f9447814bab2b"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
