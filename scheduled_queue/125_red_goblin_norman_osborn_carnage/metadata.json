@@ -1,0 +1,16 @@
+{
+  "slot": 125,
+  "queue_folder": "125_red_goblin_norman_osborn_carnage",
+  "id": "125_red_goblin_norman_osborn_carnage",
+  "title": "Red Goblin: ¡La Fusión Monstruosa de Osborn y Carnage! 👺🩸",
+  "character": "Red Goblin",
+  "description": "La pesadilla viva de Peter Parker: Norman Osborn se fusiona con Carnage para forjar al Red Goblin.",
+  "hashtags": "#RedGoblin #SpiderMan #Carnage #GreenGoblin #MarvelComics #Comics #Shorts #Reels #TikTok",
+  "duration": 25.4,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "viral_25_30s",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA",
+  "produced_at": "2026-11-16 02:48:30"
+}
