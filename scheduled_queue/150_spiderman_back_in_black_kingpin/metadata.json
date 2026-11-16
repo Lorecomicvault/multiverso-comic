@@ -1,0 +1,16 @@
+{
+  "slot": 150,
+  "queue_folder": "150_spiderman_back_in_black_kingpin",
+  "id": "150_spiderman_back_in_black_kingpin",
+  "title": "Spider-Man: ¡Back in Black y la Humillación de Kingpin! 🕷️🖤",
+  "character": "Spider-Man",
+  "description": "Peter Parker en Back in Black dando una lección implacable a Kingpin en la cárcel.",
+  "hashtags": "#SpiderMan #BackInBlack #Kingpin #PeterParker #MarvelComics #Comics #Shorts #Reels #TikTok",
+  "duration": 26.56,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "viral_25_30s",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA",
+  "produced_at": "2026-11-16 10:32:48"
+}
