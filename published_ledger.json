@@ -7939,5 +7939,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "green_lantern_parallax_crepusculo_25s",
+    "title": "¡El Mayor Linterna Verde se Volvió Villano! La Caída de Hal Jordan y Parallax 🟢💀⚡",
+    "description": "La mítica saga Emerald Twilight (Green Lantern #48-50) de Ron Marz. El nacimiento de Parallax.",
+    "hashtags": "#GreenLantern #HalJordan #Parallax #DCComics #EmeraldTwilight #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/082_green_lantern_parallax_crepusculo/video.mp4",
+    "timestamp": "2026-11-16 13:04:41",
+    "social_links": {
+      "facebook": "1891533632071982",
+      "instagram": "https://www.instagram.com/reel/Dfza1rBD-yX/",
+      "tiktok": "6afaff5115603179b13ba913",
+      "youtube": "6afaff5fff033fc79b98b479"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
