@@ -7987,5 +7987,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "marvel_ruins_universo_maldito_25s",
+    "title": "Marvel Ruins: El Universo Donde Todo lo que Podía Salir Mal, Salió Mal ☣️💀🌑",
+    "description": "La retorcida distopía Marvel Ruins #1-2 de Warren Ellis. Todo lo que podía salir mal, salió mal.",
+    "hashtags": "#MarvelRuins #SpiderMan #Hulk #Marvel #MarvelComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/085_marvel_ruins_universo_maldito/video.mp4",
+    "timestamp": "2026-11-16 19:07:17",
+    "social_links": {
+      "facebook": "29128507420147732",
+      "instagram": "https://www.instagram.com/reel/Df0EGiGEX6G/",
+      "tiktok": null,
+      "youtube": "6afb5461f85f9c853dacaf52"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
