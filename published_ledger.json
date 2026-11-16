@@ -7907,5 +7907,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "deathstroke_identity_crisis_liga_25s",
+    "title": "¡Un Solo Mercenario Humilló a la Liga de la Justicia! La Hazaña de Deathstroke ⚔️🔥💥",
+    "description": "La inolvidable pelea en Identity Crisis #3 de Brad Meltzer y Rags Morales. Slade Wilson humilla a la Liga de la Justicia.",
+    "hashtags": "#Deathstroke #JusticeLeague #Flash #GreenLantern #DCComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/080_deathstroke_identity_crisis_liga/video.mp4",
+    "timestamp": "2026-11-16 09:04:41",
+    "social_links": {
+      "facebook": "1182877857513097",
+      "instagram": "https://www.instagram.com/reel/Dfy_X4QDefT/",
+      "tiktok": "6afac7178e87c256a3c63994",
+      "youtube": "6afac725a869c35e5bcf6a2b"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
