@@ -7923,5 +7923,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "thor_mata_galactus_ejecucion_25s",
+    "title": "¡Thor Asesinó a Galactus! La Brutal Ejecución del Devorador de Mundos ⚡👑💀",
+    "description": "La brutal ejecución de Galactus en Thor Vol 6 #6 de Donny Cates y Nic Klein.",
+    "hashtags": "#Thor #Galactus #HeraldOfThunder #Marvel #MarvelComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/081_thor_mata_galactus_ejecucion/video.mp4",
+    "timestamp": "2026-11-16 11:04:28",
+    "social_links": {
+      "facebook": "29084582004496409",
+      "instagram": "https://www.instagram.com/reel/DfzNF7yFE0-/",
+      "tiktok": "6afae32b91ba8aa74bcb54f2",
+      "youtube": "6afae3390c2af02527d75ce2"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
