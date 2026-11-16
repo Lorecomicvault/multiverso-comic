@@ -1,0 +1,16 @@
+{
+  "slot": 128,
+  "queue_folder": "128_bane_origen_prision_pena_duro",
+  "id": "128_bane_origen_prision_pena_duro",
+  "title": "Bane: ¡El Infierno de Peña Duro y la Forja del Veneno! ⛓️💉",
+  "character": "Bane",
+  "description": "El oscuro y trágico origen de Bane en la prisión caribeña de Peña Duro antes de quebrar a Batman.",
+  "hashtags": "#Bane #Batman #Knightfall #DCComics #Comics #Shorts #Reels #TikTok",
+  "duration": 27.96,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "viral_25_30s",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA",
+  "produced_at": "2026-11-16 03:15:04"
+}

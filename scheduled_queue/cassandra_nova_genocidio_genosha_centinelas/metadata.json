@@ -1,0 +1,16 @@
+{
+  "slot": 130,
+  "queue_folder": "cassandra_nova_genocidio_genosha_centinelas",
+  "id": "130_cassandra_nova_genocidio_genosha_centinelas",
+  "title": "X-Men: ¡El Genocidio de 16 Millones de Mutantes en Genosha! 🤖💥",
+  "character": "X-Men",
+  "description": "Cassandra Nova arrasa la isla de Genosha erradicando a dieciséis millones de mutantes en New X-Men.",
+  "hashtags": "#XMen #Genosha #CassandraNova #Sentinels #GrantMorrison #Comics #Shorts #Reels #TikTok",
+  "duration": 28.46,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "viral_25_30s",
+  "voice_profile": "Narrador Referencia Cómic (Voicebox Profile 28078056-1a1d-43d4-9d57-d616275f13c2)",
+  "voice_engine": "Voicebox Local CUDA",
+  "produced_at": "2026-11-16 03:36:23"
+}
