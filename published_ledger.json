@@ -8083,5 +8083,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "doctor_strange_the_oath_cura_cancer_25s",
+    "title": "¡Doctor Strange Descubrió la Cura del Cáncer! El Dilema Moral del Hechicero Supremo 🔮💊✨",
+    "description": "Doctor Strange: The Oath de Brian K. Vaughan y Marcos Martin. El juramento hipocrático del Hechicero Supremo.",
+    "hashtags": "#DoctorStrange #Wong #TheOath #Marvel #MarvelComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/091_doctor_strange_the_oath_cura_cancer/video.mp4",
+    "timestamp": "2026-11-17 07:04:39",
+    "social_links": {
+      "facebook": "2199622397433652",
+      "instagram": "https://www.instagram.com/reel/Df1WcdSCFQQ/",
+      "tiktok": "6afbfc7782a2d4951bef0bf7",
+      "youtube": "6afbfc85c6d951405b4bc162"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
