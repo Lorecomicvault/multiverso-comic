@@ -8163,5 +8163,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "kraven_ultima_caceria_entierra_spiderman_25s",
+    "title": "¡Kraven Disparó y Enterró Vivo a Spider-Man! La Obra Maestra Más Oscura de Marvel 🕷️🪦🌧️",
+    "description": "La magistral novela gráfica Spider-Man: Kraven's Last Hunt (The Amazing Spider-Man #293-294).",
+    "hashtags": "#SpiderMan #Kraven #KravensLastHunt #PeterParker #Marvel #MarvelComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/096_kraven_ultima_caceria_entierra_spiderman/video.mp4",
+    "timestamp": "2026-11-17 17:04:31",
+    "social_links": {
+      "facebook": "1847314559634435",
+      "instagram": "https://www.instagram.com/reel/Df2bCqQGbUA/",
+      "tiktok": "6afc8906afa176f5999caa10",
+      "youtube": "6afc89150ec7d2b08232e9a9"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
