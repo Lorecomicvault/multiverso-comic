@@ -8195,5 +8195,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "hulk_world_war_venganza_illuminati_25s",
+    "title": "¡Hulk Aplasta a los Illuminati! La Implacable Venganza de Sakaar 🟢⚔️💥",
+    "description": "La aclamada saga de Greg Pak y John Romita Jr en World War Hulk. La venganza del Green Scar contra los Illuminati.",
+    "hashtags": "#WorldWarHulk #Hulk #Illuminati #IronMan #DoctorStrange #Marvel #MarvelComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/098_hulk_world_war_venganza_illuminati/video.mp4",
+    "timestamp": "2026-11-17 21:04:59",
+    "social_links": {
+      "facebook": "1670998374429428",
+      "instagram": "https://www.instagram.com/reel/Df22mLDknQ3/",
+      "tiktok": "6afcc166a739830f97445d9c",
+      "youtube": "6afcc1789b0477630c93324e"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
