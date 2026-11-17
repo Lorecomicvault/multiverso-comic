@@ -8115,5 +8115,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "sentry_vacio_void_devora_asgard_25s",
+    "title": "¡The Void Desatado! La Entidad Oscura que Destruyó Asgard y Asombró a los Vengadores 🌑⚡🏛️",
+    "description": "La caída de Asgard y el despertar de The Void en Siege #3-4 de Brian Michael Bendis y Olivier Coipel.",
+    "hashtags": "#Sentry #TheVoid #Siege #Asgard #Thor #Marvel #MarvelComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/093_sentry_vacio_void_devora_asgard/video.mp4",
+    "timestamp": "2026-11-17 11:04:16",
+    "social_links": {
+      "facebook": "28447628624914369",
+      "instagram": "https://www.instagram.com/reel/Df1x16umvy4/",
+      "tiktok": "6afc3497f0b6269251741c14",
+      "youtube": "6afc34a6523b5a836be9f826"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
