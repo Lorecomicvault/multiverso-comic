@@ -8355,5 +8355,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "108_magneto_fatal_attractions",
+    "title": "Magneto: ¡El Desgarro de Adamantium a Wolverine! 🧲🩸",
+    "description": "Magneto arranca el adamantium líquido de los huesos de Wolverine y Charles Xavier cruza el límite final.",
+    "hashtags": "#Wolverine #Magneto #XMen #FatalAttractions #Marvel #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/108_magneto_fatal_attractions/video.mp4",
+    "timestamp": "2026-11-18 17:05:22",
+    "social_links": {
+      "facebook": "1872564874165118",
+      "instagram": "https://www.instagram.com/reel/Df4_9dhEStc/",
+      "tiktok": "6afddab7e87060d86b74d277",
+      "youtube": "6afddaca7f787ce2b1946766"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
