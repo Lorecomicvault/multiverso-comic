@@ -8259,5 +8259,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "invincible_conquest_asalto_brutal_sangre_25s",
+    "title": "¡La Masacre de Conquest! La Pelea Más Despiadada de Invincible 💥🩸👊",
+    "description": "El choque más sangriento en Invincible #61-64 de Robert Kirkman y Ryan Ottley. Mark Grayson destroza a Conquest.",
+    "hashtags": "#Invincible #Conquest #Viltrumite #MarkGrayson #ImageComics #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/102_invincible_conquest_asalto_brutal_sangre/video.mp4",
+    "timestamp": "2026-11-18 08:05:54",
+    "social_links": {
+      "facebook": "1102907515901565",
+      "instagram": "https://www.instagram.com/reel/Df4CP_ogOEz/",
+      "tiktok": "6afd5c51e7dde8d4fcd7266c",
+      "youtube": "6afd5c5ffac814181370e957"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
