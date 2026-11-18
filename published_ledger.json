@@ -8371,5 +8371,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "109_superman_vs_the_elite",
+    "title": "Superman: ¡La Lección Definitiva a The Elite! 🦸‍♂️💥",
+    "description": "Superman demuestra por qué la justicia jamás debe ceder ante la barbarie asesina de The Elite.",
+    "hashtags": "#Superman #TheElite #ManchesterBlack #DCComics #ActionComics775 #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/109_superman_vs_the_elite/video.mp4",
+    "timestamp": "2026-11-18 19:06:24",
+    "social_links": {
+      "facebook": "1495031959140472",
+      "instagram": "https://www.instagram.com/reel/Df5N1KAnMwW/",
+      "tiktok": "6afdf720a2e55b578d3c589b",
+      "youtube": "6afdf72ea2e55b578d3c5e31"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
