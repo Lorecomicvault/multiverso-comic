@@ -8387,5 +8387,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "110_darth_vader_down",
+    "title": "Darth Vader: ¡Solo Rodeado de Miedo y Hombres Muertos! ⚔️🌌",
+    "description": "Darth Vader derribado en Vrogas Vas demuestra por qué un ejército entero no es suficiente para vencerlo.",
+    "hashtags": "#DarthVader #StarWars #VaderDown #Sith #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/110_darth_vader_down/video.mp4",
+    "timestamp": "2026-11-18 21:05:22",
+    "social_links": {
+      "facebook": "1421856663039658",
+      "instagram": "https://www.instagram.com/reel/Df5bcJZjar8/",
+      "tiktok": "6afe12fd570d3cc01e699d32",
+      "youtube": "6afe130f0d8c064ce4d70687"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
