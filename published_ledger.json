@@ -8307,5 +8307,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "batman_under_red_hood_25s",
+    "title": "¡El Ultimátum de Red Hood! Jason Todd Confronta a Batman y al Joker 🔴🔫🦇",
+    "description": "El doloroso desenlace de Judd Winick y Doug Mahnke en Batman: Under the Red Hood. El ultimátum de Jason Todd.",
+    "hashtags": "#RedHood #JasonTodd #Batman #Joker #UnderTheRedHood #DCComics #Gotham #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/105_batman_under_red_hood/video.mp4",
+    "timestamp": "2026-11-18 11:05:16",
+    "social_links": {
+      "facebook": "29140801258908336",
+      "instagram": "https://www.instagram.com/reel/Df4WxSzmbtP/",
+      "tiktok": "6afd865b27a97c2bc63554c4",
+      "youtube": "6afd866975578146ec4844b9"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
