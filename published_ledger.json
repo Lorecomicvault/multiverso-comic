@@ -8339,5 +8339,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "107_morlun_devora_ojo_spiderman",
+    "title": "Spider-Man: ¡La Pesadilla de Morlun y la Maldición Totémica! 🕷️👁️",
+    "description": "El terrorífico enfrentamiento de Spider-Man contra el depredador totémico Morlun, donde la pesadilla cobra vida.",
+    "hashtags": "#SpiderMan #Morlun #MarvelComics #Marvel #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/107_morlun_devora_ojo_spiderman/video.mp4",
+    "timestamp": "2026-11-18 15:05:37",
+    "social_links": {
+      "facebook": "1700825024911905",
+      "instagram": "https://www.instagram.com/reel/Df4yP6xDHdS/",
+      "tiktok": "6afdbea96a70d040dafdffa7",
+      "youtube": "6afdbeb86a70d040dafe101c"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
