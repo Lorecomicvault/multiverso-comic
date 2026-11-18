@@ -8227,5 +8227,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "plastic_man_pesadilla_batman_25s",
+    "title": "Plastic Man: El Arma Secreta y el Verdadero Terror de Batman 🔴⚡🧬",
+    "description": "La revelación de Mark Waid y Howard Porter en JLA: Tower of Babel. El poder ilimitado e inmortal de Plastic Man.",
+    "hashtags": "#PlasticMan #Batman #JusticeLeague #TowerOfBabel #DCComics #JLA #Comics #Shorts #Reels",
+    "video_file": "scheduled_queue/100_plastic_man_pesadilla_batman/video.mp4",
+    "timestamp": "2026-11-18 01:06:28",
+    "social_links": {
+      "facebook": "1154460590470563",
+      "instagram": "https://www.instagram.com/reel/Df3SP0-jYp3/",
+      "tiktok": "6afcfa02ab47737bddb9b6e1",
+      "youtube": "6afcfa10bb12698d15895990"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
