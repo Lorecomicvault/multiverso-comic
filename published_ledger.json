@@ -8403,5 +8403,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "111_joker_death_of_the_family",
+    "title": "Joker: ¡El Rostro Engrapado de Death of the Family! 🃏🩸",
+    "description": "La siniestra reaparición del Joker con su rostro amputado y engrapado en Death of the Family.",
+    "hashtags": "#Joker #Batman #DeathOfTheFamily #DCComics #Gotham #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/111_joker_death_of_the_family/video.mp4",
+    "timestamp": "2026-11-18 23:21:11",
+    "social_links": {
+      "facebook": "2526281514525663",
+      "instagram": "https://www.instagram.com/reel/Df5q_JJoE_q/",
+      "tiktok": "6afe32d5ebd4409dc90260a5",
+      "youtube": "6afe32e5a588bd6687a440fb"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
