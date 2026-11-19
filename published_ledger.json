@@ -8499,5 +8499,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "117_batman_justice_buster_endgame",
+    "title": "Batman: ¡La Armadura Justice Buster Contra la Liga Infectada! 🦇🤖",
+    "description": "Batman desata la armadura mecanizada Justice Buster para sobrevivir al ataque letal de la Liga de la Justicia infectada.",
+    "hashtags": "#Batman #JusticeBuster #JusticeLeague #Endgame #DCComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/117_batman_justice_buster_endgame/video.mp4",
+    "timestamp": "2026-11-19 11:05:25",
+    "social_links": {
+      "facebook": "1605266111351929",
+      "instagram": "https://www.instagram.com/reel/Df67lt3D4dZ/",
+      "tiktok": "6afed7e6ec3834f15454d145",
+      "youtube": "6afed7f47c25de751c358097"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
