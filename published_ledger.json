@@ -8595,5 +8595,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "123_captain_america_winter_soldier_bucky",
+    "title": "Capitán América: ¡El Asesino Fantasma y la Verdad de Bucky! ❄️🔫",
+    "description": "Steve Rogers descubre la escalofriante identidad del Soldado del Invierno en el clásico moderno de Ed Brubaker.",
+    "hashtags": "#CaptainAmerica #WinterSoldier #BuckyBarnes #Marvel #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/123_captain_america_winter_soldier_bucky/video.mp4",
+    "timestamp": "2026-11-19 23:05:03",
+    "social_links": {
+      "facebook": "1164636672603483",
+      "instagram": "https://www.instagram.com/reel/Df8N826mbp7/",
+      "tiktok": "6aff8090ef915da8dbc7f325",
+      "youtube": "6aff809e1a1724ac8f581066"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
