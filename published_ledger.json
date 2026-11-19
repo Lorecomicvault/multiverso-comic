@@ -8419,5 +8419,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "112_nova_annihilus_desgarro",
+    "title": "Nova Prime: ¡El Desgarro Cósmico de Annihilus! 💫💥",
+    "description": "Richard Rider absorbe la Fuerza Nova completa y ejecuta la venganza más salvaje contra Annihilus en Annihilation.",
+    "hashtags": "#Nova #Annihilus #Annihilation #MarvelComics #CosmicMarvel #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/112_nova_annihilus_desgarro/video.mp4",
+    "timestamp": "2026-11-19 01:05:30",
+    "social_links": {
+      "facebook": "2409820936219059",
+      "instagram": "https://www.instagram.com/reel/Df5261xDnnM/",
+      "tiktok": "6afe4b42c69bd1cb8895b7ca",
+      "youtube": "6afe4b56ebd4409dc90b12f8"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
