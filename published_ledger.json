@@ -8467,5 +8467,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "115_captain_america_asesinato_civil_war",
+    "title": "Capitán América: ¡El Asesinato en los Tribunales! 🇺🇸🩸",
+    "description": "El trágico final de Civil War: Steve Rogers asesinado a sangre fría en las escaleras del tribunal de Nueva York.",
+    "hashtags": "#CaptainAmerica #CivilWar #DeathOfCaptainAmerica #MarvelComics #Marvel #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/115_captain_america_asesinato_civil_war/video.mp4",
+    "timestamp": "2026-11-19 09:11:44",
+    "social_links": {
+      "facebook": "2259331381596373",
+      "instagram": "https://www.instagram.com/reel/Df6ulJ_jwH7/",
+      "tiktok": "6afebd404ad8a97b3a2e4489",
+      "youtube": "6afebd4f73dee418593652de"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
