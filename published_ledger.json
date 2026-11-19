@@ -8531,5 +8531,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "119_spiderman_vs_juggernaut_cemento",
+    "title": "Spider-Man: ¡Cómo Venció al Imparable Juggernaut en Cemento! 🕷️🧱",
+    "description": "Spider-Man desafía al imparable coloso de Cyttorak y logra lo imposible atrapándolo en concreto húmedo.",
+    "hashtags": "#SpiderMan #Juggernaut #Marvel #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/119_spiderman_vs_juggernaut_cemento/video.mp4",
+    "timestamp": "2026-11-19 15:05:37",
+    "social_links": {
+      "facebook": "1121764303791204",
+      "instagram": "https://www.instagram.com/reel/Df7XEjYlONo/",
+      "tiktok": "6aff103076fc37c12350014a",
+      "youtube": "6aff103fe28319f49a0fdaca"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
