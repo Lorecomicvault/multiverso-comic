@@ -8547,5 +8547,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "120_colossus_sacrificio_virus_legado",
+    "title": "X-Men: ¡El Sacrificio de Colossus Para Salvar a los Mutantes! 🛡️💉",
+    "description": "Piotr Rasputin entrega voluntariamente su vida para dispersar la cura del Virus Legado y salvar a todos los mutantes.",
+    "hashtags": "#Colossus #XMen #LegacyVirus #Marvel #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/120_colossus_sacrificio_virus_legado/video.mp4",
+    "timestamp": "2026-11-19 17:06:19",
+    "social_links": {
+      "facebook": "1185009697300540",
+      "instagram": "https://www.instagram.com/reel/Df7k4RsDwUf/",
+      "tiktok": "6aff2c7bcfa0aacc090e1f4a",
+      "youtube": "6aff2c8acfa0aacc090e2661"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
