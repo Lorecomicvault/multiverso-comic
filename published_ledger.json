@@ -8515,5 +8515,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "118_daredevil_muerte_elektra_bullseye",
+    "title": "Daredevil: ¡La Trágica Muerte de Elektra a Manos de Bullseye! 🩸💔",
+    "description": "El mítico duelo en las azoteas de Hell's Kitchen donde Bullseye arrebata la vida de Elektra Natchios.",
+    "hashtags": "#Daredevil #Elektra #Bullseye #FrankMiller #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/118_daredevil_muerte_elektra_bullseye/video.mp4",
+    "timestamp": "2026-11-19 13:05:05",
+    "social_links": {
+      "facebook": "2205202580424233",
+      "instagram": "https://www.instagram.com/reel/Df7JR_VH72X/",
+      "tiktok": "6afef3f0cac0791c5d87d11d",
+      "youtube": "6afef400443a2a9f2fbe996f"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
