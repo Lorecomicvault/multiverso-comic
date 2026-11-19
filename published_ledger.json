@@ -8435,5 +8435,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "113_wonderwoman_hiketeia_bota_batman",
+    "title": "Wonder Woman: ¡La Bota Amazona que Humilló a Batman! ⚔️👑",
+    "description": "El juramento sagrado de la Hiketeia enfrenta a Wonder Woman y Batman en una humillación inolvidable.",
+    "hashtags": "#WonderWoman #Batman #TheHiketeia #DCComics #JusticeLeague #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/113_wonderwoman_hiketeia_bota_batman/video.mp4",
+    "timestamp": "2026-11-19 07:10:45",
+    "social_links": {
+      "facebook": "2481149289076466",
+      "instagram": "https://www.instagram.com/reel/Df6guMFiHXZ/",
+      "tiktok": "6afea0e5b16549e9b83178cf",
+      "youtube": "6afea0f346636f319e96a877"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
