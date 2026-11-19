@@ -8451,5 +8451,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "114_zombies_consumen_galactus_poder_infinito",
+    "title": "Marvel Zombies: ¡El Festín que Devoró a Galactus! 🧟‍♂️🌌",
+    "description": "Los Vengadores Zombis despedazan y consumen vivo al devorador de mundos Galactus para apoderarse del poder cósmico.",
+    "hashtags": "#MarvelZombies #Galactus #SpiderMan #Hulk #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/114_zombies_consumen_galactus_poder_infinito/video.mp4",
+    "timestamp": "2026-11-19 08:20:34",
+    "social_links": {
+      "facebook": "1514430563969507",
+      "instagram": "https://www.instagram.com/reel/Df6ouzrkfh7/",
+      "tiktok": "6afeb143aeba4abfb1f8d8d6",
+      "youtube": "6afeb151b7fe0c41ddab9501"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
