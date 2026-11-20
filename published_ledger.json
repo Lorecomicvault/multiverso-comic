@@ -8627,5 +8627,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "125_red_goblin_norman_osborn_carnage",
+    "title": "Red Goblin: ¡La Fusión Monstruosa de Osborn y Carnage! 👺🩸",
+    "description": "La pesadilla viva de Peter Parker: Norman Osborn se fusiona con Carnage para forjar al Red Goblin.",
+    "hashtags": "#RedGoblin #SpiderMan #Carnage #GreenGoblin #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/125_red_goblin_norman_osborn_carnage/video.mp4",
+    "timestamp": "2026-11-20 07:08:58",
+    "social_links": {
+      "facebook": "2278997976002156",
+      "instagram": "https://www.instagram.com/reel/Df9FSkHinOs/",
+      "tiktok": "6afff1fa4c1afd05defd754f",
+      "youtube": "6afff2070f5eda1a57cc95d8"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
