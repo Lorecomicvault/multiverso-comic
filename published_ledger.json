@@ -8739,5 +8739,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "133_batman_zur_en_arrh",
+    "title": "Batman: ¡El Murciélago Psicótico de Zur-En-Arrh! 🦇🎨",
+    "description": "La personalidad táctica de reserva de Bruce Wayne entra en acción en Batman R.I.P. de Grant Morrison.",
+    "hashtags": "#Batman #ZurEnArrh #GrantMorrison #BatmanRIP #DCComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/133_batman_zur_en_arrh/video.mp4",
+    "timestamp": "2026-11-20 17:06:47",
+    "social_links": {
+      "facebook": "1639643474320985",
+      "instagram": "https://www.instagram.com/reel/Df-Ju1agNvu/",
+      "tiktok": "6b007e1650d82c38163657c6",
+      "youtube": "6b007e2650d82c3816365f5f"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
