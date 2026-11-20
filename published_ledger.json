@@ -8675,5 +8675,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "128_bane_origen_prision_pena_duro",
+    "title": "Bane: ¡El Infierno de Peña Duro y la Forja del Veneno! ⛓️💉",
+    "description": "El oscuro y trágico origen de Bane en la prisión caribeña de Peña Duro antes de quebrar a Batman.",
+    "hashtags": "#Bane #Batman #Knightfall #DCComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/128_bane_origen_prision_pena_duro/video.mp4",
+    "timestamp": "2026-11-20 10:05:50",
+    "social_links": {
+      "facebook": "29838740799064748",
+      "instagram": "https://www.instagram.com/reel/Df9Zj16AJ6O/",
+      "tiktok": "6b001b6fc1699b33ec1da8b5",
+      "youtube": "6b001b7dd6ba71125fb0a8dd"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
