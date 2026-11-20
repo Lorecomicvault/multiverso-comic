@@ -8707,5 +8707,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "131_batman_el_culto_deacon_blackfire",
+    "title": "Batman: ¡El Culto Sangriento del Diácono Blackfire! 🩸🦇",
+    "description": "El oscuro arco Batman: The Cult de Bernie Wrightson donde Bruce Wayne es drogado y quebrado mentalmente.",
+    "hashtags": "#Batman #TheCult #DeaconBlackfire #BernieWrightson #DCComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/131_batman_el_culto_deacon_blackfire/video.mp4",
+    "timestamp": "2026-11-20 13:05:20",
+    "social_links": {
+      "facebook": "1033121079825315",
+      "instagram": "https://www.instagram.com/reel/Df9uGLUExn0/",
+      "tiktok": "6b00457f234b6bb6ee984d21",
+      "youtube": "6b00458ffc5b97f0f8088a02"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
