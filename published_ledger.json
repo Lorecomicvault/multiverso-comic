@@ -8659,5 +8659,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "127_darth_vader_down_miedo_hombres_muertos",
+    "title": "Darth Vader: ¡Solo Estoy Rodeado de Miedo y Hombres Muertos! 🔴⚔️",
+    "description": "El momento más legendario de Darth Vader en el cómic Vader Down de Marvel Comics.",
+    "hashtags": "#DarthVader #StarWars #VaderDown #Sith #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/127_darth_vader_down_miedo_hombres_muertos/video.mp4",
+    "timestamp": "2026-11-20 09:05:52",
+    "social_links": {
+      "facebook": "1502830754996055",
+      "instagram": "https://www.instagram.com/reel/Df9StDFHeFb/",
+      "tiktok": "6b000d61ca85ebefb00e52c7",
+      "youtube": "6b000d6fca85ebefb00e5b5b"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
