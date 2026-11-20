@@ -8691,5 +8691,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "129_batman_black_mirror_james_gordon_jr",
+    "title": "Batman: ¡El Espejo Negro y el Monstruo James Gordon Jr.! 🪞🩸",
+    "description": "La retorcida obra maestra de Scott Snyder: Batman Black Mirror y la fría psicopatía de James Gordon Jr.",
+    "hashtags": "#Batman #BlackMirror #DickGrayson #DCComics #ScottSnyder #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/129_batman_black_mirror_james_gordon_jr/video.mp4",
+    "timestamp": "2026-11-20 11:05:01",
+    "social_links": {
+      "facebook": "1899641507884929",
+      "instagram": "https://www.instagram.com/reel/Df9gWAhAeNM/",
+      "tiktok": "6b00294e39116a845dcf0e61",
+      "youtube": "6b00295c39116a845dcf1e87"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
