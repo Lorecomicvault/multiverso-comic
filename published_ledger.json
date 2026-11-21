@@ -8947,5 +8947,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "146_doctor_strange_dormammu",
+    "title": "Doctor Strange: ¡El Trato Infinito Contra el Amo de la Dimensión Oscura! 🌌👁️",
+    "description": "El legendario enfrentamiento entre el Doctor Strange y Dormammu donde la voluntad vence al poder infinito.",
+    "hashtags": "#DoctorStrange #Dormammu #DarkDimension #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/146_doctor_strange_dormammu/video.mp4",
+    "timestamp": "2026-11-21 19:06:24",
+    "social_links": {
+      "facebook": "3261825630654657",
+      "instagram": "https://www.instagram.com/reel/DgA8Ny_D43u/",
+      "tiktok": "6b01eba1142c957519392f40",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
