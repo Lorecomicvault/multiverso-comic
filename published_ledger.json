@@ -8931,5 +8931,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "145_daredevil_sentido_radar_mark_waid",
+    "title": "Daredevil: ¡La Asombrosa Visualización del Sentido Radar! 📡👁️",
+    "description": "La magistral representación visual del Sentido Radar de Daredevil en la etapa premiada de Mark Waid.",
+    "hashtags": "#Daredevil #RadarSense #MarkWaid #MattMurdock #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/145_daredevil_sentido_radar_mark_waid/video.mp4",
+    "timestamp": "2026-11-21 17:05:02",
+    "social_links": {
+      "facebook": "1150192587983926",
+      "instagram": "https://www.instagram.com/reel/DgAuVOeiUGj/",
+      "tiktok": "6b01cf30d5eabfb8cc487f1c",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
