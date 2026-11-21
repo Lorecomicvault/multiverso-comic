@@ -8819,5 +8819,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "138_batman_white_knight_joker_cuerdo",
+    "title": "Batman White Knight: ¡El Joker Cuerdo y el Murciélago Monstruo! 🃏🦇",
+    "description": "En Batman: White Knight de Sean Murphy, el Joker se vuelve cuerdo para salvar a Gotham de la tiranía de Batman.",
+    "hashtags": "#Batman #WhiteKnight #Joker #SeanMurphy #DCComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/138_batman_white_knight_joker_cuerdo/video.mp4",
+    "timestamp": "2026-11-21 07:06:15",
+    "social_links": {
+      "facebook": "1457062763216807",
+      "instagram": "https://www.instagram.com/reel/Df_pze7jcqj/",
+      "tiktok": "6b0142d75e993799d85b8362",
+      "youtube": "6b0142e4510276624502bd72"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
