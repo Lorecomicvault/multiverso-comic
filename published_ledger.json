@@ -8867,5 +8867,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "141_ghost_rider_johnny_blaze_rey_infierno",
+    "title": "Ghost Rider: ¡El Día que Johnny Blaze Reclamó el Trono del Infierno! 🔥👑",
+    "description": "Johnny Blaze conquista el averno y se corona como el nuevo Rey del Infierno tras humillar a Mephisto.",
+    "hashtags": "#GhostRider #JohnnyBlaze #Mephisto #KingOfHell #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/141_ghost_rider_johnny_blaze_rey_infierno/video.mp4",
+    "timestamp": "2026-11-21 10:05:55",
+    "social_links": {
+      "facebook": "1757592529292770",
+      "instagram": "https://www.instagram.com/reel/Df_-XYAAPZc/",
+      "tiktok": "6b016cf4510276624513597d",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
