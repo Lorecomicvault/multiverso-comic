@@ -8915,5 +8915,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "144_batman_year_one_campana_murcielago",
+    "title": "Batman Año Uno: ¡La Noche que una Criatura Eligió su Destino! 🦇🩸",
+    "description": "El momento fundacional de Batman: Year One por Frank Miller y David Mazzucchelli.",
+    "hashtags": "#Batman #YearOne #FrankMiller #BruceWayne #DCComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/144_batman_year_one_campana_murcielago/video.mp4",
+    "timestamp": "2026-11-21 15:04:38",
+    "social_links": {
+      "facebook": "1513867910611056",
+      "instagram": "https://www.instagram.com/reel/DgAgj_EDHL-/",
+      "tiktok": "6b01b2f98bd84d5966f8c4fb",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
