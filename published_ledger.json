@@ -8883,5 +8883,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "142_blue_beetle_jaime_reyes_escarabajo",
+    "title": "Blue Beetle: ¡El Despertar de la Armadura Biomecánica Asesina! 🪲⚡",
+    "description": "El origen de Jaime Reyes en Infinite Crisis y el terrorífico vínculo biológico con el Escarabajo azul.",
+    "hashtags": "#BlueBeetle #JaimeReyes #DCComics #InfiniteCrisis #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/142_blue_beetle_jaime_reyes_escarabajo/video.mp4",
+    "timestamp": "2026-11-21 11:04:58",
+    "social_links": {
+      "facebook": "2195334191859369",
+      "instagram": "https://www.instagram.com/reel/DgAFIToDsFn/",
+      "tiktok": "6b017acdd864a0110539994a",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
