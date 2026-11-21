@@ -8963,5 +8963,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "147_hulk_world_war_venganza_illuminati",
+    "title": "World War Hulk: ¡La Venganza Definitiva Contra los Illuminati! 💥🟢",
+    "description": "El regreso triunfal y destructivo de Hulk en World War Hulk aplastando a los Illuminati.",
+    "hashtags": "#Hulk #WorldWarHulk #Illuminati #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/147_hulk_world_war_venganza_illuminati/video.mp4",
+    "timestamp": "2026-11-21 21:04:38",
+    "social_links": {
+      "facebook": "1166033295764631",
+      "instagram": "https://www.instagram.com/reel/DgBJwnLksYP/",
+      "tiktok": "6b020758cc364169c105971f",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
