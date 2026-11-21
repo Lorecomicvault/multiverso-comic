@@ -8803,5 +8803,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "137_daredevil_born_again_venganza_kingpin",
+    "title": "Daredevil: ¡La Venganza de Kingpin y la Caída de Matt Murdock! 🩸⚖️",
+    "description": "La legendaria obra maestra de Frank Miller y David Mazzucchelli: Daredevil Born Again.",
+    "hashtags": "#Daredevil #BornAgain #Kingpin #FrankMiller #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/137_daredevil_born_again_venganza_kingpin/video.mp4",
+    "timestamp": "2026-11-21 01:04:57",
+    "social_links": {
+      "facebook": "2736612976755377",
+      "instagram": "https://www.instagram.com/reel/Df_AdpwJSXM/",
+      "tiktok": "6b00ee2b20a2d09a0ac2de0c",
+      "youtube": "6b00ee385e993799d8400cc2"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
