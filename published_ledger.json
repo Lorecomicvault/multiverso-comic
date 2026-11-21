@@ -8979,5 +8979,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "148_batman_que_rie_dark_multiverse",
+    "title": "El Batman Que Ríe: ¡La Masacre Sangrienta de la Batifamilia! 🃏🦇",
+    "description": "El perturbador nacimiento del Batman que Ríe en Dark Nights Metal masacrando a la Batifamilia.",
+    "hashtags": "#BatmanQueRie #BatmanWhoLaughs #DCComics #DarkMultiverse #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/148_batman_que_rie_dark_multiverse/video.mp4",
+    "timestamp": "2026-11-21 23:05:44",
+    "social_links": {
+      "facebook": "3386148734906836",
+      "instagram": "https://www.instagram.com/reel/DgBXnZIHI2t/",
+      "tiktok": "6b0223bacc364169c110123e",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
