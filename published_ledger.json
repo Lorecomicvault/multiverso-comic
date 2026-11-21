@@ -8835,5 +8835,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "139_deadpool_wolverine_corea_del_norte",
+    "title": "Deadpool y Wolverine: ¡El Horror en los Campos de Concentración! 🩸🪖",
+    "description": "La historia más oscura y aclamada de Deadpool: The Good, the Bad and the Ugly junto a Logan y Steve Rogers.",
+    "hashtags": "#Deadpool #Wolverine #CaptainAmerica #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/139_deadpool_wolverine_corea_del_norte/video.mp4",
+    "timestamp": "2026-11-21 08:05:00",
+    "social_links": {
+      "facebook": "1956480751981836",
+      "instagram": "https://www.instagram.com/reel/Df_wh7tFP9p/",
+      "tiktok": "6b01509d9ffbc8503c0af8bd",
+      "youtube": "6b0150aa510276624507d861"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
