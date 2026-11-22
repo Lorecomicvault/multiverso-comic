@@ -8995,5 +8995,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "149_sentry_descuartiza_ares_siege",
+    "title": "Sentry: ¡La Muerte Brutal de Ares Desmembrado en Siege! ⚡💀",
+    "description": "El momento más brutal y salvaje del evento Siege: Sentry partiendo en dos al dios Ares.",
+    "hashtags": "#Sentry #Ares #Siege #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/149_sentry_descuartiza_ares_siege/video.mp4",
+    "timestamp": "2026-11-22 01:05:16",
+    "social_links": {
+      "facebook": "1123358117151039",
+      "instagram": "https://www.instagram.com/reel/DgBlSJClOUn/",
+      "tiktok": "6b023fbdd5eabfb8cc721609",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
