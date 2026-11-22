@@ -9139,5 +9139,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "158_spiderman_escorpion_mandibula_superior",
+    "title": "Superior Spider-Man: ¡El Puñetazo que Desgarró a Escorpión! 🕷️⚡",
+    "description": "El impactante descubrimiento de Otto Octavius en Superior Spider-Man desfigurando a Escorpión.",
+    "hashtags": "#SuperiorSpiderMan #SpiderMan #OttoOctavius #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/158_spiderman_escorpion_mandibula_superior/video.mp4",
+    "timestamp": "2026-11-22 19:04:33",
+    "social_links": {
+      "facebook": "1463813268671501",
+      "instagram": "https://www.instagram.com/reel/DgDgz9RE1OQ/",
+      "tiktok": "6b033cb3cc364169c17a1ad9",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
