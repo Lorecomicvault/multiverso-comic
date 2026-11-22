@@ -9043,5 +9043,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "152_thor_gorr_carnicero_dioses",
+    "title": "Thor: ¡Gorr el Carnicero de Dioses y la Tortura del Pasado! ⚡🗡️",
+    "description": "El primer y aterrador encuentro entre el joven Thor y Gorr the God Butcher en Islandia.",
+    "hashtags": "#Thor #Gorr #GodButcher #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/152_thor_gorr_carnicero_dioses/video.mp4",
+    "timestamp": "2026-11-22 09:05:51",
+    "social_links": {
+      "facebook": "1158086636592818",
+      "instagram": "https://www.instagram.com/reel/DgCcSYlDg2W/",
+      "tiktok": "6b02b05f846b0ee907725e99",
+      "youtube": "6b02b06d024796909238aa59"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
