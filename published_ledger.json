@@ -9123,5 +9123,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "157_doctor_doom_destruye_thanos_secret_wars",
+    "title": "Doctor Doom: ¡Secret Wars y el Fin de Thanos! 👑💀",
+    "description": "El momento cumbre de Secret Wars donde God Emperor Doom pulveriza a Thanos con sus manos.",
+    "hashtags": "#DoctorDoom #Thanos #SecretWars #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/157_doctor_doom_destruye_thanos_secret_wars/video.mp4",
+    "timestamp": "2026-11-22 17:04:50",
+    "social_links": {
+      "facebook": "1167362499099123",
+      "instagram": "https://www.instagram.com/reel/DgDTGeViq5E/",
+      "tiktok": "6b0320a4d5eabfb8ccc4adbb",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
