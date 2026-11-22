@@ -9027,5 +9027,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "151_injustice_alfred_superman",
+    "title": "Injustice: ¡El Día que Alfred Destrozó a Superman! 🥊🦸‍♂️",
+    "description": "La legendaria paliza de Alfred Pennyworth a Superman en el cómic Injustice Gods Among Us.",
+    "hashtags": "#AlfredPennyworth #Superman #Injustice #DCComics #Batman #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/151_injustice_alfred_superman/video.mp4",
+    "timestamp": "2026-11-22 08:04:54",
+    "social_links": {
+      "facebook": "29262020680073852",
+      "instagram": "https://www.instagram.com/reel/DgCVSSljRBx/",
+      "tiktok": "6b02a217024796909233633b",
+      "youtube": "6b02a224d864a01105a8fdf8"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
