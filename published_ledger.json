@@ -9011,5 +9011,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "150_spiderman_back_in_black_kingpin",
+    "title": "Spider-Man: ¡Back in Black y la Humillación de Kingpin! 🕷️🖤",
+    "description": "Peter Parker en Back in Black dando una lección implacable a Kingpin en la cárcel.",
+    "hashtags": "#SpiderMan #BackInBlack #Kingpin #PeterParker #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/150_spiderman_back_in_black_kingpin/video.mp4",
+    "timestamp": "2026-11-22 07:05:29",
+    "social_links": {
+      "facebook": "1694715185519421",
+      "instagram": "https://www.instagram.com/reel/DgCOhGAESpS/",
+      "tiktok": "6b02942bcc364169c1351ed9",
+      "youtube": "6b029438cc364169c1352519"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
