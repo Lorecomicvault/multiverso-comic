@@ -9235,5 +9235,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "164_scarlet_witch_house_of_m_no_mas_mutantes",
+    "title": "Bruja Escarlata: ¡El Susurro de Tres Palabras que Cambió Todo! 🔮🔴",
+    "description": "El momento más icónico de House of M: Wanda Maximoff erradicando el gen mutante con un susurro.",
+    "hashtags": "#ScarletWitch #HouseOfM #WandaMaximoff #NoMoreMutants #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/164_scarlet_witch_house_of_m_no_mas_mutantes/video.mp4",
+    "timestamp": "2026-11-23 09:04:57",
+    "social_links": {
+      "facebook": "1914078459939577",
+      "instagram": "https://www.instagram.com/reel/DgFA_MnGTz0/",
+      "tiktok": "6b0401ab9c1a68014f60e6f3",
+      "youtube": "6b0401b8beaafcdbe0db5cb8"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
