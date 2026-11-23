@@ -9187,5 +9187,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "161_plastic_man_pesadilla_batman",
+    "title": "Plastic Man: ¡La Pesadilla que Batman Más Teme Enfrentar! 🎭💥",
+    "description": "La escalofriante advertencia de Batman sobre el verdadero e imparable potencial de Plastic Man.",
+    "hashtags": "#PlasticMan #Batman #TowerOfBabel #DCComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/161_plastic_man_pesadilla_batman/video.mp4",
+    "timestamp": "2026-11-23 01:06:02",
+    "social_links": {
+      "facebook": "1781219356442856",
+      "instagram": "https://www.instagram.com/reel/DgEKLZMHGou/",
+      "tiktok": "6b03916bc72676f5e9745022",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
