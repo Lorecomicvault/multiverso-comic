@@ -9363,5 +9363,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "172_spiderman_if_this_be_my_destiny_acero",
+    "title": "Spider-Man: ¡La Hazaña Imposible Bajo Toneladas de Acero! 🕷️🏋️‍♂️",
+    "description": "El momento más legendario de Stan Lee y Steve Ditko: Spider-Man levantando la maquinaria en Amazing Spider-Man #33.",
+    "hashtags": "#SpiderMan #PeterParker #MarvelComics #StanLee #SteveDitko #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/172_spiderman_if_this_be_my_destiny_acero/video.mp4",
+    "timestamp": "2026-11-23 23:04:40",
+    "social_links": {
+      "facebook": "1183748497326403",
+      "instagram": "https://www.instagram.com/reel/DgGhEr-lNKM/",
+      "tiktok": "6b04c67a58d65b8ef8d67539",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
