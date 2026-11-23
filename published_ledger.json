@@ -9315,5 +9315,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "169_iron_man_demonio_botella_espejo",
+    "title": "Iron Man: ¡Demonio en la Botella y el Espejo Quebrado! 🥃🤖",
+    "description": "El clásico arco de culto de David Michelinie y Bob Layton: Iron Man Demon in a Bottle.",
+    "hashtags": "#IronMan #TonyStark #DemonInABottle #MarvelComics #Avengers #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/169_iron_man_demonio_botella_espejo/video.mp4",
+    "timestamp": "2026-11-23 17:05:22",
+    "social_links": {
+      "facebook": "1922352568942944",
+      "instagram": "https://www.instagram.com/reel/DgF38VVCHCP/",
+      "tiktok": "6b04723f2c57a0daa45f5344",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
