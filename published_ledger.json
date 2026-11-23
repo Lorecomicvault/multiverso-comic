@@ -9283,5 +9283,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "167_superman_all_star_sacrificio",
+    "title": "All-Star Superman: ¡El Vuelo Final Hacia el Corazón del Sol! ☀️🦸‍♂️",
+    "description": "La conmovedora e inmortal conclusión de All-Star Superman de Grant Morrison y Frank Quitely.",
+    "hashtags": "#Superman #AllStarSuperman #DCComics #GrantMorrison #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/167_superman_all_star_sacrificio/video.mp4",
+    "timestamp": "2026-11-23 13:05:11",
+    "social_links": {
+      "facebook": "1577423397739617",
+      "instagram": "https://www.instagram.com/reel/DgFcd4XGaQP/",
+      "tiktok": "6b0439f7e94d538757be6888",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
