@@ -9267,5 +9267,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "166_xmen_schism_cyclops_wolverine",
+    "title": "X-Men Schism: ¡La Pelea a Muerte Entre Cyclops y Wolverine! ⚔️🩸",
+    "description": "El violento cisma ideológico y físico entre Cyclops y Wolverine que fracturó para siempre a los X-Men.",
+    "hashtags": "#XMen #Schism #Wolverine #Cyclops #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/166_xmen_schism_cyclops_wolverine/video.mp4",
+    "timestamp": "2026-11-23 11:08:25",
+    "social_links": {
+      "facebook": "3029914017353953",
+      "instagram": "https://www.instagram.com/reel/DgFPHDEFcJg/",
+      "tiktok": "6b041e9bd8293518c2dc3935",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
