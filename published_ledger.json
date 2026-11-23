@@ -9299,5 +9299,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "168_sentry_vacio_void_devora_asgard",
+    "title": "Sentry Void: ¡La Devoración de Asgard y el Vacío Absoluto! 🌑💀",
+    "description": "El devastador final de Siege donde The Void aniquila Asgard y fuerza su trágico desenlace.",
+    "hashtags": "#Sentry #TheVoid #Thor #Loki #Siege #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/168_sentry_vacio_void_devora_asgard/video.mp4",
+    "timestamp": "2026-11-23 15:07:15",
+    "social_links": {
+      "facebook": "1678796857273259",
+      "instagram": "https://www.instagram.com/reel/DgFqb8Gj6AM/",
+      "tiktok": "6b0456935fa57e36d0e04278",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
