@@ -9251,5 +9251,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "165_kraven_ultima_caceria_entierra_spiderman",
+    "title": "Kraven: ¡La Cacería Definitiva y el Entierro de Spider-Man! 🕷️⚰️",
+    "description": "La cumbre psicológica de Marvel: La Última Cacería de Kraven y el entierro en vida de Spider-Man.",
+    "hashtags": "#Kraven #SpiderMan #KravensLastHunt #MarvelComics #PeterParker #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/165_kraven_ultima_caceria_entierra_spiderman/video.mp4",
+    "timestamp": "2026-11-23 10:05:00",
+    "social_links": {
+      "facebook": "1912529743243328",
+      "instagram": "https://www.instagram.com/reel/DgFH2TWEkxc/",
+      "tiktok": "6b040fbadd01c18cd40b36cc",
+      "youtube": "6b040fc93c0b3ee4f419d225"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
