@@ -9203,5 +9203,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "162_marvel_ruins_universo_maldito",
+    "title": "Marvel Ruins: ¡El Universo Donde Todo Salió Horriblemente Mal! ☣️☠️",
+    "description": "El perturbador cómic Marvel Ruins donde ningún héroe obtuvo superpoderes sino tormento y muerte.",
+    "hashtags": "#MarvelRuins #SpiderMan #Hulk #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/162_marvel_ruins_universo_maldito/video.mp4",
+    "timestamp": "2026-11-23 07:04:41",
+    "social_links": {
+      "facebook": "1425155262707815",
+      "instagram": "https://www.instagram.com/reel/DgEzOSclkTh/",
+      "tiktok": "6b03e57a32389444fa67309a",
+      "youtube": "6b03e58824753fd6f6c46e35"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
