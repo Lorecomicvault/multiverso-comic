@@ -9475,5 +9475,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "179_silver_surfer_requiem_muerte_norrin_radd",
+    "title": "Silver Surfer: ¡Los Últimos Días y el Adiós de Norrin Radd! 🌌🕊️",
+    "description": "La conmovedora obra maestra Silver Surfer: Requiem de J. Michael Straczynski y Esad Ribic.",
+    "hashtags": "#SilverSurfer #Requiem #NorrinRadd #EsadRibic #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/179_silver_surfer_requiem_muerte_norrin_radd/video.mp4",
+    "timestamp": "2026-11-24 13:04:52",
+    "social_links": {
+      "facebook": "1467377228086145",
+      "instagram": "https://www.instagram.com/reel/DgIBPFBiZ19/",
+      "tiktok": "6b058b6649097c7ae508c557",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
