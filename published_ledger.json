@@ -9555,5 +9555,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "184_giant_man_laboratorio_secreto_prisionero_panther",
+    "title": "Marvel Zombies: ¡El Grotesco Secreto de Giant-Man y Pantera Negra! 🧪🦴",
+    "description": "El momento más oscuro de Marvel Zombies: Hank Pym conservando a Black Panther en cautiverio secreto.",
+    "hashtags": "#MarvelZombies #GiantMan #BlackPanther #MarvelComics #Zombies #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/184_giant_man_laboratorio_secreto_prisionero_panther/video.mp4",
+    "timestamp": "2026-11-24 23:07:09",
+    "social_links": {
+      "facebook": "1463266998520992",
+      "instagram": "https://www.instagram.com/reel/DgJGI0GEghP/",
+      "tiktok": "6b06188e1ced59b7612f096f",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
