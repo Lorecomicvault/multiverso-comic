@@ -9443,5 +9443,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "177_xmen_dias_del_futuro_pasado",
+    "title": "Días del Futuro Pasado: ¡La Desintegración Fatal de Wolverine! 🤖🔥",
+    "description": "Days of Future Past por Chris Claremont y John Byrne: Wolverine desintegrado en Uncanny X-Men #142.",
+    "hashtags": "#XMen #DaysOfFuturePast #Wolverine #Sentinels #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/177_xmen_dias_del_futuro_pasado/video.mp4",
+    "timestamp": "2026-11-24 10:05:32",
+    "social_links": {
+      "facebook": "1830553884834181",
+      "instagram": "https://www.instagram.com/reel/DgHstgFkZgv/",
+      "tiktok": "6b05615ddddcbc911bcffc4f",
+      "youtube": "6b05616a637ab97445e16324"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
