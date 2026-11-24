@@ -9539,5 +9539,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "183_plaga_canibal_sentry_caida_vengadores",
+    "title": "Marvel Zombies: ¡El Sentry Infectado y la Caída de los Vengadores! 🧟‍♂️⚡",
+    "description": "El origen de la infección más terrorífica: Robert Kirkman muestra el instante en que Sentry condena el universo Marvel.",
+    "hashtags": "#MarvelZombies #Sentry #Avengers #RobertKirkman #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/183_plaga_canibal_sentry_caida_vengadores/video.mp4",
+    "timestamp": "2026-11-24 21:04:51",
+    "social_links": {
+      "facebook": "1151480267590160",
+      "instagram": "https://www.instagram.com/reel/DgI4KTeE2wo/",
+      "tiktok": "6b05fbe5da2eab4595a64752",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
