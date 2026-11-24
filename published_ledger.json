@@ -9379,5 +9379,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "173_thanos_guantelete_del_infinito_desafio_cosmico",
+    "title": "Thanos: ¡El Chasquido Supremo y el Desafío Cósmico! 💎💥",
+    "description": "Jim Starlin y George Pérez: Thanos chasqueando los dedos en Infinity Gauntlet #1.",
+    "hashtags": "#Thanos #InfinityGauntlet #Marvel #JimStarlin #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/173_thanos_guantelete_del_infinito_desafio_cosmico/video.mp4",
+    "timestamp": "2026-11-24 01:05:27",
+    "social_links": {
+      "facebook": "1152158811109655",
+      "instagram": "https://www.instagram.com/reel/DgGu5KXnLxR/",
+      "tiktok": "6b04e2c6db52b449cf12e4b0",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
