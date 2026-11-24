@@ -9507,5 +9507,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "181_zoom_hunter_zolomon_chasquido",
+    "title": "Zoom: ¡El Chasquido de Dedos que Destruyó la Vida de Flash! ⚡💥",
+    "description": "El desgarrador clímax de Geoff Johns y Scott Kolins en The Flash #197: Hunter Zolomon chasqueando los dedos.",
+    "hashtags": "#Zoom #HunterZolomon #TheFlash #WallyWest #GeoffJohns #DCComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/181_zoom_hunter_zolomon_chasquido/video.mp4",
+    "timestamp": "2026-11-24 17:05:44",
+    "social_links": {
+      "facebook": "2158329331717314",
+      "instagram": "https://www.instagram.com/reel/DgIcy1WHF_g/",
+      "tiktok": "6b05c3d93f48af62c21fad2c",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
