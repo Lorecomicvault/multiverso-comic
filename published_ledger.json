@@ -9395,5 +9395,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "174_thor_beta_ray_bill_levanta_mjolnir",
+    "title": "Beta Ray Bill: ¡El Forastero Monstruoso Digno de Mjolnir! 🔨⚡",
+    "description": "La legendaria obra de Walt Simonson: Beta Ray Bill demostrando ser digno de Mjolnir en Thor #337.",
+    "hashtags": "#Thor #BetaRayBill #Mjolnir #WaltSimonson #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/174_thor_beta_ray_bill_levanta_mjolnir/video.mp4",
+    "timestamp": "2026-11-24 07:05:42",
+    "social_links": {
+      "facebook": "3108392459503223",
+      "instagram": "https://www.instagram.com/reel/DgHYIb3gTq3/",
+      "tiktok": "6b053738b34a1444db91e142",
+      "youtube": "6b053745286252d7383f7d2d"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
