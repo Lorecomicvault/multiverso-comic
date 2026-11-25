@@ -9699,5 +9699,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "fc_02_secret_wars_doom_mata_thanos",
+    "title": "¡God Emperor Doom Arrancó el Esqueleto de Thanos de un Solo Golpe! 💀⚡👑",
+    "description": "Secret Wars #8 (Jonathan Hickman): Cuando Thanos desafió al Dios Emperador Doom sin las Gemas del Infinito y conoció su final más brutal.",
+    "hashtags": "#DoctorDoom #Thanos #SecretWars #MarvelComics #Comics #Reels #Shorts",
+    "video_file": "scheduled_queue/002_fc_secret_wars_doom_mata_thanos/video.mp4",
+    "timestamp": "2026-11-25 21:04:58",
+    "social_links": {
+      "facebook": "1152557877379874",
+      "instagram": "https://www.instagram.com/reel/DgLc7P5hO_D/",
+      "tiktok": "6b074d6ad79eeb556a649738",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
