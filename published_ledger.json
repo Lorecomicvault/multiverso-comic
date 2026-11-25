@@ -9683,5 +9683,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "fc_01_spiderman_back_in_black_kingpin",
+    "title": "Spider-Man: ¡Sin Máscara y Sin Piedad! La Humillación a Kingpin en Prisión 🕷️🩸",
+    "description": "Amazing Spider-Man #542 (Back in Black): El día que Peter Parker abandonó su regla moral para destruir a Wilson Fisk frente a toda la cárcel.",
+    "hashtags": "#SpiderMan #BackInBlack #Kingpin #MarvelComics #ComicsEnEspanol #Reels #Shorts",
+    "video_file": "scheduled_queue/001_fc_spiderman_back_in_black_kingpin/video.mp4",
+    "timestamp": "2026-11-25 18:07:51",
+    "social_links": {
+      "facebook": "1954080275562898",
+      "instagram": "https://www.instagram.com/reel/DgLIppwR19x/",
+      "tiktok": "6b0723e5acb19363a0d26ef2",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
