@@ -1,0 +1,18 @@
+{
+  "slot": 7,
+  "queue_folder": "007_fc_world_war_hulk_muerte_caiera",
+  "id": "fc_07_world_war_hulk_muerte_caiera",
+  "title": "World War Hulk: ¡La Traición que Destruyó su Planeta y Desató su Venganza! 💥💚🔥",
+  "character": "Hulk",
+  "description": "Incredible Hulk #105 (Planet Hulk): La explosión que arrebató todo lo que Bruce Banner amaba y dio origen al Hulk más peligroso de la historia.",
+  "hashtags": "#WorldWarHulk #PlanetHulk #Hulk #MarvelComics #Illuminati #Comics #Reels",
+  "duration": 74.86,
+  "size_mb": 61.32,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Referencia Cómic)",
+  "voice_mode": "referencia",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-25 12:08:49"
+}

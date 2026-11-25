@@ -1,0 +1,18 @@
+{
+  "slot": 8,
+  "queue_folder": "008_fc_wolverine_vs_hulk_partido_en_dos",
+  "id": "fc_08_wolverine_vs_hulk_partido_en_dos",
+  "title": "¡Hulk Partió a Wolverine en Dos Mitades y Arrojó sus Piernas a la Montaña! 🐺💚🩸",
+  "character": "Wolverine",
+  "description": "Ultimate Wolverine vs. Hulk #1: La brutal cacería en el Tíbet donde Hulk le dio a Logan la paliza más infame de toda su historia.",
+  "hashtags": "#Wolverine #Hulk #MarvelComics #Logan #UltimateMarvel #Comics #Reels",
+  "duration": 71.98,
+  "size_mb": 60.5,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Cómics ZaZooM)",
+  "voice_mode": "zazoom",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-25 12:19:49"
+}
