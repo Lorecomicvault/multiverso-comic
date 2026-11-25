@@ -9635,5 +9635,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "189_iron_man_silver_centurion_iron_monger",
+    "title": "Iron Man: ¡Silver Centurion vs Iron Monger en el Duelo del Siglo! 🔴⚪",
+    "description": "Iron Man #200 por Denny O'Neil y Mark Bright: Tony Stark estrenando el Silver Centurion contra Iron Monger.",
+    "hashtags": "#IronMan #SilverCenturion #TonyStark #IronMonger #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/189_iron_man_silver_centurion_iron_monger/video.mp4",
+    "timestamp": "2026-11-25 10:05:21",
+    "social_links": {
+      "facebook": "2050197189011486",
+      "instagram": "https://www.instagram.com/reel/DgKRe73uhty/",
+      "tiktok": "6b06b2d2339dc3d7ae1837ae",
+      "youtube": "6b06b2e00bed0d81630d90ef"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
