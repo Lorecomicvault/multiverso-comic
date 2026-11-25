@@ -9603,5 +9603,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "187_hulk_profesor_fusion_mente_banner",
+    "title": "El Profesor Hulk: ¡La Fusión Mental Definitiva de Bruce Banner! 🧠🟢",
+    "description": "Incredible Hulk #377: La histórica fusión de personalidades que dio origen al legendario Profesor Hulk.",
+    "hashtags": "#Hulk #ProfessorHulk #BruceBanner #MarvelComics #PeterDavid #DaleKeown #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/187_hulk_profesor_fusion_mente_banner/video.mp4",
+    "timestamp": "2026-11-25 08:05:37",
+    "social_links": {
+      "facebook": "1906634680767526",
+      "instagram": "https://www.instagram.com/reel/DgKDxysJ-C_/",
+      "tiktok": "6b0696c0d8874a038c04b543",
+      "youtube": "6b0696d0c68d7845a493342b"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
