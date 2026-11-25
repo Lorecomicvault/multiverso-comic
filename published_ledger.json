@@ -9587,5 +9587,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "186_hulk_the_end",
+    "title": "Hulk The End: ¡El Último Ser Viviente Sobre la Faz de la Tierra! ☢️🪳",
+    "description": "La desgarradora obra maestra de Peter David y Dale Keown: Hulk The End, la muerte solitaria del último ser del planeta.",
+    "hashtags": "#Hulk #HulkTheEnd #BruceBanner #PeterDavid #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/186_hulk_the_end/video.mp4",
+    "timestamp": "2026-11-25 07:05:00",
+    "social_links": {
+      "facebook": "2335256213930871",
+      "instagram": "https://www.instagram.com/reel/DgJ81tut_9C/",
+      "tiktok": "6b06888dd8874a038cfdfce7",
+      "youtube": "6b06889bd8874a038cfe0a7b"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
