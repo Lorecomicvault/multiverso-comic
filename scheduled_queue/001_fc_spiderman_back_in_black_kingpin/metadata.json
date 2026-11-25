@@ -1,0 +1,18 @@
+{
+  "slot": 1,
+  "queue_folder": "001_fc_spiderman_back_in_black_kingpin",
+  "id": "fc_01_spiderman_back_in_black_kingpin",
+  "title": "Spider-Man: ¡Sin Máscara y Sin Piedad! La Humillación a Kingpin en Prisión 🕷️🩸",
+  "character": "Spider-Man",
+  "description": "Amazing Spider-Man #542 (Back in Black): El día que Peter Parker abandonó su regla moral para destruir a Wilson Fisk frente a toda la cárcel.",
+  "hashtags": "#SpiderMan #BackInBlack #Kingpin #MarvelComics #ComicsEnEspanol #Reels #Shorts",
+  "duration": 74.84,
+  "size_mb": 62.37,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Referencia Cómic)",
+  "voice_mode": "referencia",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-25 10:46:43"
+}
