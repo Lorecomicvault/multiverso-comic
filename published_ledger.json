@@ -9651,5 +9651,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "190_superior_iron_man",
+    "title": "Superior Iron Man: ¡Tony Stark y la Dictadura del Metal Líquido! 🤍📱",
+    "description": "Tom Taylor y Yildiray Cinar: Superior Iron Man, la etapa donde Tony Stark se convirtió en el villano más despiadado de Marvel.",
+    "hashtags": "#SuperiorIronMan #TonyStark #Extremis #TomTaylor #MarvelComics #Comics #Shorts #Reels #TikTok",
+    "video_file": "scheduled_queue/190_superior_iron_man/video.mp4",
+    "timestamp": "2026-11-25 11:05:01",
+    "social_links": {
+      "facebook": "1190258570097199",
+      "instagram": "https://www.instagram.com/reel/DgKYT-vqHGl/",
+      "tiktok": "6b06c0cc4f2f059ad9a50c99",
+      "youtube": "6b06c0da81683ea080404d35"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
