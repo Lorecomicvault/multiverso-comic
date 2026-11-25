@@ -1,0 +1,18 @@
+{
+  "slot": 4,
+  "queue_folder": "004_fc_batman_devastator_mata_superman",
+  "id": "fc_04_batman_devastator_mata_superman",
+  "title": "¡Batman se Inyectó el Virus Doomsday y Asesinó a Superman! 🦇🦖🩸",
+  "character": "Batman",
+  "description": "Batman: The Devastator #1 — Cuando Superman enloqueció en Tierra-1, Bruce Wayne usó su contramedida biológica más extrema.",
+  "hashtags": "#Batman #Superman #Doomsday #BatmanDevastator #DCComics #Comics #Reels",
+  "duration": 74.86,
+  "size_mb": 62.21,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Cómics ZaZooM)",
+  "voice_mode": "zazoom",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-25 11:33:52"
+}

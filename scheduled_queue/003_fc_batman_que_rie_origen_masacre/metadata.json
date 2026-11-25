@@ -1,0 +1,18 @@
+{
+  "slot": 3,
+  "queue_folder": "003_fc_batman_que_rie_origen_masacre",
+  "id": "fc_03_batman_que_rie_origen_masacre",
+  "title": "El Batman Que Ríe: ¡El Día que Masacró a Toda la Liga de la Justicia! 🦇🤡🩸",
+  "character": "Batman",
+  "description": "Dark Nights: The Batman Who Laughs — La perturbadora historia de Tierra-22 donde Bruce Wayne inhaló la toxina final del Joker y destruyó el mundo.",
+  "hashtags": "#Batman #ElBatmanQueRie #Joker #DCComics #LigaDeLaJusticia #Comics #Reels",
+  "duration": 74.84,
+  "size_mb": 61.21,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Referencia Cómic)",
+  "voice_mode": "referencia",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-25 11:21:25"
+}
