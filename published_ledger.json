@@ -9747,5 +9747,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "fc_05_immortal_hulk_frascos_laboratorio",
+    "title": "Immortal Hulk: ¡Lo Descuartizaron Vivo en Frascos y Todo Terminó en Horror! 🧪💚🩸",
+    "description": "Immortal Hulk #8 (Al Ewing): La escena más escalofriante de terror corporal en Marvel cuando intentaron diseccionar vivo a Bruce Banner.",
+    "hashtags": "#ImmortalHulk #Hulk #MarvelComics #Terror #ComicsEnEspanol #Reels #Shorts",
+    "video_file": "scheduled_queue/005_fc_immortal_hulk_frascos_laboratorio/video.mp4",
+    "timestamp": "2026-11-26 10:05:07",
+    "social_links": {
+      "facebook": "1145680904492156",
+      "instagram": "https://www.instagram.com/reel/DgM2MeBs7X2/",
+      "tiktok": "6b08043ae52242758a20058b",
+      "youtube": "6b08044cd8848786e0d5a5f0"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
