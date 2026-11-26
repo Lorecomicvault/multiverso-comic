@@ -9731,5 +9731,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "fc_04_batman_devastator_mata_superman",
+    "title": "¡Batman se Inyectó el Virus Doomsday y Asesinó a Superman! 🦇🦖🩸",
+    "description": "Batman: The Devastator #1 — Cuando Superman enloqueció en Tierra-1, Bruce Wayne usó su contramedida biológica más extrema.",
+    "hashtags": "#Batman #Superman #Doomsday #BatmanDevastator #DCComics #Comics #Reels",
+    "video_file": "scheduled_queue/004_fc_batman_devastator_mata_superman/video.mp4",
+    "timestamp": "2026-11-26 07:04:40",
+    "social_links": {
+      "facebook": "1881957687271735",
+      "instagram": "https://www.instagram.com/reel/DgMhkFNBuOP/",
+      "tiktok": "6b07d9f8aca8612480891ae3",
+      "youtube": "6b07da0763939e1d007db266"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
