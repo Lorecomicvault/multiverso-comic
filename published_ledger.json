@@ -9811,5 +9811,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "fc_09_carnage_usa_infecta_vengadores",
+    "title": "Carnage U.S.A.: ¡El Día que Cletus Kasady Poseyó a Todos los Vengadores! 🩸🕷️🔥",
+    "description": "Carnage U.S.A. #1–2: La invasión más retorcida del simbionte rojo cuando secuestró un pueblo entero y controló las mentes de los héroes.",
+    "hashtags": "#Carnage #SpiderMan #Avengers #MarvelComics #Simbionte #Comics #Reels",
+    "video_file": "scheduled_queue/009_fc_carnage_usa_infecta_vengadores/video.mp4",
+    "timestamp": "2026-11-27 00:03:52",
+    "social_links": {
+      "facebook": "1561202012501350",
+      "instagram": "https://www.instagram.com/reel/DgOWNpNxZ1d/",
+      "tiktok": "6b08c8d8548b6e180d441f16",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
