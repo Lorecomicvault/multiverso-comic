@@ -1,0 +1,18 @@
+{
+  "slot": 23,
+  "queue_folder": "023_fc_secret_wars_1_fin_universo_marvel",
+  "id": "fc_23_secret_wars_1_fin_universo_marvel",
+  "title": "Secret Wars #1: ¡El Día que Todos los Héroes Murieron en el Fin del Universo Marvel! 💥🌍💀",
+  "character": "Spider-Man",
+  "description": "Secret Wars #1 (Jonathan Hickman): La última incursión entre Tierra-616 y el Universo Ultimate donde nada pudo detener la extinción total.",
+  "hashtags": "#SecretWars #SpiderMan #Avengers #MarvelComics #Multiverso #Comics #Reels",
+  "duration": 74.3,
+  "size_mb": 49.6,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Referencia Cómic)",
+  "voice_mode": "referencia",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-27 13:41:57"
+}

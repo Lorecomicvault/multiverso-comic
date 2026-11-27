@@ -1,0 +1,18 @@
+{
+  "slot": 25,
+  "queue_folder": "025_fc_cosmic_ghost_rider_origen_punisher_galactus",
+  "id": "fc_25_cosmic_ghost_rider_origen_punisher_galactus",
+  "title": "Cosmic Ghost Rider: ¡Cómo Punisher Sirvió a Galactus y al Rey Thanos! 💀🔥⛓️",
+  "character": "Ghost Rider",
+  "description": "Thanos #16 (Donny Cates): El delirante origen de Cosmic Ghost Rider cuando Frank Castle murió, pactó con Mephisto y se unió a Galactus.",
+  "hashtags": "#CosmicGhostRider #Punisher #Galactus #Thanos #MarvelComics #Comics #Reels",
+  "duration": 71.55,
+  "size_mb": 51.3,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Referencia Cómic)",
+  "voice_mode": "referencia",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-27 14:04:48"
+}

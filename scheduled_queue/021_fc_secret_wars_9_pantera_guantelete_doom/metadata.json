@@ -1,0 +1,18 @@
+{
+  "slot": 21,
+  "queue_folder": "021_fc_secret_wars_9_pantera_guantelete_doom",
+  "id": "fc_21_secret_wars_9_pantera_guantelete_doom",
+  "title": "Secret Wars #9: ¡Black Panther Empuñó el Guantelete del Infinito Contra Dios Doom! 🐾💎👑",
+  "character": "Black Panther",
+  "description": "Secret Wars #9 (Jonathan Hickman): T'Challa desafía al omnipotente Dios Emperador Doom con el Guantelete del Infinito en la batalla final.",
+  "hashtags": "#BlackPanther #DoctorDoom #SecretWars #GuanteleteDelInfinito #MarvelComics #Reels",
+  "duration": 73.6,
+  "size_mb": 51.21,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Referencia Cómic)",
+  "voice_mode": "referencia",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-27 13:18:02"
+}

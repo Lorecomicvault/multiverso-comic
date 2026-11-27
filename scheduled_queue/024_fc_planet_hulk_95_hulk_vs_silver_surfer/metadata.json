@@ -1,0 +1,18 @@
+{
+  "slot": 24,
+  "queue_folder": "024_fc_planet_hulk_95_hulk_vs_silver_surfer",
+  "id": "fc_24_planet_hulk_95_hulk_vs_silver_surfer",
+  "title": "Planet Hulk #95: ¡Silver Surfer Cayó Esclavo y Hulk Casi Lo Mata a Golpes! 💚🛸💥",
+  "character": "Hulk",
+  "description": "Incredible Hulk #95 (Planet Hulk): Debilitado por un disco de obediencia, Silver Surfer fue obligado a enfrentar al Cicatriz Verde en el coliseo de Sakaar.",
+  "hashtags": "#PlanetHulk #Hulk #SilverSurfer #MarvelComics #Sakaar #Comics #Reels",
+  "duration": 74.3,
+  "size_mb": 53.65,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Cómics ZaZooM)",
+  "voice_mode": "zazoom",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-27 13:53:47"
+}
