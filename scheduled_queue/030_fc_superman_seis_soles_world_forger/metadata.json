@@ -1,0 +1,18 @@
+{
+  "slot": 30,
+  "queue_folder": "030_fc_superman_seis_soles_world_forger",
+  "id": "fc_30_superman_seis_soles_world_forger",
+  "title": "Superman: ¡Voló a Través de Seis Soles y Noqueó a Un Dios De Un Solo Golpe! ☀️🦸‍♂️💥",
+  "character": "Superman",
+  "description": "Justice League #25 (Scott Snyder): Atrapado en la oscuridad de la Sexta Dimensión sin luz ni esperanza, Kal-El rompió todos sus límites para salvar a la Liga.",
+  "hashtags": "#Superman #JusticeLeague #DCComics #KalEl #WorldForger #Comics #Reels",
+  "duration": 74.41,
+  "size_mb": 51.48,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Cómics ZaZooM)",
+  "voice_mode": "zazoom",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-27 17:10:56"
+}
