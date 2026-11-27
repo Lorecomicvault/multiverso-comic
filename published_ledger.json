@@ -9875,5 +9875,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "fc_13_uncanny_xforce_ejecucion_apocalipsis",
+    "title": "Uncanny X-Force: ¡Fantomex Ejecutó de Un Disparo a un Niño Apocalipsis! 🔫🩸❌",
+    "description": "Uncanny X-Force #4 (Rick Remender): El dilema moral más oscuro de Marvel cuando el escuadrón secreto encontró a Apocalipsis reencarnado en un niño.",
+    "hashtags": "#UncannyXForce #Wolverine #Deadpool #Apocalipsis #XMen #MarvelComics #Reels",
+    "video_file": "scheduled_queue/013_fc_uncanny_xforce_ejecucion_apocalipsis/video.mp4",
+    "timestamp": "2026-11-27 18:05:23",
+    "social_links": {
+      "facebook": "1162481042847170",
+      "instagram": "https://www.instagram.com/reel/DgQR7QLB1Ov/",
+      "tiktok": "6b09c64e2b8a129ed81816fb",
+      "youtube": "6b09c65ff34d25de1e36a659"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
