@@ -1,0 +1,18 @@
+{
+  "slot": 27,
+  "queue_folder": "027_fc_wolverine_vs_she_hulk_betty_ross",
+  "id": "fc_27_wolverine_vs_she_hulk_betty_ross",
+  "title": "Ultimate Wolverine vs Hulk: ¡La Sorpresa Mortal de Betty Ross Que Nadie Esperaba! 🐺💚🩸",
+  "character": "Hulk",
+  "description": "Ultimate Wolverine vs. Hulk #4–5: La traición biológica de Betty Ross con la sangre de Banner y el choque triple contra Wolverine.",
+  "hashtags": "#SheHulk #Hulk #Wolverine #UltimateMarvel #MarvelComics #Comics #Reels",
+  "duration": 71.27,
+  "size_mb": 51.64,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Referencia Cómic)",
+  "voice_mode": "referencia",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-27 16:21:37"
+}

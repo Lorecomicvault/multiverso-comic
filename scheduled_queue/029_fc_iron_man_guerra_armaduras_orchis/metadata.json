@@ -1,0 +1,18 @@
+{
+  "slot": 29,
+  "queue_folder": "029_fc_iron_man_guerra_armaduras_orchis",
+  "id": "fc_29_iron_man_guerra_armaduras_orchis",
+  "title": "Invincible Iron Man: ¡Tony Stark Desató Su Armadura Más Mortal Contra la Traición! 🔴⚡🤖",
+  "character": "Iron Man",
+  "description": "Invincible Iron Man (Gerry Duggan): Cuando le robaron su empresa e intentaron cazarlo, Tony Stark contraatacó con pura furia tecnológica.",
+  "hashtags": "#IronMan #TonyStark #MarvelComics #Avengers #ComicsEnEspanol #Reels #Shorts",
+  "duration": 74.3,
+  "size_mb": 53.48,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Referencia Cómic)",
+  "voice_mode": "referencia",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-27 16:45:28"
+}

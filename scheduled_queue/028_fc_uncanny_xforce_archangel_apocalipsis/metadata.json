@@ -1,0 +1,18 @@
+{
+  "slot": 28,
+  "queue_folder": "028_fc_uncanny_xforce_archangel_apocalipsis",
+  "id": "fc_28_uncanny_xforce_archangel_apocalipsis",
+  "title": "Uncanny X-Force: ¡El Despertar Oscuro de Archangel Que Casi Extermina al Equipo! 🪽🩸⚔️",
+  "character": "Wolverine",
+  "description": "Uncanny X-Force (La Saga del Ángel Oscuro): Cuando la semilla de la muerte tomó el control total de Warren Worthington contra sus propios amigos.",
+  "hashtags": "#Archangel #UncannyXForce #Wolverine #XMen #Apocalipsis #MarvelComics #Reels",
+  "duration": 74.37,
+  "size_mb": 53.62,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Cómics ZaZooM)",
+  "voice_mode": "zazoom",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-27 16:34:00"
+}

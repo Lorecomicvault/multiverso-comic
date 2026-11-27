@@ -498,23 +498,23 @@ LOTE_03_PROJECTS = [
         "scenes": [
             {
                 "src": SUP / "chi.jpg",
-                "text": "Todos conocemos la fuerza increíble de Superman bajo nuestro sol amarillo, pero nadie estaba preparado para verlo romper los límites absolutos del universo.",
+                "text": "Todos conocemos la fuerza increíble de Superman bajo nuestro sol amarillo de la Tierra, pero nadie en el multiverso estaba preparado para presenciar el día en que Kal-El rompió todos sus límites conocidos frente a un dios creador.",
             },
             {
                 "src": SUP / "world_forger_01.jpg",
-                "text": "Traicionado y atrapado en un mundo muerto de la Sexta Dimensión sin estrellas, el todopoderoso Forjador de Mundos creyó haber condenado para siempre a Kal-El.",
+                "text": "Traicionado y encerrado en un universo oscuro de la Sexta Dimensión sin una sola estrella ni rastro de luz solar, el todopoderoso Forjador de Mundos dejó morir lentamente al Hombre de Acero creyendo haberlo vencido para siempre.",
             },
             {
                 "src": SUP / "str2.jpeg",
-                "text": "Mientras el dios gigante preparaba su martillo para borrar la realidad entera y destruir a la Liga de la Justicia, Superman escuchó el latido de su hijo.",
+                "text": "Mientras el gigante divino preparaba su martillo cósmico para destruir la Liga de la Justicia y reescribir la realidad entera, Kal-El escuchó en el vacío el latido lejano de su hijo Jon llamándolo desde la distancia.",
             },
             {
                 "src": SUP / "str1.jpeg",
-                "text": "Con la última chispa de energía voló hacia los soles alineados por Batman en el vacío, atravesando seis estrellas seguidas a velocidad imposible.",
+                "text": "Sacando una última chispa de esperanza, Batman alineó seis soles en su camino a través de la oscuridad espacial. Superman despegó a velocidad imposible atravesando una estrella tras otra, absorbiendo radiación pura en cada segundo.",
             },
             {
                 "src": SUP / "punch_panel.png",
-                "text": "Cargado con energía estelar pura, descendió como un cometa dorado impactando al dios con un solo golpe que partió un universo entero y destruyó el yunque.",
+                "text": "Transformado en un cometa dorado imparable, Superman descendió con el puño cargado de energía estelar y conectó un golpe devastador que destrozó al Forjador de Mundos y partió en dos el universo entero. ¿Es esta la hazaña más grande de Superman?",
             },
         ],
     },
