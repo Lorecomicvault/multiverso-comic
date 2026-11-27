@@ -9859,5 +9859,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "fc_12_books_of_doom_mascara_ardiente",
+    "title": "Doctor Doom: ¡Se Puso la Máscara Al Rojo Vivo Directo en su Rostro Quemado! 🔥👑💀",
+    "description": "Books of Doom #4 (Ed Brubaker): La verdad oculta sobre el accidente que desfiguró a Victor Von Doom y cómo forjó su armadura en el Tíbet.",
+    "hashtags": "#DoctorDoom #VictorVonDoom #MarvelComics #Latveria #Comics #Reels #Shorts",
+    "video_file": "scheduled_queue/012_fc_books_of_doom_mascara_ardiente/video.mp4",
+    "timestamp": "2026-11-27 14:05:24",
+    "social_links": {
+      "facebook": "1490887213106837",
+      "instagram": "https://www.instagram.com/reel/DgP2esVBmDp/",
+      "tiktok": "6b098e1218c8c6749bed3b37",
+      "youtube": "6b098e2132c212878fd649a3"
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
