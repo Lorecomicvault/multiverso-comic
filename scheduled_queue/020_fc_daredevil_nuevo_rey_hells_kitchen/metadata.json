@@ -1,0 +1,18 @@
+{
+  "slot": 20,
+  "queue_folder": "020_fc_daredevil_nuevo_rey_hells_kitchen",
+  "id": "fc_20_daredevil_nuevo_rey_hells_kitchen",
+  "title": "Daredevil #50: ¡Masacró a Kingpin y Se Coronó Nuevo Rey de Hell's Kitchen! 😈👑🩸",
+  "character": "Daredevil",
+  "description": "Daredevil Vol. 2 #50 (Brian Michael Bendis): Harto de ver volver a Wilson Fisk tras rejas, Matt Murdock lo destruyó y tomó el control total del crimen.",
+  "hashtags": "#Daredevil #Kingpin #HellsKitchen #MarvelComics #MattMurdock #Comics #Reels",
+  "duration": 74.79,
+  "size_mb": 52.71,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Cómics ZaZooM)",
+  "voice_mode": "zazoom",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-27 01:58:44"
+}

@@ -1,0 +1,18 @@
+{
+  "slot": 19,
+  "queue_folder": "019_fc_marvel_ruins_universo_maldito",
+  "id": "fc_19_marvel_ruins_universo_maldito",
+  "title": "Marvel Ruins: ¡El Universo Más Perturbador Donde Todo Salió Horriblemente Mal! ☢️💀🕷️",
+  "character": "Marvel",
+  "description": "Ruins #1 (Warren Ellis): La realidad más oscura y realista donde la radiación gamma no dio poderes, sino cáncer mortal y horror absoluto.",
+  "hashtags": "#MarvelRuins #MarvelComics #Terror #SpiderMan #Wolverine #Comics #Reels",
+  "duration": 74.6,
+  "size_mb": 53.15,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Referencia Cómic)",
+  "voice_mode": "referencia",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-27 01:47:28"
+}
