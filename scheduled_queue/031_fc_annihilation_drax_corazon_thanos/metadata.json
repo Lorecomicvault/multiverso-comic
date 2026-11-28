@@ -1,0 +1,18 @@
+{
+  "slot": 31,
+  "queue_folder": "031_fc_annihilation_drax_corazon_thanos",
+  "id": "fc_31_annihilation_drax_corazon_thanos",
+  "title": "Annihilation #4: ¡Drax Atravesó el Pecho de Thanos y Le Arrancó el Corazón! 💚🩸💀",
+  "character": "Drax el Destructor",
+  "description": "Annihilation #4 (Keith Giffen): La cacería implacable de Drax el Destructor que terminó atravesando el pecho del Titán Loco.",
+  "hashtags": "#Drax #Thanos #Annihilation #MarvelComics #MarvelCosmic #Comics #Reels",
+  "duration": 71.27,
+  "size_mb": 50.18,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Referencia Cómic)",
+  "voice_mode": "referencia",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-27 18:17:24"
+}

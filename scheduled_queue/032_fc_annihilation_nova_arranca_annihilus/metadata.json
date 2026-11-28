@@ -1,0 +1,18 @@
+{
+  "slot": 32,
+  "queue_folder": "032_fc_annihilation_nova_arranca_annihilus",
+  "id": "fc_32_annihilation_nova_arranca_annihilus",
+  "title": "Annihilation #6: ¡Nova Metió la Mano por la Boca de Annihilus y lo Destrozó! 💥🐛🌌",
+  "character": "Nova (Richard Rider)",
+  "description": "Annihilation #6 (Keith Giffen): El brutal duelo final donde Richard Rider arrancó las entrañas de Annihilus desde adentro.",
+  "hashtags": "#Nova #Annihilus #Annihilation #MarvelComics #RichardRider #Comics #Reels",
+  "duration": 74.3,
+  "size_mb": 53.12,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Cómics ZaZooM)",
+  "voice_mode": "zazoom",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-27 18:30:43"
+}

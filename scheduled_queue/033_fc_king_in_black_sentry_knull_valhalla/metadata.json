@@ -1,0 +1,18 @@
+{
+  "slot": 33,
+  "queue_folder": "033_fc_king_in_black_sentry_knull_valhalla",
+  "id": "fc_33_king_in_black_sentry_knull_valhalla",
+  "title": "King in Black: ¡Knull Partió en Dos a Sentry y Un Celestial Robó Su Alma! 🌑⚡💀",
+  "character": "Sentry",
+  "description": "King in Black #1 y King in Black: Return of the Valkyries: La humillante muerte de Sentry ante Knull y el destino maldito de su alma.",
+  "hashtags": "#Sentry #Knull #KingInBlack #Valkyrie #MarvelComics #Venom #Comics #Reels",
+  "duration": 67.56,
+  "size_mb": 47.85,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Referencia Cómic)",
+  "voice_mode": "referencia",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-27 20:42:40"
+}

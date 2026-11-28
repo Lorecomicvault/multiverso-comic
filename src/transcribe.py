@@ -38,7 +38,7 @@ def transcribe_with_words(audio_path: str, model_name: str = 'small', language: 
     return {'fps': fps, 'words': words}
 
 
-def extract_scene_word_timings(voice_results: dict, output_json: str, language: str = 'es', model_name: str = 'base') -> dict:
+def extract_scene_word_timings(voice_results: dict, output_json: str, language: str = 'es', model_name: str = 'base', device: str = 'cpu') -> dict:
     """
     Extracts word timings scene-by-scene, offsetting each scene by its accumulated duration.
     Guarantees 100% mathematical synchronization: every word is locked to its visual scene!
@@ -46,7 +46,7 @@ def extract_scene_word_timings(voice_results: dict, output_json: str, language: 
     import json
     from .composer import get_duration
 
-    model = whisper.load_model(model_name)
+    model = whisper.load_model(model_name, device=device)
     all_words = []
     accumulated_offset = 0.0
 
