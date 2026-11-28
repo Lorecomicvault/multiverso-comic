@@ -1,0 +1,18 @@
+{
+  "slot": 35,
+  "queue_folder": "035_fc_secret_wars_7_rebelion_zombis_thanos",
+  "id": "fc_35_secret_wars_7_rebelion_zombis_thanos",
+  "title": "Secret Wars #7: ¡Black Panther Desató un Ejército de Zombis Contra Doom! 🐾🧟‍♂️🔥",
+  "character": "Black Panther",
+  "description": "Secret Wars #6 y #7 (Jonathan Hickman & Esad Ribic): La guerra total contra Dios Emperador Doom y el épico regreso de T'Challa con los muertos.",
+  "hashtags": "#SecretWars #BlackPanther #DoctorDoom #MarvelZombies #MarvelComics #Reels",
+  "duration": 71.89,
+  "size_mb": 51.82,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Referencia Cómic)",
+  "voice_mode": "referencia",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-27 22:42:22"
+}
