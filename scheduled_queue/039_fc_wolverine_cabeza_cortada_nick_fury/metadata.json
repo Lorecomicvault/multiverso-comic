@@ -1,0 +1,18 @@
+{
+  "slot": 39,
+  "queue_folder": "039_fc_wolverine_cabeza_cortada_nick_fury",
+  "id": "fc_39_wolverine_cabeza_cortada_nick_fury",
+  "title": "Wolverine vs Hulk: ¡Sobrevivió Como Una Cabeza Cortada Sobre Una Mesa! 🧬🩸🐺",
+  "character": "Wolverine",
+  "description": "Ultimate Wolverine vs. Hulk #1–2 (Damon Lindelof & Leinil Yu): El bizarro experimento de Nick Fury tras encontrar solo la cabeza viva de Logan.",
+  "hashtags": "#Wolverine #Hulk #NickFury #UltimateMarvel #MarvelComics #Logan #Comics #Reels",
+  "duration": 72.7,
+  "size_mb": 52.08,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Referencia Cómic)",
+  "voice_mode": "referencia",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-28 00:25:06"
+}

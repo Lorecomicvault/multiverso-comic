@@ -1,0 +1,18 @@
+{
+  "slot": 40,
+  "queue_folder": "040_fc_spiderman_back_in_black_disparo_tia_may",
+  "id": "fc_40_spiderman_back_in_black_disparo_tia_may",
+  "title": "Back in Black: ¡El Disparo a la Tía May Que Desató al Spider-Man Sin Piedad! 🕷️🖤🩸",
+  "character": "Spider-Man",
+  "description": "The Amazing Spider-Man #539 (J. Michael Straczynski & Ron Garney): El instante trágico tras Civil War que rompió para siempre la paciencia de Peter Parker.",
+  "hashtags": "#SpiderMan #BackInBlack #TiaMay #Kingpin #MarvelComics #Comics #Reels",
+  "duration": 72.08,
+  "size_mb": 51.2,
+  "video_file": "video.mp4",
+  "thumbnail_file": "thumb.jpg",
+  "format": "filmcraft_75s_60fps",
+  "voice_profile": "Voicebox 0.6B ES (Narrador Cómics ZaZooM)",
+  "voice_mode": "zazoom",
+  "editor": "FilmCraft 0.20.1 GPU",
+  "produced_at": "2026-11-28 00:33:11"
+}
