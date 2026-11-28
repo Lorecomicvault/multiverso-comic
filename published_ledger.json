@@ -9907,5 +9907,21 @@
     },
     "status": "published",
     "source": "scheduled_queue"
+  },
+  {
+    "id": "fc_15_siege_4_muerte_loki_y_void",
+    "title": "Siege #4: ¡El Sacrificio de Loki y la Ejecución Final del Monstruo The Void! ⚡🐍🌑",
+    "description": "Siege #4 (Brian Michael Bendis): Cuando The Void destruyó Asgard y Loki dio su vida arrepentido para darle a los Vengadores su última oportunidad.",
+    "hashtags": "#Thor #Loki #Sentry #TheVoid #Avengers #MarvelComics #Comics #Reels",
+    "video_file": "scheduled_queue/015_fc_siege_4_muerte_loki_y_void/video.mp4",
+    "timestamp": "2026-11-28 00:05:29",
+    "social_links": {
+      "facebook": "1740901380796072",
+      "instagram": "https://www.instagram.com/reel/DgQ7MPFqwDh/",
+      "tiktok": "6b0a1aba2a2e4f66cae3f3d1",
+      "youtube": null
+    },
+    "status": "published",
+    "source": "scheduled_queue"
   }
 ]
